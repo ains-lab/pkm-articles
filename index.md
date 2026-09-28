@@ -35,7 +35,8 @@
 
 ## 운영 안내
 
-- [논문 수집 자동화 — 쉬운 안내](docs/paper-collection.md)
+- [논문 수집 자동화 — 쉬운 안내](docs/lectures/5w/paper-collection.md)
+- [논문 수집 Cron — 생성 방법과 현재 구성](docs/lectures/5w/paper-collection-cron.md)
 - [시작 안내](README.md)
 - [스키마](SCHEMA.md)
 - [원본 HTML 직접 컴파일 전략](_meta/COMPILATION.md)

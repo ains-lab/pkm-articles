@@ -4,7 +4,7 @@
 
 ## 시작점
 
-- [논문 수집 자동화 — 쉬운 안내](docs/paper-collection.md), [설명서 목록](docs/README.md)
+- [논문 수집 자동화 — 쉬운 안내](docs/lectures/5w/paper-collection.md), [Cron 생성·현재 구성](docs/lectures/5w/paper-collection-cron.md), [설명서 목록](docs/README.md)
 - [지식 색인](index.md), [스키마](SCHEMA.md), [에이전트 범위](AGENTS.md), [작업 이력](log.md)
 - [AI Agent Security 원본 색인](raw/articles/4cff5b4f10ec/index.md)
 - [HTML 원본 수집 규칙](_meta/COLLECTION.md), [정확한 검색식·한도](_meta/topics.json)

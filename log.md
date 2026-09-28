@@ -139,3 +139,35 @@
 - `.gitattributes`에서 원본 `source.html`의 Git 줄바꿈 변환을 비활성화했다. 빈 지식 디렉터리 4개와 `raw/papers/`, `raw/transcripts/`, `raw/assets/`에 `.gitkeep`을 추가해 Git에서도 구조를 유지한다. 지식 페이지를 생성한 것은 아니다.
 - 기존 프로젝트 파일 64개에 대한 자격증명 파일명·주요 비밀정보 패턴 검사에서 발견 항목이 없었고 JSON 42개의 문법을 검증했다. 이 검사는 논문 내용 검토나 모든 종류의 민감정보 부재를 보증하지 않는다.
 - 전역 Git·SSH·Hermes 설정, 다른 저장소·백업·Cron은 변경하지 않았다. 원본 수집·전처리·Wiki 컴파일은 실행하지 않았다.
+
+## [2026-09-28] create | 5주차 논문 수집 Cron 생성·현재 구성 기술문서
+
+- 사용자 요청에 따라 `eli5` 스킬의 알람·도우미·책장·책갈피 비유로 `docs/lectures/5w/paper-collection-cron.md`를 작성했다. 현재 구성, 정확한 검색식·시간대·한도, 파일 역할, 중복·실패 처리, paused 생성→ID/정책 연결→검토→승인 후 활성화 절차와 CLI 예시를 담았다.
+- 요청 문자열 `4cff5b4f10ec0`는 현재 목록에 없고 설치된 12자리 ID 형식과도 다르다. 실제 이름·정책·상태가 일치하는 `4cff5b4f10ec`를 문서화했으며 두 문자열을 같은 ID로 취급하거나 새 작업을 만들지 않았다.
+- 2026-09-28 12:51 UTC 기준 등록 레코드·Gateway/ticker·실행 이력·topics/state/report를 대조했다. 최근 결과는 `last_status=ok`, 정상 검색 0편이다. 다음 KST 자정 예정, 새 다운로드, 의미·시각 검토와 구분했다. 보유 HTML 8편의 실제 SHA-256·길이·버전 URL·파일 목록 및 미제공 2편과 전체 대상 ID 집합을 재검증했다.
+- 기존 `docs/lectures/5w/paper-collection.md`의 과거 상태를 갱신하고 이동된 위치 기준 상대 링크를 수정했다. `docs/README.md`, 루트 `README.md`·`index.md`에 기술문서 링크를 연결했다. 운영 문서이므로 지식 페이지 수는 0개로 유지한다.
+- 관련 문서 5개의 로컬 링크 62개, 코드 구획, Bash 예시 4개의 문법, 생성 옵션의 설치 CLI 지원 여부, 검색식 문자 일치를 검증했다. 실제 생성·실행 명령을 호출한 시험은 아니다. 관측 중 별도 추가된 Git 초기화 이력을 보존했고 이 문서화 작업에서 Git 초기화·커밋·push를 수행하지 않았다.
+- 대상 Cron 등록값과 원천·수집 정책·상태는 변경하지 않았다. arXiv 검색/다운로드·전처리·Wiki 컴파일·설치·알림·전역 스킬/모델/인증 변경을 수행하지 않았다. 기존 로그 뒤에 실제 문서화 내역만 추가했다.
+
+## [2026-09-28] create | 5주차 Agent-Reach X·Reddit 수집 방법 기술문서
+
+- 사용자 요청에 따라 `eli5` 스킬의 리모컨·출입증 비유로 `docs/lectures/5w/social-collection-agent-reach.md`를 작성했다. 키워드 기반과 계정 기반 수집의 차이, X 팔로워 2단계 조리법, Reddit 서브레딓·사용자 활동 수집, 저장·반복·예의 수칙을 담았다.
+- 근거는 Agent-Reach 저장소 문서, 이 머신에 설치된 `twitter`·`rdt`·`opencli`의 실제 `--help` 출력, Reddit 공식 검색 기능 도움말이다. 사용자 요청 URL의 트리 경로 `/tree/main`은 raw 파일 경로로 바꿔 확인했다. 설치 CLI·명령 목록에 없는 하위 명령(login/run 등 오류 확인)은 문서에 실제 존재하는 것만 기술했다.
+- X 팔로워·팔로잉 명령은 opencli 관측값으로, Reddit에는 팔로워 목록 명령이 없어 `author:` 연산자·사용자 활동 명령으로 대체하는 구조를 명시했다. Reddit 연산자 표는 공식 도움말 콜론 무공백 규칙을 따랐다.
+- 실제 X·Reddit 요청·로그인·인증 변경·설치·제거·Cron 생성은 하지 않았다. 계정 정보나 자격증명은 다루지 않았다. 소셜 수집 자동화는 이 저장소 범위 밖이므로 별도 승인 대상임을 문서에 명시했다.
+- `docs/README.md` 먼저 읽을 문서 목록에 새 문서 링크를 추가했다. 논문 수집 Cron `4cff5b4f10ec` 설정·원본·상태와 지식 페이지 수는 변하지 않았다.
+
+## [2026-09-28] repair | 4주차 실습 경로·SNS 스키마 분리 및 커밋 전 검증
+
+- 사용자의 오류 수정 후 commit·push 요청에 따라 기존 강의 변경분을 보존하면서 `docs/lectures/4w/README.md`, `01-pipeline-design.md`, `02-omh-and-api-setup.md`, `03-hands-on.md`, `04-cron-operations.md`, `05-analysis-with-hermes.md`, `06-sources-and-verification.md`, `07-incremental-wiki.md`의 이전 `class/4w` 경로와 잘못된 스키마 참조를 수정했다. 위 파일명은 모두 `docs/lectures/4w/` 아래 경로다.
+- 경로 복구 후 SNS 실습 검증기가 논문 전용 루트 스키마의 태그·원천 계약과 호환되지 않는 추가 원인을 확인했다. 루트 계약을 바꾸지 않고 `docs/lectures/4w/lab/SCHEMA.md`에 외부 비공개 SNS 실습 전용 계약을 분리했으며 문서의 초기화 명령·테스트가 이 파일을 사용하게 했다.
+- `docs/lectures/4w/lab/wiki_pipeline.py`는 태그 등록부 누락·빈 등록부를 초기화 쓰기 전에 명시적으로 거부하고 완료 검사에서도 같은 검사를 사용한다. `lab/test_materials.py`에 문서 실행 경로 검사, `lab/test_wiki_pipeline.py`에 부적합 스키마의 API·CLI 거부 및 미생성 검사를 추가했다. 이 두 테스트 경로도 `docs/lectures/4w/` 기준이다.
+- 신규 경로 검사와 스키마 거부 검사가 수정 전 실패하는 것을 확인한 뒤, `python3 -B -m unittest discover -s docs/lectures/4w/lab -p 'test_*.py' -v`로 **49 tests, OK**를 확인했다. 임시 합성 fixture·mock 기반이며 실제 SNS 인증·수집·의미적 Wiki 컴파일의 성공을 뜻하지 않는다.
+- 커밋 후보의 Python 9개 AST, JSON 1개 문법과 주요 자격증명 패턴을 검사했고 발견된 비밀값 패턴은 없었다. 전체 staged whitespace 검사에서는 기존 2·3·5주차/강의계획 문서의 행 끝 공백·마지막 빈 줄 경고가 남아 있어 기능 오류와 구분하며 관련 없는 재서식은 하지 않았다.
+- 루트 `SCHEMA.md`, `AGENTS.md`, `_meta/`, `raw/`, 지식 디렉터리는 HEAD 대비 변경 없음을 확인했다. 실제 수집·Cron·설치·인증·프로필·외부 모델·다른 Wiki는 변경하지 않았으며 지식 페이지 수는 유지한다. 이 항목은 수정·검증 기록이며 원격 push 성공은 아직 기록하지 않는다.
+
+### 추가 회귀 수정 및 재검증
+
+- 독립 검토에서 재현한 두 결함을 `docs/lectures/4w/lab/pipeline.py`에서 수정했다. URL userinfo는 빈 사용자명도 거부하여 비밀번호가 저장·export되지 않게 했으며, 지원하지 않는 타입·범위의 타임스탬프는 `ValueError`로 거부한다. 잘못된 legacy payload의 observation은 생략하되 기존 version과 원본 payload는 보존한다.
+- `docs/lectures/4w/lab/test_regressions.py`, `docs/lectures/4w/lab/test_incremental.py`에 mocked Reddit URL의 저장·export 차단, 타임스탬프 호환성, legacy API·CLI 마이그레이션의 보존·멱등성 회귀 검사를 추가했다. 수정 후 부모 세션에서도 전체 실습 테스트를 다시 실행해 **53 tests, OK**를 확인했다.
+- Python 9개 AST·JSON 1개 문법 검사, 수정분 `git diff --check`, 운영 Wiki 보호 경로의 HEAD 대비 무변경 검사를 통과했다. 추가 행 보안 패턴 검사에서 검출된 `wiki_pipeline.py`의 `token`은 자격증명이 아닌 SNS ingest 로그의 HTML 주석 표식이었다. 이 재검증은 합성 fixture·mock에 한정하며 실제 SNS 수집·Wiki 컴파일 성공을 의미하지 않는다.
