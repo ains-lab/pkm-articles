@@ -1,0 +1,422 @@
+[
+  {
+    "diagram": "03-read",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+        "bytes": 774562
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "3e58fbee-6975-4938-8368-97a3feb29f6b",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diagram": "04-query",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+        "bytes": 797294
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "74b939ca-8719-42fb-b145-8bd73fae6f2d",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diagram": "05-collection",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+        "bytes": 787281
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "e5dfd442-7cc4-4781-9336-01ca48ff4e13",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diagram": "06-publication",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+        "bytes": 800097
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "92708474-29d9-4e40-9d27-1e5b785a2368",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diagram": "07-data-ui",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+        "bytes": 771230
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "b263ef10-8523-40d6-916a-a2a0164fb743",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diagram": "08-roadmap",
+    "command": "ARCHIFY_CHROME=/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome ARCHIFY_CHROME_NO_SANDBOX=1 node /home/ainsdev/.hermes/skills/archify/bin/archify.mjs visual-check /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html --out-dir /home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check --summary --require-provenance",
+    "exit_code": 0,
+    "summary": {
+      "schemaVersion": 1,
+      "command": "visual-check",
+      "ok": true,
+      "status": "pass",
+      "evidenceKind": "automated-browser",
+      "visualReview": "pending",
+      "artifact": {
+        "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+        "bytes": 778067
+      },
+      "provenance": "current",
+      "deliveryReceiptId": "5a154540-64ce-4b5d-a0d2-7e559e8613d3",
+      "state": {
+        "detail": "read",
+        "motion": "still"
+      },
+      "chrome": {
+        "status": "available",
+        "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome"
+      },
+      "checks": {
+        "containment": "pass",
+        "readability": "pass",
+        "viewerChrome": "pass",
+        "themeStates": "pass",
+        "captures": "pass"
+      },
+      "diagnostics": [],
+      "evidence": {
+        "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.json",
+        "contactSheet": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.html",
+        "screenshots": [
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.1440x900.light.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.1440x900.dark.png",
+            "width": 1440,
+            "height": 900,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.2048x1320.light.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "light",
+            "resolvedTheme": "light"
+          },
+          {
+            "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/visual-check/diagram.visual-check.2048x1320.dark.png",
+            "width": 2048,
+            "height": 1320,
+            "theme": "dark",
+            "resolvedTheme": "dark"
+          }
+        ]
+      }
+    }
+  }
+]

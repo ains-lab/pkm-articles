@@ -1,0 +1,8 @@
+{
+  "command": "import sys,json,hashlib\nfrom pathlib import Path\nsys.path.insert(0,'_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime')\nimport p3_common as C,daily\nfrom test_daily import Fixture\nfrom test_integration import Model\np=Path(C.PROMPT).read_bytes();f=Fixture()\ntry:\n f.put(C.PROMPT,p);f.sync();f.source('2610.00001v1')\n model=Model();out=daily.run_daily(**f.kw(),client_factory=model)\n assert out['status']=='committed' and len(model.calls)==2\n assert model.calls[0]['instructions'].startswith(p.decode())\n assert all(r['model']=='gpt-6-astra' and r['reasoning']=={'effort':'xhigh'} and r['tools']==[] and r['store'] is False and r['stream'] is False for r in model.calls)\n print(json.dumps({'status':'passed','synthetic_only':True,'current_prompt_sha256':hashlib.sha256(p).hexdigest(),'generation_review_publication':'committed','fake_model_calls':len(model.calls),'actual_model_calls':0,'scope':'current prompt forwarded to generation; fake model cannot verify real model compliance'}))\nfinally:f.close()\n",
+  "result": {
+    "output": "{\"status\": \"passed\", \"synthetic_only\": true, \"current_prompt_sha256\": \"6a01fe5fc3a81bd4c2616c04125c7007291921f8ea33e903eff694cda4877164\", \"generation_review_publication\": \"committed\", \"fake_model_calls\": 2, \"actual_model_calls\": 0, \"scope\": \"current prompt forwarded to generation; fake model cannot verify real model compliance\"}",
+    "exit_code": 0,
+    "error": null
+  }
+}

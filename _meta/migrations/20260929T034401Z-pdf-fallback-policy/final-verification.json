@@ -1,0 +1,553 @@
+{
+  "run_id": "20260929T034401Z-pdf-fallback-policy",
+  "verified_at": "2026-09-29T04:02:11.188265+00:00",
+  "status": "passed",
+  "counts": {
+    "target_ids": 10,
+    "html_saved": 8,
+    "pdf_saved": 0,
+    "pdf_pending": 2,
+    "missing_fulltext": 2,
+    "raw_files_unchanged": 16,
+    "knowledge_pages": 0,
+    "active_document_local_links_checked": 98,
+    "bash_syntax_blocks_checked": 4
+  },
+  "state_changed_keys": [
+    "html_unavailable",
+    "pending",
+    "pipeline_id",
+    "policy_update"
+  ],
+  "inventory": [
+    {
+      "version_id": "2609.30217v1",
+      "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+      "format": "html",
+      "bytes": 926811,
+      "sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "format": "html",
+      "bytes": 738941,
+      "sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "title": "AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents",
+      "format": "html",
+      "bytes": 267373,
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "title": "Financial Fragility in Societies of LLM Agents: Coordination Failures and Stabilizing Mechanisms",
+      "format": "html",
+      "bytes": 397917,
+      "sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "title": "MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes",
+      "format": "html",
+      "bytes": 558801,
+      "sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+      "format": "html",
+      "bytes": 536360,
+      "sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "title": "A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents",
+      "format": "html",
+      "bytes": 212956,
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html"
+    },
+    {
+      "version_id": "2609.31562v1",
+      "title": "Agentic Economies for Autonomous Scientific Discovery",
+      "format": "html",
+      "bytes": 683196,
+      "sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html"
+    }
+  ],
+  "pending_ids": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "index_state_source_ids_titles_status_match": true,
+  "search_query_limits_and_checkpoints_preserved": true,
+  "original_html_unavailable_evidence_preserved": true,
+  "other_cron_configuration_unchanged": true,
+  "cron": {
+    "id": "4cff5b4f10ec",
+    "name": "논문 원본 수집 (HTML 우선·PDF 대체) · AI Agent Security · 매일 00:00 KST",
+    "enabled": true,
+    "state": "scheduled",
+    "exact_prompt_match": true,
+    "prompt_sha256": "dff8037821fd6bd22b5dfb9beea04fcda6be49b4a21e6635e805324242485416",
+    "next_run_at": "2026-09-29T15:00:00+00:00",
+    "next_run_kst": "2026-09-30T00:00:00+09:00"
+  },
+  "git_diff_check_exit_code": 0,
+  "new_policy_collection_execution_observed": false,
+  "new_pdf_download_performed": false,
+  "document_checks": {
+    "documents": [
+      "AGENTS.md",
+      "SCHEMA.md",
+      "README.md",
+      "index.md",
+      "_meta/COLLECTION.md",
+      "_meta/COMPILATION.md",
+      "raw/articles/4cff5b4f10ec/index.md",
+      "docs/lectures/5w/paper-collection.md",
+      "docs/lectures/5w/paper-collection-cron.md"
+    ],
+    "local_links": [
+      {
+        "document": "README.md",
+        "link": "docs/lectures/5w/paper-collection.md"
+      },
+      {
+        "document": "README.md",
+        "link": "docs/lectures/5w/paper-collection-cron.md"
+      },
+      {
+        "document": "README.md",
+        "link": "docs/README.md"
+      },
+      {
+        "document": "README.md",
+        "link": "index.md"
+      },
+      {
+        "document": "README.md",
+        "link": "SCHEMA.md"
+      },
+      {
+        "document": "README.md",
+        "link": "AGENTS.md"
+      },
+      {
+        "document": "README.md",
+        "link": "log.md"
+      },
+      {
+        "document": "README.md",
+        "link": "raw/articles/4cff5b4f10ec/index.md"
+      },
+      {
+        "document": "README.md",
+        "link": "_meta/COLLECTION.md"
+      },
+      {
+        "document": "README.md",
+        "link": "_meta/topics.json"
+      },
+      {
+        "document": "README.md",
+        "link": "_meta/COMPILATION.md"
+      },
+      {
+        "document": "README.md",
+        "link": "raw/articles/4cff5b4f10ec/index.md"
+      },
+      {
+        "document": "README.md",
+        "link": "_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "index.md",
+        "link": "_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "index.md",
+        "link": "_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json"
+      },
+      {
+        "document": "index.md",
+        "link": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/report.json"
+      },
+      {
+        "document": "index.md",
+        "link": "raw/articles/4cff5b4f10ec/index.md"
+      },
+      {
+        "document": "index.md",
+        "link": "raw/papers/"
+      },
+      {
+        "document": "index.md",
+        "link": "raw/articles/"
+      },
+      {
+        "document": "index.md",
+        "link": "raw/transcripts/"
+      },
+      {
+        "document": "index.md",
+        "link": "raw/assets/"
+      },
+      {
+        "document": "index.md",
+        "link": "docs/lectures/5w/paper-collection.md"
+      },
+      {
+        "document": "index.md",
+        "link": "docs/lectures/5w/paper-collection-cron.md"
+      },
+      {
+        "document": "index.md",
+        "link": "README.md"
+      },
+      {
+        "document": "index.md",
+        "link": "SCHEMA.md"
+      },
+      {
+        "document": "index.md",
+        "link": "_meta/COMPILATION.md"
+      },
+      {
+        "document": "index.md",
+        "link": "AGENTS.md"
+      },
+      {
+        "document": "index.md",
+        "link": "log.md"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/COLLECTION.md"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/COMPILATION.md"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/report.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31562v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31562v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31358v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31358v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31318v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31318v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31039v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.31039v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30940v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30940v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30830v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30830v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30266v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30266v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30217v1/source.html"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "arxiv-2609.30217v1/source.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/migrations/20260928T104108Z-html-only/report.md"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/migrations/20260928T104108Z-html-only/downloads.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json"
+      },
+      {
+        "document": "raw/articles/4cff5b4f10ec/index.md",
+        "link": "../../../_meta/migrations/20260928T104108Z-html-only/cutover.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/cron-after-resume.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "paper-collection-cron.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/COMPILATION.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/state/4cff5b4f10ec.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "paper-collection-cron.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../raw/articles/4cff5b4f10ec/index.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/state/4cff5b4f10ec.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../log.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/migrations/20260928T104108Z-html-only/report.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../_meta/COLLECTION.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection.md",
+        "link": "../../../SCHEMA.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/cron-after-resume.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "paper-collection.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../SCHEMA.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../log.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/cron-after-resume.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/state/4cff5b4f10ec.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../raw/articles/4cff5b4f10ec/index.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../log.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/report.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/state/4cff5b4f10ec.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/COMPILATION.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/preflight.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/cron-after-resume.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../SCHEMA.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../AGENTS.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/COLLECTION.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/topics.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/state/4cff5b4f10ec.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/report.json"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../log.md"
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "link": "../../../_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+      }
+    ],
+    "bash_syntax": [
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "exit_code": 0
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "exit_code": 0
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "exit_code": 0
+      },
+      {
+        "document": "docs/lectures/5w/paper-collection-cron.md",
+        "exit_code": 0
+      }
+    ]
+  },
+  "completed_at": "2026-09-29T04:03:28.239721+00:00",
+  "log_original_prefix_preserved": true,
+  "log_original_prefix_bytes": 42063,
+  "log_original_prefix_sha256": "8109495aaba63671af67c0fafdbeb76159babced4dac3f0c0193133397f2db53",
+  "final_document_sha256": {
+    "SCHEMA.md": "d3586cc61085faea027fa432420bcd9c50e4063467272fbe8ef29b570619d153",
+    "AGENTS.md": "f8ae6cc0285a78fbb3e96f55fe11aba2cc488bf9516799f4b289a7fa5c5ba84f",
+    "README.md": "696d4309f665526b676846c5f48b20568fa669738653f0c74ad9c55e40968aca",
+    "index.md": "a6a2719cb5588d3903104078362f9a97fd82a78822b6c90d2cec518fc397ede9",
+    "log.md": "1e0ccd226478b9b3f240f8abfda4388e685753b76852dff9650e8dcf4dd5c6d7",
+    "_meta/COLLECTION.md": "138563e8854d10ff97e309f87519edc5432550e4246659b640d6aaac3a50674d",
+    "_meta/COMPILATION.md": "9068156ab1f4d12545b182d0bac6527032b1b5124695c9e920021b9f12927cf1",
+    "_meta/topics.json": "4abeded0e5cab949520014ba2d4f8e91689c25f505e1ddf234665bd816bbce20",
+    "_meta/state/4cff5b4f10ec.json": "2e0015430751d3f0cf64e26bf57b2bdb8eaacf96f88a53a539c5d3aa413f07ef",
+    "raw/articles/4cff5b4f10ec/index.md": "2051ad9754d0de235912743dd295dff6bca83b6a2761c269c87bbcac2e6dcfc7",
+    "docs/lectures/5w/paper-collection.md": "dcd8dd71deb6e7e5408ef139eeef3afa755a03920bfd8a49f4270d7701551904",
+    "docs/lectures/5w/paper-collection-cron.md": "895315100526f0b0ea0cb3f51ddf88c34805ba2c31ce6ce03e7d6d128e455391"
+  },
+  "git_diff_check_after_log_exit_code": 0
+}

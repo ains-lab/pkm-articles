@@ -1,0 +1,39 @@
+{
+  "approval_sha256": "ee6802f5066dba3590b2e13f83d3659f18efffd7c0f5b924138ad05b9547b67a",
+  "artifacts": {
+    "report": {
+      "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-report.json",
+      "sha256": "afa26844d5ad91801370b301ae34518882104c0192e200fb939b8cd777c4767b"
+    },
+    "result": {
+      "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-result.json",
+      "sha256": "7e35d9281677b0aa8976274e6c68426054812756a3114253479e9b0ffb46931e"
+    },
+    "review": {
+      "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-review.json",
+      "sha256": "350384605807e409c15b366b78677c4441d2635714f80291d404164a58ec6a1b"
+    }
+  },
+  "cost_event": {
+    "charged_usd": null,
+    "created_at": "2026-10-01T05:40:40.717758+00:00",
+    "event_id": "attempt-d49c0ecac150cf227f9722e0efd6811d8f9f1def6e61b0f4a65341e70a367463",
+    "kst_day": "2026-10-01",
+    "reserved_usd": null,
+    "role": "daily_compile",
+    "run_id": "20261001T053212Z-p3-first-operation",
+    "scope_id": "2609.30217v1",
+    "status": "unknown",
+    "usage_receipt": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-result.json"
+  },
+  "error": null,
+  "observed_at": "2026-10-01T05:40:40.717758+00:00",
+  "reservation_sha256": "9bb0e2c761a7e39075e7ab7f8f91cdaec3168b834589f6be53bf63058ac49bf3",
+  "schema": "pkm-p3-outcome/v1",
+  "status": "blocked_review",
+  "update": {
+    "reason": "P3 blocked_review; see _meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-outcome.json",
+    "status": "blocked_conflict"
+  },
+  "version_id": "2609.30217v1"
+}

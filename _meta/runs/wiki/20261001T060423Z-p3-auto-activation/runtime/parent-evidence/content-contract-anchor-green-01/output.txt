@@ -1,0 +1,7 @@
+test_claim_scope_contract_requires_exact_claim_anchor_membership (test_content_contract.ContentContractTests.test_claim_scope_contract_requires_exact_claim_anchor_membership) ... ok
+test_visible_scope_contract_requires_exact_version_and_every_scope_token (test_content_contract.ContentContractTests.test_visible_scope_contract_requires_exact_version_and_every_scope_token) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.127s
+
+OK

@@ -1,0 +1,21 @@
+{
+  "html_sha256": "468b24e7affeff42ac29de7ef3a7470478acf8e0c605bafc357202727eb5c3cb",
+  "pdf_sha256": "1bf601ad30f0bd3195b32ca8c6c61aebf8d21b655454530535b6ab3487a7fe6a",
+  "bytes": 2525691,
+  "page_objects": 70,
+  "page_tree_counts": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    64,
+    6,
+    70
+  ],
+  "expected_slides": 70,
+  "page_count_matches": true
+}

@@ -1,0 +1,30 @@
+{
+  "approval_sha256": "ee6802f5066dba3590b2e13f83d3659f18efffd7c0f5b924138ad05b9547b67a",
+  "attempt": 1,
+  "before_state_sha256": "e3a793f88c239eedef2b227d4ba0862765c7a5e1c6988ca139fb7cf6695fcd32",
+  "run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "schema": "pkm-p3-reservation/v1",
+  "snapshots": {
+    "AGENTS.md": "18f9222b42e1ee4213b5636a275498b4a218742ba2d59ab95b928963949b803f",
+    "SCHEMA.md": "f9d32b0259bce079057af1b9a692a92b1f688a5583e620c055c3cdff3dd3a9fa",
+    "_meta/AUTOMATION.md": "729633ed4b3c651e289265ea3b61949aff1d5134b9f05cea3a82c0613066a348",
+    "_meta/COMPILATION.md": "d38010105a4eb7d3e959d62da7bc76036702a926f79aef7cb87e8000b30fd523",
+    "_meta/STATE-CONTRACTS.md": "1a36e02ec262f4dfd50f1901dba12d48a46296540134e8ac505f5e27a290bf3b",
+    "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a",
+    "_meta/automation.json": "a39f4dfbab818de3bac2ae9a0855bc08e9bfa788716664ad3e6f780649c98715",
+    "_meta/prompts/wiki-compile.md": "6a01fe5fc3a81bd4c2616c04125c7007291921f8ea33e903eff694cda4877164",
+    "_meta/runs/wiki/20261001T053212Z-p3-first-operation/gate-02/execution-approval.json": "ee6802f5066dba3590b2e13f83d3659f18efffd7c0f5b924138ad05b9547b67a",
+    "comparisons/agate-vs-sdc-mcp-gateway.md": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364",
+    "concepts/agent-authority-and-effect-boundaries.md": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+    "concepts/provenance-and-audit-evidence.md": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+    "concepts/security-evaluation-units.md": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+    "entities/arxiv-2609.30614v1.md": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7",
+    "entities/arxiv-2609.30824v1.md": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e",
+    "entities/arxiv-2609.30830v1.md": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0",
+    "entities/arxiv-2609.31358v1.md": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f"
+  },
+  "status": "unknown",
+  "version_id": "2609.30217v1"
+}

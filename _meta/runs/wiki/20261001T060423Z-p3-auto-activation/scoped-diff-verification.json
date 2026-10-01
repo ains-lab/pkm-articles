@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-10-01T06:38:45.334473+00:00",
+  "old_runtime_and_helpers_verified": 7,
+  "drift": [],
+  "content_unchanged_outside_generation": true,
+  "current_content_sha256": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+  "current_publication_sha256": "cf02d363767f5de971edf219e1b7283ba61a06e30a4ec7e16a78ebc5776e703e",
+  "actual_model_execution": false,
+  "scope": "source diff and preservation only; full runtime gate pending"
+}

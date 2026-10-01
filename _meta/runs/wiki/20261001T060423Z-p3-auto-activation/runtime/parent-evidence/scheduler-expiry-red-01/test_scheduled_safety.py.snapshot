@@ -1,0 +1,66 @@
+"""Scheduler safety regressions: isolated synthetic IO, never model/network."""
+import copy
+from datetime import datetime, timezone
+from pathlib import Path
+import unittest
+from unittest.mock import patch
+
+import daily
+import p3_common as C
+from test_daily import Fixture, RUN, APPROVAL
+
+VID = '2610.00001v1'
+PREFIX = RUN+'/items/'+VID+'/attempt1'
+OLD = '_meta/runs/wiki/20260929T083140Z-p2-resume'
+DEPENDENCIES = {C.RUN+'/runtime/'+n+'.py' for n in ('daily','p3_common','content','publication')} | {
+    OLD+'/'+n+'-one.py' for n in ('compile','verify','publish')}
+
+class ScheduledFixture(Fixture):
+    def __init__(self):
+        super().__init__()
+        self.auto.update(enabled=True,registration_authorized=True,activation_authorized=True,activation_blockers=[])
+        self.auto['jobs']['daily_compile'].update(enabled=True,cron_id='synthetic-job',registration_status='active',
+            registration_readback=RUN+'/registration.json')
+        self.state['enabled']=True
+        self.approval.update(mode='scheduled',run=None,cron_id='synthetic-job',
+            edit_freeze=dict(mode='daily_window',timezone='Asia/Seoul',start='02:00',end='02:45'))
+        self.job=dict(id='synthetic-job',enabled=True,model=C.MODEL['model'],provider=C.MODEL['provider'],
+            reasoning_effort=C.MODEL['reasoning_effort'],workdir=str(self.root),skills=['llm-wiki'],
+            deliver='local',failure_deliver='local',no_agent=False,attach_to_session=False,
+            monitor_script=None,monitor_url=None,schedule=dict(kind='cron',expr='0 17 * * *'),
+            prompt=self.fs.read(C.PROMPT).decode().strip(),next_run_at='2026-10-02T17:00:00+00:00')
+        self.put(RUN+'/registration.json',C.encoded(dict(schema='pkm-p3-registration/v1',job=self.job)))
+        for path in sorted(DEPENDENCIES):
+            self.put(path,(C.ROOT/path).read_bytes())
+        self.manifest_ref=RUN+'/runtime-manifest.json'
+        self.manifest=dict(schema='pkm-p3-runtime-manifest/v1',runtime_files={p:C.sha(self.fs.read(p)) for p in sorted(DEPENDENCIES)})
+        self.bind()
+    def bind(self):
+        self.put(self.manifest_ref,C.encoded(self.manifest))
+        self.approval.update(runtime_manifest_ref=self.manifest_ref,runtime_manifest_sha256=C.sha(self.fs.read(self.manifest_ref)))
+        self.sync()
+        self.approval['snapshots'][RUN+'/registration.json']=C.sha(self.fs.read(RUN+'/registration.json'))
+        self.put(APPROVAL,C.encoded(self.approval))
+    def kw(self):
+        return dict(super().kw(),now=datetime(2026,10,1,17,44,50,tzinfo=timezone.utc),scheduler_observer=lambda _:self.job)
+
+class ScheduledSafetyTests(unittest.TestCase):
+    def setUp(self):
+        self.f=ScheduledFixture();self.addCleanup(self.f.close)
+        self.f.source(VID)
+    def test_expired_processor_error_has_durable_unknown_not_orphan_reading(self):
+        elapsed=[0.0];calls=[]
+        def processor(ctx,**kw):
+            calls.append(1);elapsed[0]=3000.0
+            raise TimeoutError('synthetic dispatch timeout')
+        result=daily.run_daily(**self.f.kw(),processor=processor,clock=lambda:elapsed[0])
+        self.assertEqual(result['status'],'unknown')
+        self.assertEqual(calls,[1])
+        outcome=C.decode(self.f.fs.read(PREFIX+'-outcome.json'))
+        self.assertEqual(outcome['status'],'unknown')
+        self.assertEqual(C.decode(self.f.fs.read(C.STATE))['items'][0]['status'],'blocked_conflict')
+        self.assertEqual(C.decode(self.f.fs.read(RUN+'/daily-report.json')),result)
+        self.assertFalse(list((self.f.root/'entities').iterdir()))
+        self.assertFalse((self.f.root/daily.RUN_LOCK).exists())
+
+if __name__=='__main__':unittest.main(verbosity=2)

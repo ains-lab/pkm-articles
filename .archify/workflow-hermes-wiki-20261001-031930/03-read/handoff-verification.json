@@ -1,0 +1,193 @@
+{
+  "schema": "archify-document-handoff/v1",
+  "status": "passed",
+  "folder": "03-read",
+  "diagram_type": "workflow",
+  "mode": "document-description",
+  "files": {
+    "candidate.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/candidate.json",
+      "sha256": "f8712dada71db7066ec8470b0294f52561a25ee6aea8e7020948cf765e353ea4",
+      "bytes": 9483
+    },
+    "diagram.html": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+      "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+      "bytes": 774562
+    },
+    "evidence.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/evidence.json",
+      "sha256": "162a9cece8f26228bdf449b24daeff35ba79c1b924552a8390a85080fa5b6040",
+      "bytes": 15346
+    },
+    "diagram.finalize-summary.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.finalize-summary.json",
+      "sha256": "2d68fcbc2caed9a854b665be457660c612ff530761f6d7ad692648798e2d73bd",
+      "bytes": 3784
+    },
+    "diagram.finalize.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.finalize.json",
+      "sha256": "8138db353e7a9331b0f03d6c03b9ffc886e92fbe06c6d501d7c1cd39d24ae394",
+      "bytes": 56128
+    },
+    "diagram.browser-check.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.browser-check.json",
+      "sha256": "0840a3b4e9cd957c36e07f5da1ec78d4ae2827e33bdd641305a664557ccfa84b",
+      "bytes": 38022
+    },
+    "diagram.delivery.json": {
+      "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.delivery.json",
+      "sha256": "184e71df0e6978cdfe13d94c4174799f6f3903957f1cecf9af234db6116b4af9",
+      "bytes": 627
+    }
+  },
+  "counts": {
+    "nodes": 12,
+    "edges": 12,
+    "mapped_elements": 24,
+    "unmapped_elements": 0,
+    "source_references_checked": 42,
+    "read_source_documents": 7
+  },
+  "source_classification_counts": {
+    "제안": 42
+  },
+  "source_manifest": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "bytes": 7922,
+      "lines": 122
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+      "sha256": "6df17f948bdff7f0c94eea0922c8fe0cabe068b1d08a3cc67e083c5c4efc3922",
+      "bytes": 10109,
+      "lines": 139
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc",
+      "bytes": 8155,
+      "lines": 103
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205",
+      "bytes": 8611,
+      "lines": 133
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b",
+      "bytes": 8542,
+      "lines": 103
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170",
+      "bytes": 8397,
+      "lines": 113
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "bytes": 10596,
+      "lines": 97
+    }
+  ],
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browser_evidence": "passed",
+  "visual_review": "not_requested",
+  "visual_correction_rounds": 0,
+  "browser_environment": {
+    "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "ARCHIFY_CHROME_NO_SANDBOX": "1",
+    "caveat": "호스트 user-namespace sandbox 불가 환경에 대응하여 신뢰된 자체 생성 HTML 검증 프로세스에만 no-sandbox를 사용했다. 설치·전역 설정·Archify 소스 변경 없음."
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "unresolved": [
+    "BFF/UI/read facade/격리는 문서상 제안이며 미구현·서비스 live 검증 없음.",
+    "한국어 내용, 고정 Viewer UI와 html lang English fallback.",
+    "Perceptual review 미실시. 통과 receipt의 route detour 권고는 시각 품질 확인을 대신하지 않음."
+  ],
+  "route_review_advisory": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 2,
+      "routesOverSuggestedStretch": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "consistent",
+            "from": "snapshot",
+            "to": "dto",
+            "label": "일치할 때만",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 3,
+          "stretch": 1.268
+        },
+        {
+          "relationship": {
+            "id": "render_success",
+            "from": "dto",
+            "to": "render",
+            "label": "허용 필드만",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 2,
+          "stretch": 5.989
+        },
+        {
+          "relationship": {
+            "id": "unresolved",
+            "from": "snapshot",
+            "to": "conflict",
+            "label": "끝내 불일치",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "bends": 4,
+          "stretch": 5.565
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "snapshot → dto needs 3 bends: move node snapshot or dto so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "dto → render needs 2 bends: move node dto or render so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "snapshot → conflict needs 4 bends: move node snapshot or conflict so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  },
+  "scope": "두 새 diagram 폴더 안에만 작성. 공통 문서·Gateway·config·live API·모델·논문·Cron·기존 slide 변경/실행 없음."
+}

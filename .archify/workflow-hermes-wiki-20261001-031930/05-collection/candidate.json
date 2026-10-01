@@ -1,0 +1,478 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "05 · HTML 우선 원문 수집",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html"
+  },
+  "lanes": [
+    {
+      "id": "entry",
+      "label": "수집 책임 · 승인 Cron / 잠금 / 검색"
+    },
+    {
+      "id": "selection",
+      "label": "대상 판단 · 잠금 대기와 중복 검사"
+    },
+    {
+      "id": "quota",
+      "label": "대상 결정 · 새 버전 / 일일 한도 / 완료 재사용"
+    },
+    {
+      "id": "html_lane",
+      "label": "HTML 경로 · 공식 응답과 일시 오류 구분"
+    },
+    {
+      "id": "pdf_lane",
+      "label": "PDF 예외 · 공식 HTML 미제공일 때만"
+    },
+    {
+      "id": "storage",
+      "label": "원천 게시 · 검증된 바이트를 불변 보관"
+    },
+    {
+      "id": "results",
+      "label": "수집 결과 · 지식 컴파일과 분리"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cron",
+      "lane": "entry",
+      "col": 0,
+      "type": "messagebus",
+      "label": "승인 수집 Cron",
+      "sublabel": "4cff5b4f10ec · collect-only",
+      "width": 204,
+      "height": 80,
+      "tag": "매일 KST 00:00"
+    },
+    {
+      "id": "lock",
+      "lane": "entry",
+      "col": 1,
+      "type": "security",
+      "label": "정책·잠금 확인",
+      "sublabel": "collection.lock · 소유권 보존",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "search",
+      "lane": "entry",
+      "col": 2,
+      "type": "backend",
+      "label": "승인 검색·발견",
+      "sublabel": "검색식·범위·checkpoint",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "busy",
+      "lane": "selection",
+      "col": 1,
+      "type": "security",
+      "label": "잠금·정책 대기",
+      "sublabel": "busy는 skip · 강제탈취 금지",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "limit",
+      "lane": "quota",
+      "col": 0,
+      "type": "security",
+      "label": "일일 한도 대기",
+      "sublabel": "pending · 저장 완료 아님",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "reserve",
+      "lane": "quota",
+      "col": 1,
+      "type": "security",
+      "label": "시도 ID 예약",
+      "sublabel": "KST 최대 5개 · 오래된 대기 우선",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "dedupe",
+      "lane": "selection",
+      "col": 2,
+      "type": "backend",
+      "label": "중복·버전 검사",
+      "sublabel": "source + version_id",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "reuse",
+      "lane": "quota",
+      "col": 2,
+      "type": "database",
+      "label": "완료 원본 재사용",
+      "sublabel": "형식 불문 · 자동 교체·추가 금지",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "html_error",
+      "lane": "html_lane",
+      "col": 0,
+      "type": "security",
+      "label": "일시 오류·검토 대기",
+      "sublabel": "403 / 429 / 5xx / timeout",
+      "width": 204,
+      "height": 80,
+      "tag": "PDF 우회 금지"
+    },
+    {
+      "id": "html",
+      "lane": "html_lane",
+      "col": 1,
+      "type": "cloud",
+      "label": "동일 버전 HTML 우선",
+      "sublabel": "공식 응답 바이트 보존",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "unavailable",
+      "lane": "html_lane",
+      "col": 2,
+      "type": "security",
+      "label": "공식 HTML 미제공 확인",
+      "sublabel": "404·동일 버전 abs 근거",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "pdf",
+      "lane": "pdf_lane",
+      "col": 2,
+      "type": "cloud",
+      "label": "공식 동일 버전 PDF",
+      "sublabel": "무변경 다운로드만 허용",
+      "width": 204,
+      "height": 80,
+      "tag": "내용 추출·OCR 금지",
+      "yOffset": -65
+    },
+    {
+      "id": "pdf_pending",
+      "lane": "pdf_lane",
+      "col": 2,
+      "type": "security",
+      "label": "PDF 대기·실패 구분",
+      "sublabel": "양쪽 미제공은 7일 후 재확인",
+      "width": 204,
+      "height": 64,
+      "yOffset": 65
+    },
+    {
+      "id": "conflict",
+      "lane": "storage",
+      "col": 0,
+      "type": "security",
+      "label": "동일 버전 충돌 보존",
+      "sublabel": "같은 형식 hash 차이 · 덮어쓰기 금지",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "stage",
+      "lane": "storage",
+      "col": 1,
+      "type": "backend",
+      "label": "staging 보존 검사",
+      "sublabel": "버전·형식·길이·SHA-256",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "raw",
+      "lane": "storage",
+      "col": 2,
+      "type": "database",
+      "label": "불변 원본 패키지 게시",
+      "sublabel": "원본 1개 + 최소 source.json",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "report",
+      "lane": "results",
+      "col": 2,
+      "type": "backend",
+      "label": "실물·상태·집계 대조",
+      "sublabel": "고유 버전 ID · 확보/대기/실패",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "handoff",
+      "lane": "results",
+      "col": 1,
+      "type": "security",
+      "label": "수집 완료 ≠ 컴파일",
+      "sublabel": "지식 작성·모델 분석 자동 연결 없음",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "list",
+      "lane": "results",
+      "col": 0,
+      "type": "frontend",
+      "label": "향후 목록 갱신",
+      "sublabel": "원문 확보와 분석 상태 분리",
+      "width": 204,
+      "height": 64
+    }
+  ],
+  "edges": [
+    {
+      "id": "cron-lock",
+      "from": "cron",
+      "to": "lock",
+      "variant": "default",
+      "role": "main",
+      "label": "수집 실행 범위"
+    },
+    {
+      "id": "lock-search",
+      "from": "lock",
+      "to": "search",
+      "variant": "default",
+      "role": "main",
+      "label": "정책 일치·획득"
+    },
+    {
+      "id": "lock-busy",
+      "from": "lock",
+      "to": "busy",
+      "variant": "security",
+      "role": "error",
+      "label": "충돌·거부",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "search-dedupe",
+      "from": "search",
+      "to": "dedupe",
+      "variant": "default",
+      "role": "main",
+      "label": "검색·pending 내구 저장"
+    },
+    {
+      "id": "dedupe-reuse",
+      "from": "dedupe",
+      "to": "reuse",
+      "variant": "default",
+      "role": "main",
+      "label": "실물·hash 검증 완료",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight"
+    },
+    {
+      "id": "dedupe-reserve",
+      "from": "dedupe",
+      "to": "reserve",
+      "variant": "default",
+      "role": "main",
+      "label": "미보관·새 버전",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "reserve-limit",
+      "from": "reserve",
+      "to": "limit",
+      "variant": "security",
+      "role": "branch",
+      "label": "한도 도달"
+    },
+    {
+      "id": "reserve-html",
+      "from": "reserve",
+      "to": "html",
+      "variant": "default",
+      "role": "main",
+      "label": "한도 내 예약"
+    },
+    {
+      "id": "html-error",
+      "from": "html",
+      "to": "html_error",
+      "variant": "security",
+      "role": "error",
+      "label": "일시 오류"
+    },
+    {
+      "id": "html-unavailable",
+      "from": "html",
+      "to": "unavailable",
+      "variant": "default",
+      "role": "branch",
+      "label": "미제공 확인 경로"
+    },
+    {
+      "id": "html-stage",
+      "from": "html",
+      "to": "stage",
+      "variant": "default",
+      "role": "main",
+      "label": "정상 HTML",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "unavailable-pdf",
+      "from": "unavailable",
+      "to": "pdf",
+      "variant": "security",
+      "role": "branch",
+      "label": "공식 미제공 확정 시만"
+    },
+    {
+      "id": "pdf-pending",
+      "from": "pdf",
+      "to": "pdf_pending",
+      "variant": "security",
+      "role": "error",
+      "label": "실패·양쪽 미제공",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "pdf-stage",
+      "from": "pdf",
+      "to": "stage",
+      "variant": "default",
+      "role": "main",
+      "label": "보존 검사 통과",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "stage-conflict",
+      "from": "stage",
+      "to": "conflict",
+      "variant": "security",
+      "role": "error",
+      "label": "내용 차이·충돌"
+    },
+    {
+      "id": "stage-raw",
+      "from": "stage",
+      "to": "raw",
+      "variant": "default",
+      "role": "main",
+      "label": "검증·대상 부재"
+    },
+    {
+      "id": "raw-report",
+      "from": "raw",
+      "to": "report",
+      "variant": "default",
+      "role": "main",
+      "label": "실제 게시 확인"
+    },
+    {
+      "id": "report-handoff",
+      "from": "report",
+      "to": "handoff",
+      "variant": "default",
+      "role": "main",
+      "label": "수집 결과만 기록"
+    },
+    {
+      "id": "handoff-list",
+      "from": "handoff",
+      "to": "list",
+      "variant": "dashed",
+      "role": "async",
+      "label": "향후 읽기 projection"
+    }
+  ],
+  "semanticChecks": {
+    "allowedRoots": [
+      "cron"
+    ],
+    "allowedTerminals": [
+      "busy",
+      "limit",
+      "reuse",
+      "html_error",
+      "pdf_pending",
+      "conflict",
+      "list"
+    ],
+    "requiredPaths": [
+      {
+        "from": "cron",
+        "to": "raw"
+      },
+      {
+        "from": "html",
+        "to": "stage"
+      },
+      {
+        "from": "unavailable",
+        "to": "pdf"
+      },
+      {
+        "from": "raw",
+        "to": "handoff"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "정식계약 · 수집 경계",
+      "items": [
+        "승인 Cron 4cff5b4f10ec는 collect-only다. 이 그림은 운영 계약 설명이며 수집 실행 결과가 아니다.",
+        "저장 완료 버전은 HTML/PDF 형식에 관계없이 재사용한다. 신규 형식 추가·자동 교체·저장본 덮어쓰기를 하지 않는다.",
+        "근거: docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md:L97–101; _meta/COLLECTION.md:L28–34, L58–62"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "PDF fallback · 실패를 미제공으로 바꾸지 않음",
+      "items": [
+        "HTML 404/공식 미제공 + 동일 버전 abs 근거 확인 후에만 PDF로 간다. 403/429/5xx/timeout/잘림/신원 불일치는 PDF 우회 사유가 아니다.",
+        "PDF 검사는 HTTP·공식 버전 URL·형식 표식·전송 종료·바이트 길이·해시에 한정한다. 페이지 수·본문·그림·OCR·Markdown 변환을 검사하거나 만들지 않는다.",
+        "근거: _meta/COLLECTION.md:L36–45; SCHEMA.md:L43–51"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "보존·집계 · 수집과 지식화 분리",
+      "items": [
+        "패키지는 source.html 또는 source.pdf 한 파일과 최소 source.json이다. source.json의 wiki_compiled:false는 수집 당시 정보이며 나중에 완료 표시를 맞추려고 수정하지 않는다.",
+        "HTML 미제공 이력이 있어도 PDF를 저장했으면 원문 확보다. ID 집합으로 한 번만 세며 저장 성공 ≠ 실제 읽기·의미 분석·지식 게시다.",
+        "수집자는 실제 수집 state·raw index·append-only log를 갱신하지만 지식 페이지를 작성하지 않는다. 이번 도식 작업은 어느 수집 파일도 변경하지 않는다.",
+        "근거: _meta/COLLECTION.md:L49–62; docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md:L28–36, L56–67"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "관측·제안·미확인 구분",
+      "items": [
+        "README의 blocked_policy/queued 숫자는 명시된 과거 snapshot이다. 이 그림은 live 현재 수량을 주장하지 않는다.",
+        "목록 갱신은 향후 BFF 제안이고 컴파일 trigger가 아니다. P3–P6 활성화 승인은 없다.",
+        "문서 설명 모드: Git HEAD 근거를 주장하지 않으며 evidence.json에 모든 의미 노드/간선의 로컬 줄 인용을 보관한다.",
+        "Viewer 고정 UI와 html lang은 영어 fallback; 다이어그램 본문은 한국어.",
+        "근거: docs/techblog/hermes-api-gateway-workdir-assoc/README.md:L31–47, L69–80; docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md:L72–87"
+      ]
+    }
+  ]
+}

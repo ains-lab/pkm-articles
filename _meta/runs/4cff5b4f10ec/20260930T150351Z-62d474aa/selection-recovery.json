@@ -1,0 +1,7 @@
+{
+  "error": "Previous candidates.json has a candidates wrapper, not a list; selection failed before daily reservation and HTTP requests",
+  "checkpoint_valid": true,
+  "pending_durable_before_checkpoint": true,
+  "repair": "Read recorded wrapper; compare reused metadata against original Atom record",
+  "recovered": true
+}

@@ -1,0 +1,100 @@
+{
+  "observed_at": "2026-10-01T04:02:16.806962+00:00",
+  "surface_count": 9,
+  "viewport_cases": 18,
+  "capture_count": 46,
+  "document_overflow_cases": [],
+  "ordinary_text_horizontal_overflow_cases": [],
+  "diagram_svg_offscreen_cases": [
+    {
+      "surface": "01-system",
+      "viewport": [
+        375,
+        812
+      ],
+      "count": 17
+    },
+    {
+      "surface": "02-workspace",
+      "viewport": [
+        375,
+        812
+      ],
+      "count": 18
+    },
+    {
+      "surface": "07-data-ui",
+      "viewport": [
+        375,
+        812
+      ],
+      "count": 16
+    }
+  ],
+  "page_errors": 0,
+  "unhandled_rejections": 0,
+  "console_errors": 0,
+  "observed_http_resources": 0,
+  "diagram_search_escape_theme_cases": 16,
+  "index_details_tab_click_back_cases": 2,
+  "index_first_tab": [
+    {
+      "text": "다이어그램 목록으로",
+      "href": "#diagrams"
+    },
+    {
+      "text": "다이어그램 목록으로",
+      "href": "#diagrams"
+    }
+  ],
+  "capture_pairs": [
+    {
+      "surface": "index",
+      "path": "index-desktop-mobile.png",
+      "sha256": "e33df9923c30f194a117928eaae5a4fad663de9029a0df4774ecf80a248b3d67"
+    },
+    {
+      "surface": "01-system",
+      "path": "01-system-desktop-mobile.png",
+      "sha256": "7f85bc3d26666ef4de0a392cf617cfb7ddc8d655cb4b59ca1a47df32a9d9129c"
+    },
+    {
+      "surface": "02-workspace",
+      "path": "02-workspace-desktop-mobile.png",
+      "sha256": "485f95279d65649a44c82e506595d1aecaa613dbb204e5597605300d754678e1"
+    },
+    {
+      "surface": "03-read",
+      "path": "03-read-desktop-mobile.png",
+      "sha256": "488c214860a8986bd007d190937f9878168e07ea1a4191a650f06406d1ca257b"
+    },
+    {
+      "surface": "04-query",
+      "path": "04-query-desktop-mobile.png",
+      "sha256": "a15c5100f2abaa08f1b900a620bb50f051e91721cb03d569282fc904d0bad69f"
+    },
+    {
+      "surface": "05-collection",
+      "path": "05-collection-desktop-mobile.png",
+      "sha256": "e6df2d86f8b305f5bdb825d2350694d95644802aaa0aec08470ab3e1d0429a55"
+    },
+    {
+      "surface": "06-publication",
+      "path": "06-publication-desktop-mobile.png",
+      "sha256": "73cb74b8da91debd790eb39b11f33138d3285b1fb61100872d893a6dfac50c40"
+    },
+    {
+      "surface": "07-data-ui",
+      "path": "07-data-ui-desktop-mobile.png",
+      "sha256": "f6fd4b5c318e26d13ac0642d58cb4b7799c9ee947834e51ddc32c9123aef5eb3"
+    },
+    {
+      "surface": "08-roadmap",
+      "path": "08-roadmap-desktop-mobile.png",
+      "sha256": "54c4d989a2f85d278e0dd9192509dbc52b32d064c09654ad16d3b86c6b780073"
+    }
+  ],
+  "lineage_sha256_matches": true,
+  "mode": "local file render, not an HTTP-served application",
+  "pixel_font_estimates": "SVG computed font size multiplied by screen CTM scale; diagnostic only, includes visible SVG text rather than a calibrated readability score"
+}

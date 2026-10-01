@@ -1,0 +1,538 @@
+{
+  "scope": "Additional diagram finder/no-match/Escape, document overflow and rendered SVG text horizontal bounds; not full accessibility or export QA",
+  "rows": [
+    {
+      "diagram": "03-read",
+      "artifact_sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 12 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "03-read",
+      "artifact_sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 12 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "04-query",
+      "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 19 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "04-query",
+      "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 19 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "05-collection",
+      "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 19 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "05-collection",
+      "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": [],
+        "buttons": [
+          {
+            "id": "btn-theme",
+            "label": "Toggle color theme"
+          },
+          {
+            "id": "btn-preset",
+            "label": "Visual style: Classic. Choose visual style"
+          },
+          {
+            "id": "btn-motion",
+            "label": "Pause motion"
+          },
+          {
+            "id": "btn-present",
+            "label": "Enter presentation stage"
+          },
+          {
+            "id": "btn-export",
+            "label": "Export diagram"
+          },
+          {
+            "id": "diagram-guide-close",
+            "label": "Close diagram guide"
+          },
+          {
+            "id": "node-finder-close",
+            "label": "Close node finder"
+          },
+          {
+            "id": "btn-focus-move",
+            "label": "Move semantic passport. Drag, use arrow keys, or press Home to reset."
+          }
+        ]
+      },
+      "finder_no_results": {
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 19 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "06-publication",
+      "artifact_sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": []
+      },
+      "finder_no_results": {
+        "theme": "dark",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 24 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "06-publication",
+      "artifact_sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "en",
+        "theme": "dark",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": []
+      },
+      "finder_no_results": {
+        "theme": "light",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "FIND A NODE\n×\n⌕\n/\n\nNo matching nodes\n\n0 of 24 nodes"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "07-data-ui",
+      "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "ko",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": []
+      },
+      "finder_no_results": {
+        "theme": "dark",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "노드 찾기\n×\n⌕\n/\n\n일치하는 노드가 없습니다\n\n노드 9개 중 0개"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "07-data-ui",
+      "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "ko",
+        "theme": "dark",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": [
+          "읽기 BFF · 제안",
+          "ledger + receipt + 실물 hash",
+          "read-only · 모델 호출 없음",
+          "공개 DTO · 제안",
+          "pkm-web-page/v1 · page_id",
+          "committed snapshot만 제공",
+          "여섯 상태축 · 독립",
+          "원문·HTML·컴파일·게시·검토·API",
+          "서로의 완료를 추론하지 않음",
+          "브라우저 UI · 제안",
+          "React · TypeScript · Next.js",
+          "인증된 사용자 · 안전한 Markdown",
+          "질의 화면 · 조건부 제안",
+          "/chat/:conversationId",
+          "별도 실행 승인 후",
+          "운영 화면 · 조건부 제안",
+          "/operations",
+          "소유자 전용 · 정형 읽기만",
+          "일관 snapshot",
+          "상태 분리",
+          "독립 표시",
+          "소유자만 조회"
+        ]
+      },
+      "finder_no_results": {
+        "theme": "light",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "노드 찾기\n×\n⌕\n/\n\n일치하는 노드가 없습니다\n\n노드 9개 중 0개"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "08-roadmap",
+      "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+      "viewport": [
+        1440,
+        900
+      ],
+      "initial": {
+        "lang": "ko",
+        "theme": "light",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "externalResources": [],
+        "textOutsideViewport": []
+      },
+      "finder_no_results": {
+        "theme": "dark",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "노드 찾기\n×\n⌕\n/\n\n일치하는 노드가 없습니다\n\n노드 12개 중 0개"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    },
+    {
+      "diagram": "08-roadmap",
+      "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+      "viewport": [
+        375,
+        812
+      ],
+      "initial": {
+        "lang": "ko",
+        "theme": "dark",
+        "width": 375,
+        "scrollWidth": 360,
+        "externalResources": [],
+        "textOutsideViewport": []
+      },
+      "finder_no_results": {
+        "theme": "light",
+        "focus": "node-finder-input",
+        "visible": true,
+        "visibleText": "노드 찾기\n×\n⌕\n/\n\n일치하는 노드가 없습니다\n\n노드 12개 중 0개"
+      },
+      "after_escape": {
+        "focus": "btn-node-finder",
+        "visible": false
+      }
+    }
+  ]
+}

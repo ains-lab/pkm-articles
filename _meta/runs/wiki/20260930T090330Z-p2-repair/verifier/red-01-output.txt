@@ -1,0 +1,24 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... FAIL
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... FAIL
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+
+======================================================================
+FAIL: test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 66, in test_incomplete_response_rejected
+    self.assertFalse(report["passed"], report)
+AssertionError: True is not false : {'vid': '2609.00001v1', 'checks': [{'check': 'source_sha256_match', 'ok': True, 'detail': ''}, {'check': 'completed', 'ok': True, 'detail': ''}, {'check': 'response_model_gpt-6-astra', 'ok': True, 'detail': ''}, {'check': 'cost_recorded_as_unobserved', 'ok': True, 'detail': ''}, {'check': 'single_json_object', 'ok': True, 'detail': ''}, {'check': 'title_present', 'ok': True, 'detail': ''}, {'check': 'version_id_match', 'ok': True, 'detail': ''}, {'check': 'main_text_complete_bool', 'ok': True, 'detail': ''}, {'check': 'read_scope_nonempty', 'ok': True, 'detail': ''}, {'check': 'unread_scope_flags_unreviewed', 'ok': True, 'detail': "['Figures not reviewed', 'Equations not reviewed', 'Appendix not reviewed']"}, {'check': 'claims_8_to_14', 'ok': True, 'detail': 'n=8'}, {'check': 'claim_kinds_valid', 'ok': True, 'detail': "{'author_report'}"}, {'check': 'body_90_150_lines', 'ok': True, 'detail': 'n=97'}, {'check': 'body_has_evidence_table', 'ok': True, 'detail': ''}, {'check': 'anchors_exist_in_source', 'ok': True, 'detail': '[]'}, {'check': 'quotes_verbatim_in_source', 'ok': True, 'detail': '[]'}], 'passed': True}
+
+======================================================================
+FAIL: test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 73, in test_partial_main_text_rejected
+    self.assertFalse(report["passed"], report)
+AssertionError: True is not false : {'vid': '2609.00001v1', 'checks': [{'check': 'source_sha256_match', 'ok': True, 'detail': ''}, {'check': 'completed', 'ok': True, 'detail': ''}, {'check': 'response_model_gpt-6-astra', 'ok': True, 'detail': ''}, {'check': 'cost_recorded_as_unobserved', 'ok': True, 'detail': ''}, {'check': 'single_json_object', 'ok': True, 'detail': ''}, {'check': 'title_present', 'ok': True, 'detail': ''}, {'check': 'version_id_match', 'ok': True, 'detail': ''}, {'check': 'main_text_complete_bool', 'ok': True, 'detail': ''}, {'check': 'read_scope_nonempty', 'ok': True, 'detail': ''}, {'check': 'unread_scope_flags_unreviewed', 'ok': True, 'detail': "['Figures not reviewed', 'Equations not reviewed', 'Appendix not reviewed']"}, {'check': 'claims_8_to_14', 'ok': True, 'detail': 'n=8'}, {'check': 'claim_kinds_valid', 'ok': True, 'detail': "{'author_report'}"}, {'check': 'body_90_150_lines', 'ok': True, 'detail': 'n=97'}, {'check': 'body_has_evidence_table', 'ok': True, 'detail': ''}, {'check': 'anchors_exist_in_source', 'ok': True, 'detail': '[]'}, {'check': 'quotes_verbatim_in_source', 'ok': True, 'detail': '[]'}], 'passed': True}
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.065s
+
+FAILED (failures=2)

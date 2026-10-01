@@ -1,0 +1,63 @@
+{
+  "score": 70,
+  "verdict": "REVISE",
+  "differences": [
+    {
+      "difference": "375×812의 workflow 도식이 한 화면에 과도하게 축소되어 노드 설명·관계 라벨을 읽기 어렵다. 1440×900에서도 보조 라벨이 작고 옅다.",
+      "suggestion": "의미·승인 분기를 유지한 채 작은 화면용 개요/상세 보기를 분리하고 읽을 수 있는 본문 크기를 확보한 다음 같은 viewport에서 재캡처한다.",
+      "evidence": [
+        "03-read-desktop-mobile.png",
+        "04-query-desktop-mobile.png",
+        "05-collection-desktop-mobile.png",
+        "06-publication-desktop-mobile.png",
+        "08-roadmap-desktop-mobile.png"
+      ]
+    },
+    {
+      "difference": "01·02·07의 모바일 기본 화면에서 일부 노드·라벨이 화면 오른쪽 밖에 있으며 가로 탐색이 필요하다. 페이지 가로 넘침 0으로 이 문제를 검출할 수 없다.",
+      "suggestion": "모바일 기본 구성을 세로 흐름/선택 상세로 나누거나 이동 가능한 영역과 현재 범위를 명확히 표시한다.",
+      "evidence": [
+        "01-system-desktop-mobile.png",
+        "02-workspace-desktop-mobile.png",
+        "07-data-ui-desktop-mobile.png",
+        "observations.jsonl"
+      ]
+    },
+    {
+      "difference": "모바일 하단 도구막대의 확대(+) 버튼이 초기에는 전체 또는 일부 가려진다. 01·04·07·08에서 도구막대를 가로 스크롤한 후 실제 포인터로 클릭하면 100%→125%가 되어 핸들러 고장이 아니라 발견성·배치 문제다.",
+      "suggestion": "확대/축소를 작은 화면에서도 항상 보이게 두고 경로·렌즈 같은 부가 조작을 별도 메뉴로 분리한다.",
+      "evidence": [
+        "mobile-controls.json"
+      ]
+    },
+    {
+      "difference": "07·08 모바일 도구막대의 경로/렌즈 글자가 세로로 쪼개진다. 01–06의 본문은 한국어지만 HTML 언어 및 고정 UI는 영어다.",
+      "suggestion": "한국어 UI 문자열의 줄바꿈과 버튼 폭을 보장하고, 지원되는 한국어 로케일을 명세에서 일관되게 적용한 뒤 새 finalize/capture로 검증한다.",
+      "evidence": [
+        "07-data-ui-desktop-mobile.png",
+        "08-roadmap-desktop-mobile.png",
+        "observations.jsonl"
+      ]
+    }
+  ],
+  "score_method": {
+    "kind": "subjective rendered-readability assessment, not Archify validation or performance",
+    "deductions": {
+      "diagram_type_readability": 12,
+      "mobile_canvas_fit": 8,
+      "control_discoverability": 7,
+      "CJK_ui_fit": 3
+    }
+  },
+  "scope": "Local final artifact verification only; no automatic repair requested or performed",
+  "evidence_manifest": "capture-manifest.json",
+  "automated_state_summary": "summary.json",
+  "reviewed_captures": "9 desktop/mobile paired captures, 2 four-panel mobile finder sheets, publication mobile bottom and index mobile expanded notice",
+  "not_claimed": [
+    "HTTP served/deployed app verification",
+    "all viewer modes or exports",
+    "full accessibility or screen-reader testing",
+    "perceptual review of every below-fold card in all themes"
+  ],
+  "next_gate": "Implementation-owner fixes followed by a new capture/scored round of the same surfaces and viewports; current round is not PASS"
+}

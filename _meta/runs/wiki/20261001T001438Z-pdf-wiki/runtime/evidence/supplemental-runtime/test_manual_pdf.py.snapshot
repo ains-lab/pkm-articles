@@ -1,0 +1,588 @@
+"""Synthetic-only tests. Temporary files remain under this runtime directory."""
+import contextlib
+import copy
+import hashlib
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+HERE = Path(__file__).parent
+ROOT = Path('/home/ainsdev/wiki/pkm-articles')
+RUN = '_meta/runs/wiki/20261001T001438Z-pdf-wiki'
+VIDS = ['2609.30614v1', '2609.30824v1']
+SITE = ROOT / '.venv-pdf-reader/lib/python3.12/site-packages'
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(SITE))  # Explicit synthetic test injection, never a live reader.
+import pypdf
+from pypdf.generic import DictionaryObject, NameObject, DecodedStreamObject
+sys.path.remove(str(SITE))
+
+
+def load():
+    path = HERE / 'manual_pdf.py'
+    if not path.exists():
+        return None
+    spec = importlib.util.spec_from_file_location('manual_pdf_tested', path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+M = load()
+
+
+def encoded(obj):
+    return (json.dumps(obj, ensure_ascii=False, indent=2) + '\n').encode()
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def synthetic_pdf(texts=('Alpha evidence one.', 'Beta evidence two.'), encrypted=False):
+    writer = pypdf.PdfWriter()
+    for text in texts:
+        page = writer.add_blank_page(width=300, height=300)
+        if text:
+            font = DictionaryObject({NameObject('/Type'): NameObject('/Font'),
+                NameObject('/Subtype'): NameObject('/Type1'), NameObject('/BaseFont'): NameObject('/Helvetica')})
+            page[NameObject('/Resources')] = DictionaryObject({NameObject('/Font'):
+                DictionaryObject({NameObject('/F1'): writer._add_object(font)})})
+            stream = DecodedStreamObject()
+            stream.set_data(('BT /F1 12 Tf 10 200 Td (' + text + ') Tj ET').encode('ascii'))
+            page[NameObject('/Contents')] = writer._add_object(stream)
+    if encrypted:
+        writer.encrypt('synthetic-password')
+    out = io.BytesIO()
+    writer.write(out)
+    return out.getvalue()
+
+
+class Fixture:
+    def __init__(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='synthetic-', dir=HERE)
+        self.root = Path(self.tmp.name)
+        self.config = M.TestConfig(self.root, pypdf)
+        self.scope = dict(schema='pkm-pdf-text-scope-approval/v1', wiki_root=str(self.root),
+            run_id=Path(RUN).name, version_ids=VIDS,
+            user_request='그럼 pdf 논문도 위키 컴파일하여 포함하도록 적용해주세요',
+            configuration_confirmation='승인 — 텍스트 방식으로 정책 변경 및 PDF 2편 컴파일',
+            publication_confirmation='게시 승인 — 작업 중 Wiki 직접 편집 중지',
+            model=M.MODEL_PIN, cost_policy='no_cost_cap')
+        self.scope.update({k: True for k in M.SCOPE_TRUE})
+        self.scope.update({k: False for k in M.SCOPE_FALSE})
+        self.policy = dict(schema='pkm-automation/v1', wiki_root=str(self.root),
+            policy_revision=M.POLICY, contract_revision=M.CONTRACT, enabled=False,
+            registration_authorized=False, activation_authorized=False,
+            phase_authorizations={f'P{i}': i < 3 for i in range(1, 7)},
+            model=M.MODEL_PIN, pdf_reading=M.PDF_READING,
+            transfer=dict(pdf_content=True, existing_wiki=True, images=False, external_assets=False,
+                automatic_chat_capture=False, secrets_or_sensitive_personal_data=False, external_novelty_search=False),
+            budget=dict(cost_policy='no_cost_cap', unknown_cost_action='record_unknown_continue'),
+            limits=dict(attempts_per_item_per_run_including_initial=2, soft_run_minutes=45),
+            jobs={k: dict(enabled=False, cron_id=None, registration_status='not_registered', registration_readback=None,
+                prompt_path=M.PROMPT, prompt_revision=M.PROMPT_REV) for k in ('daily_compile', 'research_review')})
+        self.state = dict(schema='pkm-compilation-state/v1', policy_revision=M.POLICY,
+            contract_revision=M.CONTRACT, safety_block=False, enabled=False, transactions=[], items=[])
+        self.approval = dict(schema='pkm-pdf-text-run-approval/v1', approved=True, wiki_root=str(self.root),
+            run_id=Path(RUN).name, version_ids=VIDS, policy_revision=M.POLICY, contract_revision=M.CONTRACT,
+            prompt_revision=M.PROMPT_REV, instructions_path=RUN+'/runtime/instructions.md',
+            approved_route=M.ROUTE, provider='codex-lb', model='gpt-6-astra', reasoning_effort='xhigh',
+            max_attempts_per_item=2, publication_edit_freeze_confirmed=True, validated_publication_authorized=True,
+            sources={}, wiki_inputs=[])
+        for path in M.DOCS:
+            if path.endswith('.json'):
+                data = encoded({'$defs': {'automation': {'type': 'object'}, 'compilation': {'type': 'object'}},
+                    'description': M.POLICY+' '+M.CONTRACT+' '+M.PROMPT_REV})
+            else:
+                data = (M.POLICY+' '+M.CONTRACT+'\nPDF embedded text approved.\n').encode()
+            self.write(path, data)
+        self.write(M.PROMPT, (M.POLICY+' '+M.CONTRACT+' '+M.PROMPT_REV).encode())
+        self.write(self.approval['instructions_path'], b'Synthetic bounded instruction.')
+        self.write('concepts/synthetic.md', '# Synthetic\nTest context.\n'.encode())
+        self.approval['wiki_inputs'] = [{'path': 'concepts/synthetic.md', 'sha256': sha(self.read('concepts/synthetic.md'))}]
+        for vid in VIDS:
+            self.set_pdf(vid, synthetic_pdf())
+        self.sync()
+
+    def write(self, path, data):
+        path = self.root / path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+
+    def read(self, path):
+        return (self.root / path).read_bytes()
+
+    def set_pdf(self, vid, data):
+        source = f'raw/articles/4cff5b4f10ec/arxiv-{vid}/source.pdf'
+        metadata = source.replace('source.pdf', 'source.json')
+        meta = dict(schema='arxiv-pdf-source/v1', source='arxiv', source_format='pdf', version_id=vid,
+            owning_cron_id='4cff5b4f10ec', pdf_file='source.pdf', source_url=f'https://arxiv.org/pdf/{vid}',
+            final_url=f'https://arxiv.org/pdf/{vid}', title='Synthetic paper '+vid, pdf_sha256=sha(data),
+            pdf_bytes=len(data), content_type='application/pdf', http_status=200, preprocessing=False,
+            offline_assets_bundled=False, wiki_compiled=False, capture_method='http_response_body_no_rewrite',
+            content_scope='pdf_fulltext_as_served')
+        self.write(source, data)
+        self.write(metadata, encoded(meta))
+        refs = dict(source_path=source, metadata_path=metadata, source_sha256=sha(data),
+            source_bytes=len(data), metadata_sha256=sha(encoded(meta)))
+        self.approval['sources'][vid] = refs
+        self.state['items'] = [x for x in self.state['items'] if x['version_id'] != vid]
+        self.state['items'].append(dict(refs, version_id=vid, source='arxiv', format='pdf', status='queued', failure_count=0))
+
+    def sync(self):
+        self.write(RUN+'/scope-approval.json', encoded(self.scope))
+        self.write('_meta/automation.json', encoded(self.policy))
+        self.write('_meta/state/compilation.json', encoded(self.state))
+        a = self.approval
+        a['scope_approval_sha256'] = sha(encoded(self.scope))
+        a['policy_sha256'] = sha(encoded(self.policy))
+        a['prompt_sha256'] = sha(self.read(M.PROMPT))
+        a['document_sha256'] = {p: sha(self.read(p)) for p in M.DOCS}
+        a['instructions_sha256'] = sha(self.read(a['instructions_path']))
+        self.write(RUN+'/execution-approval.json', encoded(a))
+
+    def preflight(self, **kw):
+        return M.preflight(root=self.root, run=RUN, vid=VIDS[0], test_config=self.config, **kw)
+
+    def close(self):
+        self.tmp.cleanup()
+
+
+class Tests(unittest.TestCase):
+    def setUp(self):
+        self.assertIsNotNone(M, 'manual_pdf adapter is not implemented')
+        self.f = Fixture()
+        self.addCleanup(self.f.close)
+
+    def test_01_preflight_requires_bound_scope_before_body(self):
+        ctx = self.f.preflight()
+        self.assertEqual(ctx['record']['version_id'], VIDS[0])
+        self.assertEqual(ctx['record']['sources'], self.f.approval['sources'])
+        self.assertNotIn('pypdf', ctx)
+        self.f.scope['pdf_text_transfer_authorized'] = False
+        self.f.sync()
+        with self.assertRaisesRegex(M.Rejected, 'scope_not_approved'):
+            self.f.preflight()
+
+    def test_02_embedded_pages_ephemeral_and_blank_unread(self):
+        self.assertTrue(callable(getattr(M, 'read_pdf_pages', None)), 'PDF reader missing')
+        self.f.set_pdf(VIDS[0], synthetic_pdf(('Alpha evidence one.', '', 'Beta evidence two.')))
+        self.f.sync()
+        pages, telemetry = M.read_pdf_pages(self.f.preflight())
+        self.assertEqual([p['page'] for p in pages], [1, 2, 3])
+        self.assertEqual(pages[0]['text'], 'Alpha evidence one.')
+        self.assertEqual(pages[1]['text'], '')
+        self.assertEqual(telemetry['blank_pages'], [2])
+        self.assertEqual(telemetry['read_scope'], ['page=1', 'page=3'])
+        self.assertFalse(telemetry['main_text_complete_eligible'])
+        self.assertEqual(telemetry['pypdf_version'], '6.19.0')
+        self.assertNotIn('Alpha evidence', json.dumps(telemetry))
+        self.assertFalse((self.f.root / M.RUNTIME / VIDS[0]).exists())
+
+    def test_03_compile_reserves_before_fake_client_and_never_sends_pdf(self):
+        self.assertTrue(callable(getattr(M, 'compile_one', None)), 'compiler missing')
+        calls = []
+        f = self.f
+        class Fake:
+            def __init__(self):
+                self.responses = self
+            def create(self, **kwargs):
+                calls.append(kwargs)
+                return dict(status='completed', model='gpt-6-astra', error=None, incomplete_details=None,
+                    output_text='{"synthetic":true}', cost_usd=None)
+            def close(self):
+                pass
+        def factory(**kwargs):
+            self.assertEqual(kwargs['max_retries'], 0)
+            self.assertEqual(kwargs['timeout'], 2400)
+            self.assertEqual(kwargs['approved_route'], M.ROUTE)
+            record = json.loads(f.read(M.RUNTIME+'/'+VIDS[0]+'/attempt1-record.json'))
+            self.assertEqual(record['outcome'], 'unknown')
+            return Fake()
+        out = M.compile_one(root=f.root, run=RUN, vid=VIDS[0], attempt='attempt1',
+            test_config=f.config, client_factory=factory)
+        self.assertTrue(out['completed'])
+        self.assertIsNone(out['cost_usd'])
+        self.assertEqual(out['cost_status'], 'unobserved_not_zero')
+        self.assertEqual(len(calls), 1)
+        call = calls[0]
+        self.assertEqual(call['model'], 'gpt-6-astra')
+        self.assertEqual(call['reasoning'], {'effort':'xhigh'})
+        self.assertEqual(call['tools'], [])
+        self.assertIs(call['store'], False)
+        self.assertIs(call['stream'], False)
+        payload = json.loads(call['input'][0]['content'][0]['text'])
+        self.assertEqual(payload['pages'][0], {'page':1,'text':'Alpha evidence one.'})
+        self.assertNotIn('%PDF-', json.dumps(call))
+        self.assertEqual(payload['wiki_context'][0]['path'], 'concepts/synthetic.md')
+        paths = sorted(p.name for p in (f.root / M.RUNTIME / VIDS[0]).iterdir())
+        self.assertEqual(paths, ['attempt1-record.json','attempt1-result.json'])
+        for path in paths:
+            self.assertNotIn('Alpha evidence', (f.root / M.RUNTIME / VIDS[0] / path).read_text())
+
+    def document(self):
+        return dict(title='Synthetic paper '+VIDS[0], summary='합성 근거 요약', version_id=VIDS[0],
+            main_text_complete=True, read_scope=['page=1','page=2'], unread_scope=list(M.VISUAL_UNREAD),
+            limitations=['합성 검증이며 실험 재현이 아니다.'],
+            claims=[dict(id='C01', kind='author_report', statement='합성 보고 내용', conditions='합성 조건',
+                anchor='page=1', quote='Alpha evidence one.')],
+            markdown_body='## 합성 분석\nC01 저자 보고. ^[raw/articles/4cff5b4f10ec/arxiv-'+VIDS[0]+'/source.pdf#page=1]\n'+
+                '\n'.join(M.VISUAL_UNREAD)+'\n[[concepts/synthetic]]\n[[entities/arxiv-'+VIDS[1]+']]')
+
+    def compile_fake(self, response=None, factory=None, attempt='attempt1'):
+        response = response if response is not None else dict(status='completed', model='gpt-6-astra',
+            error=None, incomplete_details=None, output_text=json.dumps(self.document(), ensure_ascii=False))
+        class Fake:
+            def __init__(self): self.responses = self
+            def create(self, **kwargs): return response
+            def close(self): pass
+        return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+            test_config=self.f.config, client_factory=factory or (lambda **kw: Fake()))
+
+    def test_04_verify_exact_page_quote_and_return_without_writes(self):
+        self.assertTrue(callable(getattr(M, 'verify_result', None)), 'verifier missing')
+        out = self.compile_fake()
+        before = sorted(str(p) for p in self.f.root.rglob('*'))
+        report = M.verify_result(root=self.f.root, run=RUN, vid=VIDS[0], result=out, test_config=self.f.config)
+        self.assertTrue(report['passed'], report)
+        self.assertEqual(report['document'], self.document())
+        self.assertEqual(before, sorted(str(p) for p in self.f.root.rglob('*')))
+        bad = self.document()
+        bad['claims'][0]['quote'] = 'Beta evidence two.'  # exists, but only on page 2
+        out['text'] = json.dumps(bad)
+        report = M.verify_result(root=self.f.root, run=RUN, vid=VIDS[0], result=out, test_config=self.f.config)
+        self.assertFalse(report['passed'])
+        self.assertIn('quotes_exact_page', [x['check'] for x in report['checks'] if not x['ok']])
+
+    def test_05_cli_preflight_has_no_pdf_or_model_access(self):
+        self.assertTrue(callable(getattr(M, 'main', None)), 'CLI missing')
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            code = M.main(['preflight', VIDS[0], '--root', str(self.f.root)], test_config=self.f.config)
+        self.assertEqual(code, 0)
+        self.assertNotIn('Alpha evidence', output.getvalue())
+        self.assertEqual(json.loads(output.getvalue())['status'], 'prepared_not_executed')
+
+    def test_invalid_pdf_forms_before_client(self):
+        for data, code in [(b'not a pdf', 'pdf_format'), (b'%PDF-1.7\nbroken\n%%EOF\n','pdf_parse_rejected'),
+                (synthetic_pdf(('', '')), 'all_empty_pdf'), (synthetic_pdf(encrypted=True), 'encrypted_pdf')]:
+            self.f.set_pdf(VIDS[0], data)
+            self.f.sync()
+            called = []
+            with self.assertRaisesRegex(M.Rejected, code):
+                self.compile_fake(factory=lambda **kw: called.append(kw))
+            self.assertEqual(called, [])
+            self.assertFalse((self.f.root/M.RUNTIME/VIDS[0]).exists())
+
+    def test_source_drift_before_parser(self):
+        ctx = self.f.preflight()
+        self.f.write(ctx['record']['source_path'], b'%PDF-1.7\nchanged\n%%EOF')
+        with patch.object(M, '_pdf_module', side_effect=AssertionError('must not parse')):
+            with self.assertRaisesRegex(M.Rejected, 'source_integrity'):
+                M.read_pdf_pages(ctx)
+
+    def test_approval_drift_between_preflight_and_read(self):
+        ctx = self.f.preflight()
+        self.f.scope['local_pdf_text_reading_authorized'] = False
+        self.f.sync()
+        with patch.object(M, '_pdf_module', side_effect=AssertionError('must not import')):
+            with self.assertRaisesRegex(M.Rejected, 'scope_not_approved'):
+                M.read_pdf_pages(ctx)
+
+    def test_factory_model_route_mismatch_sanitized(self):
+        import types
+        fake_rt = types.ModuleType('hermes_cli.runtime_provider')
+        fake_rt.resolve_runtime_provider = lambda **kw: dict(requested_provider='codex-lb',provider='custom',
+            model='wrong-model',base_url=M.ROUTE['base_url'],api_mode='codex_responses')
+        fake_sdk = types.ModuleType('openai')
+        calls=[]
+        fake_sdk.OpenAI = lambda **kw: calls.append(kw)
+        with patch.dict(sys.modules, {'hermes_cli.runtime_provider':fake_rt, 'openai':fake_sdk}):
+            out = self.compile_fake(factory=M.helper('compile').runtime_client)
+        self.assertFalse(out['completed'])
+        self.assertEqual(calls, [])
+        self.assertEqual(out['text'], '')
+
+    def test_unknown_started_attempt_counts_and_no_automatic_retry(self):
+        count=[]
+        def fail(**kw):
+            count.append(1)
+            raise RuntimeError('Bearer SECRET-SDK-STRING')
+        out = self.compile_fake(factory=fail)
+        self.assertEqual(count, [1])
+        self.assertFalse(out['completed'])
+        self.assertNotIn('SECRET', json.dumps(out))
+        folder = self.f.root/M.RUNTIME/VIDS[0]
+        record1 = (folder/'attempt1-record.json').read_bytes()
+        (folder/'attempt1-result.json').unlink()  # Synthetic crashed-process state.
+        out2 = self.compile_fake(attempt='attempt2')
+        self.assertTrue(out2['completed'])
+        self.assertEqual(record1, (folder/'attempt1-record.json').read_bytes())
+        for attempt in ('attempt1','attempt2','attempt3'):
+            with patch.object(M, 'read_pdf_pages', side_effect=AssertionError('exhausted before reading')):
+                with self.assertRaisesRegex(M.Rejected, 'attempt_exists|attempt_limit'):
+                    self.compile_fake(attempt=attempt)
+
+    def test_attempt2_cannot_be_first(self):
+        with self.assertRaisesRegex(M.Rejected, 'attempt_limit'):
+            self.compile_fake(attempt='attempt2')
+
+    def test_unknown_attempt_artifact_refused(self):
+        self.f.write(M.RUNTIME+'/'+VIDS[0]+'/mystery-record.json', b'{}')
+        with self.assertRaisesRegex(M.Rejected, 'unknown_attempt_artifact'):
+            self.compile_fake()
+
+    def test_drift_inside_factory_blocks_request(self):
+        calls=[]
+        outer=self
+        class Fake:
+            def __init__(self): self.responses=self
+            def create(self, **kw): calls.append(kw)
+            def close(self): pass
+        def factory(**kw):
+            outer.f.write(M.PROMPT, b'changed')
+            return Fake()
+        out=self.compile_fake(factory=factory)
+        self.assertFalse(out['completed'])
+        self.assertEqual(calls, [])
+
+    def test_incomplete_response_false(self):
+        out = self.compile_fake(response=dict(status='incomplete',model='gpt-6-astra',
+            incomplete_details={'reason':'max_output_tokens'}, output_text='SECRET INCOMPLETE'))
+        self.assertFalse(out['completed'])
+        self.assertEqual(out['text'], '')
+        self.assertEqual(out['incomplete_details'], {'reason':'max_output_tokens'})
+
+    def test_wrong_response_model_false(self):
+        out = self.compile_fake(response=dict(status='completed',model='wrong-model',output_text='ignored'))
+        self.assertFalse(out['completed'])
+        self.assertEqual(out['text'], '')
+
+    def test_response_error_false_and_redacted(self):
+        out = self.compile_fake(response=dict(status='completed',model='gpt-6-astra',output_text='ignored',
+            error={'message':'SECRET PROVIDER ERROR'}))
+        self.assertFalse(out['completed'])
+        self.assertEqual(out['response_error'], {'present':True})
+        self.assertNotIn('SECRET', json.dumps(out))
+
+    def test_cost_unknown_and_positive_nonblocking(self):
+        for index, cost in enumerate((None, 100000.25), 1):
+            response=dict(status='completed',model='gpt-6-astra',output_text=json.dumps(self.document()),cost_usd=cost)
+            out=self.compile_fake(response=response,attempt='attempt'+str(index))
+            self.assertTrue(out['completed'])
+            self.assertEqual(out['cost_usd'], cost)
+            report=M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)
+            self.assertTrue(report['passed'], report)
+
+    def test_duplicate_json_keys_and_nonjson_refused(self):
+        out=self.compile_fake()
+        for text in ('{"title":"a","title":"b"}', '{"x":NaN}', '[]', '{} {}', '```json\n{}\n```'):
+            out['text']=text
+            report=M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)
+            self.assertFalse(report['passed'])
+            self.assertIn('strict_json_object', [x['check'] for x in report['checks'] if not x['ok']])
+
+    def test_result_hash_mismatch_before_pdf_read(self):
+        out=self.compile_fake()
+        out['source_sha256']='0'*64
+        with patch.object(M, 'read_pdf_pages', side_effect=AssertionError('bad result must not read')):
+            self.assertFalse(M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)['passed'])
+
+    def test_blank_page_disclosure_and_false_coverage(self):
+        self.f.set_pdf(VIDS[0], synthetic_pdf(('Alpha evidence one.', '')))
+        self.f.sync()
+        doc=self.document()
+        doc['main_text_complete']=False
+        doc['read_scope']=['page=1']
+        doc['unread_scope'].append('page=2: 텍스트 없음, 미검토')
+        doc['markdown_body']+='\npage=2: 텍스트 없음, 미검토'
+        out=self.compile_fake(response=dict(status='completed',model='gpt-6-astra',output_text=json.dumps(doc)))
+        self.assertTrue(M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)['passed'])
+        doc['main_text_complete']=True
+        out['text']=json.dumps(doc)
+        self.assertFalse(M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)['passed'])
+
+    def test_whitespace_quote_and_optional_physical_link(self):
+        doc=self.document()
+        doc['claims'][0]['quote']='Alpha  evidence\n one.'
+        doc['markdown_body']+='\n[원문](../raw/articles/4cff5b4f10ec/arxiv-'+VIDS[0]+'/source.pdf#page=1)'
+        out=self.compile_fake(response=dict(status='completed',model='gpt-6-astra',output_text=json.dumps(doc)))
+        self.assertTrue(M.verify_result(root=self.f.root,vid=VIDS[0],result=out,test_config=self.f.config)['passed'])
+
+    def test_deadline_after_extraction_blocks_client(self):
+        now=[10.0]
+        original=M.read_pdf_pages
+        calls=[]
+        def slow(ctx, **kw):
+            pages,telemetry=original(ctx, **kw)
+            now[0]=3000.0
+            return pages,telemetry
+        with patch.object(M.time,'monotonic',lambda:now[0]), patch.object(M,'read_pdf_pages',slow):
+            with self.assertRaises(TimeoutError):
+                self.compile_fake(factory=lambda **kw:calls.append(kw))
+        self.assertEqual(calls,[])
+
+    def test_import_has_no_io_or_sys_path_mutation(self):
+        code=compile((HERE/'manual_pdf.py').read_bytes(), 'manual_pdf.py', 'exec')
+        before=list(sys.path)
+        with patch('builtins.open',side_effect=AssertionError('import I/O')), patch('os.open',side_effect=AssertionError('import I/O')):
+            namespace={'__name__':'import_safe_probe'}
+            exec(code, namespace)
+        self.assertEqual(sys.path,before)
+        self.assertEqual(namespace['helper'].cache_info().currsize,0)
+
+    def test_test_config_cannot_point_at_real_root(self):
+        with self.assertRaisesRegex(M.Rejected,'test_root'):
+            M.TestConfig(ROOT,pypdf)
+        with self.assertRaisesRegex(M.Rejected,'root_mismatch'):
+            M.preflight(root=self.f.root,vid=VIDS[0])
+
+    def test_synthetic_without_fake_refused(self):
+        with self.assertRaisesRegex(M.Rejected,'synthetic_requires_fake_client'):
+            M.compile_one(root=self.f.root,vid=VIDS[0],attempt='attempt1',test_config=self.f.config)
+
+    def test_cli_compile_verify_synthetic(self):
+        doc=json.dumps(self.document())
+        class Fake:
+            def __init__(self): self.responses=self
+            def create(self, **kw): return dict(status='completed',model='gpt-6-astra',output_text=doc)
+            def close(self): pass
+        args=[VIDS[0],'--root',str(self.f.root),'--attempt','attempt1']
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(M.main(['compile']+args,test_config=self.f.config,client_factory=lambda **kw:Fake()),0)
+        self.assertTrue(json.loads(output.getvalue())['completed'])
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(M.main(['verify']+args,test_config=self.f.config),0)
+        self.assertTrue(json.loads(output.getvalue())['passed'])
+
+
+def refusal_case(mutate, sync=True):
+    def test(self):
+        mutate(self.f)
+        if sync: self.f.sync()
+        reads, calls = [], []
+        cls = M.helper('publish').Files
+        original = cls.read
+        def guard(fs, path, *args, **kw):
+            if str(path).endswith('.pdf'):
+                reads.append(str(path))
+                raise AssertionError('PDF read crossed rejected gate')
+            return original(fs, path, *args, **kw)
+        with patch.object(cls, 'read', guard):
+            with self.assertRaises((ValueError, OSError, M.Rejected, M.helper('compile').Rejected)):
+                self.compile_fake(factory=lambda **kw: calls.append(kw))
+        self.assertEqual(reads, [])
+        self.assertEqual(calls, [])
+    return test
+
+
+for name, mutate, sync in [
+    ('execution_false', lambda f: f.approval.update(approved=False), True),
+    ('scope_true_integer', lambda f: f.scope.update(local_pdf_text_reading_authorized=1), True),
+    ('scope_wrong_root', lambda f: f.scope.update(wiki_root='/wrong'), True),
+    ('scope_wrong_run', lambda f: f.scope.update(run_id='other'), True),
+    ('scope_third_version', lambda f: f.scope.update(version_ids=VIDS+['2609.30830v1']), True),
+    ('scope_missing_user_confirmation', lambda f: f.scope.update(publication_confirmation=''), True),
+    ('scope_model_fallback_integer', lambda f: f.scope.update(model=dict(M.MODEL_PIN,fallback_allowed=0)), True),
+    ('execution_wrong_route', lambda f: f.approval.update(approved_route=dict(M.ROUTE,api_mode='responses')), True),
+    ('execution_wrong_model', lambda f: f.approval.update(model='other'), True),
+    ('execution_wrong_effort', lambda f: f.approval.update(reasoning_effort='high'), True),
+    ('execution_wrong_versions', lambda f: f.approval.update(version_ids=VIDS[:1]), True),
+    ('execution_no_freeze', lambda f: f.approval.update(publication_edit_freeze_confirmed=False), True),
+    ('execution_wrong_retries', lambda f: f.approval.update(max_attempts_per_item=3), True),
+    ('scope_drift', lambda f: f.write(RUN+'/scope-approval.json', encoded(dict(f.scope,recorded_at='changed'))), False),
+    ('policy_drift', lambda f: f.write('_meta/automation.json', encoded(dict(f.policy,enabled=True))), False),
+    ('policy_v2', lambda f: f.policy.update(policy_revision='pkm-html-knowledge/v2'), True),
+    ('policy_enabled', lambda f: f.policy.update(enabled=True), True),
+    ('policy_p3', lambda f: f.policy['phase_authorizations'].update(P3=True), True),
+    ('policy_p6', lambda f: f.policy['phase_authorizations'].update(P6=True), True),
+    ('policy_registration', lambda f: f.policy.update(registration_authorized=True), True),
+    ('policy_job_active', lambda f: f.policy['jobs']['daily_compile'].update(enabled=True), True),
+    ('policy_registered', lambda f: f.policy['jobs']['research_review'].update(cron_id='bad'), True),
+    ('policy_fallback', lambda f: f.policy.update(model=dict(M.MODEL_PIN,fallback_allowed=True)), True),
+    ('policy_fallback_integer', lambda f: f.policy.update(model=dict(M.MODEL_PIN,fallback_allowed=0)), True),
+    ('policy_pdf_binary', lambda f: f.policy.update(pdf_reading=dict(M.PDF_READING,pdf_binary_transfer=True)), True),
+    ('policy_ocr', lambda f: f.policy.update(pdf_reading=dict(M.PDF_READING,ocr=True)), True),
+    ('policy_reading_integer', lambda f: f.policy.update(pdf_reading=dict(M.PDF_READING,ocr=0)), True),
+    ('policy_transfer_off', lambda f: f.policy['transfer'].update(pdf_content=False), True),
+    ('policy_images', lambda f: f.policy['transfer'].update(images=True), True),
+    ('policy_wrong_environment', lambda f: f.policy.update(pdf_reading=dict(M.PDF_READING,environment='/global')), True),
+    ('policy_persist', lambda f: f.policy.update(pdf_reading=dict(M.PDF_READING,persistent_extraction=True)), True),
+    ('state_safety', lambda f: f.state.update(safety_block=True), True),
+    ('state_unresolved', lambda f: f.state.update(transactions=[{'status':'prepared'}]), True),
+    ('state_blocked', lambda f: f.state['items'][0].update(status='blocked_policy'), True),
+    ('state_failures', lambda f: f.state['items'][0].update(failure_count=3), True),
+    ('source_html_input', lambda f: f.approval['sources'][VIDS[0]].update(source_path='raw/other/source.html'), True),
+    ('source_traversal', lambda f: f.approval['sources'][VIDS[0]].update(source_path='../secret.pdf'), True),
+    ('source_unapproved', lambda f: f.approval['sources'].update({'other':f.approval['sources'][VIDS[0]]}), True),
+    ('source_hash_bad_format', lambda f: f.approval['sources'][VIDS[0]].update(source_sha256='x'*64), True),
+    ('source_metadata_drift', lambda f: f.write(f.approval['sources'][VIDS[0]]['metadata_path'], b'{}'), False),
+    ('source_symlink', lambda f: ((f.root/f.approval['sources'][VIDS[0]]['source_path']).unlink(),
+        (f.root/f.approval['sources'][VIDS[0]]['source_path']).symlink_to('source.json')), True),
+    ('wiki_raw', lambda f: f.approval.update(wiki_inputs=[{'path':'raw/paper.md','sha256':'0'*64}]), True),
+    ('wiki_env', lambda f: f.approval.update(wiki_inputs=[{'path':'.env','sha256':'0'*64}]), True),
+    ('wiki_traversal', lambda f: f.approval.update(wiki_inputs=[{'path':'concepts/../secret.md','sha256':'0'*64}]), True),
+    ('wiki_drift', lambda f: f.write('concepts/synthetic.md',b'changed'), False),
+    ('prompt_drift', lambda f: f.write(M.PROMPT,b'changed'), False),
+    ('instructions_drift', lambda f: f.write(f.approval['instructions_path'],b'changed'), False),
+    ('documents_drift', lambda f: f.write('AGENTS.md',b'changed'), False),
+]:
+    setattr(Tests, 'test_gate_'+name, refusal_case(mutate, sync))
+
+
+def document_case(mutate):
+    def test(self):
+        out = self.compile_fake()
+        doc = self.document()
+        mutate(doc)
+        out['text'] = json.dumps(doc, ensure_ascii=False)
+        report = M.verify_result(root=self.f.root, run=RUN, vid=VIDS[0], result=out, test_config=self.f.config)
+        self.assertFalse(report['passed'])
+    return test
+
+
+for name, mutate in [
+    ('duplicate_claim', lambda d: d['claims'].append(copy.deepcopy(d['claims'][0]))),
+    ('wrong_page', lambda d: d['claims'][0].update(anchor='page=2')),
+    ('page_zero', lambda d: d['claims'][0].update(anchor='page=0')),
+    ('page_fraction', lambda d: d['claims'][0].update(anchor='page=1.0')),
+    ('page_out_of_range', lambda d: d['claims'][0].update(anchor='page=99')),
+    ('page_integer', lambda d: d['claims'][0].update(anchor=1)),
+    ('wrong_quote_page', lambda d: d['claims'][0].update(quote='Beta evidence two.')),
+    ('empty_quote', lambda d: d['claims'][0].update(quote='  ')),
+    ('wrong_title', lambda d: d.update(title='Other')),
+    ('wrong_id', lambda d: d.update(version_id=VIDS[1])),
+    ('frontmatter', lambda d: d.update(markdown_body='---\ntitle: x\n---\n'+d['markdown_body'])),
+    ('bom_frontmatter', lambda d: d.update(markdown_body='\ufeff---\ntitle: x\n---\n'+d['markdown_body'])),
+    ('body_english', lambda d: d.update(markdown_body='English only')),
+    ('missing_unread', lambda d: d.update(unread_scope=['unclear'])),
+    ('partial_claiming_complete', lambda d: d.update(read_scope=['page=1'])),
+    ('duplicate_read_scope', lambda d: d.update(read_scope=['page=1','page=2','page=2'])),
+    ('invalid_bool', lambda d: d.update(main_text_complete=1)),
+    ('extra_field', lambda d: d.update(frontmatter={})),
+    ('missing_conditions', lambda d: d['claims'][0].pop('conditions')),
+    ('hidden_citation', lambda d: d.update(markdown_body='```\n'+d['markdown_body']+'\n```')),
+    ('hidden_html', lambda d: d.update(markdown_body='<div hidden>'+d['markdown_body']+'</div>')),
+    ('escaped_citation', lambda d: d.update(markdown_body=d['markdown_body'].replace('^[','\\^['))),
+    ('uncited_repeat', lambda d: d.update(markdown_body=d['markdown_body']+'\nC01 별도 주장.')),
+    ('claim_different_line', lambda d: d.update(markdown_body=d['markdown_body'].replace(' ^[','\n^['))),
+    ('wrong_canonical_source', lambda d: d.update(markdown_body=d['markdown_body'].replace(VIDS[0],VIDS[1]))),
+    ('unapproved_wikilink', lambda d: d.update(markdown_body=d['markdown_body']+'\n[[concepts/missing]]')),
+    ('wiki_bad_fragment', lambda d: d.update(markdown_body=d['markdown_body']+'\n[[concepts/synthetic#absent]]')),
+    ('future_bad_fragment', lambda d: d.update(markdown_body=d['markdown_body']+'\n[[entities/arxiv-'+VIDS[1]+'#absent]]')),
+    ('local_secret_link', lambda d: d.update(markdown_body=d['markdown_body']+'\n[secret](../.env)')),
+    ('external_link', lambda d: d.update(markdown_body=d['markdown_body']+'\n[web](https://example.com)')),
+    ('image_link', lambda d: d.update(markdown_body=d['markdown_body']+'\n![image](image.png)')),
+    ('reference_link', lambda d: d.update(markdown_body=d['markdown_body']+'\n[secret][hidden]\n[hidden]: ../.env')),
+]:
+    setattr(Tests, 'test_document_'+name, document_case(mutate))
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

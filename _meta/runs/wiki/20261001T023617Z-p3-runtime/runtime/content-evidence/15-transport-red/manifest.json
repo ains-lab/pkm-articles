@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review",
+    "test_content.ContentTests.test_factory_failure_is_precall_and_route_rejection_never_retryable"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "f4ced81448dbefdcdc104f4da7ad95560c8ebfec33ac9ec9855f3749560812fc",
+    "stderr.txt": "02837d5906d29f5cd13fd9323f434eab125222b190fd1c90ab9c8aa4ef7d1c52",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "527b2f845113e451fd9101b321da7d55578c9239aa453efdb041ca5ed273aeab"
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "schema": "archify-document-package-verification/v1",
+  "checked_at": "2026-10-01T09:00:18.891332+00:00",
+  "result": "pass",
+  "diagram_count": 3,
+  "artifacts": [
+    {
+      "name": "01-connect",
+      "type": "architecture",
+      "output": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/diagram.html",
+      "specification": {
+        "sha256": "69572a5eb04f863658b550b7ff2dc09ea2164621ec383d7f3c0fd5e7afc95583",
+        "bytes": 35284
+      },
+      "artifact": {
+        "sha256": "ca98f3ccbb29526890d2e16b3c9cc88bc0aa32334011de9b112da3c70445a909",
+        "bytes": 764003
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "browser_executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+      "finalize_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/diagram.finalize.json",
+      "browser_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/diagram.browser-check.json",
+      "capture_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/visual-check/diagram.visual-check.json",
+      "screenshots": [
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/visual-check/diagram.visual-check.1440x900.dark.png",
+          "sha256": "2db8756121c137ad69454755e7bc36cb1a8f4e662bdead266aff61ae1c947230",
+          "bytes": 77247
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/visual-check/diagram.visual-check.1440x900.light.png",
+          "sha256": "15baa4b370126a2a553268d8db2d5aa06e6cd957b177418a45a9411fad74182b",
+          "bytes": 71062
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/visual-check/diagram.visual-check.2048x1320.dark.png",
+          "sha256": "52b5c85c6f456867eb0fc80490502e6a01306ec953b4df4344142455233310aa",
+          "bytes": 114478
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/review-2/visual-check/diagram.visual-check.2048x1320.light.png",
+          "sha256": "787abebadb835c35cba90aa4d33a1f2225935f498f6680dd9d7ff92162777d7c",
+          "bytes": 104794
+        }
+      ],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "minimumProjectedNodeTextPx": 7.667924528301887,
+          "overflowX": false
+        },
+        {
+          "width": 1600,
+          "height": 1000,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 2048,
+          "height": 1320,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        }
+      ],
+      "visual_review": {
+        "status": "sample_reviewed_with_limitations",
+        "scope": "1440x900 light, visible first screen only",
+        "observed": "No obvious clipped nodes or obstructive overlaps; arrow direction traceable.",
+        "limitations": [
+          "small/pale supporting text",
+          "offscreen cards not reviewed",
+          "mobile not tested",
+          "all interactions/exports/accessibility not audited"
+        ]
+      }
+    },
+    {
+      "name": "02-workdir",
+      "type": "workflow",
+      "output": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/diagram.html",
+      "specification": {
+        "sha256": "567a4815818a7cbf681751f65020cd0645855eed08796435997d421a5dc36021",
+        "bytes": 35766
+      },
+      "artifact": {
+        "sha256": "18b8cc5892cd0237e97c6c38607c0aebe169c0e35b514165a597fd04871da381",
+        "bytes": 763665
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "browser_executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+      "finalize_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/diagram.finalize.json",
+      "browser_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/diagram.browser-check.json",
+      "capture_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/visual-check/diagram.visual-check.json",
+      "screenshots": [
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/visual-check/diagram.visual-check.1440x900.dark.png",
+          "sha256": "f0f3e19e74ac0ac6e0dee1b3e8c9c732f59d540959ecd7f62d0162e8d5528a29",
+          "bytes": 144174
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/visual-check/diagram.visual-check.1440x900.light.png",
+          "sha256": "c5bfc0b9a700c44d62c139c9950910e9431e8b2262accdfdd743498f2d66217c",
+          "bytes": 131822
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/visual-check/diagram.visual-check.2048x1320.dark.png",
+          "sha256": "bafb5390012671dddee99920cd17add27e7ba6c06f9702e45b1142137f5cddb9",
+          "bytes": 220832
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/02-workdir/visual-check/diagram.visual-check.2048x1320.light.png",
+          "sha256": "32235cac496ae41147858858ac415164e76fd8e6553f52334fe9a99b91578ba5",
+          "bytes": 203284
+        }
+      ],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 1600,
+          "height": 1000,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 2048,
+          "height": 1320,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        }
+      ],
+      "visual_review": {
+        "status": "sample_reviewed_with_limitations",
+        "scope": "1440x900 light, visible first screen only",
+        "observed": "No obvious clipped nodes or obstructive overlaps; arrow direction traceable.",
+        "limitations": [
+          "small/pale supporting text",
+          "offscreen cards not reviewed",
+          "mobile not tested",
+          "all interactions/exports/accessibility not audited"
+        ]
+      }
+    },
+    {
+      "name": "03-query",
+      "type": "workflow",
+      "output": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.html",
+      "specification": {
+        "sha256": "c3dea7be5ca6bd12d33ee9818ac0d2e323ea674d5af5c5682524670f6b21164f",
+        "bytes": 36730
+      },
+      "artifact": {
+        "sha256": "f9da26f8077ce961184323a5df602ab542b72f63acb2ed85781a0e624dc9ed93",
+        "bytes": 769003
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "browser_executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+      "finalize_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.finalize.json",
+      "browser_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.browser-check.json",
+      "capture_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/visual-check/diagram.visual-check.json",
+      "screenshots": [
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/visual-check/diagram.visual-check.1440x900.dark.png",
+          "sha256": "ca792eb190210223a64bf16f98e62d428070ae0389eb42ed43f4900de57e6da5",
+          "bytes": 126654
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/visual-check/diagram.visual-check.1440x900.light.png",
+          "sha256": "7f86841b7a2e3924bf1dda2ad976b763239221bd684e27aec15d8bcb79922e1f",
+          "bytes": 114244
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/visual-check/diagram.visual-check.2048x1320.dark.png",
+          "sha256": "40fc10499427da39a4e019a61cf853004e7e121a4aea40862bc37a73543523f1",
+          "bytes": 182061
+        },
+        {
+          "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/visual-check/diagram.visual-check.2048x1320.light.png",
+          "sha256": "2e5e80933e9be4f59714d903caf2306ae844866da0ef3d5c0e97b6ddc92c6864",
+          "bytes": 163903
+        }
+      ],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 1600,
+          "height": 1000,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        },
+        {
+          "width": 2048,
+          "height": 1320,
+          "minimumProjectedNodeTextPx": 8,
+          "overflowX": false
+        }
+      ],
+      "visual_review": {
+        "status": "sample_reviewed_with_limitations",
+        "scope": "1440x900 light, visible first screen only",
+        "observed": "No obvious clipped nodes or obstructive overlaps; arrow direction traceable.",
+        "limitations": [
+          "small/pale supporting text",
+          "offscreen cards not reviewed",
+          "mobile not tested",
+          "all interactions/exports/accessibility not audited"
+        ]
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "requested_diagrams",
+      "pass": true,
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "name": "original_documents_and_slides",
+      "pass": true,
+      "baseline_files": 80,
+      "unchanged_files": 79,
+      "only_additive_navigation_change": "docs/techblog/hermes-api-gateway-workdir-assoc/ARCHIFY.md"
+    },
+    {
+      "name": "source_line_ranges",
+      "pass": true
+    },
+    {
+      "name": "local_links_and_fences_and_bash_syntax",
+      "pass": true,
+      "link_count": 27
+    }
+  ],
+  "basis": "User-supplied working-tree technical documents + official documentation, not live system topology",
+  "current_policy_exception": "Current SCHEMA latest P3 approval overrides historical unapproved status; web query approval remains separate.",
+  "browser_environment": {
+    "executable": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "no_sandbox": true,
+    "scope": "Only locally generated Archify HTML verification processes; no global setting change"
+  },
+  "not_run": [
+    "gateway_config_change",
+    "service_start_restart",
+    "live_hermes_api",
+    "model_call",
+    "wiki_publication",
+    "cron_change",
+    "installation",
+    "deployment"
+  ],
+  "guide": "/home/ainsdev/wiki/pkm-articles/docs/techblog/hermes-api-gateway-workdir-assoc/INTEGRATION-ARCHIFY.md",
+  "receipt_note": "01-connect/review-2 contains the current artifact-bound finalizer/browser receipts; older evidence retained.",
+  "repair_note": "Serpentine workflows omit optional left-to-right mainPath annotation; semantic nodes/edges retained. Measured direct-route port repair removed avoidable detours."
+}

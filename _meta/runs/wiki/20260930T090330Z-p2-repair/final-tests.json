@@ -1,0 +1,17 @@
+{
+  "tests": 108,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "test_sha256": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py": "51475a4f3a5ba3e2ea1b68760e4b7d85e878a78ab51a1e0c1391a0994febcf55",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py": "4ed180e12bc291fc6c19dafca0986090828db35c5e5851290a2f1ec74d0bd133",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py": "fea20607e6bed07ddf687ff12fef1867aa38054874f3c14f38f30f693b4b5e85",
+    "_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py": "6534e6b31a5c12098681ba68031dc9f343ff8bc5fde059bfcd340aef05e3439a",
+    "_meta/runs/wiki/20260930T090330Z-p2-repair/test_handoff.py": "e03218b7c53cf9741c15101c727ddef4ab395d46d8db83908ce0728a2d7268de",
+    "_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py": "44825c787e97f6934789644428e84aff8a1348eef01413d982d50003927517a5"
+  },
+  "failure_ids": [],
+  "error_ids": []
+}

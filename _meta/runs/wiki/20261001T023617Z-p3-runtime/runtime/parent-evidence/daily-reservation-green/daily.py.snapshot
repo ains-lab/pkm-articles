@@ -1,0 +1,196 @@
+"""P3 daily orchestration. Live execution requires a separate P3 grant."""
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+from contextlib import contextmanager
+import copy
+import os
+import re
+import stat
+import uuid
+import p3_common as C
+
+
+def preflight(*, root=C.ROOT, run, approval_ref, synthetic=False, now=None):
+    root = C.synthetic_root(root) if synthetic is True else Path(root).absolute()
+    C.require(root == C.ROOT or synthetic is True, 'wrong_root')
+    C.require(type(synthetic) is bool, 'synthetic_flag')
+    C.require(isinstance(run,str) and re.fullmatch(r'_meta/runs/wiki/[A-Za-z0-9_-]+',run), 'run_path')
+    C.require(isinstance(approval_ref,str) and approval_ref.startswith('_meta/runs/wiki/') and approval_ref.endswith('/execution-approval.json'), 'approval_path')
+    fs=C.helper('publish').Files(root)
+    auto=C.decode(fs.read('_meta/automation.json'))
+    C.require(auto.get('phase_authorizations',{}).get('P3') is True, 'p3_execution_not_authorized')
+    C.require(auto.get('policy_revision')==C.POLICY and auto.get('contract_revision')==C.CONTRACT and auto.get('wiki_root')==str(root), 'policy_identity')
+    C.require(C.canonical(auto.get('model'))==C.canonical(C.MODEL), 'model_pin')
+    C.require(C.canonical(auto.get('pdf_reading'))==C.canonical(C.PDF_READING), 'pdf_policy')
+    C.require(auto.get('budget',{}).get('cost_policy')=='no_cost_cap', 'cost_policy')
+    transfer=auto.get('transfer',{})
+    C.require(all(transfer.get(k) is False for k in ('automatic_chat_capture','external_assets','external_novelty_search','images','secrets_or_sensitive_personal_data')), 'forbidden_transfer')
+    C.require(transfer.get('local_html_text') is True and transfer.get('pdf_content') is True, 'text_transfer')
+    schema=C.decode(fs.read(C.DOCS[-1]))
+    C.helper('publish').schema_validate(schema,auto,'automation')
+    raw=fs.read(approval_ref); approval=C.decode(raw)
+    C.require(approval.get('schema')=='pkm-p3-execution-approval/v1' and approval.get('actor')=='user' and
+        approval.get('approved') is True and approval.get('phase')=='P3' and
+        isinstance(approval.get('user_request'),str) and approval['user_request'].strip(), 'execution_grant')
+    C.require(approval.get('wiki_root')==str(root) and approval.get('run')==run and approval.get('mode')=='manual', 'execution_scope')
+    C.require(auto['enabled'] is False and auto['jobs']['daily_compile']['enabled'] is False, 'manual_mode_only')
+    C.require(approval.get('source_scope')=='current_and_future_collected' and approval.get('formats')==['html','pdf'] and
+        approval.get('collector_id')=='4cff5b4f10ec', 'source_scope')
+    C.require(C.canonical(approval.get('model'))==C.canonical(C.MODEL) and C.canonical(approval.get('route'))==C.canonical(C.ROUTE), 'approval_model_route')
+    C.require(approval.get('cost_policy')=='no_cost_cap' and approval.get('validated_publication_authorized') is True and
+        approval.get('edit_freeze')=={'mode':'run','run':run}, 'publication_freeze_scope')
+    snapshots=approval.get('snapshots',{})
+    C.require(set(snapshots)==set((*C.DOCS,C.PROMPT,'_meta/automation.json')), 'governing_snapshot_set')
+    C.helper('publish').check_snapshots(fs,snapshots)
+    state=C.decode(fs.read(C.STATE))
+    C.helper('publish').schema_validate(schema,state,'compilation')
+    C.require(state['enabled'] is False and state['safety_block'] is False, 'safety_block_or_state_mode')
+    C.require(len({i['version_id'] for i in state['items']})==len(state['items']), 'duplicate_item')
+    C.require(all(t['status']=='committed' for t in state['transactions']), 'unresolved_transaction')
+    observed=now or datetime.now(timezone.utc)
+    C.require(observed.tzinfo is not None, 'timezone_required')
+    ctx=dict(root=root,fs=fs,run=run,auto=auto,schema=schema,state=state,synthetic=synthetic,
+        approval_ref=approval_ref,approval_sha256=C.sha(raw),approval=approval,
+        snapshots=dict(snapshots,**{approval_ref:C.sha(raw)}),
+        policy_sha256=snapshots['_meta/automation.json'],prompt_sha256=snapshots[C.PROMPT],
+        prompt=fs.read(C.PROMPT).decode(),model=dict(C.MODEL),route=dict(C.ROUTE),requested_scope=C.SCOPE,
+        wiki=[],now=observed)
+    def guard():
+        fresh=preflight(root=root,run=run,approval_ref=approval_ref,synthetic=synthetic,now=now)
+        C.require(fresh['approval_sha256']==ctx['approval_sha256'], 'approval_drift')
+        C.helper('publish').check_snapshots(fs,ctx['snapshots'])
+    ctx['guard']=guard
+    return ctx
+
+
+SOURCE_FIELDS=('source','version_id','format','source_path','source_sha256','source_bytes',
+               'metadata_path','metadata_sha256','collected_at')
+RUN_LOCK='_meta/locks/daily-run.lock'
+
+
+def inventory(ctx):
+    """Metadata and hash inventory, not paper interpretation or a collector."""
+    ctx['guard']()
+    fs=ctx['fs']; state=C.decode(fs.read(C.STATE))
+    old={i['version_id']:i for i in state['items']}
+    result=[]; observed=set()
+    base='raw/articles/4cff5b4f10ec'
+    with fs.parent(base+'/sentinel') as (fd,_):
+        names=sorted(os.listdir(fd))
+    for name in names:
+        if name=='index.md':
+            continue
+        C.require(re.fullmatch(r'arxiv-[0-9]{4}\.[0-9]{4,5}v[1-9][0-9]*',name) is not None,'invalid_source_directory')
+        vid=name.removeprefix('arxiv-'); metadata_path=base+'/'+name+'/source.json'
+        raw=fs.read(metadata_path); m=C.decode(raw)
+        formats=[f for f in ('html','pdf') if f+'_file' in m]
+        C.require(len(formats)==1,'source_format_conflict')
+        fmt=formats[0]
+        C.require(m.get('schema')=='arxiv-'+fmt+'-source/v1' and m.get('version_id')==vid and
+            m.get('source')=='arxiv' and m.get('owning_cron_id')=='4cff5b4f10ec','source_identity')
+        C.require(m.get(fmt+'_file')=='source.'+fmt and m.get('http_status')==200 and
+            m.get('source_url')==f'https://arxiv.org/{fmt}/{vid}' and
+            m.get('preprocessing') is False and m.get('offline_assets_bundled') is False and
+            m.get('capture_method')=='http_response_body_no_rewrite','source_provenance')
+        source_path=base+'/'+name+'/source.'+fmt
+        data=fs.read(source_path)
+        C.require(type(m.get(fmt+'_bytes')) is int and m[fmt+'_bytes']==len(data) and
+            m.get(fmt+'_sha256')==C.sha(data),'source_integrity')
+        with fs.parent(source_path) as (fd,_):
+            C.require(set(os.listdir(fd))=={'source.json','source.'+fmt},'unexpected_source_files')
+        collected=datetime.fromisoformat(m['collected_at'])
+        C.require(collected.tzinfo is not None,'source_timestamp')
+        item=dict(source='arxiv',version_id=vid,format=fmt,source_path=source_path,
+            source_sha256=C.sha(data),source_bytes=len(data),metadata_path=metadata_path,
+            metadata_sha256=C.sha(raw),collected_at=m['collected_at'])
+        if vid in old:
+            C.require(all(old[vid][k]==item[k] for k in SOURCE_FIELDS),'ledger_source_conflict')
+            item=copy.deepcopy(old[vid])
+        else:
+            item.update(status='blocked_approval',reason='collected source pending execution gate',requested_scope=None,
+                read_scope=[],unread_scope=[],resume_at=None,work_key=None,output_refs=[],receipt_ref=None,
+                failure_count=0,human_review=None)
+        C.require(vid not in observed,'duplicate_source')
+        observed.add(vid); result.append(item)
+    C.require(set(old)<=observed,'missing_stored_source')
+    return result
+
+
+def select(items, limit):
+    C.require(type(limit) is int and 0<limit<=5,'selection_limit')
+    eligible=[i for i in items if i['status'] in ('blocked_approval','queued','partial','retryable_failed') and
+              i['human_review'] is None and i['failure_count']<3]
+    return sorted(eligible,key=lambda i:(datetime.fromisoformat(i['collected_at']),i['version_id']))[:limit]
+
+
+@contextmanager
+def run_lock(ctx):
+    """Durable no-steal run ownership, separate from short collection lock."""
+    ctx['guard'](); fs=ctx['fs']
+    owner=C.encoded(dict(run=ctx['run'],pid=os.getpid(),token=uuid.uuid4().hex))
+    with fs.parent(RUN_LOCK) as (fd,name):
+        try:os.mkdir(name,0o700,dir_fd=fd)
+        except FileExistsError:
+            yield False
+            return
+        os.fsync(fd); inode=os.stat(name,dir_fd=fd,follow_symlinks=False).st_ino
+    try:
+        fs.write(RUN_LOCK+'/owner.json',owner,None)
+        def owned():
+            with fs.parent(RUN_LOCK) as (fd,name):
+                st=os.stat(name,dir_fd=fd,follow_symlinks=False)
+                C.require(stat.S_ISDIR(st.st_mode) and st.st_ino==inode and
+                    fs.read(RUN_LOCK+'/owner.json')==owner,'daily_run_owner_changed')
+        ctx['owns_run']=owned
+        yield owned
+    finally:
+        with fs.parent(RUN_LOCK) as (fd,name):
+            try:
+                st=os.stat(name,dir_fd=fd,follow_symlinks=False)
+                if stat.S_ISDIR(st.st_mode) and st.st_ino==inode and fs.read(RUN_LOCK+'/owner.json',True)==owner:
+                    with fs.parent(RUN_LOCK+'/owner.json') as (ofd,oname):
+                        os.unlink(oname,dir_fd=ofd);os.fsync(ofd)
+                    os.rmdir(name,dir_fd=fd);os.fsync(fd)
+            except (FileNotFoundError,NotADirectoryError):pass
+
+
+def reserve(ctx, item, attempt):
+    C.require(type(attempt) is int and attempt in (1,2),'attempt_limit')
+    ctx['guard']();ctx['owns_run']()
+    fs=ctx['fs'];vid=item['version_id']
+    C.require(re.fullmatch(r'[0-9]{4}\.[0-9]{4,5}v[1-9][0-9]*',vid) is not None,'version_id')
+    prefix=f'{ctx["run"]}/items/{vid}/attempt{attempt}'
+    C.ensure_dirs(fs,str(Path(prefix).parent))
+    C.require(fs.read(prefix+'-reservation.json',True) is None,'attempt_exists')
+    if attempt==2:
+        previous=C.decode(fs.read(f'{ctx["run"]}/items/{vid}/attempt1-outcome.json'))
+        C.require(previous.get('status')=='retryable_failed','retry_not_authorized')
+    P=C.helper('publish')
+    with P.collection_lock(fs,Path(ctx['run']).name,'reserve-'+vid,ctx['now']) as owned:
+        C.require(bool(owned),'skipped_busy')
+        owned();ctx['guard']();ctx['owns_run']()
+        P.reject_other_unresolved(fs,'')
+        before=fs.read(C.STATE);state=C.decode(before)
+        matched=[i for i in state['items'] if i['version_id']==vid]
+        current=matched[0] if matched else copy.deepcopy(item)
+        C.require(all(current[k]==item[k] for k in SOURCE_FIELDS),'reservation_source_drift')
+        C.require(current['status'] in ('blocked_approval','queued','partial','retryable_failed') and
+            current['human_review'] is None and not current['output_refs'] and current['receipt_ref'] is None,'item_not_reservable')
+        snaps=dict(ctx['snapshots'],**{item['source_path']:item['source_sha256'],item['metadata_path']:item['metadata_sha256']})
+        P.check_snapshots(fs,snaps)
+        record=dict(schema='pkm-p3-reservation/v1',status='unknown',run=ctx['run'],version_id=vid,
+            attempt=attempt,approval_sha256=ctx['approval_sha256'],snapshots=snaps,before_state_sha256=C.sha(before))
+        fs.write(prefix+'-reservation.json',C.encoded(record),None)
+        current.update(status='reading',reason='durable P3 reservation',requested_scope=C.SCOPE,resume_at=prefix)
+        if not matched:state['items'].append(current)
+        P.schema_validate(ctx['schema'],state,'compilation')
+        owned();fs.write(C.STATE,C.encoded(state),before)
+    prepared=dict(ctx,item=copy.deepcopy(current),metadata=C.decode(fs.read(item['metadata_path'])),
+        snapshots=snaps,artifact_prefix=prefix)
+    def guard():
+        ctx['guard']();ctx['owns_run']();P.check_snapshots(fs,prepared['snapshots'])
+        current_state=C.decode(fs.read(C.STATE))
+        observed=[i for i in current_state['items'] if i['version_id']==vid]
+        C.require(len(observed)==1 and all(observed[0][k]==item[k] for k in SOURCE_FIELDS),'active_item_drift')
+    prepared['guard']=guard
+    return prepared

@@ -1,0 +1,6 @@
+test_same_transaction_recovery_cannot_outlive_its_scheduled_occurrence (test_scheduled_safety.ScheduledSafetyTests.test_same_transaction_recovery_cannot_outlive_its_scheduled_occurrence) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.425s
+
+OK

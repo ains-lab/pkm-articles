@@ -1,0 +1,130 @@
+{
+  "schema_self_valid": true,
+  "candidate_automation_valid": true,
+  "positive_requests": [
+    {
+      "schema": "pkm-compile-request/v2",
+      "policy_revision": "pkm-html-knowledge/v2",
+      "contract_revision": "pkm-contracts/v2",
+      "provider": "codex-lb",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "source_format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "source_approval_id": "p1-proposed-values-2026-09-29",
+      "phase_execution_approved": true,
+      "phase_approval_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json",
+      "images": false,
+      "external_assets": false,
+      "pdf_analysis": false,
+      "cost_policy": "no_cost_cap",
+      "cost_waiver_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json"
+    },
+    {
+      "schema": "pkm-compile-request/v2",
+      "policy_revision": "pkm-html-knowledge/v2",
+      "contract_revision": "pkm-contracts/v2",
+      "provider": "codex-lb",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "source_format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "source_approval_id": "p1-proposed-values-2026-09-29",
+      "phase_execution_approved": true,
+      "phase_approval_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json",
+      "images": false,
+      "external_assets": false,
+      "pdf_analysis": false,
+      "cost_policy": "no_cost_cap",
+      "cost_waiver_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json"
+    }
+  ],
+  "negative_tests": [
+    {
+      "field": "provider",
+      "value": "unapproved",
+      "rejected": true
+    },
+    {
+      "field": "model",
+      "value": "other",
+      "rejected": true
+    },
+    {
+      "field": "reasoning_effort",
+      "value": "low",
+      "rejected": true
+    },
+    {
+      "field": "source_format",
+      "value": "pdf",
+      "rejected": true
+    },
+    {
+      "field": "images",
+      "value": true,
+      "rejected": true
+    },
+    {
+      "field": "external_assets",
+      "value": true,
+      "rejected": true
+    },
+    {
+      "field": "pdf_analysis",
+      "value": true,
+      "rejected": true
+    },
+    {
+      "field": "phase_execution_approved",
+      "value": false,
+      "rejected": true
+    },
+    {
+      "field": "source_path",
+      "value": "../escape.html",
+      "rejected": true
+    },
+    {
+      "field": "source_path",
+      "value": "/outside.html",
+      "rejected": true
+    },
+    {
+      "field": "source_sha256",
+      "value": "bad",
+      "rejected": true
+    },
+    {
+      "field": "policy_revision",
+      "value": "pkm-html-knowledge/v1",
+      "rejected": true
+    },
+    {
+      "field": "cost_waiver_ref",
+      "value": "fake.json",
+      "rejected": true
+    },
+    {
+      "field": "unexpected",
+      "value": true,
+      "rejected": true
+    },
+    {
+      "missing": "phase_approval_ref",
+      "rejected": true
+    },
+    {
+      "case": "unapproved_cron_enable",
+      "rejected": true
+    }
+  ],
+  "negative_count": 16,
+  "unknown_cost_does_not_block": true,
+  "active_instances_valid": 4,
+  "active_files_changed": false,
+  "limits": "structure only, not runtime enforcement or publication evidence",
+  "initial_test_correction": "A job flag alone with global enabled=false is inactive and schema-valid; test corrected to global+job enabled without approvals. No schema weakened."
+}

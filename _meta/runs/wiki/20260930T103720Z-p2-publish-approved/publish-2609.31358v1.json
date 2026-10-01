@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py",
+    "2609.31358v1",
+    "--root",
+    "/home/ainsdev/wiki/pkm-articles",
+    "--run",
+    "_meta/runs/wiki/20260930T100918Z-p2-live-staged",
+    "--attempt",
+    "attempt1-result.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"published_draft\", \"work_key\": \"80e75fa32117a71b1e1a906b5629f795d0e9833c8a4c903fb013d5eca3484e10\", \"output_refs\": [{\"path\": \"entities/arxiv-2609.31358v1.md\", \"sha256\": \"06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9\", \"revision\": \"1\"}]}\n",
+  "stderr": ""
+}

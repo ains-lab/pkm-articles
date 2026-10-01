@@ -1,0 +1,258 @@
+{
+  "observed_at": "2026-10-01T08:13:36.339498+00:00",
+  "parameters": {
+    "id_list": "2609.34686v1,2609.34450v1,2606.15057v3,2609.34247v1,2609.34245v1,2605.29960v2,2609.34132v1,2609.34080v1,2609.34064v1,2609.33914v1,2609.33910v1,2609.33871v1,2607.10490v2,2609.33773v1,2605.06992v2,2609.33691v1,2609.33658v1,2605.16035v2,2609.33462v1,2609.33446v1,2608.16349v2,2609.33371v1,2609.33367v1,2609.33357v1,2609.33322v1,2609.38093v1,2605.30883v2,2609.37819v1,2609.35760v2,2607.25152v2,2609.37196v1,2609.36800v1,2608.00677v2,2609.34790v2,2609.33462v2,2609.36603v1,2609.36580v1,2609.36570v1,2508.14925v2,2609.36490v1,2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1",
+    "start": 0,
+    "max_results": 100,
+    "sortBy": "lastUpdatedDate",
+    "sortOrder": "descending"
+  },
+  "http_status": 200,
+  "content_type": "application/atom+xml; charset=utf-8",
+  "status": "validated",
+  "records": [
+    {
+      "version_id": "2609.38093v1",
+      "title": "Character Training for Risk-Averse Agents",
+      "updated": "2026-09-29T17:42:54Z"
+    },
+    {
+      "version_id": "2605.30883v2",
+      "title": "TRACE: Task-Aware Adaptive Self-Evolving Agentic Jailbreaking",
+      "updated": "2026-09-29T15:34:59Z"
+    },
+    {
+      "version_id": "2609.37819v1",
+      "title": "Making Duplicate Reimbursement Unrepresentable: A Verified Ethereum E-Invoice System for Humans and AI Agents",
+      "updated": "2026-09-29T15:28:31Z"
+    },
+    {
+      "version_id": "2609.35760v2",
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "updated": "2026-09-29T10:45:52Z"
+    },
+    {
+      "version_id": "2607.25152v2",
+      "title": "When Do Agent Loops Mistake Stagnation for Progress? Self-Evaluation Bias and Externally Grounded Verification in Long-Running Autonomous LLM Agent Loops",
+      "updated": "2026-09-29T10:42:00Z"
+    },
+    {
+      "version_id": "2609.37196v1",
+      "title": "ToolFence: Fine-Grained Authorization for Secure Tool-Using LLM Agents",
+      "updated": "2026-09-29T10:16:01Z"
+    },
+    {
+      "version_id": "2609.36800v1",
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "updated": "2026-09-29T06:13:10Z"
+    },
+    {
+      "version_id": "2608.00677v2",
+      "title": "OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution",
+      "updated": "2026-09-29T05:15:08Z"
+    },
+    {
+      "version_id": "2609.34790v2",
+      "title": "CoSec: Benchmarking Agent Security in Communities",
+      "updated": "2026-09-29T04:44:54Z"
+    },
+    {
+      "version_id": "2609.33462v2",
+      "title": "SphMind: Towards Robust, Training-Free VLM-based Spatial Reasoning with a 360 Camera",
+      "updated": "2026-09-29T04:19:17Z"
+    },
+    {
+      "version_id": "2609.36603v1",
+      "title": "Self-Evolving Defense: Continual Security Policy Learning for LLM Agents",
+      "updated": "2026-09-29T03:19:11Z"
+    },
+    {
+      "version_id": "2609.36580v1",
+      "title": "SafeCoEvo: Co-Evolving Safety Harnesses and Guards for LLM Agents at Test-Time",
+      "updated": "2026-09-29T02:58:41Z"
+    },
+    {
+      "version_id": "2609.36570v1",
+      "title": "CounterSteer: Suppressing Indirect Prompt Injection with Activation Steering",
+      "updated": "2026-09-29T02:51:31Z"
+    },
+    {
+      "version_id": "2508.14925v2",
+      "title": "MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers",
+      "updated": "2026-09-29T02:29:28Z"
+    },
+    {
+      "version_id": "2609.36490v1",
+      "title": "LLMs Learn to Evade Latent Monitors from Prior Feedback Alone",
+      "updated": "2026-09-29T01:47:13Z"
+    },
+    {
+      "version_id": "2609.36488v1",
+      "title": "AdaptArena: Evaluating Test-Time Personalization of Web Agents",
+      "updated": "2026-09-29T01:46:48Z"
+    },
+    {
+      "version_id": "2609.36308v1",
+      "title": "CheatBench: Measuring Reward Gaming in AI Agents",
+      "updated": "2026-09-28T21:42:57Z"
+    },
+    {
+      "version_id": "2605.01970v4",
+      "title": "Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents",
+      "updated": "2026-09-28T20:38:46Z"
+    },
+    {
+      "version_id": "2507.02735v4",
+      "title": "Meta-SecAlign: Training LLMs against Prompt Injection for Robust Agents",
+      "updated": "2026-09-28T16:50:14Z"
+    },
+    {
+      "version_id": "2609.35937v1",
+      "title": "PrivacySkills: How Privacy Guidance Shapes Source Selection in LLM Agents",
+      "updated": "2026-09-28T15:22:09Z"
+    },
+    {
+      "version_id": "2609.35932v1",
+      "title": "Same Bytes, Different Authority: Reserved-Token Representations in Chat-Template Prompt Injection",
+      "updated": "2026-09-28T14:51:21Z"
+    },
+    {
+      "version_id": "2609.34686v1",
+      "title": "Jailbreak Context Lingers: Divergent Safety Routing and Its Cross-Task Predictability in Tool Agents",
+      "updated": "2026-09-28T09:12:13Z"
+    },
+    {
+      "version_id": "2609.35914v1",
+      "title": "Agentic Federated Learning: Rule-Based Client and Server Agents for Adaptive Training",
+      "updated": "2026-09-28T09:05:59Z"
+    },
+    {
+      "version_id": "2609.35909v1",
+      "title": "Cheap to Hypothesize, Costly to Verify: The Defense Surface of Agentic Vulnerability Discovery",
+      "updated": "2026-09-28T07:14:39Z"
+    },
+    {
+      "version_id": "2609.34450v1",
+      "title": "ReproBench: Benchmarking LLM Agents on Reproducing Vulnerability From Scratch",
+      "updated": "2026-09-28T07:06:27Z"
+    },
+    {
+      "version_id": "2606.15057v3",
+      "title": "AutoDojo: A Generative Benchmark for Evaluating Prompt Injection Defenses in LLM Agents",
+      "updated": "2026-09-28T04:15:17Z"
+    },
+    {
+      "version_id": "2609.34247v1",
+      "title": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+      "updated": "2026-09-28T03:53:05Z"
+    },
+    {
+      "version_id": "2609.34245v1",
+      "title": "Certified Multi-Source Integrity for Structured Agent Actions",
+      "updated": "2026-09-28T03:52:21Z"
+    },
+    {
+      "version_id": "2605.29960v2",
+      "title": "MemPoison: Bypassing Selective Memory Mechanisms to Plant Backdoors in LLM Agents",
+      "updated": "2026-09-28T02:57:44Z"
+    },
+    {
+      "version_id": "2609.34132v1",
+      "title": "From Attack Success to Attack Severity: Counterfactual Memory Attacks on LLM Agents",
+      "updated": "2026-09-28T02:11:56Z"
+    },
+    {
+      "version_id": "2609.34080v1",
+      "title": "LoRo-Mark:Provably Lossless and Robust Agent Watermarking",
+      "updated": "2026-09-28T01:16:46Z"
+    },
+    {
+      "version_id": "2609.34064v1",
+      "title": "Learning Perturbation Robust Policies for LLM Agents with Stable Optimization",
+      "updated": "2026-09-28T00:43:16Z"
+    },
+    {
+      "version_id": "2609.33914v1",
+      "title": "A2A-CaseVerify: Merkle-Linked Case-Evidence Verification for Cross-Organization A2A Workflows",
+      "updated": "2026-09-27T20:49:37Z"
+    },
+    {
+      "version_id": "2609.33910v1",
+      "title": "When Consent Outlives Context: Residual Authority Replay in Long-Lived Agents",
+      "updated": "2026-09-27T20:43:53Z"
+    },
+    {
+      "version_id": "2609.33871v1",
+      "title": "Population Physics, Population Problems: Safety and Emergence in LLM Societies",
+      "updated": "2026-09-27T19:48:06Z"
+    },
+    {
+      "version_id": "2607.10490v2",
+      "title": "NetInjectBench: Benchmarking Indirect Prompt Injection in Tool-Using Large Language Model Agents for Network Operations",
+      "updated": "2026-09-27T19:18:26Z"
+    },
+    {
+      "version_id": "2609.33773v1",
+      "title": "Learning Strategies to Break Judges",
+      "updated": "2026-09-27T17:13:52Z"
+    },
+    {
+      "version_id": "2605.06992v2",
+      "title": "Why Does Agentic Safety Fail to Generalize Across Tasks?",
+      "updated": "2026-09-27T16:02:34Z"
+    },
+    {
+      "version_id": "2609.33691v1",
+      "title": "When Do Agents Help? Embedding, LLM and Agentic Alignment of Classical Texts and Their Translations",
+      "updated": "2026-09-27T15:53:49Z"
+    },
+    {
+      "version_id": "2609.33658v1",
+      "title": "AgentBoundary: Counterfactual Evaluation of Safety in Tool-Using LLM Agents",
+      "updated": "2026-09-27T15:19:52Z"
+    },
+    {
+      "version_id": "2605.16035v2",
+      "title": "Who Owns This Agent? Tracing AI Agents Back to Their Owners",
+      "updated": "2026-09-27T14:03:53Z"
+    },
+    {
+      "version_id": "2609.33462v1",
+      "title": "SphMind: Towards Robust, Training-Free VLM-based Spatial Reasoning with a 360 Camera",
+      "updated": "2026-09-27T11:15:05Z"
+    },
+    {
+      "version_id": "2609.33446v1",
+      "title": "HESP: Separating What to Probe from When to Stop in Local LLM Alert-Triage Agents",
+      "updated": "2026-09-27T10:54:05Z"
+    },
+    {
+      "version_id": "2608.16349v2",
+      "title": "AeroCopilotBench: Safety-Gated Evaluation of LLM Agents on Aircraft Emergency Procedures in an Executable Cockpit",
+      "updated": "2026-09-27T09:19:06Z"
+    },
+    {
+      "version_id": "2609.33371v1",
+      "title": "API Secrets Should Never Become Tokens in the LLM's Vocabulary: A Threat Analysis of API Credential Handling in LLM Agent Systems and an Empirical Evaluation of a Vault-Mediated Execution Boundary",
+      "updated": "2026-09-27T08:55:16Z"
+    },
+    {
+      "version_id": "2609.33367v1",
+      "title": "Is AI Widening the Wage Gap? A Hybrid Agentic Simulation for Labor Equity",
+      "updated": "2026-09-27T08:50:23Z"
+    },
+    {
+      "version_id": "2609.33357v1",
+      "title": "DISCERN: Can AI Agents Work Like Scientists and Guide Discovery?",
+      "updated": "2026-09-27T08:29:32Z"
+    },
+    {
+      "version_id": "2609.33322v1",
+      "title": "Robust Hierarchical Structures for Agentic Document Analysis",
+      "updated": "2026-09-27T07:39:57Z"
+    }
+  ],
+  "total_results": 48,
+  "response_sha256": "d9153de8bb80319504a69cc80a47502d62c0bb4d150fd46f252252ebe21735f1",
+  "feed_title": "arXiv Query: search_query=&id_list=2609.34686v1,2609.34450v1,2606.15057v3,2609.34247v1,2609.34245v1,2605.29960v2,2609.34132v1,2609.34080v1,2609.34064v1,2609.33914v1,2609.33910v1,2609.33871v1,2607.10490v2,2609.33773v1,2605.06992v2,2609.33691v1,2609.33658v1,2605.16035v2,2609.33462v1,2609.33446v1,2608.16349v2,2609.33371v1,2609.33367v1,2609.33357v1,2609.33322v1,2609.38093v1,2605.30883v2,2609.37819v1,2609.35760v2,2607.25152v2,2609.37196v1,2609.36800v1,2608.00677v2,2609.34790v2,2609.33462v2,2609.36603v1,2609.36580v1,2609.36570v1,2508.14925v2,2609.36490v1,2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1&start=0&max_results=100"
+}

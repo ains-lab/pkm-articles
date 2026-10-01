@@ -1,0 +1,7 @@
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.122s
+
+OK

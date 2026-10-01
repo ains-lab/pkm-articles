@@ -1,0 +1,173 @@
+{
+  "automation_enabled": false,
+  "broken_document_links": [],
+  "changed_targets": [
+    {
+      "path": "_meta/P3-PREPARATION.md",
+      "sha256": "68cc4dbc734279db09cfa6ed258b044262e7c5f8449edf8e58f6c1c8ee2d835c"
+    },
+    {
+      "path": "_meta/AUTOMATION.md",
+      "sha256": "ff73b6ec1e2e374f859c14e7a8ce417b046443b89cf8db215af99858489fc748"
+    },
+    {
+      "path": "_meta/COMPILATION.md",
+      "sha256": "08e48d45829aef02ec7a971c56f7ba64fc7f698a227b9affe8419285b395fcf2"
+    },
+    {
+      "path": "_meta/automation.json",
+      "sha256": "5ad8cb25e09dd6811b7f0c9a863bfd66ae42d4f41cd9caa77ea65707d6dda673"
+    },
+    {
+      "path": "index.md",
+      "sha256": "bb84c459d2e7fa3a84a79a5169a975a291831282934c7dc81c1786dc79da0b01"
+    },
+    {
+      "path": "log.md",
+      "sha256": "35107c22d9f28f0b235eff986df834f4d0599aa0f7e240b558313c6ae8337ccd"
+    },
+    {
+      "path": "_meta/state/compilation.json",
+      "sha256": "2782af6b7ec10c8587247f71aa4c537a7e5d985fa64db8aa10629a3eb035395d"
+    }
+  ],
+  "checked_at": "2026-09-30T23:53:42.507125+00:00",
+  "cost_policy": "no_cost_cap",
+  "cost_usd": null,
+  "cron_readback_ref": "_meta/runs/wiki/20260930T234207Z-p3-preparation/runtime-readiness-after.json",
+  "daily_end_to_end_verified": false,
+  "existing_transactions_unchanged": true,
+  "first_batch_preview": [
+    "2609.30217v1",
+    "2609.30266v1",
+    "2609.30940v1",
+    "2609.31039v1",
+    "2609.31318v1"
+  ],
+  "human_content_review_completed": false,
+  "index_count_matches": true,
+  "knowledge_page_count": 6,
+  "knowledge_pages_unchanged": [
+    "comparisons/agate-vs-sdc-mcp-gateway.md",
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "entities/arxiv-2609.30830v1.md",
+    "entities/arxiv-2609.31358v1.md"
+  ],
+  "local_document_links_checked": 57,
+  "lock_released": true,
+  "log_event_occurrences": 1,
+  "log_prefix_preserved": true,
+  "metadata_journal": {
+    "path": "_meta/runs/wiki/20260930T234207Z-p3-preparation/preparation-change-journal.json",
+    "sha256": "8086217830ba96eccc379db0a74d186a579a09d2e1e3c8a3a9c18175256ff6c8"
+  },
+  "metadata_transaction_status": "committed",
+  "new_cron_registered": false,
+  "new_knowledge_publications": 0,
+  "new_paper_model_calls": 0,
+  "new_state_ids": [
+    "2609.35760v1",
+    "2608.29596v2",
+    "2609.35596v1",
+    "2609.35576v1",
+    "2509.09215v3",
+    "2609.35366v1",
+    "2609.35117v1",
+    "2609.35088v1",
+    "2605.09027v3",
+    "2609.34790v1"
+  ],
+  "next_gate": "Verify the actual daily orchestration path with synthetic inputs; then obtain separate execution/publication, paused registration, and activation approvals.",
+  "old_items_unchanged": true,
+  "paper_body_analysis_performed": false,
+  "pdf_analysis_performed": false,
+  "policy_authority_unchanged": true,
+  "protected_files_unchanged": 365,
+  "registration_ready": false,
+  "run_id": "20260930T234207Z-p3-preparation",
+  "schema": "pkm-p3-preparation-verification/v1",
+  "source_count": 20,
+  "source_format_counts": {
+    "html": 18,
+    "pdf": 2
+  },
+  "state_count": 20,
+  "state_status_counts": {
+    "blocked_approval": 16,
+    "blocked_policy": 2,
+    "published_draft": 2
+  },
+  "status": "preparation_complete_execution_hold",
+  "test_evidence": {
+    "path": "_meta/runs/wiki/20260930T234207Z-p3-preparation/final-tests.json",
+    "sha256": "3b5fde3ee2cce8f8688bc341eb661e2c5c35c6151bf29080e439983ce26c058a"
+  },
+  "test_summary": {
+    "errors": 0,
+    "failures": 0,
+    "model_api_calls": 0,
+    "modules": [
+      {
+        "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py",
+        "tests": 30
+      },
+      {
+        "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py",
+        "tests": 35
+      },
+      {
+        "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_separate_approval.py",
+        "tests": 6
+      },
+      {
+        "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py",
+        "tests": 32
+      },
+      {
+        "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py",
+        "tests": 2
+      },
+      {
+        "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_handoff.py",
+        "tests": 2
+      },
+      {
+        "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py",
+        "tests": 7
+      },
+      {
+        "path": "_meta/runs/wiki/20260930T234207Z-p3-preparation/test_p3_readiness.py",
+        "tests": 10
+      }
+    ],
+    "passed": true,
+    "skipped": 0,
+    "synthetic_only": true,
+    "tests": 124
+  },
+  "unresolved_existing_publications": [],
+  "verified_version_ids": [
+    "2509.09215v3",
+    "2605.09027v3",
+    "2608.29596v2",
+    "2609.30217v1",
+    "2609.30266v1",
+    "2609.30614v1",
+    "2609.30824v1",
+    "2609.30830v1",
+    "2609.30940v1",
+    "2609.31039v1",
+    "2609.31318v1",
+    "2609.31358v1",
+    "2609.31562v1",
+    "2609.34790v1",
+    "2609.35088v1",
+    "2609.35117v1",
+    "2609.35366v1",
+    "2609.35576v1",
+    "2609.35596v1",
+    "2609.35760v1"
+  ]
+}

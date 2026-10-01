@@ -1,0 +1,213 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_concise_cited_markdown_and_existing_wikilinks_accepted (__main__.DocumentTests.test_concise_cited_markdown_and_existing_wikilinks_accepted) ... ok
+test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) ... ok
+test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) ... ok
+test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) ... ok
+test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) ... ok
+test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) ... ok
+test_decoded_entities_inline_tags_and_whitespace_are_visible (__main__.EvidenceTests.test_decoded_entities_inline_tags_and_whitespace_are_visible) ... FAIL
+test_duplicate_anchor_is_ambiguous (__main__.EvidenceTests.test_duplicate_anchor_is_ambiguous) ... FAIL
+test_missing_anchor_and_hash_drift_rejected (__main__.EvidenceTests.test_missing_anchor_and_hash_drift_rejected) ... ok
+test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) ... 
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span title="Synthetic evidence supports a bounded claim.">other</span>') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<!-- Synthetic evidence supports a bounded claim. -->') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<template>Synthetic evidence supports a bounded claim.</template>') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span hidden>Synthetic evidence supports a bounded claim.</span>') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span aria-hidden="true">Synthetic evidence supports a bounded claim.</span>') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span style="display:none">Synthetic evidence supports a bounded claim.</span>') ... FAIL
+  test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span style="visibility: hidden">Synthetic evidence supports a bounded claim.</span>') ... FAIL
+test_quote_must_be_in_exact_anchor_subtree (__main__.EvidenceTests.test_quote_must_be_in_exact_anchor_subtree) ... FAIL
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... ok
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... ok
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... ok
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ok
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... ok
+test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected) ... 
+  test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected) (args=['--root', '/tmp/p2-verifier-synthetic-vtzpsxmc/alias']) ... FAIL
+test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected) ... FAIL
+test_cli_result_symlink_rejected (__main__.PathTests.test_cli_result_symlink_rejected) ... FAIL
+test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) ... 
+  test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='../../outside.html') ... FAIL
+  test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='/tmp/outside.html') ... FAIL
+  test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='raw/../elsewhere.html') ... FAIL
+test_source_directory_symlink_rejected (__main__.PathTests.test_source_directory_symlink_rejected) ... FAIL
+test_source_file_symlink_rejected_even_inside_root (__main__.PathTests.test_source_file_symlink_rejected_even_inside_root) ... FAIL
+test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) ... 
+  test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='alias') ... FAIL
+  test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='/tmp/p2-verifier-synthetic-bjsc22vw/existing.md') ... FAIL
+  test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='../p2-verifier-synthetic-bjsc22vw/existing') ... FAIL
+
+======================================================================
+FAIL: test_decoded_entities_inline_tags_and_whitespace_are_visible (__main__.EvidenceTests.test_decoded_entities_inline_tags_and_whitespace_are_visible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 208, in test_decoded_entities_inline_tags_and_whitespace_are_visible
+    self.assertTrue(self.document_report()["passed"])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_duplicate_anchor_is_ambiguous (__main__.EvidenceTests.test_duplicate_anchor_is_ambiguous)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 220, in test_duplicate_anchor_is_ambiguous
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span title="Synthetic evidence supports a bounded claim.">other</span>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<!-- Synthetic evidence supports a bounded claim. -->')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<template>Synthetic evidence supports a bounded claim.</template>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span hidden>Synthetic evidence supports a bounded claim.</span>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span aria-hidden="true">Synthetic evidence supports a bounded claim.</span>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span style="display:none">Synthetic evidence supports a bounded claim.</span>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) (hidden='<span style="visibility: hidden">Synthetic evidence supports a bounded claim.</span>')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 215, in test_quote_cannot_come_from_attributes_comments_or_hidden_nodes
+    self.assertFalse(self.document_report()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_quote_must_be_in_exact_anchor_subtree (__main__.EvidenceTests.test_quote_must_be_in_exact_anchor_subtree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 202, in test_quote_must_be_in_exact_anchor_subtree
+    self.assertFalse(report["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected) (args=['--root', '/tmp/p2-verifier-synthetic-vtzpsxmc/alias'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 260, in test_cli_path_escape_and_symlink_root_rejected
+    self.assertNotEqual(proc.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 261, in test_cli_path_escape_and_symlink_root_rejected
+    self.assertFalse((dest / "attempt-verify-report.json").exists())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_cli_result_symlink_rejected (__main__.PathTests.test_cli_result_symlink_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 270, in test_cli_result_symlink_rejected
+    self.assertNotEqual(proc.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='../../outside.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 249, in test_result_source_override_is_rejected
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='/tmp/outside.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 249, in test_result_source_override_is_rejected
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) (path='raw/../elsewhere.html')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 249, in test_result_source_override_is_rejected
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_source_directory_symlink_rejected (__main__.PathTests.test_source_directory_symlink_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 242, in test_source_directory_symlink_rejected
+    self.assertFalse(self.verify()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_source_file_symlink_rejected_even_inside_root (__main__.PathTests.test_source_file_symlink_rejected_even_inside_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 235, in test_source_file_symlink_rejected_even_inside_root
+    self.assertFalse(self.verify()["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='alias')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 283, in test_wikilinks_cannot_escape_or_use_symlink
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='/tmp/p2-verifier-synthetic-bjsc22vw/existing.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 283, in test_wikilinks_cannot_escape_or_use_symlink
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) (name='../p2-verifier-synthetic-bjsc22vw/existing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 283, in test_wikilinks_cannot_escape_or_use_symlink
+    self.assertFalse(self.verify(result)["passed"])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.471s
+
+FAILED (failures=21)

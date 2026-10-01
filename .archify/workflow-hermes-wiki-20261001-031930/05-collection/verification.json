@@ -1,0 +1,158 @@
+{
+  "schema": "diagram-handoff-verification/v1",
+  "status": "passed",
+  "diagram_type": "workflow",
+  "mode": "document-description",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+  "receipt_id": "e5dfd442-7cc4-4781-9336-01ca48ff4e13",
+  "specification_sha256": "9187dd5acd14dc26b87d625f451e22574e234c6e868dbefdfd053fa144e7981d",
+  "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+  "evidence_sha256": "ebf2651adecf5cf926244a21f24568ccb80ee4d801ffa4e6d6ba0bcbf274ef35",
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "browser_evidence": "passed",
+  "browser_receipt": "diagram.browser-check.json",
+  "finalize_receipt": "diagram.finalize.json",
+  "semantic_coverage": {
+    "nodes": 19,
+    "edges": 19,
+    "evidence_items": 38
+  },
+  "checks": [
+    {
+      "name": "finalize_four_gates",
+      "status": "passed"
+    },
+    {
+      "name": "showcase_9_of_9_zero_errors_warnings",
+      "status": "passed"
+    },
+    {
+      "name": "candidate_artifact_receipt_hash_binding",
+      "status": "passed"
+    },
+    {
+      "name": "document_description_not_git_head",
+      "status": "passed"
+    },
+    {
+      "name": "static_output",
+      "status": "passed"
+    },
+    {
+      "name": "complete_unique_semantic_evidence",
+      "status": "passed"
+    },
+    {
+      "name": "edge_evidence_direction",
+      "status": "passed"
+    },
+    {
+      "name": "all_item_classifications",
+      "status": "passed"
+    },
+    {
+      "name": "source_document_hashes_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "source_line_ranges_exist",
+      "status": "passed"
+    },
+    {
+      "name": "real_browser_no_horizontal_overflow",
+      "status": "passed"
+    },
+    {
+      "name": "expected_desktop_viewports",
+      "status": "passed"
+    },
+    {
+      "name": "no_transient_error_pdf_bypass",
+      "status": "passed"
+    },
+    {
+      "name": "pdf_requires_html_unavailability_gate",
+      "status": "passed"
+    },
+    {
+      "name": "reused_version_has_no_new_download_path",
+      "status": "passed"
+    }
+  ],
+  "check_count": 15,
+  "visual_review": "not_requested",
+  "route_review_advisory": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "dedupe-reserve",
+            "from": "dedupe",
+            "to": "reserve",
+            "label": "미보관·새 버전",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "pdf-stage",
+            "from": "pdf",
+            "to": "stage",
+            "label": "보존 검사 통과",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "bends": 4,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "dedupe → reserve needs 3 bends: move node dedupe or reserve so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "pdf → stage needs 4 bends: move node pdf or stage so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  },
+  "environment": {
+    "chrome": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "ARCHIFY_CHROME_NO_SANDBOX": "1",
+    "caveat": "OS user-namespace sandbox unavailable per parent observation; only this trusted locally generated HTML validation process used the supported no-sandbox option. No install or global configuration change."
+  },
+  "language": {
+    "diagram": "ko",
+    "viewer_ui": "en fallback"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "unresolved": [
+    "선택적 perceptual visual review는 미수행; 자동 경로 굴곡 advisory는 남아 있음",
+    "실제 수집/컴파일/게시 또는 웹 서비스 구현·배포 검증이 아님"
+  ],
+  "source_documents_unchanged": true,
+  "protected_workflow_not_executed": true
+}

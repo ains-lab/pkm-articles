@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/candidate.json",
+    "sha256": "c3dea7be5ca6bd12d33ee9818ac0d2e323ea674d5af5c5682524670f6b21164f",
+    "bytes": 36730
+  },
+  "artifact": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.html",
+    "sha256": "f9da26f8077ce961184323a5df602ab542b72f63acb2ed85781a0e624dc9ed93",
+    "bytes": 769003
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.finalize.json",
+    "summaryReceipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.finalize-summary.json",
+    "browserCheckReceipt": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/03-query/diagram.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1988,
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1,
+      "routesOverSuggestedStretch": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "accepted-execute",
+            "from": "submit",
+            "to": "agent",
+            "label": "실행",
+            "collectionIndex": 0,
+            "artifactIndex": 1
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "accepted-observe",
+            "from": "submit",
+            "to": "sse",
+            "label": "202 후",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "bends": 2,
+          "stretch": 5.384
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "submit → agent needs 3 bends: move node submit or agent so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "submit → sse needs 2 bends: move node submit or sse so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "diagram": "02-workspace",
+  "viewport": [
+    375,
+    812
+  ],
+  "node_finder_result_click": {
+    "node": "wiki",
+    "passport_opened": true,
+    "focused_id": "node-wiki"
+  },
+  "camera": {
+    "before": "\n        PATH\n        MAP\n        LENS\n        \n        \n        \n        READ100%\n        \n      ",
+    "after": "\n        PATH\n        MAP\n        LENS\n        \n        \n        \n        READ100%\n        \n      ",
+    "passportClosed": true
+  },
+  "note": "Prior tooling selector quoting error was not a page runtime error; this is the corrected observed interaction"
+}

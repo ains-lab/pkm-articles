@@ -1,0 +1,266 @@
+{
+  "selected": [
+    {
+      "source": "arxiv",
+      "base_id": "2609.35366",
+      "version_id": "2609.35366v1",
+      "title": "Planarian: Managing Agent State with Statepoints",
+      "abs_url": "https://arxiv.org/abs/2609.35366v1",
+      "source_url": "https://arxiv.org/html/2609.35366v1",
+      "target_format": "html",
+      "reason": "daily_budget_exhausted",
+      "queued_at": "2026-09-29T15:09:07.000000+00:00",
+      "next_attempt_at": "2026-09-30T15:00:00+00:00",
+      "discovered_in_run": "20260929T150905Z-fbf97a79"
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.35117",
+      "version_id": "2609.35117v1",
+      "title": "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+      "abs_url": "https://arxiv.org/abs/2609.35117v1",
+      "source_url": "https://arxiv.org/html/2609.35117v1",
+      "target_format": "html",
+      "reason": "daily_budget_exhausted",
+      "queued_at": "2026-09-29T15:09:07.000000+00:00",
+      "next_attempt_at": "2026-09-30T15:00:00+00:00",
+      "discovered_in_run": "20260929T150905Z-fbf97a79"
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.35088",
+      "version_id": "2609.35088v1",
+      "title": "When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents",
+      "abs_url": "https://arxiv.org/abs/2609.35088v1",
+      "source_url": "https://arxiv.org/html/2609.35088v1",
+      "target_format": "html",
+      "reason": "daily_budget_exhausted",
+      "queued_at": "2026-09-29T15:09:07.000000+00:00",
+      "next_attempt_at": "2026-09-30T15:00:00+00:00",
+      "discovered_in_run": "20260929T150905Z-fbf97a79"
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2605.09027",
+      "version_id": "2605.09027v3",
+      "title": "Agent Collectives Should Not Detect Their Own Imposters: A Chess Case Study",
+      "abs_url": "https://arxiv.org/abs/2605.09027v3",
+      "source_url": "https://arxiv.org/html/2605.09027v3",
+      "target_format": "html",
+      "reason": "daily_budget_exhausted",
+      "queued_at": "2026-09-29T15:09:07.000000+00:00",
+      "next_attempt_at": "2026-09-30T15:00:00+00:00",
+      "discovered_in_run": "20260929T150905Z-fbf97a79"
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.34790",
+      "version_id": "2609.34790v1",
+      "title": "CoSec: Benchmarking Agent Security in Communities",
+      "abs_url": "https://arxiv.org/abs/2609.34790v1",
+      "source_url": "https://arxiv.org/html/2609.34790v1",
+      "target_format": "html",
+      "reason": "daily_budget_exhausted",
+      "queued_at": "2026-09-29T15:09:07.000000+00:00",
+      "next_attempt_at": "2026-09-30T15:00:00+00:00",
+      "discovered_in_run": "20260929T150905Z-fbf97a79"
+    }
+  ],
+  "metadata": [
+    {
+      "source": "arxiv",
+      "base_id": "2609.35366",
+      "version_id": "2609.35366v1",
+      "title": "Planarian: Managing Agent State with Statepoints",
+      "authors": [
+        "Jinnan Guo",
+        "Hao Mark Chen",
+        "Kapil Vaswani",
+        "Andrew Paverd",
+        "Peter Pietzuch"
+      ],
+      "abstract": "LLM agents solve complex tasks by iteratively changing files, invoking local tools, and interacting with remote services, which modifies state across their local environment and remote services. Today, agents and users must manage these changes explicitly, whether reverting exploratory actions or recovering from erroneous ones. Doing so safely requires coordinated actions, yet current agent harnesses lack unified abstractions and mechanisms for managing local and remote state consistently and efficiently.\n  We describe Planarian, an agent runtime with state management that enables agents and users to recover from erroneous actions and explore alternative executions over consistent local and remote environment state. Planarian introduces the abstraction of agent statepoints, which are consistent, restorable point-in-time versions of the environment state. Planarian exposes three state-management primitives to agents and users: (i) snapshot creates a new statepoint spanning local and remote state without requiring external services to support checkpoints: it relies on efficient incremental process and file system snapshotting to capture local sandboxed state, and transparently records compensating actions to undo remote state changes; (ii) rollback restores the environment to a previous statepoint by reverting to a prior local checkpoint and replaying compensating actions for remote state changes; and (iii) fork creates multiple isolated branches from a statepoint, enabling the agent to explore alternatives in parallel. We show that Planarian enables agents to undo mistakes and explore alternatives in parallel, improving task quality by up to 15x, and allows users to recover from erroneous actions with only 3% overhead.",
+      "published": "2026-09-28T15:09:18Z",
+      "updated": "2026-09-28T15:09:18Z",
+      "categories": [
+        "cs.OS",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "abs_url": "https://arxiv.org/abs/2609.35366v1",
+      "source_url": "https://arxiv.org/html/2609.35366v1",
+      "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml",
+      "withdrawal_notice_detected": false
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.35117",
+      "version_id": "2609.35117v1",
+      "title": "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+      "authors": [
+        "Abel Rodríguez",
+        "Giuseppe Garofalo",
+        "Lieven Desmet",
+        "Vera Rimmer"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed with access to external tools, yet harmful tool-mediated interactions are less likely to be refused when compared to regular conversational ones. As this change in refusal behavior remains underexplored, we investigate its underlying mechanisms across a diverse set of open-weight language models. We find that information about the harmfulness of a request remains strongly encoded in the model's representations and transfers across conversational and tool-mediated inputs. Evidence from representation geometry and neuron-level analysis further indicates that the two interaction modes systematically distribute harm-related computation differently. Crucially, while conversational inputs can be refused at relatively low levels of perceived harmfulness, tool-mediated inputs remain permissive until harmfulness crosses a substantially higher effective refusal threshold. Moreover, tool-mediated refusal is also more brittle: progressively weakening the refusal computation disrupts tool-mediated refusal at lower intervention strengths than conversational refusal, even when benign capabilities remain intact. Together, our findings indicate that tool mediation does not simply reduce the internal perception of harm, but instead impacts its conversion into refusal. Overall, this suggests tool-mediated environments may intrinsically reduce robustness of models to harmful requests, and that conventional safety evaluations may not fully transfer to LLM agents.",
+      "published": "2026-09-28T13:16:54Z",
+      "updated": "2026-09-28T13:16:54Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "abs_url": "https://arxiv.org/abs/2609.35117v1",
+      "source_url": "https://arxiv.org/html/2609.35117v1",
+      "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml",
+      "withdrawal_notice_detected": false
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.35088",
+      "version_id": "2609.35088v1",
+      "title": "When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents",
+      "authors": [
+        "Geonwoo Kim",
+        "Brent ByungHoon Kang"
+      ],
+      "abstract": "Tool-enabled agents form calls from model-visible interfaces, while hosts later select their implementation. Standard dispatch omits the descriptor-handler relation. An unchanged and schema-valid call can therefore acquire a different security effect during rollout, reconnect, or delayed approval. We call this failure schema-epoch drift. We present formation-consistent dispatch (FCD), which connects implementation analysis to execution authority. Reviewed profiles produce provenance-bound over-approximations of declared in-scope effects from official source. Under a closed-target approval policy, a verifier applies each formed call to a summary and captures a successor only when its effects fit the call's security contract. Atomic admission and a final-hop fence preserve this decision to the effect. The exact source retains priority, and the captured successor becomes eligible only after source retirement. Stock releases and deployment changes reproduced the failure. Four profiles covered 32 official releases: 29 required no release-specific change and three escalated. A frozen 16-release expansion matched a separate source oracle. In a preregistered stock comparison, FCD completed all three pending calls whose effect remained private and blocked all three whose omission became public. Exact pinning and release-wide denial stopped all six calls, while release-wide approval completed all six but produced three public effects. A separate lifecycle experiment carried a formation-captured certificate across source retirement. The same safe certificate installed later governed new formations without expanding the pending call's authority.",
+      "published": "2026-09-28T13:04:04Z",
+      "updated": "2026-09-28T13:04:04Z",
+      "categories": [
+        "cs.AI",
+        "cs.CR",
+        "cs.SE"
+      ],
+      "abs_url": "https://arxiv.org/abs/2609.35088v1",
+      "source_url": "https://arxiv.org/html/2609.35088v1",
+      "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml",
+      "withdrawal_notice_detected": false
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2605.09027",
+      "version_id": "2605.09027v3",
+      "title": "Agent Collectives Should Not Detect Their Own Imposters: A Chess Case Study",
+      "authors": [
+        "Alexandre Le Mercier",
+        "Chris Develder",
+        "Thomas Demeester"
+      ],
+      "abstract": "A collective of AI agents collaborating on a task has the potential to outclass any individual agent for that task. We study the robustness of such collectives against possible imposters, i.e., agents that deliberately try to mislead their peers. Since a single imposter could undo the collective's advantage, we need to detect them. We consider two strategies: (i) incorporate imposter detection into the participating agents, or (ii) use a dedicated imposter detector outside the collective. We investigate this empirically on Gambit, a testbed in which 4 reasoning agents deliberate on chess moves. The setting is small but still challenging for frontier models. Chess allows objective, quantitative assessment (via a state-of-the-art chess engine) of both the gain of using a collective and the damage done by imposters. We find that merely warning the agents of potential imposter presence is not beneficial: it degrades decisions when no imposter is present, provokes reactions ranging from self-accusation to scapegoating, inflates token use, and reveals to the imposter how it was uncovered. We therefore recommend a detector that reads the collective's deliberation but never joins it and only returns a verdict. Such a detector must recalibrate to new attack strategies after very few examples, rather than wait for full retraining. In our benchmark, a 3B language model with a meta-trained classification head achieves that: a single gradient step on 20 labeled examples suffices to adapt to an unseen imposter strategy. At matched zero-shot accuracy, this detector yields 8x the adaptation gain of standard finetuning, at 14x lower training cost. We release the Gambit benchmark, with 37,352 labeled deliberations spanning 240 evolved imposter strategies. Code and data: https://anonymous.4open.science/r/gambit.",
+      "published": "2026-05-09T16:07:23Z",
+      "updated": "2026-09-28T12:17:01Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "abs_url": "https://arxiv.org/abs/2605.09027v3",
+      "source_url": "https://arxiv.org/html/2605.09027v3",
+      "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml",
+      "withdrawal_notice_detected": false
+    },
+    {
+      "version_id": "2609.34790v1",
+      "updated": "2026-09-28T10:00:05Z",
+      "published": "2026-09-28T10:00:05Z",
+      "title": "CoSec: Benchmarking Agent Security in Communities",
+      "authors": [
+        "Hao Chen",
+        "Wenhui Dong",
+        "Ye Chen",
+        "Jiezhi Yao",
+        "Chenbo Xia",
+        "Yuwen Qu",
+        "Renxiang Wang",
+        "Fudong Yuan",
+        "Camil Hamami",
+        "Chenglong Pan",
+        "Xinquan Yue",
+        "Ziyu Wang",
+        "Fengyu Ye",
+        "Chenyang Si",
+        "Caifeng Shan"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "abstract": "LLM agents operate in persistent collaborative environments involving multiple users, communities, memories, files, and tools. Community boundaries may remain fixed or evolve with changes in membership, roles, composition, and relationships. Agents must complete legitimate tasks and prevent unauthorized disclosure of protected information. Existing evaluations do not fully examine these risks in agent systems. We introduce \\textbf{CoSec}, an executable benchmark for evaluating privacy and authorization enforcement in LLM agent systems operating within and across communities. CoSec contains 208 canonical scenarios spanning fixed and evolving boundaries, protected information belonging to the agent owner or other participants, and attacks through dialogue, environmental content, persistent memory, and composed workflows. CoSec executes complete agent systems with persistent sessions, memory, files and tools. It verifies information flows against the active authorization state using execution traces and artifacts. Across harness and model configurations, agents frequently complete benign tasks but violate privacy and authorization boundaries. Privacy behavior varies across harnesses, attack surfaces, and community states, revealing how memory, files, tools, and workflows can carry protected information beyond its authorized scope. These findings show that task utility does not imply privacy or authorization compliance and that authorization in community settings remains an unresolved security challenge for persistent LLM agents.",
+      "source": "arxiv",
+      "base_id": "2609.34790",
+      "abs_url": "https://arxiv.org/abs/2609.34790v1",
+      "source_url": "https://arxiv.org/html/2609.34790v1",
+      "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260929T150905Z-fbf97a79/search-page-000.xml",
+      "metadata_is_previous_observation": true
+    }
+  ],
+  "new_pending_ids": [
+    "2609.38093v1",
+    "2605.30883v2",
+    "2609.37819v1",
+    "2609.35760v2",
+    "2607.25152v2",
+    "2609.37196v1",
+    "2609.36800v1",
+    "2608.00677v2",
+    "2609.34790v2",
+    "2609.33462v2",
+    "2609.36603v1",
+    "2609.36580v1",
+    "2609.36570v1",
+    "2508.14925v2",
+    "2609.36490v1",
+    "2609.36488v1",
+    "2609.36308v1",
+    "2605.01970v4",
+    "2507.02735v4",
+    "2609.35937v1",
+    "2609.35932v1",
+    "2609.35914v1",
+    "2609.35909v1"
+  ],
+  "existing_source_matches": [
+    "2608.29596v2",
+    "2609.35596v1",
+    "2609.35576v1",
+    "2509.09215v3"
+  ],
+  "existing_pending_matches": [
+    "2609.35366v1",
+    "2609.35117v1",
+    "2609.35088v1",
+    "2605.09027v3",
+    "2609.34686v1",
+    "2609.34450v1",
+    "2606.15057v3",
+    "2609.34247v1",
+    "2609.34245v1",
+    "2605.29960v2",
+    "2609.34132v1",
+    "2609.34080v1",
+    "2609.34064v1",
+    "2609.33914v1",
+    "2609.33910v1",
+    "2609.33871v1",
+    "2607.10490v2",
+    "2609.33773v1",
+    "2605.06992v2",
+    "2609.33691v1",
+    "2609.33658v1"
+  ],
+  "kst_date": "2026-10-01",
+  "reservation_time": "2026-09-30T15:08:11.575865+00:00",
+  "eligible_before_budget": 53,
+  "order": "oldest queued_at first; stable prior pending order on ties",
+  "next_budget_at": "2026-10-01T15:00:00+00:00",
+  "previous_metadata_checks": [
+    {
+      "version_id": "2609.34790v1",
+      "xml_path": "_meta/runs/4cff5b4f10ec/20260929T150905Z-fbf97a79/search-page-000.xml",
+      "xml_sha256": "8da7784e917cd02ba6ae8da133a625655c76ea7127f2d8ffd39d542002f8cb7a",
+      "fields_match": true,
+      "historical_observation_not_new_http": true
+    }
+  ]
+}

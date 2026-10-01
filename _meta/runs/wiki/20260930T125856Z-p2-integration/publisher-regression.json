@@ -1,0 +1,8 @@
+{
+  "tests": 41,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "scope": "existing single-paper publisher synthetic tests; not proof of integrated-paper semantics"
+}

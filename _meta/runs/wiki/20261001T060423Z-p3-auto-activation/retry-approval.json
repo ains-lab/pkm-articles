@@ -1,0 +1,103 @@
+{
+  "schema": "pkm-p3-retry-approval/v1",
+  "actor": "user",
+  "approved": true,
+  "user_confirmation": "5편 모두 새 승인으로 재시도 허용",
+  "observed_at": "2026-10-01T06:31:47.774804+00:00",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "old_run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "old_daily_report_sha256": "8d9d1ae7237248ae3a3784538d6084caba56dd4f5afe7678ab8e790f8384cd36",
+  "state_before_sha256": "c89b079176cd15f384f06f5f4dd1c5650049e6dc2ff1397acdd739f0b813531e",
+  "execution_mode": "next_eligible_scheduled_window",
+  "allow_duplicate_model_processing_for_unknown": true,
+  "one_time_requeue": true,
+  "automatic_future_unblocking": false,
+  "preserve_all_prior_evidence": true,
+  "items": [
+    {
+      "version_id": "2609.30217v1",
+      "prior_status": "blocked_conflict",
+      "prior_outcome": "blocked_review",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+      "prior_evidence_sha256": {
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-reservation.json": "9bb0e2c761a7e39075e7ab7f8f91cdaec3168b834589f6be53bf63058ac49bf3",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-outcome.json": "fa5d51977ee0f23d04348fe28845bb097e8029570373633896e28f2c752dbf52",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-result.json": "7e35d9281677b0aa8976274e6c68426054812756a3114253479e9b0ffb46931e",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-report.json": "afa26844d5ad91801370b301ae34518882104c0192e200fb939b8cd777c4767b",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-review.json": "350384605807e409c15b366b78677c4441d2635714f80291d404164a58ec6a1b"
+      },
+      "next_status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "prior_status": "blocked_conflict",
+      "prior_outcome": "blocked_review",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+      "prior_evidence_sha256": {
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-reservation.json": "c917c5d1c1780e4016ab1bb20599c430f360f9c6f24e5716d03db4b3eb70a818",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-outcome.json": "b4965780090d4919137bbdd114026d6440664f3e6c755be2a0ed8b93cf5ac0cc",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-result.json": "87347f64ab40164fd21475416227dc7127a38aa46555da3c994c29a6cb4fe4a6",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-report.json": "498324d1681480758c95efc0704ff52caa8817c021b1ef9e65bc9da87e78fdb3",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-review.json": "94ea5da0e73c788dd107984eafbc62452c294b5854b65f2325ddf8783b51531e"
+      },
+      "next_status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "prior_status": "blocked_conflict",
+      "prior_outcome": "blocked_review",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+      "prior_evidence_sha256": {
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-reservation.json": "de9b56bfd568406253419cea746dddb81cfc6589ece2a70308f5a19f179ed142",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-outcome.json": "040e2241c10c0ed51c13833f297a506176c4b9ef8e06f576d0c4eb1d09734489",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-result.json": "8ed5eb473a3a990e6bce915765b21d65ad9fa2643c0faee2dff27a80fb8b65f2",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-report.json": "95ddcbea85e424e42e551ac3fb724bad856aec3358749bf09a25158672a8d2c6",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-review.json": "aa377c93919112b509f845d9a16b330b048c2846f73136161ed4268443305fce"
+      },
+      "next_status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "prior_status": "blocked_conflict",
+      "prior_outcome": "unknown",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+      "prior_evidence_sha256": {
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-reservation.json": "791673f2ffada479e5077e68372f1ffc93fc4b403ac4d26d2ddd1b011e1737a3",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-outcome.json": "7a46b9f5bb112a832eb72a195418f067d4cd1e80093d64a341f315ca3729ca62",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-result.json": "92875d66bdbe4f8aba3c4092e690cc1f92fefa20683d681fd50fdd35fc63d20c",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-report.json": "3a520763d3da3a9846648eccf060da583c02ec890432b835385fe5446878bfbc",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-review.json": "d96115d974d6ecb6d3ffda48b09cacadc3581b7bcad7d02c1fc63cde7db14c69"
+      },
+      "next_status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "prior_status": "blocked_conflict",
+      "prior_outcome": "blocked_review",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+      "prior_evidence_sha256": {
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31318v1/attempt1-reservation.json": "808d3e20cd0a705a29e084fb10953aa2fa23aeb83d9565e59dd4c8ce67e7326f",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31318v1/attempt1-outcome.json": "03716a53f54758ee7085f18775fae7ec4bbc7bd582aa0762a041fca6cd6de204",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31318v1/attempt1-result.json": "1643dcdcbd0a9d43ec400583743e4220f2517d19359006efd38a20e641b898d7",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31318v1/attempt1-report.json": "7ec5e4cf8eb3e1b0390154c1195795fb358a411b925d5f83b7365772fd7e55ee",
+        "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31318v1/attempt1-review.json": "4a933634c0254a533d1cafab9ffaa1d1f56b55d5aa4637b93801420010adb966"
+      },
+      "next_status": "blocked_approval"
+    }
+  ]
+}

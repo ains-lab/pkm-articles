@@ -1,0 +1,13 @@
+{
+  "schema": "pkm-p3-preflight-failure/v1",
+  "observed_at": "2026-10-01T05:38:37.200296+00:00",
+  "result": {
+    "output": "Traceback (most recent call last):\n  File \"<string>\", line 13, in <module>\n  File \"/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py\", line 64, in preflight\n    C.helper('publish').schema_validate(schema,auto,'automation')\n  File \"/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py\", line 202, in schema_validate\n    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])\n  File \"/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py\", line 26, in require\n    raise ValueError(message)\nValueError: schema automation: '_meta/runs/wiki/20260930T090330Z-p2-repair/approval.json' was expected",
+    "exit_code": 1,
+    "error": null
+  },
+  "reason": "approval_amendment_ref is the immutable legacy cost/policy approval; preserve const and use separate P3 scope/execution references",
+  "body_interpreted": false,
+  "model_called": false,
+  "approval": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/execution-approval.json"
+}

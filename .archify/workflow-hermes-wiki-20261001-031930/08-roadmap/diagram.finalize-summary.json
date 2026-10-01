@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+    "sha256": "0785ee5ce7873a2222b65b7b39df0268c0e675f41ad4e10a5f2c6800bde4901d",
+    "bytes": 39739
+  },
+  "artifact": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html"
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "mainPath step \"r2gate\" -> \"r2\" moves backward from col 3 to 2 — use a return edge outside mainPath for loops.",
+      "subject": {
+        "diagramType": "workflow"
+      }
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "mainPath step \"r2\" -> \"r2qa\" moves backward from col 2 to 1 — use a return edge outside mainPath for loops.",
+      "subject": {
+        "diagramType": "workflow"
+      }
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "mainPath step \"r2qa\" -> \"r3\" moves backward from col 1 to 0 — use a return edge outside mainPath for loops.",
+      "subject": {
+        "diagramType": "workflow"
+      }
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 3,
+    "shown": 3,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.finalize.json",
+    "summaryReceipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.finalize-summary.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 299,
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+    "constraint": "Preserve unaffected semantics and geometry; do not replace the whole candidate.",
+    "then": "finalize-once"
+  }
+}

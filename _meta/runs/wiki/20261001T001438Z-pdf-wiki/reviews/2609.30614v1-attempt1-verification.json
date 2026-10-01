@@ -1,0 +1,406 @@
+{
+  "schema": "pkm-pdf-text-verification/v1",
+  "version_id": "2609.30614v1",
+  "passed": true,
+  "checks": [
+    {
+      "check": "result_object",
+      "ok": true
+    },
+    {
+      "check": "completion",
+      "ok": true
+    },
+    {
+      "check": "actual_model",
+      "ok": true
+    },
+    {
+      "check": "no_errors",
+      "ok": true
+    },
+    {
+      "check": "cost_nonblocking",
+      "ok": true
+    },
+    {
+      "check": "bound_result_identifiers",
+      "ok": true
+    },
+    {
+      "check": "strict_json_object",
+      "ok": true
+    },
+    {
+      "check": "document_keys",
+      "ok": true
+    },
+    {
+      "check": "expected_title",
+      "ok": true
+    },
+    {
+      "check": "expected_version",
+      "ok": true
+    },
+    {
+      "check": "summary_nonempty",
+      "ok": true
+    },
+    {
+      "check": "main_text_complete_boolean",
+      "ok": true
+    },
+    {
+      "check": "read_scope_nonempty_list",
+      "ok": true
+    },
+    {
+      "check": "unread_scope_nonempty_list",
+      "ok": true
+    },
+    {
+      "check": "limitations_nonempty_list",
+      "ok": true
+    },
+    {
+      "check": "claims_nonempty",
+      "ok": true
+    },
+    {
+      "check": "body_nonempty",
+      "ok": true
+    },
+    {
+      "check": "no_frontmatter",
+      "ok": true
+    },
+    {
+      "check": "no_hidden_html_or_images",
+      "ok": true
+    },
+    {
+      "check": "korean_body",
+      "ok": true
+    },
+    {
+      "check": "claim_ids_unique",
+      "ok": true
+    },
+    {
+      "check": "claim_contract",
+      "ok": true
+    },
+    {
+      "check": "source_safe_readable",
+      "ok": true
+    },
+    {
+      "check": "telemetry_recomputed",
+      "ok": true
+    },
+    {
+      "check": "physical_read_scope",
+      "ok": true
+    },
+    {
+      "check": "whole_coverage_when_claimed",
+      "ok": true
+    },
+    {
+      "check": "unread_visual_disclosure",
+      "ok": true
+    },
+    {
+      "check": "observed_page_anchors",
+      "ok": true
+    },
+    {
+      "check": "quotes_exact_page",
+      "ok": true
+    },
+    {
+      "check": "visible_claim_ids",
+      "ok": true
+    },
+    {
+      "check": "same_line_canonical_provenance",
+      "ok": true
+    },
+    {
+      "check": "local_links_resolve",
+      "ok": true
+    }
+  ],
+  "document": {
+    "title": "Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+    "summary": "이 논문은 에이전트가 자신을 구속하는 정책과 분류를 작성하는 authorship hazard에 대응해 게시 권한 분리와 협정 기반 도구 경계 집행을 제안하지만, 인간 검토의 효과·비정형 정보 보호·허용된 행동의 합성까지 안전성을 확립하지는 않는다.",
+    "version_id": "2609.30614v1",
+    "main_text_complete": true,
+    "read_scope": [
+      "page=1",
+      "page=2",
+      "page=3",
+      "page=4",
+      "page=5",
+      "page=6",
+      "page=7",
+      "page=8",
+      "page=9",
+      "page=10",
+      "page=11",
+      "page=12",
+      "page=13",
+      "page=14",
+      "page=15",
+      "page=16",
+      "page=17",
+      "page=18",
+      "page=19",
+      "page=20",
+      "page=21",
+      "page=22",
+      "page=23"
+    ],
+    "unread_scope": [
+      "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+      "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+      "물리적 page=5, page=7, page=9의 Figure 1–3은 추출된 캡션과 레이블 텍스트만 읽었으며, 도형·연결선·배치의 시각적 의미는 확인하지 않았다.",
+      "Proposition 1의 형식기호, 승인 큐 수식, 표의 다단 행·열 대응은 제공된 텍스트와 주변 설명으로 확인 가능한 범위만 사용했다. 원 PDF의 수식 조판과 표 구조를 시각적으로 대조하지 않았다.",
+      "스캔 또는 이미지 전용 내용은 처리하지 않았으며 OCR을 수행하지 않았다. 논문이 평가 대상으로 언급하는 첨부 스캔의 실제 내용도 제공되지 않았다."
+    ],
+    "limitations": [
+      "저자 보고 한계 — AnonymizeFieldClass는 이름 있는 필드의 suppression이며 통계적 익명화가 아니다. 비정형·파생 정보의 일반적 비공개성을 보장하지 않고, 스트레스 집합의 literal scorer 비검출 사례는 성공이나 실패 어느 쪽으로도 판정할 수 없다.",
+      "저자 보고 한계 — 협정은 클래스 수준의 규범적 duty를 제공하지만 구체적인 필드 매핑은 프로토타입의 로컬 분류 메타데이터에 의존한다. 중앙 registry가 분류를 보유하고 게시 게이트로 관리하는 설계는 아직 프로토타입에 구현되지 않았다.",
+      "저자 보고 한계 — Case D는 EDC PDP가 아닌 자체 의미론 재구현을 사용한다. V1은 기존 연구의 외부 기준선이 아니라 저자 설계의 ablation이며, V2의 미표시 reversal 부재는 검토 경로 분류 결과이지 실제 인간 검토의 방어 성공이 아니다.",
+      "저자 보고 한계 — 재위임 ceiling을 평가할 Case C는 실행되지 않았다. 개별적으로 허용된 행동을 조합하는 T5와 부모가 합법적으로 얻은 정보를 자식에게 전달하는 T6는 해결하지 않는다.",
+      "저자 보고 한계 — 승인자 피로와 사회공학은 측정하지 않았다. 승인 큐 시뮬레이션은 일정한 도착률을 사용하며, 연합형 운영의 중앙 검토 비중 μ는 실제 배포에서 측정되지 않았다.",
+      "저자 보고 한계 — 재위임 설계의 철회는 협정 단위로 거칠고 매 행동의 PDP 의존성이 가용성과 지연 비용을 만든다. 캐시는 비용을 줄이는 대신 철회된 권한을 계속 사용하는 시간 창을 만든다.",
+      "저자 보고 한계 — 평가 범위는 단일 도구와 작은 행동 집합이다. 모델 실험은 불균형한 반복 수와 vendor runtime 기본 sampling 설정을 사용하며, 외부 시스템을 그대로 실행한 기준선이나 검증된 production 배포가 아니다. 프로파일 확장과 고정 테스트 키 풀이라는 조건도 남는다.",
+      "AI 해석의 한계 — 이 노트는 저자 보고의 단위와 조건을 보존한 해석이다. 유한 코퍼스의 무노출 결과를 보편적인 방어율로, 게시 검토로의 라우팅을 승인자의 탐지율로, 서로 다른 연구의 노출·출력 누출·호출 거부를 하나의 성능 순위로 바꾸지 않는다.",
+      "추출·검토 한계 — 제공된 모든 물리적 페이지의 내장 텍스트는 읽었지만 이미지, 수식 조판, 표 레이아웃은 검토하지 않았다. 입력에 페이지별 Unicode 문자 수 관측값이 별도로 없으므로 길이와 추출 완전성을 독립 검증했다고 주장하지 않는다.",
+      "실행·출처 한계 — 원 PDF, source.json, 실험 코드와 원시 기록을 직접 열거나 해시를 재계산하지 않았다. 입력에 제공된 해시를 식별자로 기록했으며, 독립 재현·형식 검증·사람의 검토·실제 게시 완료를 주장하지 않는다."
+    ],
+    "claims": [
+      {
+        "id": "C01",
+        "kind": "author_report",
+        "statement": "저자는 에이전트가 정책의 적용 대상이면서 그 정책의 작성자가 되어 자신을 구속하는 규범을 쓰는 자기수정 문제를 authorship hazard라고 명명한다.",
+        "conditions": "생성된 정책·매핑·분류가 실제 dataspace의 거버넌스 평면에 게시되어 권한 판정에 사용되는 상황이다. 단순한 문서 생성 품질 문제나 에이전트 권한 문제 전반에 대한 최초성 주장과 구분한다.",
+        "anchor": "page=2",
+        "quote": "An agent that is a subject of the\npolicy and also an author of the policy writes the norms that\nbind it. This is the self-amendment problem of access\ncontrol. We call it the authorship hazard, and it is the object\nof this paper."
+      },
+      {
+        "id": "C02",
+        "kind": "author_report",
+        "statement": "위협 모델은 모든 에이전트의 planner 출력을 공격자가 통제할 수 있다고 보지만, 암호를 깨거나 신뢰된 집행·승인 구성요소를 침해하는 공격은 가정하지 않는다.",
+        "conditions": "EDC, obligation executor, publishing pipeline, approval service, vocabulary registry와 tool gateway가 신뢰 기반이다. 인간 승인자는 정직하지만 주의력이 유한하며, 조직 간 공모와 신뢰 구성요소 침해 등은 범위 밖이다.",
+        "anchor": "page=4",
+        "quote": "The adversary controls planner output in every agent, can\ncraft any draft, spawn sub-agents, decompose goals\narbitrarily, and observe all responses. The adversary cannot\nbreak cryptography or compromise trusted components."
+      },
+      {
+        "id": "C03",
+        "kind": "author_report",
+        "statement": "제안은 초안을 만드는 에이전트와 게시 주체를 분리하고, 에이전트 신원이 아니라 인간 검토 뒤 발급되는 approval artifact를 publishing API의 자격 증명으로 요구한다.",
+        "conditions": "에이전트에게 publishing API 경로와 approval artifact가 없고 신뢰된 승인 서비스가 유지된다는 구성 조건에 의존한다. 이 authorization channel의 차단은 인간이 악성 초안을 승인하도록 유도하는 influence channel의 차단을 뜻하지 않는다.",
+        "anchor": "page=5",
+        "quote": "Concretely: the registration agent profiles a legacy source\nand drafts a mapping and a policy. A human approver\nreviews the draft. The approval artifact—not the agent's\nidentity—is the credential the publishing API requires. The\nagent has no route to that API and holds no such artifact."
+      },
+      {
+        "id": "C04",
+        "kind": "author_report",
+        "statement": "표시된 diff는 두 승인자의 elevated review로, 표시되지 않은 diff는 ordinary review로 보내며 어느 경로도 인간 검토 자체를 생략하지 않는다.",
+        "conditions": "현재 게시된 동일 자산의 상태와 비교하는 diff 기반 승인 설계다. 최초 게시에는 비교할 이전 상태가 없으므로 전체 문서가 elevated 경로를 따르며, 분류기는 승인자를 대체하지 않는다.",
+        "anchor": "page=6",
+        "quote": "Flagged diffs are routed to elevated review requiring two\napprovers; unflagged diffs—a narrowed constraint, an\nadded duty, a corrected human-readable description—take\nthe ordinary path. Both paths end at a human: flagging\nchanges who reads the draft and how many, not whether it is\nread."
+      },
+      {
+        "id": "C05",
+        "kind": "author_report",
+        "statement": "approval artifact는 정확한 초안의 해시에 결합된 단회·단기 자격 증명으로 설계되어 승인 뒤 초안이 바뀌면 게시가 실패하도록 한다.",
+        "conditions": "에이전트가 접근할 수 없는 신뢰된 approval service가 발급하고 승인자 신원을 기록한다는 설계 조건이다. 해당 경로를 공격해 검증한 실험 결과가 아니라 게시 프로토콜의 요구사항이다.",
+        "anchor": "page=7",
+        "quote": "The artifact is bound to\nthe hash of the exact draft, single-use, short-lived, issued by\nan approval service no agent can address, and logged with\nthe approver identity. A draft altered after approval fails at\npublication."
+      },
+      {
+        "id": "C06",
+        "kind": "author_report",
+        "statement": "저자는 민감도 분류를 참가자 매핑이 아니라 중앙 vocabulary registry의 속성으로 관리하고, 모든 분류 변경을 elevated review 및 관련 협정의 재검토 대상으로 삼는 설계를 제시한다.",
+        "conditions": "정책 문자열을 바꾸지 않는 재분류도 보호 집합과 권한을 바꿀 수 있다는 문제에 대한 대응이다. 이 registry-held classification은 설계 및 Case D 모델의 요소이며 실제 프로토타입 구현 완료를 뜻하지 않는다.",
+        "anchor": "page=7",
+        "quote": "Sensitivity classification is held as an attribute of the\ncentral vocabulary registry, not of the participant's mapping;\nany change to a field's class is privilege-expanding by\ndefinition and takes elevated review; and when a class\nchanges, every published agreement whose ceiling or duties\nreference that field is listed for re-review"
+      },
+      {
+        "id": "C07",
+        "kind": "author_report",
+        "statement": "도구 발견 단계의 가시성 필터는 이미 생성된 응답의 필드를 가릴 수 없으므로, 값에 작용하는 duty는 호출 시점과 반환 경로에서 집행해야 한다는 것이 제안의 실행 경계 논리다.",
+        "conditions": "호출 자체가 허용되고 도구가 보이는 경우의 응답 내용 통제에 관한 주장이다. 협정에서 유래한 duty를 신뢰된 compiler와 gateway에 연결하는 설계이며, discovery filtering 자체의 호출 통제 목적을 실패로 판정하는 비교가 아니다.",
+        "anchor": "page=8",
+        "quote": "Filtering a registry decides which tools\nare visible. It cannot mask a field in a response, because\nwhen the response exists the filtering decision is past.\nDuties act on values and on what happens afterward, so they\nmust act at invocation and on the return path."
+      },
+      {
+        "id": "C08",
+        "kind": "author_report",
+        "statement": "재위임 ceiling이 제한하는 것은 자식 에이전트가 PDP에서 얻는 권한이지 부모에게서 배우거나 전달받는 정보가 아니므로 confinement 보장은 아니다.",
+        "conditions": "소유자가 선언한 ceiling 아래에서 보유자가 추가로 권한을 축소하는 미평가 설계다. 신원·계보 attestation을 사용하더라도 부모의 프롬프트를 통한 파생 정보 전달은 통제하지 않으며 Case C는 실행되지 않았다.",
+        "anchor": "page=9",
+        "quote": "The ceiling bounds what a sub-agent can obtain\nfrom the PDP, not what it can learn from its parent. What it\ndelivers is least privilege and auditability—no sub-agent\never acquires F2 authority, and every F2 access is\nattributable to the primary—not confinement."
+      },
+      {
+        "id": "C09",
+        "kind": "author_report",
+        "statement": "개별 허용 행동을 합성해 금지 결과를 만드는 T5와 부모가 합법적으로 가진 데이터를 자식의 ceiling 밖으로 전달하는 T6는 설계의 미해결 위협이다.",
+        "conditions": "상태 없는 per-action 접근 통제와 정책 평면에서의 권한 판정에 한정된다. 계획 전체의 결과나 정책 평면 밖의 정보 흐름에 대한 non-interference 보장은 없다.",
+        "anchor": "page=4",
+        "quote": "T5 Composition of a forbidden outcome from\nindividually permitted actions. Not addressed (10).\nT6 Derivative relay: a parent passes data it lawfully\nholds to a child beyond the child's ceiling, outside the\npolicy plane. Not addressed; an information-flow\nproblem, not an access-control one [19] (6.2.1, 10)."
+      },
+      {
+        "id": "C10",
+        "kind": "author_report",
+        "statement": "모델 호출 없는 Case B의 105건 risk set에서 보호 F2 값의 모델행 payload 잔존은 prompt-only와 discovery filtering에서 각각 105/105, compiled에서 0/105였으며 compiled의 F0/F1 과잉 제거도 0으로 보고됐다.",
+        "conditions": "원 응답에 보호값이 존재하고 gateway가 이름 있는 필드로 주소 지정할 수 있는 사례만의 분모다. 논문이 제시한 compiled의 Wilson 95% 구간은 0–3.5%이며, 다른 형태의 코퍼스에서 보편적인 무노출을 확립하지 않는다.",
+        "anchor": "page=11",
+        "quote": "Condition F2 in\npayload\n95%\ninterval\nOver-\nremoval of\nF0/F1\nTransform\noverhead\nPrompt-only 105 / 105 96.5–100% 0 —\nDiscovery filtering\n[16]\n105 / 105 96.5–100% 0 +0.6 µs\nCompiled (this\nwork)\n0 / 105 0–3.5% 0 +19 µs"
+      },
+      {
+        "id": "C11",
+        "kind": "author_report",
+        "statement": "이름 있는 필드에 보호값이 한정되지 않는 스트레스 집합에서 literal scorer가 검출할 수 있는 7건은 compiled에서도 모두 노출됐고, 나머지 9건에는 해당 probe로 결론을 내리지 않았다.",
+        "conditions": "자유 텍스트, 첨부 스캔, 허용 필드에서 유도되는 값, 값의 조각을 포함한 16건의 별도 스트레스 집합이다. 7/7은 검출 가능한 부분집합의 결과이며 9건을 통과 사례로 세면 안 된다.",
+        "anchor": "page=11",
+        "quote": "Seven are\ndetectable by a literal scorer, and the compiled condition\nexposes the protected value in 7 of 7—the same as prompt-\nonly, the same as discovery filtering. The remaining nine are\ninvisible to a literal probe, so the experiment says nothing\nabout them in either direction and we do not count them."
+      },
+      {
+        "id": "C12",
+        "kind": "author_report",
+        "statement": "live-model Case B에서 prompt-only와 discovery filtering은 정상·공격 과제 각각 220/220에서 context 노출이 있었고 compiled는 각각 0/220이었다. 정상 과제 성공은 순서대로 219/220, 218/220, 219/220이었다.",
+        "conditions": "9개 model/runtime 구성, 3개 조건, 총 1,320회 호출의 불균형 설계다. 8개 구성은 조건당 정상·공격 각각 20회, 로컬 open-weight 구성은 각각 60회이며, context 노출은 최종 답변 누출과 별도로 gateway에서 측정했다.",
+        "anchor": "page=12",
+        "quote": "Condition Context,\nbenign\nContext,\nadversarial\nBenign\nsuccess\nLeakage,\nbenign\nLeakage,\nadversarial\nPrompt-only 220 / 220 220 / 220 219 /\n220\n2 / 220 49 / 220\nDiscovery\nfiltering [16]\n220 / 220 220 / 220 218 /\n220\n5 / 220 57 / 220\nCompiled\n(this work)\n0 / 220 0 / 220 219 /\n220\n0 / 220 0 / 220"
+      },
+      {
+        "id": "C13",
+        "kind": "author_report",
+        "statement": "Case E에서는 프로파일을 확장한 duty가 실제 협정의 양쪽 사본에 남아 동일 compiler와 gateway의 입력으로 사용됐으며, 협정을 제약의 출처로 바꾼 Case B 재생에서 기존 수치를 재현했다고 보고한다.",
+        "conditions": "Tractus-X EDC 0.13.0 upstream end-to-end test harness에서 AnonymizeFieldClass를 위한 최소 프로파일 확장이 필요했다. stock 기능만의 결과나 별도의 독립적인 gateway 효과 측정, production 배포 검증으로 해석하지 않는다.",
+        "anchor": "page=13",
+        "quote": "The term then survives an actual negotiation into the\nagreement object on both sides, and feeds the same\ncompiler and gateway used in Section 8.1 with no changes.\nReplaying Case B's 105-case risk set with this agreement as\nthe constraint source reproduces Case B's numbers exactly:"
+      },
+      {
+        "id": "C14",
+        "kind": "author_report",
+        "statement": "협상 검사에서 최종 성립한 3개 협정은 제공자가 그 시점에 저장한 contract definition과 같았으며, 경계는 소비자가 과거에 본 offer가 아니라 제공자의 현재 저장 정책이었다.",
+        "conditions": "Tractus-X EDC 0.13.0 컨테이너 testbed의 12개 협상 검사다. 게시 후 definition이 확대되면 오래된 offer를 인용한 요청에도 확대된 정책이 돌아올 수 있었으므로 과거 offer의 불변성을 입증한 결과가 아니다.",
+        "anchor": "page=13",
+        "quote": "Three\nnegotiations finalized, and all three agreements equal the\ncontract definition the provider stored at that moment. Two\nobservations cut the other way and Section 5.2 states them:\nwhen the definition was widened after publication, a request\nquoting the old offer received the wider policy;"
+      },
+      {
+        "id": "C15",
+        "kind": "author_report",
+        "statement": "프로토타입의 구체적인 필드 매핑은 로컬 분류 메타데이터이며, 게시 게이트 아래의 registry-held classification은 설계됐지만 구현되지 않았다.",
+        "conditions": "협정이 클래스 수준의 규범적 duty를 제공한다는 결과와 모든 실행 매개변수가 협정에서 나온다는 주장을 구분해야 한다. Case D의 evaluator가 해당 registry 설계를 모델링한 것과 실행 프로토타입의 구현 상태도 다르다.",
+        "anchor": "page=17",
+        "quote": "The\nmapping from that class to concrete field names is local\nclassification metadata in this prototype, which is\nprecisely the artifact Section 5.4 places under the\npublication gate. The registry-held classification of\nSection 5.4 is therefore designed and not implemented in\nthis prototype;"
+      },
+      {
+        "id": "C16",
+        "kind": "author_report",
+        "statement": "Case D의 380개 초안에서 no gate는 authorization reversal 80건과 duty neutralization 4건을 냈고, 표시되지 않은 초안만 세면 V1은 reversal 49건, V2는 0건이었다.",
+        "conditions": "초안 생성 전에 동결한 24개 요청을 기준 상태와 비교하는 자체 policy evaluator 실험이다. reversal은 기준 상태에서 거부됐던 요청이 허용으로 바뀐 사건이며 초안 수와 같지 않다. V1·V2의 수치는 검토를 거치지 않은 최종 게시 결과가 아니라 unflagged 경로의 결과다.",
+        "anchor": "page=13",
+        "quote": "Structure Drafts reaching the\nordinary path\nunflagged\nReversals\namong them\nDuty\nneutralizations\namong them\nNo gate 380 / 380 80 4\nV1, six\nconditions\n240 / 380 49 0\nV2, with\nSection 5.4\n60 / 380 0 0"
+      },
+      {
+        "id": "C17",
+        "kind": "author_report",
+        "statement": "분류 공격 초안 50개 중 41개가 실제 요청 판정을 바꿨고, 정책 텍스트를 바꾸지 않은 이 공격군이 전체 reversal 80건 중 49건을 만들었다.",
+        "conditions": "고정 요청 집합을 사용하는 Case D의 A8 공격군 결과다. 정책 diff만 읽는 V1의 누락과 모든 재분류를 표시하는 V2의 라우팅은 구성상 결정되며, 49/80을 실제 배포의 공격 빈도나 일반적인 피해 비중으로 해석하지 않는다.",
+        "anchor": "page=14",
+        "quote": "a reclassification touching no line of policy text does\nreverse authorization decisions in the evaluator's semantics\n—41 of 50 drafts did, producing 49 of the corpus's 80\nreversals;"
+      },
+      {
+        "id": "C18",
+        "kind": "author_report",
+        "statement": "Case D에서 인간 elevated review로의 이관은 V1의 140/380에서 V2의 270/380으로 증가했고, 별도의 literal-embedding 초안 50개는 인간 검토 없이 gateway에서 거부됐다.",
+        "conditions": "보고된 36.8%와 71.1%는 이 공격 중심 코퍼스의 구성에 의존한다. 자동 거부 13.2%를 인간 검토 이관에 합산하지 않으며, 분류 변경을 방향과 무관하게 표시하는 규칙은 정당한 분류 강화에도 검토 비용을 부과한다.",
+        "anchor": "page=14",
+        "quote": "The 50 literal-embedding\ndrafts (A10) are rejected at the submission gateway with no\nhuman in the loop (Section 5.3(b)); the other 270 are\nflagged for elevated review. Escalation to human review\ntherefore rises from 36.8% to 71.1% of drafts, 140 to 270\nof 380, and a further 13.2% is rejected automatically."
+      },
+      {
+        "id": "C19",
+        "kind": "author_report",
+        "statement": "Case D에서 V2의 0은 인간이 공격을 잡아냈다는 결과가 아니라 검토 경로로 라우팅했다는 결과이며, 승인자 피로와 사회공학은 평가하지 않았다.",
+        "conditions": "승인자를 실제 사람이 아니라 classifier로 취급하고 flagged 초안을 caught로 계산한, 승인 단계에 유리한 설정이다. evaluator 또한 EDC PDP가 아니라 논문 규칙의 재구현이므로 connector의 실제 차단 성능으로 승격할 수 없다.",
+        "anchor": "page=16",
+        "quote": "And the approver is a classifier, not\na person: fatigue and social engineering are untouched, and\na flagged draft is scored as caught, which is the assumption\nmost favourable to the approval stage; the 0 in the V2 row is\na routing result, not a review result."
+      },
+      {
+        "id": "C20",
+        "kind": "author_report",
+        "statement": "중앙 승인 큐 시뮬레이션의 최저 초안 발생률에서 V2의 승인자 3명 풀은 참가자 200명까지 유지됐지만 다음 격자점인 500명에서는 발산했고, 승인자 30명 풀은 3,000명까지 유지됐다.",
+        "conditions": "승인자별 기간당 20회 검토와 논문이 설정한 도착률·온보딩 비중을 사용하는 결정론적 provisioning 실험이다. 보편적인 참가자 상한이나 실제 운영 지연 측정이 아니며, quota의 flooding 국소화와 총 서비스 용량 부족을 구분한다.",
+        "anchor": "page=15",
+        "quote": "Under V2 at the lowest draft rate, three\napprovers hold to two hundred participants and have\ndiverged at five hundred, the next point on the grid; ten hold\nto a thousand; thirty hold to three thousand."
+      },
+      {
+        "id": "C21",
+        "kind": "author_report",
+        "statement": "연합형 Case D5는 중앙 검토가 필요한 초안 비중 μ에 따라 중앙 포화점을 N* = KcC/(λμ)로 이동시키지만 유한한 중앙 용량 한계를 제거하지 않는다.",
+        "conditions": "참가자는 자체 초안을 검토하고 중앙 풀은 어휘·분류 정의·분류기 변경을 맡는 일정 도착률의 시뮬레이션이다. Kc는 중앙 승인자 수, C는 기간당 검토 용량, λ는 참가자별 초안 도착률이며, 실제 배포의 μ는 측정되지 않았다.",
+        "anchor": "page=15",
+        "quote": "The central queue saturates at N* = KcC/(λμ), and the\nclosed form matches the simulation in all 504 parameter\nfamilies. Federation moves the central limit; it does not\nremove it."
+      },
+      {
+        "id": "C22",
+        "kind": "author_report",
+        "statement": "Case A에서 per-action 조건의 추가 지연은 도구 호출당 중앙값 20.4 ms와 50-step plan당 1,019 ms였고, 5초 캐시는 비용을 낮추는 대신 철회 후 101개 결정을 계속 허용하며 첫 거부를 5,025 ms까지 늦췄다.",
+        "conditions": "Tractus-X EDC testbed에서 협정 조회·철회 조회·로컬 ODRL 평가를 포함한 경로다. 도구 호출당 값은 variant별 200회 호출, plan 값은 실제 측정한 20개 50-step plan의 중앙값이다. 비교 순서는 admission-time, per-action, cached이며 production 측정이나 bare PDP 계산 시간은 아니다.",
+        "anchor": "page=16",
+        "quote": "Added per tool call 0.05 ms 20.4 ms 0.04 ms\nAdded over a 50-step plan 2.2 ms 1,019 ms 2.0 ms\nFirst denial after\nrevocation\nnot observed\nin 30 s\n34 ms 5,025 ms\nDecisions served after\nrevocation\n440/440 in\n30 s\n0 101"
+      },
+      {
+        "id": "C23",
+        "kind": "author_report",
+        "statement": "협정 객체만 읽고 철회를 별도로 조회하지 않은 경로는 30초 관측 창의 440개 결정에서 거부하지 않았으므로, 협정 조회만으로 현재 철회 상태가 반영된다고 가정할 수 없다.",
+        "conditions": "Case A의 측정 경로와 관측 창에 한정한 결과다. 영구적으로 거부하지 않는다는 주장이나 모든 EDC 배포의 성질로 일반화하지 않으며, 철회 상태를 명시적으로 조회해야 한다는 구현상 주의점이다.",
+        "anchor": "page=16",
+        "quote": "Worse, a decision path that reads only the contract\nagreement and does not separately query revocation never\ndenied at all within a thirty-second observation window,\nacross 440 decisions. Revocation is not visible in the\nagreement object."
+      },
+      {
+        "id": "C24",
+        "kind": "author_report",
+        "statement": "별도 prompt-only 출력 연구의 공격 시행 900회 중 최종 답변 누출은 39회였고, 그중 24회는 요청을 거절하면서 보호값을 그대로 인용한 경우였다.",
+        "conditions": "Case B의 1,320회 호출과 다른 연구이며 모든 공격 시행에서 보호값은 이미 context에 들어 있었다. 나머지 15회는 공격에 대한 일반적인 순응 누출이고, 이 결과는 context 보호율이나 구성 간 공정한 모델 순위가 아니다.",
+        "anchor": "page=17",
+        "quote": "Of the 900 adversarial\ntrials, 39 leaked a protected value into the final answer. Of\nthose 39, 24 were refusals. The model identified the\nrequest as improper, declined it, and quoted the protected\nvalue verbatim inside the refusal. The remaining 15 were\nordinary compliance with the attack."
+      },
+      {
+        "id": "C25",
+        "kind": "author_report",
+        "statement": "논문의 AnonymizeFieldClass는 모델행 payload에서 해당 클래스의 필드를 제거하는 suppression이며 통계적 의미의 레코드 익명화가 아니다.",
+        "conditions": "명명은 프로파일의 Anonymize action을 따르지만 필드 밖의 중복 정보나 허용 정보로부터 유도되는 보호값까지 제거한다는 의미가 아니다.",
+        "anchor": "page=17",
+        "quote": "\"Anonymize\" here means suppression. The\nAnonymizeFieldClass duty removes the fields of a class\nfrom the model-bound payload; it does not anonymize a\nrecord in the statistical sense, and the stress group's\nderivable-value cases are exactly where the difference\nshows."
+      },
+      {
+        "id": "C26",
+        "kind": "author_report",
+        "statement": "저자는 선정한 생성 시스템 4개의 평가에서 게시·사용 인가 단계가 모델링되지 않았다고 보고하되, 이 조사가 포괄적 문헌조사는 아니라고 제한한다.",
+        "conditions": "ODRL 정책·온톨로지·정렬을 생성하는 시스템의 평가 설계를 조사했으며 읽기 깊이도 시스템별로 다르다. 생성 품질 평가의 결함이나 모든 관련 연구에 대한 부재 증명, 보편적 신규성의 근거가 아니다.",
+        "anchor": "page=20",
+        "quote": "The survey is four systems and we do not present it as\nexhaustive; two further systems from the same workshop\nvenue were examined at abstract level only and are omitted\nrather than reported at that depth. Its point is narrower, and\nit is not a criticism of those systems: across the systems a\ndataspace practitioner would actually reach for, publication\nis not modeled,"
+      },
+      {
+        "id": "C27",
+        "kind": "analyst_interpretation",
+        "statement": "이 논문에서 재사용할 점검 원칙은 정책 본문뿐 아니라 정책이 참조하는 분류와 어휘도 권한 상태로 함께 검토해야 한다는 것이다.",
+        "conditions": "논문의 분류 공격과 관리 경계 논의를 운영 점검 질문으로 옮긴 해석이다. 임의의 시스템에 대한 검증된 방어법이나 기존 Wiki의 원논문을 새로 검증한 결론은 아니다.",
+        "anchor": "page=18",
+        "quote": "The vocabulary a policy\ndereferences is authorization state and must be administered\nas such."
+      }
+    ],
+    "markdown_body": "# Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces\n\n> 초안 · 미검토. 아래 실험 수치는 모두 저자 보고이며 독립 재현, 형식 검증, 사람의 검토 또는 실제 게시 완료를 뜻하지 않는다.\n\n## 읽은 버전과 범위\n\n- 저자: Seungho Lee · Changbin Lee, Korea Trade Network (KTNET).\n- 버전: `2609.30614v1`. 제공된 원문은 working draft로 표시되어 있다.\n- 원본 식별 경로: `raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf`.\n- 입력에 제공된 PDF SHA-256: `a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d`.\n- 입력에 제공된 metadata 경로: `raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json`.\n- 입력에 제공된 metadata SHA-256: `4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81`.\n- 실제 읽은 범위는 물리적 `page=1`부터 `page=23`까지 제공된 내장 텍스트 전체다. 결론, Author Contributions, Appendix A, References를 포함하며 미독 텍스트 페이지는 없다. 인용의 페이지는 인쇄 쪽수가 아니라 PDF의 물리적 순서다.\n- 해시는 입력의 식별값을 기록한 것이며 이 응답에서 재계산하지 않았다. 텍스트 전체를 읽었다는 선언은 이미지·수식·표의 시각적 완전 이해를 뜻하지 않는다.\n\n## 문제와 동기\n\n**저자 보고 — 생성 품질과 게시 권한은 다른 문제다.** 정책이나 매핑을 잘 생성하는 것만으로 그 산출물이 실제 거버넌스 평면에 들어가도 된다는 인가가 성립하지 않는다. 게시된 정책과 어휘가 PDP의 판단 근거가 되는 환경에서는 게시가 권한을 바꾸는 사건이다. 저자는 정책의 적용 대상인 에이전트가 그 정책까지 작성하는 자기수정 문제를 **authorship hazard**라고 부르고, Principle P를 “An agent is a subject of the governance plane and never an author of it”로 제시한다. 에이전트의 초안 작성은 허용하되 최종 규범 작성 권한과 분리하자는 뜻이다. **C01** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=2]\n\n**조사의 범위도 제한되어 있다.** 저자는 ODRL 정책·온톨로지·정렬 생성 시스템 4개의 평가에서 별도의 게시 인가 단계를 찾지 못했다고 보고한다. 이는 생성 연구가 자기 평가 범위에서 잘못됐다는 비판이 아니라, 생성 품질 평가와 운영 인가 사이의 접점을 별도로 다뤄야 한다는 문제 제기다. 비포괄적인 선정 조사이므로 이 결과를 모든 선행연구의 부재 증명이나 보편적인 최초성으로 읽지 않는다. **C26** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=20]\n\n## 핵심 아이디어와 설계\n\n### 초안 작성자와 게시 주체의 분리\n\n**Authorization channel을 없애는 구성이다.** registration agent는 매핑과 정책을 초안으로 만들지만 publishing API에 접근하지 못하고 게시용 approval artifact도 보유하지 않는다. API가 요구하는 자격 증명은 에이전트 신원이 아니라 인간 검토 뒤의 승인 산출물이다. 이 구분은 에이전트의 직접 게시를 불가능하게 만드는 구성 논증이지, 인간을 거쳐 영향을 미치는 모든 공격까지 차단하는 시스템 전체 보장이 아니다. **C03** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=5]\n\n**Influence channel은 남으므로 검토 절차로 다룬다.** 제출물을 현재 게시 상태에 대한 diff로 만들고, 권한을 넓히는 변경 등을 결정론적으로 표시한다. 표시된 diff는 두 승인자의 elevated review로, 표시되지 않은 diff도 인간이 읽는 ordinary review로 보낸다. 최초 게시에는 비교할 이전 상태가 없어 전체 문서를 elevated 경로로 보낸다. 분류기의 역할은 인간 검토의 대체가 아니라 검토 경로와 부담의 분배다. **C04** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=6]\n\n**승인과 게시 사이의 동일성도 묶는다.** approval artifact는 정확한 초안의 해시, 단회 사용, 짧은 유효기간, 승인자 신원에 결합되며 에이전트가 접근할 수 없는 서비스가 발급한다. 따라서 승인 후 내용을 바꾸어 게시하는 경로는 설계상 실패해야 한다. 다만 논문은 이 authorization 경로를 공격해 검증한 결과와 구성 요구사항을 구분한다. **C05** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=7]\n\n### 분류 변경도 정책 작성이다\n\n정책 문자열이 그대로여도 그 정책이 참조하는 민감도 분류가 바뀌면 보호 대상이 달라진다. 논문의 예처럼 필드를 보호 클래스 밖으로 옮기면 duty 자체가 여전히 존재하면서도 적용 집합이 줄어드는 조용한 변경이 가능하다. 대응 설계는 분류를 중앙 vocabulary registry의 속성으로 두고, 모든 분류 변경을 elevated review로 보내며 영향을 받는 기존 협정도 재검토 대상으로 나열하는 것이다. **이 registry 관리가 실제 프로토타입에 이미 구현됐다는 뜻은 아니다.** **C06** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=7]\n\n### 협정의 duty를 실행 경계로 전달한다\n\n실행 측 연결은 `negotiated ODRL agreement → duty compiler → tool gateway → 모델행 payload`로 이해할 수 있다. 도구 발견 단계의 필터는 어떤 도구를 볼 수 있는지 정하지만, 허용된 호출이 돌려준 응답에서 필드를 제거할 위치는 제공하지 않는다. 값에 작용하는 duty는 호출과 반환 경로에서 집행해야 한다는 것이 핵심이다. 따라서 discovery filtering과 응답 내용 통제는 대체 관계라기보다 다른 경계를 담당한다. **C07** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=8]\n\n용어를 좁혀 읽어야 한다. 여기서 **AnonymizeFieldClass는 통계적 익명화가 아니라 필드 suppression**이다. 모델에 전달할 payload에서 지정 클래스의 필드를 제거하는 것이며, 다른 필드나 자유 텍스트에 남은 동일 정보 또는 허용값에서 유도되는 정보를 일반적으로 없애는 기법은 아니다. **C25** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=17]\n\n## 가정과 보장 경계\n\n**신뢰 기반은 모델 밖에 있다.** 공격자는 모든 planner 출력을 통제하고 임의 초안과 하위 에이전트를 만들 수 있지만, EDC·executor·gateway·게시 및 승인 서비스·registry 같은 신뢰 구성요소를 침해하거나 암호를 깨지는 못한다고 가정한다. 인간 승인자는 정직하지만 주의력이 유한하다. 따라서 결과는 모델을 신뢰하지 않는 대신 집행 인프라와 승인 서비스를 신뢰하는 위협 모델에 속한다. **C02** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=4]\n\n**재위임은 평가된 방어가 아니라 설계다.** 소유자가 ceiling을 정하고 보유자가 그 아래에서 추가로 권한을 줄이며, 신원·계보 attestation을 제시해 PDP가 권한을 도출하는 방식을 제안한다. 그러나 ceiling은 자식이 PDP에서 얻을 수 있는 권한을 제한할 뿐 부모가 합법적으로 가진 정보를 프롬프트로 전달하는 것을 막지 않는다. Case C가 실행되지 않았으므로 이 설계를 confinement이나 검증된 재위임 방어로 표현하지 않는다. **C08** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=9]\n\n**명시적으로 해결하지 않는 위협이 중요하다.** T5는 허용된 행동들을 합성해 금지 결과를 만드는 경우이고, T6는 부모가 합법적으로 보유한 데이터를 자식의 ceiling 밖으로 전달하는 경우다. per-action 접근 통제는 계획 전체의 의미를 보지 못하고 정책 평면 밖의 정보 흐름도 관측하지 못한다. 따라서 개별 호출의 적법성을 전체 작업의 안전성으로 승격할 수 없다. **C09** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=4]\n\n## 저자가 보고한 평가와 결과\n\n### Case B — 모델에 도달하기 전의 값 노출\n\n**결정론적 경계 측정:** 모델을 호출하지 않는 105건 risk set에서 prompt-only와 discovery filtering은 각각 **105/105**, compiled는 **0/105**의 보호 F2 값을 모델행 payload에 남겼다. compiled의 허용 F0/F1 과잉 제거도 0이었다. 단, 분모는 원 응답에 보호값이 있고 이름 있는 필드로 주소 지정할 수 있는 사례다. 저자는 compiled의 Wilson 95% 구간을 **0–3.5%**로 제시하며, 유한 코퍼스의 무노출 관측을 일반적인 실패 확률 0으로 읽지 말라고 제한한다. **C10** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=11]\n\n**더 어려운 형태에서는 실패했다.** 자유 텍스트·첨부 스캔·유도 가능한 값·값의 조각을 포함한 별도 스트레스 집합 16건 중 literal scorer로 검출 가능한 7건은 compiled에서도 **7/7 노출**이었다. 나머지 9건은 해당 probe로 보이지 않아 어느 방향으로도 결론을 내리지 않았다. 따라서 비검출 사례를 방어 성공으로 세거나, 이름 있는 필드 집합의 결과를 모든 민감 정보 보호로 확장하면 원문의 부정적 결과를 지우게 된다. **C11** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=11]\n\n**모델을 넣어도 context 노출과 출력 누출은 다른 지표다.** 9개 model/runtime 구성과 3개 조건의 총 1,320회 호출에서 prompt-only와 discovery filtering은 정상·공격 과제 각각 **220/220 context 노출**, compiled는 각각 **0/220**이었다. 정상 과제 성공은 순서대로 **219/220, 218/220, 219/220**이었다. 공격 과제의 최종 출력 누출은 **49/220, 57/220, 0/220**이지만, 한 로컬 구성이 다른 구성보다 더 많은 반복을 차지하는 불균형 설계다. 저자는 출력 누출의 조건 간 작은 차이를 우열로 읽지 않으며, 올바르게 답한 모델도 보호값을 이미 받았다는 점을 강조한다. **C12** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=12]\n\n### Case E — 제약의 출처가 실제 협정인가\n\n최소 프로파일 확장 뒤 `AnonymizeFieldClass` duty가 실제 협상으로 만들어진 양쪽 협정에 남고, 기존 compiler와 gateway에 그대로 들어갔다고 보고한다. Case B의 risk set을 이 협정으로 재생한 결과는 제약의 출처를 fixture에서 협정으로 바꾸어도 연결이 유지되는지 확인한 것이다. **별도의 독립적인 gateway 효과 측정으로 중복 집계하지 않는다.** Appendix A의 term·제약 스키마·등록 지점 설명도 읽었지만 패치 적용이나 validator 실행은 하지 않았다. **C13** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=13] ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=22]\n\nAuthorization invariance의 협상 조건에도 한정이 있다. 12개 협상 검사에서 최종 성립한 **3개 협정은 모두 제공자가 그 시점에 저장한 definition과 같았다.** 하지만 게시 후 definition이 확대되면 과거 offer를 인용한 요청에도 확대된 정책이 돌아왔다. 따라서 측정된 경계는 “소비자가 예전에 본 offer”가 아니라 “제공자의 현재 저장 정책”이다. **C14** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=13]\n\n**출처 연결과 구현 완성도를 분리해야 한다.** 협정이 주는 것은 클래스 수준의 규범적 duty이며 구체적인 필드 이름으로의 매핑은 로컬 분류 메타데이터다. 정책급 게시 통제를 받는 registry-held classification은 설계돼 있고 Case D에서 모델링됐지만 프로토타입에 구현되지 않았다. 이 연결 고리를 생략하면 “모든 집행 매개변수가 승인된 협정에서 나온다”는 과도한 결론이 된다. **C15** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=17]\n\n### Case D — 초안 게시가 권한을 얼마나 바꾸는가\n\n초안보다 먼저 동결한 요청 24개를 사용해, 하나의 게시 상태에 대한 초안 380개를 각각 적용하고 판정 변화를 셌다. no gate에서는 **authorization reversal 80건, duty neutralization 4건**이었다. 표시되지 않은 초안만 보면 V1은 **49건의 reversal**, V2는 **0건**이었다. reversal은 기준 상태에서 거부된 요청이 허용으로 바뀐 사건이므로 “성공한 초안 80개”라는 뜻이 아니다. V1도 기존 외부 시스템이 아니라 저자 분류기의 ablation이다. **C16** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=13]\n\n가장 중요한 차이는 정책 텍스트 밖에서 발생했다. 분류 공격 초안 **50개 중 41개**가 실제 판정을 바꾸었고 이 공격군이 **80건 중 49건**의 reversal을 만들었다. 정책 diff만 보는 V1이 이 변경을 보지 못하고 모든 재분류를 표시하는 V2가 검토로 보내는 것은 구성상 결정된다. 측정의 핵심은 분류기의 학습 능력이 아니라 **정책 문자열을 그대로 둔 재분류도 권한 판정을 바꾼다**는 의미론적 효과다. **C17** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=14]\n\n그 대가는 검토량이다. 인간 elevated review로의 이관은 **140/380에서 270/380**, 즉 **36.8%에서 71.1%**로 늘었다. 별도의 literal-embedding 초안 **50개, 13.2%**는 gateway가 자동 거부하므로 인간 검토 이관에 합산하면 안 된다. 분류 변경의 방향을 따지지 않는 규칙은 정당한 분류 강화에도 검토 부담을 부과하며, 이러한 비율은 공격 중심 코퍼스의 구성에 의존한다. **C18** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=14]\n\n**V2의 0은 review 결과가 아니라 routing 결과다.** Case D는 사람 대신 classifier를 사용하고 flagged 초안을 caught로 세었다. 따라서 승인자의 피로·사회공학·재분류의 의미를 이해하는 능력은 측정하지 않았다. evaluator 역시 EDC PDP가 아니라 논문 규칙의 재구현이다. 이 결과를 connector에서 검증된 차단율이나 실제 인간 검토의 탐지율로 표현해서는 안 된다. **C19** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=16]\n\n### 승인 용량 — 중앙화의 실패와 연합형의 조건\n\n최저 초안 발생률을 사용한 중앙 큐 격자에서 승인자 **3명**은 참가자 **200명**까지 유지됐지만 다음 점인 **500명**에서 발산했고, 승인자 **30명**은 **3,000명**까지 유지됐다. 이는 정해진 승인자별 검토 용량과 도착률의 provisioning 결과이지 메커니즘이 부과하는 보편적인 참가자 상한이 아니다. 참가자별 quota가 flooding을 국소화하는 것과 전체 도착량이 서비스 용량을 넘는 문제도 별개다. **C20** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=15]\n\nCase D5의 연합형 구조에서는 참가자가 자체 초안을 검토하고 중앙 풀은 어휘·분류 정의·분류기 변경만 맡는다. 중앙 포화점은 **`N* = KcC/(λμ)`**로 옮겨가지만 없어지지 않는다. 실제 운영에서 중앙 검토 비중 **μ가 얼마나 작은지 측정하지 않았고**, 일정 도착률 시뮬레이션이라 안정 상태의 대기시간 차이를 실증한 결과도 아니다. **C21** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=15]\n\n### Case A — 매 행동 판정과 철회의 비용\n\nPer-action 경로의 추가 지연은 도구 호출당 중앙값 **20.4 ms**, 실제 측정한 **50-step plan당 1,019 ms**였다. 이는 협정 조회·철회 조회·로컬 평가를 포함한 testbed 비용이며, 네트워크 없는 필드 변환 microbenchmark와 다른 구간이다. **5초 캐시**는 지연을 낮추지만 첫 철회 거부를 per-action의 **34 ms**에서 **5,025 ms**로 늦추고, 그 사이 **101개 결정**을 계속 허용했다. 비용과 철회 신선도가 같은 설정 손잡이에 연결되어 있다. **C22** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=16]\n\n추가로, 협정만 읽고 철회를 별도로 조회하지 않은 경로는 **30초 동안 440개 결정에서 거부하지 않았다.** 협정 객체에 철회 상태가 자동 반영된다고 가정해서는 안 된다는 구현상 주의점이다. 이 관측 창 밖에서도 영원히 거부하지 않는다고 확대 해석하지 않는다. **C23** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=16]\n\n### 별도 출력 연구 — 거절도 비공개성을 뜻하지 않는다\n\n보호값이 이미 context에 들어간 별도 prompt-only 연구에서 공격 시행 **900회 중 39회**가 최종 답변에 보호값을 누출했고, 그중 **24회**는 거절하면서 보호값을 그대로 인용한 경우였다. 나머지 **15회**는 일반적인 공격 순응이었다. 이 연구는 모델의 사후 출력 행동을 본 것이며 앞의 Case B와 합산할 수 없다. 거절 문구의 존재를 데이터가 모델에 전달되지 않았다는 증거나 비공개성의 증거로 취급하면 안 된다. **C24** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=17]\n\n## 한계와 반론\n\n핵심 한계는 다음처럼 분리해서 읽는 편이 정확하다.\n\n- **설계와 구현:** 게시 권한 분리, registry-held classification, 재위임 ceiling의 서술이 동일한 구현·평가 수준을 갖지 않는다.\n- **쉬운 데이터 형태와 어려운 정보 형태:** 이름 있는 필드 제거의 성공은 자유 텍스트나 파생 정보 보호를 대신하지 않는다.\n- **검토 경로와 검토 품질:** elevated review로 보낸 것과 승인자가 악성 변경을 이해하고 거부한 것은 다른 사건이다.\n- **접근과 정보 흐름:** PDP에서 권한을 제한하는 것과 부모·자식 사이의 정보 전달을 봉쇄하는 것은 다른 보장이다.\n- **유한 실험과 운영 규모:** 구성된 요청·초안·큐 도착률을 실제 배포의 빈도와 지연으로 바꾸려면 추가 측정이 필요하다.\n\n위 항목들은 앞 절에서 근거를 붙인 저자 보고의 경계를 정리한 것이다. 원시 trial record, 구현 코드, 배포 환경을 새로 검사한 판단은 아니다.\n\n## 기존 Wiki와의 연결\n\n**AI 해석 — 재사용할 점검 단위는 정책 파일 하나가 아니라 그 정책이 참조하는 권한 상태다.** 게시 승인이 정책 본문만 확인하고 분류·어휘의 변경은 일반 데이터 수정으로 취급한다면 같은 정책 문자열 아래에서도 보호 범위가 달라질 수 있다. 이를 새로운 보편적 방어 정리로 주장하기보다, 승인 대상과 변경 영향 범위를 묻는 운영 질문으로 재사용하는 것이 적절하다. **C27** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf#page=18]\n\n- [[concepts/agent-authority-and-effect-boundaries]]: 초안 작성 능력, 게시 자격 증명, 검토 경로, 실제 게시 효과를 나누어 읽는 개념적 연결이다. 승인 또는 표시 상태만으로 뒤의 효과를 가정하지 않는 관점을 공유한다.\n- [[concepts/provenance-and-audit-evidence]]: 규범적 duty가 협정에서 왔다는 계보와, 구체적인 분류가 승인·구현되었는지 및 실제 집행이 완전한지는 다른 질문이라는 연결이다.\n- [[concepts/security-evaluation-units]]: 초안 수, 요청 판정 reversal, context 노출, 최종 출력 누출, 큐 시뮬레이션, 호출 지연을 서로 다른 단위로 유지하는 데 직접 관련된다.\n\n이 연결은 제공된 기존 Wiki 초안을 보조적인 편집 증거로 사용한 것이다. 그 페이지들이 요약한 원논문을 이번에 새로 읽거나 독립 검증한 것이 아니며, 논문 간 수치를 하나의 성능 순위로 비교하지 않는다.\n\n## 열린 질문과 미확인 항목\n\n다음은 결과가 아니라 후속 연구·검토 질문이다.\n\n- 실제 승인자는 단순 레이블 수정처럼 보이는 재분류 공격을 얼마나 잘 구별하는가? 검토 시간과 피로를 함께 측정할 수 있는가?\n- 실제 무역 문서에서 이름 있는 필드 밖의 민감 정보가 차지하는 비중은 얼마이며, 유도 가능한 정보에는 어떤 채점기가 필요한가?\n- registry와 협정·필드 매핑이 바뀔 때 관련 협정의 재검토 및 집행 갱신을 어떻게 원자적으로 연결할 것인가?\n- 정당한 권한 확대와 최초 게시가 포함된 현실적인 초안 분포에서는 검토량과 중앙 검토 비중이 어떻게 달라지는가?\n- 재위임 ceiling이 정당한 작업을 막는 정도와 허용 행동 합성의 위험을 같은 도메인 과제로 평가할 수 있는가?\n- 캐시·철회 조회·장애 시 동작을 실제 운영 요구에 맞출 때 어떤 비용과 철회 창을 받아들일 것인가?\n\n## 원문 근거와 미검토 범위\n\n주장별 근거는 위의 물리적 페이지 인용과 JSON의 짧은 원문 인용에 연결되어 있다. Appendix A의 텍스트를 읽은 것은 코드나 패치를 검증한 것이 아니고, References를 읽은 것은 인용 문헌의 원문을 읽은 것이 아니다. 페이지별 문자 수를 새로 계측하지 않았으며 전체 PDF 텍스트나 추출 표를 이 노트에 복제하지 않았다.\n\n- 모든 그림·이미지 및 이미지 전용 내용: 미검토\n- 수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\n- Figure 1–3의 추출된 캡션·레이블은 읽었지만 도형, 연결선, 배치를 보았다고 주장하지 않는다.\n- 형식기호와 표의 행·열 관계는 텍스트 및 주변 설명으로 확인 가능한 부분만 사용했고 원 PDF 레이아웃은 대조하지 않았다.\n- 스캔·이미지 전용 내용을 처리하거나 OCR을 수행하지 않았다.\n- 제공된 텍스트 페이지와 Appendix A, References에 미독 범위는 없지만, 외부 문헌·실험 자료·이미지·코드 실행은 확인 범위 밖이다."
+  },
+  "semantic_review": "not_performed",
+  "publication": "not_performed"
+}

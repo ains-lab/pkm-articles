@@ -1,0 +1,30 @@
+{
+  "run_id": "20260929T025946Z-pdf-fallback-policy",
+  "finished_at": "2026-09-29T03:04:05.700730+00:00",
+  "status": "blocked_approval_timeout",
+  "reason": "Protected AGENTS.md write approval timed out; multi-file patch not applied; no retry or alternate path attempted.",
+  "requested_policy": "HTML preferred, official same-version PDF only on confirmed HTML unavailability; no preprocessing",
+  "policy_applied": false,
+  "sources_downloaded": false,
+  "state_changed": false,
+  "raw_files_unchanged": 16,
+  "policy_and_document_hashes_match_preflight": true,
+  "cron_restored_and_read_back": {
+    "id": "4cff5b4f10ec",
+    "name": "논문 HTML 원본 수집 · AI Agent Security · 매일 00:00 KST",
+    "enabled": true,
+    "state": "scheduled",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 15 * * *",
+      "display": "0 15 * * *"
+    },
+    "next_run_at": "2026-09-29T15:00:00+00:00",
+    "prompt_unchanged": true,
+    "other_settings_unchanged": true
+  },
+  "other_cron_configurations_unchanged": true,
+  "own_lock_released": true,
+  "follow_up": "A new user-authorized attempt with approval of the protected AGENTS.md write is required.",
+  "work_log_append_to_follow": true
+}

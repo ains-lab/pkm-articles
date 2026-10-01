@@ -1,0 +1,18 @@
+test_allowed_inline_source_and_committed_wiki_links (test_content.ContentTests.test_allowed_inline_source_and_committed_wiki_links) ... ok
+test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests) ... ok
+test_corrupt_pdf_is_partial_with_unknown_page_count_no_model (test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model) ... ok
+test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) ... ok
+test_expiry_during_result_encoding_stops_before_write (test_content.ContentTests.test_expiry_during_result_encoding_stops_before_write) ... ok
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) ... ok
+test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) ... ok
+test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests) ... ok
+test_pdf_subset_cannot_claim_main_text_complete (test_content.ContentTests.test_pdf_subset_cannot_claim_main_text_complete) ... ok
+test_repeated_attempt_rejected_before_second_source_read_or_client (test_content.ContentTests.test_repeated_attempt_rejected_before_second_source_read_or_client) ... ok
+test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) ... ok
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.775s
+
+OK

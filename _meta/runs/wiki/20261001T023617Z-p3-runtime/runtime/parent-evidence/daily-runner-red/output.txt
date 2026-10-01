@@ -1,0 +1,25 @@
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... FAIL
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... FAIL
+
+======================================================================
+FAIL: test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 117, in test_runner_bounds_retry_and_retains_unknown_without_retry
+    self.assertTrue(callable(getattr(self.m,'run_daily',None)), 'daily run missing')
+AssertionError: False is not true : daily run missing
+
+======================================================================
+FAIL: test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 135, in test_runner_unknown_is_not_retried
+    self.assertTrue(callable(getattr(self.m,'run_daily',None)), 'daily run missing')
+AssertionError: False is not true : daily run missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.620s
+
+FAILED (failures=2)

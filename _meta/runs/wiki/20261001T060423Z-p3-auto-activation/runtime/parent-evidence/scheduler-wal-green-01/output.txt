@@ -1,0 +1,8 @@
+test_expired_processor_error_has_durable_unknown_not_orphan_reading (test_scheduled_safety.ScheduledSafetyTests.test_expired_processor_error_has_durable_unknown_not_orphan_reading) ... ok
+test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) ... ok
+test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 32.108s
+
+OK

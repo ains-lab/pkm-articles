@@ -1,0 +1,113 @@
+{
+  "observed_at": "2026-10-01T06:14:26.846312+00:00",
+  "active_run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "items": [
+    {
+      "version_id": "2609.30217v1",
+      "reports": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-report.json",
+          "passed": false,
+          "failed_checks": [
+            "claims_cited",
+            "claim_scope_observed"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30217v1/attempt1-outcome.json",
+          "status": "blocked_review"
+        }
+      ],
+      "reservation_count": 1
+    },
+    {
+      "version_id": "2609.30266v1",
+      "reports": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-report.json",
+          "passed": false,
+          "failed_checks": [
+            "version_scope_visible"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30266v1/attempt1-outcome.json",
+          "status": "blocked_review"
+        }
+      ],
+      "reservation_count": 1
+    },
+    {
+      "version_id": "2609.30940v1",
+      "reports": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-report.json",
+          "passed": false,
+          "failed_checks": [
+            "claims_cited",
+            "version_scope_visible"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.30940v1/attempt1-outcome.json",
+          "status": "blocked_review"
+        }
+      ],
+      "reservation_count": 1
+    },
+    {
+      "version_id": "2609.31039v1",
+      "reports": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-report.json",
+          "passed": false,
+          "failed_checks": [
+            "bounded_document_schema"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/items/2609.31039v1/attempt1-outcome.json",
+          "status": "unknown"
+        }
+      ],
+      "reservation_count": 1
+    },
+    {
+      "version_id": "2609.31318v1",
+      "reports": [],
+      "outcomes": [],
+      "reservation_count": 1
+    }
+  ],
+  "selected_statuses": [
+    {
+      "version_id": "2609.30217v1",
+      "status": "blocked_conflict"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "status": "blocked_conflict"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "status": "blocked_conflict"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "status": "blocked_conflict"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "status": "reading"
+    }
+  ],
+  "daily_report_present": false
+}

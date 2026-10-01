@@ -1,0 +1,22 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T02:40:45.985209+00:00",
+  "label": "common-red",
+  "modules": [
+    "test_common"
+  ],
+  "tests_run": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "test_common.py": "089d86ca67b8c1280a499bde9b05ec3760ac542d5c327567a5ca48f9eb9c7218"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

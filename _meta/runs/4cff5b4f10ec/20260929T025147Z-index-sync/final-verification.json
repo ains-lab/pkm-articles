@@ -1,0 +1,34 @@
+{
+  "schema": "local-source-index-sync-verification/v1",
+  "run_id": "20260929T025147Z-index-sync",
+  "verified_at": "2026-09-29T02:54:27.207073+00:00",
+  "status": "passed",
+  "errors": [],
+  "counts": {
+    "target_ids": 10,
+    "saved_html": 8,
+    "source_json": 8,
+    "html_unavailable": 2,
+    "mismatches": 0,
+    "local_index_links_checked": 39,
+    "protected_files_unchanged": 22
+  },
+  "old_log_prefix_unchanged": true,
+  "git_diff_check_exit_code": 0,
+  "state_unchanged": true,
+  "discovery_checkpoint_unchanged": true,
+  "raw_originals_unchanged": true,
+  "lock_owned_at_verification": true,
+  "updated_documents": [
+    "raw/articles/4cff5b4f10ec/index.md",
+    "index.md",
+    "log.md"
+  ],
+  "document_sha256": {
+    "raw/articles/4cff5b4f10ec/index.md": "37994c286c4e2667d602a55564d0aa03fc6ec5434f3e230204b518ff0babdf80",
+    "index.md": "b17991a56f8d2a986ed53ff16ecc884543c66a9798284057edb8fd4a00b59588",
+    "log.md": "b505711dd4cb28618d7337c583bc6f5b4e17a5b1e39504ebbd0c8695fa492e23"
+  },
+  "inventory_evidence": "inventory-verification.json",
+  "network_requests": false
+}

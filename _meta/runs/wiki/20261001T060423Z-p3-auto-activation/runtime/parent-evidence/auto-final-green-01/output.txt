@@ -1,0 +1,18 @@
+test_auto_verified_recovery_after_every_wal_interruption (test_auto_publication.AutoDailyTests.test_auto_verified_recovery_after_every_wal_interruption) ... ok
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ok
+test_mixed_old_and_auto_publications_remain_noop_and_unreservable (test_auto_publication.AutoDailyTests.test_mixed_old_and_auto_publications_remain_noop_and_unreservable) ... ok
+test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) ... ok
+test_two_formats_generate_independent_reviews_and_auto_publish (test_auto_publication.AutoDailyTests.test_two_formats_generate_independent_reviews_and_auto_publish) ... ok
+test_auto_publication_still_rejects_incomplete_or_unreviewed_evidence (test_auto_publication.AutoPublicationTests.test_auto_publication_still_rejects_incomplete_or_unreviewed_evidence) ... ok
+test_both_terminal_statuses_require_bound_published_outputs (test_auto_publication.AutoPublicationTests.test_both_terminal_statuses_require_bound_published_outputs) ... ok
+test_existing_and_human_reviewed_items_remain_protected (test_auto_publication.AutoPublicationTests.test_existing_and_human_reviewed_items_remain_protected) ... ok
+test_legacy_committed_noop_preserves_every_byte (test_auto_publication.AutoPublicationTests.test_legacy_committed_noop_preserves_every_byte) ... ok
+test_legacy_prepared_journal_is_not_applied_or_rewritten (test_auto_publication.AutoPublicationTests.test_legacy_prepared_journal_is_not_applied_or_rewritten) ... ok
+test_new_html_and_pdf_publication_is_compiled_auto_verified (test_auto_publication.AutoPublicationTests.test_new_html_and_pdf_publication_is_compiled_auto_verified) ... ok
+test_page_displays_automatic_verification_not_human_review (test_auto_publication.AutoPublicationTests.test_page_displays_automatic_verification_not_human_review) ... ok
+test_terminal_state_does_not_bypass_receipt_page_or_log_checks (test_auto_publication.AutoPublicationTests.test_terminal_state_does_not_bypass_receipt_page_or_log_checks) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 63.990s
+
+OK

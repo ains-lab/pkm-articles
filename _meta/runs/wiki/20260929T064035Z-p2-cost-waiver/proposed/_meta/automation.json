@@ -1,0 +1,144 @@
+{
+  "schema": "pkm-automation/v1",
+  "policy_revision": "pkm-html-knowledge/v2",
+  "contract_revision": "pkm-contracts/v2",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "enabled": false,
+  "approval": {
+    "id": "p1-proposed-values-2026-09-29",
+    "recorded_at": "2026-09-29T06:00:18.696411+00:00",
+    "actor": "user",
+    "implementation_quote": "P1 진행해주세요",
+    "configuration_quote": "제안값 확정",
+    "plan_path": ".omh/plans/2026-09-29T052136299821Z-pkm-research-automation-ralplan-2026-09-29-home-ainsdev-wiki-pkm-870b54.md",
+    "plan_sha256": "9af318b55a854aa307d932e7ac9f77d00d9a270542ebf4ae0728b1091cc46681",
+    "scope": "P1 policy/contracts only; model/transfer/budget values approved; P2-P6 execution and Cron registration/activation not approved"
+  },
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false
+  },
+  "transfer": {
+    "local_html_text": true,
+    "existing_wiki": true,
+    "explicit_non_sensitive_research_feedback": true,
+    "pdf_content": false,
+    "images": false,
+    "external_assets": false,
+    "automatic_chat_capture": false,
+    "secrets_or_sensitive_personal_data": false,
+    "external_novelty_search": false
+  },
+  "budget": {
+    "currency": "USD",
+    "pilot_total": null,
+    "daily_compile_per_run": null,
+    "daily_compile_per_kst_day": null,
+    "research_review_per_run": null,
+    "include_retries_and_agent_overhead": true,
+    "unknown_cost_action": "record_unknown_continue",
+    "accounting_verified": false,
+    "hard_stop_verified": false,
+    "verification_receipt": null,
+    "cost_policy": "no_cost_cap",
+    "accounting_required_for_execution": false,
+    "hard_stop_required_for_execution": false
+  },
+  "limits": {
+    "pilot_papers": 2,
+    "daily_papers_per_run": 5,
+    "soft_run_minutes": 45,
+    "attempts_per_item_per_run_including_initial": 2,
+    "consecutive_business_failures_before_safety_block": 3,
+    "existing_page_changes_requiring_approval": 10,
+    "research_windows_per_run": 1,
+    "ideas_per_window_max": 3
+  },
+  "phase_authorizations": {
+    "P1": true,
+    "P2": true,
+    "P3": false,
+    "P4": false,
+    "P5": false,
+    "P6": false
+  },
+  "registration_authorized": false,
+  "activation_authorized": false,
+  "jobs": {
+    "daily_compile": {
+      "name": "PKM Daily Wiki Compiler",
+      "cron_id": null,
+      "enabled": false,
+      "registration_status": "not_registered",
+      "schedule_intent": "0 17 * * *",
+      "scheduler_timezone_assumption": "UTC",
+      "display_timezone": "Asia/Seoul",
+      "skills": [
+        "llm-wiki"
+      ],
+      "prompt_path": "_meta/prompts/wiki-compile.md",
+      "prompt_revision": "wiki-compile/v1",
+      "deliver": "local",
+      "failure_deliver": "local",
+      "registration_readback": null
+    },
+    "research_review": {
+      "name": "PKM Biweekly Research Review",
+      "cron_id": null,
+      "enabled": false,
+      "registration_status": "not_registered",
+      "schedule_intent": "every 14d",
+      "scheduler_timezone_assumption": "UTC",
+      "display_timezone": "Asia/Seoul",
+      "skills": [
+        "llm-wiki",
+        "brainstorming-research-ideas"
+      ],
+      "prompt_path": "_meta/prompts/research-review.md",
+      "prompt_revision": "research-review/v1",
+      "deliver": "local",
+      "failure_deliver": "local",
+      "registration_readback": null
+    }
+  },
+  "collector": {
+    "cron_id": "4cff5b4f10ec",
+    "mutations_allowed": false,
+    "topics_path": "_meta/topics.json",
+    "state_path": "_meta/state/4cff5b4f10ec.json"
+  },
+  "paths": {
+    "schemas": "_meta/automation-contracts.schema.json",
+    "state_contracts": "_meta/STATE-CONTRACTS.md",
+    "compilation": "_meta/state/compilation.json",
+    "feedback": "_meta/state/feedback.json",
+    "research_review": "_meta/state/research-review.json",
+    "run_root": "_meta/runs/wiki",
+    "staging_root": "_meta/staging/wiki",
+    "shared_lock": "_meta/locks/collection.lock"
+  },
+  "publication": {
+    "collector_priority_timezone": "Asia/Seoul",
+    "no_publish_start": "23:55",
+    "no_publish_end": "01:35",
+    "busy_action": "skipped_busy",
+    "steal_stale_lock": false,
+    "user_edit_freeze_required": true,
+    "journal_required": true,
+    "reviewed_overwrite_allowed": false,
+    "log_append_only": true
+  },
+  "pilot_candidates": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "activation_blockers": [
+    "pilot semantic and recovery tests not observed",
+    "Cron registration and activation not approved",
+    "research anchor and first fire not approved"
+  ],
+  "preflight_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/preflight.json",
+  "approval_amendment_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json"
+}

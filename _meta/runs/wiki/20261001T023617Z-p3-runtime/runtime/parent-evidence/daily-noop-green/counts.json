@@ -1,0 +1,24 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T02:56:52.505575+00:00",
+  "label": "daily-noop-green",
+  "modules": [
+    "test_daily"
+  ],
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "109bbf75907a0161ace1a47ed2a6eb15512997de40322601399372bfc1a0e9dd",
+    "test_daily.py": "dd6a07ad092e84ded70d669a730cb8c54813cc7f5b13051de05c29b558a03dca"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

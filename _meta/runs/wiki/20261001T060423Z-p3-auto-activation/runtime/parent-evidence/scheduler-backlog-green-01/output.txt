@@ -1,0 +1,6 @@
+test_committed_batch_reports_unselected_and_old_blocked_backlog_separately (test_scheduled_safety.ScheduledSafetyTests.test_committed_batch_reports_unselected_and_old_blocked_backlog_separately) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 12.000s
+
+OK

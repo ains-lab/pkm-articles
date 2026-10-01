@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-01T08:24:18.202311+00:00",
+  "status": "released",
+  "owner": {
+    "run_id": "20261001-ai-security-query",
+    "cron_id": "4cff5b4f10ec",
+    "purpose": "user-approved query configuration cutover, no collection execution",
+    "acquired_at": "2026-10-01T08:17:22.750949+00:00",
+    "pid": 628412
+  },
+  "lock_absent": true,
+  "report_links_verified": 8,
+  "collector_readback_reconfirmed": true,
+  "changed_file_hashes": {
+    "_meta/topics.json": "6f9c65c6b0317e4292f648f43fc3cd265ed1a9babb6efefea0eee603ffb64e4e",
+    "_meta/COLLECTION.md": "93f3da44e33f8ebea7c974f350b7aa2d85d7955c00f4c422634039452cba6a0f",
+    "index.md": "f8c63cd7fc3c805014bce0f7d59699d1fb628c76fb405792b95edd0611a2be69",
+    "log.md": "e9cd0253f0d08c5fca21a2680a5eb6cad55e388e193a0fabe6075e21d74936ec",
+    "raw/articles/4cff5b4f10ec/index.md": "2605050f61b28e1250d92305c7159ce58659e384c4d25ccbbaaea8573008786a",
+    "_meta/migrations/20261001-ai-security-query/report.md": "34d21e18f9217b633e3deb7dbeb4fcb7ed6d7beb83b2b617d4731328581bfee8"
+  }
+}

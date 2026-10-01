@@ -1,0 +1,36 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "slides": 70,
+    "issues": [
+      {
+        "slide": 67,
+        "type": "content_footer_overlap",
+        "bottom": 713.2140655517578,
+        "limit": 698.0828247070312
+      }
+    ],
+    "document_overflow": false,
+    "fonts": "loaded"
+  },
+  {
+    "viewport": [
+      1280,
+      720
+    ],
+    "slides": 70,
+    "issues": [
+      {
+        "slide": 67,
+        "type": "content_footer_overlap",
+        "bottom": 567.0868988037109,
+        "limit": 554.8324584960938
+      }
+    ],
+    "document_overflow": false,
+    "fonts": "loaded"
+  }
+]

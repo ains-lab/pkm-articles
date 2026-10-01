@@ -1,0 +1,7 @@
+{
+  "command": "POLICY_SCHEMA=/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/automation-contracts.schema.json /home/ainsdev/.hermes/hermes-agent/venv/bin/python /home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests/test_contracts.py",
+  "exit_code": 1,
+  "expected": "v2 schema rejects legitimate v3 PDF text request",
+  "test_sha256": "a5ad291014043d600ec833051292d130ef0701cb9ac28121d8150837e231761f",
+  "schema_sha256": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113"
+}

@@ -1,0 +1,7 @@
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ok
+test_new_html_and_pdf_publication_is_compiled_auto_verified (test_auto_publication.AutoPublicationTests.test_new_html_and_pdf_publication_is_compiled_auto_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 5.589s
+
+OK

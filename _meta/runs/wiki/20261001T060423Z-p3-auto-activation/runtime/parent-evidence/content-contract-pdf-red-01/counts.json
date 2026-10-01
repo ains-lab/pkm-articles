@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:09:54.887576+00:00",
+  "label": "content-contract-pdf-red-01",
+  "modules": [
+    "test_content_contract"
+  ],
+  "tests_run": 4,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/usr/bin/python3",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "7feef2b06513ee9777581e08c354daccaa19a9cc46199203a16230a23dbd51a6",
+    "content.py": "bdc3acada2b6a81d063d20a8fb6a0cb0931dba50505d36e2335e186b04f9fa16",
+    "publication.py": "f038920619d4902732cb9fb5e6a5624840fbcdddb1a21f5749e0a7e22f296c47",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_content_contract.py": "861fd12ff408fe888af69b7d493877617392fa8df1b67b7ec2413cc51d1d53cb"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

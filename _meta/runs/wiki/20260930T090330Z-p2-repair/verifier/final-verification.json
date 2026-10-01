@@ -1,0 +1,83 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume",
+    "-p",
+    "test_verify_one.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "cli_cases": [
+    {
+      "case": "cost-unknown",
+      "exit_code": 0,
+      "passed": true,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/cost-unknown/attempt-verify-report.json"
+    },
+    {
+      "case": "cost-positive",
+      "exit_code": 0,
+      "passed": true,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/cost-positive/attempt-verify-report.json"
+    },
+    {
+      "case": "incomplete",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/incomplete/attempt-verify-report.json"
+    },
+    {
+      "case": "partial",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/partial/attempt-verify-report.json"
+    },
+    {
+      "case": "wrong-model",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/wrong-model/attempt-verify-report.json"
+    },
+    {
+      "case": "malformed-json",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/malformed-json/attempt-verify-report.json"
+    },
+    {
+      "case": "duplicate-claim",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/duplicate-claim/attempt-verify-report.json"
+    },
+    {
+      "case": "wrong-anchor",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/wrong-anchor/attempt-verify-report.json"
+    },
+    {
+      "case": "source-symlink",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/source-symlink/attempt-verify-report.json"
+    },
+    {
+      "case": "source-path-escape",
+      "exit_code": 1,
+      "passed": false,
+      "report": "_meta/runs/wiki/20260930T090330Z-p2-repair/verifier/cli-reports/source-path-escape/attempt-verify-report.json"
+    }
+  ],
+  "raw_files_unchanged": 34,
+  "syntax_compile": "passed",
+  "whitespace": "passed",
+  "implementation_sha256": "7199269a21837316dc0f1fca4125cdfb9a783e5133cafc671f80eec9b7b81626",
+  "tests_sha256": "4ed180e12bc291fc6c19dafca0986090828db35c5e5851290a2f1ec74d0bd133",
+  "scope": "Synthetic fixtures only; no real source body, external fetch, model, PDF parsing, publication or automation activation"
+}

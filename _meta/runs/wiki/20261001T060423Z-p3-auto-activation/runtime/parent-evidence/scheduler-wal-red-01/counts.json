@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:28:53.226831+00:00",
+  "label": "scheduler-wal-red-01",
+  "modules": [
+    "test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery"
+  ],
+  "tests_run": 1,
+  "failures": 0,
+  "errors": 7,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/usr/bin/python3",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "50631798721828378f4b771f397da59bcd740c1860c87f113a95c8e7ad991f31",
+    "content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "publication.py": "cf02d363767f5de971edf219e1b7283ba61a06e30a4ec7e16a78ebc5776e703e",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_scheduled_safety.py": "25dbfefe9b7f1714e7ac760e25ef4708f754442368c58c333c8af7d5c773d9d9"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version":2,
+  "diagram_type":"workflow",
+  "meta":{
+    "title":"어느 Wiki로 보낼까? — URL → 프로필 → 작업 경로 매핑 설계",
+    "locale":"ko",
+    "translations":{
+      "page.title":"{title} 다이어그램",
+      "diagram.description.workflow":"서버에 등록한 URL과 프로필, 작업 경로의 매핑 예시입니다.",
+      "legend.title":"범례",
+      "legend.workflow.frontend":"앱 화면",
+      "legend.workflow.backend":"매핑·프로필",
+      "legend.workflow.security":"권한·인증",
+      "legend.workflow.database":"기본 작업 경로",
+      "viewer.theme.toggle":"테마 전환",
+      "viewer.theme.toggle.title":"테마 전환 (T)",
+      "viewer.theme.dark":"어두운 테마",
+      "viewer.theme.light":"밝은 테마",
+      "viewer.export.button":"내보내기",
+      "viewer.motion.still":"정적",
+      "node.focus":"{label} 자세히 보기"
+    },
+    "animation":"none",
+    "quality_profile":"showcase",
+    "output":".archify/workflow-profile-routing-20261001-102028/02-profile-map/diagram.html"
+  },
+  "lanes":[
+    {"id":"choose","label":"01 · 앱은 Wiki 서비스를 선택 / BFF가 허용된 프로필만 선택"},
+    {"id":"articles","label":"02-A · 논문 Wiki 예시 — 매핑을 미리 구성한 경우"},
+    {"id":"team","label":"02-B · 다른 Wiki 예시 — 아래 이름·경로는 설명용 가상 값"}
+  ],
+  "nodes":[
+    {"id":"app","lane":"choose","col":0,"type":"frontend","label":"앱에서 대상 선택","sublabel":"논문 Wiki 또는 팀 Wiki","tag":"임의 cwd를 보내지 않음","width":195,"yOffset":-56},
+    {"id":"allowlist","lane":"choose","col":0,"type":"security","label":"BFF 권한·고정 매핑","sublabel":"사용자와 Wiki 접근 검사","tag":"등록되지 않은 조합은 거부","width":195,"yOffset":56},
+    {"id":"route-a","lane":"articles","col":0,"type":"backend","label":"논문 Wiki 공개 API","sublabel":"POST /pkm-articles/v1/runs","tag":"BFF에서 정의할 외부 경로","width":195},
+    {"id":"profile-a","lane":"articles","col":1,"type":"security","label":"pkm-articles 프로필","sublabel":"POST /p/pkm-articles/v1/runs","tag":"해당 프로필 키로 인증","width":210},
+    {"id":"cwd-a","lane":"articles","col":2,"type":"database","label":"프로필의 terminal.cwd","sublabel":"/home/ainsdev/wiki/pkm-articles","tag":"도구의 기본 경로 / 격리는 별도","width":220},
+    {"id":"route-b","lane":"team","col":0,"type":"backend","label":"팀 Wiki 공개 API · 가상","sublabel":"POST /team-wiki/v1/runs","tag":"BFF에서 정의할 외부 경로","width":195},
+    {"id":"profile-b","lane":"team","col":1,"type":"security","label":"team-wiki 프로필 · 가상","sublabel":"POST /p/team-wiki/v1/runs","tag":"별도 프로필 키로 인증","width":210},
+    {"id":"cwd-b","lane":"team","col":2,"type":"database","label":"프로필의 terminal.cwd","sublabel":"/srv/wiki/team-wiki · 가상 경로","tag":"새 구성 예시 / 실제 생성하지 않음","width":220}
+  ],
+  "edges":[
+    {"id":"select","from":"app","to":"allowlist","label":"질문·대상","variant":"emphasis"},
+    {"id":"select-a","from":"allowlist","to":"route-a","label":"논문 Wiki 허용","variant":"security","role":"branch"},
+    {"id":"select-b","from":"allowlist","to":"route-b","label":"팀 Wiki 허용","variant":"security","role":"branch"},
+    {"id":"forward-a","from":"route-a","to":"profile-a","label":"서버 호출","variant":"emphasis"},
+    {"id":"forward-b","from":"route-b","to":"profile-b","label":"서버 호출","variant":"emphasis"},
+    {"id":"scope-a","from":"profile-a","to":"cwd-a","label":"인증 후 설정","variant":"security"},
+    {"id":"scope-b","from":"profile-b","to":"cwd-b","label":"인증 후 설정","variant":"security"}
+  ],
+  "semanticChecks":{
+    "allowedRoots":["app"],
+    "allowedTerminals":["cwd-a","cwd-b"],
+    "requiredPaths":[{"from":"app","to":"cwd-a"},{"from":"app","to":"cwd-b"}],
+    "requiredEdges":[{"from":"route-a","to":"profile-a"},{"from":"route-b","to":"profile-b"}]
+  },
+  "cards":[
+    {"dot":"cyan","title":"두 단계의 선택","items":["1. BFF가 공개 경로를 허용된 Hermes 프로필로 매핑합니다.","2. Gateway가 그 프로필의 실행 설정을 해석하고 Agent가 파일 도구를 사용합니다.","같은 shared Gateway listener로 두 프로필을 처리할 수 있습니다. 프로필마다 포트가 필요한 것은 아닙니다."]},
+    {"dot":"violet","title":"프로필 설정과 실행 경로는 다릅니다","items":["terminal.cwd는 프로필별 기본값 하나입니다. 현재 세션 cwd 또는 override가 있으면 우선할 수 있습니다.","한 프로필에서 여러 폴더를 다룰 수 있어도 질문·session_id만으로 대상 폴더가 자동 선택되지는 않습니다.","프로필별 Wiki 분리는 이 설계의 선택입니다. 실제 접근 격리는 read-only 권한·도구 제한으로 집행합니다."]},
+    {"dot":"amber","title":"실행 이후에도 같은 프로필로","items":["상태 조회: GET /p/<profile>/v1/runs/{id}","진행 구독: GET /p/<profile>/v1/runs/{id}/events", "중지 요청: POST /p/<profile>/v1/runs/{id}/stop", "BFF가 사용자·Wiki·profile·session·run 소유권을 검사합니다. run_id만 보고 다른 프로필로 보내지 않습니다."]},
+    {"dot":"rose","title":"설계 조건 · 적용하지 않음","items":["multiplex 프로필 라우팅 활성화와 대상 프로필 서비스, 프로필별 API_SERVER_KEY가 전제입니다.","브라우저 입력으로 /p/<profile>/ 또는 cwd를 무제한 선택하는 wildcard proxy는 만들지 않습니다.","team-wiki는 설명용입니다. 실제 Wiki·프로필을 생성하거나 열람하지 않았습니다.","pkm-articles 프로필 매핑도 제안입니다. 이 문서가 배포·질의 실행 승인이 되지는 않습니다."]}
+  ]
+}

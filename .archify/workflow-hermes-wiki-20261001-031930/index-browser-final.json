@@ -1,0 +1,590 @@
+{
+  "artifact_sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463",
+  "rows": [
+    {
+      "width": 375,
+      "height": 812,
+      "scrollWidth": 360,
+      "diagrams": 8,
+      "externalResources": [],
+      "links": [
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html#diagrams",
+          "label": "다이어그램 목록으로"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+          "label": "01전체 시스템 구조 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+          "label": "02작업 경로와 접근 격리 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+          "label": "03모델 없는 탐색·읽기 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+          "label": "04질의·스트리밍·중지 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+          "label": "05HTML 우선 원문 수집 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+          "label": "06컴파일·조건부 게시 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+          "label": "07데이터·화면·상태 계약 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+          "label": "08구현·검증 로드맵 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/README.md",
+          "label": "상세 해설 · API 계약 · 안전 경계"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-coverage.json",
+          "label": "원문 전체 절 대응표"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-baseline.json",
+          "label": "원문·기존 슬라이드 hash 기준점"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/artifact-receipts.json",
+          "label": "8개 명세·HTML hash와 최종 receipt"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/verification.json",
+          "label": "최종 검증 결과"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+          "label": "원본 기술문서 목차"
+        }
+      ],
+      "missing_local_files": [],
+      "capture": "index-final-375.png"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 753,
+      "diagrams": 8,
+      "externalResources": [],
+      "links": [
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html#diagrams",
+          "label": "다이어그램 목록으로"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+          "label": "01전체 시스템 구조 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+          "label": "02작업 경로와 접근 격리 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+          "label": "03모델 없는 탐색·읽기 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+          "label": "04질의·스트리밍·중지 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+          "label": "05HTML 우선 원문 수집 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+          "label": "06컴파일·조건부 게시 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+          "label": "07데이터·화면·상태 계약 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+          "label": "08구현·검증 로드맵 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/README.md",
+          "label": "상세 해설 · API 계약 · 안전 경계"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-coverage.json",
+          "label": "원문 전체 절 대응표"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-baseline.json",
+          "label": "원문·기존 슬라이드 hash 기준점"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/artifact-receipts.json",
+          "label": "8개 명세·HTML hash와 최종 receipt"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/verification.json",
+          "label": "최종 검증 결과"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+          "label": "원본 기술문서 목차"
+        }
+      ],
+      "missing_local_files": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "scrollWidth": 1265,
+      "diagrams": 8,
+      "externalResources": [],
+      "links": [
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html#diagrams",
+          "label": "다이어그램 목록으로"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+          "label": "01전체 시스템 구조 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+          "label": "02작업 경로와 접근 격리 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+          "label": "03모델 없는 탐색·읽기 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+          "label": "04질의·스트리밍·중지 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+          "label": "05HTML 우선 원문 수집 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+          "label": "06컴파일·조건부 게시 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+          "label": "07데이터·화면·상태 계약 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+          "label": "08구현·검증 로드맵 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/README.md",
+          "label": "상세 해설 · API 계약 · 안전 경계"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-coverage.json",
+          "label": "원문 전체 절 대응표"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-baseline.json",
+          "label": "원문·기존 슬라이드 hash 기준점"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/artifact-receipts.json",
+          "label": "8개 명세·HTML hash와 최종 receipt"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/verification.json",
+          "label": "최종 검증 결과"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+          "label": "원본 기술문서 목차"
+        }
+      ],
+      "missing_local_files": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1425,
+      "diagrams": 8,
+      "externalResources": [],
+      "links": [
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html#diagrams",
+          "label": "다이어그램 목록으로"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+          "label": "01전체 시스템 구조 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+          "label": "02작업 경로와 접근 격리 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+          "label": "03모델 없는 탐색·읽기 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+          "label": "04질의·스트리밍·중지 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+          "label": "05HTML 우선 원문 수집 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+          "label": "06컴파일·조건부 게시 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+          "label": "07데이터·화면·상태 계약 architecture"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+          "label": "08구현·검증 로드맵 workflow"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+          "label": "JSON 원본"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/evidence.json",
+          "label": "문서 근거"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/README.md",
+          "label": "상세 해설 · API 계약 · 안전 경계"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-coverage.json",
+          "label": "원문 전체 절 대응표"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/source-baseline.json",
+          "label": "원문·기존 슬라이드 hash 기준점"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/artifact-receipts.json",
+          "label": "8개 명세·HTML hash와 최종 receipt"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/verification.json",
+          "label": "최종 검증 결과"
+        },
+        {
+          "href": "file:///home/ainsdev/wiki/pkm-articles/docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+          "label": "원본 기술문서 목차"
+        }
+      ],
+      "missing_local_files": [],
+      "capture": "index-final-1440.png"
+    }
+  ],
+  "details_expanded": {
+    "open": true,
+    "text": "원문의 과거 관측값에 관한 주의\n\nREADME와 verification.json의 원문 보관·컴파일 숫자는 문서 작성 당시 snapshot입니다. 이후 실행 결과와 합쳐 현재 상태로 표시하지 않습니다. 이 패키지는 원문 문서와 기존 슬라이드를 보존하고 Gateway·모델·Cron·Wiki 지식 게시를 실행하지 않습니다."
+  },
+  "diagram_navigation": [
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+      "title": "🐴 01 · 전체 구조 — 탐색·질의·게시의 분리 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+      "title": "🐴 02 · 작업 경로 — cwd와 접근 격리는 별개 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+      "title": "🐴 03 · 모델 없는 Wiki 읽기와 snapshot 충돌 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+      "title": "🐴 04 · 통제된 질의 — Runs·SSE·재연결·중지 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+      "title": "🐴 05 · HTML 우선 원문 수집 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+      "title": "🐴 06 · 별도 승인 컴파일과 조건부 게시·복구 Diagram",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+      "title": "🐴 07 · 파일 원장에서 화면까지 — 제안 UI와 독립 상태 다이어그램",
+      "svg": 2
+    },
+    {
+      "url": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+      "title": "🐴 08 · R0–R4 구현 로드맵 — 승인·보안·QA gate 다이어그램",
+      "svg": 2
+    }
+  ],
+  "scope": "index layout/links/details and direct diagram target loading; not all viewer controls"
+}

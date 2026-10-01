@@ -1,0 +1,28 @@
+{
+  "schema": "pkm-query-cutover-independent-review/v1",
+  "delegation_id": "deleg_339aa14f",
+  "subagent_id": "sa-0-e248db24",
+  "verdict": "ship",
+  "blocking_findings": [],
+  "scope": "Read-only review of query preservation, legacy pending filtering, collector policy boundaries and downstream compilation hash pins",
+  "reported_checks": {
+    "approved_query_exact_match": true,
+    "pending_requested": 48,
+    "pending_exact_version_matches": 16,
+    "pending_nonmatches": 32,
+    "pending_unknown": 0,
+    "pending_response_hashes_verified": true,
+    "query_not_shortened_after_http_400": true,
+    "collector_limits_and_checkpoints_preserved": true,
+    "compiler_pins_unchanged": 18
+  },
+  "not_observed_by_reviewer": [
+    "Live Cron name/prompt readback",
+    "Live preservation of unrelated Cron configurations",
+    "Scheduled execution of the revised prompt",
+    "Actual raw downloads under the revised query"
+  ],
+  "parent_evidence_for_live_registration": "registration-after.json",
+  "parent_evidence_for_config_and_file_preservation": "verification.json",
+  "warning": "Do not change hash-pinned AGENTS.md or SCHEMA.md to tidy the renamed collection topic. Registered prompt guidance is not observed scheduled execution."
+}

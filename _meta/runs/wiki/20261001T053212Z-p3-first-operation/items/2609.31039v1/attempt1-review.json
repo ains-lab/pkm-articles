@@ -1,0 +1,14 @@
+{
+  "body_rationale": "",
+  "body_supported": false,
+  "body_verdict": "not_reviewed",
+  "claim_ids": [],
+  "claims": [],
+  "coverage_rationale": "",
+  "human_review_ref": null,
+  "main_text_complete": false,
+  "passed": false,
+  "report_sha256": "3a520763d3da3a9846648eccf060da583c02ec890432b835385fe5446878bfbc",
+  "result_sha256": "92875d66bdbe4f8aba3c4092e690cc1f92fefa20683d681fd50fdd35fc63d20c",
+  "schema": "pkm-p3-agent-review/v1"
+}

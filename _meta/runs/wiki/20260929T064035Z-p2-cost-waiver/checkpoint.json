@@ -1,0 +1,84 @@
+{
+  "schema": "pkm-p2-staged-checkpoint/v1",
+  "recorded_at": "2026-09-29T07:13:34.442171+00:00",
+  "active_state_updated": false,
+  "phase": "P2",
+  "phase_complete": false,
+  "cost_gate": "waived_by_explicit_user_request",
+  "active_cost_policy_files_changed": false,
+  "proposed_policy_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/proposed/_meta/automation.json",
+  "items": [
+    {
+      "version_id": "2609.30830v1",
+      "title": "AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "requested_scope": "main_text_including_methods_evaluation_conclusion",
+      "status": "retryable_failed",
+      "reason": "model_timeout_no_completed_response_recovered",
+      "local_attempts": 2,
+      "attempt_1_result": "terminal timed out after 420.0s",
+      "attempt_2_result": "local_deadline_900s",
+      "attempt_2_started_at": "2026-09-29T06:56:02.706265+00:00",
+      "completed_model_response_recovered": false,
+      "response_created_receipt_present": false,
+      "main_text_complete": false,
+      "parent_partial_read_scope": [
+        "HTML lines 1853–2027; S6.SS4, S6.SS5, S7.SS1, part of S7.SS2"
+      ],
+      "partial_evidence_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/evidence-review-notes.md",
+      "output_refs": [],
+      "publication_receipt": null,
+      "application_fallback": false,
+      "cost_usd": null,
+      "remote_execution_status": "unknown; local timeout is not proof of server cancellation"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "title": "A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "requested_scope": "main_text_including_methods_evaluation_conclusion",
+      "status": "retryable_failed",
+      "reason": "model_timeout_no_completed_response_recovered",
+      "local_attempts": 2,
+      "attempt_1_result": "terminal timed out after 420.0s",
+      "attempt_2_result": "local_deadline_900s",
+      "attempt_2_started_at": "2026-09-29T06:56:02.706066+00:00",
+      "completed_model_response_recovered": false,
+      "response_created_receipt_present": false,
+      "main_text_complete": false,
+      "parent_partial_read_scope": [
+        "HTML lines 1260–1494; S6.SS2–S6.SS6, S7, S8 heading only"
+      ],
+      "partial_evidence_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/evidence-review-notes.md",
+      "output_refs": [],
+      "publication_receipt": null,
+      "application_fallback": false,
+      "cost_usd": null,
+      "remote_execution_status": "unknown; local timeout is not proof of server cancellation"
+    }
+  ],
+  "expected_papers": 2,
+  "completed_papers": 0,
+  "staged_knowledge_drafts": 0,
+  "published_knowledge_pages": 0,
+  "runtime_process_exit_code": 124,
+  "retry_limit_reached": true,
+  "next_action_gate": "operator review before further paper calls; do not silently reset the attempt limit",
+  "publication_gate": "edit-freeze form timed out; no active publication",
+  "missing_acceptance": [
+    "completed full-main-text analysis of both papers",
+    "all generated claims semantic verification",
+    "live journal/index/log/receipt/state publication"
+  ],
+  "not_attempted": [
+    "PDF content reading",
+    "images or external assets",
+    "external novelty search",
+    "new Cron registration or activation",
+    "installation",
+    "global model/auth changes",
+    "commit/push"
+  ]
+}

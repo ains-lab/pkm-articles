@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/M/+fy/JG2DL0PIZAFee4WERu08s</id>
+  <title>arXiv Query: search_query=( (ti:"large language model" OR abs:"large language model") OR (ti:"language model" OR abs:"language model") OR (ti:"LLM" OR abs:"LLM") OR (ti:"LLMs" OR abs:"LLMs") OR (ti:"foundation model" OR abs:"foundation model") OR (ti:"generative AI" OR abs:"generative AI") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"LLM agent" OR abs:"LLM agent") OR (ti:"agentic AI" OR abs:"agentic AI") OR (ti:"Model Context Protocol" OR abs:"Model Context Protocol") OR (ti:"machine learning" OR abs:"machine learning") OR (ti:"deep learning" OR abs:"deep learning") OR (ti:"neural network" OR abs:"neural network") OR (ti:"vision language model" OR abs:"vision language model") OR (ti:"diffusion model" OR abs:"diffusion model") ) AND ( (ti:"prompt injection" OR abs:"prompt injection") OR (ti:"indirect prompt injection" OR abs:"indirect prompt injection") OR (ti:"jailbreak" OR abs:"jailbreak") OR (ti:"jailbreaking" OR abs:"jailbreaking") OR (ti:"guardrail bypass" OR abs:"guardrail bypass") OR (ti:"data poisoning" OR abs:"data poisoning") OR (ti:"model poisoning" OR abs:"model poisoning") OR (ti:"backdoor attack" OR abs:"backdoor attack") OR (ti:"RAG poisoning" OR abs:"RAG poisoning") OR (ti:"memory poisoning" OR abs:"memory poisoning") OR (ti:"model extraction" OR abs:"model extraction") OR (ti:"model stealing" OR abs:"model stealing") OR (ti:"membership inference" OR abs:"membership inference") OR (ti:"model inversion" OR abs:"model inversion") OR (ti:"training data extraction" OR abs:"training data extraction") OR (ti:"data exfiltration" OR abs:"data exfiltration") OR (ti:"tool poisoning" OR abs:"tool poisoning") OR (ti:"tool hijacking" OR abs:"tool hijacking") OR (ti:"privilege escalation" OR abs:"privilege escalation") OR (ti:"authorization bypass" OR abs:"authorization bypass") OR (ti:"confused deputy" OR abs:"confused deputy") OR (ti:"least privilege" OR abs:"least privilege") OR (ti:"information flow control" OR abs:"information flow control") OR (ti:"capability-based security" OR abs:"capability-based security") OR (ti:"sandbox escape" OR abs:"sandbox escape") OR (ti:"prompt injection defense" OR abs:"prompt injection defense") OR (ti:"adversarial example" OR abs:"adversarial example") OR (ti:"evasion attack" OR abs:"evasion attack") OR (ti:"adversarial robustness" OR abs:"adversarial robustness") OR (ti:"certified robustness" OR abs:"certified robustness") OR (ti:"supply chain attack" OR abs:"supply chain attack") OR (ti:"denial of service" OR abs:"denial of service") OR (ti:"denial of wallet" OR abs:"denial of wallet") OR (ti:"sponge attack" OR abs:"sponge attack") )&amp;id_list=2609.34686v1,2609.34450v1,2606.15057v3,2609.34247v1,2609.34245v1,2605.29960v2,2609.34132v1,2609.34080v1,2609.34064v1,2609.33914v1&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-01T08:05:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:%22large+language+model%22+OR+abs:%22large+language+model%22)+OR+((ti:%22language+model%22+OR+abs:%22language+model%22)+OR+((ti:%22LLM%22+OR+abs:%22LLM%22)+OR+((ti:%22LLMs%22+OR+abs:%22LLMs%22)+OR+((ti:%22foundation+model%22+OR+abs:%22foundation+model%22)+OR+((ti:%22generative+AI%22+OR+abs:%22generative+AI%22)+OR+((ti:%22AI+agent%22+OR+abs:%22AI+agent%22)+OR+((ti:%22LLM+agent%22+OR+abs:%22LLM+agent%22)+OR+((ti:%22agentic+AI%22+OR+abs:%22agentic+AI%22)+OR+((ti:%22Model+Context+Protocol%22+OR+abs:%22Model+Context+Protocol%22)+OR+((ti:%22machine+learning%22+OR+abs:%22machine+learning%22)+OR+((ti:%22deep+learning%22+OR+abs:%22deep+learning%22)+OR+((ti:%22neural+network%22+OR+abs:%22neural+network%22)+OR+((ti:%22vision+language+model%22+OR+abs:%22vision+language+model%22)+OR+(ti:%22diffusion+model%22+OR+abs:%22diffusion+model%22)))))))))))))))+AND+((ti:%22prompt+injection%22+OR+abs:%22prompt+injection%22)+OR+((ti:%22indirect+prompt+injection%22+OR+abs:%22indirect+prompt+injection%22)+OR+((ti:%22jailbreak%22+OR+abs:%22jailbreak%22)+OR+((ti:%22jailbreaking%22+OR+abs:%22jailbreaking%22)+OR+((ti:%22guardrail+bypass%22+OR+abs:%22guardrail+bypass%22)+OR+((ti:%22data+poisoning%22+OR+abs:%22data+poisoning%22)+OR+((ti:%22model+poisoning%22+OR+abs:%22model+poisoning%22)+OR+((ti:%22backdoor+attack%22+OR+abs:%22backdoor+attack%22)+OR+((ti:%22RAG+poisoning%22+OR+abs:%22RAG+poisoning%22)+OR+((ti:%22memory+poisoning%22+OR+abs:%22memory+poisoning%22)+OR+((ti:%22model+extraction%22+OR+abs:%22model+extraction%22)+OR+((ti:%22model+stealing%22+OR+abs:%22model+stealing%22)+OR+((ti:%22membership+inference%22+OR+abs:%22membership+inference%22)+OR+((ti:%22model+inversion%22+OR+abs:%22model+inversion%22)+OR+((ti:%22training+data+extraction%22+OR+abs:%22training+data+extraction%22)+OR+((ti:%22data+exfiltration%22+OR+abs:%22data+exfiltration%22)+OR+((ti:%22tool+poisoning%22+OR+abs:%22tool+poisoning%22)+OR+((ti:%22tool+hijacking%22+OR+abs:%22tool+hijacking%22)+OR+((ti:%22privilege+escalation%22+OR+abs:%22privilege+escalation%22)+OR+((ti:%22authorization+bypass%22+OR+abs:%22authorization+bypass%22)+OR+((ti:%22confused+deputy%22+OR+abs:%22confused+deputy%22)+OR+((ti:%22least+privilege%22+OR+abs:%22least+privilege%22)+OR+((ti:%22information+flow+control%22+OR+abs:%22information+flow+control%22)+OR+((ti:%22capability-based+security%22+OR+abs:%22capability-based+security%22)+OR+((ti:%22sandbox+escape%22+OR+abs:%22sandbox+escape%22)+OR+((ti:%22prompt+injection+defense%22+OR+abs:%22prompt+injection+defense%22)+OR+((ti:%22adversarial+example%22+OR+abs:%22adversarial+example%22)+OR+((ti:%22evasion+attack%22+OR+abs:%22evasion+attack%22)+OR+((ti:%22adversarial+robustness%22+OR+abs:%22adversarial+robustness%22)+OR+((ti:%22certified+robustness%22+OR+abs:%22certified+robustness%22)+OR+((ti:%22supply+chain+attack%22+OR+abs:%22supply+chain+attack%22)+OR+((ti:%22denial+of+service%22+OR+abs:%22denial+of+service%22)+OR+((ti:%22denial+of+wallet%22+OR+abs:%22denial+of+wallet%22)+OR+(ti:%22sponge+attack%22+OR+abs:%22sponge+attack%22))))))))))))))))))))))))))))))))))&amp;start=0&amp;max_results=100&amp;id_list=2609.34686v1,2609.34450v1,2606.15057v3,2609.34247v1,2609.34245v1,2605.29960v2,2609.34132v1,2609.34080v1,2609.34064v1,2609.33914v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.34686v1</id>
+    <title>Jailbreak Context Lingers: Divergent Safety Routing and Its Cross-Task Predictability in Tool Agents</title>
+    <updated>2026-09-28T09:12:13Z</updated>
+    <link href="https://arxiv.org/abs/2609.34686v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.34686v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As large language models increasingly operate as tool-using agents, post-jailbreak safety feedback is often assumed to serve as a reliable safeguard; however, how lingering jailbreak context shapes subsequent agent behavior remains largely unexplored. To systematically examine this dynamic, we introduce a paired continuation framework across 192 parent tasks spanning 42 domains, evaluating 12,148 analyzed continuation pairs (curated from a 12,288-pair initially design) across eight diverse agents. We find that identical safety feedback induces sharply model-dependent behavioral routing rather than uniform protection: redirecting unsafe trajectories toward legitimate completion (\emph{rescue}), sustaining unauthorized execution (\emph{persistent unsafe}), or triggering over-refusal on benign tasks (\emph{collateral loss}). Through layer-wise activation patching, we discover a shared \emph{late-commit pattern} where causal intervention effects surge sharply near the final layers (relative depths of 0.958--0.984) despite an over 30-fold variation in peak magnitude across architectures. Crucially, critical-layer representations correlate with macroscopic routing outcomes, and intervening at these layers causally alters concrete next-step tool actions. Building on this causal foundation, we test whether localized intervention-derived features can serve as predictive proxies for full-trajectory routing outcomes on unseen parent tasks under leave-one-parent-task-out evaluation, finding that they provide viable predictive signals in responsive agents with peak ROC AUCs reaching 0.675 for \emph{rescue}, 0.777 for \emph{collateral loss}, and 0.702 for \emph{persistent unsafe}. These findings establish a mechanistic lens and a predictive baseline for anticipating the safety and utility trade-offs of post-jailbreak feedback in autonomous agents.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T09:12:13Z</published>
+    <arxiv:comment>28 pages, 9 figures, 17 tabels, ICLR 2027 Under Review</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xi Wang</name>
+    </author>
+    <author>
+      <name>Songlei Jian</name>
+    </author>
+    <author>
+      <name>Yiming Zhang</name>
+    </author>
+    <author>
+      <name>Bin Ji</name>
+    </author>
+    <author>
+      <name>Zhaoye Li</name>
+    </author>
+    <author>
+      <name>Ma Jun</name>
+    </author>
+    <author>
+      <name>Baosheng Wang</name>
+    </author>
+    <author>
+      <name>Jie Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.15057v3</id>
+    <title>AutoDojo: A Generative Benchmark for Evaluating Prompt Injection Defenses in LLM Agents</title>
+    <updated>2026-09-28T04:15:17Z</updated>
+    <link href="https://arxiv.org/abs/2606.15057v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.15057v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Indirect prompt injection (IPI) is a major security threat to LLM-powered agents. Thus, a growing body of work has proposed a variety of defensive approaches against IPI which can be grouped into three broad categories: prompt-level, filter-based, and system-level designs. However, commonly used benchmarks for evaluating defense, such as AgentDojo, are \emph{inherently static}, generating a fixed distribution of IPI attacks. Consequently, a defense can score well on them without being robust to adaptive threats. We introduce \textbf{AutoDojo}, a generative benchmark built on AgentDojo and AgentDyn that generates IPI \emph{adaptively} for a given agent and defense. It supports six task suites across the two benchmarks, covering banking, communication, travel, shopping, coding, and everyday-assistant domains. AutoDojo optimizes injections under a strict black-box setting, observing only whether a candidate injection succeeds, and can readily integrate, and often improve on, any existing black-box attack. Across ten defenses and five target models, AutoDojo demonstrates that standard static benchmarks often significantly overestimate defense efficacy. Moreover, we show that most existing defenses either sacrifice considerable utility or are insecure. Finally, we demonstrate that attack success interacts with task specification, with under-specified tasks particularly vulnerable. AutoDojo is available at https://github.com/xhOwenMa/AutoDojo</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-13T02:09:08Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Xinhang Ma</name>
+    </author>
+    <author>
+      <name>Taoran Li</name>
+    </author>
+    <author>
+      <name>Chaowei Xiao</name>
+    </author>
+    <author>
+      <name>Zhiyuan Yu</name>
+    </author>
+    <author>
+      <name>Ning Zhang</name>
+    </author>
+    <author>
+      <name>Yevgeniy Vorobeychik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.34245v1</id>
+    <title>Certified Multi-Source Integrity for Structured Agent Actions</title>
+    <updated>2026-09-28T03:52:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.34245v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.34245v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM agents increasingly take privileged, often irreversible structured actions, such as paying an invoice. They assemble each action from action-critical fields in documents and tool outputs that an adversary can corrupt, and indirect prompt injection can drive the model itself to extract attacker-chosen values. Current defenses gate on a source's trust label or certify free-text answer quality. None certifies the integrity of a coupled, policy-bound structured action under a corruption budget that accounts for shared upstream sources. We characterize when such an action is safely certifiable and give the maximally live safe certifier. It admits an action only when each field clears the rule its evidence structure supports: a bounded corruption radius over corruption-distinct evidence classes, counted by a minimum hitting set so that re-publishing or laundered copies cannot manufacture a quorum, deterministic reconciliation for complementary fields, and a trusted anchor where the evidence leaves a field single-sourced. We formalize two robustness notions, validate each mechanism by ablation, and measure how often the multi-source precondition holds on sanctions designations (70,966 entities) and software supply-chain provenance (450 packages). Under upper-bound proxies, genuine corroboration is a minority phenomenon in both, and naive attestation counting overstates it, since witnesses that look independent collapse to two corruption-distinct domains once shared origin is counted. Across five current models in a real agent loop, a realistic injection fools every model but one and a naive agent then executes the fraudulent action on most attacks. The certifier admits no unsafe action and recovers the correct value where corroboration permits, while action-gating and provenance baselines are broken in every world of our harness by some attack in its space.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T03:52:21Z</published>
+    <arxiv:comment>Accepted to the UK AI Conference 2026 (UKAI 2026), to appear in Proceedings of Machine Learning Research. 14 pages, 3 figures, 7 tables. Code and data: https://github.com/anmolpandey299/certified-multisource-integrity</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Anmol Pandey</name>
+    </author>
+    <author>
+      <name>Aditya Jain</name>
+    </author>
+    <author>
+      <name>Liang Chen</name>
+    </author>
+    <author>
+      <name>Carsten Maple</name>
+    </author>
+    <author>
+      <name>Christo Panchev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29960v2</id>
+    <title>MemPoison: Bypassing Selective Memory Mechanisms to Plant Backdoors in LLM Agents</title>
+    <updated>2026-09-28T02:57:44Z</updated>
+    <link href="https://arxiv.org/abs/2605.29960v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29960v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) agents increasingly leverage long-term memory to support persistent and autonomous task execution. However, this capability also introduces a new attack surface: memory poisoning, where adversaries can inject malicious information to influence future behavior. Existing memory poisoning attacks often assume that injected content can be stored directly in memory, overlooking the selective extraction and rewriting stages in modern memory pipelines. This makes prior methods ineffective under realistic settings. In this paper, we propose MemPoison, a novel memory poisoning attack that bypasses selective memory mechanisms in LLM agents, where an attacker can inject triggerable backdoors into the agent's long-term memory through dialogue interactions, thereby misleading its subsequent responses. MemPoison introduces three key components: (i) a semantic relational bridge that binds the trigger and payload into a coherent statement to ensure their co-extraction into memory; (ii) entity masquerading that optimizes triggers to mimic named entities, resisting rewriting; and (iii) joint embedding optimization that shapes trigger-injected texts into a tight cluster in the embedding space while maintaining isolation from benign embeddings for stealth. Evaluations across different agent domains and memory mechanisms show MemPoison achieves attack success rates up to 0.95, outperforming existing baselines. Mechanistic analysis reveals the exploitation of embedding-space anisotropy and attention redistribution, highlighting core vulnerabilities in selective memory systems. We evaluate multiple defense strategies and demonstrate their fundamental limitations in mitigating the attack. We release our code to facilitate further research.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T14:02:00Z</published>
+    <arxiv:comment>Accepted by ACM CCS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Hongtao Wang</name>
+    </author>
+    <author>
+      <name>Se Yang</name>
+    </author>
+    <author>
+      <name>Yu Chen</name>
+    </author>
+    <author>
+      <name>Puzhuo Liu</name>
+    </author>
+  </entry>
+</feed>

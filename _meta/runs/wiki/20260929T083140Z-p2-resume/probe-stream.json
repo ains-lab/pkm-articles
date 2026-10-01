@@ -1,0 +1,66 @@
+{
+  "schema": "pkm-p2-stream-probe/v1",
+  "recorded_at": "2026-09-29T08:55:15.413571+00:00",
+  "purpose": "phase-1 diagnosis: time-to-first-event and stream health with trivial input, no paper content",
+  "probe_cap_seconds": 300,
+  "reasoning": "xhigh",
+  "event_count": 14,
+  "first_event": {
+    "t": 112.999,
+    "type": "response.created"
+  },
+  "event_types": [
+    "response.completed",
+    "response.content_part.added",
+    "response.content_part.done",
+    "response.created",
+    "response.in_progress",
+    "response.output_item.added",
+    "response.output_item.done",
+    "response.output_text.delta",
+    "response.output_text.done",
+    "responsesapi.websocket_timing"
+  ],
+  "last_events": [
+    {
+      "t": 115.561,
+      "type": "response.content_part.done"
+    },
+    {
+      "t": 115.862,
+      "type": "response.output_item.done"
+    },
+    {
+      "t": 116.282,
+      "type": "responsesapi.websocket_timing"
+    },
+    {
+      "t": 126.554,
+      "type": "response.in_progress"
+    },
+    {
+      "t": 127.043,
+      "type": "response.completed"
+    }
+  ],
+  "completed": true,
+  "response_status": "completed",
+  "response_model": "gpt-6-astra",
+  "text": "STREAM_OK",
+  "elapsed_seconds": 127.626,
+  "error": null,
+  "usage": {
+    "input_tokens": 26,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 19,
+    "output_tokens_details": {
+      "reasoning_tokens": 11
+    },
+    "total_tokens": 45
+  },
+  "cost_usd": null,
+  "cost_status": "unobserved_not_zero"
+}

@@ -1,0 +1,14 @@
+{
+  "basis": "Local design-document snapshot, not a committed implementation diagram or live service test",
+  "document_root": "docs/techblog/hermes-api-gateway-workdir-assoc",
+  "claims": [
+    {"subjects":["browser","ingress","bff","https","session"],"classification":"제안","path":"architecture.md","line":22,"end_line":37,"claim":"TLS 진입점·Frontend/BFF와 서버측 인증 경계를 둔다. 미구현 설계다."},
+    {"subjects":["facade","read","snapshot"],"classification":"제안","path":"architecture.md","line":39,"end_line":48,"claim":"모델 없는 정형 읽기·서지 projection·committed revision/hash 확인."},
+    {"subjects":["gateway"],"classification":"문서의 정적 소스 관측","path":"tech-stack.md","line":19,"end_line":46,"claim":"조사한 API Server 어댑터는 aiohttp; live 실행은 미확인."},
+    {"subjects":["approved-query","agent","execution","agent-read","model","model-transfer"],"classification":"제안·승인 조건","path":"architecture.md","line":50,"end_line":60,"claim":"서버가 선택한 자료·모델·세션, 승인 질의와 실제 실행 격리. 자유 질의는 게시 권한이 아니다."},
+    {"subjects":["wiki"],"classification":"문서 관측","path":"data-contracts.md","line":6,"end_line":36,"claim":"원본·지식·상태의 파일 원장. static root 또는 신규 DB가 아니다."},
+    {"subjects":["collector","collect"],"classification":"문서의 기존 정책","path":"workflows.md","line":97,"end_line":101,"claim":"기존 Cron은 collect-only. HTML 우선·공식 미제공 때만 PDF 원본."},
+    {"subjects":["publisher","publish"],"classification":"기존 계약·향후 UI 연결 제안","path":"workflows.md","line":103,"end_line":122,"claim":"컴파일/게시 별도 승인, 수집 우선·collection.lock·최종hash·WAL·committed 실물 검증."},
+    {"subjects":["bff","agent"],"classification":"보안 제안","path":"security-and-operations.md","line":23,"end_line":50,"claim":"owner·CSRF·서버 키와 OS/mount 기반 접근 통제는 다른 책임."}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_bom_cannot_hide_frontmatter"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "030f6d6df439f9ecdbc4629e4cf47285bde645b96f6517aa5c7c1bdd19f2418f",
+    "stderr.txt": "3456a6bf371ee456587bad12b6b566a5eb6a5f4d4b62f45890c1a686a91a8720",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "f86e16d985ab968d7ab98b698b153fa54b3fdcd439a108cd66a891d27c65290f"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-09-29T06:56:02.706265+00:00",
+  "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+  "source_bytes": 267373,
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning": "xhigh",
+  "no_fallback": true,
+  "max_sdk_retries": 0,
+  "whole_batch_deadline_seconds": 900
+}

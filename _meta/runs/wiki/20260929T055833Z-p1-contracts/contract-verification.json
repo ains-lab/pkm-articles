@@ -1,0 +1,139 @@
+{
+  "schema": "pkm-p1-verification/v1",
+  "recorded_at": "2026-09-29T06:12:39.673428+00:00",
+  "contract_instances_valid": 4,
+  "synthetic_positive_control": "shape_only_not_real_approval_or_execution",
+  "rejection_cases": [
+    {
+      "case": "request:provider",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:model",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:reasoning_effort",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:source_format",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:images",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:external_assets",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:pdf_analysis",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:phase_execution_approved",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:accounting_verified",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:hard_stop_verified",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:source_approval_id",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:policy_revision",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:contract_revision",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:source_path",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "request:source_sha256",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "missing_approval_ref",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "unknown_schema:_meta/automation.json",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "unknown_schema:_meta/state/compilation.json",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "unknown_schema:_meta/state/feedback.json",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "unknown_schema:_meta/state/research-review.json",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "activation_without_approvals_and_budget_proof",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "pdf_policy_bypass",
+      "expected": "reject",
+      "observed": "reject"
+    },
+    {
+      "case": "publication_without_read_scope_output_receipt",
+      "expected": "reject",
+      "observed": "reject"
+    }
+  ],
+  "rejections_passed": 23,
+  "protected_files_unchanged": 29,
+  "original_and_metadata_files_unchanged": 20,
+  "versions": 10,
+  "html": 8,
+  "pdf": 2,
+  "knowledge_pages": 0,
+  "collector_record_unchanged": true,
+  "job_id_set_unchanged": true,
+  "new_jobs_registered": 0,
+  "log_prefix_preserved": true,
+  "local_links_checked": 59,
+  "collection_behavior_text_preserved": true,
+  "git_diff_check": "pass",
+  "lock_released": true,
+  "runtime_model_budget_publication_recovery": "not_tested_P2_or_later"
+}

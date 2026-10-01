@@ -1,0 +1,14 @@
+test_explicit_response_error_cannot_pass_the_verifier (__main__.CrossComponentTests.test_explicit_response_error_cannot_pass_the_verifier) ... FAIL
+
+======================================================================
+FAIL: test_explicit_response_error_cannot_pass_the_verifier (__main__.CrossComponentTests.test_explicit_response_error_cannot_pass_the_verifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py", line 31, in test_explicit_response_error_cannot_pass_the_verifier
+    self.assertFalse(load('verify-one.py').verify_result(f.root, f.vid, result)['passed'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.054s
+
+FAILED (failures=1)

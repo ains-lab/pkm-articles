@@ -1,0 +1,16 @@
+test_expired_semantic_dispatch_preserves_persisted_generation_references (test_scheduled_safety.ScheduledSafetyTests.test_expired_semantic_dispatch_preserves_persisted_generation_references) ... FAIL
+
+======================================================================
+FAIL: test_expired_semantic_dispatch_preserves_persisted_generation_references (test_scheduled_safety.ScheduledSafetyTests.test_expired_semantic_dispatch_preserves_persisted_generation_references)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 213, in test_expired_semantic_dispatch_preserves_persisted_generation_references
+    self.assertEqual(set(evidence['artifacts']),{'result','report'})
+AssertionError: Items in the second set but not the first:
+'report'
+'result'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.937s
+
+FAILED (failures=1)

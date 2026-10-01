@@ -1,0 +1,37 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_concise_cited_markdown_and_existing_wikilinks_accepted (__main__.DocumentTests.test_concise_cited_markdown_and_existing_wikilinks_accepted) ... ok
+test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) ... ok
+test_malformed_wikilinks_and_extra_broken_source_citations (__main__.DocumentTests.test_malformed_wikilinks_and_extra_broken_source_citations) ... ok
+test_overflow_number_cannot_make_non_json_report (__main__.DocumentTests.test_overflow_number_cannot_make_non_json_report) ... ok
+test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) ... ok
+test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) ... ok
+test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) ... ok
+test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) ... ok
+test_unclosed_fence_and_indented_code_are_not_citations (__main__.DocumentTests.test_unclosed_fence_and_indented_code_are_not_citations) ... ok
+test_wikilink_fragments_must_exist (__main__.DocumentTests.test_wikilink_fragments_must_exist) ... ok
+test_decoded_entities_inline_tags_and_whitespace_are_visible (__main__.EvidenceTests.test_decoded_entities_inline_tags_and_whitespace_are_visible) ... ok
+test_duplicate_anchor_is_ambiguous (__main__.EvidenceTests.test_duplicate_anchor_is_ambiguous) ... ok
+test_missing_anchor_and_hash_drift_rejected (__main__.EvidenceTests.test_missing_anchor_and_hash_drift_rejected) ... ok
+test_quote_cannot_come_from_attributes_comments_or_hidden_nodes (__main__.EvidenceTests.test_quote_cannot_come_from_attributes_comments_or_hidden_nodes) ... ok
+test_quote_must_be_in_exact_anchor_subtree (__main__.EvidenceTests.test_quote_must_be_in_exact_anchor_subtree) ... ok
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... ok
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... ok
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... ok
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ok
+test_malformed_result_envelope_gets_failed_report (__main__.InterfaceTests.test_malformed_result_envelope_gets_failed_report) ... ok
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... ok
+test_cli_path_escape_and_symlink_root_rejected (__main__.PathTests.test_cli_path_escape_and_symlink_root_rejected) ... ok
+test_cli_result_symlink_rejected (__main__.PathTests.test_cli_result_symlink_rejected) ... ok
+test_invalid_expected_vid_is_not_repaired_or_used_as_path (__main__.PathTests.test_invalid_expected_vid_is_not_repaired_or_used_as_path) ... ok
+test_output_symlink_does_not_overwrite_target (__main__.PathTests.test_output_symlink_does_not_overwrite_target) ... ok
+test_result_source_override_is_rejected (__main__.PathTests.test_result_source_override_is_rejected) ... ok
+test_source_directory_symlink_rejected (__main__.PathTests.test_source_directory_symlink_rejected) ... ok
+test_source_file_symlink_rejected_even_inside_root (__main__.PathTests.test_source_file_symlink_rejected_even_inside_root) ... ok
+test_wikilinks_cannot_escape_or_use_symlink (__main__.PathTests.test_wikilinks_cannot_escape_or_use_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.840s
+
+OK

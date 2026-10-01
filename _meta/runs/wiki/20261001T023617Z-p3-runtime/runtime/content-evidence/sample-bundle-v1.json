@@ -1,0 +1,241 @@
+{
+  "status": "ready_to_publish",
+  "result": {
+    "version_id": "9910.00001v1",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.html",
+    "source_sha256": "090a56653c88399e359fb7cfaf28ff4b0fc473b44811b23b32a013bab5a24837",
+    "source_bytes": 306,
+    "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.json",
+    "metadata_sha256": "758def676b0c6ca758eba627d4264a56956162d31f7b6f6ce17ef8e1e9e2bbd0",
+    "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+    "contract_revision": "pkm-contracts/v3",
+    "policy_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "prompt_revision": "wiki-compile/v3",
+    "prompt_sha256": "b1f9b183e94bcd6788b61d2aa778b67883a5c2b710914ccd3b98e3ca790dcd95",
+    "approval_ref": "_meta/runs/wiki/20261001T023617Z-p3-runtime/approval.json",
+    "approval_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "requested_scope": "P3 main-text complete",
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false,
+    "route": {
+      "base_url": "http://10.10.1.244:2455/v1",
+      "api_mode": "codex_responses"
+    },
+    "cost_policy": "no_cost_cap",
+    "consumed_wiki": [],
+    "schema": "pkm-p3-content-result/v1",
+    "completed": true,
+    "error": null,
+    "document": {
+      "title": "Synthetic evidence",
+      "summary": "통제된 합성 사례의 결과와 한계.",
+      "version_id": "9910.00001v1",
+      "main_text_complete": true,
+      "read_scope": [
+        "S1"
+      ],
+      "unread_scope": [
+        "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+        "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행"
+      ],
+      "limitations": [
+        "합성 사례이며 일반화와 재현은 미검증."
+      ],
+      "claims": [
+        {
+          "id": "C01",
+          "kind": "author_report",
+          "statement": "두 통제 사례에서 성공했다고 보고한다.",
+          "conditions": "통제된 합성 사례에 한함.",
+          "anchor": "S1",
+          "quote": "The synthetic method succeeded in two controlled cases."
+        }
+      ],
+      "markdown_body": "# Synthetic evidence\n버전: 9910.00001v1; 읽은 범위: S1\nC01 저자 보고: 두 통제 사례에서 성공. 조건: 통제된 합성 사례. ^[raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.html#S1]\n모든 그림·이미지 및 이미지 전용 내용: 미검토\n수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\n한계: 일반화와 재현은 미검증.\n"
+    },
+    "telemetry": {
+      "format": "html",
+      "input_mode": "html_direct_text",
+      "source_chars": 306,
+      "read_scope": [
+        "paper",
+        "S1"
+      ],
+      "main_text_complete_eligible": true,
+      "required_unread_scope": [
+        "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+        "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행"
+      ],
+      "external_assets": false,
+      "images": false,
+      "persistent_extraction": false
+    },
+    "response_status": "completed",
+    "response_model": "gpt-6-astra",
+    "usage": null,
+    "cost_usd": null,
+    "cost_status": "unobserved_not_zero"
+  },
+  "report": {
+    "schema": "pkm-p3-verification/v1",
+    "passed": true,
+    "checks": [
+      {
+        "check": "bounded_document_schema",
+        "ok": true
+      },
+      {
+        "check": "source_complete",
+        "ok": true
+      },
+      {
+        "check": "main_text_complete",
+        "ok": true
+      },
+      {
+        "check": "title_version",
+        "ok": true
+      },
+      {
+        "check": "read_scope",
+        "ok": true
+      },
+      {
+        "check": "unread_scope",
+        "ok": true
+      },
+      {
+        "check": "limitations",
+        "ok": true
+      },
+      {
+        "check": "body",
+        "ok": true
+      },
+      {
+        "check": "claims",
+        "ok": true
+      },
+      {
+        "check": "claims_grounded",
+        "ok": true
+      },
+      {
+        "check": "claim_ids_unique",
+        "ok": true
+      },
+      {
+        "check": "claim_kinds",
+        "ok": true
+      },
+      {
+        "check": "claim_ids_visible",
+        "ok": true
+      },
+      {
+        "check": "claims_cited",
+        "ok": true
+      },
+      {
+        "check": "read_scope_observed",
+        "ok": true
+      },
+      {
+        "check": "claim_scope_observed",
+        "ok": true
+      },
+      {
+        "check": "visuals_unread",
+        "ok": true
+      },
+      {
+        "check": "version_scope_visible",
+        "ok": true
+      },
+      {
+        "check": "korean_body",
+        "ok": true
+      },
+      {
+        "check": "no_frontmatter_or_html_images_code",
+        "ok": true
+      },
+      {
+        "check": "only_resolved_allowed_links",
+        "ok": true
+      }
+    ],
+    "document": {
+      "title": "Synthetic evidence",
+      "summary": "통제된 합성 사례의 결과와 한계.",
+      "version_id": "9910.00001v1",
+      "main_text_complete": true,
+      "read_scope": [
+        "S1"
+      ],
+      "unread_scope": [
+        "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+        "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행"
+      ],
+      "limitations": [
+        "합성 사례이며 일반화와 재현은 미검증."
+      ],
+      "claims": [
+        {
+          "id": "C01",
+          "kind": "author_report",
+          "statement": "두 통제 사례에서 성공했다고 보고한다.",
+          "conditions": "통제된 합성 사례에 한함.",
+          "anchor": "S1",
+          "quote": "The synthetic method succeeded in two controlled cases."
+        }
+      ],
+      "markdown_body": "# Synthetic evidence\n버전: 9910.00001v1; 읽은 범위: S1\nC01 저자 보고: 두 통제 사례에서 성공. 조건: 통제된 합성 사례. ^[raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.html#S1]\n모든 그림·이미지 및 이미지 전용 내용: 미검토\n수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\n한계: 일반화와 재현은 미검증.\n"
+    },
+    "result_sha256": "afb0f99183293b7f0cc1c9b047e93cfbc139cc18cd7c9865fba79a9c5cc7c518"
+  },
+  "review": {
+    "schema": "pkm-p3-agent-review/v1",
+    "passed": true,
+    "human_review_ref": null,
+    "claim_ids": [
+      "C01"
+    ],
+    "claims": [
+      {
+        "id": "C01",
+        "verdict": "supported",
+        "rationale": "원문은 통제된 두 사례만 보고하며 조건이 보존됨.",
+        "quote_sha256": "2ae30a2ce96ded580283133d77c9cc479a079cb2892d4fb8ae71b5c17b3486f7"
+      }
+    ],
+    "body_verdict": "supported",
+    "body_supported": true,
+    "body_rationale": "본문 전체가 원문과 조건을 보존하고 시각적 미검토를 명시함.",
+    "main_text_complete": true,
+    "coverage_rationale": "제공된 전체 텍스트와 읽기 범위를 대조함.",
+    "result_sha256": "afb0f99183293b7f0cc1c9b047e93cfbc139cc18cd7c9865fba79a9c5cc7c518",
+    "report_sha256": "43047eec3228de3044c5fa95766d598c28f6163810312e4952786733e73b93d4",
+    "response_status": "completed",
+    "response_model": "gpt-6-astra",
+    "usage": null,
+    "cost_usd": null,
+    "cost_status": "unobserved_not_zero"
+  },
+  "artifacts": {
+    "result": {
+      "path": "_meta/runs/wiki/20261001T023617Z-p3-runtime/items/9910.00001v1/attempt1-result.json",
+      "sha256": "afb0f99183293b7f0cc1c9b047e93cfbc139cc18cd7c9865fba79a9c5cc7c518"
+    },
+    "report": {
+      "path": "_meta/runs/wiki/20261001T023617Z-p3-runtime/items/9910.00001v1/attempt1-report.json",
+      "sha256": "43047eec3228de3044c5fa95766d598c28f6163810312e4952786733e73b93d4"
+    },
+    "review": {
+      "path": "_meta/runs/wiki/20261001T023617Z-p3-runtime/items/9910.00001v1/attempt1-review.json",
+      "sha256": "e92aeebb710f10884454367520114285d7cc078a649d90324d0320240d0ff28a"
+    }
+  }
+}

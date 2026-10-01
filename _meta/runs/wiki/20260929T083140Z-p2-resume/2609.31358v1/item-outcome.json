@@ -1,0 +1,14 @@
+{
+  "schema": "pkm-p2-item-outcome/v1",
+  "vid": "2609.31358v1",
+  "run_id": "20260929T083140Z-p2-resume",
+  "recorded_at": "2026-09-29T09:36:00Z",
+  "status": "model_timeout",
+  "attempts_this_run": 1,
+  "attempt_results": ["response.failed upstream_websocket_liveness_timeout @597.5s"],
+  "diagnosis": "2609.30830v1의 2회 실패와 동일한 codex-lb 프록시 업스트림 websocket keepalive ping timeout. 첫 이벤트 129.8s 후 델타 수신 중 약 600s 지점에서 연결 종료. 남은 1회 시도는 프록시 원인 수정 없이는 동일 결과이므로 소진하지 않고 중단.",
+  "retryable": true,
+  "retry_condition": "프록시(10.10.1.244:2455)의 websocket keepalive/idle 타임아웃 조정 또는 비스트리밍·background 응답 경로 확인 후 신규 run에서 재시도. 이번 run에서 시도 1회 남음.",
+  "content_published": false,
+  "cost_usd": null
+}

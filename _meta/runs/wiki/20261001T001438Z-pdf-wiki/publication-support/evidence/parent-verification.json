@@ -1,0 +1,15 @@
+{
+  "schema": "pkm-pdf-plan-parent-verification/v1",
+  "recorded_at": "2026-10-01T02:18:39.097497+00:00",
+  "observed_command": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python -B _meta/runs/wiki/20261001T001438Z-pdf-wiki/publication-support/verify_synthetic.py",
+  "command_exit_code": 0,
+  "tests": 9,
+  "subtests": 61,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": "31d2453fa2c2e3a88c58527754a97d3009fe77875f732552a03cad02af7ba0b8",
+  "generic_helper_sha256": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+  "adapter_sha256": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4",
+  "review": "Full builder/test source inspected; unchanged generic transaction helpers, separate v3 guards, synthetic interruptions and exact-repeat no-op observed. Parent retains time/source-length/real preflight and semantic-review responsibility."
+}

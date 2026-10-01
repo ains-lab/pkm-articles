@@ -1,0 +1,27 @@
+{
+  "stage": "post-publication index verification only",
+  "initial_assertion_failed": true,
+  "observed_all_text_wikilinks": [
+    "entities/arxiv-2609.30830v1",
+    "entities/arxiv-2609.31358v1",
+    "concepts/agent-authority-and-effect-boundaries",
+    "concepts/provenance-and-audit-evidence",
+    "concepts/security-evaluation-units",
+    "comparisons/agate-vs-sdc-mcp-gateway",
+    "디렉터리/파일명"
+  ],
+  "cause": "inline-code naming example in operational guidance is not a catalogue entry",
+  "correction": "check content catalogue sections and exclude inline code; do not alter index",
+  "catalogue_entries": [
+    "entities/arxiv-2609.30830v1",
+    "entities/arxiv-2609.31358v1",
+    "concepts/agent-authority-and-effect-boundaries",
+    "concepts/provenance-and-audit-evidence",
+    "concepts/security-evaluation-units",
+    "comparisons/agate-vs-sdc-mcp-gateway"
+  ],
+  "actual_page_count": 6,
+  "positive_current_catalogue_passed": true,
+  "negative_inserted_missing_entry_rejected": true,
+  "canonical_content_changed_for_correction": false
+}

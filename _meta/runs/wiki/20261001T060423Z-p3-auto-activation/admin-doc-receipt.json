@@ -1,0 +1,11 @@
+{
+  "index_sha256": "7ea46a8be3f9c82ed00823fd328af95f6a5ea728e4a796daace3d9ee92ee6d96",
+  "journal_sha256": "e7491170b3138a5aca667e09bf7f851a45804446bbcac6061552114cf38cb153",
+  "knowledge_or_source_changes": false,
+  "log_prefix_preserved": true,
+  "log_sha256": "bf6044f49cbfcbdcec299192c377c21b50ea6cb1e8033bd000c700f3ffee7a92",
+  "observed_at": "2026-10-01T07:05:46.226546+00:00",
+  "schema": "pkm-p3-admin-doc-receipt/v1",
+  "state_unchanged": true,
+  "status": "committed"
+}

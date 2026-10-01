@@ -1,0 +1,30 @@
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ERROR
+
+======================================================================
+ERROR: test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 92, in test_daily_commits_auto_verified_then_noops_without_second_model
+    result = daily.run_daily(**f.kw(), client_factory=model)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 369, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 650, in apply_plan
+    guard()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 615, in guard
+    owns_lock()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 345, in guard
+    ctx['guard']()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 319, in guard
+    C.require(active['human_review'] is None and
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: active_item_owner
+
+----------------------------------------------------------------------
+Ran 1 test in 3.132s
+
+FAILED (errors=1)

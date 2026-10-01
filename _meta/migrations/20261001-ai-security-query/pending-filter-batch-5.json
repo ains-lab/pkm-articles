@@ -1,0 +1,35 @@
+{
+  "observed_at": "2026-10-01T08:15:28.848899+00:00",
+  "parameters": {
+    "search_query": "(\n  (ti:\"large language model\" OR abs:\"large language model\")\n  OR (ti:\"language model\" OR abs:\"language model\")\n  OR (ti:\"LLM\" OR abs:\"LLM\")\n  OR (ti:\"LLMs\" OR abs:\"LLMs\")\n  OR (ti:\"foundation model\" OR abs:\"foundation model\")\n  OR (ti:\"generative AI\" OR abs:\"generative AI\")\n  OR (ti:\"AI agent\" OR abs:\"AI agent\")\n  OR (ti:\"LLM agent\" OR abs:\"LLM agent\")\n  OR (ti:\"agentic AI\" OR abs:\"agentic AI\")\n  OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\")\n  OR (ti:\"machine learning\" OR abs:\"machine learning\")\n  OR (ti:\"deep learning\" OR abs:\"deep learning\")\n  OR (ti:\"neural network\" OR abs:\"neural network\")\n  OR (ti:\"vision language model\" OR abs:\"vision language model\")\n  OR (ti:\"diffusion model\" OR abs:\"diffusion model\")\n)\nAND\n(\n  (ti:\"prompt injection\" OR abs:\"prompt injection\")\n  OR (ti:\"indirect prompt injection\" OR abs:\"indirect prompt injection\")\n  OR (ti:\"jailbreak\" OR abs:\"jailbreak\")\n  OR (ti:\"jailbreaking\" OR abs:\"jailbreaking\")\n  OR (ti:\"guardrail bypass\" OR abs:\"guardrail bypass\")\n  OR (ti:\"data poisoning\" OR abs:\"data poisoning\")\n  OR (ti:\"model poisoning\" OR abs:\"model poisoning\")\n  OR (ti:\"backdoor attack\" OR abs:\"backdoor attack\")\n  OR (ti:\"RAG poisoning\" OR abs:\"RAG poisoning\")\n  OR (ti:\"memory poisoning\" OR abs:\"memory poisoning\")\n  OR (ti:\"model extraction\" OR abs:\"model extraction\")\n  OR (ti:\"model stealing\" OR abs:\"model stealing\")\n  OR (ti:\"membership inference\" OR abs:\"membership inference\")\n  OR (ti:\"model inversion\" OR abs:\"model inversion\")\n  OR (ti:\"training data extraction\" OR abs:\"training data extraction\")\n  OR (ti:\"data exfiltration\" OR abs:\"data exfiltration\")\n  OR (ti:\"tool poisoning\" OR abs:\"tool poisoning\")\n  OR (ti:\"tool hijacking\" OR abs:\"tool hijacking\")\n  OR (ti:\"privilege escalation\" OR abs:\"privilege escalation\")\n  OR (ti:\"authorization bypass\" OR abs:\"authorization bypass\")\n  OR (ti:\"confused deputy\" OR abs:\"confused deputy\")\n  OR (ti:\"least privilege\" OR abs:\"least privilege\")\n  OR (ti:\"information flow control\" OR abs:\"information flow control\")\n  OR (ti:\"capability-based security\" OR abs:\"capability-based security\")\n  OR (ti:\"sandbox escape\" OR abs:\"sandbox escape\")\n  OR (ti:\"prompt injection defense\" OR abs:\"prompt injection defense\")\n  OR (ti:\"adversarial example\" OR abs:\"adversarial example\")\n  OR (ti:\"evasion attack\" OR abs:\"evasion attack\")\n  OR (ti:\"adversarial robustness\" OR abs:\"adversarial robustness\")\n  OR (ti:\"certified robustness\" OR abs:\"certified robustness\")\n  OR (ti:\"supply chain attack\" OR abs:\"supply chain attack\")\n  OR (ti:\"denial of service\" OR abs:\"denial of service\")\n  OR (ti:\"denial of wallet\" OR abs:\"denial of wallet\")\n  OR (ti:\"sponge attack\" OR abs:\"sponge attack\")\n)",
+    "id_list": "2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1",
+    "sortBy": "lastUpdatedDate",
+    "sortOrder": "descending",
+    "start": 0,
+    "max_results": 100
+  },
+  "request_line_bytes": 3821,
+  "query_sha256": "4ea7f574dbe38a7bfa6f1556d25016b404bfaffb70835a09b25c56cf35ac988c",
+  "http_status": 200,
+  "status": "validated",
+  "records": [
+    {
+      "version_id": "2605.01970v4",
+      "title": "Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents",
+      "updated": "2026-09-28T20:38:46Z"
+    },
+    {
+      "version_id": "2507.02735v4",
+      "title": "Meta-SecAlign: Training LLMs against Prompt Injection for Robust Agents",
+      "updated": "2026-09-28T16:50:14Z"
+    },
+    {
+      "version_id": "2609.35932v1",
+      "title": "Same Bytes, Different Authority: Reserved-Token Representations in Chat-Template Prompt Injection",
+      "updated": "2026-09-28T14:51:21Z"
+    }
+  ],
+  "total_results": 3,
+  "response_sha256": "e7eecf75dbf55a72d253f80709229d6b326d0f49663f3dc8e730d32aa2864182",
+  "feed_title": "arXiv Query: search_query=( (ti:\"large language model\" OR abs:\"large language model\") OR (ti:\"language model\" OR abs:\"language model\") OR (ti:\"LLM\" OR abs:\"LLM\") OR (ti:\"LLMs\" OR abs:\"LLMs\") OR (ti:\"foundation model\" OR abs:\"foundation model\") OR (ti:\"generative AI\" OR abs:\"generative AI\") OR (ti:\"AI agent\" OR abs:\"AI agent\") OR (ti:\"LLM agent\" OR abs:\"LLM agent\") OR (ti:\"agentic AI\" OR abs:\"agentic AI\") OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\") OR (ti:\"machine learning\" OR abs:\"machine learning\") OR (ti:\"deep learning\" OR abs:\"deep learning\") OR (ti:\"neural network\" OR abs:\"neural network\") OR (ti:\"vision language model\" OR abs:\"vision language model\") OR (ti:\"diffusion model\" OR abs:\"diffusion model\") ) AND ( (ti:\"prompt injection\" OR abs:\"prompt injection\") OR (ti:\"indirect prompt injection\" OR abs:\"indirect prompt injection\") OR (ti:\"jailbreak\" OR abs:\"jailbreak\") OR (ti:\"jailbreaking\" OR abs:\"jailbreaking\") OR (ti:\"guardrail bypass\" OR abs:\"guardrail bypass\") OR (ti:\"data poisoning\" OR abs:\"data poisoning\") OR (ti:\"model poisoning\" OR abs:\"model poisoning\") OR (ti:\"backdoor attack\" OR abs:\"backdoor attack\") OR (ti:\"RAG poisoning\" OR abs:\"RAG poisoning\") OR (ti:\"memory poisoning\" OR abs:\"memory poisoning\") OR (ti:\"model extraction\" OR abs:\"model extraction\") OR (ti:\"model stealing\" OR abs:\"model stealing\") OR (ti:\"membership inference\" OR abs:\"membership inference\") OR (ti:\"model inversion\" OR abs:\"model inversion\") OR (ti:\"training data extraction\" OR abs:\"training data extraction\") OR (ti:\"data exfiltration\" OR abs:\"data exfiltration\") OR (ti:\"tool poisoning\" OR abs:\"tool poisoning\") OR (ti:\"tool hijacking\" OR abs:\"tool hijacking\") OR (ti:\"privilege escalation\" OR abs:\"privilege escalation\") OR (ti:\"authorization bypass\" OR abs:\"authorization bypass\") OR (ti:\"confused deputy\" OR abs:\"confused deputy\") OR (ti:\"least privilege\" OR abs:\"least privilege\") OR (ti:\"information flow control\" OR abs:\"information flow control\") OR (ti:\"capability-based security\" OR abs:\"capability-based security\") OR (ti:\"sandbox escape\" OR abs:\"sandbox escape\") OR (ti:\"prompt injection defense\" OR abs:\"prompt injection defense\") OR (ti:\"adversarial example\" OR abs:\"adversarial example\") OR (ti:\"evasion attack\" OR abs:\"evasion attack\") OR (ti:\"adversarial robustness\" OR abs:\"adversarial robustness\") OR (ti:\"certified robustness\" OR abs:\"certified robustness\") OR (ti:\"supply chain attack\" OR abs:\"supply chain attack\") OR (ti:\"denial of service\" OR abs:\"denial of service\") OR (ti:\"denial of wallet\" OR abs:\"denial of wallet\") OR (ti:\"sponge attack\" OR abs:\"sponge attack\") )&id_list=2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1&start=0&max_results=100"
+}

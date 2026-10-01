@@ -1,0 +1,311 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "03 · 모델 없는 Wiki 읽기와 snapshot 충돌",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html"
+  },
+  "lanes": [
+    {
+      "id": "request",
+      "label": "브라우저 → BFF · 인증 gate [제안]"
+    },
+    {
+      "id": "path",
+      "label": "Read facade · 허용 파일 gate [제안]"
+    },
+    {
+      "id": "read",
+      "label": "Read facade · 읽기·일관성·공개 projection [제안]"
+    },
+    {
+      "id": "display",
+      "label": "브라우저 · 출처·검토·미독 상태 표시 [제안]"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "open_page",
+      "lane": "request",
+      "col": 0,
+      "type": "frontend",
+      "label": "목록·지식 페이지 열기",
+      "sublabel": "page_id 조회 · 모델 호출 없음",
+      "tag": "탐색이 모델 답변을 기다리지 않음",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "authorize",
+      "lane": "request",
+      "col": 1,
+      "type": "security",
+      "label": "사용자 인증·page ACL",
+      "sublabel": "개인 Wiki 접근 권한 확인",
+      "tag": "page_id는 서버 소유 식별자",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "denied",
+      "lane": "request",
+      "col": 2,
+      "type": "security",
+      "label": "읽기 요청 거부",
+      "sublabel": "인증 만료·권한 없음 구분",
+      "tag": "본문·내부 경로를 공개하지 않음",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "resolve",
+      "lane": "path",
+      "col": 1,
+      "type": "security",
+      "label": "page_id → 허용 파일",
+      "sublabel": "승인된 지식 Markdown 매핑",
+      "tag": "no-follow·안전한 open·root 검증",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "unsafe",
+      "lane": "path",
+      "col": 2,
+      "type": "security",
+      "label": "위험 경로 거부",
+      "sublabel": "NUL·절대경로·..·symlink 차단",
+      "tag": "realpath만으로 TOCTOU 해결 아님",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "read_files",
+      "lane": "read",
+      "col": 1,
+      "type": "database",
+      "label": "허용 자료만 읽기",
+      "sublabel": "지식 Markdown · 서지 JSON",
+      "tag": "PDF 해석·HTML 분석·모델 없음",
+      "width": 236,
+      "height": 82,
+      "yOffset": -110
+    },
+    {
+      "id": "snapshot",
+      "lane": "read",
+      "col": 1,
+      "type": "security",
+      "label": "일관된 snapshot인가?",
+      "sublabel": "committed receipt·revision·hash",
+      "tag": "읽기 전후 상태 ID도 불변 확인",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "retry",
+      "lane": "read",
+      "col": 0,
+      "type": "messagebus",
+      "label": "제한된 재시도",
+      "sublabel": "충돌 · 남은 횟수가 있을 때만",
+      "tag": "일부 파일로 완료 승격 금지",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "conflict",
+      "lane": "read",
+      "col": 2,
+      "type": "security",
+      "label": "snapshot_conflict",
+      "sublabel": "재시도로도 일관성 미확정",
+      "tag": "partial 데이터를 캐시하지 않음",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "dto",
+      "lane": "read",
+      "col": 1,
+      "type": "backend",
+      "label": "최소 공개 DTO + ETag",
+      "sublabel": "성공 snapshot만 · ETag=page hash",
+      "tag": "본문·출처·revision·검토·미독 범위",
+      "width": 236,
+      "height": 82,
+      "yOffset": 110
+    },
+    {
+      "id": "updating",
+      "lane": "read",
+      "col": 2,
+      "type": "frontend",
+      "label": "갱신 중 · 다시 시도",
+      "sublabel": "충돌은 빈 페이지·없음과 다름",
+      "tag": "새로운 완료본으로 표시하지 않음",
+      "width": 236,
+      "height": 82,
+      "yOffset": 110
+    },
+    {
+      "id": "render",
+      "lane": "display",
+      "col": 1,
+      "type": "frontend",
+      "label": "안전한 Markdown 표시",
+      "sublabel": "raw HTML 비활성 · URL 제한",
+      "tag": "출처·미검토 범위·상태 축을 분리",
+      "width": 236,
+      "height": 82,
+      "yOffset": 0
+    }
+  ],
+  "edges": [
+    {
+      "id": "request_auth",
+      "from": "open_page",
+      "to": "authorize",
+      "variant": "default",
+      "role": "main",
+      "label": "인증된 조회"
+    },
+    {
+      "id": "deny_acl",
+      "from": "authorize",
+      "to": "denied",
+      "variant": "security",
+      "role": "error",
+      "label": "불허"
+    },
+    {
+      "id": "allow_map",
+      "from": "authorize",
+      "to": "resolve",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "권한 확인"
+    },
+    {
+      "id": "deny_path",
+      "from": "resolve",
+      "to": "unsafe",
+      "variant": "security",
+      "role": "error",
+      "label": "검증 실패"
+    },
+    {
+      "id": "safe_read",
+      "from": "resolve",
+      "to": "read_files",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "허용 파일만"
+    },
+    {
+      "id": "check_snapshot",
+      "from": "read_files",
+      "to": "snapshot",
+      "variant": "default",
+      "role": "main",
+      "label": "상태·본문 대조"
+    },
+    {
+      "id": "bounded_retry",
+      "from": "snapshot",
+      "to": "retry",
+      "variant": "dashed",
+      "role": "branch",
+      "label": "충돌·잔여 시도"
+    },
+    {
+      "id": "reread",
+      "from": "retry",
+      "to": "read_files",
+      "variant": "dashed",
+      "role": "return",
+      "label": "다시 읽기"
+    },
+    {
+      "id": "unresolved",
+      "from": "snapshot",
+      "to": "conflict",
+      "variant": "security",
+      "role": "error",
+      "label": "끝내 불일치"
+    },
+    {
+      "id": "consistent",
+      "from": "snapshot",
+      "to": "dto",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "일치할 때만"
+    },
+    {
+      "id": "conflict_ui",
+      "from": "conflict",
+      "to": "updating",
+      "variant": "security",
+      "role": "error",
+      "label": "재시도 가능 안내"
+    },
+    {
+      "id": "render_success",
+      "from": "dto",
+      "to": "render",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "허용 필드만"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "문서 설명 · 구현 완료 아님",
+      "items": [
+        "BFF·UI·read facade·실행 격리는 제안/미구현이다. Gateway·모델·논문·Cron은 실행하거나 변경하지 않았다.",
+        "관측은 기술문서에 기록된 로컬 정적 조사, 공식계약은 기술문서가 인용한 API 계약이다. 이 그림의 live 검증이 아니다.",
+        "한국어 authored content. 고정 Viewer UI와 html lang은 English fallback이다. 정지형이며 motion을 요청하지 않았다."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "근거 경로와 분류",
+      "items": [
+        "아래 파일명은 docs/techblog/hermes-api-gateway-workdir-assoc/ 기준이다. 각 node/edge의 정확한 line/end_line·분류는 같은 폴더 evidence.json에 있다.",
+        "분류: 관측 / 공식계약 / 제안 / 미확인. untracked 설계문서이므로 meta.repository·HEAD·--repo-root 근거를 만들지 않는다.",
+        "architecture.md:3–4, 37 · evidence.md:15, 65–80, 93–97 · frontend-design.md:3–4, 109–113"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "공개 projection과 상태 의미",
+      "items": [
+        "DTO는 제안 pkm-web-page/v1·snapshot_id. 목록에는 markdown·claim detail·내부 evidence 경로를 생략한다. 서버 절대경로도 노출하지 않는다. [data-contracts.md:69–115]",
+        "source.json의 wiki_compiled:false는 수집 당시 불변값이다. 완료는 compilation ledger·receipt·실물 output으로 확인한다. [data-contracts.md:28–36]",
+        "원문 보관 ≠ 분석 완료 ≠ 게시 committed ≠ 인간 검토. draft/unreviewed·수집 대기·노트 미작성은 정상 경계 상태다. [data-contracts.md:54–67; workflows.md:23]"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "읽기·캐시·보안 근거",
+      "items": [
+        "open_page → authorize → resolve → read_files: workflows.md:14–20; data-contracts.md:100–115. denied/unsafe는 권한·경로 거부이며 snapshot_conflict와 다르다.",
+        "snapshot → retry / conflict / dto: data-contracts.md:119–127. 최신 committed receipt·revision·파일 hash·읽기 전후 상태 ID를 대조한다. 다중 파일의 OS 원자성을 주장하지 않는다.",
+        "dto → render: page hash ETag는 성공 snapshot만. 초기 private/no-store도 가능하다. process-local cache는 원장이 아니다. [data-contracts.md:125–127]",
+        "원본 HTML은 같은 origin에서 실행하지 않는다. 공식 버전 링크를 제공하고 실제 anchor 미확인은 표시한다. PDF preview용 추출·OCR·render를 추가하지 않는다. [security-and-operations.md:52–59; data-contracts.md:113–115]"
+      ]
+    }
+  ]
+}

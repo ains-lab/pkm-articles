@@ -1,0 +1,24 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T02:59:21.017337+00:00",
+  "label": "daily-crash-deadline-green",
+  "modules": [
+    "test_daily"
+  ],
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "bb7ce4f3b3689355ce021459a6c5a81a769bf1ec5fdfa4bd80b42b8d85030f45",
+    "test_daily.py": "036df4c4d5f71d36743f5b3d9853773b1f521fcc4df34e4230646cacf8802bd6"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

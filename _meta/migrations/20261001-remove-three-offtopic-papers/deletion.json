@@ -1,0 +1,18 @@
+{
+  "status": "deleted",
+  "removed_files": [
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.json",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.html",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.json"
+  ],
+  "removed_directories": [
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1"
+  ],
+  "timestamp": "2026-10-01T07:27:36.568034+00:00",
+  "compiled_wiki_removed": 0
+}

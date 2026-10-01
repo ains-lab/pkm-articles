@@ -1,0 +1,6 @@
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.335s
+
+OK

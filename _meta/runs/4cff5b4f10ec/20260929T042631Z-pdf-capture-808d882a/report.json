@@ -1,0 +1,79 @@
+{
+  "run_id": "20260929T042631Z-pdf-capture-808d882a",
+  "type": "manual_requested_pdf_original_capture",
+  "started_at": "2026-09-29T04:26:31.212630+00:00",
+  "finished_at": "2026-09-29T04:29:37.331216+00:00",
+  "status": "completed",
+  "search_performed": false,
+  "discovery_checkpoint_advanced": false,
+  "counts": {
+    "search_pages": 0,
+    "new_html_saved": 0,
+    "new_pdf_saved": 2,
+    "source_failures": 0,
+    "duplicates_processed": 0,
+    "existing_html_verified": 8,
+    "html_files": 8,
+    "pdf_files": 2,
+    "source_json_files": 10,
+    "total_targets": 10,
+    "new_daily_attempts": 2,
+    "pending": 0,
+    "missing_fulltext": 0,
+    "knowledge_pages": 0
+  },
+  "report_path": "_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/report.json",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "scope": "user-requested capture of two existing PDF pending items; no discovery search",
+  "requested_ids": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "publication": [
+    {
+      "version_id": "2609.30614v1",
+      "status": "published_verified",
+      "published_at": "2026-09-29T04:28:21.180446+00:00",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+      "pdf_bytes": 821749,
+      "pdf_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "status": "published_verified",
+      "published_at": "2026-09-29T04:28:21.197372+00:00",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+      "pdf_bytes": 693979,
+      "pdf_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+    }
+  ],
+  "inventory": {
+    "2609.30217v1": "html",
+    "2609.30266v1": "html",
+    "2609.30614v1": "pdf",
+    "2609.30824v1": "pdf",
+    "2609.30830v1": "html",
+    "2609.30940v1": "html",
+    "2609.31039v1": "html",
+    "2609.31318v1": "html",
+    "2609.31358v1": "html",
+    "2609.31562v1": "html"
+  },
+  "html_unavailable_evidence_reused": true,
+  "html_rechecked_online": false,
+  "versioned_bibliography_reused_from_existing_official_atom": true,
+  "content_processing_performed": false,
+  "wiki_compiled": false,
+  "existing_raw_files_unchanged": 16,
+  "prior_scheduled_run_preserved_in": "state.last_scheduled_run",
+  "evidence_files": [
+    "preflight.json",
+    "state-reserved.json",
+    "downloads.json",
+    "publication.json",
+    "state-after.json"
+  ],
+  "final_management_verification_path": "_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/final-verification.json"
+}

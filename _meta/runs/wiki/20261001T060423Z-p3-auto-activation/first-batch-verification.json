@@ -1,0 +1,139 @@
+{
+  "observed_at": "2026-10-01T06:19:34.544918+00:00",
+  "run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "exit_code": 2,
+  "report_sha256": "8d9d1ae7237248ae3a3784538d6084caba56dd4f5afe7678ab8e790f8384cd36",
+  "selected_count": 5,
+  "selected_unique": 5,
+  "items": [
+    {
+      "version_id": "2609.30217v1",
+      "status": "blocked_review",
+      "failed_checks": [
+        "claims_cited",
+        "claim_scope_observed"
+      ],
+      "response_status": "completed",
+      "completed": true,
+      "response_model": "gpt-6-astra",
+      "document_keys": [
+        "claims",
+        "limitations",
+        "main_text_complete",
+        "markdown_body",
+        "read_scope",
+        "summary",
+        "title",
+        "unread_scope",
+        "version_id"
+      ],
+      "error": null,
+      "published": false
+    },
+    {
+      "version_id": "2609.30266v1",
+      "status": "blocked_review",
+      "failed_checks": [
+        "version_scope_visible"
+      ],
+      "response_status": "completed",
+      "completed": true,
+      "response_model": "gpt-6-astra",
+      "document_keys": [
+        "claims",
+        "limitations",
+        "main_text_complete",
+        "markdown_body",
+        "read_scope",
+        "summary",
+        "title",
+        "unread_scope",
+        "version_id"
+      ],
+      "error": null,
+      "published": false
+    },
+    {
+      "version_id": "2609.30940v1",
+      "status": "blocked_review",
+      "failed_checks": [
+        "claims_cited",
+        "version_scope_visible"
+      ],
+      "response_status": "completed",
+      "completed": true,
+      "response_model": "gpt-6-astra",
+      "document_keys": [
+        "claims",
+        "limitations",
+        "main_text_complete",
+        "markdown_body",
+        "read_scope",
+        "summary",
+        "title",
+        "unread_scope",
+        "version_id"
+      ],
+      "error": null,
+      "published": false
+    },
+    {
+      "version_id": "2609.31039v1",
+      "status": "unknown",
+      "failed_checks": [
+        "bounded_document_schema"
+      ],
+      "response_status": null,
+      "completed": false,
+      "response_model": null,
+      "document_keys": [],
+      "error": null,
+      "published": false
+    },
+    {
+      "version_id": "2609.31318v1",
+      "status": "blocked_review",
+      "failed_checks": [
+        "claims_cited",
+        "claim_scope_observed",
+        "version_scope_visible"
+      ],
+      "response_status": "completed",
+      "completed": true,
+      "response_model": "gpt-6-astra",
+      "document_keys": [
+        "claims",
+        "limitations",
+        "main_text_complete",
+        "markdown_body",
+        "read_scope",
+        "summary",
+        "title",
+        "unread_scope",
+        "version_id"
+      ],
+      "error": null,
+      "published": false
+    }
+  ],
+  "outcome_counts": {
+    "blocked_review": 4,
+    "unknown": 1
+  },
+  "new_page_count": 0,
+  "protected_files": 50,
+  "protected_drift": [],
+  "policy_drift": [],
+  "log_prefix_preserved": true,
+  "knowledge_page_count": 8,
+  "index_page_count": 8,
+  "output_refs_hashes_valid": true,
+  "state_status_counts": {
+    "blocked_conflict": 5,
+    "published_draft": 4,
+    "blocked_approval": 11
+  },
+  "safety_block": false,
+  "unresolved_transactions": [],
+  "locks_present": []
+}

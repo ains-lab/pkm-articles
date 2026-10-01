@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "c103ca39-583e-418d-8289-46606518a015",
+  "input": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-profile-routing-20261001-102028/01-roundtrip/candidate.json",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-profile-routing-20261001-102028/01-roundtrip/diagram.html"
+}

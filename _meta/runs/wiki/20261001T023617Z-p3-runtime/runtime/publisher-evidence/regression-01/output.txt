@@ -1,0 +1,21 @@
+test_busy_lock_is_not_stolen (test_publication.PublicationTests.test_busy_lock_is_not_stolen) ... ok
+test_collector_priority_skips_without_creating_artifacts (test_publication.PublicationTests.test_collector_priority_skips_without_creating_artifacts) ... ok
+test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) ... ok
+test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) ... ok
+test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) ... ok
+test_existing_page_not_overwritten (test_publication.PublicationTests.test_existing_page_not_overwritten) ... ok
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ok
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ok
+test_lock_ownership_is_checked_at_each_stage (test_publication.PublicationTests.test_lock_ownership_is_checked_at_each_stage) ... ok
+test_noop_preserves_later_unrelated_state_index_log (test_publication.PublicationTests.test_noop_preserves_later_unrelated_state_index_log) ... ok
+test_other_unknown_journal_blocks (test_publication.PublicationTests.test_other_unknown_journal_blocks) ... ok
+test_pdf_bundle_publishes_without_pdf_parsing (test_publication.PublicationTests.test_pdf_bundle_publishes_without_pdf_parsing) ... ok
+test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) ... ok
+test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) ... ok
+test_review_requires_all_supported_claims_and_body (test_publication.PublicationTests.test_review_requires_all_supported_claims_and_body) ... ok
+test_snapshot_drift_and_descriptor_drift_refuse_before_writes (test_publication.PublicationTests.test_snapshot_drift_and_descriptor_drift_refuse_before_writes) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 15.784s
+
+OK

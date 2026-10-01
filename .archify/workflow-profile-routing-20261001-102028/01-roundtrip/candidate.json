@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "앱 질문이 Wiki 답변으로 돌아오기 — 프로필 라우팅 설계안",
+    "locale": "ko",
+    "translations": {
+      "page.title": "{title} 다이어그램",
+      "diagram.description.workflow": "앱 요청부터 프로필 선택, Wiki 읽기, 응답까지의 설계 워크플로우",
+      "legend.title": "범례",
+      "legend.workflow.frontend": "앱 화면",
+      "legend.workflow.backend": "서버 처리",
+      "legend.workflow.security": "인증·접근 검사",
+      "legend.workflow.messagebus": "API·이벤트",
+      "legend.workflow.database": "Wiki 파일",
+      "viewer.theme.toggle.title": "테마 전환 (T)",
+      "viewer.theme.toggle": "테마 전환",
+      "viewer.theme.dark": "어두운 테마",
+      "viewer.theme.light": "밝은 테마",
+      "viewer.motion.still": "정적",
+      "viewer.export.button": "내보내기",
+      "viewer.present.present": "발표 보기",
+      "node.focus": "{label} 자세히 보기",
+      "node.focus.detail": "{label}: {detail}"
+    },
+    "animation": "none",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-profile-routing-20261001-102028/01-roundtrip/diagram.html"
+  },
+  "lanes": [
+    {"id":"request","label":"01 · 앱 요청과 BFF 매핑  →"},
+    {"id":"dispatch","label":"02 · Hermes API 호출·인증·접수  ←"},
+    {"id":"parallel","label":"03 · 접수 응답과 Agent 실행은 병행"},
+    {"id":"io","label":"04 · 왼쪽: 앱 진행 표시 / 오른쪽: Wiki 파일"},
+    {"id":"reasoning","label":"05 · 읽은 자료로 답변 생성·상태 반영  ←"},
+    {"id":"response","label":"06 · BFF 확인 후 앱에 최종 응답  →"}
+  ],
+  "nodes": [
+    {"id":"app","lane":"request","col":0,"type":"frontend","label":"앱에서 Wiki 질문","sublabel":"POST · 질문 + 앱 대화 ID","tag":"/pkm-articles/v1/runs","width":190},
+    {"id":"guard","lane":"request","col":1,"type":"security","label":"BFF 사용자 검사","sublabel":"로그인·Wiki 권한·자료 정책","tag":"거부 시 여기서 종료","width":200},
+    {"id":"mapping","lane":"request","col":2,"type":"backend","label":"BFF 고정 매핑","sublabel":"/pkm-articles → pkm-articles","tag":"사용자·Wiki별 session 연결","width":205},
+    {"id":"post","lane":"dispatch","col":2,"type":"messagebus","label":"Hermes Runs 호출","sublabel":"POST · input + session_id","tag":"/p/pkm-articles/v1/runs","width":210},
+    {"id":"gateway","lane":"dispatch","col":1,"type":"security","label":"Gateway 프로필 인증","sublabel":"pkm-articles 전용 키 검사","tag":"서비스 중인 프로필만 허용","width":210},
+    {"id":"accepted","lane":"dispatch","col":0,"type":"messagebus","label":"실행 접수 · run_id","sublabel":"선택한 프로필에 run 귀속","tag":"HTTP 202 ≠ 답변 완료","width":205},
+    {"id":"receipt","lane":"parallel","col":0,"type":"backend","label":"BFF → 앱 접수 응답","sublabel":"202 + 앱에서 조회할 실행 ID","tag":"owner·profile·run 연결 보관","width":205},
+    {"id":"progress","lane":"io","col":0,"type":"frontend","label":"앱 진행 화면","sublabel":"도구 진행·임시 답변 표시","tag":"브라우저에 Hermes 키 없음","width":190},
+    {"id":"subscribe","lane":"io","col":1,"type":"messagebus","label":"BFF가 SSE 구독","sublabel":"GET · 같은 프로필의 events","tag":"upstream 하나 → 앱에 중계","width":205},
+    {"id":"context","lane":"parallel","col":1,"type":"backend","label":"프로필 실행 문맥","sublabel":"pkm-articles의 terminal.cwd","tag":"세션 cwd / override도 확인","width":205},
+    {"id":"read","lane":"parallel","col":2,"type":"security","label":"Agent 파일 도구","sublabel":"실제 경로·허용 자료 검사","tag":"통과한 읽기만 실행","width":210},
+    {"id":"files","lane":"io","col":2,"type":"database","label":"허용된 Wiki 문서","sublabel":"Wiki 루트 기준 index.md 등","tag":"read-only 권한·도구 제한","width":210},
+    {"id":"answer","lane":"reasoning","col":2,"type":"backend","label":"Agent 근거 답변","sublabel":"읽은 문서·출처·한계 반영","tag":"Wiki 파일 저장은 하지 않음","width":205},
+    {"id":"state","lane":"reasoning","col":1,"type":"messagebus","label":"Gateway 실행 상태","sublabel":"성공·실패·중단을 구분","tag":"종료 이벤트 + 결과 조회","width":205},
+    {"id":"status","lane":"response","col":0,"type":"backend","label":"BFF 최종 상태 조회","sublabel":"GET · 같은 프로필의 run","tag":"종료·단절 후 조회 / owner 확인","width":205},
+    {"id":"bff-result","lane":"response","col":1,"type":"security","label":"BFF 결과 검증·정리","sublabel":"상태·읽은 출처·노출 범위","tag":"partial·실패를 완료로 숨기지 않음","width":205},
+    {"id":"result","lane":"response","col":2,"type":"frontend","label":"앱에 최종 응답","sublabel":"답변 + 근거 / 실패·미완료 안내","tag":"답변 완료 ≠ Wiki 게시","width":210}
+  ],
+  "edges": [
+    {"id":"app-bff","from":"app","to":"guard","label":"HTTPS","variant":"emphasis"},
+    {"id":"authorized-map","from":"guard","to":"mapping","label":"허용","variant":"security"},
+    {"id":"mapped-call","from":"mapping","to":"post","label":"서버 키","variant":"emphasis"},
+    {"id":"call-gateway","from":"post","to":"gateway","label":"내부 HTTP","variant":"emphasis"},
+    {"id":"authenticated-run","from":"gateway","to":"accepted","label":"인증 통과","variant":"security"},
+    {"id":"return-accepted","from":"accepted","to":"receipt","label":"202","variant":"emphasis","role":"return","fromSide":"bottom","toSide":"top"},
+    {"id":"subscribe-run","from":"receipt","to":"subscribe","label":"run 추적","variant":"dashed","role":"async","fromSide":"right","toSide":"left"},
+    {"id":"relay-progress","from":"subscribe","to":"progress","label":"SSE","variant":"dashed","role":"return"},
+    {"id":"dispatch-agent","from":"accepted","to":"context","label":"비동기 실행","variant":"emphasis","role":"async","fromSide":"right","toSide":"left"},
+    {"id":"context-tool","from":"context","to":"read","label":"검색·읽기","variant":"emphasis"},
+    {"id":"read-wiki","from":"read","to":"files","label":"허용 시","variant":"security"},
+    {"id":"text-to-agent","from":"files","to":"answer","label":"문서 내용","variant":"emphasis","role":"return"},
+    {"id":"agent-result","from":"answer","to":"state","label":"결과·상태","variant":"emphasis","role":"return"},
+    {"id":"reconcile","from":"state","to":"status","label":"BFF가 조회","variant":"emphasis"},
+    {"id":"validate-result","from":"status","to":"bff-result","label":"상태 대조","variant":"security"},
+    {"id":"reply-to-app","from":"bff-result","to":"result","label":"안전한 응답","variant":"emphasis","role":"return"}
+  ],
+  "semanticChecks": {
+    "allowedRoots":["app"],
+    "allowedTerminals":["progress","result"],
+    "requiredPaths":[{"from":"app","to":"files"},{"from":"files","to":"result"},{"from":"accepted","to":"progress"}],
+    "requiredEdges":[{"from":"guard","to":"mapping"},{"from":"gateway","to":"accepted"},{"from":"accepted","to":"context"},{"from":"read","to":"files"}]
+  },
+  "cards": [
+    {"dot":"cyan","title":"이번 요청의 정확한 매핑 · 미적용 설계","items":["외부 POST /pkm-articles/v1/runs → BFF의 허용된 고정 매핑","내부 POST /p/pkm-articles/v1/runs → pkm-articles 프로필","프로필 terminal.cwd = /home/ainsdev/wiki/pkm-articles","같은 이름은 편의일 뿐: URL 문자열이 폴더로 자동 변환되지는 않습니다."]},
+    {"dot":"violet","title":"SSE는 실행과 병행합니다","items":["BFF GET /p/pkm-articles/v1/runs/{id}/events → Gateway 이벤트를 앱에 중계","BFF GET /p/pkm-articles/v1/runs/{id} → 현재 상태·최종 결과 확인","그림의 접수·구독 순서는 논리적 흐름입니다. Agent는 구독 전부터 실행될 수 있습니다.","상태·events·stop 모두 같은 프로필과 해당 프로필 키를 사용합니다."]},
+    {"dot":"amber","title":"폴더 결정과 자료 경계","items":["상대경로 기준: 세션 cwd → 등록된 override → 프로필 terminal.cwd","예: Wiki 루트 + index.md → /home/ainsdev/wiki/pkm-articles/index.md","cwd 하나는 기본값입니다. 프로필·cwd·프롬프트는 sandbox가 아닙니다.","읽기 전용 권한과 모든 파일 도구의 경로 제한은 별도 구현·검증 조건입니다."]},
+    {"dot":"rose","title":"거부·단절·중지는 성공이 아닙니다","items":["BFF 권한/정책 또는 프로필 인증 실패 시 다음 단계로 진행하지 않습니다.","자료 접근·읽기 실패는 오류/미완료로 응답합니다. 다른 Wiki나 원문으로 우회하지 않습니다.","SSE 단절: 기존 run을 조회합니다. 새 run 자동 생성이나 전체 이벤트 replay를 가정하지 않습니다.","중지: POST /p/pkm-articles/v1/runs/{id}/stop → stopping → 실제 종료 상태 확인"]},
+    {"dot":"slate","title":"근거와 범위","items":["기술문서 api-contract / workflows / workspace-and-gateway + 공식 API·프로필 계약 기반 설계","새 프로필·BFF·접근 격리는 미구현입니다. live API·모델 호출·Gateway 변경은 하지 않았습니다.","질의 환경은 별도 승인·검증 후 사용합니다. 기존 수집·자동 컴파일 Cron과 쓰기 권한은 연결하지 않습니다.","본문은 한국어이며 Viewer의 일부 고급 조작 UI는 영문으로 표시될 수 있습니다."]}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "pkm-publication-request/v2",
+  "version_id": "2609.31358v1",
+  "requested_scope": "P2 main-text complete",
+  "result": {
+    "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json",
+    "sha256": "ea53032aa5c7425b6dcb121abf0262fa4d22aae92cfd8cabaca110d682520382"
+  },
+  "approval": {
+    "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/approval.json",
+    "sha256": "2d2a7de23dab4130757a6ea6408a07e5a4567fe31bdff3e84f3553c5b26a3b31"
+  },
+  "policy": {
+    "path": "_meta/automation.json",
+    "sha256": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5",
+    "revision": "pkm-html-knowledge/v2"
+  },
+  "prompt": {
+    "path": "_meta/prompts/wiki-compile.md",
+    "sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad",
+    "revision": "wiki-compile/v2"
+  },
+  "source": {
+    "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+    "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+    "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json",
+    "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb"
+  },
+  "output_path": "entities/arxiv-2609.31358v1.md",
+  "agent_review": {
+    "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-agent-review.json",
+    "sha256": "ae62885e41ce1d7f6c659e86d7c284e7fdf6ed0a3d89e76672db3f03825c0833"
+  },
+  "consumed_wiki_refs": [],
+  "publication_approval": {
+    "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/publication-approval.json",
+    "sha256": "633d904d3b012bb6fae5f4b98d21f0fe1aafaadfb308b17e0a4dac6dd7d4a9cd"
+  }
+}

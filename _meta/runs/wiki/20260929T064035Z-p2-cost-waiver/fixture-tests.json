@@ -1,0 +1,112 @@
+{
+  "schema": "pkm-isolated-fixture-tests/v1",
+  "recorded_at": "2026-09-29T06:59:20.957785+00:00",
+  "fixture_kind": "synthetic one-shot protocol exerciser, not a deployed publisher",
+  "test_count": 18,
+  "all_passed": true,
+  "tests": [
+    {
+      "name": "durable_fixture_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "page_index_log_receipt_state_order",
+      "passed": true,
+      "details": [
+        "entities/fixture.md",
+        "index.md",
+        "log.md",
+        "receipt.json",
+        "state.json"
+      ]
+    },
+    {
+      "name": "same_snapshot_noop",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_duplicate_writes_or_log",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "missing_receipt_not_noop",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "interrupt_after_page",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "partial_not_published",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resume_old_new_targets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resume_preserves_written_page",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "interrupt_after_log",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "resume_does_not_duplicate_event",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unexpected_page_hash_blocks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "user_edit_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "stale_index_not_overwritten",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "log_prefix_mismatch_blocks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "busy_no_lock_theft",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "symlink_target_rejected",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "missing_output_not_noop",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "active_wiki_writes": 0,
+  "limits": [
+    "This tests a small synthetic protocol, not production implementation integration.",
+    "Cooperative exception injection, not power-loss or real concurrency race proof.",
+    "Hash check plus rename is not strong CAS against uncooperative editors.",
+    "No live publication or semantic paper validation is established."
+  ]
+}

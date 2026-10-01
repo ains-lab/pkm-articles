@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-01T02:30:09.305297+00:00",
+  "status": "committed",
+  "versions": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "knowledge_pages": 8,
+  "index_sha256": "169b97776650df077283db6bc30360d7559b4f817c7d7f08d34dcd8d578ac863",
+  "log_sha256": "4d5d0232007dfcb6cd137b9cad6e753bdc67e20d25d164824cedb189db6ef8b7",
+  "summary_event_count": 1,
+  "compilation_sha256": "e3a793f88c239eedef2b227d4ba0862765c7a5e1c6988ca139fb7cf6695fcd32",
+  "report_sha256": "59e518f35a1bb30220872e1882981bfde9e3106bf4ff187ed5f3919188683559",
+  "verification_sha256": "e5c3bb8417073d8caf9902bbeb8af4ab4523dc63a3e937a51d2b3d3885ac4ae6",
+  "prior_html_items_unchanged": 18,
+  "prior_history_prefixes_preserved": true,
+  "protected_files_unchanged": 50,
+  "lock_released": true,
+  "human_reviewed": false
+}

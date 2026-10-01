@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_pdf_midread_failure_preserves_observed_and_unread_telemetry"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "098f558d6621dc226b01ef5a38fcd0bd03dcf59a36d272ba264b67c7f26de0b2",
+    "stderr.txt": "e2b18c9fc8d0e2446b72da0a9d32b5a7ae8c17989c8ac3b72f810f9e1d014c9e",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "14d64f96dea4459da44da4ab2c5945ac56725b339a23bf7d4c41fcc9792aaf5f"
+  }
+}

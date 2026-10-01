@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b263ef10-8523-40d6-916a-a2a0164fb743",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/candidate.json",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+  "specification": {
+    "sha256": "2129453a8e2af613b03797d8b1e30cd27c8791309b814c41c3f90a4f45e0d012",
+    "bytes": 38148
+  },
+  "artifact": {
+    "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+    "bytes": 771230
+  }
+}

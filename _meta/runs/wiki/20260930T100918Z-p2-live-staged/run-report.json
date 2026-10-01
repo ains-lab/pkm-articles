@@ -1,0 +1,234 @@
+{
+  "schema": "pkm-p2-staged-run-report/v1",
+  "run_id": "20260930T100918Z-p2-live-staged",
+  "at": "2026-09-30T10:31:42.100005+00:00",
+  "status": "validated_staged_awaiting_publication_approval",
+  "approval_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/approval.json",
+  "counts": {
+    "requested": 2,
+    "generated": 2,
+    "structural_passed": 2,
+    "staged": 2,
+    "published": 0,
+    "failed": 0,
+    "structural_checks_total": 64,
+    "semantic_claims_total": 28,
+    "source_formats": {
+      "html": 13,
+      "pdf": 2
+    },
+    "protected_files_unchanged": 37,
+    "usage_total_tokens": 200743
+  },
+  "items": [
+    {
+      "version_id": "2609.30830v1",
+      "title": "AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents",
+      "status": "validated_staged_not_published",
+      "attempts": 1,
+      "result_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json",
+      "result_sha256": "10a928f689ea5a2ffb8cda88e40e95e1d2086ed394927dd62dab447bac490a93",
+      "structural_checks": 32,
+      "structural_passed": true,
+      "semantic_claims": 14,
+      "agent_review_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-agent-review.json",
+      "staged_path": "_meta/staging/wiki/20260930T100918Z-p2-live-staged/entities/arxiv-2609.30830v1.md",
+      "staged_sha256": "7c3e55e0424e38038dd97ebb2d87139e87c94b6200bb445b9420c62e7449d406",
+      "body_lines": 128,
+      "elapsed_seconds": 451.918,
+      "usage": {
+        "input_tokens": 94826,
+        "output_tokens": 14915,
+        "total_tokens": 109741,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 4660
+        }
+      },
+      "cost_usd": null,
+      "human_review": null
+    },
+    {
+      "version_id": "2609.31358v1",
+      "title": "A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents",
+      "status": "validated_staged_not_published",
+      "attempts": 1,
+      "result_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json",
+      "result_sha256": "ea53032aa5c7425b6dcb121abf0262fa4d22aae92cfd8cabaca110d682520382",
+      "structural_checks": 32,
+      "structural_passed": true,
+      "semantic_claims": 14,
+      "agent_review_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-agent-review.json",
+      "staged_path": "_meta/staging/wiki/20260930T100918Z-p2-live-staged/entities/arxiv-2609.31358v1.md",
+      "staged_sha256": "158862b77fc8aec00c593b68f6663d78c2a00839582e1911709915d918b52efc",
+      "body_lines": 127,
+      "elapsed_seconds": 496.85,
+      "usage": {
+        "input_tokens": 74683,
+        "output_tokens": 16319,
+        "total_tokens": 91002,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 5178
+        }
+      },
+      "cost_usd": null,
+      "human_review": null
+    }
+  ],
+  "source_inventory": [
+    {
+      "version_id": "2509.09215v3",
+      "format": "html",
+      "bytes": 116966,
+      "sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+      "metadata_sha256": "5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2608.29596v2",
+      "format": "html",
+      "bytes": 1078043,
+      "sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+      "metadata_sha256": "edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "bytes": 926811,
+      "sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "bytes": 738941,
+      "sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "bytes": 821749,
+      "sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "bytes": 693979,
+      "sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "bytes": 267373,
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+      "integrity_ok": true,
+      "body_read_for_this_task": true
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "bytes": 397917,
+      "sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "bytes": 558801,
+      "sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "bytes": 536360,
+      "sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "bytes": 212956,
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+      "integrity_ok": true,
+      "body_read_for_this_task": true
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "bytes": 683196,
+      "sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "metadata_sha256": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.35576v1",
+      "format": "html",
+      "bytes": 394496,
+      "sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+      "metadata_sha256": "9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.35596v1",
+      "format": "html",
+      "bytes": 494759,
+      "sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+      "metadata_sha256": "31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    },
+    {
+      "version_id": "2609.35760v1",
+      "format": "html",
+      "bytes": 1193201,
+      "sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+      "metadata_sha256": "5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3",
+      "integrity_ok": true,
+      "body_read_for_this_task": false
+    }
+  ],
+  "protected_changes": [],
+  "index_unchanged": true,
+  "compilation_state_unchanged": true,
+  "publication_authorized": false,
+  "cost_policy": "no_cost_cap",
+  "cost_usd": null,
+  "unknown_cost_is_zero": false,
+  "cron_registered_or_enabled": false,
+  "pdf_images_external_assets_read": false,
+  "new_collection_or_code_reproduction": false,
+  "human_review": null,
+  "log_append_verified": true,
+  "log_entry_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/log-entry.md",
+  "final_verification_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/final-verification.json"
+}

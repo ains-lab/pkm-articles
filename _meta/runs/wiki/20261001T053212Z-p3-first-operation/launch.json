@@ -1,0 +1,15 @@
+{
+  "schema": "pkm-p3-background-launch/v1",
+  "run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "execution_approval_ref": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/gate-02/execution-approval.json",
+  "terminal_session_id": "proc_c87942d857cb",
+  "pid": 544171,
+  "notify_on_complete": true,
+  "process_started": true,
+  "compilation_completed": false,
+  "cron_id": "4839be6a1db1",
+  "cron_state": "paused",
+  "cron_activation_authorized": false,
+  "stdout_path": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/cli-output.json",
+  "instruction": "Observe this exact process completion and immutable result/report/review/receipt before reporting success. Do not launch a second batch or activate the Cron."
+}

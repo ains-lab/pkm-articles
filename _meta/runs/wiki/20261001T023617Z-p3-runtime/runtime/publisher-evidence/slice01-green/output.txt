@@ -1,0 +1,6 @@
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.454s
+
+OK

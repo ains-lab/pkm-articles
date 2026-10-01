@@ -1,0 +1,34 @@
+{
+  "schema": "pkm-pdf-text-scope-approval/v1",
+  "recorded_at": "2026-10-01T00:14:38.083069+00:00",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "run_id": "20261001T001438Z-pdf-wiki",
+  "user_request": "그럼 pdf 논문도 위키 컴파일하여 포함하도록 적용해주세요",
+  "configuration_confirmation": "승인 — 텍스트 방식으로 정책 변경 및 PDF 2편 컴파일",
+  "publication_confirmation": "게시 승인 — 작업 중 Wiki 직접 편집 중지",
+  "version_ids": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "policy_change_authorized": true,
+  "isolated_pypdf_install_authorized": true,
+  "local_pdf_text_reading_authorized": true,
+  "pdf_text_transfer_authorized": true,
+  "manual_generation_authorized": true,
+  "validated_publication_authorized": true,
+  "publication_edit_freeze_confirmed": true,
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false
+  },
+  "persistent_extraction": false,
+  "pdf_binary_transfer": false,
+  "images": false,
+  "ocr": false,
+  "external_assets": false,
+  "cron_registration_authorized": false,
+  "cron_activation_authorized": false,
+  "cost_policy": "no_cost_cap"
+}

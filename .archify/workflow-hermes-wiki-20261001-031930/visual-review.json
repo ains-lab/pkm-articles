@@ -1,0 +1,31 @@
+{
+  "scope": "Supplementary sampled image review, not the automated Archify browser gate and not a full accessibility audit",
+  "index": {
+    "artifact_sha256": "ee1faaf2b0fca469d29fd10edf3d08c512eb6caf20987915926786ab568e7cb0",
+    "capture": "index-desktop.png",
+    "viewport": [1440, 1000],
+    "review_method": "vision_analyze",
+    "result": "No blocking overlap, horizontal clipping or broken hierarchy observed in captured first screen",
+    "limits": "Below-fold material not visually inspected; muted small labels should not be treated as a full contrast/accessibility pass"
+  },
+  "diagram_samples": [
+    {
+      "diagram": "01-system",
+      "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+      "capture": "01-system/visual-check/diagram.visual-check.2048x1320.light.png",
+      "review_method": "vision_analyze",
+      "result": "Main nodes and relationship labels contained; no unrelated-node crossings or obvious overlaps observed",
+      "limits": "Small supporting text has lower visual contrast; lower explanatory cards continue below viewport; other theme/viewport captures not perceptually inspected"
+    },
+    {
+      "diagram": "02-workspace",
+      "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+      "capture": "02-workspace/visual-check/diagram.visual-check.2048x1320.dark.png",
+      "review_method": "vision_analyze",
+      "result": "Main nodes and relationship labels contained; cwd and actual access isolation are visibly distinguished",
+      "limits": "Small muted text is less prominent; lower explanatory cards continue below viewport; other theme/viewport captures not perceptually inspected"
+    }
+  ],
+  "full_all_diagram_perceptual_review": "not_performed",
+  "automatic_browser_evidence": "Use artifact-bound browser-check receipts; do not infer it from this review"
+}

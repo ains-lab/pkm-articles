@@ -1,0 +1,1 @@
+{"observed_at": "2026-10-01T04:08:43.146485+00:00", "evidence_validation": "pass", "rendered_verdict": "REVISE", "source_html_and_candidate_unchanged": true, "all_46_capture_bindings_verified": true, "all_original_79_source_slide_files_unchanged": true, "git_diff_check_exit_code": 0, "changes_this_round": "new QA plan/probe, captures, observations, manifest and report only"}

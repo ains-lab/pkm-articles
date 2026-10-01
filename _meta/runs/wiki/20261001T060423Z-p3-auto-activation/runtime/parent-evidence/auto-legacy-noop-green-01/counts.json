@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:13:15.291005+00:00",
+  "label": "auto-legacy-noop-green-01",
+  "modules": [
+    "test_auto_publication"
+  ],
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "c3e2436eea1082aa2bc7052b862f88b26f7df85d5d114971c523bcbe9572e6eb",
+    "content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "publication.py": "155955ebdbf5a0ee9c03f9017024684918a9b04774c5f5154bc89e24201464ad",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_auto_publication.py": "957108fd182916a00659f625f4b2c3758cc55da038879334dc2ccd773e8238da"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

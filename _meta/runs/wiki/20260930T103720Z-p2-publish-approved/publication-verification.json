@@ -1,0 +1,286 @@
+{
+  "at": "2026-09-30T10:48:07.127372+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "protected snapshots unchanged",
+      "passed": true,
+      "details": {
+        "count": 48,
+        "changed": []
+      }
+    },
+    {
+      "name": "log prefix unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "15 source versions with one intact source and metadata",
+      "passed": true,
+      "details": {
+        "html": 13,
+        "pdf": 2
+      }
+    },
+    {
+      "name": "exactly two knowledge pages",
+      "passed": true,
+      "details": [
+        "entities/arxiv-2609.30830v1.md",
+        "entities/arxiv-2609.31358v1.md"
+      ]
+    },
+    {
+      "name": "index total matches actual pages",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "published set is exactly approved two",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "compilation remains disabled",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new automation remains disabled",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 body unchanged from generation and staging",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 fresh structural checks passed",
+      "passed": true,
+      "details": 32
+    },
+    {
+      "name": "2609.30830v1 receipt and state output hashes agree",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 journal committed with both approvals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 single index entry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 single log event",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 human review not claimed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.30830v1 prior failure count retained",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 body unchanged from generation and staging",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 fresh structural checks passed",
+      "passed": true,
+      "details": 32
+    },
+    {
+      "name": "2609.31358v1 receipt and state output hashes agree",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 journal committed with both approvals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 single index entry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 single log event",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 human review not claimed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "2609.31358v1 prior failure count retained",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "local Wiki/source links resolve",
+      "passed": true,
+      "details": {
+        "checked": 141,
+        "broken": []
+      }
+    },
+    {
+      "name": "collection lock released",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "pages": [
+    {
+      "version_id": "2609.30830v1",
+      "path": "entities/arxiv-2609.30830v1.md",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5",
+      "work_key": "27366967b8a8f3a95b599b1c76fe51a3bce1872efc1385b68b9c66cb7703e739",
+      "receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-receipt.json",
+      "transaction_id": "p2-3dd7045ccb252e65cfc6379fed0774e0",
+      "checks": 32,
+      "claims": 14,
+      "state": "published_draft"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "path": "entities/arxiv-2609.31358v1.md",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9",
+      "work_key": "80e75fa32117a71b1e1a906b5629f795d0e9833c8a4c903fb013d5eca3484e10",
+      "receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-receipt.json",
+      "transaction_id": "p2-39f61c7ae836953ef2fb0be7e534079a",
+      "checks": 32,
+      "claims": 14,
+      "state": "published_draft"
+    }
+  ],
+  "corpus": [
+    {
+      "version_id": "2509.09215v3",
+      "format": "html",
+      "bytes": 116966,
+      "sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+      "verified": true
+    },
+    {
+      "version_id": "2608.29596v2",
+      "format": "html",
+      "bytes": 1078043,
+      "sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "bytes": 926811,
+      "sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "bytes": 738941,
+      "sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "bytes": 821749,
+      "sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "bytes": 693979,
+      "sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "bytes": 267373,
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "verified": true
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "bytes": 397917,
+      "sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "verified": true
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "bytes": 558801,
+      "sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "verified": true
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "bytes": 536360,
+      "sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "verified": true
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "bytes": 212956,
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "verified": true
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "bytes": 683196,
+      "sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "verified": true
+    },
+    {
+      "version_id": "2609.35576v1",
+      "format": "html",
+      "bytes": 394496,
+      "sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+      "verified": true
+    },
+    {
+      "version_id": "2609.35596v1",
+      "format": "html",
+      "bytes": 494759,
+      "sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+      "verified": true
+    },
+    {
+      "version_id": "2609.35760v1",
+      "format": "html",
+      "bytes": 1193201,
+      "sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+      "verified": true
+    }
+  ],
+  "source_counts": {
+    "html": 13,
+    "pdf": 2
+  },
+  "noop_ref": "_meta/runs/wiki/20260930T103720Z-p2-publish-approved/noop-verification.json",
+  "tests_ref": "_meta/runs/wiki/20260930T103720Z-p2-publish-approved/regression-tests-final.json",
+  "readback_diagnostic_note": "First readback index search used an alias-only pattern (false zero); canonical wikilinks verified with parsed targets. A second readback typo used Path subscription after publication; corrected read-only hash checks; no repeat side-effect publication."
+}

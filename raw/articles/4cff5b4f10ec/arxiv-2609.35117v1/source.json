@@ -1,0 +1,38 @@
+{
+  "source": "arxiv",
+  "base_id": "2609.35117",
+  "version_id": "2609.35117v1",
+  "title": "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+  "authors": [
+    "Abel Rodríguez",
+    "Giuseppe Garofalo",
+    "Lieven Desmet",
+    "Vera Rimmer"
+  ],
+  "abstract": "Large language models (LLMs) are increasingly deployed with access to external tools, yet harmful tool-mediated interactions are less likely to be refused when compared to regular conversational ones. As this change in refusal behavior remains underexplored, we investigate its underlying mechanisms across a diverse set of open-weight language models. We find that information about the harmfulness of a request remains strongly encoded in the model's representations and transfers across conversational and tool-mediated inputs. Evidence from representation geometry and neuron-level analysis further indicates that the two interaction modes systematically distribute harm-related computation differently. Crucially, while conversational inputs can be refused at relatively low levels of perceived harmfulness, tool-mediated inputs remain permissive until harmfulness crosses a substantially higher effective refusal threshold. Moreover, tool-mediated refusal is also more brittle: progressively weakening the refusal computation disrupts tool-mediated refusal at lower intervention strengths than conversational refusal, even when benign capabilities remain intact. Together, our findings indicate that tool mediation does not simply reduce the internal perception of harm, but instead impacts its conversion into refusal. Overall, this suggests tool-mediated environments may intrinsically reduce robustness of models to harmful requests, and that conventional safety evaluations may not fully transfer to LLM agents.",
+  "published": "2026-09-28T13:16:54Z",
+  "updated": "2026-09-28T13:16:54Z",
+  "categories": [
+    "cs.AI"
+  ],
+  "abs_url": "https://arxiv.org/abs/2609.35117v1",
+  "schema": "arxiv-html-source/v1",
+  "source_format": "html",
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/html/2609.35117v1",
+  "collected_at": "2026-09-30T15:09:21.436635+00:00",
+  "html_file": "source.html",
+  "html_sha256": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+  "html_bytes": 629329,
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2609.35117v1",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "capture_method": "http_response_body_no_rewrite",
+  "content_scope": "html_fulltext_as_served",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml"
+}

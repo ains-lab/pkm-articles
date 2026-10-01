@@ -1,0 +1,128 @@
+{
+  "at": "2026-09-30T09:53:12.161241+00:00",
+  "tests": 108,
+  "all_tests_passed": true,
+  "protected_count": 37,
+  "protected_unchanged": true,
+  "raw_inventory": [
+    {
+      "version_id": "2509.09215v3",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.html",
+      "sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+      "bytes": 116966
+    },
+    {
+      "version_id": "2608.29596v2",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.html",
+      "sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+      "bytes": 1078043
+    },
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "bytes": 926811
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "bytes": 738941
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "bytes": 821749
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "bytes": 693979
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "bytes": 267373
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "bytes": 397917
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "bytes": 558801
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "bytes": 536360
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "bytes": 212956
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+      "sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "bytes": 683196
+    },
+    {
+      "version_id": "2609.35576v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.html",
+      "sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+      "bytes": 394496
+    },
+    {
+      "version_id": "2609.35596v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.html",
+      "sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+      "bytes": 494759
+    },
+    {
+      "version_id": "2609.35760v1",
+      "format": "html",
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html",
+      "sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+      "bytes": 1193201
+    }
+  ],
+  "knowledge_pages": 0,
+  "index_unchanged": true,
+  "log_prefix_unchanged": true,
+  "log_append_count": 1,
+  "log_sha256": "b5a913b9fca2cde84911f4ef68ed8d003b2bfff323714606c610b21f4a6e564c",
+  "collection_lock_removed": true,
+  "compilation_state_unchanged": true,
+  "compilation_status_counts": {
+    "blocked_approval": 6,
+    "blocked_policy": 2,
+    "retryable_failed": 2
+  },
+  "paper_model_calls_in_repair": 0,
+  "live_publications_in_repair": 0
+}

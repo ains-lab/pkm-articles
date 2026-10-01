@@ -1,0 +1,58 @@
+"""P3 daily orchestration. Live execution requires a separate P3 grant."""
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+import re
+import p3_common as C
+
+
+def preflight(*, root=C.ROOT, run, approval_ref, synthetic=False, now=None):
+    root = C.synthetic_root(root) if synthetic is True else Path(root).absolute()
+    C.require(root == C.ROOT or synthetic is True, 'wrong_root')
+    C.require(type(synthetic) is bool, 'synthetic_flag')
+    C.require(isinstance(run,str) and re.fullmatch(r'_meta/runs/wiki/[A-Za-z0-9_-]+',run), 'run_path')
+    C.require(isinstance(approval_ref,str) and approval_ref.startswith('_meta/runs/wiki/') and approval_ref.endswith('/execution-approval.json'), 'approval_path')
+    fs=C.helper('publish').Files(root)
+    auto=C.decode(fs.read('_meta/automation.json'))
+    C.require(auto.get('phase_authorizations',{}).get('P3') is True, 'p3_execution_not_authorized')
+    C.require(auto.get('policy_revision')==C.POLICY and auto.get('contract_revision')==C.CONTRACT and auto.get('wiki_root')==str(root), 'policy_identity')
+    C.require(C.canonical(auto.get('model'))==C.canonical(C.MODEL), 'model_pin')
+    C.require(C.canonical(auto.get('pdf_reading'))==C.canonical(C.PDF_READING), 'pdf_policy')
+    C.require(auto.get('budget',{}).get('cost_policy')=='no_cost_cap', 'cost_policy')
+    transfer=auto.get('transfer',{})
+    C.require(all(transfer.get(k) is False for k in ('automatic_chat_capture','external_assets','external_novelty_search','images','secrets_or_sensitive_personal_data')), 'forbidden_transfer')
+    C.require(transfer.get('local_html_text') is True and transfer.get('pdf_content') is True, 'text_transfer')
+    schema=C.decode(fs.read(C.DOCS[-1]))
+    C.helper('publish').schema_validate(schema,auto,'automation')
+    raw=fs.read(approval_ref); approval=C.decode(raw)
+    C.require(approval.get('schema')=='pkm-p3-execution-approval/v1' and approval.get('actor')=='user' and
+        approval.get('approved') is True and approval.get('phase')=='P3' and
+        isinstance(approval.get('user_request'),str) and approval['user_request'].strip(), 'execution_grant')
+    C.require(approval.get('wiki_root')==str(root) and approval.get('run')==run and approval.get('mode')=='manual', 'execution_scope')
+    C.require(auto['enabled'] is False and auto['jobs']['daily_compile']['enabled'] is False, 'manual_mode_only')
+    C.require(approval.get('source_scope')=='current_and_future_collected' and approval.get('formats')==['html','pdf'] and
+        approval.get('collector_id')=='4cff5b4f10ec', 'source_scope')
+    C.require(C.canonical(approval.get('model'))==C.canonical(C.MODEL) and C.canonical(approval.get('route'))==C.canonical(C.ROUTE), 'approval_model_route')
+    C.require(approval.get('cost_policy')=='no_cost_cap' and approval.get('validated_publication_authorized') is True and
+        approval.get('edit_freeze')=={'mode':'run','run':run}, 'publication_freeze_scope')
+    snapshots=approval.get('snapshots',{})
+    C.require(set(snapshots)==set((*C.DOCS,C.PROMPT,'_meta/automation.json')), 'governing_snapshot_set')
+    C.helper('publish').check_snapshots(fs,snapshots)
+    state=C.decode(fs.read(C.STATE))
+    C.helper('publish').schema_validate(schema,state,'compilation')
+    C.require(state['enabled'] is False and state['safety_block'] is False, 'safety_block_or_state_mode')
+    C.require(len({i['version_id'] for i in state['items']})==len(state['items']), 'duplicate_item')
+    C.require(all(t['status']=='committed' for t in state['transactions']), 'unresolved_transaction')
+    observed=now or datetime.now(timezone.utc)
+    C.require(observed.tzinfo is not None, 'timezone_required')
+    ctx=dict(root=root,fs=fs,run=run,auto=auto,schema=schema,state=state,synthetic=synthetic,
+        approval_ref=approval_ref,approval_sha256=C.sha(raw),approval=approval,
+        snapshots=dict(snapshots,**{approval_ref:C.sha(raw)}),
+        policy_sha256=snapshots['_meta/automation.json'],prompt_sha256=snapshots[C.PROMPT],
+        prompt=fs.read(C.PROMPT).decode(),model=dict(C.MODEL),route=dict(C.ROUTE),requested_scope=C.SCOPE,
+        wiki=[],now=observed)
+    def guard():
+        fresh=preflight(root=root,run=run,approval_ref=approval_ref,synthetic=synthetic,now=now)
+        C.require(fresh['approval_sha256']==ctx['approval_sha256'], 'approval_drift')
+        C.helper('publish').check_snapshots(fs,ctx['snapshots'])
+    ctx['guard']=guard
+    return ctx

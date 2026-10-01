@@ -1,0 +1,69 @@
+{
+  "schema": "pkm-p2-run-report/v1",
+  "run_id": "20260929T083140Z-p2-resume",
+  "finished_at": "2026-09-29T09:38:11.669704+00:00",
+  "result": "retryable_failed",
+  "user_approval": "_meta/runs/wiki/20260929T083140Z-p2-resume/approval.json",
+  "policy_revision": "pkm-html-knowledge/v2",
+  "prompt_revision": "wiki-compile/v2",
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning": "xhigh",
+    "fallback": false
+  },
+  "route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses",
+    "attested": "_meta/runs/wiki/20260929T083140Z-p2-resume/probe-route.json"
+  },
+  "diagnosis": {
+    "stream_probe_no_paper": {
+      "first_event_s": 113.4,
+      "completed": true,
+      "text": "STREAM_OK",
+      "ref": "probe-stream.json"
+    },
+    "failures": [
+      {
+        "vid": "2609.30830v1",
+        "attempt": 1,
+        "failed_at_s": 517.9,
+        "events": 371,
+        "code": "upstream_websocket_liveness_timeout"
+      },
+      {
+        "vid": "2609.30830v1",
+        "attempt": 2,
+        "failed_at_s": 592.6,
+        "code": "upstream_websocket_liveness_timeout"
+      },
+      {
+        "vid": "2609.31358v1",
+        "attempt": 1,
+        "failed_at_s": 597.5,
+        "code": "upstream_websocket_liveness_timeout"
+      }
+    ],
+    "conclusion": "codex-lb 프록시(10.10.1.244:2455)와 업스트림 모델 서버 사이 websocket keepalive ping timeout. 생성 델스트 스트림은 정상 수신 중이었고 로컬 마감(2400s)에 도달하지 않았다. 3회 모두 유사 시점(~520-600s)에서 프록시가 1011로 종료. 이전 세션 2회 실패(420s 로컬 타임아웃)와 구별된다."
+  },
+  "published_pages": 0,
+  "policy_changes_published": [
+    "_meta/automation.json",
+    "_meta/automation-contracts.schema.json",
+    "_meta/AUTOMATION.md",
+    "_meta/STATE-CONTRACTS.md",
+    "_meta/COMPILATION.md",
+    "README.md",
+    "index.md",
+    "_meta/prompts/wiki-compile.md",
+    "_meta/prompts/research-review.md"
+  ],
+  "before_images": [
+    "before-automation.json",
+    "before-automation-contracts.schema.json"
+  ],
+  "cost_usd": null,
+  "cost_status": "unobserved_not_zero",
+  "next_step": "프록시 websocket keepalive/idle 타임아웃 조정 또는 비스트리밍 경로 확인 후 신규 run에서 두 편 재시도. 동일 조건 재시도 금지(3회 관측으로 원인 확정)."
+}

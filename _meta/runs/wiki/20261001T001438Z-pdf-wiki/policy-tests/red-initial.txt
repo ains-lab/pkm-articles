@@ -1,0 +1,16 @@
+test_approved_v3_pdf_text_request (__main__.Contracts.test_approved_v3_pdf_text_request) ... FAIL
+
+======================================================================
+FAIL: test_approved_v3_pdf_text_request (__main__.Contracts.test_approved_v3_pdf_text_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests/test_contracts.py", line 53, in test_approved_v3_pdf_text_request
+    self.accepts(request())
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests/test_contracts.py", line 47, in accepts
+    self.assertFalse(errors, '\n'.join(str(e)[:600] for e in errors))
+AssertionError: [<ValidationError: "{'schema': 'pkm-compile-request/v3', 'policy_revision': 'pkm-html-pdf-text-knowledge/v3', 'contract_revision': 'pkm-contracts/v3', 'provider': 'codex-lb', 'model': 'gpt-6-astra', 'reasoning_effort': 'xhigh', 'fallback_allowed': False, 'source_format': 'pdf', 'source_path': 'raw/articles/synthetic/arxiv-2601.00001v1/source.pdf', 'source_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'source_approval_id': 'synthetic-approval-not-real', 'phase_execution_approved': True, 'phase_approval_ref': '_meta/runs/wiki/synthetic/approval.json', 'images': False, 'external_assets': False, 'pdf_analysis': True, 'input_mode': 'embedded_text_only', 'pdf_reading': {'mode': 'embedded_text_only', 'library': 'pypdf', 'environment': '.venv-pdf-reader', 'pdf_binary_transfer': False, 'images': False, 'ocr': False, 'external_assets': False, 'persistent_extraction': False, 'page_citation': 'physical_1_based'}, 'ocr': False, 'pdf_binary_transfer': False, 'persistent_extraction': False, 'cost_policy': 'no_cost_cap', 'cost_waiver_ref': '_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json'} is not valid under any of the given schemas">] is not false : {'schema': 'pkm-compile-request/v3', 'policy_revision': 'pkm-html-pdf-text-knowledge/v3', 'contract_revision': 'pkm-contracts/v3', 'provider': 'codex-lb', 'model': 'gpt-6-astra', 'reasoning_effort': 'xhigh', 'fallback_allowed': False, 'source_format': 'pdf', 'source_path': 'raw/articles/synthetic/arxiv-2601.00001v1/source.pdf', 'source_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'source_approval_id': 'synthetic-approval-not-real', 'phase_execution_approved': True, 'phase_approval_ref': '_meta/runs/wiki/synthetic/approval.json', 'images': False, 'external_assets
+
+----------------------------------------------------------------------
+Ran 1 test in 0.055s
+
+FAILED (failures=1)

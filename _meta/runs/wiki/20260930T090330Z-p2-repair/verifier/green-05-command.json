@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py"
+  ],
+  "exit_code": 0
+}

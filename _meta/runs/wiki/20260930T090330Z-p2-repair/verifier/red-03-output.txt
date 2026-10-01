@@ -1,0 +1,234 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_concise_cited_markdown_and_existing_wikilinks_accepted (__main__.DocumentTests.test_concise_cited_markdown_and_existing_wikilinks_accepted) ... FAIL
+test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) ... 
+  test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) (old='"title":') ... FAIL
+  test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) (old='"id": "C01"') ... FAIL
+test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) ... 
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='id', value='C02') ... FAIL
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='id', value='') ... FAIL
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='statement', value='') ... FAIL
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='statement', value=[]) ... FAIL
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='conditions', value=' ') ... FAIL
+  test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='conditions', value=None) ... FAIL
+test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) ... 
+  test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) (text='{"a":1,"a":2}') ... FAIL
+  test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) (text='{"title": "Synthetic verifier fixture", ') ... FAIL
+test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) ... 
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='---\nstatus: reviewed\n---\n## Synthetic analysis\n###') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='<!--\n## Synthetic analysis\n### C01\nC01: Synthetic ') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='```markdown\n## Synthetic analysis\n### C01\nC01: Syn') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='C01 lacks actual citations\nC01 lacks actual citati') ... FAIL
+  test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound') ... FAIL
+test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) ... 
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='title', value='  ') ... FAIL
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='read_scope', value=['']) ... FAIL
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='read_scope', value=[1]) ... FAIL
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='unread_scope', value=['Figures unreviewed', '', '']) ... FAIL
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='limitations', value=[]) ... FAIL
+  test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='limitations', value='  ') ... FAIL
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... ok
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... ok
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... ok
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ok
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... ok
+
+======================================================================
+FAIL: test_concise_cited_markdown_and_existing_wikilinks_accepted (__main__.DocumentTests.test_concise_cited_markdown_and_existing_wikilinks_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 189, in test_concise_cited_markdown_and_existing_wikilinks_accepted
+    self.assertTrue(report["passed"], report)
+AssertionError: False is not true : {'vid': '2609.00001v1', 'passed': False, 'checks': [{'check': 'result_object', 'ok': True, 'detail': ''}, {'check': 'completed', 'ok': True, 'detail': ''}, {'check': 'response_status_completed', 'ok': True, 'detail': ''}, {'check': 'no_error', 'ok': True, 'detail': ''}, {'check': 'no_incomplete_details', 'ok': True, 'detail': ''}, {'check': 'response_model_gpt-6-astra', 'ok': True, 'detail': ''}, {'check': 'cost_nonblocking', 'ok': True, 'detail': 'Observed or unknown cost does not gate verification'}, {'check': 'source_sha256_match', 'ok': True, 'detail': ''}, {'check': 'single_json_object', 'ok': True, 'detail': ''}, {'check': 'title_present', 'ok': True, 'detail': ''}, {'check': 'version_id_match', 'ok': True, 'detail': ''}, {'check': 'main_text_complete', 'ok': True, 'detail': ''}, {'check': 'read_scope_nonempty', 'ok': True, 'detail': ''}, {'check': 'unread_scope_flags_unreviewed', 'ok': True, 'detail': ''}, {'check': 'claims_8_to_14', 'ok': True, 'detail': ''}, {'check': 'claim_kinds_valid', 'ok': True, 'detail': ''}, {'check': 'body_90_150_lines', 'ok': False, 'detail': ''}, {'check': 'body_has_evidence_table', 'ok': True, 'detail': ''}, {'check': 'anchors_exist_in_source', 'ok': True, 'detail': ''}, {'check': 'quotes_verbatim_in_source', 'ok': True, 'detail': ''}], 'document': {'title': 'Synthetic verifier fixture', 'version_id': '2609.00001v1', 'main_text_complete': True, 'read_scope': ['S1', 'S2'], 'unread_scope': ['Figures not reviewed', 'Equations not reviewed', 'Appendix not reviewed'], 'limitations': ['Synthetic evidence only; no scientific validation.'], 'claims': [{'id': 'C01', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 1.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C02', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 2.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C03', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 3.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C04', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 4.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C05', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 5.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C06', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 6.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C07', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 7.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}, {'id': 'C08', 'kind': 'author_report', 'statement': 'Synthetic bounded claim 8.', 'conditions': 'Only the synthetic fixture, not a scientific result.', 'anchor': 'S1', 'quote': 'Synthetic evidence supports a bounded claim.'}], 'markdown_body': 'C01: Synthetic bounded claim 1. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC02: Synthetic bounded claim 2. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC03: Synthetic bounded claim 3. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC04: Synthetic bounded claim 4. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC05: Synthetic bounded claim 5. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC06: Synthetic bounded claim 6. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC07: Synthetic bounded claim 7. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\nC08: Synthetic bounded claim 8. ^[raw/articles/4cff5b4f10ec/arxiv-2609.00001v1/source.html#S1]\n[[entities/2609.00002v1|Related]]'}}
+
+======================================================================
+FAIL: test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) (old='"title":')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 152, in test_duplicate_keys_in_valid_document_rejected
+    self.assertFalse(report["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) (old='"id": "C01"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 152, in test_duplicate_keys_in_valid_document_rejected
+    self.assertFalse(report["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='id', value='C02')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='statement', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='statement', value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='conditions', value=' ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) (key='conditions', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 167, in test_rejects_invalid_and_duplicate_claim_fields
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) (text='{"a":1,"a":2}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 144, in test_rejects_invalid_json_documents
+    self.assertIsNone(report["document"])
+AssertionError: {'a': 2} is not None
+
+======================================================================
+FAIL: test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) (text='{"title": "Synthetic verifier fixture", ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 143, in test_rejects_invalid_json_documents
+    self.assertFalse(report["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='---\nstatus: reviewed\n---\n## Synthetic analysis\n###')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='<!--\n## Synthetic analysis\n### C01\nC01: Synthetic ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='```markdown\n## Synthetic analysis\n### C01\nC01: Syn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='C01 lacks actual citations\nC01 lacks actual citati')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) (markdown='## Synthetic analysis\n### C01\nC01: Synthetic bound')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 181, in test_rejects_unreferenced_claims_fake_citations_and_frontmatter
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='title', value='  ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='read_scope', value=[''])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='read_scope', value=[1])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='unread_scope', value=['Figures unreviewed', '', ''])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='limitations', value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) (key='limitations', value='  ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 160, in test_rejects_wrong_vid_empty_scopes_and_limitations
+    self.assertFalse(self.document_report(document)["passed"])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.243s
+
+FAILED (failures=24)

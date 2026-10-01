@@ -1,0 +1,283 @@
+{
+  "schema": "pkm-p3-implementation-final-verification/v1",
+  "observed_at": "2026-10-01T03:32:16.276089+00:00",
+  "verdict": {
+    "single_note_runtime_synthetic": "PASS",
+    "live_execution": "HOLD",
+    "cron_registration_activation": "NOT_PERFORMED",
+    "full_p3_concept_updates_and_weekly_lint": "NOT_IMPLEMENTED"
+  },
+  "test_result": {
+    "schema": "pkm-p3-synthetic-tests/v1",
+    "observed_at": "2026-10-01T03:26:42.775485+00:00",
+    "label": "final-regression-01",
+    "modules": [
+      "test_common",
+      "test_daily",
+      "test_content",
+      "test_publication",
+      "test_integration",
+      "test_contention"
+    ],
+    "tests_run": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "snapshots": {
+      "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+      "daily.py": "9778ce0f28ef475aba97439e4d43e446d3d4bf914f1e736506a32705efd25bc8",
+      "content.py": "ddd89bc0d19b92bf6e8c457c0c70f3d654ad8517ff5e69e0e67880a9ccf1cd95",
+      "publication.py": "c660378062b7ad6fad28772c1a5d2bd6aba78bdd1314dd579ea11d11d5b68435",
+      "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+      "test_common.py": "089d86ca67b8c1280a499bde9b05ec3760ac542d5c327567a5ca48f9eb9c7218",
+      "test_daily.py": "399f54f9efab6bfc3256a29b176f3b1a4296b48ce7de3df11d2a129a874788f1",
+      "test_content.py": "58f702d5c5b9886a6ea2caa5ace575ee7df17b7cc428368c575dd1fedbd13078",
+      "test_publication.py": "266da00de777a5862478e2b1beaecccc869e4365f32903c4393956ff656927da",
+      "test_integration.py": "05aa1bd4e29beef50605dfedd437894bbe3ca7aea23d6d8f6ec3007d10eb9015",
+      "test_contention.py": "34f0bb0b7ba43358b186ee4e0ca6864fed189d8dd673664d70ab8cdd56fc3722"
+    },
+    "observed_boundaries": {
+      "network_attempts": 0,
+      "real_source_body_attempts": 0
+    },
+    "synthetic_only": true
+  },
+  "legacy_regression": [
+    {
+      "name": "legacy-policy",
+      "tests_run": 132,
+      "exit_code": 0,
+      "path": "regression/legacy-policy-01.json"
+    },
+    {
+      "name": "legacy-pdf",
+      "tests_run": 107,
+      "exit_code": 0,
+      "path": "regression/legacy-pdf-01.json"
+    },
+    {
+      "name": "legacy-publication",
+      "tests_run": 9,
+      "exit_code": 0,
+      "path": "regression/legacy-publication-01.json"
+    }
+  ],
+  "observed_test_executions": 311,
+  "preserved": {
+    "baseline_files": 87,
+    "byte_identical_files": 86,
+    "unexpected_changes": [],
+    "log_prefix_bytes": 81219,
+    "log_prefix_unchanged": true,
+    "log_append_bytes": 2190
+  },
+  "sources": [
+    {
+      "version_id": "2509.09215v3",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+      "metadata_sha256": "5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94"
+    },
+    {
+      "version_id": "2605.09027v3",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab",
+      "metadata_sha256": "9c5b7c71583ad2fdca0caa45aff13d77d188a09565e604151c06da028298f86c"
+    },
+    {
+      "version_id": "2608.29596v2",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+      "metadata_sha256": "edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59"
+    },
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7"
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "status": "published_draft",
+      "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "status": "published_draft",
+      "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "status": "published_draft",
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "status": "published_draft",
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb"
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "metadata_sha256": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e"
+    },
+    {
+      "version_id": "2609.34790v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "079fd74b7e219228d332f3239c03e65f8302cb1f4b7fe620eecdf0ea0bcddf94",
+      "metadata_sha256": "20f6bc0e3cae5ecc6dea1e0a933c284c062958ccc9492a5c1a5f8290045cee6c"
+    },
+    {
+      "version_id": "2609.35088v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c",
+      "metadata_sha256": "efdc3fd3b1472de522c249edab3f3bc112bb793f691f17be40c56429cf4c491e"
+    },
+    {
+      "version_id": "2609.35117v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+      "metadata_sha256": "ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d"
+    },
+    {
+      "version_id": "2609.35366v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "08ac9572cbc4de7377888449d7397566b46ee546d0cd5ffbfb158c138fd6c6c0",
+      "metadata_sha256": "229c581ae157accff26c1734c4569f12c40fb6c84a97d805b9b331f15d9d0f7c"
+    },
+    {
+      "version_id": "2609.35576v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+      "metadata_sha256": "9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667"
+    },
+    {
+      "version_id": "2609.35596v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+      "metadata_sha256": "31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0"
+    },
+    {
+      "version_id": "2609.35760v1",
+      "format": "html",
+      "status": "blocked_approval",
+      "source_sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+      "metadata_sha256": "5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3"
+    }
+  ],
+  "source_count": 20,
+  "source_formats": {
+    "html": 18,
+    "pdf": 2
+  },
+  "compilation_statuses": {
+    "blocked_approval": 16,
+    "published_draft": 4
+  },
+  "knowledge_pages": 8,
+  "current_code_matches_test_snapshot": true,
+  "python_ast_files": 11,
+  "trailing_whitespace": [],
+  "git_diff_check": "exit 0",
+  "live_schema_validation": [
+    "automation",
+    "compilation"
+  ],
+  "cron_observation": {
+    "job_ids": [
+      "05ec97bfa8d5",
+      "4cff5b4f10ec",
+      "c5548510672c"
+    ],
+    "collector": {
+      "id": "4cff5b4f10ec",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 15 * * *",
+        "display": "0 15 * * *"
+      },
+      "skills": [
+        "arxiv"
+      ],
+      "model": "gpt-6-astra",
+      "provider": "codex-lb",
+      "reasoning_effort": "xhigh",
+      "workdir": "/home/ainsdev/wiki/pkm-articles",
+      "deliver": "local",
+      "next_run_at": "2026-10-01T15:00:00+00:00"
+    },
+    "collector_prompt_sha256": "dff8037821fd6bd22b5dfb9beea04fcda6be49b4a21e6635e805324242485416"
+  },
+  "automation_enabled": false,
+  "p3_execution_authorized": false,
+  "daily_cron_id": null,
+  "collector_lock_released": true,
+  "daily_lock_absent": true,
+  "review": {
+    "original": "REVIEW.md",
+    "parent_resolution": "REVIEW-RESOLUTION.md",
+    "independent_postfix_review": false
+  },
+  "verifier_correction": "verification-attempt-01.json (PDF filename ordering assertion; corrected to set equality, sources unchanged)",
+  "not_performed": [
+    "real paper interpretation or transfer",
+    "live model requests",
+    "new live knowledge publication",
+    "installation",
+    "cron changes",
+    "external notification",
+    "commit/push",
+    "external CI or global typechecker"
+  ]
+}

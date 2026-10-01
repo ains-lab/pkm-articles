@@ -1,0 +1,158 @@
+{
+  "observed_at": "2026-10-01T07:06:32.205676+00:00",
+  "test_snapshots_verified": 13,
+  "final_suite_count": 93,
+  "scheduler_supplemental_count": 13,
+  "local_document_links_checked": 37,
+  "diff_check_exit": 0,
+  "links": [
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "scope-approval.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "../20261001T053212Z-p3-first-operation/daily-report.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "retry-approval.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "runtime/parent-evidence/parent-final-full-02/counts.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "runtime/parent-evidence/scheduler-supplemental-01/counts.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "registration-active.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "runtime-manifest.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "scheduled/execution-approval.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "preflight.json"
+    },
+    {
+      "document": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md",
+      "link": "final-verification.json"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/report.json"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/inventory-verification.json"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json"
+    },
+    {
+      "document": "index.md",
+      "link": "raw/articles/4cff5b4f10ec/index.md"
+    },
+    {
+      "document": "index.md",
+      "link": "raw/papers/"
+    },
+    {
+      "document": "index.md",
+      "link": "raw/articles/"
+    },
+    {
+      "document": "index.md",
+      "link": "raw/transcripts/"
+    },
+    {
+      "document": "index.md",
+      "link": "raw/assets/"
+    },
+    {
+      "document": "index.md",
+      "link": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md"
+    },
+    {
+      "document": "index.md",
+      "link": "docs/techblog/hermes-api-gateway-workdir-assoc/ARCHIFY.md"
+    },
+    {
+      "document": "index.md",
+      "link": "docs/lectures/5w/paper-collection.md"
+    },
+    {
+      "document": "index.md",
+      "link": "docs/lectures/5w/paper-collection-cron.md"
+    },
+    {
+      "document": "index.md",
+      "link": "docs/lectures/6w/README.md"
+    },
+    {
+      "document": "index.md",
+      "link": "README.md"
+    },
+    {
+      "document": "index.md",
+      "link": "SCHEMA.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/COMPILATION.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/AUTOMATION.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/report.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/preflight.json"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/P3-PREPARATION.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/automation.json"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/STATE-CONTRACTS.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/QUERY-FEEDBACK.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/RESEARCH-REVIEW.md"
+    },
+    {
+      "document": "index.md",
+      "link": "_meta/RESEARCH-PROFILE.md"
+    },
+    {
+      "document": "index.md",
+      "link": "AGENTS.md"
+    },
+    {
+      "document": "index.md",
+      "link": "log.md"
+    }
+  ]
+}

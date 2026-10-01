@@ -1,0 +1,9 @@
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.271s
+
+OK

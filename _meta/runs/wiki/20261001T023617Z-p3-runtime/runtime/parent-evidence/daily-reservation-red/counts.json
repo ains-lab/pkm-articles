@@ -1,0 +1,24 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T02:46:15.552087+00:00",
+  "label": "daily-reservation-red",
+  "modules": [
+    "test_daily"
+  ],
+  "tests_run": 2,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "f7657935afeec44c5dd86f1acc4bf51ea22a50a7a3bb3e36c12bb6bd0f38b76f",
+    "test_daily.py": "d6962ad44cf0a51848a32bc37dfa04558e8f1f118b8806c056d9c797cea0986e"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

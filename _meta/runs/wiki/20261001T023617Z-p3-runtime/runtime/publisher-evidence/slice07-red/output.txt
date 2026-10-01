@@ -1,0 +1,14 @@
+test_authority_revocation_after_basis_prevents_wal_creation (test_publication.PublicationTests.test_authority_revocation_after_basis_prevents_wal_creation) ... FAIL
+
+======================================================================
+FAIL: test_authority_revocation_after_basis_prevents_wal_creation (test_publication.PublicationTests.test_authority_revocation_after_basis_prevents_wal_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 396, in test_authority_revocation_after_basis_prevents_wal_creation
+    self.assertFalse((self.f.root / (self.f.prefix+'-publish-journal.json')).exists())
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.292s
+
+FAILED (failures=1)

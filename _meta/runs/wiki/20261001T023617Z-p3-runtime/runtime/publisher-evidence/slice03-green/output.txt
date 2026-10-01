@@ -1,0 +1,8 @@
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ok
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ok
+test_review_requires_all_supported_claims_and_body (test_publication.PublicationTests.test_review_requires_all_supported_claims_and_body) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.510s
+
+OK

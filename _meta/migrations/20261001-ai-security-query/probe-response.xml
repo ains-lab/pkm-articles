@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/9Al23ypf0K98P8Ef0GtitakROLs</id>
+  <title>arXiv Query: search_query=( (ti:"large language model" OR abs:"large language model") OR (ti:"language model" OR abs:"language model") OR (ti:"LLM" OR abs:"LLM") OR (ti:"LLMs" OR abs:"LLMs") OR (ti:"foundation model" OR abs:"foundation model") OR (ti:"generative AI" OR abs:"generative AI") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"LLM agent" OR abs:"LLM agent") OR (ti:"agentic AI" OR abs:"agentic AI") OR (ti:"Model Context Protocol" OR abs:"Model Context Protocol") OR (ti:"machine learning" OR abs:"machine learning") OR (ti:"deep learning" OR abs:"deep learning") OR (ti:"neural network" OR abs:"neural network") OR (ti:"vision language model" OR abs:"vision language model") OR (ti:"diffusion model" OR abs:"diffusion model") ) AND ( (ti:"prompt injection" OR abs:"prompt injection") OR (ti:"indirect prompt injection" OR abs:"indirect prompt injection") OR (ti:"jailbreak" OR abs:"jailbreak") OR (ti:"jailbreaking" OR abs:"jailbreaking") OR (ti:"guardrail bypass" OR abs:"guardrail bypass") OR (ti:"data poisoning" OR abs:"data poisoning") OR (ti:"model poisoning" OR abs:"model poisoning") OR (ti:"backdoor attack" OR abs:"backdoor attack") OR (ti:"RAG poisoning" OR abs:"RAG poisoning") OR (ti:"memory poisoning" OR abs:"memory poisoning") OR (ti:"model extraction" OR abs:"model extraction") OR (ti:"model stealing" OR abs:"model stealing") OR (ti:"membership inference" OR abs:"membership inference") OR (ti:"model inversion" OR abs:"model inversion") OR (ti:"training data extraction" OR abs:"training data extraction") OR (ti:"data exfiltration" OR abs:"data exfiltration") OR (ti:"tool poisoning" OR abs:"tool poisoning") OR (ti:"tool hijacking" OR abs:"tool hijacking") OR (ti:"privilege escalation" OR abs:"privilege escalation") OR (ti:"authorization bypass" OR abs:"authorization bypass") OR (ti:"confused deputy" OR abs:"confused deputy") OR (ti:"least privilege" OR abs:"least privilege") OR (ti:"information flow control" OR abs:"information flow control") OR (ti:"capability-based security" OR abs:"capability-based security") OR (ti:"sandbox escape" OR abs:"sandbox escape") OR (ti:"prompt injection defense" OR abs:"prompt injection defense") OR (ti:"adversarial example" OR abs:"adversarial example") OR (ti:"evasion attack" OR abs:"evasion attack") OR (ti:"adversarial robustness" OR abs:"adversarial robustness") OR (ti:"certified robustness" OR abs:"certified robustness") OR (ti:"supply chain attack" OR abs:"supply chain attack") OR (ti:"denial of service" OR abs:"denial of service") OR (ti:"denial of wallet" OR abs:"denial of wallet") OR (ti:"sponge attack" OR abs:"sponge attack") )&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-01T08:02:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:%22large+language+model%22+OR+abs:%22large+language+model%22)+OR+((ti:%22language+model%22+OR+abs:%22language+model%22)+OR+((ti:%22LLM%22+OR+abs:%22LLM%22)+OR+((ti:%22LLMs%22+OR+abs:%22LLMs%22)+OR+((ti:%22foundation+model%22+OR+abs:%22foundation+model%22)+OR+((ti:%22generative+AI%22+OR+abs:%22generative+AI%22)+OR+((ti:%22AI+agent%22+OR+abs:%22AI+agent%22)+OR+((ti:%22LLM+agent%22+OR+abs:%22LLM+agent%22)+OR+((ti:%22agentic+AI%22+OR+abs:%22agentic+AI%22)+OR+((ti:%22Model+Context+Protocol%22+OR+abs:%22Model+Context+Protocol%22)+OR+((ti:%22machine+learning%22+OR+abs:%22machine+learning%22)+OR+((ti:%22deep+learning%22+OR+abs:%22deep+learning%22)+OR+((ti:%22neural+network%22+OR+abs:%22neural+network%22)+OR+((ti:%22vision+language+model%22+OR+abs:%22vision+language+model%22)+OR+(ti:%22diffusion+model%22+OR+abs:%22diffusion+model%22)))))))))))))))+AND+((ti:%22prompt+injection%22+OR+abs:%22prompt+injection%22)+OR+((ti:%22indirect+prompt+injection%22+OR+abs:%22indirect+prompt+injection%22)+OR+((ti:%22jailbreak%22+OR+abs:%22jailbreak%22)+OR+((ti:%22jailbreaking%22+OR+abs:%22jailbreaking%22)+OR+((ti:%22guardrail+bypass%22+OR+abs:%22guardrail+bypass%22)+OR+((ti:%22data+poisoning%22+OR+abs:%22data+poisoning%22)+OR+((ti:%22model+poisoning%22+OR+abs:%22model+poisoning%22)+OR+((ti:%22backdoor+attack%22+OR+abs:%22backdoor+attack%22)+OR+((ti:%22RAG+poisoning%22+OR+abs:%22RAG+poisoning%22)+OR+((ti:%22memory+poisoning%22+OR+abs:%22memory+poisoning%22)+OR+((ti:%22model+extraction%22+OR+abs:%22model+extraction%22)+OR+((ti:%22model+stealing%22+OR+abs:%22model+stealing%22)+OR+((ti:%22membership+inference%22+OR+abs:%22membership+inference%22)+OR+((ti:%22model+inversion%22+OR+abs:%22model+inversion%22)+OR+((ti:%22training+data+extraction%22+OR+abs:%22training+data+extraction%22)+OR+((ti:%22data+exfiltration%22+OR+abs:%22data+exfiltration%22)+OR+((ti:%22tool+poisoning%22+OR+abs:%22tool+poisoning%22)+OR+((ti:%22tool+hijacking%22+OR+abs:%22tool+hijacking%22)+OR+((ti:%22privilege+escalation%22+OR+abs:%22privilege+escalation%22)+OR+((ti:%22authorization+bypass%22+OR+abs:%22authorization+bypass%22)+OR+((ti:%22confused+deputy%22+OR+abs:%22confused+deputy%22)+OR+((ti:%22least+privilege%22+OR+abs:%22least+privilege%22)+OR+((ti:%22information+flow+control%22+OR+abs:%22information+flow+control%22)+OR+((ti:%22capability-based+security%22+OR+abs:%22capability-based+security%22)+OR+((ti:%22sandbox+escape%22+OR+abs:%22sandbox+escape%22)+OR+((ti:%22prompt+injection+defense%22+OR+abs:%22prompt+injection+defense%22)+OR+((ti:%22adversarial+example%22+OR+abs:%22adversarial+example%22)+OR+((ti:%22evasion+attack%22+OR+abs:%22evasion+attack%22)+OR+((ti:%22adversarial+robustness%22+OR+abs:%22adversarial+robustness%22)+OR+((ti:%22certified+robustness%22+OR+abs:%22certified+robustness%22)+OR+((ti:%22supply+chain+attack%22+OR+abs:%22supply+chain+attack%22)+OR+((ti:%22denial+of+service%22+OR+abs:%22denial+of+service%22)+OR+((ti:%22denial+of+wallet%22+OR+abs:%22denial+of+wallet%22)+OR+(ti:%22sponge+attack%22+OR+abs:%22sponge+attack%22))))))))))))))))))))))))))))))))))&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>9824</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.28013v4</id>
+    <title>Kill-Chain Canaries: Stage-Level Tracking of Prompt Injection Across Attack Surfaces and Five Production LLMs</title>
+    <updated>2026-09-30T17:29:30Z</updated>
+    <link href="https://arxiv.org/abs/2603.28013v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.28013v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-agent LLM systems now read documents, web pages and tool results on behalf of users, yet their resistance to prompt injection is usually reported as one number: did the attack succeed? We introduce a kill-chain canary method that plants a unique token in every injected payload and records the furthest of four stages it reaches (Exposed -&gt; Persisted -&gt; Relayed -&gt; Executed), across 950 runs, five production LLMs, six attack surfaces, and five defense conditions. Exposure was 100% among runs that called the tool; the outcomes differ downstream. Claude Haiku 4.5 and Claude Sonnet 4.5 executed none of their 164 text-surface attacks, and in the text relay the canary token never appeared in a memory write (0/40); GPT-4o-mini executed 53% of its attacks. Four findings follow. (1) A Claude writer kept the canary token out of shared memory in every relay run we report; one cross-model pairing (Claude writer, GPT-4o-mini reader, n = 3) is consistent with this protecting the reader, and other pairings were not tested. (2) As readers, the Claude models executed 0/40 raw pre-seeded injections, but Claude Haiku 4.5 executed 2/3 injections relayed by GPT-4o-mini; whether relayed injections are harder to refuse than raw ones is an open question. (3) DeepSeek Chat went from 0/24 on pre-seeded memory to 8/8 on tool results, scenarios that also differ in task and payload format; white-text PDF payloads, invisible on the rendered page, succeeded at least as often as visible ones. (4) pi_detector and write_filter failed on channels they do not inspect, spotlighting failed on content it wraps, and write_filter blocked the PDF relay but not the text relay, a difference we cannot explain. Code and run logs are publicly released: https://github.com/KevinChunye/prompt_injection</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-30T04:07:18Z</published>
+    <arxiv:comment>12 pages, 6 figures, 6 tables. Code: https://github.com/KevinChunye/prompt_injection</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Haochuan Kevin Wang</name>
+    </author>
+    <author>
+      <name>Zechen Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.39902v1</id>
+    <title>CodeMimicry: Exploiting Safety Generalization Lag in Large Language Models via Structured Code Completion</title>
+    <updated>2026-09-30T15:02:14Z</updated>
+    <link href="https://arxiv.org/abs/2609.39902v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.39902v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models have achieved remarkable capabilities across diverse domains, yet their safety alignment remains vulnerable to jailbreak attacks. In this work, we identify a previously underexplored failure mode - safety generalization lag - where alignment trained predominantly on natural language fails to transfer to the code domain. We show that this lag induces a code-completion blind spot, allowing malicious intent embedded within syntactically valid code to evade safety mechanisms. To exploit this vulnerability, we propose CodeMimicry, a fully automated black-box jailbreak framework that generates structured, object-oriented code prompts to induce harmful outputs via code completion. Experiments on 8 state-of-the-art commercial LLMs demonstrate that CodeMimicry achieves a 96.25% attack success rate with 1.51 queries on average, significantly outperforming both template-based and optimization-based baselines. Beyond empirical performance, we provide a mechanistic analysis of code-based jailbreaks through latent space representations, including projection onto refusal-related directions and activation steering. This analysis offers an explanation of how CodeMimicry bypasses safety mechanisms in code-related domains. Our findings reveal a weakness in current safety alignment and highlight the need for robust alignments in structured domains such as code.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T15:02:14Z</published>
+    <arxiv:comment>This paper will be accepted at NeurIPS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Zhen Liang</name>
+    </author>
+    <author>
+      <name>Hai Huang</name>
+    </author>
+    <author>
+      <name>Wentao Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.13478v2</id>
+    <title>BadEngram: Backdoor Attack on Gated Memory Components in LLMs</title>
+    <updated>2026-09-30T14:46:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.13478v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.13478v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To expand open-weight models' capacity without proportionally increasing computation, recent architectures incorporate gated parametric memory that retrieves learned values and injects them into intermediate representations. One representative design is Engram, which combines deterministic n-gram lookup with context-dependent gating over large learned memory tables. Despite these efficiency benefits, such modules create a distinct attack surface: their parameters can be modified independently of the backbone while directly shaping its computation. We introduce BadEngram, a post-training attack that exploits this surface to implant persistent, trigger-dependent behavior while leaving conventional backbone weights and the execution graph unchanged. We first establish the attack's feasibility and causally characterize its mechanism in a controlled Engram model, where BadEngram achieves 96.6% ASR on triggered inputs while limiting false activation on matched trigger-free inputs to 0.1% and preserving 99.6% clean accuracy. Replacing the retrieved memory values with their clean counterparts or closing the memory gates reduces ASR to at most 0.32%, confirming that the backdoor is expressed through the gated-memory pathway. We then test whether this vulnerability extends to production scale in Qwen3.8-Flash-Next's native Per-Layer Embedding subsystem. Using independently trained checkpoints for the two benchmarks, BadEngram achieves 47.8% ASR on HarmBench and 64.0% on AdvBench, while dormant-condition ASR remains 0.9% and 0.0%, respectively. These results identify native gated-memory parameters as a security-critical part of the model whose integrity cannot be inferred from an unchanged backbone.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T19:48:59Z</published>
+    <arxiv:comment>Submitted to ICLR 2027</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ariel Fogel</name>
+    </author>
+    <author>
+      <name>Omer Hofman</name>
+    </author>
+    <author>
+      <name>Eilon Cohen</name>
+    </author>
+    <author>
+      <name>Roman Vainshtein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.18411v2</id>
+    <title>The Verifiable Action Card: Trustworthy Human-in-the-Loop Control for Secure Autonomous Agents</title>
+    <updated>2026-09-30T14:38:27Z</updated>
+    <link href="https://arxiv.org/abs/2609.18411v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.18411v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic browsers can execute security-sensitive actions under a user's authenticated session, making indirect prompt injection and deceptive confirmation interfaces a direct threat to action integrity. Existing human-in-the-loop (HITL) safeguards are insufficient when the approval prompt itself can be influenced by untrusted page content or model-generated text. We present the \emph{Verifiable Action Card} (VAC), an architectural defence that reconstructs approval information from the ground-truth pending browser action and trusted intent provenance, renders it out-of-band in the trusted browser chrome, and binds approval to the exact action re-verified at dispatch. VAC combines provenance fencing, a ground-truth action descriptor, default-deny confirmation, provenance-aware risk gating, and execution binding. We implement VAC in a complete agentic browser and evaluate it on a 24-scenario benchmark covering confused-deputy attacks, Lies-in-the-Loop dialog forging, indirect prompt injection, adaptive action substitution, provenance evasion, and legitimate tasks. Across the evaluated LLMs, attack success without VAC ranges from $68\%$ to $100\%$, whereas VAC reduces attack success to $0\%$ on every model, with $78\%$ legitimate-task completion and a $0\%$ false-block rate. These results show that grounding approval in the action that will actually execute provides architectural protection against security failures that prompt-level defences and conventional HITL confirmation cannot reliably prevent.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-16T10:06:24Z</published>
+    <arxiv:comment>18 Pages, double coloumn format</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Hasnain Irshad</name>
+    </author>
+    <author>
+      <name>Anam Mughees</name>
+    </author>
+    <author>
+      <name>Neelam Mughees</name>
+    </author>
+    <author>
+      <name>Abdullah Mughees</name>
+    </author>
+    <author>
+      <name>Imtiaz Ali Soomro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.20641v2</id>
+    <title>Trusted Weights, Treacherous Optimizations? Optimization-Triggered Backdoor Attacks on LLMs</title>
+    <updated>2026-09-30T13:30:00Z</updated>
+    <link href="https://arxiv.org/abs/2605.20641v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.20641v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inference optimization aims to minimize the latency and resource consumption of LLM inference while preserving output quality, making large-scale deployment practical and cost-effective. However, optimized execution can introduce small numerical inconsistencies from the original model. We reveal that this inconsistency not only causes the model's outputs to diverge, but more critically can introduce hidden backdoors. The backdoor remains dormant under standard unoptimized execution and is activated only when inference optimization is enabled, allowing it to evade existing backdoor detection pipelines. We first introduce the Input-Specific Optimization Backdoor (ISOB) to demonstrate that optimization-induced differences can cause wrong predictions. However, ISOB remains input-specific and cannot establish a universal optimization-triggered backdoor. To overcome this limitation, we design the Universal Optimization Backdoor (UOB). The backdoored model stays benign under unoptimized execution but activates when inference optimization is enabled. We conduct extensive experiments across seven mainstream open-source LLMs, four tasks, and three optimization backends. UOB reaches up to 100\% attack success while largely preserving clean accuracy. To mitigate this vulnerability, we design three defense methods that reduce the backdoor ASR to at most 0.02 while preserving clean accuracy. These results reveal inference optimization as a new LLM security attack surface and motivate defenses against test-deployment disagreement.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-20T02:55:56Z</published>
+    <arxiv:comment>27 pages, 6 figures; v2 revised discussions</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yifei Wang</name>
+    </author>
+    <author>
+      <name>Yida Yang</name>
+    </author>
+    <author>
+      <name>Tianlin Li</name>
+    </author>
+    <author>
+      <name>Xiaohan Zhang</name>
+    </author>
+    <author>
+      <name>Xiaoyu Zhang</name>
+    </author>
+    <author>
+      <name>Li Pan</name>
+    </author>
+  </entry>
+</feed>

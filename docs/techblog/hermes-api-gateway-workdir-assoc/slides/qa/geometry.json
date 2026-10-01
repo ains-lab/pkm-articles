@@ -1,0 +1,53 @@
+{
+  "artifact_sha256": "c54043b56d1f7140c3f70d1334352a349d5fae3bfbbd1f001a00d0f28fbff393",
+  "lineage": {
+    "script_matches_file": true,
+    "font_loaded": true
+  },
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "mode": "presentation",
+      "checkedSlides": 70,
+      "checkedSvgText": 152,
+      "issues": [],
+      "fonts": "loaded"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "presentation",
+      "checkedSlides": 70,
+      "checkedSvgText": 152,
+      "issues": [],
+      "fonts": "loaded"
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "mode": "reading",
+      "checkedSlides": 70,
+      "checkedSvgText": 152,
+      "issues": [],
+      "fonts": "loaded"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "mode": "reading",
+      "checkedSlides": 70,
+      "checkedSvgText": 152,
+      "issues": [],
+      "fonts": "loaded"
+    }
+  ]
+}

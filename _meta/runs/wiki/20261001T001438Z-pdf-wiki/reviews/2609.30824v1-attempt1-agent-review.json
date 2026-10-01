@@ -1,0 +1,230 @@
+{
+  "schema": "pkm-pdf-agent-evidence-review/v1",
+  "actor": "agent",
+  "reviewer": "Hermes parent agent; all-claim contextual excerpts and generated body reviewed, not independent whole-paper reread; no visual, experimental or human review",
+  "reviewed_at": "2026-10-01T02:23:35.719269+00:00",
+  "version_id": "2609.30824v1",
+  "passed": true,
+  "human_review_ref": null,
+  "result_sha256": "c420ab64a89be7ac1120c3a587399dc3b6d8ab4ab044ac34ad639030e07ab446",
+  "mechanical_report_sha256": "52f26e8cd7a403ef805e0667c329fb296864b9e0d4fd04373baf2dfaef8f79c6",
+  "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+  "approval_sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+  "policy_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+  "prompt_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+  "requested_scope": "manual PDF embedded-text complete",
+  "read_scope": [
+    "page=1",
+    "page=2",
+    "page=3",
+    "page=4",
+    "page=5",
+    "page=6",
+    "page=7",
+    "page=8",
+    "page=9"
+  ],
+  "unread_scope": [
+    "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+    "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+    "그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.",
+    "참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다."
+  ],
+  "evidence_scope": [
+    "page=2",
+    "page=3",
+    "page=4",
+    "page=5",
+    "page=6",
+    "page=7",
+    "page=8"
+  ],
+  "reviewed_claim_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "anchor": "page=2",
+      "quote_sha256": "ee8466e014929c7a77edc4c666de5d58c0b91c0c13eda35ee9d0909b4738e48d",
+      "verdict": "supported",
+      "rationale": "page 2는 동일 권한 관계의 ACL/capability 관점을 비교해 개방형·일시적 에이전트 위임의 설계상 이점을 주장한다. 측정된 우월성으로 표시하지 않는다."
+    },
+    {
+      "id": "C02",
+      "anchor": "page=2",
+      "quote_sha256": "88b32f8aab17f4ff2df67e7e00a2f7558d0f5e51baced46f109a3c3f4418b8c4",
+      "verdict": "supported",
+      "rationale": "page 2는 directory 신뢰가 DID-agent 결합 신뢰에 일부 이전된다고 명시한다. 공개키 제어권과 신뢰 기반 제거를 혼동하지 않는다."
+    },
+    {
+      "id": "C03",
+      "anchor": "page=3",
+      "quote_sha256": "db148c2b5f970156f381f324740917674ac631f39a48a59ce95d4e699b97f91c",
+      "verdict": "supported",
+      "rationale": "page 3는 서명 JSON의 신원·grantor·자원·제약을 직접 열거한다. 서명 진위와 업무 제약 판정은 별도로 기술된다."
+    },
+    {
+      "id": "C04",
+      "anchor": "page=3",
+      "quote_sha256": "d8fca4a1d4d70fa754711b42cb781164344b711d5a6bcccf944b46bdd135f1de",
+      "verdict": "supported",
+      "rationale": "page 3의 random-string 서명 challenge-response와 a priori public key를 확인했다. can be asked라는 선택적 표현을 의무 적용으로 승격하지 않는다."
+    },
+    {
+      "id": "C05",
+      "anchor": "page=3",
+      "quote_sha256": "1040a88339c0f77d9e44b0ed96c1eecac878b9f1a5de33d3defc215c3a1107ea",
+      "verdict": "supported",
+      "rationale": "page 3는 상위 grant와 체인의 비확대를 요구하며 같은 페이지 각주가 domain-specific 판정을 명시한다."
+    },
+    {
+      "id": "C06",
+      "anchor": "page=3",
+      "quote_sha256": "6741956da97af7606776d86758ec693e6793241a0b1d2549cb79d8d5b1bbef1a",
+      "verdict": "supported",
+      "rationale": "page 3는 no private key in any context window와 모듈 출력 조건 아래에서만 context 유출 불가능성을 주장한다. page 5 구현 의존성과 함께 읽었다."
+    },
+    {
+      "id": "C07",
+      "anchor": "page=3",
+      "quote_sha256": "3b14de6e312f515692d71d9fcf8630020fe5d53d91b88557c17b0f0ddb416db4",
+      "verdict": "supported",
+      "rationale": "page 3는 local directory 중재와 tools themselves use only capability aware facilities라는 조건을 명시한다."
+    },
+    {
+      "id": "C08",
+      "anchor": "page=4",
+      "quote_sha256": "075095d0587a3afa0b53fc265b7c4b20ee91a75fe3c00d080ded25713ddfef81",
+      "verdict": "supported",
+      "rationale": "page 4의 단계 5는 사용자 동의 뒤 block 토큰 폐기·지출 토큰 발급을 설명한다. 설명용 시나리오를 실제 결제 관측으로 표시하지 않는다."
+    },
+    {
+      "id": "C09",
+      "anchor": "page=5",
+      "quote_sha256": "849d8a2b0c3b70ccbe5d090c6d7f808f8df975deb2c8d50a4ce6d8177043e2be",
+      "verdict": "supported",
+      "rationale": "page 5의 위협 모델은 DID control·no revocations 체인·short validity와 trusted core services를 가정한다."
+    },
+    {
+      "id": "C10",
+      "anchor": "page=5",
+      "quote_sha256": "d42d2a544917e4bb87a386ffc69df54873f1d675a0f63699db878f0c12c06536",
+      "verdict": "supported",
+      "rationale": "page 5는 injected-prompt cyber attacks cannot generally be ruled out 및 actual implementation 의존성을 명시한다."
+    },
+    {
+      "id": "C11",
+      "anchor": "page=5",
+      "quote_sha256": "2e6de7c9047180bedeb22a5a7167d30f72055729fa0948c86a79796125234000",
+      "verdict": "supported",
+      "rationale": "page 5의 네 구현 권고를 직접 대조했다. typed IPC/HMAC/identical denials/BBS-2023 목적을 유지하며 성능 시험으로 표시하지 않는다."
+    },
+    {
+      "id": "C12",
+      "anchor": "page=6",
+      "quote_sha256": "e3250d41c39884ac91b6a2575fc2b134291ea9674e2da85aa56b09b4b127eb24",
+      "verdict": "supported",
+      "rationale": "page 6의 선형화된 표 텍스트에서 네 위험과 각 권고의 레이블을 대조했다. 시각 구조·실제 효과 검증은 하지 않았다."
+    },
+    {
+      "id": "C13",
+      "anchor": "page=6",
+      "quote_sha256": "cca7dadf45baa8aea168198a6ca8c9d6a8a34cf1bba0891090c45b37acfef25e",
+      "verdict": "supported",
+      "rationale": "page 6의 credential status checking 및 unique claim combination 문구가 상태 목록 검사와 내용 기반 재식별의 분리를 뒷받침한다."
+    },
+    {
+      "id": "C14",
+      "anchor": "page=7",
+      "quote_sha256": "7186275134a91dcf1afe7cdb9061ec4460951dfa6eae5200ce26802135b2acb5",
+      "verdict": "supported",
+      "rationale": "page 7의 Figure 7 캡션은 fresh pairwise DIDs와 flight-session unlinkability를 서술한다. 캡션 주장이지 그림 시각 검토나 전역 비연결성 입증이 아니다."
+    },
+    {
+      "id": "C15",
+      "anchor": "page=8",
+      "quote_sha256": "2dfef33c0a96425a05b90ef02751a7adfb7f651f12d5e381b6d1022e51241686",
+      "verdict": "supported",
+      "rationale": "page 8의 추출된 Figure 9 레이블에서 allowedClaims/verifiers/challenge와 signature/nonce consumed set을 확인했다. 성공 체크 기호를 실측으로 세지 않는다."
+    },
+    {
+      "id": "C16",
+      "anchor": "page=5",
+      "quote_sha256": "0c693d934c014d0aba0f6b8b16fb771f7390e0316c2d4f323793829f9d2f455a",
+      "verdict": "supported",
+      "rationale": "page 5는 purely offline 검증과 폐기의 어려움, intermediary latency의 상충을 직접 설명한다. 정량 지연 관측이 아니다."
+    },
+    {
+      "id": "C17",
+      "anchor": "page=6",
+      "quote_sha256": "8294e8edcf6e844561581fb1a70d2661a814a2cdb57983110bfa05c9c9e664ce",
+      "verdict": "supported",
+      "rationale": "page 6의 say 5mins는 예시이며 refresh failure로 무효를 관측한다고 한다. 즉시 폐기 보장이나 기본값으로 표시하지 않는다."
+    },
+    {
+      "id": "C18",
+      "anchor": "page=6",
+      "quote_sha256": "96561305412d6f724d2fa4d5bdf6b98a0dc81b7132d07b2f21d9f6f083bc22cf",
+      "verdict": "supported",
+      "rationale": "page 6은 parent-chain traversal의 subtree revocation과 delegation-depth latency를 함께 적는다."
+    },
+    {
+      "id": "C19",
+      "anchor": "page=6",
+      "quote_sha256": "719a49f08e971586a40687ba354f7941be9922fa0d9346303baa4e1a0ec58353",
+      "verdict": "supported",
+      "rationale": "page 6의 known endpoint accumulator·witness·epoch와 제거 시 validation failure 설명에 근거한다. 관리 복잡성을 숨기거나 완성 구현으로 제시하지 않는다."
+    },
+    {
+      "id": "C20",
+      "anchor": "page=7",
+      "quote_sha256": "c69442cace30e17accc158a918de160296a5a25cc75725115cef1ac21a69c83f",
+      "verdict": "supported",
+      "rationale": "page 7은 여러 에이전트의 복수 linear-time threads와 단일 사용자 strict temporal ordering을 구분한다. 전역 순서나 관측 완전성으로 확대하지 않는다."
+    },
+    {
+      "id": "C21",
+      "anchor": "page=8",
+      "quote_sha256": "415a2816b517b38fa40d124c9cfb1d39108e9b9cdae37ac5e9583aaf1b014316",
+      "verdict": "supported",
+      "rationale": "page 8은 final payment execution을 payment providers에게 맡기고 main purpose를 decision verification trail로 한정한다. 외부 결제 효과를 별도 상태로 보는 AI 해석이다."
+    },
+    {
+      "id": "C22",
+      "anchor": "page=8",
+      "quote_sha256": "f02e5fcdfba763cb99c8a910e17e3bc37a1f733dc6a51d6f3897b20c10fcae21",
+      "verdict": "supported",
+      "rationale": "page 8은 discovery attack surface와 다른 trust source 필요를 직접 명시하며 발견을 범위 밖으로 둔다."
+    },
+    {
+      "id": "C23",
+      "anchor": "page=2",
+      "quote_sha256": "c70efe910829c9254ddfb9680a484f8251a410f741a8e4510c6a3df4bb7b8ce5",
+      "verdict": "supported",
+      "rationale": "page 2의 scenario/architecture/message exchanges/open design questions roadmap와 읽은 본문 주장의 제안적 성격이 뒷받침한다. 생성 모델의 전체 9페이지 읽기 범위에서 증거 미확인으로 한정하며, 부모의 모든 문맥 발췌 대조를 독립 전문 재독이나 외부 실험 부재 증명으로 표시하지 않는다."
+    }
+  ]
+}

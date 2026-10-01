@@ -1,0 +1,15 @@
+{
+  "schema": "pkm-p2-attempt-result/v2",
+  "vid": "2609.30830v1",
+  "finished_at": "2026-09-29T09:11:45.302669+00:00",
+  "completed": false,
+  "error": null,
+  "elapsed_seconds": 518.5,
+  "event_count": 371,
+  "first_event_s": 113.4,
+  "response_status": null,
+  "response_model": null,
+  "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+  "cost_usd": null,
+  "cost_status": "unobserved_not_zero"
+}

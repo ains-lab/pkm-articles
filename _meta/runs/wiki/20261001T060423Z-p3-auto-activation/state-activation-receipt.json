@@ -1,0 +1,17 @@
+{
+  "after_sha256": "401b8470194ec2c28c8435ae5e059aebfa5f3158c0cf67739623d7cf5d82388b",
+  "before_sha256": "c89b079176cd15f384f06f5f4dd1c5650049e6dc2ff1397acdd739f0b813531e",
+  "observed_at": "2026-10-01T06:56:31.951098+00:00",
+  "old_failures_preserved": true,
+  "requeued": [
+    "2609.30217v1",
+    "2609.30266v1",
+    "2609.30940v1",
+    "2609.31039v1",
+    "2609.31318v1"
+  ],
+  "retry_approval_ref": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/retry-approval.json",
+  "retry_approval_sha256": "3b3b2d77fd10840890911d77d786382d656e2c62307c8819e950b5710c529a5f",
+  "schema": "pkm-p3-state-activation/v1",
+  "source_or_knowledge_writes": false
+}

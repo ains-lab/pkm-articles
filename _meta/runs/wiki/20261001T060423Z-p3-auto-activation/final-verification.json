@@ -1,0 +1,154 @@
+{
+  "schema": "pkm-p3-activation-verification/v1",
+  "observed_at": "2026-10-01T07:05:46.676172+00:00",
+  "status": "activation_verified_first_fire_pending",
+  "enabled": true,
+  "next_run_kst": "2026-10-02T02:00:00+09:00",
+  "compiler_id": "4839be6a1db1",
+  "first_fire_observed": false,
+  "protected_hashes_verified": 50,
+  "policy_files_match_staged": true,
+  "approved_runtime_and_scope_bound": true,
+  "unrelated_job_config_unchanged": [
+    "05ec97bfa8d5",
+    "c5548510672c",
+    "4cff5b4f10ec"
+  ],
+  "unrelated_job_runtime_counter_changes": [
+    {
+      "id": "c5548510672c",
+      "field": "repeat.completed",
+      "before": 5722,
+      "after": 5726
+    }
+  ],
+  "source_count": 20,
+  "source_formats": {
+    "html": 18,
+    "pdf": 2
+  },
+  "state_counts": {
+    "blocked_approval": 16,
+    "published_draft": 4
+  },
+  "knowledge_pages": 8,
+  "eligible_count": 16,
+  "next_selected": [
+    "2609.30217v1",
+    "2609.30266v1",
+    "2609.30940v1",
+    "2609.31039v1",
+    "2609.31318v1"
+  ],
+  "versions": [
+    {
+      "version_id": "2509.09215v3",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2605.09027v3",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2608.29596v2",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "status": "published_draft"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "status": "published_draft"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "status": "published_draft"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "status": "published_draft"
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.34790v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35088v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35117v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35366v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35576v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35596v1",
+      "format": "html",
+      "status": "blocked_approval"
+    },
+    {
+      "version_id": "2609.35760v1",
+      "format": "html",
+      "status": "blocked_approval"
+    }
+  ],
+  "retry_failures_preserved": true,
+  "outside_window_probe": {
+    "refused": "edit_freeze_window",
+    "run_created": false,
+    "source_body_reads": 0,
+    "network_attempts": 0
+  },
+  "full_wiki_lint_scheduled": false,
+  "unit_integration_test_receipt": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/parent-evidence/parent-final-full-02/counts.json"
+}

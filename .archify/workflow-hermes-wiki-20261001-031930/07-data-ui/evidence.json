@@ -1,0 +1,439 @@
+{
+  "schema": "archify-document-evidence/v1",
+  "diagram_id": "07-data-ui",
+  "mode": "document-description",
+  "repository_root": "/home/ainsdev/wiki/pkm-articles",
+  "document_root": "docs/techblog/hermes-api-gateway-workdir-assoc",
+  "repository_evidence": false,
+  "head_revision_claimed": false,
+  "classification_legend": {
+    "관측": "읽은 기술문서에서 보고된 관측/기존 계약; 이번에 원본·runtime을 독립 재검증한 것은 아님",
+    "공식 계약": "공식 제품 문서 계약을 인용한 경우만 사용; 설치 live 보장 아님",
+    "제안": "미구현·미배포 설계/QA/승인 조건",
+    "미확인": "실행 또는 검증하지 않은 사항"
+  },
+  "scope": "두 Archify 설명 다이어그램만 생성; 원문/설정/live API/모델/Cron/의존성 설치 작업 없음",
+  "candidate_sha256": "2129453a8e2af613b03797d8b1e30cd27c8791309b814c41c3f90a4f45e0d012",
+  "source_snapshots": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/DESIGN.md",
+      "sha256": "c23815f301b1abfb72adf8b1c5b11bc91a7d74b590a247a0f72c60bfb51b4e24"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+      "sha256": "6bb6e39d0a90eaac7774e46e67f00744aa5d5d6834322f238ffbcae247445f89"
+    }
+  ],
+  "claims": [
+    {
+      "kind": "node",
+      "id": "ledger",
+      "claim": "Markdown/YAML/JSON 파일이 정식 원장이며 원본과 source.json은 불변이다. 이번 관측은 기술문서 판독이지 원본 재검증이 아니다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+          "line": 6,
+          "end_line": 17
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 28,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "facade",
+      "claim": "읽기 BFF는 ledger·committed receipt·실물 hash와 snapshot 일관성을 확인하는 제안 경로다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 117,
+          "end_line": 127
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 41,
+          "end_line": 48
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "dto",
+      "claim": "pkm-web-page/v1/page_id/snapshot_id는 구현되지 않은 BFF DTO 초안이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 69,
+          "end_line": 104
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "axes",
+      "claim": "원문 확보·HTML 제공·컴파일·게시 거래·인간 검토·API 실행을 독립 축으로 구분한다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 56,
+          "end_line": 67
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "ui",
+      "claim": "인증된 사용자를 위한 React/TypeScript/Next.js UI를 권고하되 미구현이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+          "line": 48,
+          "end_line": 62
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 8,
+          "end_line": 18
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "browse",
+      "claim": "/library /knowledge/:pageId /topics는 읽기 전용 MVP route 제안이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 13,
+          "end_line": 25
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "chat",
+      "claim": "/chat/:conversationId는 별도 실행 승인 후의 조건부 제안이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 13,
+          "end_line": 25
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 50,
+          "end_line": 60
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "hermes",
+      "claim": "기술문서가 조사한 API Server는 aiohttp HTTP/SSE이며 live 상태는 이 작업에서 확인하지 않았다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+          "line": 19,
+          "end_line": 46
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+          "line": 93,
+          "end_line": 97
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "operations",
+      "claim": "/operations는 소유자 전용 읽기 projection이며 Cron control UI가 아니다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 13,
+          "end_line": 25
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "ledger-facade",
+      "claim": "원장 전체가 아닌 allowlisted 자료·서지 필드만 읽기 경로에 투영한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 41,
+          "end_line": 48
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 26,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "facade-dto",
+      "claim": "committed receipt·revision/hash·전후 snapshot 일관성 확인 후 DTO로 제공한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 117,
+          "end_line": 127
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "dto-axes",
+      "claim": "DTO와 화면에서 서로 다른 상태를 분리하여 제공한다. API 상태도 별도 실행 축이며 전부 page DTO 필드라는 뜻이 아니다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 56,
+          "end_line": 71
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 37,
+          "end_line": 69
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "axes-ui",
+      "claim": "상태 축은 상호 완료를 추론하지 않고 독립 표시한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 56,
+          "end_line": 67
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 37,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "ui-browse",
+      "claim": "자료·지식·개념 탐색은 read-only이며 모델 호출을 요구하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 13,
+          "end_line": 25
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 31,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "ui-chat",
+      "claim": "질의 기능은 별도 실행 승인이 선행되어야 한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 22,
+          "end_line": 22
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 47,
+          "end_line": 64
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "chat-hermes",
+      "claim": "승인된 질의는 BFF를 경유하고 사용자 입력 전체를 그대로 upstream에 넘기지 않는다. 격리 환경은 아직 제안이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 37,
+          "end_line": 37
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 50,
+          "end_line": 54
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 29,
+          "end_line": 50
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "ui-operations",
+      "claim": "운영 화면은 소유자만 정형 상태를 조회하며 쓰기·Cron 실행 권한을 부여하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 22,
+          "end_line": 25
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "completion",
+      "claim": "source.json wiki_compiled:false는 과거 수집 정보이며 ledger/receipt/실물 output으로 이후 완료를 확인한다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 30,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "normal-draft",
+      "claim": "draft/unreviewed는 정상 상태이며 실제 인간 검토 없이 승격하지 않는다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 38,
+          "end_line": 54
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "design-qa",
+      "claim": "Civic Navy, 문자상태, focus, IME, reduced-motion, CJK와 미래 viewport/접근성 검증 목표는 제안이며 아직 PASS가 아니다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/DESIGN.md",
+          "line": 6,
+          "end_line": 18
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/DESIGN.md",
+          "line": 81,
+          "end_line": 89
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 71,
+          "end_line": 113
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "live-not-observed",
+      "claim": "서비스 live API/모델/브라우저/배포 검증은 원 기술문서에서도 미실시이며 이번에는 Archify 산출물만 검증한다.",
+      "status": "미확인",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+          "line": 93,
+          "end_line": 97
+        }
+      ]
+    }
+  ],
+  "verification_boundary": "Archify finalize/browser-check는 이 HTML만 검증하며 미래 frontend 구현·375/768/1280/1440px·접근성·live API·배포 검증이 아니다.",
+  "final_verification": {
+    "status": "pass",
+    "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+    "receipt_id": "b263ef10-8523-40d6-916a-a2a0164fb743",
+    "finalize_summary": "diagram.finalize-summary.json",
+    "finalize_receipt": "diagram.finalize.json",
+    "browser_receipt": "diagram.browser-check.json",
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "node_claims": 9,
+    "relationship_claims": 8,
+    "source_range_references": 37,
+    "source_snapshots_unchanged": true,
+    "visual_review": "not_requested",
+    "captures": false,
+    "correction_rounds": 0
+  },
+  "environment_caveat": {
+    "chrome": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "process_environment": {
+      "ARCHIFY_CHROME_NO_SANDBOX": "1"
+    },
+    "reason": "parent reported OS user namespace sandbox unavailable; applies only to this trusted generated HTML verification process",
+    "global_config_changed": false,
+    "installed_dependencies": false
+  }
+}

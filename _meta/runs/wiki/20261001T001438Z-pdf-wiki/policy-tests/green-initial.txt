@@ -1,0 +1,6 @@
+test_approved_v3_pdf_text_request (__main__.Contracts.test_approved_v3_pdf_text_request) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+OK

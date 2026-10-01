@@ -1,0 +1,38 @@
+{
+  "schema": "pkm-p2-approval-amendment/v1",
+  "run_id": "20260929T064035Z-p2-cost-waiver",
+  "phase": "P2",
+  "user_quote": "비용 제약사항은 제거하고 codex-lb 사용해서 다시 진행하세요",
+  "supersedes_budget_gate": "_meta/runs/wiki/20260929T062210Z-p2-preflight/approval.json",
+  "cost_policy": "no_cost_cap",
+  "accounting_required_for_execution": false,
+  "hard_stop_required_for_execution": false,
+  "unknown_cost_action": "record_unknown_continue",
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "fallback_allowed": false,
+  "candidate_versions": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "allowed_materials": [
+    "local_original_html_text",
+    "existing_wiki",
+    "explicit_non_sensitive_research_feedback"
+  ],
+  "forbidden_materials": [
+    "pdf_content",
+    "images",
+    "external_assets",
+    "automatic_chat_capture",
+    "external_novelty_search"
+  ],
+  "execution_authorized": true,
+  "publication_edit_freeze_confirmed": false,
+  "publication_status": "staged_only_edit_freeze_form_timed_out",
+  "cron_registration_authorized": false,
+  "cron_activation_authorized": false,
+  "P3_P4_P5_P6_authorized": false,
+  "active_policy_publication": "deferred; scoped staged policy amendment and explicit current-user execution approval"
+}

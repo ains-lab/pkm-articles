@@ -1,0 +1,13 @@
+{
+  "command": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python -B -m unittest discover -s /home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests -p \"test_*.py\" -v",
+  "exit_code": 0,
+  "tests_run": 132,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "environment": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "jsonschema_version": "4.26.0",
+  "initial_red_test_sha256": "a5ad291014043d600ec833051292d130ef0701cb9ac28121d8150837e231761f",
+  "current_initial_test_sha256": "a5ad291014043d600ec833051292d130ef0701cb9ac28121d8150837e231761f",
+  "scope": "synthetic contracts / staged metadata only; no PDF reads/provider/model/install/legacy runtime execution"
+}

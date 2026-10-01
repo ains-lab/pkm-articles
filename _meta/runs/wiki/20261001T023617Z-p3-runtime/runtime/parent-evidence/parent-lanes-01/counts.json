@@ -1,0 +1,30 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T03:00:46.451714+00:00",
+  "label": "parent-lanes-01",
+  "modules": [
+    "test_common",
+    "test_daily",
+    "test_content",
+    "test_publication"
+  ],
+  "tests_run": 39,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "bb7ce4f3b3689355ce021459a6c5a81a769bf1ec5fdfa4bd80b42b8d85030f45",
+    "test_common.py": "089d86ca67b8c1280a499bde9b05ec3760ac542d5c327567a5ca48f9eb9c7218",
+    "test_daily.py": "036df4c4d5f71d36743f5b3d9853773b1f521fcc4df34e4230646cacf8802bd6",
+    "test_content.py": "ca67947534df84f4b60f1a10534a908fa6fc02ca7ea512feab82230a556fee6c",
+    "test_publication.py": "266da00de777a5862478e2b1beaecccc869e4365f32903c4393956ff656927da"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

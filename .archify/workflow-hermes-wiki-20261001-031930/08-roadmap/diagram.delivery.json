@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "5a154540-64ce-4b5d-a0d2-7e559e8613d3",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+  "specification": {
+    "sha256": "7c4efcfc32ef34e33462f0617a10e6a0d66b55a1adf8e5fe46d8d0134cbd1485",
+    "bytes": 40959
+  },
+  "artifact": {
+    "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+    "bytes": 778067
+  }
+}

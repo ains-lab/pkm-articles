@@ -1,0 +1,21 @@
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ERROR
+
+======================================================================
+ERROR: test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 165, in test_scheduled_gate_checks_live_projection_and_freeze
+    ctx=self.m.preflight(**kw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 73, in preflight
+    scheduler_gate(fs,auto,approval,observed,scheduler_observer,synthetic)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 37, in scheduler_gate
+    C.require(all(C.canonical(record.get(k))==C.canonical(v) for k,v in expected.items()) and
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: scheduler_projection
+
+----------------------------------------------------------------------
+Ran 1 test in 0.307s
+
+FAILED (errors=1)

@@ -1,0 +1,261 @@
+{
+  "observed_at": "2026-10-01T03:52:00.620384+00:00",
+  "scope": "Document visualizations only, no live API/service/model/paper processing",
+  "status": "automated_desktop_gates_passed_with_mobile_and_perceptual_limits",
+  "source_files": 13,
+  "source_sections": 92,
+  "preserved_existing_files": 79,
+  "changed_existing_source_or_slide_files": [],
+  "diagram_count": 8,
+  "nodes": 114,
+  "edges": 116,
+  "diagrams": [
+    {
+      "diagram": "01-system",
+      "nodes": 10,
+      "edges": 10,
+      "unmapped": [],
+      "reference_ranges": 8,
+      "finalize_summary": "01-system/diagram.finalize-summary.json",
+      "browser_receipt": "01-system/diagram.browser-check.json",
+      "specification_sha256": "d64e909f9c43fae61b24592835edd26b8c51ebcc1ca35a96ec0f223077a3b466",
+      "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "01-system/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "02-workspace",
+      "nodes": 9,
+      "edges": 9,
+      "unmapped": [],
+      "reference_ranges": 7,
+      "finalize_summary": "02-workspace/diagram.finalize-summary.json",
+      "browser_receipt": "02-workspace/diagram.browser-check.json",
+      "specification_sha256": "5294e807e445740ff6d2d2c461e59d31463c27468f3f77692b4e9fd70305c737",
+      "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "02-workspace/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "03-read",
+      "nodes": 12,
+      "edges": 12,
+      "unmapped": [],
+      "reference_ranges": 27,
+      "finalize_summary": "03-read/diagram.finalize-summary.json",
+      "browser_receipt": "03-read/diagram.browser-check.json",
+      "specification_sha256": "f8712dada71db7066ec8470b0294f52561a25ee6aea8e7020948cf765e353ea4",
+      "artifact_sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "03-read/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "04-query",
+      "nodes": 19,
+      "edges": 23,
+      "unmapped": [],
+      "reference_ranges": 60,
+      "finalize_summary": "04-query/diagram.finalize-summary.json",
+      "browser_receipt": "04-query/diagram.browser-check.json",
+      "specification_sha256": "5bf1868629ac5265b3385444aab93736732768e1696bae05b95a46473b83acdc",
+      "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "04-query/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "05-collection",
+      "nodes": 19,
+      "edges": 19,
+      "unmapped": [],
+      "reference_ranges": 36,
+      "finalize_summary": "05-collection/diagram.finalize-summary.json",
+      "browser_receipt": "05-collection/diagram.browser-check.json",
+      "specification_sha256": "9187dd5acd14dc26b87d625f451e22574e234c6e868dbefdfd053fa144e7981d",
+      "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "05-collection/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "06-publication",
+      "nodes": 24,
+      "edges": 24,
+      "unmapped": [],
+      "reference_ranges": 61,
+      "finalize_summary": "06-publication/diagram.finalize-summary.json",
+      "browser_receipt": "06-publication/diagram.browser-check.json",
+      "specification_sha256": "3f1748060ccd1e67d3e90e75b2ce87de27b276d347858ee29454e587fa7391a0",
+      "artifact_sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "06-publication/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "07-data-ui",
+      "nodes": 9,
+      "edges": 8,
+      "unmapped": [],
+      "reference_ranges": 29,
+      "finalize_summary": "07-data-ui/diagram.finalize-summary.json",
+      "browser_receipt": "07-data-ui/diagram.browser-check.json",
+      "specification_sha256": "2129453a8e2af613b03797d8b1e30cd27c8791309b814c41c3f90a4f45e0d012",
+      "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "07-data-ui/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    },
+    {
+      "diagram": "08-roadmap",
+      "nodes": 12,
+      "edges": 11,
+      "unmapped": [],
+      "reference_ranges": 23,
+      "finalize_summary": "08-roadmap/repair-5/diagram.finalize-summary.json",
+      "browser_receipt": "08-roadmap/repair-5/diagram.browser-check.json",
+      "specification_sha256": "7c4efcfc32ef34e33462f0617a10e6a0d66b55a1adf8e5fe46d8d0134cbd1485",
+      "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+      "automated_gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "captures": "passed",
+      "capture_receipt": "08-roadmap/visual-check/diagram.visual-check.json",
+      "update_notice_required": false
+    }
+  ],
+  "index_local_link_count": 31,
+  "index_links_except_self_report": "pass",
+  "html_external_asset_attributes": "none",
+  "primary_evidence": "artifact-receipts.json",
+  "index_final_evidence": "index-browser-final.json",
+  "supplementary_visual_review": "visual-review-final.json",
+  "mobile_full_visual_acceptance": "REVISE; desktop delivery only, not mobile/accessibility PASS",
+  "documentation_update_evidence": "documentation-update.json",
+  "final_package_check": "final-package-check.json",
+  "limits": [
+    "375px mobile full visual/accessibility acceptance not claimed; 01/02/07 have horizontally offscreen SVG text",
+    "Image review sampled one desktop theme/viewport per diagram, not every state/card",
+    "Full accessibility, exports and live frontend/Gateway were not tested",
+    "Archify browser process used supported no-sandbox option for local generated HTML only"
+  ]
+}

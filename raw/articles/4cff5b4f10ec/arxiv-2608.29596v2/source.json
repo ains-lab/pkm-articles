@@ -1,0 +1,37 @@
+{
+  "schema": "arxiv-html-source/v1",
+  "source": "arxiv",
+  "base_id": "2608.29596",
+  "version_id": "2608.29596v2",
+  "title": "A Systematic Survey of Agentic Skills: Architecture, Lifecycle, and Security",
+  "authors": [
+    "Sanket Badhe",
+    "Deep Shah",
+    "Priyanka Tiwari",
+    "Nehal Kathrotia"
+  ],
+  "abstract": "Autonomous large language model (LLM) agents increasingly face reliability, context consumption, and execution stability bottlenecks when deployed on complex, long-horizon tasks. While monolithic prompt engineering and stateless tool-calling paradigms struggle to scale, the field is rapidly converging toward \\emph{agentic skills}: modular procedural abstractions that externalize execution knowledge into reusable, executable, and portable artifacts. This paper establishes a unified systems foundation and reference architecture for the agentic skills ecosystem. We formalize skills as externalized procedural knowledge bridging high-level cognitive planning with deterministic execution environments, and systematically delineate the architecture across a nine-stage lifecycle: autonomous discovery, authoring and representation formats, memory storage, dynamic retrieval and routing, composition and orchestration, execution and repair, lifelong adaptation, empirical evaluation, and security governance. We further examine marketplace dynamics, public registries, and emerging adversarial threat vectors, alongside runtime verification and defense mechanisms. Finally, we categorize system implementations across software engineering, operating system navigation, embodied robotics, and scientific discovery, while highlighting critical open challenges in continual learning and benchmark realism. This work establishes agentic skills as a foundational paradigm for building scalable, robust, and verifiable autonomous language agents.",
+  "published": "2026-08-30T06:36:42Z",
+  "updated": "2026-09-28T17:25:01Z",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/html/2608.29596v2",
+  "abs_url": "https://arxiv.org/abs/2608.29596v2",
+  "collected_at": "2026-09-29T15:09:08.398512+00:00",
+  "html_file": "source.html",
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2608.29596v2",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "capture_method": "http_response_body_no_rewrite",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "html_sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+  "html_bytes": 1078043
+}

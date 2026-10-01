@@ -1,0 +1,30 @@
+test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) ... 
+  test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) (name='repeat_uncited') ... FAIL
+  test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) (name='escaped_caret') ... FAIL
+
+======================================================================
+FAIL: test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) (name='repeat_uncited')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 268, in test_every_claim_line_requires_unescaped_citation
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) (name='escaped_caret')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 268, in test_every_claim_line_requires_unescaped_citation
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.170s
+
+FAILED (failures=2)

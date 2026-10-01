@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "4d585082ac6c177f151f48f683899f0da89448c9d4c88a2d25b9c0a6ac629916",
+    "stderr.txt": "6b96d22845584ae8475c30aa017913c0ea19ef415a94a0dadf1c5566fc24ccc4",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "30ad06c43170c3c255c2dec228b7acd2868f8803c05267f7d8f547382d2120b9"
+  }
+}

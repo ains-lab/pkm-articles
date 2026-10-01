@@ -1,0 +1,56 @@
+{
+  "schema": "pkm-query-cutover-verification/v1",
+  "observed_at": "2026-10-01T08:22:35.612686+00:00",
+  "status": "pass",
+  "query_sha256": "4ea7f574dbe38a7bfa6f1556d25016b404bfaffb70835a09b25c56cf35ac988c",
+  "exact_query_preserved": true,
+  "changed_topic_fields": [
+    "api_query",
+    "name",
+    "original_query",
+    "pending_query_policy",
+    "query_approval_ref",
+    "query_policy_ref",
+    "query_revision",
+    "query_sha256"
+  ],
+  "collector_registered": true,
+  "collector_enabled": true,
+  "collector_next_run_kst": "2026-10-02T00:00:00+09:00",
+  "collector_only_name_and_prompt_changed": true,
+  "other_job_config_unchanged": [
+    "05ec97bfa8d5",
+    "c5548510672c",
+    "4839be6a1db1"
+  ],
+  "compiler_pins_verified": 18,
+  "protected_file_hashes_verified": 71,
+  "log_prefix_preserved": true,
+  "source_count": 17,
+  "source_formats": {
+    "html": 15,
+    "pdf": 2
+  },
+  "knowledge_pages": 8,
+  "pending_counts": {
+    "requested": 48,
+    "matched": 16,
+    "nonmatched": 32,
+    "unresolved": 0
+  },
+  "probe_entries_verified": 5,
+  "pending_batch_counts": [
+    4,
+    2,
+    2,
+    5,
+    3
+  ],
+  "local_links_verified": 90,
+  "git_diff_check": "pass",
+  "new_scheduled_fire_observed": false,
+  "collection_run_performed": false,
+  "raw_downloads": 0,
+  "semantic_relevance_filter_added": false,
+  "lock_still_owned": true
+}

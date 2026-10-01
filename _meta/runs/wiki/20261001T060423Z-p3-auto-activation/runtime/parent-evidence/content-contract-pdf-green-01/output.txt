@@ -1,0 +1,9 @@
+test_claim_scope_contract_requires_exact_claim_anchor_membership (test_content_contract.ContentContractTests.test_claim_scope_contract_requires_exact_claim_anchor_membership) ... ok
+test_pdf_contract_requires_all_observed_physical_text_pages (test_content_contract.ContentContractTests.test_pdf_contract_requires_all_observed_physical_text_pages) ... ok
+test_repeated_claim_contract_requires_same_line_citation_every_time (test_content_contract.ContentContractTests.test_repeated_claim_contract_requires_same_line_citation_every_time) ... ok
+test_visible_scope_contract_requires_exact_version_and_every_scope_token (test_content_contract.ContentContractTests.test_visible_scope_contract_requires_exact_version_and_every_scope_token) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.446s
+
+OK

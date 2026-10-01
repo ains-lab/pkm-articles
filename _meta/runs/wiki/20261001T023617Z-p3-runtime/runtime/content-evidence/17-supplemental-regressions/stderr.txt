@@ -1,0 +1,28 @@
+test_allowed_inline_source_and_committed_wiki_links (test_content.ContentTests.test_allowed_inline_source_and_committed_wiki_links) ... ok
+test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests) ... ok
+test_bom_cannot_hide_frontmatter (test_content.ContentTests.test_bom_cannot_hide_frontmatter) ... ok
+test_changed_source_rejected_before_client (test_content.ContentTests.test_changed_source_rejected_before_client) ... ok
+test_client_close_failure_is_unknown_without_retry (test_content.ContentTests.test_client_close_failure_is_unknown_without_retry) ... ok
+test_corrupt_pdf_is_partial_with_unknown_page_count_no_model (test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model) ... ok
+test_duplicate_json_and_false_or_forged_review_fields_are_rejected (test_content.ContentTests.test_duplicate_json_and_false_or_forged_review_fields_are_rejected) ... ok
+test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) ... ok
+test_expiry_during_result_encoding_stops_before_write (test_content.ContentTests.test_expiry_during_result_encoding_stops_before_write) ... ok
+test_factory_failure_is_precall_and_route_rejection_never_retryable (test_content.ContentTests.test_factory_failure_is_precall_and_route_rejection_never_retryable) ... ok
+test_generation_and_review_envelopes_fail_closed (test_content.ContentTests.test_generation_and_review_envelopes_fail_closed) ... ok
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) ... ok
+test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) ... ok
+test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests) ... ok
+test_pdf_midread_failure_preserves_observed_and_unread_telemetry (test_content.ContentTests.test_pdf_midread_failure_preserves_observed_and_unread_telemetry) ... ok
+test_pdf_subset_cannot_claim_main_text_complete (test_content.ContentTests.test_pdf_subset_cannot_claim_main_text_complete) ... ok
+test_production_fake_injection_is_refused_before_io (test_content.ContentTests.test_production_fake_injection_is_refused_before_io) ... ok
+test_repeated_attempt_rejected_before_second_source_read_or_client (test_content.ContentTests.test_repeated_attempt_rejected_before_second_source_read_or_client) ... ok
+test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) ... ok
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... ok
+test_snapshot_guard_refusals_cover_each_read_factory_and_request_boundary (test_content.ContentTests.test_snapshot_guard_refusals_cover_each_read_factory_and_request_boundary) ... ok
+test_source_drift_after_construction_stops_dispatch (test_content.ContentTests.test_source_drift_after_construction_stops_dispatch) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 3.321s
+
+OK

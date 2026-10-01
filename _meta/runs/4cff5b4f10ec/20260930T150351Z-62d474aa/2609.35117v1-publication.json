@@ -1,0 +1,12 @@
+{
+  "version_id": "2609.35117v1",
+  "format": "html",
+  "target": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1",
+  "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.html",
+  "bytes": 629329,
+  "sha256": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+  "metadata_sha256": "ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d",
+  "published_at": "2026-09-30T15:10:28.377261+00:00",
+  "atomic_method": "renameat2_RENAME_NOREPLACE",
+  "readback_verified": true
+}

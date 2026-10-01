@@ -1,0 +1,6 @@
+test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.555s
+
+OK

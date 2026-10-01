@@ -1,0 +1,455 @@
+{
+  "schema": "archify-document-evidence/v1",
+  "diagram_id": "08-roadmap",
+  "mode": "document-description",
+  "repository_root": "/home/ainsdev/wiki/pkm-articles",
+  "document_root": "docs/techblog/hermes-api-gateway-workdir-assoc",
+  "repository_evidence": false,
+  "head_revision_claimed": false,
+  "classification_legend": {
+    "관측": "읽은 기술문서에서 보고된 관측/기존 계약; 이번에 원본·runtime을 독립 재검증한 것은 아님",
+    "공식 계약": "공식 제품 문서 계약을 인용한 경우만 사용; 설치 live 보장 아님",
+    "제안": "미구현·미배포 설계/QA/승인 조건",
+    "미확인": "실행 또는 검증하지 않은 사항"
+  },
+  "scope": "두 Archify 설명 다이어그램만 생성; 원문/설정/live API/모델/Cron/의존성 설치 작업 없음",
+  "candidate_sha256": "7c4efcfc32ef34e33462f0617a10e6a0d66b55a1adf8e5fe46d8d0134cbd1485",
+  "source_snapshots": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3"
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b"
+    }
+  ],
+  "claims": [
+    {
+      "kind": "node",
+      "id": "r0",
+      "claim": "배포 계약에서 사용자·배치·인증·격리·공개 필드·모델/자료/도구 범위를 확정한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 18,
+          "end_line": 29
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r0gate",
+      "claim": "키·권한·경로·승인 주체·복구 범위를 결정하며 미결이면 개인 read-only까지만 진행한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 18,
+          "end_line": 29
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r1",
+      "claim": "R1은 read-only frontend/BFF/projection/pageId/Markdown 구현이며 LLM 호출이 필요 없다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 31,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r1qa",
+      "claim": "인증·경로 제한·상태 표시·receipt/hash·실제 쓰기 거부·원본 불변이 R1 수용 기준이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 35,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r2gate",
+      "claim": "R2는 R0 정책 승인, 격리된 Gateway, 인증·도구·모델 경로 검증과 live capabilities가 선행 조건이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 47,
+          "end_line": 51
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r2",
+      "claim": "R2는 run/session ownership, Runs/SSE/stop/reconnect/idempotency를 구현하며 실제 Wiki 전송은 별도 승인이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 49,
+          "end_line": 64
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r2qa",
+      "claim": "ownership/중복 방지/SSE framing/reconnect/실제 종료/model 경로/자료 범위 시험이 필요하다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 53,
+          "end_line": 64
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r3",
+      "claim": "R3는 수집·컴파일 ledger read-only projection이며 Cron 제어를 자동 연결하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 22,
+          "end_line": 25
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r3qa",
+      "claim": "R3는 관측 시각과 고유 ID 집계, 미등록/비활성/busy/실패/미관측을 분리한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 68,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r4gate",
+      "claim": "R4는 선택적 지식 경로로 별도 단계 실행·입력·모델·게시 승인을 확인하며 P3–P6를 자동 승인하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 72,
+          "end_line": 87
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "r4",
+      "claim": "R4는 no-fallback/no_cost_cap, 자료 범위, shared lock/journal/receipt/조건부 복구/no-op을 지키는 제안이다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 76,
+          "end_line": 87
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "qa",
+      "claim": "정적/합성 시험과 실제 통합/접근성/배포 증거를 분리하고 미실행은 not_run으로 판정한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 89,
+          "end_line": 121
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r0-decision",
+      "claim": "R0에서 배포 결정문을 작성하여 gate 입력으로 삼는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 18,
+          "end_line": 29
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "decision-r1",
+      "claim": "결정 범위를 넘지 않는 읽기 전용 MVP로 진행하며 미결 정책을 실행 승인으로 확대하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 18,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r1-check",
+      "claim": "R1 구현 완료는 수용 기준 시험을 요구한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 31,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r1-r2gate",
+      "claim": "읽기 단계가 통과해도 R2 실행 승인은 별도로 받아야 한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 31,
+          "end_line": 51
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r2-authorized",
+      "claim": "R2 선행 정책·격리·capability gate를 충족한 경우에만 질의 구현/검증을 진행한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 47,
+          "end_line": 64
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r2-check",
+      "claim": "R2 실행 UX를 합성·실제 통합 기준에 따라 검증한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 53,
+          "end_line": 64
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r2-r3",
+      "claim": "로드맵은 R2 다음 R3를 제시한다. 이는 운영 조회가 LLM 실행을 필수 의존한다는 뜻이 아니다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 47,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r3-check",
+      "claim": "R3 read projection을 시각·고유 ID·독립 상태 기준으로 검증한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r3-r4gate",
+      "claim": "R4는 선택 경로이며 R3 통과가 P3–P6 실행 승인으로 승계되지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 87
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r4-authorized",
+      "claim": "정확한 단계/자료/모델/게시 승인 뒤에만 선택 지식 경로를 진행한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 72,
+          "end_line": 87
+        }
+      ]
+    },
+    {
+      "kind": "relationship",
+      "id": "r4-check",
+      "claim": "선택 지식 작업은 journal/receipt/hash/no-op/충돌 시험과 실제 승인된 게시 증거를 요구한다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 78,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "execution-boundary",
+      "claim": "이번 문서 작업은 웹 앱 구축·Gateway 설정·모델·원문 컴파일·Cron 실행 승인이 아니다.",
+      "status": "관측",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 1,
+          "end_line": 16
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+          "line": 93,
+          "end_line": 97
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "frontend-not-tested",
+      "claim": "375/768/1280/1440px와 접근성/실제 통합 검증은 미실시 미래 조건이다.",
+      "status": "미확인",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 89,
+          "end_line": 121
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 107,
+          "end_line": 113
+        }
+      ]
+    },
+    {
+      "kind": "constraint",
+      "id": "security-stop",
+      "claim": "인증·격리·공개 범위가 불분명하면 서버 노출 전에 중단하며 정책·hash·lock 충돌을 우회하지 않는다.",
+      "status": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 123,
+          "end_line": 127
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 97,
+          "end_line": 103
+        }
+      ]
+    }
+  ],
+  "verification_boundary": "Archify finalize/browser-check는 이 HTML만 검증하며 미래 frontend 구현·375/768/1280/1440px·접근성·live API·배포 검증이 아니다.",
+  "repair_history": [
+    {
+      "reason": "workflow mainPath must have non-decreasing columns",
+      "change": "same semantic nodes/edges/cards reflowed into three downward stacks; no approval or QA gate removed",
+      "initial_receipt": "diagram.finalize-summary.json"
+    },
+    {
+      "reason": "measured automatic routes detoured and shared corridors across vertical stacks",
+      "change": "vertical stack edges use bottom-to-top straight ports; two stack transitions use right-to-left drop presets; meanings retained",
+      "receipt": "repair-1/diagram.finalize-summary.json"
+    },
+    {
+      "reason": "drop preset incompatible with side-facing stack transition",
+      "change": "tried automatic family; explicit sides still infeasible",
+      "receipt": "repair-2/diagram.finalize-summary.json"
+    },
+    {
+      "reason": "right/left endpoint side feasibility failed",
+      "change": "removed endpoint constraints on only two inter-stack links; nine straight vertical links retained",
+      "receipt": "repair-3/diagram.finalize-summary.json"
+    },
+    {
+      "reason": "measured desktop context projection below 6px floor at viewBox width 1350",
+      "change": "node widths reduced from 260 to 200 without removing labels or semantic content",
+      "receipt": "repair-4/diagram.finalize-summary.json"
+    }
+  ],
+  "final_verification": {
+    "status": "pass",
+    "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+    "receipt_id": "5a154540-64ce-4b5d-a0d2-7e559e8613d3",
+    "finalize_summary": "repair-5/diagram.finalize-summary.json",
+    "finalize_receipt": "repair-5/diagram.finalize.json",
+    "browser_receipt": "repair-5/diagram.browser-check.json",
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "node_claims": 12,
+    "relationship_claims": 11,
+    "source_range_references": 30,
+    "source_snapshots_unchanged": true,
+    "visual_review": "not_requested",
+    "captures": false,
+    "correction_rounds": 0
+  },
+  "environment_caveat": {
+    "chrome": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "process_environment": {
+      "ARCHIFY_CHROME_NO_SANDBOX": "1"
+    },
+    "reason": "parent reported OS user namespace sandbox unavailable; applies only to this trusted generated HTML verification process",
+    "global_config_changed": false,
+    "installed_dependencies": false
+  }
+}

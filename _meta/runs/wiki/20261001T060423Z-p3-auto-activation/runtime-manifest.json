@@ -1,0 +1,21 @@
+{
+  "schema": "pkm-p3-runtime-manifest/v1",
+  "operational_revision": "p3-auto-verified/20261001",
+  "observed_at": "2026-10-01T06:57:24.134613+00:00",
+  "runtime_files": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py": "b8c8904dc912489fd7e64f902a3e51353bc46ee13d5491fe54724279390254ac",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py": "d055ec8405ab01000308c5c603dbc432804651fb286c14141dace2dc3fdac0ee",
+    "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py": "4b83f486b2cbc8d173fe1d969a84031f855035480c7ddc3ddf01057715b637e0",
+    "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py": "cf02d363767f5de971edf219e1b7283ba61a06e30a4ec7e16a78ebc5776e703e"
+  },
+  "test_receipt": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/parent-evidence/parent-final-full-02/counts.json",
+  "test_receipt_sha256": "8749a9119ca6bd3e154e052fc508f7747b66cd1b756cc38f60327cbb8a8a8f3b",
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "python": "3.11.15",
+  "pdf_library": "pypdf",
+  "pdf_version": "6.19.0",
+  "scope_approval": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/scheduled/scope-approval.json"
+}

@@ -1,0 +1,7 @@
+{
+  "observed": "Initial preflight exited AssertionError before writes to state/raw; own lock released",
+  "cause": "PDF expected filename array not sorted while actual filenames sorted",
+  "repair": "Compare sorted actual and sorted expected names",
+  "source_modified": false,
+  "recovered": true
+}

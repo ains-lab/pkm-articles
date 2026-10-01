@@ -1,0 +1,168 @@
+{
+  "version_id": "2609.30824v1",
+  "vid": "2609.30824v1",
+  "run_id": "20261001T001438Z-pdf-wiki",
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+  "contract_revision": "pkm-contracts/v3",
+  "prompt_revision": "wiki-compile/v3",
+  "policy_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+  "prompt_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+  "document_sha256": {
+    "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+    "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+    "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+    "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+    "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+    "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a"
+  },
+  "scope_approval_sha256": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+  "instructions_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md",
+  "instructions_sha256": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+  "approval_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json",
+  "approval_sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+  "sources": {
+    "2609.30614v1": {
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "source_bytes": 821749,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+    },
+    "2609.30824v1": {
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "source_bytes": 693979,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+    }
+  },
+  "wiki_inputs": [
+    {
+      "path": "concepts/agent-authority-and-effect-boundaries.md",
+      "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+    },
+    {
+      "path": "concepts/provenance-and-audit-evidence.md",
+      "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+    },
+    {
+      "path": "concepts/security-evaluation-units.md",
+      "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+    }
+  ],
+  "approved_route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses"
+  },
+  "http_timeout_s": 2400.0,
+  "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+  "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+  "source_bytes": 693979,
+  "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+  "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+  "schema": "pkm-pdf-text-attempt-result/v1",
+  "attempt": "attempt1",
+  "started_at": "2026-10-01T02:11:02.011765+00:00",
+  "outcome": "completed",
+  "completed": true,
+  "response_model": "gpt-6-astra",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 25684,
+    "output_tokens": 21622,
+    "total_tokens": 47306,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 11564
+    }
+  },
+  "cost_usd": null,
+  "cost_status": "unobserved_not_zero",
+  "transport": "http-nonstream",
+  "pdf_telemetry": {
+    "page_count": 9,
+    "pypdf_version": "6.19.0",
+    "pages": [
+      {
+        "page": 1,
+        "extracted_chars": 4654,
+        "text_sha256": "f40aad58e9ad1e98939737d66ab37d0bd1664a2ea416f5fc9fa0b0695302db11"
+      },
+      {
+        "page": 2,
+        "extracted_chars": 5714,
+        "text_sha256": "56d3799ea583718e9ffa5d9b03748c6c18955274a7bedb7b53046b9577aa8774"
+      },
+      {
+        "page": 3,
+        "extracted_chars": 4564,
+        "text_sha256": "e37602a3fc7422886df220001e613df78d377d00d8a9112c90b8394f0fece6d8"
+      },
+      {
+        "page": 4,
+        "extracted_chars": 4169,
+        "text_sha256": "672d3f5269370ba5375c5d8e04b6479d067626df43317fc4b52824ad496c41eb"
+      },
+      {
+        "page": 5,
+        "extracted_chars": 5194,
+        "text_sha256": "03b2284736be31dcddc15655cf98136d44a2897a070f8809acd02823073de404"
+      },
+      {
+        "page": 6,
+        "extracted_chars": 3711,
+        "text_sha256": "9e03fc0699f29df00047d4df571eeadfba450ec099d2069f576d8222c93bf5b6"
+      },
+      {
+        "page": 7,
+        "extracted_chars": 4089,
+        "text_sha256": "32e8a783d441f86564edc9e9acd5eea7abe929b9b1bee56d05b206cfb4e30bb9"
+      },
+      {
+        "page": 8,
+        "extracted_chars": 4568,
+        "text_sha256": "9da2aa258cbc69dafd529ce14dfe84bf27092005c24bb78a480d614481074774"
+      },
+      {
+        "page": 9,
+        "extracted_chars": 3200,
+        "text_sha256": "ec4a7d67d1f40965c5063c5addc33979745dce81d98991eb3680c3151c65b834"
+      }
+    ],
+    "blank_pages": [],
+    "read_scope": [
+      "page=1",
+      "page=2",
+      "page=3",
+      "page=4",
+      "page=5",
+      "page=6",
+      "page=7",
+      "page=8",
+      "page=9"
+    ],
+    "requested_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_text_complete_eligible": true
+  },
+  "finished_at": "2026-10-01T02:21:54.080682+00:00",
+  "error": null,
+  "incomplete_details": null,
+  "response_error": null,
+  "text": "{\n  \"title\": \"Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal\",\n  \"summary\": \"이 제안은 신원에 결합된 capability token, 위임 시 권한 축소, LLM 밖의 credential wallet으로 에이전트의 행동 경계를 구성하지만, 폐기·신뢰 기반·구현 안전성에 남는 조건 때문에 실험적으로 검증된 범용 prompt injection 방어로 읽어서는 안 된다.\",\n  \"version_id\": \"2609.30824v1\",\n  \"main_text_complete\": true,\n  \"read_scope\": [\n    \"page=1\",\n    \"page=2\",\n    \"page=3\",\n    \"page=4\",\n    \"page=5\",\n    \"page=6\",\n    \"page=7\",\n    \"page=8\",\n    \"page=9\"\n  ],\n  \"unread_scope\": [\n    \"모든 그림·이미지 및 이미지 전용 내용: 미검토\",\n    \"수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\",\n    \"그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.\",\n    \"참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다.\"\n  ],\n  \"limitations\": [\n    \"저자 명시 한계: prompt injection에서 비롯되는 사이버 공격을 일반적으로 배제할 수 없으며, 실제 보안은 프로토콜의 이론적 성질뿐 아니라 구현에 의존한다. 핵심 서비스에 대한 사용자 신뢰도 전제한다.\",\n    \"저자 명시 한계: credential wallet에도 누적 공개, VP의 LLM 컨텍스트 경유, challenge 취득, 정책 UI 조작, credential 상태 미검사, claim 조합에 따른 재식별 위험이 남는다.\",\n    \"저자 명시 한계: 순수 오프라인 검증과 신속한 토큰 폐기 사이에는 설계 상충관계가 있다. 짧은 수명, 상위 체인 순회, cryptographic accumulator 대안은 각각 갱신·지연·관리 문제를 수반한다.\",\n    \"저자 명시 범위: 에이전트 발견은 제안의 범위 밖이며, 최종 결제 실행은 결제 제공자가 적절한 방식으로 구현해야 한다.\",\n    \"AI 해석의 한계: 제공된 전체 텍스트에서 공격 실험 표본, 방어 성공률, 지연 벤치마크, 독립 재현 또는 형식 검증 증거를 확인하지 못했다. 시나리오와 메시지 흐름을 실행 관측으로 승격하지 않는다.\",\n    \"AI 해석의 미확인 질문: 병렬 위임의 누적 지출 한도, 폐기와 실행 사이의 경쟁, nonce 소비의 원자성, 신원과 서비스 도메인의 결합을 어떻게 구현하는지는 추가 사양·구현 검토가 필요하다. 이는 확인된 취약점이라는 주장이 아니다.\",\n    \"텍스트 추출·시각 검토 한계: 모든 제공 페이지의 비어 있지 않은 내장 텍스트를 읽었지만, 줄바꿈에 따른 단어 분절과 그림·표 문자열의 선형화가 있다. 원래 레이아웃, 수식·표 구조, 이미지 전용 내용의 완전성을 확인하지 않았다.\",\n    \"근거 접근 한계: 원본 경로와 SHA-256은 입력 메타데이터를 기록한 것이며 이 응답에서 파일을 열거나 해시를 재계산하지 않았다. 기존 Wiki는 제공된 미검토 초안의 2차 근거로만 사용했다.\"\n  ],\n  \"claims\": [\n    {\n      \"id\": \"C01\",\n      \"kind\": \"author_report\",\n      \"statement\": \"저자는 개방형 시스템의 일시적 에이전트와 분산 위임을 고려할 때 capability 관점이 ACL 관점보다 확장·일반화·위임 지원에 적합하다고 주장한다.\",\n      \"conditions\": \"동일한 권한 관계를 표현하는 관점의 비교이며, ACL 대비 성능이나 보안 우월성을 측정한 실험 결과는 아니다.\",\n      \"anchor\": \"page=2\",\n      \"quote\": \"Figure 1 shows the ACL and the “Capability” view of the same \\nset of permissions governing the interaction between a resource \\nand an agent. Since we’re considering open systems with \\npotentially ephemeral agents, the latter view is easier to scale, \\ngeneralize and to support delegation in a decentralized setup.\"\n    },\n    {\n      \"id\": \"C02\",\n      \"kind\": \"author_report\",\n      \"statement\": \"DID 문서와 에이전트의 연결에 대한 신뢰는 공개 디렉터리에 대한 신뢰를 일부 이어받으며, 신원 제어권은 해당 개인키의 소유로 증명하도록 설명한다.\",\n      \"conditions\": \"논문이 설명하는 공개 디렉터리 기반 DID 식별 방식의 신뢰 경계이며, 탈중앙화를 신뢰 기반의 완전한 제거로 해석하지 않는다.\",\n      \"anchor\": \"page=2\",\n      \"quote\": \"The trust in the \\ndirectory therefore partially transfers to the trust in the associ -\\nation between a DID document and an agent that possesses the \\nrequired private keys to prove control over the ID.\"\n    },\n    {\n      \"id\": \"C03\",\n      \"kind\": \"author_report\",\n      \"statement\": \"제안의 capability token은 에이전트 신원, 권한을 부여하는 서명 주체, 대상 자원, 접근 제약을 담는 서명된 JSON 구조다.\",\n      \"conditions\": \"서명 주체는 사용자 또는 상위 capability에 근거한 다른 에이전트일 수 있으며, 이는 제안된 권한 표현이지 실제 배포된 검증기의 관측 결과가 아니다.\",\n      \"anchor\": \"page=3\",\n      \"quote\": \"a signed \\nJSON structure that includes information about the agent’s \\nidentity, the authority that is signing the capability granted to \\nthe agent (which can be the user or another agent based on \\nanother chained capability token), the target resource the token \\nis intended for, and the constraining parameters of the granted \\naccess to the resource.\"\n    },\n    {\n      \"id\": \"C04\",\n      \"kind\": \"author_report\",\n      \"statement\": \"신원에 결합된 토큰의 수신자가 실제 해당 에이전트인지 확인하기 위해, 검증기가 난수를 보내고 에이전트 보안 계층이 서명하는 challenge–response를 제시한다.\",\n      \"conditions\": \"검증기가 에이전트 공개키를 미리 알고 보안 계층이 개인키를 관리하는 경우다. 원문은 제어권 증명을 요구할 수 있다고 설명하며 모든 서비스의 의무 구현을 확립하지 않는다.\",\n      \"anchor\": \"page=3\",\n      \"quote\": \"An agent with a security layer that handles \\nits assigned private keys can provide such evidence by a \\ncommon challenge response mechanism - where the verifier \\nprovides a random string and asks the agent to sign it, and \\nverifies the signature using the agent’s public key known to \\nit a priori.\"\n    },\n    {\n      \"id\": \"C05\",\n      \"kind\": \"author_report\",\n      \"statement\": \"위임 토큰을 상위 grant에 연결하고 서비스가 체인을 검증하여, 위임된 권한이 상위 권한보다 확대되지 않는 attenuation을 요구한다.\",\n      \"conditions\": \"서비스가 실제로 위임 체인을 검사해야 하며, 같은 페이지의 각주가 명시하듯 attenuation 성립 판정은 도메인별이다.\",\n      \"anchor\": \"page=3\",\n      \"quote\": \"When an agent wishes to delegate part of its task to another \\nagent, it can grant it such a capability token that’s tied to \\nits own grant, so the capabilities form a chain. A service \\ncan verify the delegation chain by ensuring that grants only \\nattenuate the constraints and not amplify them.1\"\n    },\n    {\n      \"id\": \"C06\",\n      \"kind\": \"author_report\",\n      \"statement\": \"저자는 개인키를 LLM 컨텍스트에 노출하지 않고 보안 모듈이 암호화·서명 결과만 제공하면, 그 컨텍스트를 통한 credential 유출을 구조적으로 불가능하게 만들 수 있다고 주장한다.\",\n      \"conditions\": \"capability 발급 계층과 credential을 안전한 별도 모듈에 유지한다는 조건부 주장이다. 다른 구현 취약점이나 모든 prompt injection 효과의 부재를 뜻하지 않는다.\",\n      \"anchor\": \"page=3\",\n      \"quote\": \"exfiltration of credentials \\nvia LLM context window can be made impossible by con -\\nstruction since no private key is accessible in any context \\nwindow and the module will only provide the encrypted and \\nsigned results via its interface.\"\n    },\n    {\n      \"id\": \"C07\",\n      \"kind\": \"author_report\",\n      \"statement\": \"capability 검증을 로컬 파일 시스템과 도구 접근에도 적용할 수 있지만, 도구 자체도 capability-aware 시스템 기능만 사용해야 한다고 조건을 붙인다.\",\n      \"conditions\": \"디렉터리·하위 디렉터리 접근을 제한하는 중재 계층의 예시다. 상위 호출만 검사하고 도구 내부의 우회 경로를 남겨도 된다는 주장이 아니다.\",\n      \"anchor\": \"page=3\",\n      \"quote\": \"For example, access to a local file system can \\nbe gated by a layer that ensures that an agent can only access \\na directory or its sub-directories. Access to tools can also \\nbe similarly gated, but the tools must themselves use only \\ncapability aware system facilities.\"\n    },\n    {\n      \"id\": \"C08\",\n      \"kind\": \"author_report\",\n      \"statement\": \"여행 시나리오는 사용자 승인 후 기존 block 토큰을 폐기하고 더 정확한 금액의 지출 권한 토큰을 발급하여, 임시 확보와 실제 결제 권한을 구분한다.\",\n      \"conditions\": \"Atlas가 하위 에이전트를 조정하는 설명용 시나리오이며, 사용자 승인·폐기 전파·서비스 검증이 실제로 성공한 실험은 아니다.\",\n      \"anchor\": \"page=4\",\n      \"quote\": \"Once the user is happy with the plan and grants permission \\nto make the bookings, Atlas will revoke all of the “block” \\ncapability tokens granted to the other agents and issue tokens \\nwith the permissions to actually spend money on behalf of \\nthe user, with more precise amounts given in the token data.\"\n    },\n    {\n      \"id\": \"C09\",\n      \"kind\": \"author_report\",\n      \"statement\": \"위협 모델은 폐기되지 않은 서명 토큰 체인을 서비스 수행의 충분한 권한으로 보고, 짧은 유효기간과 핵심 서비스에 대한 사용자 신뢰를 가정한다.\",\n      \"conditions\": \"사람과 에이전트가 각 DID의 제어권을 증명할 수 있다는 전제 아래의 모델이다. 악성 핵심 서비스까지 방어하는 모델로 확대하지 않는다.\",\n      \"anchor\": \"page=5\",\n      \"quote\": \"These identities, participating in a signed token \\nchain with no revocations is sufficient authority to permit a \\nservice provider to perform the task at hand, and token validity \\nperiods are kept short to mitigate timing attacks. We also assume \\nthat the core services accessed by the agents on behalf of the \\nuser are trusted by the user.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"kind\": \"author_report\",\n      \"statement\": \"저자는 주입된 프롬프트에서 비롯되는 사이버 공격을 일반적으로 배제할 수 없고, credential 유출 위험이 실제 보안 구현에 의존한다고 명시한다.\",\n      \"conditions\": \"특히 수명이 긴 capability token과 credential wallet을 논의하는 문맥이다. 프로토콜의 이론적 성질을 구현 전체의 안전성 증명으로 취급하지 않는다.\",\n      \"anchor\": \"page=5\",\n      \"quote\": \"Long lived capability tokens increase the risk of credential \\nexfiltration since cyber attacks triggered by injected prompts \\ncannot generally be ruled out as it depends on actual secure \\nimplementation as opposed to theoretical properties of the se -\\ncurity protocol.\"\n    },\n    {\n      \"id\": \"C11\",\n      \"kind\": \"author_report\",\n      \"statement\": \"wallet 구현 권고에는 별도 프로세스와 typed IPC, wallet 보유 비밀을 사용하는 HMAC, 동일한 거부 메시지, VP 비연결성을 위한 BBS-2023 사용이 포함된다.\",\n      \"conditions\": \"잔여 위험을 줄이기 위한 저자의 구현 권고이며, 이 조합의 구현 완료나 공격 차단 효과를 측정한 결과가 아니다. BBS-2023 권고의 명시적 대상은 VP 비연결성이다.\",\n      \"anchor\": \"page=5\",\n      \"quote\": \"• Wallet runs as a separate process with typed IPC only.\\n• Use HMAC with a wallet-held secret instead of a hash like \\nSHA-256.\\n• Denial messages must be identical for all denials so as not to \\nturn it into an oracle.\\n• Use BBS-2023 instead of ECDSA based proofs for unlinka -\\nbility of VPs.\"\n    },\n    {\n      \"id\": \"C12\",\n      \"kind\": \"author_report\",\n      \"statement\": \"wallet의 잔여 위험에 대해 요청 제한·presentation별 승인, wallet의 VP 직접 전송, out-of-band challenge 전달, 정책 변경의 별도 확인을 완화책으로 제시한다.\",\n      \"conditions\": \"표 2의 누적 공개, VP의 LLM 컨텍스트 경유, LLM의 challenge 취득, 정책 UI 조작에 각각 대응하는 권고다. 추출된 셀 텍스트를 읽었으며 표의 시각적 구조나 효과를 검증하지 않았다.\",\n      \"anchor\": \"page=6\",\n      \"quote\": \"Aggregate disclosure Low Rate-limit requests; \\nrequire per-presenta -\\ntion user approval\\nVP transits LLM con -\\ntext\\nMedium Wallet posts VP di -\\nrectly to verifier; \\nagent receives only \\npass/fail\\nChallenge acquisition \\nby LLM\\nMedium Out-of-band chal -\\nlenge delivery (QR \\ncode, second device)\\nUI manipulation of \\npolicy\\nHigh Policy changes re -\\nquire out-of-band sec-\\nond-factor confirma -\\ntion\"\n    },\n    {\n      \"id\": \"C13\",\n      \"kind\": \"author_report\",\n      \"statement\": \"저자는 VP 서명 전 credential 상태 확인을 권고하며, 독특한 claim 조합에 따른 재식별은 암호학만의 문제가 아니어서 최소 필요 공개와 claim-set 분석이 필요하다고 적는다.\",\n      \"conditions\": \"표 2의 credential 상태 미검사와 내용 기반 재식별 위험에 한정한다. 암호학적 VP 비연결성이 공개된 속성 내용의 비식별성까지 보장하지는 않는다는 경계다.\",\n      \"anchor\": \"page=6\",\n      \"quote\": \"No credential status \\nchecking\\nMedium Wallet checks W3C \\nBitstring Status List \\nbefore signing a VP\\nUnique claim combi -\\nnation re-identifies by \\ncontent\\nN/A Not a cryptographic \\nproblem; addressed \\nby minimum-neces -\\nsary disclosure policy \\nand claim-set diver -\\nsity analysis\"\n    },\n    {\n      \"id\": \"C14\",\n      \"kind\": \"author_report\",\n      \"statement\": \"호텔 단계에서는 새로운 pairwise DID를 사용하여 항공 세션과 연결되지 않는 credential presentation을 구성한다고 설명한다.\",\n      \"conditions\": \"그림 7의 추출된 캡션에 제시된 설계 주장이다. 그림을 시각적으로 검토하지 않았으며, 공개 claim 내용·네트워크 메타데이터까지 포함한 전역적 비연결성을 확인한 것이 아니다.\",\n      \"anchor\": \"page=7\",\n      \"quote\": \"Figure 7: Phase 3 — Hotel booking: Haven holds a hotel and the wallet \\nuses fresh pairwise DIDs (key_C, key_D) unlinkable from the flight \\nsession.\"\n    },\n    {\n      \"id\": \"C15\",\n      \"kind\": \"author_report\",\n      \"statement\": \"단일 서비스의 신원 presentation 흐름은 허용 claim·verifier domain·challenge를 확인하고 BBS+ ZKP를 생성한 뒤, 검증기가 서명을 확인하고 nonce를 소비한 것으로 기록하도록 기술한다.\",\n      \"conditions\": \"그림 9에 포함된 추출 문자열로 확인한 제안 흐름이다. nonce 소비의 원자성, 장애 복구, 모든 replay 공격의 차단이나 실제 검증 성공을 입증하지 않는다.\",\n      \"anchor\": \"page=8\",\n      \"quote\": \"Policy checks:\\n✓ memberOf, role in allowedClaims\\n✓ domain in allowedVerifiers\\n✓ challenge present\\npairwiseKey(domain) → key_A\\n(did:key:zDna…, per-verifier)\\nderiveCredential → BBS+ ZKP\\nDisclosed: memberOf, role\\nNOT in proof: clearanceLevel, since\\nidentity VP (holder: key_A, nonce: nonce₁)\\nverify signature\\nnonce₁ → consumed set\\nidentity verified ✓\"\n    },\n    {\n      \"id\": \"C16\",\n      \"kind\": \"author_report\",\n      \"statement\": \"수신자가 모든 요소를 순수 오프라인으로 검증하는 토큰은 폐기가 매우 어렵거나 불가능하며, 중개자를 추가하면 거래 지연이 증가하는 상충관계가 있다고 설명한다.\",\n      \"conditions\": \"최신 폐기 정보를 외부에서 받지 않는 순수 오프라인 검증 조건의 설계 논의다. 온라인 검증의 구체적 지연이나 가용성을 측정한 결과는 아니다.\",\n      \"anchor\": \"page=5\",\n      \"quote\": \"Revoking a capability token has a fundamental design trade-off \\nto consider. If the token is to be used purely offline – i.e. all \\naspects of it can be validated by the receiver – then revocation is \\nextremely hard or even impossible. Any intermediary increases \\ntransaction latency though.\"\n    },\n    {\n      \"id\": \"C17\",\n      \"kind\": \"author_report\",\n      \"statement\": \"폐기 대안으로 짧은 수명의 토큰을 강제 갱신하고, 폐기 때문에 갱신이 실패하면 무효로 인식하는 방식을 제시하며 5분을 예로 든다.\",\n      \"conditions\": \"5분은 설명용 수명 예시이지 측정값이나 확정된 프로토콜 기본값이 아니다. 빠르게 완료되는 거래를 전제로 가능성을 논의하며 갱신 지연도 남는다.\",\n      \"anchor\": \"page=6\",\n      \"quote\": \"Make all tokens short-lived (say  5mins) and force agents to \\nrefresh their tokens when they time out. If the refresh fails \\ndue to a revocation, the token is observed to be invalid. If \\ntransactions can be completed quickly, this can be viable, but \\nit too introduces a latency cost to enable revocation.\"\n    },\n    {\n      \"id\": \"C18\",\n      \"kind\": \"author_report\",\n      \"statement\": \"토큰에 상위 토큰 참조를 넣고 서비스가 전체 grant chain을 순회하면 하위 트리 단위 폐기를 지원할 수 있지만, 지연이 위임 깊이에 의존한다고 설명한다.\",\n      \"conditions\": \"서비스가 상위 체인의 유효성을 실제 확인하는 대안이다. 상위 토큰을 폐기했다는 사실만으로 모든 서비스에 즉시 전파되거나 진행 중 거래가 취소된다는 보장은 아니다.\",\n      \"anchor\": \"page=6\",\n      \"quote\": \"Make every token include a reference to the parent token and \\nhave the service provider walk the parent chain to ensure \\nvalidity of the entire grant chain. This enables revocation at \\nany sub-tree level, but the latency is now dependent on the \\ndepth of the delegation tree.\"\n    },\n    {\n      \"id\": \"C19\",\n      \"kind\": \"author_report\",\n      \"statement\": \"또 다른 폐기 대안은 공개된 cryptographic accumulator와 capability에 포함된 witness·epoch를 사용하고, grant chain의 토큰 제거를 검증 실패로 반영하는 방식이다.\",\n      \"conditions\": \"accumulator 게시와 witness·epoch의 관리가 필요한 제안 대안이며, 완성된 갱신 프로토콜이나 구현 성능의 검증 결과가 아니다.\",\n      \"anchor\": \"page=6\",\n      \"quote\": \"Use a cryptographic accumulator published at a known end \\npoint that validators can check against, and include witnesses \\nin the capability along with the accumulator epoch. If a token \\nin the grant chain gets revoked by being removed from the \\naccumulator, the validator will observe that as a validation \\nfailure of the supplied capability.\"\n    },\n    {\n      \"id\": \"C20\",\n      \"kind\": \"author_report\",\n      \"statement\": \"다중 에이전트의 감사 추적은 단일 사용자의 엄격한 시간 순서와 달리, 요청과 verification presentation 순서가 이끄는 복수의 선형 시간 threads로 구성된다고 설명한다.\",\n      \"conditions\": \"사용자를 대신하는 여러 에이전트의 토큰 생성·교환·폐기 과정에 대한 설명이다. 전역 단일 순서, 관측 완전성 또는 외부 거래 완료의 증명을 뜻하지 않는다.\",\n      \"anchor\": \"page=7\",\n      \"quote\": \"Had the user been the only person to take each \\naction, this audit trail would’ve been guaranteed to have a strict \\ntemporal ordering. However, since multiple agents are acting \\non behalf of the user towards the end result, the audit trail will \\nhave multiple linear-time “threads” guided by the sequencing \\nof requests and verification presentations.\"\n    },\n    {\n      \"id\": \"C21\",\n      \"kind\": \"analyst_interpretation\",\n      \"statement\": \"이 제안의 의사결정 검증 이력과 실제 결제 실행은 분리해서 읽어야 하며, 제시된 흐름만으로 결제 완료나 외부 효과를 확인했다고 볼 수 없다.\",\n      \"conditions\": \"저자가 최종 결제 실행을 결제 제공자의 별도 구현에 맡기고, 설명된 과정의 주목적을 결제 유발 결정의 검증 이력으로 한정한 데 근거한 해석이다.\",\n      \"anchor\": \"page=8\",\n      \"quote\": \"final payment execution will have to be implemented using ap-\\npropriate mechanisms by payment providers. The main purpose \\nof these processes therefore is to offer a verification trail of all \\nthe decisions that went into the triggering of the final payment \\nsteps.\"\n    },\n    {\n      \"id\": \"C22\",\n      \"kind\": \"author_report\",\n      \"statement\": \"저자는 에이전트 발견 과정에 악성 에이전트가 주입될 수 있으며, 이를 다루려면 인증기관에 비견되는 별도의 신뢰 원천이 필요하다고 지적한다.\",\n      \"conditions\": \"에이전트 발견 자체는 제안의 범위 밖으로 둔다. HTTPS·도메인 제어권·DID를 논의하는 것이 발견된 에이전트의 선의나 적합성까지 보장하는 것은 아니다.\",\n      \"anchor\": \"page=8\",\n      \"quote\": \"such a discovery process also poses a potential attack \\nsurface where malicious agents can be injected into the discov-\\nery process. As with much of the internet, there is little a \\ndiscovery service can do about this except via another source of \\ntrust comparable to domain certificate authorities.\"\n    },\n    {\n      \"id\": \"C23\",\n      \"kind\": \"analyst_interpretation\",\n      \"statement\": \"이 문서는 여행 예시를 통해 구조·메시지 교환·폐기 설계 질문을 설명하는 제안으로 읽어야 하며, 제공된 텍스트만으로 구현된 방어의 실험적 성공을 주장할 수 없다.\",\n      \"conditions\": \"물리적 페이지 1–9의 제공 텍스트 전체를 읽은 범위의 판단이다. 공격 실험, 성능 측정, 독립 재현 또는 형식 검증 증거는 이 입력에서 확인하지 못했다.\",\n      \"anchor\": \"page=2\",\n      \"quote\": \"We then \\nuse an example scenario in which a user engages a group of \\nspecialized agents to help plan a holiday trip and make the \\nnecessary reservations. We describe the architecture and the \\nmessage exchanges that happen as part of this scenario and \\ndiscuss open design questions pertaining to token revocation.\"\n    }\n  ],\n  \"markdown_body\": \"# Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal\\n\\n> 한국어 Wiki 초안 · status=draft · last_reviewed=null · review_state=unreviewed\\n\\n핵심은 모델이 보안 지시를 잘 따르도록 설득하는 대신, 모델 밖의 신원·권한·credential 관리 계층에서 행동을 제한하자는 것이다. 다만 이는 설계 제안이며, 토큰에 적힌 제한이 실제 서비스와 도구에서 집행되는지는 별도 문제다.\\n\\n## 읽은 버전과 범위\\n\\n- 저자: Srikumar K. Subramanian, Shubhashis Sengupta. 소속: Accenture Labs.\\n- 버전: `2609.30824v1`.\\n- 원본: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf`.\\n- 제공된 물리적 `page=1`부터 `page=9`까지의 내장 텍스트를 모두 읽었다. 여기에는 마지막 두 페이지에 걸친 참고문헌과 추출된 그림 캡션·레이블·표 문자열이 포함된다. 제공된 페이지에 빈 텍스트 페이지는 없고, 별도 부록은 제시되지 않았다.\\n- 읽기 완료는 제공된 텍스트의 범위에 한정한다. 참고문헌을 읽었다고 해서 그 인용 대상 논문·표준·웹 문서를 읽은 것은 아니다. PDF 파일을 직접 열거나 OCR·이미지 해석을 수행하지 않았다.\\n- 모든 그림·이미지 및 이미지 전용 내용: 미검토\\n- 수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\\n\\n## 문제와 동기\\n\\n이 논문에서 에이전트는 인간을 대신해 직접 또는 다른 에이전트를 거쳐 행동하는 프로그램이다. 여행 계획처럼 여러 서비스에 걸친 일을 맡길 때, 조정 에이전트의 전체 목표와 각 전문 에이전트가 알아야 할 정보·수행할 수 있는 행동은 같지 않다. 따라서 신원 확인뿐 아니라 제한된 권한을 전달하고 다시 좁혀 위임하는 표현이 필요하다는 문제 설정이다.\\n\\n**저자 주장 — ACL과 capability의 비교:** 동일한 권한 관계라도 자원별 허용 주체를 보는 ACL 관점보다, 에이전트가 자신의 제한된 권한을 제시하는 capability 관점이 개방형·일시적 에이전트와 분산 위임에 적합하다고 논증한다. 이는 해당 사용 조건의 설계상 주장이지 ACL 대비 우월성을 측정한 결과가 아니다. **C01** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\\n\\n## 핵심 아이디어와 설계\\n\\n### 신원, 토큰, 위임 체인을 분리해서 이해하기\\n\\n- **신원도 신뢰 기반을 갖는다.** 공개 디렉터리를 통해 DID 문서와 에이전트를 연결하는 설명에서는 디렉터리에 대한 신뢰가 그 연결의 신뢰로 일부 이전된다. DID 사용을 곧 신뢰 기반이 없는 인증으로 읽지 않는다. **C02** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\\n- **capability token은 권한을 담은 서명 구조다.** 에이전트 신원, 서명하는 grantor, 대상 자원, 접근 제약을 JSON에 담으며, grantor는 사용자 또는 상위 grant에 근거한 에이전트일 수 있다. 토큰의 진위 확인과 요청이 그 제약에 들어맞는지의 판단을 혼동하지 않아야 한다. **C03** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\\n- **토큰을 갖고 있다는 사실과 신원 제어권은 구별된다.** 논문은 검증기의 난수에 에이전트 보안 계층이 서명하고 알려진 공개키로 검증하는 challenge–response를 제시한다. 다만 제어권 증명을 요구할 수 있다는 서술이므로 모든 서비스가 이를 의무적으로 구현했다고 단정할 수 없다. **C04** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\\n- **위임은 권한 확대가 아니라 attenuation이어야 한다.** 하위 토큰을 상위 grant에 연결하고 서비스가 체인 전체의 권한 비확대를 검사한다. 각주는 “Determination of whether the attenuation constraint holds is domain-specific.”라고 한정한다. 서명 체인의 진위만 확인하면 지출·목적·자원 범위의 의미까지 자동으로 검증되는 것은 아니다. **C05** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\\n\\n### LLM 밖의 집행 계층\\n\\n**조건부 저자 주장:** 개인키가 어느 LLM 컨텍스트에도 접근 가능하지 않고, 보안 모듈이 암호화·서명 결과만 반환한다면 그 컨텍스트를 통한 credential 유출을 구조적으로 불가능하게 만들 수 있다고 한다. 보장의 대상은 명시된 비밀 접근 경로이며, 에이전트가 보유한 정당한 권한을 잘못 사용하는 모든 경우까지 제거한다는 뜻은 아니다. **C06** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\\n\\n**도구에도 같은 전제가 필요하다.** 파일 시스템의 특정 디렉터리와 하위 디렉터리 접근을 중재하는 예를 들지만, 도구 자체가 capability-aware 시스템 기능만 사용해야 한다고 명시한다. 따라서 상위 서비스의 토큰 검사만으로 도구 내부의 모든 접근까지 제한된다고 가정해서는 안 된다. **C07** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\\n\\n## 여행 예시: 임시 확보와 결제 권한의 분리\\n\\nAtlas는 조정 역할을 맡고 Skyway는 항공편, Haven은 호텔, Gourmand는 식당, Roadster는 현지 교통을 담당하는 설명용 구성을 사용한다. 각 전문 에이전트에 필요한 일과 권한을 나누는 것이 예시의 목적이다.\\n\\n**저자 시나리오:** 사용자에게 계획을 제시하고 동의를 받은 뒤 기존 `block` 토큰을 폐기하고, 더 정확한 금액으로 실제 지출을 허용하는 토큰을 새로 발급한다. 임시 확보 권한이 결제 권한으로 저절로 바뀌는 흐름이 아니라 승인과 토큰 교체를 거치는 흐름이다. 다만 이는 설명된 절차이며 실제 예약·결제의 성공 관측이 아니다. **C08** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=4]\\n\\n## 가정과 보장 경계\\n\\n**위협 모델의 전제:** 사람과 에이전트가 DID 제어권을 증명할 수 있고, 폐기되지 않은 서명 체인이 서비스 수행의 충분한 권한이 되며, 토큰 수명은 짧게 유지된다고 가정한다. 핵심 서비스는 사용자가 신뢰하는 대상으로 놓는다. 이 모델을 악성 서비스 제공자까지 포괄하는 무조건적 방어로 확장할 수 없다. **C09** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\\n\\n**저자가 인정한 구현 의존성:** 뒤의 wallet 논의는 주입된 프롬프트로 촉발되는 사이버 공격을 일반적으로 배제할 수 없다고 명시한다. 앞의 비밀 격리 주장은 이 단서와 함께 읽어야 하며, 프로토콜의 이론적 성질이 구현 전체의 안전성이나 모든 credential 유출 경로의 차단을 증명하지는 않는다. **C10** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\\n\\n## Credential wallet과 선택적 공개\\n\\n**구현 권고:** wallet을 별도 프로세스에서 typed IPC로만 연결하고, wallet 보유 비밀에 기반한 HMAC을 사용하며, 거부 메시지를 동일하게 유지하고, VP 비연결성에는 ECDSA 기반 proof 대신 BBS-2023을 사용하라고 권고한다. 이 목록은 보안 설계 지침이지 구현 완료 목록이나 효과 측정 결과가 아니다. **C11** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\\n\\n**잔여 위험과 완화책:** 표 2의 추출 텍스트는 누적 공개에 요청 제한·presentation별 승인을, VP의 LLM 컨텍스트 경유에 wallet의 verifier 직접 전송과 에이전트의 pass/fail 수신을 대응시킨다. LLM의 challenge 취득에는 out-of-band 전달을, 정책 UI 조작에는 별도의 확인 수단을 권고한다. 이는 잔여 위험을 인정한 대응안이며 표의 시각 구조나 방어 효과는 검증하지 않았다. **C12** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\\n\\n**암호학적 비연결성과 내용 기반 식별은 다르다.** 같은 표는 VP 서명 전에 W3C Bitstring Status List를 확인하는 방안과, 독특한 claim 조합에 의한 재식별을 별도로 다룬다. 후자는 암호학만의 문제가 아니므로 최소 필요 공개와 claim-set 다양성 분석을 요구한다. **C13** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\\n\\n**서비스 사이의 분리:** 호텔 단계의 캡션은 항공 세션과 다른 pairwise DID를 사용해 연결되지 않는 presentation을 만든다고 설명한다. 이는 캡션의 설계 주장으로 기록하며, 공개 속성의 조합이나 다른 관측 정보까지 포함한 전역적 비연결성의 확인으로 취급하지 않는다. **C14** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\\n\\n**단일 verifier의 검증 흐름:** 그림 9의 추출 문자열에는 `allowedClaims`, `allowedVerifiers`, challenge 존재 검사, BBS+ ZKP 생성, 서명 검증, `nonce₁ → consumed set`이 나타난다. 신원 presentation에서 `memberOf`, `role`을 공개하는 흐름이다. 이 문자열의 체크 표시를 실제 시험 통과로 세거나 nonce 상태 관리의 모든 경쟁 조건이 해결됐다고 읽지 않는다. **C15** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\\n\\n## 폐기: 즉시 중단이라는 목표와 실제 확인 경로\\n\\n**기본 상충관계:** 수신자가 토큰의 모든 요소를 순수 오프라인으로 검증한다면 최신 폐기를 반영하기가 매우 어렵거나 불가능하다고 저자는 설명한다. 반대로 상태 확인을 위한 중개·네트워크 경로에는 지연이 따른다. 논문은 이를 정량적으로 측정하지 않는다. **C16** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\\n\\n- **짧은 수명과 갱신:** 예시로 5분 수명을 두고 갱신 실패를 통해 폐기를 인식한다. 5분은 설명용 값이지 고정 기본값이나 실험 수치가 아니다. 갱신 지연이 남으며, 이 대안만으로 즉시 폐기를 보장한다고 읽을 수 없다. **C17** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\\n- **상위 체인 순회:** 각 토큰에 상위 참조를 넣고 서비스가 전체 grant chain의 유효성을 확인하면 하위 트리 단위 폐기를 지원할 수 있다. 대신 지연이 위임 깊이에 의존한다. 폐기 선언과 모든 서비스의 폐기 관측은 구분해야 한다. **C18** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\\n- **Cryptographic accumulator:** 알려진 지점에 accumulator를 게시하고 capability에 witness와 epoch를 넣어, 체인 내 토큰이 제거되면 검증 실패로 반영하는 대안을 제시한다. 저자는 관리 복잡성도 언급하며, 본문은 완성된 갱신 프로토콜이나 성능 결과를 제공하지 않는다. **C19** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\\n\\n## 감사 이력, 실제 효과, 발견 서비스의 경계\\n\\n**감사 추적의 시간 구조:** 저자는 토큰 생성·교환·폐기가 감사 가능한 흔적을 제공한다고 설명하면서, 여러 에이전트가 행동하면 단일 엄격 시간 순서 대신 요청과 VP의 순서에 따른 복수의 선형 시간 threads가 생긴다고 구분한다. 서명된 이력이 있다는 사실을 완전한 전역 순서나 모든 행동의 관측으로 확대해서는 안 된다. **C20** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\\n\\n**AI 해석 — 검증 이력은 결제 영수증이 아니다.** 저자는 최종 결제 실행을 결제 제공자가 구현해야 한다고 명시하고, 설명된 과정의 주목적을 결제를 유발한 의사결정의 검증 이력으로 둔다. 따라서 신원 검증, 지출 권한 확인, 호출, 결제 완료를 서로 다른 상태로 읽어야 한다. **C21** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\\n\\n**발견은 별도의 신뢰 문제다.** 논문은 에이전트 발견을 범위 밖에 두면서도 발견 과정에 악성 에이전트가 주입될 수 있음을 인정한다. 인증기관과 비견되는 추가 신뢰 원천을 언급하므로, 도메인 제어권이나 DID 확인을 서비스의 선의·업무 적합성까지 보장하는 것으로 읽을 수 없다. **C22** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\\n\\n## 제안의 검증 수준\\n\\n**AI 해석:** 논문은 여행 예시의 구조와 메시지 교환, 폐기 설계 질문을 설명하는 제안이다. 제공된 전체 텍스트에서 공격 실험 표본·방어 성공률·지연 벤치마크·독립 재현·형식 검증 증거를 확인하지 못했다. 흐름도의 성공 표시와 완료 서술을 실행 관측으로 승격하지 않으며, 보편적 신규성이나 검증된 범용 방어를 주장하지 않는다. **C23** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\\n\\n## 기존 Wiki와의 연결\\n\\n다음 연결은 제공된 미검토 Wiki 초안을 이용한 개념적 연결이다. 그 초안들이 다루는 다른 논문의 원문을 이번에 다시 읽거나 독립 검증한 것은 아니다.\\n\\n- [[concepts/agent-authority-and-effect-boundaries]]: 임시 확보·지출 승인·서비스 검증·실제 결제 완료를 분리하는 데 유용하다. 토큰이 표현하는 권한과 실제 집행 지점이 어디인지 질문하도록 돕는다.\\n- [[concepts/provenance-and-audit-evidence]]: 서명된 토큰 이력, 요청 순서, 외부 완료 증거가 각각 무엇을 입증하는지 나누어 읽는 연결이다. 감사 가능성을 관측 완전성으로 바꾸지 않는다.\\n- [[concepts/security-evaluation-units]]: 이 논문의 설명용 시나리오를 다른 논문의 공격 실행·요청 판정·외부 효과 측정과 같은 평가 단위로 취급하지 않기 위한 연결이다. 비교 가능한 실험 분모가 확인되지 않은 상태에서 성능 순위를 만들지 않는다.\\n\\n## 열린 질문과 미확인 항목\\n\\n아래는 AI가 제안하는 후속 검토 질문이며, 사용자 의견이나 확인된 취약점·실험 결과가 아니다.\\n\\n- 도메인별 attenuation을 어떤 규칙과 데이터 모델로 판정하는가? 시간·목적·자원 범위가 복합적으로 결합된 위임에도 같은 규칙이 적용되는가?\\n- 병렬 하위 위임 각각의 한도가 적절하더라도, 전체 누적 지출 한도는 누가 어떤 원자적 상태로 관리하는가?\\n- 폐기와 거래 실행이 경쟁하거나 상태 확인 서비스가 응답하지 않을 때, 서비스는 어떤 실패 정책을 적용하는가?\\n- challenge·nonce 소비, 재시도, 프로세스 재시작, 분산 verifier 사이의 상태 공유는 어떻게 정의되는가?\\n- capability 서명, credential proof, holder 신원, verifier domain 사이의 결합은 어떤 구현 사양으로 고정되는가?\\n- 비밀이 모델에 노출되지 않는 것과, 모델이 wallet에 부적절한 허용 요청을 반복하는 것은 어떻게 구분하여 시험할 것인가?\\n- 실제 검증에서는 권한 거부, 비밀 유출, 권한 내 오용, 폐기 전파, 정상 업무 완료를 각각 어떤 관측 종점으로 기록할 것인가?\\n\\n## 원문 근거와 기록 경계\\n\\n주장별 근거는 위의 물리적 `source.pdf#page=N` 표식과 구조화된 짧은 인용에 연결했다. 페이지 식별자는 인쇄 쪽수가 아니라 제공된 PDF 파일 순서다. 본문 설명은 주로 앞부분의 설계·위협 모델·흐름에서 가져왔고, 참고문헌 페이지는 인용 대상의 존재를 읽은 범위일 뿐 그 자료의 내용을 검증하는 근거로 사용하지 않았다.\\n\\n- 입력이 제공한 PDF SHA-256: `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`.\\n- 메타데이터 경로: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json`.\\n- 입력이 제공한 메타데이터 SHA-256: `56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb`.\\n\\n이 해시들은 제공된 식별 정보를 보존한 것이며 이 응답에서 재계산한 무결성 검사 결과가 아니다. 이 노트 작성은 원본 수정, 실험 실행, 독립 보안 검증, 사람의 reviewed 판정 또는 Wiki 게시 완료를 뜻하지 않는다.\"\n}",
+  "elapsed_seconds": 652.701
+}

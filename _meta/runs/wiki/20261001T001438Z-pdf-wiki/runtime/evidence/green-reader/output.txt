@@ -1,0 +1,7 @@
+test_01_preflight_requires_bound_scope_before_body (pdf_tests.Tests.test_01_preflight_requires_bound_scope_before_body) ... ok
+test_02_embedded_pages_ephemeral_and_blank_unread (pdf_tests.Tests.test_02_embedded_pages_ephemeral_and_blank_unread) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.056s
+
+OK

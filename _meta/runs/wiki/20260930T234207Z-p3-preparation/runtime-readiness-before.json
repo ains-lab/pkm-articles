@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-09-30T23:43:43.274739+00:00",
+  "cron_store_path": "/home/ainsdev/.hermes/cron/jobs.json",
+  "job_ids": [
+    "05ec97bfa8d5",
+    "4cff5b4f10ec",
+    "c5548510672c"
+  ],
+  "collector_record_sha256": "309ae7a2497d2133d452c102ff82fbc2d5a1f9149328758a2d0d3a480f86c564",
+  "collector_prompt_sha256": "dff8037821fd6bd22b5dfb9beea04fcda6be49b4a21e6635e805324242485416",
+  "collector_settings": {
+    "id": "4cff5b4f10ec",
+    "name": "논문 원본 수집 (HTML 우선·PDF 대체) · AI Agent Security · 매일 00:00 KST",
+    "enabled": true,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 15 * * *",
+      "display": "0 15 * * *"
+    },
+    "model": "gpt-6-astra",
+    "provider": "codex-lb",
+    "reasoning_effort": "xhigh",
+    "workdir": "/home/ainsdev/wiki/pkm-articles",
+    "skills": [
+      "arxiv"
+    ],
+    "deliver": "local",
+    "failure_deliver": "local"
+  },
+  "daily_job_absent": true,
+  "review_job_absent": true,
+  "timezone_observed": "UTC",
+  "timezone_offset_seconds": 0.0,
+  "schedule_preview": {
+    "kind": "cron",
+    "expr": "0 17 * * *",
+    "display": "0 17 * * *"
+  },
+  "preview_next_run": "2026-10-01T17:00:00+00:00",
+  "preview_next_run_kst": "2026-10-02T02:00:00+09:00",
+  "preview_matches_0200_kst": true,
+  "registered_or_scheduled_by_this_probe": false,
+  "gateway_runtime_next_fire_observed": false
+}

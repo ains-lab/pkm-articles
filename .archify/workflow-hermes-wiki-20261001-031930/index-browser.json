@@ -1,0 +1,38 @@
+{
+  "artifact_sha256": "ee1faaf2b0fca469d29fd10edf3d08c512eb6caf20987915926786ab568e7cb0",
+  "viewports": [
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "mainVisible": true,
+      "diagramLinks": 8,
+      "smallTargets": 0
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "mainVisible": true,
+      "diagramLinks": 8,
+      "smallTargets": 0
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1265,
+      "mainVisible": true,
+      "diagramLinks": 8,
+      "smallTargets": 0
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "mainVisible": true,
+      "diagramLinks": 8,
+      "smallTargets": 0
+    }
+  ],
+  "details_expanded": true,
+  "first_diagram_navigation": "file:///home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+  "external_resources": [],
+  "visual_review": "pending",
+  "screenshot": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index-desktop.png"
+}

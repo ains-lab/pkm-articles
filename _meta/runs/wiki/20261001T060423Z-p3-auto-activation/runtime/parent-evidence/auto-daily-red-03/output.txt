@@ -1,0 +1,21 @@
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ERROR
+
+======================================================================
+ERROR: test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 104, in test_daily_commits_auto_verified_then_noops_without_second_model
+    result = daily.run_daily(**dict(f.kw(), run=next_run), client_factory=model)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 486, in run_daily
+    reject_dangling_reservations(ctx,items)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 136, in reject_dangling_reservations
+    C.require(item is not None and item['status']=='published_draft' and
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/p3_common.py", line 27, in require
+    raise ValueError(code)
+ValueError: unresolved_reservation
+
+----------------------------------------------------------------------
+Ran 1 test in 3.704s
+
+FAILED (errors=1)

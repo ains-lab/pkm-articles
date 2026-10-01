@@ -1,0 +1,744 @@
+test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary) ... ok
+test_allowed_inline_source_and_committed_wiki_links (test_content.ContentTests.test_allowed_inline_source_and_committed_wiki_links) ... ok
+test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests) ... ok
+test_bom_cannot_hide_frontmatter (test_content.ContentTests.test_bom_cannot_hide_frontmatter) ... ok
+test_changed_source_rejected_before_client (test_content.ContentTests.test_changed_source_rejected_before_client) ... ok
+test_client_close_failure_is_unknown_without_retry (test_content.ContentTests.test_client_close_failure_is_unknown_without_retry) ... ok
+test_corrupt_pdf_is_partial_with_unknown_page_count_no_model (test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model) ... ok
+test_duplicate_json_and_false_or_forged_review_fields_are_rejected (test_content.ContentTests.test_duplicate_json_and_false_or_forged_review_fields_are_rejected) ... ok
+test_every_claim_line_requires_unescaped_citation (test_content.ContentTests.test_every_claim_line_requires_unescaped_citation) ... ok
+test_expiry_during_result_encoding_stops_before_write (test_content.ContentTests.test_expiry_during_result_encoding_stops_before_write) ... ok
+test_factory_failure_is_precall_and_route_rejection_never_retryable (test_content.ContentTests.test_factory_failure_is_precall_and_route_rejection_never_retryable) ... ok
+test_generation_and_review_envelopes_fail_closed (test_content.ContentTests.test_generation_and_review_envelopes_fail_closed) ... ok
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) ... ok
+test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) ... ok
+test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests) ... ok
+test_pdf_midread_failure_preserves_observed_and_unread_telemetry (test_content.ContentTests.test_pdf_midread_failure_preserves_observed_and_unread_telemetry) ... ok
+test_pdf_subset_cannot_claim_main_text_complete (test_content.ContentTests.test_pdf_subset_cannot_claim_main_text_complete) ... ok
+test_production_fake_injection_is_refused_before_io (test_content.ContentTests.test_production_fake_injection_is_refused_before_io) ... ok
+test_repeated_attempt_rejected_before_second_source_read_or_client (test_content.ContentTests.test_repeated_attempt_rejected_before_second_source_read_or_client) ... ok
+test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) ... ok
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... ok
+test_snapshot_guard_refusals_cover_each_read_factory_and_request_boundary (test_content.ContentTests.test_snapshot_guard_refusals_cover_each_read_factory_and_request_boundary) ... ok
+test_source_drift_after_construction_stops_dispatch (test_content.ContentTests.test_source_drift_after_construction_stops_dispatch) ... ok
+test_claim_scope_contract_requires_exact_claim_anchor_membership (test_content_contract.ContentContractTests.test_claim_scope_contract_requires_exact_claim_anchor_membership) ... ok
+test_compliant_body_is_not_rewritten_and_reaches_independent_review (test_content_contract.ContentContractTests.test_compliant_body_is_not_rewritten_and_reaches_independent_review) ... ok
+test_generation_contract_states_closed_bounded_schema (test_content_contract.ContentContractTests.test_generation_contract_states_closed_bounded_schema) ... ok
+test_json_version_without_exact_body_version_stays_blocked (test_content_contract.ContentContractTests.test_json_version_without_exact_body_version_stays_blocked) ... ok
+test_mechanically_compliant_body_still_requires_semantic_support (test_content_contract.ContentContractTests.test_mechanically_compliant_body_still_requires_semantic_support) ... ok
+test_pdf_contract_requires_all_observed_physical_text_pages (test_content_contract.ContentContractTests.test_pdf_contract_requires_all_observed_physical_text_pages) ... ok
+test_repeated_claim_contract_requires_same_line_citation_every_time (test_content_contract.ContentContractTests.test_repeated_claim_contract_requires_same_line_citation_every_time) ... ok
+test_visible_scope_contract_requires_exact_version_and_every_scope_token (test_content_contract.ContentContractTests.test_visible_scope_contract_requires_exact_version_and_every_scope_token) ... ok
+test_authority_and_integrity_negatives (test_daily.DailyTests.test_authority_and_integrity_negatives) ... ok
+test_context_deadline_is_checked_between_inventory_sources (test_daily.DailyTests.test_context_deadline_is_checked_between_inventory_sources) ... ok
+test_dangling_reservation_before_state_write_is_not_replayed (test_daily.DailyTests.test_dangling_reservation_before_state_write_is_not_replayed) ... ok
+test_empty_inventory_is_verified_noop (test_daily.DailyTests.test_empty_inventory_is_verified_noop) ... ok
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_partial_and_three_failures_block_further_processing (test_daily.DailyTests.test_partial_and_three_failures_block_further_processing) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ERROR
+test_preserved_completed_source_noop_checks_receipt_and_output (test_daily.DailyTests.test_preserved_completed_source_noop_checks_receipt_and_output) ... ok
+test_reserved_unknown_from_prior_run_blocks_new_run (test_daily.DailyTests.test_reserved_unknown_from_prior_run_blocks_new_run) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ok
+test_authority_revocation_after_basis_prevents_wal_creation (test_publication.PublicationTests.test_authority_revocation_after_basis_prevents_wal_creation) ... ok
+test_busy_lock_is_not_stolen (test_publication.PublicationTests.test_busy_lock_is_not_stolen) ... ok
+test_collector_priority_skips_without_creating_artifacts (test_publication.PublicationTests.test_collector_priority_skips_without_creating_artifacts) ... ok
+test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) ... ok
+test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) ... 
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_basis') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_journal') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_page') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_index') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_log') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_receipt') ... ERROR
+  test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_state') ... ERROR
+test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) ... 
+  test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='page') ... ERROR
+  test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='receipt') ... ERROR
+  test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='state') ... ERROR
+  test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='index') ... ERROR
+  test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='log') ... ERROR
+test_existing_page_not_overwritten (test_publication.PublicationTests.test_existing_page_not_overwritten) ... ok
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ERROR
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ERROR
+test_lock_ownership_is_checked_at_each_stage (test_publication.PublicationTests.test_lock_ownership_is_checked_at_each_stage) ... FAIL
+test_noop_preserves_later_unrelated_state_index_log (test_publication.PublicationTests.test_noop_preserves_later_unrelated_state_index_log) ... ERROR
+test_other_unknown_journal_blocks (test_publication.PublicationTests.test_other_unknown_journal_blocks) ... ok
+test_pdf_bundle_publishes_without_pdf_parsing (test_publication.PublicationTests.test_pdf_bundle_publishes_without_pdf_parsing) ... ERROR
+test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) ... 
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=0) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=1) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=2) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=3) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=4) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=5) ... ERROR
+  test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=6) ... ERROR
+test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) ... ok
+test_review_requires_all_supported_claims_and_body (test_publication.PublicationTests.test_review_requires_all_supported_claims_and_body) ... ok
+test_snapshot_drift_and_descriptor_drift_refuse_before_writes (test_publication.PublicationTests.test_snapshot_drift_and_descriptor_drift_refuse_before_writes) ... ok
+test_known_unknown_outcome_survives_busy_and_reconciles_without_replay (test_contention.ContentionTests.test_known_unknown_outcome_survives_busy_and_reconciles_without_replay) ... ok
+test_reconciliation_cli_dispatches_without_regeneration (test_contention.ContentionTests.test_reconciliation_cli_dispatches_without_regeneration) ... ok
+test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once (test_contention.ContentionTests.test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once) ... ok
+test_reservation_busy_is_reported_without_model_or_reading_state (test_contention.ContentionTests.test_reservation_busy_is_reported_without_model_or_reading_state) ... ok
+test_cli_reports_real_disabled_gate_without_creating_live_run (test_integration.IntegrationTests.test_cli_reports_real_disabled_gate_without_creating_live_run) ... FAIL
+test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) ... 
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_basis') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_journal') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_page') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_index') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_log') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_receipt') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_state') ... ERROR
+test_deadline_after_generation_blocks_publication_without_replaying_model (test_integration.IntegrationTests.test_deadline_after_generation_blocks_publication_without_replaying_model) ... ok
+test_later_success_does_not_hide_earlier_partial (test_integration.IntegrationTests.test_later_success_does_not_hide_earlier_partial) ... ERROR
+test_partial_pdf_telemetry_reaches_daily_state_without_model (test_integration.IntegrationTests.test_partial_pdf_telemetry_reaches_daily_state_without_model) ... ok
+test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop) ... ERROR
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ok
+test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) ... ok
+test_new_html_and_pdf_publication_is_compiled_auto_verified (test_auto_publication.AutoPublicationTests.test_new_html_and_pdf_publication_is_compiled_auto_verified) ... ok
+
+======================================================================
+ERROR: test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_daily.py", line 91, in test_preflight_binds_authority_and_refuses_live_disabled
+    self.m.preflight(root=C.ROOT,run=RUN,approval_ref=APPROVAL,now=NOW)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 65, in preflight
+    raw=fs.read(approval_ref); approval=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 91, in read
+    with self.parent(path) as (fd, name):
+  File "/usr/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 83, in parent
+    nxt = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=fd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'synthetic-daily'
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_basis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 251, in test_each_crash_stage_recovers_exactly_once
+    result = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_journal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_page')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) (stage='after_state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 250, in test_each_crash_stage_recovers_exactly_once
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='page')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 315, in test_edited_outputs_or_state_are_never_noop
+    answer = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 315, in test_edited_outputs_or_state_are_never_noop
+    answer = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 315, in test_edited_outputs_or_state_are_never_noop
+    answer = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 315, in test_edited_outputs_or_state_are_never_noop
+    answer = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) (target='log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 315, in test_edited_outputs_or_state_are_never_noop
+    answer = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 402, in test_html_publishes_enabled_draft_with_real_helpers
+    answer = p.publish(self.f.ctx, self.f.bundle, now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 148, in test_interrupted_page_recovers_without_overwriting_later_log
+    p.publish(self.f.ctx, self.f.bundle, now=NOW, hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_noop_preserves_later_unrelated_state_index_log (test_publication.PublicationTests.test_noop_preserves_later_unrelated_state_index_log)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 264, in test_noop_preserves_later_unrelated_state_index_log
+    p.publish(self.f.ctx,self.f.bundle,now=NOW)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_pdf_bundle_publishes_without_pdf_parsing (test_publication.PublicationTests.test_pdf_bundle_publishes_without_pdf_parsing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 235, in test_pdf_bundle_publishes_without_pdf_parsing
+    result = self.publisher().publish(f.ctx,f.bundle,now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) (case=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 297, in test_rehashed_journal_tampering_cannot_reconstruct
+    self.publisher().publish(f.ctx,f.bundle,now=NOW,hook=crash)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_basis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 88, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 359, in recover_publication
+    return publish(prepared,bundle,now=now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_journal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_page')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 87, in test_daily_recovery_after_each_publication_interruption_without_model
+    daily.run_daily(**kw,client_factory=model)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 84, in interrupted
+    def interrupted(ctx,bundle,**kwargs):return original(ctx,bundle,hook=crash,**kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_later_success_does_not_hide_earlier_partial (test_integration.IntegrationTests.test_later_success_does_not_hide_earlier_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 127, in test_later_success_does_not_hide_earlier_partial
+    result=daily.run_daily(**kw,processor=process,client_factory=Model())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+ERROR: test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 56, in test_two_formats_generate_review_publish_and_next_run_noop
+    out=daily.run_daily(**kwargs,client_factory=model,pdf_module=pdf)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 514, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 358, in publish
+    plan = _assemble(ctx,evidence,basis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 230, in _assemble
+    g.schema_validate(ctx['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+======================================================================
+FAIL: test_lock_ownership_is_checked_at_each_stage (test_publication.PublicationTests.test_lock_ownership_is_checked_at_each_stage)
+----------------------------------------------------------------------
+ValueError: schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_publication.py", line 365, in test_lock_ownership_is_checked_at_each_stage
+    with self.assertRaisesRegex(ValueError,'owner changed'):
+AssertionError: "owner changed" does not match "schema compilation: 'published_auto_verified' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']"
+
+======================================================================
+FAIL: test_cli_reports_real_disabled_gate_without_creating_live_run (test_integration.IntegrationTests.test_cli_reports_real_disabled_gate_without_creating_live_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_integration.py", line 116, in test_cli_reports_real_disabled_gate_without_creating_live_run
+    self.assertEqual(result['error']['message'],'p3_execution_not_authorized')
+AssertionError: None != 'p3_execution_not_authorized'
+
+----------------------------------------------------------------------
+Ran 74 tests in 48.557s
+
+FAILED (failures=2, errors=33)

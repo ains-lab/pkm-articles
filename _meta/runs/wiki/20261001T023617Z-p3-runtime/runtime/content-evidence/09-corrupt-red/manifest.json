@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "fba580f160268a867062a93cee46c6027b1d7089f503fb86245893b6075e7515",
+    "stderr.txt": "d3abd241efe35ada82c7d6a474751dc961a88152a46cec73ba43f53b4e74e807",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "ca67947534df84f4b60f1a10534a908fa6fc02ca7ea512feab82230a556fee6c"
+  }
+}

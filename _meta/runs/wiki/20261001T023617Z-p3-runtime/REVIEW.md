@@ -1,0 +1,20 @@
+# P3 bounded adversarial review
+
+Verdict: **no_ship for completion of this implementation** (high confidence); no live activation judgment or permission. Blocking definition: an authority-projection bypass or routine contention that requires unsupported manual ledger repair. Claim/spec: `implementation-approval.json`, `INTERFACE.md:21,33-38`; single-note publication only.
+
+## P1 — Scheduler observer accepts forbidden monitor/session fields
+Confidence: high. `runtime/daily.py:39-40` checks `monitor` and `continuity`, but the installed scheduler stores `monitor_script`, `monitor_url`, and `attach_to_session` (`/home/ainsdev/.hermes/hermes-agent/cron/jobs.py:1774-1775,1802-1807`; `get_job` returns normalized records at 1814-1817). A live projection differing from the approved registration by either monitor field or session attachment passes the gate. The synthetic probe independently observed all three accepted. Monitor sources run before the agent and can fetch/run unapproved input or suppress scheduled execution (`jobs.py:1715-1717`). This is a concrete incomplete authority projection, not a claim that a live job was changed or ran. Validate the actual runtime field names and explicitly pin session attachment rather than imaginary aliases.
+
+## P1 — Transient collection contention can strand a failed attempt
+Confidence: high (static end-to-end path; reservation-busy branch also reproduced). `runtime/daily.py:372-380` raises on a busy collection lock **before** writing the non-publication outcome. Reservation has already persisted `status='reading'` at `301-305`. If the processor returned retryable_failed/unknown/partial while collection became busy, no terminal outcome is durable; the exception escapes the loop, and subsequent runs reject `unresolved_reading` at `417`. The only supplied recovery path requires all result/report/review artifacts at `343-346`, which a failed/unknown attempt need not have. Ordinary transient contention therefore turns into an unrecoverable-through-this-interface pipeline block, not a clean skipped_busy/retry. Reservation contention likewise raises rather than returning the documented busy status; the probe observed `ValueError('skipped_busy')` and no daily report. This is fail-closed availability/correctness failure, **not unsafe publication**. Preserve the known terminal outcome durably and provide ownership-safe state reconciliation without replaying unknown model work.
+
+## Checked / evidence
+- The latest synthetic mixed-outcome probe returned status=partial with outcomes=[partial, published_draft]. The earlier last-writer-wins aggregation finding is therefore withdrawn; the parent fixed it during this review. The initial suite snapshot predates that fix.
+- Existing synthetic suites: **32 tests, 0 failures, 0 errors**, including two-format generation/publication/no-op, seven publication interruption stages, authority/snapshot rejection, journal tampering, lock ownership, and deadline-after-generation rejection. Evidence: `runtime/parent-evidence/adversarial-review-01/counts.json`, `output.txt`, immutable source snapshots. Exact selected test command/modules are recorded in counts.json; interpreter is `/home/ainsdev/.hermes/hermes-agent/venv/bin/python`.
+- Additional synthetic fixture probes: `runtime/parent-evidence/adversarial-review-01/probes.json`; network attempts=0, real source-body attempts=0. No live model/source/Cron work, no implementation edits.
+- Approval/snapshot guards and deterministic publication recovery: no additional concrete blocker found within reviewed/tested surfaces. Busy failure above is distinguished from the intentional fail-closed treatment of genuinely unknown crashes.
+
+## Not assessed
+Content implementation (separate owner), live model behavior, live scheduler registration/execution, abrupt process death leaving a stale ownership lock. Passing synthetic hook recovery does not prove unattended stale-lock recovery. No concept updates or activation work included.
+
+Created only this review and fresh synthetic evidence; temporary synthetic fixtures cleaned by their fixtures. Current blocker count: 2.

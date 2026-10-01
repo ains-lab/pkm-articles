@@ -1,0 +1,37 @@
+"""Run synthetic unittest evidence with exact counts; no live model or papers."""
+import hashlib
+import importlib.util
+import io
+import json
+from pathlib import Path
+import sys
+import unittest
+
+sys.dont_write_bytecode = True
+here = Path(__file__).parent
+label = sys.argv[1]
+if not label.replace('-', '').replace('_', '').isalnum():
+    raise SystemExit('unsafe label')
+dest = here / 'evidence' / label
+dest.mkdir(parents=True, exist_ok=False)
+for name in ('manual_pdf.py', 'test_manual_pdf.py', 'run_tests.py'):
+    p = here / name
+    if p.exists():
+        (dest / (name + '.snapshot')).write_bytes(p.read_bytes())
+spec = importlib.util.spec_from_file_location('pdf_tests', here / 'test_manual_pdf.py')
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+suite = (unittest.defaultTestLoader.loadTestsFromNames(sys.argv[2:], module) if len(sys.argv) > 2
+         else unittest.defaultTestLoader.loadTestsFromModule(module))
+log = io.StringIO()
+result = unittest.TextTestRunner(stream=log, verbosity=2).run(suite)
+(dest / 'output.txt').write_text(log.getvalue())
+report = dict(schema='synthetic-pdf-test-evidence/v1', label=label, tests_run=result.testsRun,
+    failures=len(result.failures), errors=len(result.errors), skipped=len(result.skipped),
+    exit_code=0 if result.wasSuccessful() else 1, synthetic_only=True, live_calls=0,
+    interpreter=sys.executable, python_version=sys.version,
+    snapshots={p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.glob('*.snapshot')})
+(dest / 'counts.json').write_text(json.dumps(report, indent=2)+'\n')
+print(log.getvalue())
+print(json.dumps(report))
+raise SystemExit(report['exit_code'])

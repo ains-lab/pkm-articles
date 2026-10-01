@@ -1,0 +1,59 @@
+{
+  "schema": "pkm-policy-promotion-verification/v1",
+  "observed_at": "2026-10-01T01:57:28.475353+00:00",
+  "status": "applied",
+  "agents_protected_tool_approved": true,
+  "files": {
+    "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+    "README.md": "8236bc40c5fe9ba8d5735c1273300b0262dd2967c92cca299e8033a1b6cd6bb4",
+    "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+    "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+    "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+    "_meta/P3-PREPARATION.md": "035754cb0dd8da830579f590461cf63e68558919bb37aad9f6607ac8f221f44c",
+    "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+    "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a",
+    "_meta/automation.json": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+    "_meta/prompts/research-review.md": "59dccdcd426dcfb4052a5f7e1b4c55536ef81f7c8c24d2419a439aeb22f22b12",
+    "_meta/prompts/wiki-compile.md": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+    "_meta/state/compilation.json": "3652557a19411891a03d36077920f4947f78725425181b869aa461c4d78a706e",
+    "_meta/state/feedback.json": "63fbb13d5bd7ca5b7146cb529e0dcb3053abde8a62818087d4c33e7daaffb64f",
+    "_meta/state/research-review.json": "3ebacb51899e4832a491c8daa46de98a2d7fb90e4e2035b29bae70f8fa56da2c"
+  },
+  "policy_tests": {
+    "tests_run": 132,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "adapter_tests": {
+    "schema": "synthetic-pdf-test-evidence/v1",
+    "label": "parent-verified-02",
+    "tests_run": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "synthetic_only": true,
+    "observed_boundaries": {
+      "network_attempts": 0,
+      "real_pdf_read_attempts": 0,
+      "synthetic_pdf_reads": 173
+    },
+    "legacy_helpers_unchanged": true,
+    "legacy_sha256": {
+      "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py": "b8c8904dc912489fd7e64f902a3e51353bc46ee13d5491fe54724279390254ac",
+      "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py": "d055ec8405ab01000308c5c603dbc432804651fb286c14141dace2dc3fdac0ee",
+      "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc"
+    },
+    "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "python_version": "3.11.15 (main, Jul 23 2026, 14:43:45) [Clang 22.1.3 ]",
+    "snapshots": {
+      "run_tests.py.snapshot": "bd01e9847b5ee99133b45b51e078755f03481fb4ec5456db19676a3ab4d9c8be",
+      "test_manual_pdf.py.snapshot": "151bec89ca5d983620f8773758c56be4184c1fa1e8fc83ef10b7ef6476ca8960",
+      "manual_pdf.py.snapshot": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4"
+    }
+  },
+  "preserved_files_unchanged": true,
+  "log_prefix_preserved": true,
+  "pdf_execution": "not_started"
+}

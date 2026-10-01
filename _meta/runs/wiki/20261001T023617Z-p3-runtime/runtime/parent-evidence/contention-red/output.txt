@@ -1,0 +1,53 @@
+test_known_unknown_outcome_survives_busy_and_reconciles_without_replay (test_contention.ContentionTests.test_known_unknown_outcome_survives_busy_and_reconciles_without_replay) ... ERROR
+test_reservation_busy_is_reported_without_model_or_reading_state (test_contention.ContentionTests.test_reservation_busy_is_reported_without_model_or_reading_state) ... ERROR
+
+======================================================================
+ERROR: test_known_unknown_outcome_survives_busy_and_reconciles_without_replay (test_contention.ContentionTests.test_known_unknown_outcome_survives_busy_and_reconciles_without_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 147, in collection_lock
+    os.mkdir(name, 0o700, dir_fd=fd)
+FileExistsError: [Errno 17] File exists: 'collection.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_contention.py", line 29, in test_known_unknown_outcome_survives_busy_and_reconciles_without_replay
+    result=daily.run_daily(**kw,processor=processor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 451, in run_daily
+    state=record_outcome(prepared,bundle)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 374, in record_outcome
+    C.require(bool(owned),'skipped_busy')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: skipped_busy
+
+======================================================================
+ERROR: test_reservation_busy_is_reported_without_model_or_reading_state (test_contention.ContentionTests.test_reservation_busy_is_reported_without_model_or_reading_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 147, in collection_lock
+    os.mkdir(name, 0o700, dir_fd=fd)
+FileExistsError: [Errno 17] File exists: 'collection.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_contention.py", line 17, in test_reservation_busy_is_reported_without_model_or_reading_state
+    result=daily.run_daily(**kw,processor=lambda *a,**k:self.fail('must not invoke'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 439, in run_daily
+    prepared=reserve(ctx,item,attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 288, in reserve
+    C.require(bool(owned),'skipped_busy')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: skipped_busy
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.008s
+
+FAILED (errors=2)

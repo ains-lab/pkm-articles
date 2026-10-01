@@ -1,0 +1,6 @@
+{
+  "command": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/test_schema.py && git diff --check",
+  "output": "test_automatic_completion_requires_no_human_review (__main__.AutomatedCompletionSchemaTests.test_automatic_completion_requires_no_human_review) ... ok\ntest_each_completion_state_requires_publication_evidence (__main__.AutomatedCompletionSchemaTests.test_each_completion_state_requires_publication_evidence) ... ok\ntest_old_published_draft_is_still_valid (__main__.AutomatedCompletionSchemaTests.test_old_published_draft_is_still_valid) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.148s\n\nOK",
+  "exit_code": 0,
+  "error": null
+}

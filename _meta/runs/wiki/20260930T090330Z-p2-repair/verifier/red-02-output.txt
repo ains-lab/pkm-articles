@@ -1,0 +1,226 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... FAIL
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... 
+  test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=None, status='unknown') ... ERROR
+  test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=None, status='unobserved_not_zero') ... ERROR
+  test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=0, status='known') ... ERROR
+  test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=42.5, status='observed') ... ERROR
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... FAIL
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ERROR
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... 
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='completed', value=False) ... ERROR
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='completed', value=1) ... ERROR
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='response_status', value=None) ... ERROR
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='error', value={}) ... ERROR
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='incomplete_details', value={}) ... ERROR
+  test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='response_model', value='other-model') ... ERROR
+
+======================================================================
+ERROR: test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=None, status='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 120, in test_cost_unknown_and_observed_costs_are_nonblocking
+    self.assertTrue(self.verify(result)["passed"])
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=None, status='unobserved_not_zero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 120, in test_cost_unknown_and_observed_costs_are_nonblocking
+    self.assertTrue(self.verify(result)["passed"])
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=0, status='known')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 120, in test_cost_unknown_and_observed_costs_are_nonblocking
+    self.assertTrue(self.verify(result)["passed"])
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) (value=42.5, status='observed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 120, in test_cost_unknown_and_observed_costs_are_nonblocking
+    self.assertTrue(self.verify(result)["passed"])
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 82, in test_import_safe_read_only_interface
+    report = self.verify()
+             ^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='completed', value=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='completed', value=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='response_status', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='error', value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='incomplete_details', value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) (key='response_model', value='other-model')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 127, in test_transport_and_model_rejections
+    report = self.verify(result)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 54, in verify
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 5, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+======================================================================
+FAIL: test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 98, in test_cli_explicit_paths_attempt_and_no_overwrite
+    self.assertEqual(proc.returncode, 0, proc.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py", line 6, in <module>
+    res = json.loads((RUN / VID / "attempt-result.json").read_text())
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '_meta/runs/wiki/20260929T083140Z-p2-resume/2609.00001v1/attempt-result.json'
+
+
+======================================================================
+FAIL: test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py", line 112, in test_default_cli_does_not_write_historical_report
+    self.assertTrue((dest / "attempt-verify-report.json").exists())
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.172s
+
+FAILED (failures=2, errors=11)

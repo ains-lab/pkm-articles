@@ -1,0 +1,9 @@
+{
+  "tests_run": 6,
+  "failures": [
+    "policy_test.PolicyAlignmentTests.test_active_document_revisions (path='AGENTS.md')",
+    "policy_test.PolicyAlignmentTests.test_cost_never_blocks_compilation"
+  ],
+  "errors": [],
+  "known_blocker": "AGENTS.md protected edit approval timeout; no bypass/retry"
+}

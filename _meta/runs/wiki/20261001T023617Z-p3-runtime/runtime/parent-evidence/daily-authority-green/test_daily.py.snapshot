@@ -1,0 +1,94 @@
+"""Daily P3 orchestration tests use synthetic roots and no network."""
+import copy
+from datetime import datetime, timezone
+import importlib.util
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from typing import Any
+
+import p3_common as C
+HERE = Path(__file__).parent
+NOW = datetime(2026, 10, 1, 2, 50, tzinfo=timezone.utc)
+RUN = '_meta/runs/wiki/synthetic-daily'
+APPROVAL = RUN+'/execution-approval.json'
+
+def load() -> Any:
+    path = HERE/'daily.py'
+    if not path.exists():
+        return None
+    spec = importlib.util.spec_from_file_location('p3_daily_tested', path)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+class Fixture:
+    def __init__(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='synthetic-', dir=HERE)
+        self.root = Path(self.tmp.name)
+        self.fs = C.helper('publish').Files(self.root)
+        self.auto = json.loads((C.ROOT/'_meta/automation.json').read_text())
+        self.auto['wiki_root'] = str(self.root)
+        self.auto['phase_authorizations']['P3'] = True
+        self.schema = json.loads((C.ROOT/'_meta/automation-contracts.schema.json').read_text())
+        self.schema['$defs']['automation']['properties']['wiki_root']['const'] = str(self.root)
+        self.state = dict(schema='pkm-compilation-state/v1', policy_revision=C.POLICY,
+            contract_revision=C.CONTRACT, initialized_at=NOW.isoformat(), enabled=False,
+            safety_block=False, safety_block_reason=None, items=[], transactions=[], receipts=[], cost_events=[], last_run=None)
+        self.approval = dict(schema='pkm-p3-execution-approval/v1', actor='user', approved=True,
+            user_request='SYNTHETIC TEST ONLY: P3 processing and draft publication', phase='P3',
+            wiki_root=str(self.root), mode='manual', run=RUN, source_scope='current_and_future_collected',
+            formats=['html','pdf'], collector_id='4cff5b4f10ec', model=C.MODEL, route=C.ROUTE,
+            validated_publication_authorized=True, edit_freeze={'mode':'run','run':RUN},
+            cost_policy='no_cost_cap', snapshots={})
+        for d in ['entities','concepts','comparisons','queries','_meta/locks', RUN, 'raw/articles/4cff5b4f10ec']:
+            C.ensure_dirs(self.fs, d)
+        for name in C.DOCS:
+            self.put(name, C.encoded(self.schema) if name.endswith('.json') else (C.POLICY+'\n').encode())
+        self.put(C.PROMPT, (C.PROMPT_REV+'\n'+C.POLICY+'\n').encode())
+        self.put('index.md', b'# Index\n\n> Last updated: 2026-10-01 | Total pages: 0\n\n## Entities\n\n## Concepts\n\n## Comparisons\n\n## Queries\n')
+        self.put('log.md', b'# Synthetic log\n')
+        self.sync()
+    def put(self, path, data):
+        C.ensure_dirs(self.fs, str(Path(path).parent)) if '/' in path else None
+        target = self.root/path
+        target.write_bytes(data)
+    def sync(self):
+        self.put('_meta/automation.json', C.encoded(self.auto))
+        self.put(C.STATE, C.encoded(self.state))
+        self.approval['snapshots'] = {p:C.sha(self.fs.read(p)) for p in (*C.DOCS,C.PROMPT,'_meta/automation.json')}
+        self.put(APPROVAL,C.encoded(self.approval))
+    def source(self, vid, collected='2026-09-28T10:00:00+00:00', fmt='html'):
+        data = b'<html><body><article id="S1"><p>Alpha evidence.</p></article></body></html>' if fmt=='html' else b'%PDF-1.7\nsynthetic placeholder for metadata-only tests\n%%EOF'
+        base = f'raw/articles/4cff5b4f10ec/arxiv-{vid}'
+        source=base+'/source.'+fmt
+        meta=dict(schema='arxiv-'+fmt+'-source/v1',source='arxiv',version_id=vid,title='Synthetic '+vid,
+            owning_cron_id='4cff5b4f10ec',source_url=f'https://arxiv.org/{fmt}/{vid}',final_url=f'https://arxiv.org/{fmt}/{vid}',
+            collected_at=collected,http_status=200,preprocessing=False,offline_assets_bundled=False,wiki_compiled=False,
+            capture_method='http_response_body_no_rewrite', **{fmt+'_file':'source.'+fmt,fmt+'_sha256':C.sha(data),fmt+'_bytes':len(data)})
+        if fmt=='pdf':meta['source_format']='pdf'
+        self.put(source,data);self.put(base+'/source.json',C.encoded(meta))
+        return vid
+    def kw(self):
+        return dict(root=self.root,run=RUN,approval_ref=APPROVAL,synthetic=True,now=NOW)
+    def close(self):self.tmp.cleanup()
+
+class DailyTests(unittest.TestCase):
+    def setUp(self):
+        self.m=load()
+        self.assertIsNotNone(self.m,'P3 daily orchestrator missing')
+        self.f=Fixture();self.addCleanup(self.f.close)
+    def test_preflight_binds_authority_and_refuses_live_disabled(self):
+        ctx=self.m.preflight(**self.f.kw())
+        self.assertEqual(ctx['approval_sha256'],C.sha(self.f.fs.read(APPROVAL)))
+        self.assertEqual(ctx['model'],C.MODEL)
+        self.f.auto['phase_authorizations']['P3']=False;self.f.sync()
+        with self.assertRaisesRegex(ValueError,'p3_execution_not_authorized'):
+            self.m.preflight(**self.f.kw())
+        with self.assertRaisesRegex(ValueError,'p3_execution_not_authorized'):
+            self.m.preflight(root=C.ROOT,run=RUN,approval_ref=APPROVAL,now=NOW)
+        self.assertFalse((C.ROOT/RUN).exists())
+
+if __name__=='__main__': unittest.main(verbosity=2)

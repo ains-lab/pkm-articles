@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 0,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "4f298503aa6acf3e58a3db01c7ccf25b67ffb1b12243edd4dfdf6e40356d20f5",
+    "stderr.txt": "7b6b0e40c196b0c558be8e9e6482e82469ec7872e2b6ccf0eb3ff734d1a57d70",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "14d64f96dea4459da44da4ab2c5945ac56725b339a23bf7d4c41fcc9792aaf5f"
+  }
+}

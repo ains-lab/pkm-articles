@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+    "sha256": "c8813d58ed0659db24956727af508d221335094cdc7a1b65340379c776f0d2ed",
+    "bytes": 40257
+  },
+  "artifact": {
+    "path": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html"
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase workflow edges[5] id \"r2-check\" \"r2\" -> \"r2qa\" crosses edges[9] id \"r4-authorized\" \"r4gate\" -> \"r4\" at [1195, 392] (segments 1 and 1) — adjust route/via, bias, or channel coordinates so the edges use separate lane corridors.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 5,
+        "id": "r2-check",
+        "from": "r2",
+        "to": "r2qa"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 9,
+          "id": "r4-authorized",
+          "from": "r4gate",
+          "to": "r4"
+        },
+        "point": [
+          1195,
+          392
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so the edges use separate lane corridors"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase workflow edges[4] id \"r2-authorized\" \"r2gate\" -> \"r2\" shares a 481px corridor with edges[7] id \"r3-check\" \"r3\" -> \"r3qa\" at [714, 70] -> [1195, 70] (segments 1 and 3; minimum 8px) — adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 4,
+        "id": "r2-authorized",
+        "from": "r2gate",
+        "to": "r2"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 7,
+          "id": "r3-check",
+          "from": "r3",
+          "to": "r3qa"
+        },
+        "overlapLengthPx": 481,
+        "minimumPx": 8,
+        "from": [
+          714,
+          70
+        ],
+        "to": [
+          1195,
+          70
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 3
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase workflow edges[6] id \"r2-r3\" \"r2qa\" -> \"r3\" crosses edges[10] id \"r4-check\" \"r4\" -> \"qa\" at [1163, 582] (segments 1 and 2) — adjust route/via, bias, or channel coordinates so the edges use separate lane corridors.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 6,
+        "id": "r2-r3",
+        "from": "r2qa",
+        "to": "r3"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 10,
+          "id": "r4-check",
+          "from": "r4",
+          "to": "qa"
+        },
+        "point": [
+          1163,
+          582
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so the edges use separate lane corridors"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase workflow edges[4] id \"r2-authorized\" \"r2gate\" -> \"r2\" shares a 38px corridor with edges[9] id \"r4-authorized\" \"r4gate\" -> \"r4\" at [1195, 322] -> [1195, 360] (segments 2 and 1; minimum 8px) — adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 4,
+        "id": "r2-authorized",
+        "from": "r2gate",
+        "to": "r2"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 9,
+          "id": "r4-authorized",
+          "from": "r4gate",
+          "to": "r4"
+        },
+        "overlapLengthPx": 38,
+        "minimumPx": 8,
+        "from": [
+          1195,
+          322
+        ],
+        "to": [
+          1195,
+          360
+        ],
+        "segmentIndex": 2,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase workflow edges[5] id \"r2-check\" \"r2\" -> \"r2qa\" shares a 449px corridor with edges[10] id \"r4-check\" \"r4\" -> \"qa\" at [714, 550] -> [1163, 550] (segments 3 and 1; minimum 8px) — adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 5,
+        "id": "r2-check",
+        "from": "r2",
+        "to": "r2qa"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 10,
+          "id": "r4-check",
+          "from": "r4",
+          "to": "qa"
+        },
+        "overlapLengthPx": 449,
+        "minimumPx": 8,
+        "from": [
+          714,
+          550
+        ],
+        "to": [
+          1163,
+          550
+        ],
+        "segmentIndex": 3,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase workflow edges[6] id \"r2-r3\" \"r2qa\" -> \"r3\" shares a 857.2px corridor with edges[7] id \"r3-check\" \"r3\" -> \"r3qa\" at [446, 740] -> [1303.2, 740] (segments 3 and 1; minimum 8px) — adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge.",
+      "subject": {
+        "diagramType": "workflow",
+        "collection": "edges",
+        "index": 6,
+        "id": "r2-r3",
+        "from": "r2qa",
+        "to": "r3"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "workflow",
+          "collection": "edges",
+          "index": 7,
+          "id": "r3-check",
+          "from": "r3",
+          "to": "r3qa"
+        },
+        "overlapLengthPx": 857.2,
+        "minimumPx": 8,
+        "from": [
+          446,
+          740
+        ],
+        "to": [
+          1303.2,
+          740
+        ],
+        "segmentIndex": 3,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via, bias, or channel coordinates so unrelated edges do not visually merge"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 6,
+    "shown": 6,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/repair-1/diagram.finalize.json",
+    "summaryReceipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/repair-1/diagram.finalize-summary.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 332,
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/candidate.json",
+    "constraint": "Preserve unaffected semantics and geometry; do not replace the whole candidate.",
+    "then": "finalize-once"
+  }
+}

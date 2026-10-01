@@ -1,0 +1,6 @@
+test_publication_contention_retains_operator_recovery_not_silent_reading (test_scheduled_safety.ScheduledSafetyTests.test_publication_contention_retains_operator_recovery_not_silent_reading) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 3.571s
+
+OK

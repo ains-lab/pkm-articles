@@ -1,0 +1,40 @@
+{
+  "at": "2026-09-30T10:51:00.604986+00:00",
+  "passed": true,
+  "publication_summary_append_verified": true,
+  "original_log_prefix_preserved": true,
+  "protected_snapshot_files": 48,
+  "protected_hashes_unchanged": true,
+  "collection_lock_released": true,
+  "schema_instances_verified": [
+    "_meta/automation.json",
+    "_meta/state/compilation.json",
+    "_meta/state/feedback.json",
+    "_meta/state/research-review.json"
+  ],
+  "committed_versions_reverified": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "output_refs": [
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "revision": "1",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "revision": "1",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9"
+    }
+  ],
+  "index_sha256": "16109f35a046d95be008664ae872514bbbfcfda8748164255b17a7e3d914ae4b",
+  "log_sha256": "f5dc68b795a70ae985cd6f756129d484c1a816ab17080cf8a6c60f1412a4eb7b",
+  "state_sha256": "76761ec7fe21dac3d745db5b15c5cb1d81118e0b3f0bd3d3605d304da6e2d0cc",
+  "followup_automation_enabled": false,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

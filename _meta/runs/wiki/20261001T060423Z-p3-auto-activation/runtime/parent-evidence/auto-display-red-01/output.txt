@@ -1,0 +1,14 @@
+test_page_displays_automatic_verification_not_human_review (test_auto_publication.AutoPublicationTests.test_page_displays_automatic_verification_not_human_review) ... FAIL
+
+======================================================================
+FAIL: test_page_displays_automatic_verification_not_human_review (test_auto_publication.AutoPublicationTests.test_page_displays_automatic_verification_not_human_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 77, in test_page_displays_automatic_verification_not_human_review
+    self.assertIn('자동 검증 완료', page)
+AssertionError: '자동 검증 완료' not found in '---\ntitle: "Synthetic paper"\nsummary: "A bounded synthetic result."\ncreated: "2026-10-01"\nupdated: "2026-10-01"\nlast_reviewed: null\ntype: "entity"\nstatus: "compiled"\ntags: ["paper"]\nsources: ["raw/articles/4cff5b4f10ec/arxiv-2610.00001v1/source.html"]\nconfidence: "medium"\ncontested: false\ncontradictions: []\nschema: "pkm-knowledge-page/v1"\nrevision: "1"\ntransaction_id: "p3-5b3c0203221535898faae558c87a7854"\npolicy_revision: "pkm-html-pdf-text-knowledge/v3"\nprompt_revision: "wiki-compile/v3"\ngeneration_ref: "_meta/runs/wiki/20261001T023617Z-p3-runtime/items/2610.00001v1/attempt1-result.json"\nread_scope: ["S1"]\nunread_scope: ["Figures not reviewed"]\nreview_state: "auto_verified"\nsource_hashes: {"raw/articles/4cff5b4f10ec/arxiv-2610.00001v1/source.html": "616818c5affa03f3eacef0fbd519b7ea2eb4aec194be01cfd2fba2abeeeed0d6"}\nagent_review_ref: "_meta/runs/wiki/20261001T023617Z-p3-runtime/items/2610.00001v1/attempt1-review.json"\n---\n\n# Synthetic paper\n\nVersion 2610.00001v1; text reviewed, figures unread.\n\nC01: A bounded result is reported. ^[raw/articles/4cff5b4f10ec/arxiv-2610.00001v1/source.html#S1]\n\n[[concepts/synthetic]]\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.477s
+
+FAILED (failures=1)

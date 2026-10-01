@@ -1,0 +1,402 @@
+{
+  "contract_revision": "pkm-contracts/v2",
+  "cost_events": [
+    {
+      "charged_usd": null,
+      "created_at": "2026-09-30T10:44:44.747016+00:00",
+      "event_id": "p2-3dd7045ccb252e65cfc6379fed0774e0",
+      "kst_day": "2026-09-30",
+      "reserved_usd": null,
+      "role": "pilot",
+      "run_id": "20260930T100918Z-p2-live-staged",
+      "scope_id": "2609.30830v1",
+      "status": "unknown",
+      "usage_receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json"
+    },
+    {
+      "charged_usd": null,
+      "created_at": "2026-09-30T10:45:19.891855+00:00",
+      "event_id": "p2-39f61c7ae836953ef2fb0be7e534079a",
+      "kst_day": "2026-09-30",
+      "reserved_usd": null,
+      "role": "pilot",
+      "run_id": "20260930T100918Z-p2-live-staged",
+      "scope_id": "2609.31358v1",
+      "status": "unknown",
+      "usage_receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json"
+    },
+    {
+      "charged_usd": null,
+      "created_at": "2026-09-30T13:23:23.749973+00:00",
+      "event_id": "p2i-d3b8cf0db1b918060510445ffe3b227a",
+      "kst_day": "2026-09-30",
+      "reserved_usd": null,
+      "role": "pilot",
+      "run_id": "20260930T125856Z-p2-integration",
+      "scope_id": "P2-two-paper-integration",
+      "status": "unknown",
+      "usage_receipt": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json"
+    }
+  ],
+  "enabled": false,
+  "initialized_at": "2026-09-29T06:00:18.696411+00:00",
+  "items": [
+    {
+      "collected_at": "2026-09-28T10:42:11.138705+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 926811,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.30217v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-28T10:42:14.317240+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 738941,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.30266v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-29T04:27:19.881365+00:00",
+      "failure_count": 0,
+      "format": "pdf",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "pdf_reading_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 821749,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "status": "blocked_policy",
+      "unread_scope": [],
+      "version_id": "2609.30614v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-29T04:27:23.073112+00:00",
+      "failure_count": 0,
+      "format": "pdf",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "pdf_reading_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 693979,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "status": "blocked_policy",
+      "unread_scope": [],
+      "version_id": "2609.30824v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-28T10:42:36.574939+00:00",
+      "failure_count": 1,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json",
+      "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+      "output_refs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "revision": "1",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "revision": "1",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "revision": "1",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        },
+        {
+          "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+          "revision": "1",
+          "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+        },
+        {
+          "path": "entities/arxiv-2609.30830v1.md",
+          "revision": "2",
+          "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+        },
+        {
+          "path": "entities/arxiv-2609.31358v1.md",
+          "revision": "2",
+          "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+        }
+      ],
+      "read_scope": [
+        "S1 — Introduction: 권한·데이터 출처의 분리와 계측 경계에 관한 본문",
+        "S2.SS3 — Runtime judgment and evidence",
+        "S3.SS1 — System model",
+        "S3.SS2 — Adversary model",
+        "S4.SS1 — Overview and trust root: p1–p3 본문",
+        "S4.SS2 — Authorization and effect state: p1–p6 설명 본문",
+        "S4.SS3 — Source registration and boundary checks: p1–p7 설명 본문",
+        "S4.SS4 — Decision flow and state updates",
+        "S4.SS5 — Execution evidence and replay: p1–p5 설명 본문",
+        "S5 — Implementation: p1–p9 본문",
+        "S5.T2 — Adapter capabilities and evaluated paths: HTML 표 텍스트",
+        "S6.SS1 — Questions and experimental setting: 본문",
+        "S6.SS2 — RQ1: defense and authorization boundaries: 그림을 제외한 설명 본문",
+        "S6.T4 — DSH denial events by declaration setting: HTML 표 텍스트와 캡션",
+        "S6.SS3 — RQ2: attack behavior without AGATE: 본문",
+        "S6.SS4 — RQ3: usability and failure analysis",
+        "S6.SS5 — RQ4: reconstruction, coverage, and cost",
+        "S7.SS1 — Limitations"
+      ],
+      "reason": "Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed",
+      "receipt_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json",
+      "requested_scope": "P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)",
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 267373,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "status": "published_draft",
+      "unread_scope": [
+        "이번 통합에서 S3.SS3의 효과 분류표, S8의 관련연구 비교, S9 및 bib 전체를 새 주장의 근거로 상세 재독하지 않았다. 기존 노트의 전문 읽기 선언을 이번 읽기 범위로 승계하지 않았다.",
+        "그림·SVG·외부 이미지와 PDF는 읽지 않았다. algo1–algo3 및 MathML을 독립적인 수학·구현 검증 대상으로 검토하지 않았다.",
+        "동반 공격 아카이브, 코드, 원시 로그, 호스트 원장과 배포 설정은 제공 자료 밖이므로 확인하지 않았다. 실험 재현이나 제공 SHA256의 재계산도 수행하지 않았다."
+      ],
+      "version_id": "2609.30830v1",
+      "work_key": "1eea720e3ee514cdf247914aa2c50af7acc0950d84a63d5b603e6c4e7696ef95"
+    },
+    {
+      "collected_at": "2026-09-28T10:42:39.734613+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 397917,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.30940v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-28T10:42:42.912271+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 558801,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.31039v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-28T10:42:56.338003+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 536360,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.31318v1",
+      "work_key": null
+    },
+    {
+      "collected_at": "2026-09-28T10:42:59.463183+00:00",
+      "failure_count": 1,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json",
+      "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+      "output_refs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "revision": "1",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "revision": "1",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "revision": "1",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        },
+        {
+          "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+          "revision": "1",
+          "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+        },
+        {
+          "path": "entities/arxiv-2609.30830v1.md",
+          "revision": "2",
+          "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+        },
+        {
+          "path": "entities/arxiv-2609.31358v1.md",
+          "revision": "2",
+          "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+        }
+      ],
+      "read_scope": [
+        "S1 — Introduction",
+        "S2 — Background and Related Work: p1–p6 본문",
+        "S3 — Architecture and Implementation: p1–p7 설명 본문",
+        "S4 — SDC-to-MCP Mapping: p1–p6 설명 본문",
+        "S4.SS1 — Interpreting a Mapped Metric: 설명 본문",
+        "S4.SS2 — Worked Example: From Monitor State to Agent Response: 설명 본문",
+        "S4.SS2.SSS0.Px1 — State quality is independent of mapping success",
+        "S5.p1 — 평가 계층과 실험 단위 구분",
+        "S5.SS1 — Simulated Devices and Task Context: 본문",
+        "S5.SS2 — Software-SDC Protocol Paths",
+        "S5.SS3 — No-execution, Lifecycle, and Provenance Checks",
+        "S5.SS4 — Agent Evaluation and Representation Ablation: 본문",
+        "S5.SS5 — Analysis and Reproducibility Discipline: 본문",
+        "S6.SS1 — Resource Exposure and Protocol Interoperability: 본문",
+        "S6.SS2 — Boundary, Lifecycle, and Authorization Outcomes",
+        "S6.SS3 — Agent Interpretation and Retained Failures: 본문",
+        "S6.SS4 — Representation Ablation",
+        "S6.SS6 — Audit and Consolidated Evidence",
+        "S7 — Discussion and Limitations"
+      ],
+      "reason": "Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed",
+      "receipt_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json",
+      "requested_scope": "P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)",
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 212956,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "status": "published_draft",
+      "unread_scope": [
+        "이번 통합에서 S6.SS5의 예시 표, S8, Sx1 및 bib 전체를 상세 재독하지 않았다. 표·listing의 전체 필드 검증이나 기존 노트의 전문 읽기 선언 승계는 하지 않았다.",
+        "S3.F1 이미지와 PDF는 읽지 않았다. S3.Ex1·S4.E1의 수학적 타당성이나 구현 대응은 독립 검증하지 않았다.",
+        "외부 소프트웨어·평가 아카이브, 동결 응답, 입력 잠금 파일, 감사 파일과 체크섬은 확인하지 않았다. 프로토콜·모델·임상 실험을 재현하지 않았으며 제공 SHA256도 재계산하지 않았다."
+      ],
+      "version_id": "2609.31358v1",
+      "work_key": "5c6153feb18dc31a1e6d1acd06abd92bc83c82d7a56ffed47825a112d40451bb"
+    },
+    {
+      "collected_at": "2026-09-28T10:43:02.651083+00:00",
+      "failure_count": 0,
+      "format": "html",
+      "human_review": null,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json",
+      "metadata_sha256": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+      "output_refs": [],
+      "read_scope": [],
+      "reason": "P2_execution_not_approved",
+      "receipt_ref": null,
+      "requested_scope": null,
+      "resume_at": null,
+      "source": "arxiv",
+      "source_bytes": 683196,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+      "source_sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "status": "blocked_approval",
+      "unread_scope": [],
+      "version_id": "2609.31562v1",
+      "work_key": null
+    }
+  ],
+  "last_run": "_meta/runs/wiki/20260930T125856Z-p2-integration",
+  "policy_revision": "pkm-html-knowledge/v2",
+  "receipts": [
+    "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-receipt.json",
+    "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-receipt.json",
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json",
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json"
+  ],
+  "safety_block": false,
+  "safety_block_reason": null,
+  "schema": "pkm-compilation-state/v1",
+  "transactions": [
+    {
+      "journal_path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-publish-journal.json",
+      "status": "committed",
+      "transaction_id": "p2-3dd7045ccb252e65cfc6379fed0774e0"
+    },
+    {
+      "journal_path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-publish-journal.json",
+      "status": "committed",
+      "transaction_id": "p2-39f61c7ae836953ef2fb0be7e534079a"
+    },
+    {
+      "journal_path": "_meta/runs/wiki/20260930T125856Z-p2-integration/integration-publish-journal.json",
+      "status": "committed",
+      "transaction_id": "p2i-d3b8cf0db1b918060510445ffe3b227a"
+    }
+  ]
+}

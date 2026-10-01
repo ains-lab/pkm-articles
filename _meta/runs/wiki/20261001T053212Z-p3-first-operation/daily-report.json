@@ -1,0 +1,42 @@
+{
+  "inventory_count": 20,
+  "live_automation_changed": false,
+  "outcomes": [
+    {
+      "attempt": 1,
+      "status": "blocked_review",
+      "version_id": "2609.30217v1"
+    },
+    {
+      "attempt": 1,
+      "status": "blocked_review",
+      "version_id": "2609.30266v1"
+    },
+    {
+      "attempt": 1,
+      "status": "blocked_review",
+      "version_id": "2609.30940v1"
+    },
+    {
+      "attempt": 1,
+      "status": "unknown",
+      "version_id": "2609.31039v1"
+    },
+    {
+      "attempt": 1,
+      "status": "blocked_review",
+      "version_id": "2609.31318v1"
+    }
+  ],
+  "run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "schema": "pkm-p3-daily-report/v1",
+  "selected": [
+    "2609.30217v1",
+    "2609.30266v1",
+    "2609.30940v1",
+    "2609.31039v1",
+    "2609.31318v1"
+  ],
+  "status": "unknown",
+  "synthetic": false
+}

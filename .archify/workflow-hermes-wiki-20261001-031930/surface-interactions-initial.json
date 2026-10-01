@@ -1,0 +1,170 @@
+{
+  "scope": "01 and 02 diagrams only; other authoring tasks not sampled here",
+  "interactions": [
+    "theme toggle",
+    "node finder search Wiki",
+    "keyboard Escape dismissal"
+  ],
+  "rows": [
+    {
+      "diagram": "01-system",
+      "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+      "viewport": [
+        1440,
+        900
+      ],
+      "before": {
+        "theme": "light",
+        "body": null,
+        "width": 1440,
+        "scroll": 1425
+      },
+      "theme_after": {
+        "theme": "dark",
+        "body": null
+      },
+      "finder": {
+        "focused": "node-finder-input",
+        "visible": true,
+        "text": "\n        \n          Find a node\n          ×\n        \n        \n          ⌕\n          \n          /\n        \n        파일 기반 Wiki4 linksDatabase · wiki · 기존 · 원본 / 지식 / 상태\n        No matching nodes\n        1 of 10 nodes\n      "
+      },
+      "after_escape": {
+        "finderVisible": false,
+        "focus": "btn-node-finder",
+        "textOutsideViewport": [],
+        "externalResources": []
+      },
+      "capture": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/qa-1440.png"
+    },
+    {
+      "diagram": "01-system",
+      "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+      "viewport": [
+        375,
+        812
+      ],
+      "before": {
+        "theme": "dark",
+        "body": null,
+        "width": 375,
+        "scroll": 360
+      },
+      "theme_after": {
+        "theme": "light",
+        "body": null
+      },
+      "finder": {
+        "focused": "node-finder-input",
+        "visible": true,
+        "text": "\n        \n          Find a node\n          ×\n        \n        \n          ⌕\n          \n          /\n        \n        파일 기반 Wiki4 linksDatabase · wiki · 기존 · 원본 / 지식 / 상태\n        No matching nodes\n        1 of 10 nodes\n      "
+      },
+      "after_escape": {
+        "finderVisible": false,
+        "focus": "btn-node-finder",
+        "textOutsideViewport": [
+          "Frontend · BFF",
+          "제안 · 인증 / owner / CSRF",
+          "읽기 facade",
+          "제안 · pageId / 최소 DTO",
+          "파일 기반 Wiki",
+          "기존 · 원본 / 지식 / 상태",
+          "기존 수집 Cron",
+          "collect-only · 컴파일 금지",
+          "별도 승인 게시자",
+          "단계 승인 + lock / WAL / hash",
+          "사용자 세션",
+          "정형 읽기",
+          "receipt·hash 검증",
+          "승인 질의 · 서버 키",
+          "허용 읽기",
+          "원본 보관",
+          "조건부 게시"
+        ],
+        "externalResources": []
+      },
+      "capture": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/qa-375.png"
+    },
+    {
+      "diagram": "02-workspace",
+      "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+      "viewport": [
+        1440,
+        900
+      ],
+      "before": {
+        "theme": "light",
+        "body": null,
+        "width": 1440,
+        "scroll": 1425
+      },
+      "theme_after": {
+        "theme": "dark",
+        "body": null
+      },
+      "finder": {
+        "focused": "node-finder-input",
+        "visible": true,
+        "text": "\n        \n          Find a node\n          ×\n        \n        \n          ⌕\n          \n          /\n        \n        Wiki 작업 루트2 linksDatabase · wiki · pkm-articles · static root 아님\n        No matching nodes\n        1 of 9 nodes\n      "
+      },
+      "after_escape": {
+        "finderVisible": false,
+        "focus": "btn-node-finder",
+        "textOutsideViewport": [],
+        "externalResources": []
+      },
+      "capture": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/qa-1440.png"
+    },
+    {
+      "diagram": "02-workspace",
+      "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+      "viewport": [
+        375,
+        812
+      ],
+      "before": {
+        "theme": "dark",
+        "body": null,
+        "width": 375,
+        "scroll": 360
+      },
+      "theme_after": {
+        "theme": "light",
+        "body": null
+      },
+      "finder": {
+        "focused": "node-finder-input",
+        "visible": true,
+        "text": "\n        \n          Find a node\n          ×\n        \n        \n          ⌕\n          \n          /\n        \n        Wiki 작업 루트2 linksDatabase · wiki · pkm-articles · static root 아님\n        No matching nodes\n        1 of 9 nodes\n      "
+      },
+      "after_escape": {
+        "finderVisible": false,
+        "focus": "btn-node-finder",
+        "textOutsideViewport": [
+          "terminal.cwd 설정",
+          "기본 작업 경로 · sandbox 아님",
+          "런타임 cwd 해석",
+          "config → TERMINAL_CWD",
+          "local fallback",
+          "MESSAGING_CWD → home",
+          "실제 도구 실행",
+          "명령 workdir·세션 cwd 우선 가능",
+          "별도 접근 격리",
+          "제안 · read-only mount / OS 권한",
+          "새 세션 실제 검증",
+          "cwd·지침·자료·쓰기 거부",
+          "설정 bridge",
+          "명시 경로",
+          ". / auto / cwd",
+          "local 기본값",
+          "실제 권한 제한",
+          "집행 여부 시험"
+        ],
+        "externalResources": []
+      },
+      "capture": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/qa-375.png"
+    }
+  ],
+  "mobile_note": "document containment does not imply every graph label is visible without camera navigation",
+  "accessibility_audit": "not_performed",
+  "console_monitoring": "not_instrumented; not a no-console-error claim"
+}

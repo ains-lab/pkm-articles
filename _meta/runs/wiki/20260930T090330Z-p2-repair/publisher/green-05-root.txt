@@ -1,0 +1,6 @@
+test_root_ancestor_swap_does_not_follow_symlink (__main__.PublicationTests.test_root_ancestor_swap_does_not_follow_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK

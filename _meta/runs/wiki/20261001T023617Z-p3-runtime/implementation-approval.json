@@ -1,0 +1,21 @@
+{
+  "schema": "pkm-p3-implementation-approval/v1",
+  "actor": "user",
+  "user_request": "다음 단계 진행해주세요",
+  "interpreted_next_step": "P3 실행 경로 구현·격리 검증; 등록 승인과 활성화 승인은 후속 별도 단계",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "run_id": "20261001T023617Z-p3-runtime",
+  "implementation_and_synthetic_tests_authorized": true,
+  "source_metadata_and_integrity_checks_authorized": true,
+  "real_paper_body_read_or_transfer_authorized": false,
+  "real_model_execution_authorized": false,
+  "live_knowledge_publication_authorized": false,
+  "live_state_transition_authorized": false,
+  "cron_registration_authorized": false,
+  "cron_activation_authorized": false,
+  "legacy_guard_changes_authorized": false,
+  "new_collector_parser_database_authorized": false,
+  "installations_authorized": false,
+  "cost_policy": "no_cost_cap",
+  "scope": "New P3 orchestration and evidence-backed synthetic HTML/PDF-text generation/review/publication tests. Reuse existing safe IO and HTML navigation helpers, standard pypdf. Preserve live policy, state, raw, prior runs and Wiki; implementation artifacts and handoff only."
+}

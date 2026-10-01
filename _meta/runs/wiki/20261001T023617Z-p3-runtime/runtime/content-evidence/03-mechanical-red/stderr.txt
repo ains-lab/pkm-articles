@@ -1,0 +1,111 @@
+test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) ... 
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='missing_conditions') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='duplicate_id') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='authority_kind') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='fabricated_link') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='external_link') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='frontmatter') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='missing_visual_disclosure') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='fabricated_scope') ... FAIL
+  test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='extra_dump') ... FAIL
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='missing_conditions')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='duplicate_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 198, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertFalse(bundle['report']['passed'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='authority_kind')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='fabricated_link')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='external_link')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='frontmatter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='missing_visual_disclosure')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='fabricated_scope')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) (name='extra_dump')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 197, in test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.546s
+
+FAILED (failures=9)

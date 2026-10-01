@@ -1,0 +1,14 @@
+{
+  "schema": "pkm-p2-item-outcome/v1",
+  "vid": "2609.30830v1",
+  "run_id": "20260929T083140Z-p2-resume",
+  "recorded_at": "2026-09-29T09:23:30Z",
+  "status": "model_timeout",
+  "attempts_this_run": 2,
+  "attempt_results": ["response.failed upstream_websocket_liveness_timeout @517.9s (371 events, generation in progress)", "response.failed upstream_websocket_liveness_timeout @592.6s"],
+  "diagnosis": "codex-lb 프록시(10.10.1.244:2455)와 업스트림 간 websocket keepalive ping timeout. 첫 이벤트 113~129s 후 델타 스트림 정상 수신 중 약 520~590s 지점에서 프록시가 연결 종료(1011). 모델·인증·라우팅·스트리밍 자체는 정상(논문 내용 없는 프로브 완료 관측). 장시간 xhigh 생성에서 프록시 업스트림 keepalive 구성이 한계.",
+  "retryable": true,
+  "retry_condition": "프록시 keepalive/websocket 설정 조정 또는 background·비스트리밍 경로 확인 후 신규 run에서 재시도(운영자 검토 필요). 이번 run의 시도 한도(2) 소진.",
+  "content_published": false,
+  "cost_usd": null
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "visual_qa_plan/v1",
+  "scope": "Re-render the final local index and all eight final diagrams; verification only, no source repairs or service startup",
+  "repository": "/home/ainsdev/wiki/pkm-articles",
+  "lineage": "Uncommitted artifacts: exact per-file SHA-256, not a Git HEAD implementation claim",
+  "surfaces": ["index", "01-system", "02-workspace", "03-read", "04-query", "05-collection", "06-publication", "07-data-ui", "08-roadmap"],
+  "viewports": [[1440, 900], [375, 812]],
+  "states": {
+    "index": ["default", "details open", "keyboard Tab focus", "first diagram click and browser-back"],
+    "diagrams": ["default", "theme toggle", "finder no-match", "Escape close and focus return", "bottom explanatory cards DOM bounds"]
+  },
+  "capture_scope": "First-screen desktop/mobile captures for every surface; mobile finder and bottom-page captures. Not all built-in viewer modes/exports or a screen-reader audit.",
+  "health_scope": "Early page error/unhandled-rejection/console.error hooks and Resource Timing for external HTTP resources; no live server/network integration claim",
+  "safety": "file:// local generated HTML only; no login, credentials, API calls, paper processing, exports, installs, source edits, Gateway or Cron operations",
+  "stop_condition": "All 18 surface/viewport cases persisted, artifact hashes unchanged, actual captures inspected, observed failures reported without converting containment into readability PASS"
+}

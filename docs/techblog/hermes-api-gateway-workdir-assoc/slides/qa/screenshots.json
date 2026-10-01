@@ -1,0 +1,254 @@
+{
+  "artifact_sha256": "468b24e7affeff42ac29de7ef3a7470478acf8e0c605bafc357202727eb5c3cb",
+  "screenshots": [
+    {
+      "slide": 1,
+      "observed": "slide-1",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-01-1440.png"
+    },
+    {
+      "slide": 3,
+      "observed": "slide-3",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-03-1440.png"
+    },
+    {
+      "slide": 7,
+      "observed": "slide-7",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-07-1440.png"
+    },
+    {
+      "slide": 9,
+      "observed": "slide-9",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-09-1440.png"
+    },
+    {
+      "slide": 10,
+      "observed": "slide-10",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-10-1440.png"
+    },
+    {
+      "slide": 11,
+      "observed": "slide-11",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-11-1440.png"
+    },
+    {
+      "slide": 13,
+      "observed": "slide-13",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-13-1440.png"
+    },
+    {
+      "slide": 15,
+      "observed": "slide-15",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-15-1440.png"
+    },
+    {
+      "slide": 17,
+      "observed": "slide-17",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-17-1440.png"
+    },
+    {
+      "slide": 21,
+      "observed": "slide-21",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-21-1440.png"
+    },
+    {
+      "slide": 25,
+      "observed": "slide-25",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-25-1440.png"
+    },
+    {
+      "slide": 27,
+      "observed": "slide-27",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-27-1440.png"
+    },
+    {
+      "slide": 36,
+      "observed": "slide-36",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-36-1440.png"
+    },
+    {
+      "slide": 37,
+      "observed": "slide-37",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-37-1440.png"
+    },
+    {
+      "slide": 40,
+      "observed": "slide-40",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-40-1440.png"
+    },
+    {
+      "slide": 41,
+      "observed": "slide-41",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-41-1440.png"
+    },
+    {
+      "slide": 43,
+      "observed": "slide-43",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-43-1440.png"
+    },
+    {
+      "slide": 48,
+      "observed": "slide-48",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-48-1440.png"
+    },
+    {
+      "slide": 51,
+      "observed": "slide-51",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-51-1440.png"
+    },
+    {
+      "slide": 57,
+      "observed": "slide-57",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-57-1440.png"
+    },
+    {
+      "slide": 60,
+      "observed": "slide-60",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-60-1440.png"
+    },
+    {
+      "slide": 63,
+      "observed": "slide-63",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-63-1440.png"
+    },
+    {
+      "slide": 67,
+      "observed": "slide-67",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-67-1440.png"
+    },
+    {
+      "slide": 68,
+      "observed": "slide-68",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-68-1440.png"
+    },
+    {
+      "slide": 70,
+      "observed": "slide-70",
+      "viewport": [
+        1440,
+        900
+      ],
+      "file": "slide-70-1440.png"
+    },
+    {
+      "slide": 17,
+      "viewport": [
+        768,
+        1024
+      ],
+      "file": "slide-17-768.png"
+    },
+    {
+      "slide": 9,
+      "viewport": [
+        375,
+        812
+      ],
+      "file": "slide-09-375.png"
+    },
+    {
+      "slide": 51,
+      "viewport": [
+        375,
+        812
+      ],
+      "file": "slide-51-375.png"
+    }
+  ]
+}

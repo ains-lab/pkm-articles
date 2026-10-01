@@ -1,0 +1,10 @@
+{
+  "status": "published_draft",
+  "transaction_id": "p2i-d3b8cf0db1b918060510445ffe3b227a",
+  "checked_at": "2026-09-30T13:32:10.237464+00:00",
+  "journal_status": "committed",
+  "targets_read_back": 11,
+  "knowledge_output_count": 6,
+  "receipt_count": 2,
+  "state_matches_prevalidated_payload": true
+}

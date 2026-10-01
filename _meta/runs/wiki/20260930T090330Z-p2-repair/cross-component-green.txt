@@ -1,0 +1,6 @@
+test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.029s
+
+OK

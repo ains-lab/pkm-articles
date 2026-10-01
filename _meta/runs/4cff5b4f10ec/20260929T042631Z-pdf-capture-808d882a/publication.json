@@ -1,0 +1,20 @@
+[
+  {
+    "version_id": "2609.30614v1",
+    "status": "published_verified",
+    "published_at": "2026-09-29T04:28:21.180446+00:00",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+    "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+    "pdf_bytes": 821749,
+    "pdf_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d"
+  },
+  {
+    "version_id": "2609.30824v1",
+    "status": "published_verified",
+    "published_at": "2026-09-29T04:28:21.197372+00:00",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+    "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+    "pdf_bytes": 693979,
+    "pdf_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+  }
+]

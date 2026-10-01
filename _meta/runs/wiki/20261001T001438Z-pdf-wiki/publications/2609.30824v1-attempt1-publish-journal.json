@@ -1,0 +1,1243 @@
+{
+  "plan": {
+    "approval_refs": [
+      {
+        "path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json",
+        "sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f"
+      },
+      {
+        "path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/scope-approval.json",
+        "sha256": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad"
+      }
+    ],
+    "before_index": "# 논문 지식 색인\n\n> Last updated: 2026-10-01 | Total pages: 7\n\n아래 목록은 해석·검토·질의로 작성한 지식 페이지를 위한 것이며, HTML/PDF 원본 수집과 구분한다. 현재 자동화에서는 Wiki 컴파일을 하지 않는다. 미작성 논문 요약이나 개념 페이지를 있는 것으로 표시하지 않는다.\n\n## Entities — 논문별 요약·분석 / 모델·도구\n\n- [[entities/arxiv-2609.30830v1]] — AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n- [[entities/arxiv-2609.31358v1]] — A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n\n- [[entities/arxiv-2609.30614v1]] — Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces (draft/unreviewed, PDF text)\n\n## Concepts — 개념·주제\n\n- [[concepts/agent-authority-and-effect-boundaries]] — 에이전트의 승인 기록을 해석하려면 요청을 허용하는 권한, 집행 가능한 경계, 실제 실행과 외부 효과를 분리하고 비실행 제안 승인을 호출 권한으로 오인하지 않아야 한다. (draft/unreviewed, r1)\n- [[concepts/provenance-and-audit-evidence]] — 출처·매핑·판정 이력·재생 일치·해시 체인은 서로 다른 질문에 답하는 증거이며, 어느 하나도 데이터 진실성이나 완전 관측을 자동으로 확립하지 않는다. (draft/unreviewed, r1)\n- [[concepts/security-evaluation-units]] — 보안 수치는 시나리오·실행·이벤트·요청·구조화 응답 중 무엇을 세었는지와 관측 종점을 보존해야 하며, 반복 검사나 기록 일치를 일반적 방어율로 바꾸어 읽어서는 안 된다. (draft/unreviewed, r1)\n\n## Comparisons — 논문·방법 비교\n\n- [[comparisons/agate-vs-sdc-mcp-gateway]] — AGATE는 계측된 실행 요청의 권한·데이터 흐름을 조건부로 중재하고 Gateway는 장치 실행 권한을 제외한 인터페이스를 제공하므로, 둘은 공통 보안 순위가 아니라 서로 다른 효과 계약과 증거 범위로 비교해야 한다. (draft/unreviewed, r1)\n\n## Queries — 질문과 답변\n\n아직 작성된 페이지가 없다.\n\n## Raw Sources — 원천 자료\n\n발견·기존 승인 대상을 포함한 **전체 68개 버전 ID** 중 **20편 원문 확보**: **arXiv HTML 원본 18편**, **PDF 원본 2편**이다. **전문 미확보 48편은 모두 일일 한도 대기**이며 저장 완료로 세지 않는다. KST 2026-10-01 정기 수집에서 오래된 pending 5편의 동일 버전 HTML을 저장·검증·게시했다(신규 PDF 0편, 새 HTML 미제공 0편, 전송·무결성 실패 0건). 기존 원본 15편은 재검증했고 HTML 미제공 이력이 있는 PDF 2편도 원문 확보에 포함한다. [정기 실행 근거](_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/report.json) · [전체 ID·파일·해시 대조](_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/inventory-verification.json). 원천과 운영 문서는 Total pages에 포함하지 않는다.\n\n정책 변경 전 로컬 대조 **2026-09-29 11:51 KST**에서 전체 10개 ID와 당시 저장된 HTML 8편을 확인했다. [이전 검증 근거](_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json). 정책 변경으로 등록한 PDF pending 2편은 이번 수동 수집에서 완료했고 KST 2026-09-29 일일 시도에 2개 ID를 기록했다. 새 검색 없이 대기만 처리했으므로 first_window_floor·discovered_through는 유지했다. HTML 미제공의 원래 확인·재확인 시각은 역사적 근거로 보존하며 PDF 완료 버전의 HTML을 자동 재확인하거나 형식을 교체하지 않는다.\n\n최근 정기 검색 기준 `2026-09-30T15:05:07.821597+00:00`(KST 2026-10-01): 승인된 검색식을 그대로 조회한 100개 레코드 중 actual updated 창에 48편이 포함되었다. 이 중 신규 후보 23편, 기존 pending 재발견 21편, 보관 원본 중복 4편이다. 완전한 검색과 pending 내구 저장 후 discovery checkpoint를 위 시각으로 전진했다. KST 일일 5개 ID를 다운로드 전에 예약했고, 남은 pending 48편의 다음 시도 가능 시각은 `2026-10-01T15:00:00+00:00`(KST 10월 2일 00:00)이다. 이 Cron에서는 본문 분석·도표 검토·PDF 추출·OCR·Wiki 컴파일을 하지 않았다. 기존 지식 페이지 6개는 변경하지 않았다.\n\n- [AI Agent Security — Cron 4cff5b4f10ec](raw/articles/4cff5b4f10ec/index.md) — 매일 KST 00:00, HTML 우선·공식 미제공 시 PDF 원본 수집 전용.\n\n- [논문 원천](raw/papers/)\n- [주제별 정기 논문 원천](raw/articles/)\n- [강연·세미나 원천](raw/transcripts/)\n- [기타 자산 위치 — 현재 비어 있음](raw/assets/)\n\n## 운영 안내\n\n- [외부 웹 서비스 기술문서 — Wiki × Hermes API Gateway](docs/techblog/hermes-api-gateway-workdir-assoc/README.md) — 아키텍처·작업 경로·워크플로·기술 스택·API·보안·구현 로드맵; 구현 전 설계, 설정 유지.\n- [논문 수집 자동화 — 쉬운 안내](docs/lectures/5w/paper-collection.md)\n- [논문 수집 Cron — 생성 방법과 현재 구성](docs/lectures/5w/paper-collection-cron.md)\n- [시작 안내](README.md)\n- [스키마](SCHEMA.md)\n- [원본 HTML·승인된 PDF 텍스트 컴파일 전략](_meta/COMPILATION.md)\n- [후속 지식화 운영 계약 — v3, PDF 텍스트 수동 승인·자동화 비활성·비용 상한 없음](_meta/AUTOMATION.md)\n- [P3 준비·검증 — HTML 16편 승인 대기, 일일 실행·Cron 미승인](_meta/P3-PREPARATION.md)\n- [승인 모델·전송·예산과 실행 게이트](_meta/automation.json)\n- [후속 상태·게시 계약](_meta/STATE-CONTRACTS.md)\n- [질의 피드백·철회 계약](_meta/QUERY-FEEDBACK.md), [격주 연구 리뷰 계약](_meta/RESEARCH-REVIEW.md), [개인 연구 프로필](_meta/RESEARCH-PROFILE.md)\n- [Hermes 작업 안내](AGENTS.md)\n- [작업 이력](log.md)\n\n지식 페이지를 만들거나 갱신할 때 해당 유형 아래에 `[[디렉터리/파일명]] — 한 줄 설명`을 추가하고 페이지 수·날짜를 갱신한다. 원천만 수집한 작업을 지식 정리 완료로 세지 않는다.\n",
+    "before_state": "{\n  \"contract_revision\": \"pkm-contracts/v3\",\n  \"cost_events\": [\n    {\n      \"charged_usd\": null,\n      \"created_at\": \"2026-09-30T10:44:44.747016+00:00\",\n      \"event_id\": \"p2-3dd7045ccb252e65cfc6379fed0774e0\",\n      \"kst_day\": \"2026-09-30\",\n      \"reserved_usd\": null,\n      \"role\": \"pilot\",\n      \"run_id\": \"20260930T100918Z-p2-live-staged\",\n      \"scope_id\": \"2609.30830v1\",\n      \"status\": \"unknown\",\n      \"usage_receipt\": \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json\"\n    },\n    {\n      \"charged_usd\": null,\n      \"created_at\": \"2026-09-30T10:45:19.891855+00:00\",\n      \"event_id\": \"p2-39f61c7ae836953ef2fb0be7e534079a\",\n      \"kst_day\": \"2026-09-30\",\n      \"reserved_usd\": null,\n      \"role\": \"pilot\",\n      \"run_id\": \"20260930T100918Z-p2-live-staged\",\n      \"scope_id\": \"2609.31358v1\",\n      \"status\": \"unknown\",\n      \"usage_receipt\": \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json\"\n    },\n    {\n      \"charged_usd\": null,\n      \"created_at\": \"2026-09-30T13:23:23.749973+00:00\",\n      \"event_id\": \"p2i-d3b8cf0db1b918060510445ffe3b227a\",\n      \"kst_day\": \"2026-09-30\",\n      \"reserved_usd\": null,\n      \"role\": \"pilot\",\n      \"run_id\": \"20260930T125856Z-p2-integration\",\n      \"scope_id\": \"P2-two-paper-integration\",\n      \"status\": \"unknown\",\n      \"usage_receipt\": \"_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json\"\n    },\n    {\n      \"charged_usd\": null,\n      \"created_at\": \"2026-10-01T02:21:24.865411+00:00\",\n      \"event_id\": \"pdf3-9ed77666bcba802e33823720750afe4d\",\n      \"kst_day\": \"2026-10-01\",\n      \"reserved_usd\": null,\n      \"role\": \"pilot\",\n      \"run_id\": \"20261001T001438Z-pdf-wiki\",\n      \"scope_id\": \"2609.30614v1\",\n      \"status\": \"unknown\",\n      \"usage_receipt\": \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30614v1/attempt1-result.json\"\n    }\n  ],\n  \"enabled\": false,\n  \"initialized_at\": \"2026-09-29T06:00:18.696411+00:00\",\n  \"items\": [\n    {\n      \"collected_at\": \"2026-09-28T10:42:11.138705+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json\",\n      \"metadata_sha256\": \"2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 926811,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html\",\n      \"source_sha256\": \"7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.30217v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:14.317240+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json\",\n      \"metadata_sha256\": \"55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 738941,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html\",\n      \"source_sha256\": \"2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.30266v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T04:27:19.881365+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"pdf\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json\",\n      \"metadata_sha256\": \"4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81\",\n      \"output_refs\": [\n        {\n          \"path\": \"entities/arxiv-2609.30614v1.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7\"\n        }\n      ],\n      \"read_scope\": [\n        \"page=1\",\n        \"page=2\",\n        \"page=3\",\n        \"page=4\",\n        \"page=5\",\n        \"page=6\",\n        \"page=7\",\n        \"page=8\",\n        \"page=9\",\n        \"page=10\",\n        \"page=11\",\n        \"page=12\",\n        \"page=13\",\n        \"page=14\",\n        \"page=15\",\n        \"page=16\",\n        \"page=17\",\n        \"page=18\",\n        \"page=19\",\n        \"page=20\",\n        \"page=21\",\n        \"page=22\",\n        \"page=23\"\n      ],\n      \"reason\": \"Bound mechanical and agent evidence review; human unreviewed\",\n      \"receipt_ref\": \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-receipt.json\",\n      \"requested_scope\": \"manual PDF embedded-text complete\",\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 821749,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf\",\n      \"source_sha256\": \"a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d\",\n      \"status\": \"published_draft\",\n      \"unread_scope\": [\n        \"모든 그림·이미지 및 이미지 전용 내용: 미검토\",\n        \"수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\",\n        \"물리적 page=5, page=7, page=9의 Figure 1–3은 추출된 캡션과 레이블 텍스트만 읽었으며, 도형·연결선·배치의 시각적 의미는 확인하지 않았다.\",\n        \"Proposition 1의 형식기호, 승인 큐 수식, 표의 다단 행·열 대응은 제공된 텍스트와 주변 설명으로 확인 가능한 범위만 사용했다. 원 PDF의 수식 조판과 표 구조를 시각적으로 대조하지 않았다.\",\n        \"스캔 또는 이미지 전용 내용은 처리하지 않았으며 OCR을 수행하지 않았다. 논문이 평가 대상으로 언급하는 첨부 스캔의 실제 내용도 제공되지 않았다.\"\n      ],\n      \"version_id\": \"2609.30614v1\",\n      \"work_key\": \"5788b5235ed2707f483af65f21b1060e3427455d474327ebb3ec488a551a413e\"\n    },\n    {\n      \"collected_at\": \"2026-09-29T04:27:23.073112+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"pdf\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json\",\n      \"metadata_sha256\": \"56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"Explicit scope and protected policy approvals; pinned execution snapshot verified\",\n      \"receipt_ref\": null,\n      \"requested_scope\": \"All physical pages embedded text; no visual/OCR review\",\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 693979,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf\",\n      \"source_sha256\": \"4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8\",\n      \"status\": \"queued\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.30824v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:36.574939+00:00\",\n      \"failure_count\": 1,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json\",\n      \"metadata_sha256\": \"3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72\",\n      \"output_refs\": [\n        {\n          \"path\": \"concepts/agent-authority-and-effect-boundaries.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092\"\n        },\n        {\n          \"path\": \"concepts/provenance-and-audit-evidence.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f\"\n        },\n        {\n          \"path\": \"concepts/security-evaluation-units.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0\"\n        },\n        {\n          \"path\": \"comparisons/agate-vs-sdc-mcp-gateway.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364\"\n        },\n        {\n          \"path\": \"entities/arxiv-2609.30830v1.md\",\n          \"revision\": \"2\",\n          \"sha256\": \"a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0\"\n        },\n        {\n          \"path\": \"entities/arxiv-2609.31358v1.md\",\n          \"revision\": \"2\",\n          \"sha256\": \"1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4\"\n        }\n      ],\n      \"read_scope\": [\n        \"S1 — Introduction: 권한·데이터 출처의 분리와 계측 경계에 관한 본문\",\n        \"S2.SS3 — Runtime judgment and evidence\",\n        \"S3.SS1 — System model\",\n        \"S3.SS2 — Adversary model\",\n        \"S4.SS1 — Overview and trust root: p1–p3 본문\",\n        \"S4.SS2 — Authorization and effect state: p1–p6 설명 본문\",\n        \"S4.SS3 — Source registration and boundary checks: p1–p7 설명 본문\",\n        \"S4.SS4 — Decision flow and state updates\",\n        \"S4.SS5 — Execution evidence and replay: p1–p5 설명 본문\",\n        \"S5 — Implementation: p1–p9 본문\",\n        \"S5.T2 — Adapter capabilities and evaluated paths: HTML 표 텍스트\",\n        \"S6.SS1 — Questions and experimental setting: 본문\",\n        \"S6.SS2 — RQ1: defense and authorization boundaries: 그림을 제외한 설명 본문\",\n        \"S6.T4 — DSH denial events by declaration setting: HTML 표 텍스트와 캡션\",\n        \"S6.SS3 — RQ2: attack behavior without AGATE: 본문\",\n        \"S6.SS4 — RQ3: usability and failure analysis\",\n        \"S6.SS5 — RQ4: reconstruction, coverage, and cost\",\n        \"S7.SS1 — Limitations\"\n      ],\n      \"reason\": \"Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed\",\n      \"receipt_ref\": \"_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json\",\n      \"requested_scope\": \"P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)\",\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 267373,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html\",\n      \"source_sha256\": \"89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074\",\n      \"status\": \"published_draft\",\n      \"unread_scope\": [\n        \"이번 통합에서 S3.SS3의 효과 분류표, S8의 관련연구 비교, S9 및 bib 전체를 새 주장의 근거로 상세 재독하지 않았다. 기존 노트의 전문 읽기 선언을 이번 읽기 범위로 승계하지 않았다.\",\n        \"그림·SVG·외부 이미지와 PDF는 읽지 않았다. algo1–algo3 및 MathML을 독립적인 수학·구현 검증 대상으로 검토하지 않았다.\",\n        \"동반 공격 아카이브, 코드, 원시 로그, 호스트 원장과 배포 설정은 제공 자료 밖이므로 확인하지 않았다. 실험 재현이나 제공 SHA256의 재계산도 수행하지 않았다.\"\n      ],\n      \"version_id\": \"2609.30830v1\",\n      \"work_key\": \"1eea720e3ee514cdf247914aa2c50af7acc0950d84a63d5b603e6c4e7696ef95\"\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:39.734613+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json\",\n      \"metadata_sha256\": \"adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 397917,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html\",\n      \"source_sha256\": \"c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.30940v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:42.912271+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json\",\n      \"metadata_sha256\": \"3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 558801,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html\",\n      \"source_sha256\": \"8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.31039v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:56.338003+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json\",\n      \"metadata_sha256\": \"5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 536360,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html\",\n      \"source_sha256\": \"c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.31318v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:42:59.463183+00:00\",\n      \"failure_count\": 1,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json\",\n      \"metadata_sha256\": \"47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb\",\n      \"output_refs\": [\n        {\n          \"path\": \"concepts/agent-authority-and-effect-boundaries.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092\"\n        },\n        {\n          \"path\": \"concepts/provenance-and-audit-evidence.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f\"\n        },\n        {\n          \"path\": \"concepts/security-evaluation-units.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0\"\n        },\n        {\n          \"path\": \"comparisons/agate-vs-sdc-mcp-gateway.md\",\n          \"revision\": \"1\",\n          \"sha256\": \"5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364\"\n        },\n        {\n          \"path\": \"entities/arxiv-2609.30830v1.md\",\n          \"revision\": \"2\",\n          \"sha256\": \"a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0\"\n        },\n        {\n          \"path\": \"entities/arxiv-2609.31358v1.md\",\n          \"revision\": \"2\",\n          \"sha256\": \"1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4\"\n        }\n      ],\n      \"read_scope\": [\n        \"S1 — Introduction\",\n        \"S2 — Background and Related Work: p1–p6 본문\",\n        \"S3 — Architecture and Implementation: p1–p7 설명 본문\",\n        \"S4 — SDC-to-MCP Mapping: p1–p6 설명 본문\",\n        \"S4.SS1 — Interpreting a Mapped Metric: 설명 본문\",\n        \"S4.SS2 — Worked Example: From Monitor State to Agent Response: 설명 본문\",\n        \"S4.SS2.SSS0.Px1 — State quality is independent of mapping success\",\n        \"S5.p1 — 평가 계층과 실험 단위 구분\",\n        \"S5.SS1 — Simulated Devices and Task Context: 본문\",\n        \"S5.SS2 — Software-SDC Protocol Paths\",\n        \"S5.SS3 — No-execution, Lifecycle, and Provenance Checks\",\n        \"S5.SS4 — Agent Evaluation and Representation Ablation: 본문\",\n        \"S5.SS5 — Analysis and Reproducibility Discipline: 본문\",\n        \"S6.SS1 — Resource Exposure and Protocol Interoperability: 본문\",\n        \"S6.SS2 — Boundary, Lifecycle, and Authorization Outcomes\",\n        \"S6.SS3 — Agent Interpretation and Retained Failures: 본문\",\n        \"S6.SS4 — Representation Ablation\",\n        \"S6.SS6 — Audit and Consolidated Evidence\",\n        \"S7 — Discussion and Limitations\"\n      ],\n      \"reason\": \"Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed\",\n      \"receipt_ref\": \"_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json\",\n      \"requested_scope\": \"P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)\",\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 212956,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html\",\n      \"source_sha256\": \"cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e\",\n      \"status\": \"published_draft\",\n      \"unread_scope\": [\n        \"이번 통합에서 S6.SS5의 예시 표, S8, Sx1 및 bib 전체를 상세 재독하지 않았다. 표·listing의 전체 필드 검증이나 기존 노트의 전문 읽기 선언 승계는 하지 않았다.\",\n        \"S3.F1 이미지와 PDF는 읽지 않았다. S3.Ex1·S4.E1의 수학적 타당성이나 구현 대응은 독립 검증하지 않았다.\",\n        \"외부 소프트웨어·평가 아카이브, 동결 응답, 입력 잠금 파일, 감사 파일과 체크섬은 확인하지 않았다. 프로토콜·모델·임상 실험을 재현하지 않았으며 제공 SHA256도 재계산하지 않았다.\"\n      ],\n      \"version_id\": \"2609.31358v1\",\n      \"work_key\": \"5c6153feb18dc31a1e6d1acd06abd92bc83c82d7a56ffed47825a112d40451bb\"\n    },\n    {\n      \"collected_at\": \"2026-09-28T10:43:02.651083+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json\",\n      \"metadata_sha256\": \"94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P2_execution_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 683196,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html\",\n      \"source_sha256\": \"5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.31562v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T15:09:07.955675+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.json\",\n      \"metadata_sha256\": \"5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 1193201,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html\",\n      \"source_sha256\": \"a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35760v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T15:09:08.398512+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.json\",\n      \"metadata_sha256\": \"edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 1078043,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.html\",\n      \"source_sha256\": \"5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2608.29596v2\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T15:09:08.548055+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.json\",\n      \"metadata_sha256\": \"31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 494759,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.html\",\n      \"source_sha256\": \"5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35596v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T15:09:08.679810+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.json\",\n      \"metadata_sha256\": \"9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 394496,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.html\",\n      \"source_sha256\": \"adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35576v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-29T15:09:08.972803+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.json\",\n      \"metadata_sha256\": \"5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 116966,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.html\",\n      \"source_sha256\": \"2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2509.09215v3\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-30T15:09:18.518076+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.json\",\n      \"metadata_sha256\": \"229c581ae157accff26c1734c4569f12c40fb6c84a97d805b9b331f15d9d0f7c\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 311120,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.html\",\n      \"source_sha256\": \"08ac9572cbc4de7377888449d7397566b46ee546d0cd5ffbfb158c138fd6c6c0\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35366v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-30T15:09:21.436635+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.json\",\n      \"metadata_sha256\": \"ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 629329,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.html\",\n      \"source_sha256\": \"3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35117v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-30T15:09:24.426531+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.json\",\n      \"metadata_sha256\": \"efdc3fd3b1472de522c249edab3f3bc112bb793f691f17be40c56429cf4c491e\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 432731,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.html\",\n      \"source_sha256\": \"39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.35088v1\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-30T15:09:27.411272+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.json\",\n      \"metadata_sha256\": \"9c5b7c71583ad2fdca0caa45aff13d77d188a09565e604151c06da028298f86c\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 226687,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.html\",\n      \"source_sha256\": \"341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2605.09027v3\",\n      \"work_key\": null\n    },\n    {\n      \"collected_at\": \"2026-09-30T15:09:30.436440+00:00\",\n      \"failure_count\": 0,\n      \"format\": \"html\",\n      \"human_review\": null,\n      \"metadata_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.json\",\n      \"metadata_sha256\": \"20f6bc0e3cae5ecc6dea1e0a933c284c062958ccc9492a5c1a5f8290045cee6c\",\n      \"output_refs\": [],\n      \"read_scope\": [],\n      \"reason\": \"P3_preparation_only; daily_execution_registration_activation_not_approved\",\n      \"receipt_ref\": null,\n      \"requested_scope\": null,\n      \"resume_at\": null,\n      \"source\": \"arxiv\",\n      \"source_bytes\": 615759,\n      \"source_path\": \"raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.html\",\n      \"source_sha256\": \"079fd74b7e219228d332f3239c03e65f8302cb1f4b7fe620eecdf0ea0bcddf94\",\n      \"status\": \"blocked_approval\",\n      \"unread_scope\": [],\n      \"version_id\": \"2609.34790v1\",\n      \"work_key\": null\n    }\n  ],\n  \"last_run\": \"_meta/runs/wiki/20261001T001438Z-pdf-wiki\",\n  \"policy_revision\": \"pkm-html-pdf-text-knowledge/v3\",\n  \"receipts\": [\n    \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-receipt.json\",\n    \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-receipt.json\",\n    \"_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json\",\n    \"_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json\",\n    \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-receipt.json\"\n  ],\n  \"safety_block\": false,\n  \"safety_block_reason\": null,\n  \"schema\": \"pkm-compilation-state/v1\",\n  \"transactions\": [\n    {\n      \"journal_path\": \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-publish-journal.json\",\n      \"status\": \"committed\",\n      \"transaction_id\": \"p2-3dd7045ccb252e65cfc6379fed0774e0\"\n    },\n    {\n      \"journal_path\": \"_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-publish-journal.json\",\n      \"status\": \"committed\",\n      \"transaction_id\": \"p2-39f61c7ae836953ef2fb0be7e534079a\"\n    },\n    {\n      \"journal_path\": \"_meta/runs/wiki/20260930T125856Z-p2-integration/integration-publish-journal.json\",\n      \"status\": \"committed\",\n      \"transaction_id\": \"p2i-d3b8cf0db1b918060510445ffe3b227a\"\n    },\n    {\n      \"journal_path\": \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-publish-journal.json\",\n      \"status\": \"committed\",\n      \"transaction_id\": \"pdf3-9ed77666bcba802e33823720750afe4d\"\n    }\n  ]\n}\n",
+    "index": {
+      "after_header": "Last updated: 2026-10-01 | Total pages: 8",
+      "after_section": "## Entities — 논문별 요약·분석 / 모델·도구\n\n- [[entities/arxiv-2609.30830v1]] — AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n- [[entities/arxiv-2609.31358v1]] — A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n\n- [[entities/arxiv-2609.30614v1]] — Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces (draft/unreviewed, PDF text)\n\n- [[entities/arxiv-2609.30824v1]] — Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal (draft/unreviewed, PDF text)\n\n",
+      "before_header": "Last updated: 2026-10-01 | Total pages: 7",
+      "before_section": "## Entities — 논문별 요약·분석 / 모델·도구\n\n- [[entities/arxiv-2609.30830v1]] — AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n- [[entities/arxiv-2609.31358v1]] — A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents — 공통 개념·비교 연결 (draft/unreviewed, r2)\n\n- [[entities/arxiv-2609.30614v1]] — Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces (draft/unreviewed, PDF text)\n\n"
+    },
+    "input_hashes": {
+      "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+      "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+      "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+      "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+      "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+      "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a",
+      "_meta/automation.json": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+      "_meta/prompts/wiki-compile.md": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json": "68861d0beb1deed722a9eae46c7b13bc309800a4be8b7ee7d35ddbb965b498ce",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-verification.json": "52f26e8cd7a403ef805e0667c329fb296864b9e0d4fd04373baf2dfaef8f79c6",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30824v1/attempt1-result.json": "c420ab64a89be7ac1120c3a587399dc3b6d8ab4ab044ac34ad639030e07ab446",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+      "_meta/runs/wiki/20261001T001438Z-pdf-wiki/scope-approval.json": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+      "concepts/agent-authority-and-effect-boundaries.md": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+      "concepts/provenance-and-audit-evidence.md": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+      "concepts/security-evaluation-units.md": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+      "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+      "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+      "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+    },
+    "journal_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-publish-journal.json",
+    "log": {
+      "event": "\n## [2026-10-01] create | PDF text draft — arXiv 2609.30824v1\n\n<!-- publication-event:pdf3-b99973e47fc40996683ae340e855c3a9 -->\n- Page: `entities/arxiv-2609.30824v1.md`; run: `_meta/runs/wiki/20261001T001438Z-pdf-wiki`; work_key: `5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35`.\n- Source SHA-256: `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`; agent review: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json`; mechanical checks: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-verification.json`.\n- Draft/unreviewed; no human review, visual inspection or experimental reproduction claimed.\n",
+      "prefix_bytes": 78080,
+      "prefix_sha256": "351597e4be534a292f7d3b3e9eede63c5c76c74aec9ba6c76683d0c8aa924963"
+    },
+    "log_event_id": "pdf3-b99973e47fc40996683ae340e855c3a9",
+    "page_count": 8,
+    "receipt": {
+      "actual_input_hashes": {
+        "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+        "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+        "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+        "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+        "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+        "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a",
+        "_meta/automation.json": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+        "_meta/prompts/wiki-compile.md": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json": "68861d0beb1deed722a9eae46c7b13bc309800a4be8b7ee7d35ddbb965b498ce",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-verification.json": "52f26e8cd7a403ef805e0667c329fb296864b9e0d4fd04373baf2dfaef8f79c6",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30824v1/attempt1-result.json": "c420ab64a89be7ac1120c3a587399dc3b6d8ab4ab044ac34ad639030e07ab446",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/scope-approval.json": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+        "concepts/agent-authority-and-effect-boundaries.md": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+        "concepts/provenance-and-audit-evidence.md": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+        "concepts/security-evaluation-units.md": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+        "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+        "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+        "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+        "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+      },
+      "budget_usage_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30824v1/attempt1-result.json",
+      "committed_at": "2026-10-01T02:24:14.491782+00:00",
+      "cost_usd": null,
+      "evidence_check_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json",
+      "human_review_ref": null,
+      "model_route": {
+        "api_mode": "codex_responses",
+        "base_url": "http://10.10.1.244:2455/v1",
+        "instructions_sha256": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+        "model": "gpt-6-astra",
+        "provider": "codex-lb",
+        "reasoning_effort": "xhigh",
+        "response_model": "gpt-6-astra"
+      },
+      "output_refs": [
+        {
+          "path": "entities/arxiv-2609.30824v1.md",
+          "revision": "1",
+          "sha256": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e"
+        }
+      ],
+      "read_scope": [
+        "page=1",
+        "page=2",
+        "page=3",
+        "page=4",
+        "page=5",
+        "page=6",
+        "page=7",
+        "page=8",
+        "page=9"
+      ],
+      "run_id": "20261001T001438Z-pdf-wiki",
+      "schema": "pkm-publication-receipt/v1",
+      "structural_check_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-verification.json",
+      "transaction_id": "pdf3-b99973e47fc40996683ae340e855c3a9",
+      "unread_scope": [
+        "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+        "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+        "그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.",
+        "참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다."
+      ],
+      "work_key": "5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35"
+    },
+    "role": "pilot",
+    "run_id": "20261001T001438Z-pdf-wiki",
+    "schema": "pkm-publication-journal/v1",
+    "started_at": "2026-10-01T02:24:14.491782+00:00",
+    "state_after": {
+      "contract_revision": "pkm-contracts/v3",
+      "cost_events": [
+        {
+          "charged_usd": null,
+          "created_at": "2026-09-30T10:44:44.747016+00:00",
+          "event_id": "p2-3dd7045ccb252e65cfc6379fed0774e0",
+          "kst_day": "2026-09-30",
+          "reserved_usd": null,
+          "role": "pilot",
+          "run_id": "20260930T100918Z-p2-live-staged",
+          "scope_id": "2609.30830v1",
+          "status": "unknown",
+          "usage_receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json"
+        },
+        {
+          "charged_usd": null,
+          "created_at": "2026-09-30T10:45:19.891855+00:00",
+          "event_id": "p2-39f61c7ae836953ef2fb0be7e534079a",
+          "kst_day": "2026-09-30",
+          "reserved_usd": null,
+          "role": "pilot",
+          "run_id": "20260930T100918Z-p2-live-staged",
+          "scope_id": "2609.31358v1",
+          "status": "unknown",
+          "usage_receipt": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json"
+        },
+        {
+          "charged_usd": null,
+          "created_at": "2026-09-30T13:23:23.749973+00:00",
+          "event_id": "p2i-d3b8cf0db1b918060510445ffe3b227a",
+          "kst_day": "2026-09-30",
+          "reserved_usd": null,
+          "role": "pilot",
+          "run_id": "20260930T125856Z-p2-integration",
+          "scope_id": "P2-two-paper-integration",
+          "status": "unknown",
+          "usage_receipt": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json"
+        },
+        {
+          "charged_usd": null,
+          "created_at": "2026-10-01T02:21:24.865411+00:00",
+          "event_id": "pdf3-9ed77666bcba802e33823720750afe4d",
+          "kst_day": "2026-10-01",
+          "reserved_usd": null,
+          "role": "pilot",
+          "run_id": "20261001T001438Z-pdf-wiki",
+          "scope_id": "2609.30614v1",
+          "status": "unknown",
+          "usage_receipt": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30614v1/attempt1-result.json"
+        },
+        {
+          "charged_usd": null,
+          "created_at": "2026-10-01T02:24:14.491782+00:00",
+          "event_id": "pdf3-b99973e47fc40996683ae340e855c3a9",
+          "kst_day": "2026-10-01",
+          "reserved_usd": null,
+          "role": "pilot",
+          "run_id": "20261001T001438Z-pdf-wiki",
+          "scope_id": "2609.30824v1",
+          "status": "unknown",
+          "usage_receipt": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30824v1/attempt1-result.json"
+        }
+      ],
+      "enabled": false,
+      "initialized_at": "2026-09-29T06:00:18.696411+00:00",
+      "items": [
+        {
+          "collected_at": "2026-09-28T10:42:11.138705+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json",
+          "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 926811,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+          "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.30217v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-28T10:42:14.317240+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json",
+          "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 738941,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+          "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.30266v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T04:27:19.881365+00:00",
+          "failure_count": 0,
+          "format": "pdf",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+          "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+          "output_refs": [
+            {
+              "path": "entities/arxiv-2609.30614v1.md",
+              "revision": "1",
+              "sha256": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7"
+            }
+          ],
+          "read_scope": [
+            "page=1",
+            "page=2",
+            "page=3",
+            "page=4",
+            "page=5",
+            "page=6",
+            "page=7",
+            "page=8",
+            "page=9",
+            "page=10",
+            "page=11",
+            "page=12",
+            "page=13",
+            "page=14",
+            "page=15",
+            "page=16",
+            "page=17",
+            "page=18",
+            "page=19",
+            "page=20",
+            "page=21",
+            "page=22",
+            "page=23"
+          ],
+          "reason": "Bound mechanical and agent evidence review; human unreviewed",
+          "receipt_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-receipt.json",
+          "requested_scope": "manual PDF embedded-text complete",
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 821749,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+          "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+          "status": "published_draft",
+          "unread_scope": [
+            "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+            "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+            "물리적 page=5, page=7, page=9의 Figure 1–3은 추출된 캡션과 레이블 텍스트만 읽었으며, 도형·연결선·배치의 시각적 의미는 확인하지 않았다.",
+            "Proposition 1의 형식기호, 승인 큐 수식, 표의 다단 행·열 대응은 제공된 텍스트와 주변 설명으로 확인 가능한 범위만 사용했다. 원 PDF의 수식 조판과 표 구조를 시각적으로 대조하지 않았다.",
+            "스캔 또는 이미지 전용 내용은 처리하지 않았으며 OCR을 수행하지 않았다. 논문이 평가 대상으로 언급하는 첨부 스캔의 실제 내용도 제공되지 않았다."
+          ],
+          "version_id": "2609.30614v1",
+          "work_key": "5788b5235ed2707f483af65f21b1060e3427455d474327ebb3ec488a551a413e"
+        },
+        {
+          "collected_at": "2026-09-29T04:27:23.073112+00:00",
+          "failure_count": 0,
+          "format": "pdf",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+          "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+          "output_refs": [
+            {
+              "path": "entities/arxiv-2609.30824v1.md",
+              "revision": "1",
+              "sha256": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e"
+            }
+          ],
+          "read_scope": [
+            "page=1",
+            "page=2",
+            "page=3",
+            "page=4",
+            "page=5",
+            "page=6",
+            "page=7",
+            "page=8",
+            "page=9"
+          ],
+          "reason": "Bound mechanical and agent evidence review; human unreviewed",
+          "receipt_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-receipt.json",
+          "requested_scope": "manual PDF embedded-text complete",
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 693979,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+          "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+          "status": "published_draft",
+          "unread_scope": [
+            "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+            "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+            "그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.",
+            "참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다."
+          ],
+          "version_id": "2609.30824v1",
+          "work_key": "5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35"
+        },
+        {
+          "collected_at": "2026-09-28T10:42:36.574939+00:00",
+          "failure_count": 1,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json",
+          "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+          "output_refs": [
+            {
+              "path": "concepts/agent-authority-and-effect-boundaries.md",
+              "revision": "1",
+              "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+            },
+            {
+              "path": "concepts/provenance-and-audit-evidence.md",
+              "revision": "1",
+              "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+            },
+            {
+              "path": "concepts/security-evaluation-units.md",
+              "revision": "1",
+              "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+            },
+            {
+              "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+              "revision": "1",
+              "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+            },
+            {
+              "path": "entities/arxiv-2609.30830v1.md",
+              "revision": "2",
+              "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+            },
+            {
+              "path": "entities/arxiv-2609.31358v1.md",
+              "revision": "2",
+              "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+            }
+          ],
+          "read_scope": [
+            "S1 — Introduction: 권한·데이터 출처의 분리와 계측 경계에 관한 본문",
+            "S2.SS3 — Runtime judgment and evidence",
+            "S3.SS1 — System model",
+            "S3.SS2 — Adversary model",
+            "S4.SS1 — Overview and trust root: p1–p3 본문",
+            "S4.SS2 — Authorization and effect state: p1–p6 설명 본문",
+            "S4.SS3 — Source registration and boundary checks: p1–p7 설명 본문",
+            "S4.SS4 — Decision flow and state updates",
+            "S4.SS5 — Execution evidence and replay: p1–p5 설명 본문",
+            "S5 — Implementation: p1–p9 본문",
+            "S5.T2 — Adapter capabilities and evaluated paths: HTML 표 텍스트",
+            "S6.SS1 — Questions and experimental setting: 본문",
+            "S6.SS2 — RQ1: defense and authorization boundaries: 그림을 제외한 설명 본문",
+            "S6.T4 — DSH denial events by declaration setting: HTML 표 텍스트와 캡션",
+            "S6.SS3 — RQ2: attack behavior without AGATE: 본문",
+            "S6.SS4 — RQ3: usability and failure analysis",
+            "S6.SS5 — RQ4: reconstruction, coverage, and cost",
+            "S7.SS1 — Limitations"
+          ],
+          "reason": "Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed",
+          "receipt_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json",
+          "requested_scope": "P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)",
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 267373,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+          "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+          "status": "published_draft",
+          "unread_scope": [
+            "이번 통합에서 S3.SS3의 효과 분류표, S8의 관련연구 비교, S9 및 bib 전체를 새 주장의 근거로 상세 재독하지 않았다. 기존 노트의 전문 읽기 선언을 이번 읽기 범위로 승계하지 않았다.",
+            "그림·SVG·외부 이미지와 PDF는 읽지 않았다. algo1–algo3 및 MathML을 독립적인 수학·구현 검증 대상으로 검토하지 않았다.",
+            "동반 공격 아카이브, 코드, 원시 로그, 호스트 원장과 배포 설정은 제공 자료 밖이므로 확인하지 않았다. 실험 재현이나 제공 SHA256의 재계산도 수행하지 않았다."
+          ],
+          "version_id": "2609.30830v1",
+          "work_key": "1eea720e3ee514cdf247914aa2c50af7acc0950d84a63d5b603e6c4e7696ef95"
+        },
+        {
+          "collected_at": "2026-09-28T10:42:39.734613+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json",
+          "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 397917,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+          "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.30940v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-28T10:42:42.912271+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json",
+          "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 558801,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+          "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.31039v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-28T10:42:56.338003+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json",
+          "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 536360,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+          "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.31318v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-28T10:42:59.463183+00:00",
+          "failure_count": 1,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json",
+          "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+          "output_refs": [
+            {
+              "path": "concepts/agent-authority-and-effect-boundaries.md",
+              "revision": "1",
+              "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+            },
+            {
+              "path": "concepts/provenance-and-audit-evidence.md",
+              "revision": "1",
+              "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+            },
+            {
+              "path": "concepts/security-evaluation-units.md",
+              "revision": "1",
+              "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+            },
+            {
+              "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+              "revision": "1",
+              "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+            },
+            {
+              "path": "entities/arxiv-2609.30830v1.md",
+              "revision": "2",
+              "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+            },
+            {
+              "path": "entities/arxiv-2609.31358v1.md",
+              "revision": "2",
+              "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+            }
+          ],
+          "read_scope": [
+            "S1 — Introduction",
+            "S2 — Background and Related Work: p1–p6 본문",
+            "S3 — Architecture and Implementation: p1–p7 설명 본문",
+            "S4 — SDC-to-MCP Mapping: p1–p6 설명 본문",
+            "S4.SS1 — Interpreting a Mapped Metric: 설명 본문",
+            "S4.SS2 — Worked Example: From Monitor State to Agent Response: 설명 본문",
+            "S4.SS2.SSS0.Px1 — State quality is independent of mapping success",
+            "S5.p1 — 평가 계층과 실험 단위 구분",
+            "S5.SS1 — Simulated Devices and Task Context: 본문",
+            "S5.SS2 — Software-SDC Protocol Paths",
+            "S5.SS3 — No-execution, Lifecycle, and Provenance Checks",
+            "S5.SS4 — Agent Evaluation and Representation Ablation: 본문",
+            "S5.SS5 — Analysis and Reproducibility Discipline: 본문",
+            "S6.SS1 — Resource Exposure and Protocol Interoperability: 본문",
+            "S6.SS2 — Boundary, Lifecycle, and Authorization Outcomes",
+            "S6.SS3 — Agent Interpretation and Retained Failures: 본문",
+            "S6.SS4 — Representation Ablation",
+            "S6.SS6 — Audit and Consolidated Evidence",
+            "S7 — Discussion and Limitations"
+          ],
+          "reason": "Manual P2 integrated concepts/comparison and navigation; agent evidence-reviewed, human unreviewed",
+          "receipt_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json",
+          "requested_scope": "P2 two-paper integrated concepts/comparison and navigation (partial selected-section integration; prior full-text notes preserved)",
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 212956,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+          "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+          "status": "published_draft",
+          "unread_scope": [
+            "이번 통합에서 S6.SS5의 예시 표, S8, Sx1 및 bib 전체를 상세 재독하지 않았다. 표·listing의 전체 필드 검증이나 기존 노트의 전문 읽기 선언 승계는 하지 않았다.",
+            "S3.F1 이미지와 PDF는 읽지 않았다. S3.Ex1·S4.E1의 수학적 타당성이나 구현 대응은 독립 검증하지 않았다.",
+            "외부 소프트웨어·평가 아카이브, 동결 응답, 입력 잠금 파일, 감사 파일과 체크섬은 확인하지 않았다. 프로토콜·모델·임상 실험을 재현하지 않았으며 제공 SHA256도 재계산하지 않았다."
+          ],
+          "version_id": "2609.31358v1",
+          "work_key": "5c6153feb18dc31a1e6d1acd06abd92bc83c82d7a56ffed47825a112d40451bb"
+        },
+        {
+          "collected_at": "2026-09-28T10:43:02.651083+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json",
+          "metadata_sha256": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P2_execution_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 683196,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+          "source_sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.31562v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T15:09:07.955675+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.json",
+          "metadata_sha256": "5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 1193201,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html",
+          "source_sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35760v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T15:09:08.398512+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.json",
+          "metadata_sha256": "edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 1078043,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.html",
+          "source_sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2608.29596v2",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T15:09:08.548055+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.json",
+          "metadata_sha256": "31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 494759,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.html",
+          "source_sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35596v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T15:09:08.679810+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.json",
+          "metadata_sha256": "9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 394496,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.html",
+          "source_sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35576v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-29T15:09:08.972803+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.json",
+          "metadata_sha256": "5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 116966,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.html",
+          "source_sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2509.09215v3",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-30T15:09:18.518076+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.json",
+          "metadata_sha256": "229c581ae157accff26c1734c4569f12c40fb6c84a97d805b9b331f15d9d0f7c",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 311120,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.html",
+          "source_sha256": "08ac9572cbc4de7377888449d7397566b46ee546d0cd5ffbfb158c138fd6c6c0",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35366v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-30T15:09:21.436635+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.json",
+          "metadata_sha256": "ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 629329,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.html",
+          "source_sha256": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35117v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-30T15:09:24.426531+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.json",
+          "metadata_sha256": "efdc3fd3b1472de522c249edab3f3bc112bb793f691f17be40c56429cf4c491e",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 432731,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.html",
+          "source_sha256": "39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.35088v1",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-30T15:09:27.411272+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.json",
+          "metadata_sha256": "9c5b7c71583ad2fdca0caa45aff13d77d188a09565e604151c06da028298f86c",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 226687,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.html",
+          "source_sha256": "341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2605.09027v3",
+          "work_key": null
+        },
+        {
+          "collected_at": "2026-09-30T15:09:30.436440+00:00",
+          "failure_count": 0,
+          "format": "html",
+          "human_review": null,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.json",
+          "metadata_sha256": "20f6bc0e3cae5ecc6dea1e0a933c284c062958ccc9492a5c1a5f8290045cee6c",
+          "output_refs": [],
+          "read_scope": [],
+          "reason": "P3_preparation_only; daily_execution_registration_activation_not_approved",
+          "receipt_ref": null,
+          "requested_scope": null,
+          "resume_at": null,
+          "source": "arxiv",
+          "source_bytes": 615759,
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.html",
+          "source_sha256": "079fd74b7e219228d332f3239c03e65f8302cb1f4b7fe620eecdf0ea0bcddf94",
+          "status": "blocked_approval",
+          "unread_scope": [],
+          "version_id": "2609.34790v1",
+          "work_key": null
+        }
+      ],
+      "last_run": "_meta/runs/wiki/20261001T001438Z-pdf-wiki",
+      "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+      "receipts": [
+        "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-receipt.json",
+        "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-receipt.json",
+        "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json",
+        "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-receipt.json",
+        "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-receipt.json"
+      ],
+      "safety_block": false,
+      "safety_block_reason": null,
+      "schema": "pkm-compilation-state/v1",
+      "transactions": [
+        {
+          "journal_path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-publish-journal.json",
+          "status": "committed",
+          "transaction_id": "p2-3dd7045ccb252e65cfc6379fed0774e0"
+        },
+        {
+          "journal_path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-publish-journal.json",
+          "status": "committed",
+          "transaction_id": "p2-39f61c7ae836953ef2fb0be7e534079a"
+        },
+        {
+          "journal_path": "_meta/runs/wiki/20260930T125856Z-p2-integration/integration-publish-journal.json",
+          "status": "committed",
+          "transaction_id": "p2i-d3b8cf0db1b918060510445ffe3b227a"
+        },
+        {
+          "journal_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-publish-journal.json",
+          "status": "committed",
+          "transaction_id": "pdf3-9ed77666bcba802e33823720750afe4d"
+        },
+        {
+          "journal_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-publish-journal.json",
+          "status": "committed",
+          "transaction_id": "pdf3-b99973e47fc40996683ae340e855c3a9"
+        }
+      ]
+    },
+    "status": "committed",
+    "structural_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-verification.json",
+    "structural_report": {
+      "checks": [
+        {
+          "check": "result_object",
+          "ok": true
+        },
+        {
+          "check": "completion",
+          "ok": true
+        },
+        {
+          "check": "actual_model",
+          "ok": true
+        },
+        {
+          "check": "no_errors",
+          "ok": true
+        },
+        {
+          "check": "cost_nonblocking",
+          "ok": true
+        },
+        {
+          "check": "bound_result_identifiers",
+          "ok": true
+        },
+        {
+          "check": "strict_json_object",
+          "ok": true
+        },
+        {
+          "check": "document_keys",
+          "ok": true
+        },
+        {
+          "check": "expected_title",
+          "ok": true
+        },
+        {
+          "check": "expected_version",
+          "ok": true
+        },
+        {
+          "check": "summary_nonempty",
+          "ok": true
+        },
+        {
+          "check": "main_text_complete_boolean",
+          "ok": true
+        },
+        {
+          "check": "read_scope_nonempty_list",
+          "ok": true
+        },
+        {
+          "check": "unread_scope_nonempty_list",
+          "ok": true
+        },
+        {
+          "check": "limitations_nonempty_list",
+          "ok": true
+        },
+        {
+          "check": "claims_nonempty",
+          "ok": true
+        },
+        {
+          "check": "body_nonempty",
+          "ok": true
+        },
+        {
+          "check": "no_frontmatter",
+          "ok": true
+        },
+        {
+          "check": "no_hidden_html_or_images",
+          "ok": true
+        },
+        {
+          "check": "korean_body",
+          "ok": true
+        },
+        {
+          "check": "claim_ids_unique",
+          "ok": true
+        },
+        {
+          "check": "claim_contract",
+          "ok": true
+        },
+        {
+          "check": "source_safe_readable",
+          "ok": true
+        },
+        {
+          "check": "telemetry_recomputed",
+          "ok": true
+        },
+        {
+          "check": "physical_read_scope",
+          "ok": true
+        },
+        {
+          "check": "whole_coverage_when_claimed",
+          "ok": true
+        },
+        {
+          "check": "unread_visual_disclosure",
+          "ok": true
+        },
+        {
+          "check": "observed_page_anchors",
+          "ok": true
+        },
+        {
+          "check": "quotes_exact_page",
+          "ok": true
+        },
+        {
+          "check": "visible_claim_ids",
+          "ok": true
+        },
+        {
+          "check": "same_line_canonical_provenance",
+          "ok": true
+        },
+        {
+          "check": "local_links_resolve",
+          "ok": true
+        }
+      ],
+      "document": {
+        "claims": [
+          {
+            "anchor": "page=2",
+            "conditions": "동일한 권한 관계를 표현하는 관점의 비교이며, ACL 대비 성능이나 보안 우월성을 측정한 실험 결과는 아니다.",
+            "id": "C01",
+            "kind": "author_report",
+            "quote": "Figure 1 shows the ACL and the “Capability” view of the same \nset of permissions governing the interaction between a resource \nand an agent. Since we’re considering open systems with \npotentially ephemeral agents, the latter view is easier to scale, \ngeneralize and to support delegation in a decentralized setup.",
+            "statement": "저자는 개방형 시스템의 일시적 에이전트와 분산 위임을 고려할 때 capability 관점이 ACL 관점보다 확장·일반화·위임 지원에 적합하다고 주장한다."
+          },
+          {
+            "anchor": "page=2",
+            "conditions": "논문이 설명하는 공개 디렉터리 기반 DID 식별 방식의 신뢰 경계이며, 탈중앙화를 신뢰 기반의 완전한 제거로 해석하지 않는다.",
+            "id": "C02",
+            "kind": "author_report",
+            "quote": "The trust in the \ndirectory therefore partially transfers to the trust in the associ -\nation between a DID document and an agent that possesses the \nrequired private keys to prove control over the ID.",
+            "statement": "DID 문서와 에이전트의 연결에 대한 신뢰는 공개 디렉터리에 대한 신뢰를 일부 이어받으며, 신원 제어권은 해당 개인키의 소유로 증명하도록 설명한다."
+          },
+          {
+            "anchor": "page=3",
+            "conditions": "서명 주체는 사용자 또는 상위 capability에 근거한 다른 에이전트일 수 있으며, 이는 제안된 권한 표현이지 실제 배포된 검증기의 관측 결과가 아니다.",
+            "id": "C03",
+            "kind": "author_report",
+            "quote": "a signed \nJSON structure that includes information about the agent’s \nidentity, the authority that is signing the capability granted to \nthe agent (which can be the user or another agent based on \nanother chained capability token), the target resource the token \nis intended for, and the constraining parameters of the granted \naccess to the resource.",
+            "statement": "제안의 capability token은 에이전트 신원, 권한을 부여하는 서명 주체, 대상 자원, 접근 제약을 담는 서명된 JSON 구조다."
+          },
+          {
+            "anchor": "page=3",
+            "conditions": "검증기가 에이전트 공개키를 미리 알고 보안 계층이 개인키를 관리하는 경우다. 원문은 제어권 증명을 요구할 수 있다고 설명하며 모든 서비스의 의무 구현을 확립하지 않는다.",
+            "id": "C04",
+            "kind": "author_report",
+            "quote": "An agent with a security layer that handles \nits assigned private keys can provide such evidence by a \ncommon challenge response mechanism - where the verifier \nprovides a random string and asks the agent to sign it, and \nverifies the signature using the agent’s public key known to \nit a priori.",
+            "statement": "신원에 결합된 토큰의 수신자가 실제 해당 에이전트인지 확인하기 위해, 검증기가 난수를 보내고 에이전트 보안 계층이 서명하는 challenge–response를 제시한다."
+          },
+          {
+            "anchor": "page=3",
+            "conditions": "서비스가 실제로 위임 체인을 검사해야 하며, 같은 페이지의 각주가 명시하듯 attenuation 성립 판정은 도메인별이다.",
+            "id": "C05",
+            "kind": "author_report",
+            "quote": "When an agent wishes to delegate part of its task to another \nagent, it can grant it such a capability token that’s tied to \nits own grant, so the capabilities form a chain. A service \ncan verify the delegation chain by ensuring that grants only \nattenuate the constraints and not amplify them.1",
+            "statement": "위임 토큰을 상위 grant에 연결하고 서비스가 체인을 검증하여, 위임된 권한이 상위 권한보다 확대되지 않는 attenuation을 요구한다."
+          },
+          {
+            "anchor": "page=3",
+            "conditions": "capability 발급 계층과 credential을 안전한 별도 모듈에 유지한다는 조건부 주장이다. 다른 구현 취약점이나 모든 prompt injection 효과의 부재를 뜻하지 않는다.",
+            "id": "C06",
+            "kind": "author_report",
+            "quote": "exfiltration of credentials \nvia LLM context window can be made impossible by con -\nstruction since no private key is accessible in any context \nwindow and the module will only provide the encrypted and \nsigned results via its interface.",
+            "statement": "저자는 개인키를 LLM 컨텍스트에 노출하지 않고 보안 모듈이 암호화·서명 결과만 제공하면, 그 컨텍스트를 통한 credential 유출을 구조적으로 불가능하게 만들 수 있다고 주장한다."
+          },
+          {
+            "anchor": "page=3",
+            "conditions": "디렉터리·하위 디렉터리 접근을 제한하는 중재 계층의 예시다. 상위 호출만 검사하고 도구 내부의 우회 경로를 남겨도 된다는 주장이 아니다.",
+            "id": "C07",
+            "kind": "author_report",
+            "quote": "For example, access to a local file system can \nbe gated by a layer that ensures that an agent can only access \na directory or its sub-directories. Access to tools can also \nbe similarly gated, but the tools must themselves use only \ncapability aware system facilities.",
+            "statement": "capability 검증을 로컬 파일 시스템과 도구 접근에도 적용할 수 있지만, 도구 자체도 capability-aware 시스템 기능만 사용해야 한다고 조건을 붙인다."
+          },
+          {
+            "anchor": "page=4",
+            "conditions": "Atlas가 하위 에이전트를 조정하는 설명용 시나리오이며, 사용자 승인·폐기 전파·서비스 검증이 실제로 성공한 실험은 아니다.",
+            "id": "C08",
+            "kind": "author_report",
+            "quote": "Once the user is happy with the plan and grants permission \nto make the bookings, Atlas will revoke all of the “block” \ncapability tokens granted to the other agents and issue tokens \nwith the permissions to actually spend money on behalf of \nthe user, with more precise amounts given in the token data.",
+            "statement": "여행 시나리오는 사용자 승인 후 기존 block 토큰을 폐기하고 더 정확한 금액의 지출 권한 토큰을 발급하여, 임시 확보와 실제 결제 권한을 구분한다."
+          },
+          {
+            "anchor": "page=5",
+            "conditions": "사람과 에이전트가 각 DID의 제어권을 증명할 수 있다는 전제 아래의 모델이다. 악성 핵심 서비스까지 방어하는 모델로 확대하지 않는다.",
+            "id": "C09",
+            "kind": "author_report",
+            "quote": "These identities, participating in a signed token \nchain with no revocations is sufficient authority to permit a \nservice provider to perform the task at hand, and token validity \nperiods are kept short to mitigate timing attacks. We also assume \nthat the core services accessed by the agents on behalf of the \nuser are trusted by the user.",
+            "statement": "위협 모델은 폐기되지 않은 서명 토큰 체인을 서비스 수행의 충분한 권한으로 보고, 짧은 유효기간과 핵심 서비스에 대한 사용자 신뢰를 가정한다."
+          },
+          {
+            "anchor": "page=5",
+            "conditions": "특히 수명이 긴 capability token과 credential wallet을 논의하는 문맥이다. 프로토콜의 이론적 성질을 구현 전체의 안전성 증명으로 취급하지 않는다.",
+            "id": "C10",
+            "kind": "author_report",
+            "quote": "Long lived capability tokens increase the risk of credential \nexfiltration since cyber attacks triggered by injected prompts \ncannot generally be ruled out as it depends on actual secure \nimplementation as opposed to theoretical properties of the se -\ncurity protocol.",
+            "statement": "저자는 주입된 프롬프트에서 비롯되는 사이버 공격을 일반적으로 배제할 수 없고, credential 유출 위험이 실제 보안 구현에 의존한다고 명시한다."
+          },
+          {
+            "anchor": "page=5",
+            "conditions": "잔여 위험을 줄이기 위한 저자의 구현 권고이며, 이 조합의 구현 완료나 공격 차단 효과를 측정한 결과가 아니다. BBS-2023 권고의 명시적 대상은 VP 비연결성이다.",
+            "id": "C11",
+            "kind": "author_report",
+            "quote": "• Wallet runs as a separate process with typed IPC only.\n• Use HMAC with a wallet-held secret instead of a hash like \nSHA-256.\n• Denial messages must be identical for all denials so as not to \nturn it into an oracle.\n• Use BBS-2023 instead of ECDSA based proofs for unlinka -\nbility of VPs.",
+            "statement": "wallet 구현 권고에는 별도 프로세스와 typed IPC, wallet 보유 비밀을 사용하는 HMAC, 동일한 거부 메시지, VP 비연결성을 위한 BBS-2023 사용이 포함된다."
+          },
+          {
+            "anchor": "page=6",
+            "conditions": "표 2의 누적 공개, VP의 LLM 컨텍스트 경유, LLM의 challenge 취득, 정책 UI 조작에 각각 대응하는 권고다. 추출된 셀 텍스트를 읽었으며 표의 시각적 구조나 효과를 검증하지 않았다.",
+            "id": "C12",
+            "kind": "author_report",
+            "quote": "Aggregate disclosure Low Rate-limit requests; \nrequire per-presenta -\ntion user approval\nVP transits LLM con -\ntext\nMedium Wallet posts VP di -\nrectly to verifier; \nagent receives only \npass/fail\nChallenge acquisition \nby LLM\nMedium Out-of-band chal -\nlenge delivery (QR \ncode, second device)\nUI manipulation of \npolicy\nHigh Policy changes re -\nquire out-of-band sec-\nond-factor confirma -\ntion",
+            "statement": "wallet의 잔여 위험에 대해 요청 제한·presentation별 승인, wallet의 VP 직접 전송, out-of-band challenge 전달, 정책 변경의 별도 확인을 완화책으로 제시한다."
+          },
+          {
+            "anchor": "page=6",
+            "conditions": "표 2의 credential 상태 미검사와 내용 기반 재식별 위험에 한정한다. 암호학적 VP 비연결성이 공개된 속성 내용의 비식별성까지 보장하지는 않는다는 경계다.",
+            "id": "C13",
+            "kind": "author_report",
+            "quote": "No credential status \nchecking\nMedium Wallet checks W3C \nBitstring Status List \nbefore signing a VP\nUnique claim combi -\nnation re-identifies by \ncontent\nN/A Not a cryptographic \nproblem; addressed \nby minimum-neces -\nsary disclosure policy \nand claim-set diver -\nsity analysis",
+            "statement": "저자는 VP 서명 전 credential 상태 확인을 권고하며, 독특한 claim 조합에 따른 재식별은 암호학만의 문제가 아니어서 최소 필요 공개와 claim-set 분석이 필요하다고 적는다."
+          },
+          {
+            "anchor": "page=7",
+            "conditions": "그림 7의 추출된 캡션에 제시된 설계 주장이다. 그림을 시각적으로 검토하지 않았으며, 공개 claim 내용·네트워크 메타데이터까지 포함한 전역적 비연결성을 확인한 것이 아니다.",
+            "id": "C14",
+            "kind": "author_report",
+            "quote": "Figure 7: Phase 3 — Hotel booking: Haven holds a hotel and the wallet \nuses fresh pairwise DIDs (key_C, key_D) unlinkable from the flight \nsession.",
+            "statement": "호텔 단계에서는 새로운 pairwise DID를 사용하여 항공 세션과 연결되지 않는 credential presentation을 구성한다고 설명한다."
+          },
+          {
+            "anchor": "page=8",
+            "conditions": "그림 9에 포함된 추출 문자열로 확인한 제안 흐름이다. nonce 소비의 원자성, 장애 복구, 모든 replay 공격의 차단이나 실제 검증 성공을 입증하지 않는다.",
+            "id": "C15",
+            "kind": "author_report",
+            "quote": "Policy checks:\n✓ memberOf, role in allowedClaims\n✓ domain in allowedVerifiers\n✓ challenge present\npairwiseKey(domain) → key_A\n(did:key:zDna…, per-verifier)\nderiveCredential → BBS+ ZKP\nDisclosed: memberOf, role\nNOT in proof: clearanceLevel, since\nidentity VP (holder: key_A, nonce: nonce₁)\nverify signature\nnonce₁ → consumed set\nidentity verified ✓",
+            "statement": "단일 서비스의 신원 presentation 흐름은 허용 claim·verifier domain·challenge를 확인하고 BBS+ ZKP를 생성한 뒤, 검증기가 서명을 확인하고 nonce를 소비한 것으로 기록하도록 기술한다."
+          },
+          {
+            "anchor": "page=5",
+            "conditions": "최신 폐기 정보를 외부에서 받지 않는 순수 오프라인 검증 조건의 설계 논의다. 온라인 검증의 구체적 지연이나 가용성을 측정한 결과는 아니다.",
+            "id": "C16",
+            "kind": "author_report",
+            "quote": "Revoking a capability token has a fundamental design trade-off \nto consider. If the token is to be used purely offline – i.e. all \naspects of it can be validated by the receiver – then revocation is \nextremely hard or even impossible. Any intermediary increases \ntransaction latency though.",
+            "statement": "수신자가 모든 요소를 순수 오프라인으로 검증하는 토큰은 폐기가 매우 어렵거나 불가능하며, 중개자를 추가하면 거래 지연이 증가하는 상충관계가 있다고 설명한다."
+          },
+          {
+            "anchor": "page=6",
+            "conditions": "5분은 설명용 수명 예시이지 측정값이나 확정된 프로토콜 기본값이 아니다. 빠르게 완료되는 거래를 전제로 가능성을 논의하며 갱신 지연도 남는다.",
+            "id": "C17",
+            "kind": "author_report",
+            "quote": "Make all tokens short-lived (say  5mins) and force agents to \nrefresh their tokens when they time out. If the refresh fails \ndue to a revocation, the token is observed to be invalid. If \ntransactions can be completed quickly, this can be viable, but \nit too introduces a latency cost to enable revocation.",
+            "statement": "폐기 대안으로 짧은 수명의 토큰을 강제 갱신하고, 폐기 때문에 갱신이 실패하면 무효로 인식하는 방식을 제시하며 5분을 예로 든다."
+          },
+          {
+            "anchor": "page=6",
+            "conditions": "서비스가 상위 체인의 유효성을 실제 확인하는 대안이다. 상위 토큰을 폐기했다는 사실만으로 모든 서비스에 즉시 전파되거나 진행 중 거래가 취소된다는 보장은 아니다.",
+            "id": "C18",
+            "kind": "author_report",
+            "quote": "Make every token include a reference to the parent token and \nhave the service provider walk the parent chain to ensure \nvalidity of the entire grant chain. This enables revocation at \nany sub-tree level, but the latency is now dependent on the \ndepth of the delegation tree.",
+            "statement": "토큰에 상위 토큰 참조를 넣고 서비스가 전체 grant chain을 순회하면 하위 트리 단위 폐기를 지원할 수 있지만, 지연이 위임 깊이에 의존한다고 설명한다."
+          },
+          {
+            "anchor": "page=6",
+            "conditions": "accumulator 게시와 witness·epoch의 관리가 필요한 제안 대안이며, 완성된 갱신 프로토콜이나 구현 성능의 검증 결과가 아니다.",
+            "id": "C19",
+            "kind": "author_report",
+            "quote": "Use a cryptographic accumulator published at a known end \npoint that validators can check against, and include witnesses \nin the capability along with the accumulator epoch. If a token \nin the grant chain gets revoked by being removed from the \naccumulator, the validator will observe that as a validation \nfailure of the supplied capability.",
+            "statement": "또 다른 폐기 대안은 공개된 cryptographic accumulator와 capability에 포함된 witness·epoch를 사용하고, grant chain의 토큰 제거를 검증 실패로 반영하는 방식이다."
+          },
+          {
+            "anchor": "page=7",
+            "conditions": "사용자를 대신하는 여러 에이전트의 토큰 생성·교환·폐기 과정에 대한 설명이다. 전역 단일 순서, 관측 완전성 또는 외부 거래 완료의 증명을 뜻하지 않는다.",
+            "id": "C20",
+            "kind": "author_report",
+            "quote": "Had the user been the only person to take each \naction, this audit trail would’ve been guaranteed to have a strict \ntemporal ordering. However, since multiple agents are acting \non behalf of the user towards the end result, the audit trail will \nhave multiple linear-time “threads” guided by the sequencing \nof requests and verification presentations.",
+            "statement": "다중 에이전트의 감사 추적은 단일 사용자의 엄격한 시간 순서와 달리, 요청과 verification presentation 순서가 이끄는 복수의 선형 시간 threads로 구성된다고 설명한다."
+          },
+          {
+            "anchor": "page=8",
+            "conditions": "저자가 최종 결제 실행을 결제 제공자의 별도 구현에 맡기고, 설명된 과정의 주목적을 결제 유발 결정의 검증 이력으로 한정한 데 근거한 해석이다.",
+            "id": "C21",
+            "kind": "analyst_interpretation",
+            "quote": "final payment execution will have to be implemented using ap-\npropriate mechanisms by payment providers. The main purpose \nof these processes therefore is to offer a verification trail of all \nthe decisions that went into the triggering of the final payment \nsteps.",
+            "statement": "이 제안의 의사결정 검증 이력과 실제 결제 실행은 분리해서 읽어야 하며, 제시된 흐름만으로 결제 완료나 외부 효과를 확인했다고 볼 수 없다."
+          },
+          {
+            "anchor": "page=8",
+            "conditions": "에이전트 발견 자체는 제안의 범위 밖으로 둔다. HTTPS·도메인 제어권·DID를 논의하는 것이 발견된 에이전트의 선의나 적합성까지 보장하는 것은 아니다.",
+            "id": "C22",
+            "kind": "author_report",
+            "quote": "such a discovery process also poses a potential attack \nsurface where malicious agents can be injected into the discov-\nery process. As with much of the internet, there is little a \ndiscovery service can do about this except via another source of \ntrust comparable to domain certificate authorities.",
+            "statement": "저자는 에이전트 발견 과정에 악성 에이전트가 주입될 수 있으며, 이를 다루려면 인증기관에 비견되는 별도의 신뢰 원천이 필요하다고 지적한다."
+          },
+          {
+            "anchor": "page=2",
+            "conditions": "물리적 페이지 1–9의 제공 텍스트 전체를 읽은 범위의 판단이다. 공격 실험, 성능 측정, 독립 재현 또는 형식 검증 증거는 이 입력에서 확인하지 못했다.",
+            "id": "C23",
+            "kind": "analyst_interpretation",
+            "quote": "We then \nuse an example scenario in which a user engages a group of \nspecialized agents to help plan a holiday trip and make the \nnecessary reservations. We describe the architecture and the \nmessage exchanges that happen as part of this scenario and \ndiscuss open design questions pertaining to token revocation.",
+            "statement": "이 문서는 여행 예시를 통해 구조·메시지 교환·폐기 설계 질문을 설명하는 제안으로 읽어야 하며, 제공된 텍스트만으로 구현된 방어의 실험적 성공을 주장할 수 없다."
+          }
+        ],
+        "limitations": [
+          "저자 명시 한계: prompt injection에서 비롯되는 사이버 공격을 일반적으로 배제할 수 없으며, 실제 보안은 프로토콜의 이론적 성질뿐 아니라 구현에 의존한다. 핵심 서비스에 대한 사용자 신뢰도 전제한다.",
+          "저자 명시 한계: credential wallet에도 누적 공개, VP의 LLM 컨텍스트 경유, challenge 취득, 정책 UI 조작, credential 상태 미검사, claim 조합에 따른 재식별 위험이 남는다.",
+          "저자 명시 한계: 순수 오프라인 검증과 신속한 토큰 폐기 사이에는 설계 상충관계가 있다. 짧은 수명, 상위 체인 순회, cryptographic accumulator 대안은 각각 갱신·지연·관리 문제를 수반한다.",
+          "저자 명시 범위: 에이전트 발견은 제안의 범위 밖이며, 최종 결제 실행은 결제 제공자가 적절한 방식으로 구현해야 한다.",
+          "AI 해석의 한계: 제공된 전체 텍스트에서 공격 실험 표본, 방어 성공률, 지연 벤치마크, 독립 재현 또는 형식 검증 증거를 확인하지 못했다. 시나리오와 메시지 흐름을 실행 관측으로 승격하지 않는다.",
+          "AI 해석의 미확인 질문: 병렬 위임의 누적 지출 한도, 폐기와 실행 사이의 경쟁, nonce 소비의 원자성, 신원과 서비스 도메인의 결합을 어떻게 구현하는지는 추가 사양·구현 검토가 필요하다. 이는 확인된 취약점이라는 주장이 아니다.",
+          "텍스트 추출·시각 검토 한계: 모든 제공 페이지의 비어 있지 않은 내장 텍스트를 읽었지만, 줄바꿈에 따른 단어 분절과 그림·표 문자열의 선형화가 있다. 원래 레이아웃, 수식·표 구조, 이미지 전용 내용의 완전성을 확인하지 않았다.",
+          "근거 접근 한계: 원본 경로와 SHA-256은 입력 메타데이터를 기록한 것이며 이 응답에서 파일을 열거나 해시를 재계산하지 않았다. 기존 Wiki는 제공된 미검토 초안의 2차 근거로만 사용했다."
+        ],
+        "main_text_complete": true,
+        "markdown_body": "# Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal\n\n> 한국어 Wiki 초안 · status=draft · last_reviewed=null · review_state=unreviewed\n\n핵심은 모델이 보안 지시를 잘 따르도록 설득하는 대신, 모델 밖의 신원·권한·credential 관리 계층에서 행동을 제한하자는 것이다. 다만 이는 설계 제안이며, 토큰에 적힌 제한이 실제 서비스와 도구에서 집행되는지는 별도 문제다.\n\n## 읽은 버전과 범위\n\n- 저자: Srikumar K. Subramanian, Shubhashis Sengupta. 소속: Accenture Labs.\n- 버전: `2609.30824v1`.\n- 원본: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf`.\n- 제공된 물리적 `page=1`부터 `page=9`까지의 내장 텍스트를 모두 읽었다. 여기에는 마지막 두 페이지에 걸친 참고문헌과 추출된 그림 캡션·레이블·표 문자열이 포함된다. 제공된 페이지에 빈 텍스트 페이지는 없고, 별도 부록은 제시되지 않았다.\n- 읽기 완료는 제공된 텍스트의 범위에 한정한다. 참고문헌을 읽었다고 해서 그 인용 대상 논문·표준·웹 문서를 읽은 것은 아니다. PDF 파일을 직접 열거나 OCR·이미지 해석을 수행하지 않았다.\n- 모든 그림·이미지 및 이미지 전용 내용: 미검토\n- 수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\n\n## 문제와 동기\n\n이 논문에서 에이전트는 인간을 대신해 직접 또는 다른 에이전트를 거쳐 행동하는 프로그램이다. 여행 계획처럼 여러 서비스에 걸친 일을 맡길 때, 조정 에이전트의 전체 목표와 각 전문 에이전트가 알아야 할 정보·수행할 수 있는 행동은 같지 않다. 따라서 신원 확인뿐 아니라 제한된 권한을 전달하고 다시 좁혀 위임하는 표현이 필요하다는 문제 설정이다.\n\n**저자 주장 — ACL과 capability의 비교:** 동일한 권한 관계라도 자원별 허용 주체를 보는 ACL 관점보다, 에이전트가 자신의 제한된 권한을 제시하는 capability 관점이 개방형·일시적 에이전트와 분산 위임에 적합하다고 논증한다. 이는 해당 사용 조건의 설계상 주장이지 ACL 대비 우월성을 측정한 결과가 아니다. **C01** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n\n## 핵심 아이디어와 설계\n\n### 신원, 토큰, 위임 체인을 분리해서 이해하기\n\n- **신원도 신뢰 기반을 갖는다.** 공개 디렉터리를 통해 DID 문서와 에이전트를 연결하는 설명에서는 디렉터리에 대한 신뢰가 그 연결의 신뢰로 일부 이전된다. DID 사용을 곧 신뢰 기반이 없는 인증으로 읽지 않는다. **C02** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n- **capability token은 권한을 담은 서명 구조다.** 에이전트 신원, 서명하는 grantor, 대상 자원, 접근 제약을 JSON에 담으며, grantor는 사용자 또는 상위 grant에 근거한 에이전트일 수 있다. 토큰의 진위 확인과 요청이 그 제약에 들어맞는지의 판단을 혼동하지 않아야 한다. **C03** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n- **토큰을 갖고 있다는 사실과 신원 제어권은 구별된다.** 논문은 검증기의 난수에 에이전트 보안 계층이 서명하고 알려진 공개키로 검증하는 challenge–response를 제시한다. 다만 제어권 증명을 요구할 수 있다는 서술이므로 모든 서비스가 이를 의무적으로 구현했다고 단정할 수 없다. **C04** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n- **위임은 권한 확대가 아니라 attenuation이어야 한다.** 하위 토큰을 상위 grant에 연결하고 서비스가 체인 전체의 권한 비확대를 검사한다. 각주는 “Determination of whether the attenuation constraint holds is domain-specific.”라고 한정한다. 서명 체인의 진위만 확인하면 지출·목적·자원 범위의 의미까지 자동으로 검증되는 것은 아니다. **C05** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n### LLM 밖의 집행 계층\n\n**조건부 저자 주장:** 개인키가 어느 LLM 컨텍스트에도 접근 가능하지 않고, 보안 모듈이 암호화·서명 결과만 반환한다면 그 컨텍스트를 통한 credential 유출을 구조적으로 불가능하게 만들 수 있다고 한다. 보장의 대상은 명시된 비밀 접근 경로이며, 에이전트가 보유한 정당한 권한을 잘못 사용하는 모든 경우까지 제거한다는 뜻은 아니다. **C06** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n**도구에도 같은 전제가 필요하다.** 파일 시스템의 특정 디렉터리와 하위 디렉터리 접근을 중재하는 예를 들지만, 도구 자체가 capability-aware 시스템 기능만 사용해야 한다고 명시한다. 따라서 상위 서비스의 토큰 검사만으로 도구 내부의 모든 접근까지 제한된다고 가정해서는 안 된다. **C07** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n## 여행 예시: 임시 확보와 결제 권한의 분리\n\nAtlas는 조정 역할을 맡고 Skyway는 항공편, Haven은 호텔, Gourmand는 식당, Roadster는 현지 교통을 담당하는 설명용 구성을 사용한다. 각 전문 에이전트에 필요한 일과 권한을 나누는 것이 예시의 목적이다.\n\n**저자 시나리오:** 사용자에게 계획을 제시하고 동의를 받은 뒤 기존 `block` 토큰을 폐기하고, 더 정확한 금액으로 실제 지출을 허용하는 토큰을 새로 발급한다. 임시 확보 권한이 결제 권한으로 저절로 바뀌는 흐름이 아니라 승인과 토큰 교체를 거치는 흐름이다. 다만 이는 설명된 절차이며 실제 예약·결제의 성공 관측이 아니다. **C08** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=4]\n\n## 가정과 보장 경계\n\n**위협 모델의 전제:** 사람과 에이전트가 DID 제어권을 증명할 수 있고, 폐기되지 않은 서명 체인이 서비스 수행의 충분한 권한이 되며, 토큰 수명은 짧게 유지된다고 가정한다. 핵심 서비스는 사용자가 신뢰하는 대상으로 놓는다. 이 모델을 악성 서비스 제공자까지 포괄하는 무조건적 방어로 확장할 수 없다. **C09** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n**저자가 인정한 구현 의존성:** 뒤의 wallet 논의는 주입된 프롬프트로 촉발되는 사이버 공격을 일반적으로 배제할 수 없다고 명시한다. 앞의 비밀 격리 주장은 이 단서와 함께 읽어야 하며, 프로토콜의 이론적 성질이 구현 전체의 안전성이나 모든 credential 유출 경로의 차단을 증명하지는 않는다. **C10** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n## Credential wallet과 선택적 공개\n\n**구현 권고:** wallet을 별도 프로세스에서 typed IPC로만 연결하고, wallet 보유 비밀에 기반한 HMAC을 사용하며, 거부 메시지를 동일하게 유지하고, VP 비연결성에는 ECDSA 기반 proof 대신 BBS-2023을 사용하라고 권고한다. 이 목록은 보안 설계 지침이지 구현 완료 목록이나 효과 측정 결과가 아니다. **C11** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n**잔여 위험과 완화책:** 표 2의 추출 텍스트는 누적 공개에 요청 제한·presentation별 승인을, VP의 LLM 컨텍스트 경유에 wallet의 verifier 직접 전송과 에이전트의 pass/fail 수신을 대응시킨다. LLM의 challenge 취득에는 out-of-band 전달을, 정책 UI 조작에는 별도의 확인 수단을 권고한다. 이는 잔여 위험을 인정한 대응안이며 표의 시각 구조나 방어 효과는 검증하지 않았다. **C12** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n**암호학적 비연결성과 내용 기반 식별은 다르다.** 같은 표는 VP 서명 전에 W3C Bitstring Status List를 확인하는 방안과, 독특한 claim 조합에 의한 재식별을 별도로 다룬다. 후자는 암호학만의 문제가 아니므로 최소 필요 공개와 claim-set 다양성 분석을 요구한다. **C13** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n**서비스 사이의 분리:** 호텔 단계의 캡션은 항공 세션과 다른 pairwise DID를 사용해 연결되지 않는 presentation을 만든다고 설명한다. 이는 캡션의 설계 주장으로 기록하며, 공개 속성의 조합이나 다른 관측 정보까지 포함한 전역적 비연결성의 확인으로 취급하지 않는다. **C14** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\n\n**단일 verifier의 검증 흐름:** 그림 9의 추출 문자열에는 `allowedClaims`, `allowedVerifiers`, challenge 존재 검사, BBS+ ZKP 생성, 서명 검증, `nonce₁ → consumed set`이 나타난다. 신원 presentation에서 `memberOf`, `role`을 공개하는 흐름이다. 이 문자열의 체크 표시를 실제 시험 통과로 세거나 nonce 상태 관리의 모든 경쟁 조건이 해결됐다고 읽지 않는다. **C15** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n## 폐기: 즉시 중단이라는 목표와 실제 확인 경로\n\n**기본 상충관계:** 수신자가 토큰의 모든 요소를 순수 오프라인으로 검증한다면 최신 폐기를 반영하기가 매우 어렵거나 불가능하다고 저자는 설명한다. 반대로 상태 확인을 위한 중개·네트워크 경로에는 지연이 따른다. 논문은 이를 정량적으로 측정하지 않는다. **C16** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n- **짧은 수명과 갱신:** 예시로 5분 수명을 두고 갱신 실패를 통해 폐기를 인식한다. 5분은 설명용 값이지 고정 기본값이나 실험 수치가 아니다. 갱신 지연이 남으며, 이 대안만으로 즉시 폐기를 보장한다고 읽을 수 없다. **C17** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n- **상위 체인 순회:** 각 토큰에 상위 참조를 넣고 서비스가 전체 grant chain의 유효성을 확인하면 하위 트리 단위 폐기를 지원할 수 있다. 대신 지연이 위임 깊이에 의존한다. 폐기 선언과 모든 서비스의 폐기 관측은 구분해야 한다. **C18** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n- **Cryptographic accumulator:** 알려진 지점에 accumulator를 게시하고 capability에 witness와 epoch를 넣어, 체인 내 토큰이 제거되면 검증 실패로 반영하는 대안을 제시한다. 저자는 관리 복잡성도 언급하며, 본문은 완성된 갱신 프로토콜이나 성능 결과를 제공하지 않는다. **C19** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n## 감사 이력, 실제 효과, 발견 서비스의 경계\n\n**감사 추적의 시간 구조:** 저자는 토큰 생성·교환·폐기가 감사 가능한 흔적을 제공한다고 설명하면서, 여러 에이전트가 행동하면 단일 엄격 시간 순서 대신 요청과 VP의 순서에 따른 복수의 선형 시간 threads가 생긴다고 구분한다. 서명된 이력이 있다는 사실을 완전한 전역 순서나 모든 행동의 관측으로 확대해서는 안 된다. **C20** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\n\n**AI 해석 — 검증 이력은 결제 영수증이 아니다.** 저자는 최종 결제 실행을 결제 제공자가 구현해야 한다고 명시하고, 설명된 과정의 주목적을 결제를 유발한 의사결정의 검증 이력으로 둔다. 따라서 신원 검증, 지출 권한 확인, 호출, 결제 완료를 서로 다른 상태로 읽어야 한다. **C21** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n**발견은 별도의 신뢰 문제다.** 논문은 에이전트 발견을 범위 밖에 두면서도 발견 과정에 악성 에이전트가 주입될 수 있음을 인정한다. 인증기관과 비견되는 추가 신뢰 원천을 언급하므로, 도메인 제어권이나 DID 확인을 서비스의 선의·업무 적합성까지 보장하는 것으로 읽을 수 없다. **C22** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n## 제안의 검증 수준\n\n**AI 해석:** 논문은 여행 예시의 구조와 메시지 교환, 폐기 설계 질문을 설명하는 제안이다. 제공된 전체 텍스트에서 공격 실험 표본·방어 성공률·지연 벤치마크·독립 재현·형식 검증 증거를 확인하지 못했다. 흐름도의 성공 표시와 완료 서술을 실행 관측으로 승격하지 않으며, 보편적 신규성이나 검증된 범용 방어를 주장하지 않는다. **C23** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n\n## 기존 Wiki와의 연결\n\n다음 연결은 제공된 미검토 Wiki 초안을 이용한 개념적 연결이다. 그 초안들이 다루는 다른 논문의 원문을 이번에 다시 읽거나 독립 검증한 것은 아니다.\n\n- [[concepts/agent-authority-and-effect-boundaries]]: 임시 확보·지출 승인·서비스 검증·실제 결제 완료를 분리하는 데 유용하다. 토큰이 표현하는 권한과 실제 집행 지점이 어디인지 질문하도록 돕는다.\n- [[concepts/provenance-and-audit-evidence]]: 서명된 토큰 이력, 요청 순서, 외부 완료 증거가 각각 무엇을 입증하는지 나누어 읽는 연결이다. 감사 가능성을 관측 완전성으로 바꾸지 않는다.\n- [[concepts/security-evaluation-units]]: 이 논문의 설명용 시나리오를 다른 논문의 공격 실행·요청 판정·외부 효과 측정과 같은 평가 단위로 취급하지 않기 위한 연결이다. 비교 가능한 실험 분모가 확인되지 않은 상태에서 성능 순위를 만들지 않는다.\n\n## 열린 질문과 미확인 항목\n\n아래는 AI가 제안하는 후속 검토 질문이며, 사용자 의견이나 확인된 취약점·실험 결과가 아니다.\n\n- 도메인별 attenuation을 어떤 규칙과 데이터 모델로 판정하는가? 시간·목적·자원 범위가 복합적으로 결합된 위임에도 같은 규칙이 적용되는가?\n- 병렬 하위 위임 각각의 한도가 적절하더라도, 전체 누적 지출 한도는 누가 어떤 원자적 상태로 관리하는가?\n- 폐기와 거래 실행이 경쟁하거나 상태 확인 서비스가 응답하지 않을 때, 서비스는 어떤 실패 정책을 적용하는가?\n- challenge·nonce 소비, 재시도, 프로세스 재시작, 분산 verifier 사이의 상태 공유는 어떻게 정의되는가?\n- capability 서명, credential proof, holder 신원, verifier domain 사이의 결합은 어떤 구현 사양으로 고정되는가?\n- 비밀이 모델에 노출되지 않는 것과, 모델이 wallet에 부적절한 허용 요청을 반복하는 것은 어떻게 구분하여 시험할 것인가?\n- 실제 검증에서는 권한 거부, 비밀 유출, 권한 내 오용, 폐기 전파, 정상 업무 완료를 각각 어떤 관측 종점으로 기록할 것인가?\n\n## 원문 근거와 기록 경계\n\n주장별 근거는 위의 물리적 `source.pdf#page=N` 표식과 구조화된 짧은 인용에 연결했다. 페이지 식별자는 인쇄 쪽수가 아니라 제공된 PDF 파일 순서다. 본문 설명은 주로 앞부분의 설계·위협 모델·흐름에서 가져왔고, 참고문헌 페이지는 인용 대상의 존재를 읽은 범위일 뿐 그 자료의 내용을 검증하는 근거로 사용하지 않았다.\n\n- 입력이 제공한 PDF SHA-256: `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`.\n- 메타데이터 경로: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json`.\n- 입력이 제공한 메타데이터 SHA-256: `56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb`.\n\n이 해시들은 제공된 식별 정보를 보존한 것이며 이 응답에서 재계산한 무결성 검사 결과가 아니다. 이 노트 작성은 원본 수정, 실험 실행, 독립 보안 검증, 사람의 reviewed 판정 또는 Wiki 게시 완료를 뜻하지 않는다.",
+        "read_scope": [
+          "page=1",
+          "page=2",
+          "page=3",
+          "page=4",
+          "page=5",
+          "page=6",
+          "page=7",
+          "page=8",
+          "page=9"
+        ],
+        "summary": "이 제안은 신원에 결합된 capability token, 위임 시 권한 축소, LLM 밖의 credential wallet으로 에이전트의 행동 경계를 구성하지만, 폐기·신뢰 기반·구현 안전성에 남는 조건 때문에 실험적으로 검증된 범용 prompt injection 방어로 읽어서는 안 된다.",
+        "title": "Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal",
+        "unread_scope": [
+          "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+          "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+          "그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.",
+          "참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다."
+        ],
+        "version_id": "2609.30824v1"
+      },
+      "passed": true,
+      "publication": "not_performed",
+      "schema": "pkm-pdf-text-verification/v1",
+      "semantic_review": "not_performed",
+      "version_id": "2609.30824v1"
+    },
+    "targets": [
+      {
+        "after_hash": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e",
+        "after_image": "---\ntitle: \"Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal\"\nsummary: \"이 제안은 신원에 결합된 capability token, 위임 시 권한 축소, LLM 밖의 credential wallet으로 에이전트의 행동 경계를 구성하지만, 폐기·신뢰 기반·구현 안전성에 남는 조건 때문에 실험적으로 검증된 범용 prompt injection 방어로 읽어서는 안 된다.\"\ncreated: \"2026-10-01\"\nupdated: \"2026-10-01\"\nlast_reviewed: null\ntype: \"entity\"\nstatus: \"draft\"\ntags: [\"paper\"]\nsources: [\"raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf\"]\nconfidence: \"medium\"\ncontested: false\ncontradictions: []\nschema: \"pkm-knowledge-page/v1\"\nrevision: \"1\"\ntransaction_id: \"pdf3-b99973e47fc40996683ae340e855c3a9\"\npolicy_revision: \"pkm-html-pdf-text-knowledge/v3\"\nprompt_revision: \"wiki-compile/v3\"\ngeneration_ref: \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30824v1/attempt1-result.json\"\nread_scope: [\"page=1\", \"page=2\", \"page=3\", \"page=4\", \"page=5\", \"page=6\", \"page=7\", \"page=8\", \"page=9\"]\nunread_scope: [\"모든 그림·이미지 및 이미지 전용 내용: 미검토\", \"수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\", \"그림 1–9의 시각적 관계·화살표·배치와 표 1–3의 원래 행·열 정렬은 확인하지 않았다. 제공된 추출 텍스트에 포함된 레이블·캡션·셀 문자열만 읽었다.\", \"참고문헌이 가리키는 외부 원문과 제공되지 않은 보충자료는 읽지 않았다. 제공된 페이지에는 별도 부록이 없으며, 미제공 부록의 존재나 내용을 추정하지 않는다.\"]\nreview_state: \"unreviewed\"\nsource_hashes: {\"raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf\": \"4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8\"}\nagent_review_ref: \"_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json\"\n---\n\n# Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal\n\n> 한국어 Wiki 초안 · status=draft · last_reviewed=null · review_state=unreviewed\n\n핵심은 모델이 보안 지시를 잘 따르도록 설득하는 대신, 모델 밖의 신원·권한·credential 관리 계층에서 행동을 제한하자는 것이다. 다만 이는 설계 제안이며, 토큰에 적힌 제한이 실제 서비스와 도구에서 집행되는지는 별도 문제다.\n\n## 읽은 버전과 범위\n\n- 저자: Srikumar K. Subramanian, Shubhashis Sengupta. 소속: Accenture Labs.\n- 버전: `2609.30824v1`.\n- 원본: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf`.\n- 제공된 물리적 `page=1`부터 `page=9`까지의 내장 텍스트를 모두 읽었다. 여기에는 마지막 두 페이지에 걸친 참고문헌과 추출된 그림 캡션·레이블·표 문자열이 포함된다. 제공된 페이지에 빈 텍스트 페이지는 없고, 별도 부록은 제시되지 않았다.\n- 읽기 완료는 제공된 텍스트의 범위에 한정한다. 참고문헌을 읽었다고 해서 그 인용 대상 논문·표준·웹 문서를 읽은 것은 아니다. PDF 파일을 직접 열거나 OCR·이미지 해석을 수행하지 않았다.\n- 모든 그림·이미지 및 이미지 전용 내용: 미검토\n- 수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행\n\n## 문제와 동기\n\n이 논문에서 에이전트는 인간을 대신해 직접 또는 다른 에이전트를 거쳐 행동하는 프로그램이다. 여행 계획처럼 여러 서비스에 걸친 일을 맡길 때, 조정 에이전트의 전체 목표와 각 전문 에이전트가 알아야 할 정보·수행할 수 있는 행동은 같지 않다. 따라서 신원 확인뿐 아니라 제한된 권한을 전달하고 다시 좁혀 위임하는 표현이 필요하다는 문제 설정이다.\n\n**저자 주장 — ACL과 capability의 비교:** 동일한 권한 관계라도 자원별 허용 주체를 보는 ACL 관점보다, 에이전트가 자신의 제한된 권한을 제시하는 capability 관점이 개방형·일시적 에이전트와 분산 위임에 적합하다고 논증한다. 이는 해당 사용 조건의 설계상 주장이지 ACL 대비 우월성을 측정한 결과가 아니다. **C01** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n\n## 핵심 아이디어와 설계\n\n### 신원, 토큰, 위임 체인을 분리해서 이해하기\n\n- **신원도 신뢰 기반을 갖는다.** 공개 디렉터리를 통해 DID 문서와 에이전트를 연결하는 설명에서는 디렉터리에 대한 신뢰가 그 연결의 신뢰로 일부 이전된다. DID 사용을 곧 신뢰 기반이 없는 인증으로 읽지 않는다. **C02** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n- **capability token은 권한을 담은 서명 구조다.** 에이전트 신원, 서명하는 grantor, 대상 자원, 접근 제약을 JSON에 담으며, grantor는 사용자 또는 상위 grant에 근거한 에이전트일 수 있다. 토큰의 진위 확인과 요청이 그 제약에 들어맞는지의 판단을 혼동하지 않아야 한다. **C03** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n- **토큰을 갖고 있다는 사실과 신원 제어권은 구별된다.** 논문은 검증기의 난수에 에이전트 보안 계층이 서명하고 알려진 공개키로 검증하는 challenge–response를 제시한다. 다만 제어권 증명을 요구할 수 있다는 서술이므로 모든 서비스가 이를 의무적으로 구현했다고 단정할 수 없다. **C04** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n- **위임은 권한 확대가 아니라 attenuation이어야 한다.** 하위 토큰을 상위 grant에 연결하고 서비스가 체인 전체의 권한 비확대를 검사한다. 각주는 “Determination of whether the attenuation constraint holds is domain-specific.”라고 한정한다. 서명 체인의 진위만 확인하면 지출·목적·자원 범위의 의미까지 자동으로 검증되는 것은 아니다. **C05** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n### LLM 밖의 집행 계층\n\n**조건부 저자 주장:** 개인키가 어느 LLM 컨텍스트에도 접근 가능하지 않고, 보안 모듈이 암호화·서명 결과만 반환한다면 그 컨텍스트를 통한 credential 유출을 구조적으로 불가능하게 만들 수 있다고 한다. 보장의 대상은 명시된 비밀 접근 경로이며, 에이전트가 보유한 정당한 권한을 잘못 사용하는 모든 경우까지 제거한다는 뜻은 아니다. **C06** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n**도구에도 같은 전제가 필요하다.** 파일 시스템의 특정 디렉터리와 하위 디렉터리 접근을 중재하는 예를 들지만, 도구 자체가 capability-aware 시스템 기능만 사용해야 한다고 명시한다. 따라서 상위 서비스의 토큰 검사만으로 도구 내부의 모든 접근까지 제한된다고 가정해서는 안 된다. **C07** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=3]\n\n## 여행 예시: 임시 확보와 결제 권한의 분리\n\nAtlas는 조정 역할을 맡고 Skyway는 항공편, Haven은 호텔, Gourmand는 식당, Roadster는 현지 교통을 담당하는 설명용 구성을 사용한다. 각 전문 에이전트에 필요한 일과 권한을 나누는 것이 예시의 목적이다.\n\n**저자 시나리오:** 사용자에게 계획을 제시하고 동의를 받은 뒤 기존 `block` 토큰을 폐기하고, 더 정확한 금액으로 실제 지출을 허용하는 토큰을 새로 발급한다. 임시 확보 권한이 결제 권한으로 저절로 바뀌는 흐름이 아니라 승인과 토큰 교체를 거치는 흐름이다. 다만 이는 설명된 절차이며 실제 예약·결제의 성공 관측이 아니다. **C08** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=4]\n\n## 가정과 보장 경계\n\n**위협 모델의 전제:** 사람과 에이전트가 DID 제어권을 증명할 수 있고, 폐기되지 않은 서명 체인이 서비스 수행의 충분한 권한이 되며, 토큰 수명은 짧게 유지된다고 가정한다. 핵심 서비스는 사용자가 신뢰하는 대상으로 놓는다. 이 모델을 악성 서비스 제공자까지 포괄하는 무조건적 방어로 확장할 수 없다. **C09** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n**저자가 인정한 구현 의존성:** 뒤의 wallet 논의는 주입된 프롬프트로 촉발되는 사이버 공격을 일반적으로 배제할 수 없다고 명시한다. 앞의 비밀 격리 주장은 이 단서와 함께 읽어야 하며, 프로토콜의 이론적 성질이 구현 전체의 안전성이나 모든 credential 유출 경로의 차단을 증명하지는 않는다. **C10** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n## Credential wallet과 선택적 공개\n\n**구현 권고:** wallet을 별도 프로세스에서 typed IPC로만 연결하고, wallet 보유 비밀에 기반한 HMAC을 사용하며, 거부 메시지를 동일하게 유지하고, VP 비연결성에는 ECDSA 기반 proof 대신 BBS-2023을 사용하라고 권고한다. 이 목록은 보안 설계 지침이지 구현 완료 목록이나 효과 측정 결과가 아니다. **C11** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n**잔여 위험과 완화책:** 표 2의 추출 텍스트는 누적 공개에 요청 제한·presentation별 승인을, VP의 LLM 컨텍스트 경유에 wallet의 verifier 직접 전송과 에이전트의 pass/fail 수신을 대응시킨다. LLM의 challenge 취득에는 out-of-band 전달을, 정책 UI 조작에는 별도의 확인 수단을 권고한다. 이는 잔여 위험을 인정한 대응안이며 표의 시각 구조나 방어 효과는 검증하지 않았다. **C12** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n**암호학적 비연결성과 내용 기반 식별은 다르다.** 같은 표는 VP 서명 전에 W3C Bitstring Status List를 확인하는 방안과, 독특한 claim 조합에 의한 재식별을 별도로 다룬다. 후자는 암호학만의 문제가 아니므로 최소 필요 공개와 claim-set 다양성 분석을 요구한다. **C13** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n**서비스 사이의 분리:** 호텔 단계의 캡션은 항공 세션과 다른 pairwise DID를 사용해 연결되지 않는 presentation을 만든다고 설명한다. 이는 캡션의 설계 주장으로 기록하며, 공개 속성의 조합이나 다른 관측 정보까지 포함한 전역적 비연결성의 확인으로 취급하지 않는다. **C14** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\n\n**단일 verifier의 검증 흐름:** 그림 9의 추출 문자열에는 `allowedClaims`, `allowedVerifiers`, challenge 존재 검사, BBS+ ZKP 생성, 서명 검증, `nonce₁ → consumed set`이 나타난다. 신원 presentation에서 `memberOf`, `role`을 공개하는 흐름이다. 이 문자열의 체크 표시를 실제 시험 통과로 세거나 nonce 상태 관리의 모든 경쟁 조건이 해결됐다고 읽지 않는다. **C15** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n## 폐기: 즉시 중단이라는 목표와 실제 확인 경로\n\n**기본 상충관계:** 수신자가 토큰의 모든 요소를 순수 오프라인으로 검증한다면 최신 폐기를 반영하기가 매우 어렵거나 불가능하다고 저자는 설명한다. 반대로 상태 확인을 위한 중개·네트워크 경로에는 지연이 따른다. 논문은 이를 정량적으로 측정하지 않는다. **C16** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=5]\n\n- **짧은 수명과 갱신:** 예시로 5분 수명을 두고 갱신 실패를 통해 폐기를 인식한다. 5분은 설명용 값이지 고정 기본값이나 실험 수치가 아니다. 갱신 지연이 남으며, 이 대안만으로 즉시 폐기를 보장한다고 읽을 수 없다. **C17** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n- **상위 체인 순회:** 각 토큰에 상위 참조를 넣고 서비스가 전체 grant chain의 유효성을 확인하면 하위 트리 단위 폐기를 지원할 수 있다. 대신 지연이 위임 깊이에 의존한다. 폐기 선언과 모든 서비스의 폐기 관측은 구분해야 한다. **C18** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n- **Cryptographic accumulator:** 알려진 지점에 accumulator를 게시하고 capability에 witness와 epoch를 넣어, 체인 내 토큰이 제거되면 검증 실패로 반영하는 대안을 제시한다. 저자는 관리 복잡성도 언급하며, 본문은 완성된 갱신 프로토콜이나 성능 결과를 제공하지 않는다. **C19** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=6]\n\n## 감사 이력, 실제 효과, 발견 서비스의 경계\n\n**감사 추적의 시간 구조:** 저자는 토큰 생성·교환·폐기가 감사 가능한 흔적을 제공한다고 설명하면서, 여러 에이전트가 행동하면 단일 엄격 시간 순서 대신 요청과 VP의 순서에 따른 복수의 선형 시간 threads가 생긴다고 구분한다. 서명된 이력이 있다는 사실을 완전한 전역 순서나 모든 행동의 관측으로 확대해서는 안 된다. **C20** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=7]\n\n**AI 해석 — 검증 이력은 결제 영수증이 아니다.** 저자는 최종 결제 실행을 결제 제공자가 구현해야 한다고 명시하고, 설명된 과정의 주목적을 결제를 유발한 의사결정의 검증 이력으로 둔다. 따라서 신원 검증, 지출 권한 확인, 호출, 결제 완료를 서로 다른 상태로 읽어야 한다. **C21** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n**발견은 별도의 신뢰 문제다.** 논문은 에이전트 발견을 범위 밖에 두면서도 발견 과정에 악성 에이전트가 주입될 수 있음을 인정한다. 인증기관과 비견되는 추가 신뢰 원천을 언급하므로, 도메인 제어권이나 DID 확인을 서비스의 선의·업무 적합성까지 보장하는 것으로 읽을 수 없다. **C22** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=8]\n\n## 제안의 검증 수준\n\n**AI 해석:** 논문은 여행 예시의 구조와 메시지 교환, 폐기 설계 질문을 설명하는 제안이다. 제공된 전체 텍스트에서 공격 실험 표본·방어 성공률·지연 벤치마크·독립 재현·형식 검증 증거를 확인하지 못했다. 흐름도의 성공 표시와 완료 서술을 실행 관측으로 승격하지 않으며, 보편적 신규성이나 검증된 범용 방어를 주장하지 않는다. **C23** ^[raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf#page=2]\n\n## 기존 Wiki와의 연결\n\n다음 연결은 제공된 미검토 Wiki 초안을 이용한 개념적 연결이다. 그 초안들이 다루는 다른 논문의 원문을 이번에 다시 읽거나 독립 검증한 것은 아니다.\n\n- [[concepts/agent-authority-and-effect-boundaries]]: 임시 확보·지출 승인·서비스 검증·실제 결제 완료를 분리하는 데 유용하다. 토큰이 표현하는 권한과 실제 집행 지점이 어디인지 질문하도록 돕는다.\n- [[concepts/provenance-and-audit-evidence]]: 서명된 토큰 이력, 요청 순서, 외부 완료 증거가 각각 무엇을 입증하는지 나누어 읽는 연결이다. 감사 가능성을 관측 완전성으로 바꾸지 않는다.\n- [[concepts/security-evaluation-units]]: 이 논문의 설명용 시나리오를 다른 논문의 공격 실행·요청 판정·외부 효과 측정과 같은 평가 단위로 취급하지 않기 위한 연결이다. 비교 가능한 실험 분모가 확인되지 않은 상태에서 성능 순위를 만들지 않는다.\n\n## 열린 질문과 미확인 항목\n\n아래는 AI가 제안하는 후속 검토 질문이며, 사용자 의견이나 확인된 취약점·실험 결과가 아니다.\n\n- 도메인별 attenuation을 어떤 규칙과 데이터 모델로 판정하는가? 시간·목적·자원 범위가 복합적으로 결합된 위임에도 같은 규칙이 적용되는가?\n- 병렬 하위 위임 각각의 한도가 적절하더라도, 전체 누적 지출 한도는 누가 어떤 원자적 상태로 관리하는가?\n- 폐기와 거래 실행이 경쟁하거나 상태 확인 서비스가 응답하지 않을 때, 서비스는 어떤 실패 정책을 적용하는가?\n- challenge·nonce 소비, 재시도, 프로세스 재시작, 분산 verifier 사이의 상태 공유는 어떻게 정의되는가?\n- capability 서명, credential proof, holder 신원, verifier domain 사이의 결합은 어떤 구현 사양으로 고정되는가?\n- 비밀이 모델에 노출되지 않는 것과, 모델이 wallet에 부적절한 허용 요청을 반복하는 것은 어떻게 구분하여 시험할 것인가?\n- 실제 검증에서는 권한 거부, 비밀 유출, 권한 내 오용, 폐기 전파, 정상 업무 완료를 각각 어떤 관측 종점으로 기록할 것인가?\n\n## 원문 근거와 기록 경계\n\n주장별 근거는 위의 물리적 `source.pdf#page=N` 표식과 구조화된 짧은 인용에 연결했다. 페이지 식별자는 인쇄 쪽수가 아니라 제공된 PDF 파일 순서다. 본문 설명은 주로 앞부분의 설계·위협 모델·흐름에서 가져왔고, 참고문헌 페이지는 인용 대상의 존재를 읽은 범위일 뿐 그 자료의 내용을 검증하는 근거로 사용하지 않았다.\n\n- 입력이 제공한 PDF SHA-256: `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`.\n- 메타데이터 경로: `raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json`.\n- 입력이 제공한 메타데이터 SHA-256: `56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb`.\n\n이 해시들은 제공된 식별 정보를 보존한 것이며 이 응답에서 재계산한 무결성 검사 결과가 아니다. 이 노트 작성은 원본 수정, 실험 실행, 독립 보안 검증, 사람의 reviewed 판정 또는 Wiki 게시 완료를 뜻하지 않는다.",
+        "after_image_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-publish-journal.json#/plan/targets/0/after_image",
+        "before_hash": null,
+        "before_image": null,
+        "before_image_ref": null,
+        "order": 1,
+        "path": "entities/arxiv-2609.30824v1.md",
+        "stage": "verified"
+      },
+      {
+        "after_hash": "169b97776650df077283db6bc30360d7559b4f817c7d7f08d34dcd8d578ac863",
+        "before_hash": "61dc55309316b8ca9fa02c142b2e010ad7bff53efc9c41f7005d66f48a6ffbf3",
+        "order": 2,
+        "path": "index.md",
+        "stage": "verified"
+      },
+      {
+        "after_hash": "239d0f3c954100921625c36aba3e82e88d83f0be0f42a39af0979e6b949dbfdf",
+        "before_hash": "351597e4be534a292f7d3b3e9eede63c5c76c74aec9ba6c76683d0c8aa924963",
+        "order": 3,
+        "path": "log.md",
+        "stage": "verified"
+      },
+      {
+        "after_hash": "5476ec47735a1d08bf972235d87d2072ed44ee3732386369fdb8a58843e10819",
+        "before_hash": null,
+        "order": 4,
+        "path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30824v1-attempt1-receipt.json",
+        "stage": "verified"
+      },
+      {
+        "after_hash": "e3a793f88c239eedef2b227d4ba0862765c7a5e1c6988ca139fb7cf6695fcd32",
+        "before_hash": "e7d82e366e21abd74886f31e5744a3c6504907ea56014be5320c43701900d96f",
+        "order": 5,
+        "path": "_meta/state/compilation.json",
+        "stage": "verified"
+      }
+    ],
+    "transaction_id": "pdf3-b99973e47fc40996683ae340e855c3a9",
+    "work_key": "5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35"
+  },
+  "plan_sha256": "5ffee0e3ed420bd8b92c955b1ecf0dc388bc2a872367e4b325490a97ef8460e3"
+}

@@ -1,0 +1,79 @@
+test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) ... 
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[reference][ref]') ... FAIL
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[collapsed][]') ... FAIL
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[shortcut]') ... FAIL
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[bad](missing') ... FAIL
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='^[raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.html#S1') ... FAIL
+  test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[bad](missing "title")') ... FAIL
+test_allowed_inline_source_and_committed_wiki_links (test_content.ContentTests.test_allowed_inline_source_and_committed_wiki_links) ... ok
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[reference][ref]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[collapsed][]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[shortcut]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[bad](missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='^[raw/articles/4cff5b4f10ec/arxiv-9910.00001v1/source.html#S1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+======================================================================
+FAIL: test_malformed_reference_and_unresolved_links_are_rejected (test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected) (link='[bad](missing "title")')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 284, in test_malformed_reference_and_unresolved_links_are_rejected
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.536s
+
+FAILED (failures=6)

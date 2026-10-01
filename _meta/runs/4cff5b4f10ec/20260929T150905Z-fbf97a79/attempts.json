@@ -1,0 +1,127 @@
+[
+  {
+    "version_id": "2609.35760v1",
+    "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+    "steps": [
+      {
+        "step": "html_fetch",
+        "status": 200,
+        "final_url": "https://arxiv.org/html/2609.35760v1",
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 1193201,
+        "error": null,
+        "final_ok": true,
+        "complete": true,
+        "title_like": true,
+        "cl_ok": true
+      }
+    ],
+    "html_publish": {
+      "ok": true,
+      "sha256": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+      "bytes": 1193201,
+      "dest": "/home/ainsdev/wiki/pkm-articles/raw/articles/4cff5b4f10ec/arxiv-2609.35760v1"
+    },
+    "outcome": "html_saved"
+  },
+  {
+    "version_id": "2608.29596v2",
+    "title": "A Systematic Survey of Agentic Skills: Architecture, Lifecycle, and Security",
+    "steps": [
+      {
+        "step": "html_fetch",
+        "status": 200,
+        "final_url": "https://arxiv.org/html/2608.29596v2",
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 1078043,
+        "error": null,
+        "final_ok": true,
+        "complete": true,
+        "title_like": true,
+        "cl_ok": true
+      }
+    ],
+    "html_publish": {
+      "ok": true,
+      "sha256": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+      "bytes": 1078043,
+      "dest": "/home/ainsdev/wiki/pkm-articles/raw/articles/4cff5b4f10ec/arxiv-2608.29596v2"
+    },
+    "outcome": "html_saved"
+  },
+  {
+    "version_id": "2609.35596v1",
+    "title": "SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents",
+    "steps": [
+      {
+        "step": "html_fetch",
+        "status": 200,
+        "final_url": "https://arxiv.org/html/2609.35596v1",
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 494759,
+        "error": null,
+        "final_ok": true,
+        "complete": true,
+        "title_like": true,
+        "cl_ok": true
+      }
+    ],
+    "html_publish": {
+      "ok": true,
+      "sha256": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+      "bytes": 494759,
+      "dest": "/home/ainsdev/wiki/pkm-articles/raw/articles/4cff5b4f10ec/arxiv-2609.35596v1"
+    },
+    "outcome": "html_saved"
+  },
+  {
+    "version_id": "2609.35576v1",
+    "title": "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
+    "steps": [
+      {
+        "step": "html_fetch",
+        "status": 200,
+        "final_url": "https://arxiv.org/html/2609.35576v1",
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 394496,
+        "error": null,
+        "final_ok": true,
+        "complete": true,
+        "title_like": true,
+        "cl_ok": true
+      }
+    ],
+    "html_publish": {
+      "ok": true,
+      "sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+      "bytes": 394496,
+      "dest": "/home/ainsdev/wiki/pkm-articles/raw/articles/4cff5b4f10ec/arxiv-2609.35576v1"
+    },
+    "outcome": "html_saved"
+  },
+  {
+    "version_id": "2509.09215v3",
+    "title": "Enabling Regulatory Multi-Agent Collaboration: Architecture, Challenges, and Solutions",
+    "steps": [
+      {
+        "step": "html_fetch",
+        "status": 200,
+        "final_url": "https://arxiv.org/html/2509.09215v3",
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 116966,
+        "error": null,
+        "final_ok": true,
+        "complete": true,
+        "title_like": true,
+        "cl_ok": true
+      }
+    ],
+    "html_publish": {
+      "ok": true,
+      "sha256": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+      "bytes": 116966,
+      "dest": "/home/ainsdev/wiki/pkm-articles/raw/articles/4cff5b4f10ec/arxiv-2509.09215v3"
+    },
+    "outcome": "html_saved"
+  }
+]

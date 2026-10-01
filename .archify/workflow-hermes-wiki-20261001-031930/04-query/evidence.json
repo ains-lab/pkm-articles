@@ -1,0 +1,867 @@
+{
+  "schema": "archify-document-evidence/v1",
+  "mode": "document-description",
+  "diagram_type": "workflow",
+  "language": {
+    "authored": "ko",
+    "viewer_fallback": "en",
+    "html_lang_fallback": "en"
+  },
+  "candidate": ".archify/workflow-hermes-wiki-20261001-031930/04-query/candidate.json",
+  "candidate_sha256": "5bf1868629ac5265b3385444aab93736732768e1696bae05b95a46473b83acdc",
+  "source_root": ".",
+  "document_base": "docs/techblog/hermes-api-gateway-workdir-assoc",
+  "repository_claim": null,
+  "scope": "읽은 설계문서만 재구성. BFF/UI/격리 미구현. live API 또는 모델 검증을 뜻하지 않는다.",
+  "classification_definitions": {
+    "관측": "기술문서가 보고한 정적 소스/파일 관측; 본 작업의 live 관측 아님",
+    "공식계약": "기술문서가 명시한 공식 API 또는 정식 Wiki 계약",
+    "제안": "아직 구현·배포·검증하지 않은 BFF/UI/격리 설계",
+    "미확인": "실행/호환성/배포 미검증 또는 보장하지 않는 속성"
+  },
+  "coverage": {
+    "nodes": 19,
+    "edges": 23,
+    "mapped_nodes": 19,
+    "mapped_edges": 23,
+    "unmapped": []
+  },
+  "entries": [
+    {
+      "element_type": "node",
+      "element_id": "question",
+      "claim": "질문·선택 pageId 제출 / 클라이언트 요청 ID 포함 / 임의 path·model·도구·prompt 금지",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 25,
+          "end_line": 35,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 128,
+          "end_line": 133,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "owner",
+      "claim": "인증·객체 소유권 / 대화·session·run마다 ACL / 다른 사용자 run/key 재사용 차단",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 29,
+          "end_line": 33,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 68,
+          "end_line": 72,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 31,
+          "end_line": 35,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "policy",
+      "claim": "질의 실행 gate / 별도 승인 + 실제 격리 검증 / 자료·모델·도구 서버 allowlist",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 27,
+          "end_line": 32,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 37,
+          "end_line": 50,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "binding",
+      "claim": "서버 소유 문맥 고정 / conversation → body session_id / 세션 단일 writer · 허용 문서만",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 29,
+          "end_line": 34,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 89,
+          "end_line": 89,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 62,
+          "end_line": 74,
+          "classification": "공식계약"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "blocked",
+      "claim": "승인 밖 작업 차단 / 신규 원문·PDF 분석·쓰기·게시 / 격리 미검증이면 실행하지 않음",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 27,
+          "end_line": 35,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 54,
+          "end_line": 60,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 43,
+          "end_line": 59,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "post",
+      "claim": "POST /v1/runs / input + body session_id / BFF 소유 Idempotency-Key",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 62,
+          "end_line": 82,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 68,
+          "end_line": 72,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "idempotency",
+      "claim": "key·body 중복 검사 / 같은 body 재시도 / 다른 body / 전송 재시도 ≠ 수정 질문 재생성",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 109,
+          "end_line": 113,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 66,
+          "end_line": 72,
+          "classification": "공식계약"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "body_conflict",
+      "claim": "409 · 다른 body / 같은 key로 변경 요청 거부 / 수정 질의는 새 key + 명시 제출",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 114,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 68,
+          "end_line": 72,
+          "classification": "공식계약"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "replayed",
+      "claim": "202 replay · 기존 run / 동일 key + 동일 payload / 재실행·SSE replay가 아님",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 113,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "accepted",
+      "claim": "202 · started 접수 / run_id 보관 · 성공 아님 / queued/running 등 실제 상태 분리",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 76,
+          "end_line": 84,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 49,
+          "end_line": 61,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "upstream",
+      "claim": "GET run /events / BFF 단일 upstream 구독 / 단일 queue · 종료 시 transport 삭제",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 25,
+          "end_line": 28,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 103,
+          "end_line": 107,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 58,
+          "end_line": 64,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "relay",
+      "claim": "SSE 파싱·자체 fan-out / data JSON.event로 분기 / 허용된 최소 이벤트만 owner에게",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 86,
+          "end_line": 105,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 49,
+          "end_line": 64,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 65,
+          "end_line": 78,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "active",
+      "claim": "실행 중 · 도구 승인 대기 / delta는 임시 · final과 분리 / 도구 승인 ≠ Wiki 단계·게시 승인",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 49,
+          "end_line": 69,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 84,
+          "end_line": 95,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "disconnected",
+      "claim": "단절·events 404 / 작업 실패·취소를 뜻하지 않음 / Last-Event-ID 복구 보장 없음",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 103,
+          "end_line": 107,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 62,
+          "end_line": 64,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "stop",
+      "claim": "사용자가 중지 요청 / owner + CSRF 재확인 / POST run /stop · abort와 다름",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 128,
+          "end_line": 131,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 74,
+          "end_line": 82,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "reconcile",
+      "claim": "GET run 상태 재조정 / 현재·최종 snapshot으로 복구 / 진행 중이면 polling · 새 run 금지",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 52,
+          "end_line": 64,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 105,
+          "end_line": 105,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "stopping",
+      "claim": "stopping · 중지 접수 / 취소 확정 전에는 대기 표시 / cancelled 또는 completed 경합",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 116,
+          "end_line": 116,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 76,
+          "end_line": 82,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 91,
+          "end_line": 93,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "terminal",
+      "claim": "실제 terminal 확인 / completed/failed/cancelled / interrupted·partial·error도 확인",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 82,
+          "end_line": 84,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 114,
+          "end_line": 116,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+          "line": 75,
+          "end_line": 77,
+          "classification": "미확인"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 53,
+          "end_line": 61,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "node",
+      "element_id": "answer",
+      "claim": "답변 + 실제 근거 표시 / Wiki page·revision/hash·읽은 범위 / 답변 완료 ≠ Wiki 저장·게시 완료",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 34,
+          "end_line": 35,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 63,
+          "end_line": 69,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 56,
+          "end_line": 60,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "submit",
+      "claim": "question → owner: 인증된 제출",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 29,
+          "end_line": 33,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "check_policy",
+      "claim": "owner → policy: owner 확인",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 27,
+          "end_line": 32,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "reject_scope",
+      "claim": "policy → blocked: 불허·미검증",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 27,
+          "end_line": 32,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+          "line": 43,
+          "end_line": 50,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "bind_context",
+      "claim": "policy → binding: 승인·검증 통과",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 27,
+          "end_line": 33,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+          "line": 89,
+          "end_line": 89,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "create_run",
+      "claim": "binding → post: 서버 결정값만",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 65,
+          "end_line": 74,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 133,
+          "end_line": 133,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "dedupe",
+      "claim": "post → idempotency: key + payload",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 113,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "different_body",
+      "claim": "idempotency → body_conflict: 동일 key·변경 body",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 111,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "same_body",
+      "claim": "idempotency → replayed: 동일 key·body",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 112,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "new_run",
+      "claim": "idempotency → accepted: 신규 key",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 46,
+          "end_line": 48,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 68,
+          "end_line": 72,
+          "classification": "공식계약"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "reuse_id",
+      "claim": "replayed → accepted: 기존 run_id",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 111,
+          "end_line": 112,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "subscribe_once",
+      "claim": "accepted → upstream: 구독 소유권 관리",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 49,
+          "end_line": 64,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 105,
+          "end_line": 105,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "relay_events",
+      "claim": "upstream → relay: 단일 소비",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 103,
+          "end_line": 105,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "display_events",
+      "claim": "relay → active: 분리된 진행 표시",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 58,
+          "end_line": 61,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 63,
+          "end_line": 69,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "network_lost",
+      "claim": "active → disconnected: 전송 단절",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 62,
+          "end_line": 64,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 53,
+          "end_line": 61,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "events_unavailable",
+      "claim": "upstream → disconnected: 404·연결 종료",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 105,
+          "end_line": 105,
+          "classification": "관측"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "recover_snapshot",
+      "claim": "disconnected → reconcile: 기존 run 조회",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 52,
+          "end_line": 64,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "still_running",
+      "claim": "reconcile → active: 진행 중·polling",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 62,
+          "end_line": 64,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 57,
+          "end_line": 61,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "recovered_terminal",
+      "claim": "reconcile → terminal: 최종 상태",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 53,
+          "end_line": 58,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 82,
+          "end_line": 82,
+          "classification": "공식계약"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "ask_stop",
+      "claim": "active → stop: 명시적 중지",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 76,
+          "end_line": 82,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "stop_accepted",
+      "claim": "stop → stopping: stopping 응답",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 116,
+          "end_line": 116,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 76,
+          "end_line": 79,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "stop_race",
+      "claim": "stopping → terminal: 종료·완료 경합 확인",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 116,
+          "end_line": 116,
+          "classification": "관측"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 78,
+          "end_line": 82,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "terminal_event",
+      "claim": "active → terminal: 실제 종료 이벤트",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+          "line": 82,
+          "end_line": 92,
+          "classification": "공식계약"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+          "line": 53,
+          "end_line": 61,
+          "classification": "제안"
+        }
+      ]
+    },
+    {
+      "element_type": "edge",
+      "element_id": "final_result",
+      "claim": "terminal → answer: 상태·결과 분리",
+      "references": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 34,
+          "end_line": 35,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 58,
+          "end_line": 59,
+          "classification": "제안"
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+          "line": 75,
+          "end_line": 76,
+          "classification": "미확인"
+        }
+      ]
+    }
+  ],
+  "source_manifest": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+      "sha256": "6df17f948bdff7f0c94eea0922c8fe0cabe068b1d08a3cc67e083c5c4efc3922",
+      "bytes": 10109,
+      "lines": 139
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc",
+      "bytes": 8155,
+      "lines": 103
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "bytes": 10596,
+      "lines": 97
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170",
+      "bytes": 8397,
+      "lines": 113
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b",
+      "bytes": 8542,
+      "lines": 103
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "bytes": 7922,
+      "lines": 122
+    }
+  ],
+  "verification_limits": [
+    "문서 line 범위·SHA-256·node/edge 전수 매핑 검사",
+    "Archify finalize receipt는 별도 생성",
+    "실제 서비스 구현·Gateway/모델/논문/Cron 실행 없음",
+    "perceptual visual review 미요청"
+  ]
+}

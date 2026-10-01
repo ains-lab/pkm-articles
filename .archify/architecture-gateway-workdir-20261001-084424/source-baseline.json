@@ -1,0 +1,406 @@
+{
+  "kind": "working-tree-document-snapshot",
+  "files": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/ARCHIFY.md",
+      "sha256": "5aafecb86317e185297492b510d2c2ee91636a6fc453b50f3c800320714b6a63",
+      "bytes": 3076
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/DESIGN.md",
+      "sha256": "c23815f301b1abfb72adf8b1c5b11bc91a7d74b590a247a0f72c60bfb51b4e24",
+      "bytes": 6103
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+      "sha256": "91c21d99f37f4bdcd9ed8317f35d147654491d0ace5a775d9459592abcdd26c1",
+      "bytes": 6868
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+      "sha256": "6df17f948bdff7f0c94eea0922c8fe0cabe068b1d08a3cc67e083c5c4efc3922",
+      "bytes": 10109
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc",
+      "bytes": 8155
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205",
+      "bytes": 8611
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "bytes": 10596
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170",
+      "bytes": 8397
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3",
+      "bytes": 7673
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b",
+      "bytes": 8542
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/DESIGN.md",
+      "sha256": "773b0a3cdba0d1d3448f55b7930c31db6d7c42f9488e2460b3c6b95956885e52",
+      "bytes": 6490
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/FONT-LICENSE.txt",
+      "sha256": "050f36eb4f026b35c002511b97cdf091b55c8b6fa073761641635001ab8246a9",
+      "bytes": 4995
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/OUTLINE.md",
+      "sha256": "0e9b2d44868197b17351cda374a103f0c56abc1cf9ff8f401d7e970d3e2f857d",
+      "bytes": 12056
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/build_slides.py",
+      "sha256": "a88c0bc84513c33b3151e15e63ea667d60e799055c65aaf1e05729199eb8f267",
+      "bytes": 9995
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/check_layout.js",
+      "sha256": "ab0a4b6f8b97e9a135f6c56ccca994d2adf78bab053c4478a6bff706a4629707",
+      "bytes": 2675
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/course_a.py",
+      "sha256": "490137ffde96bdc73175fa7bfa8578adf248d106b93602f964221226002b92a9",
+      "bytes": 17519
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/course_b.py",
+      "sha256": "f7710831307114ef987d65559f67f4e341c2f6aebb25a0f34980051c21dded12",
+      "bytes": 14672
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/course_c.py",
+      "sha256": "f3efb1a3dadd7cd9051faafc74cf18328ea288db3cf03f0c3191d809c8021928",
+      "bytes": 13858
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/deck.css",
+      "sha256": "1be7d841252d43abf6b68014b372380dc925a69f35f767f99855c642b041c617",
+      "bytes": 10232
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/deck.js",
+      "sha256": "74b03ddcaad6d3e2d4d0de9d152b11ce516a59275e470af531c1ce6384982c60",
+      "bytes": 6713
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/diagram_art.py",
+      "sha256": "06e7e1cc3f11273d2eeb6b4863e24a84fc5abf688a7a49bc244c10ab90c0ebe8",
+      "bytes": 13697
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/font-provenance.json",
+      "sha256": "d7dfe8c9aebba5efa8c176f2bcabbe833ccdf0c6fada4cdb8d5b00041aedff02",
+      "bytes": 627
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/lecture-korean.woff2",
+      "sha256": "44eedcad89e99793299b28e6d3d7724623ca42d3b0dfdb8f0eb4be8d6672b9c2",
+      "bytes": 98940
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/lecture-print.pdf",
+      "sha256": "1bf601ad30f0bd3195b32ca8c6c61aebf8d21b655454530535b6ab3487a7fe6a",
+      "bytes": 2525691
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/lecture.html",
+      "sha256": "c54043b56d1f7140c3f70d1334352a349d5fae3bfbbd1f001a00d0f28fbff393",
+      "bytes": 463220
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/prepare_font.py",
+      "sha256": "3da7929c08e43a4841b570ace7c744bad821783a5d4eec616382858075f3133d",
+      "bytes": 2004
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-1.jpg",
+      "sha256": "792e474966359f83eb695c18096c91b235767493502304aad600a9406bb6b01c",
+      "bytes": 208128
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-2.jpg",
+      "sha256": "20e15e3b0ffd6206087a8131ad7e898bc85c490104bcc5782714458d9653a65b",
+      "bytes": 190976
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-3.jpg",
+      "sha256": "c253338b8d43bb71c543ce38d159c826099f23b31c27e59b1da41d79ed1689b1",
+      "bytes": 198191
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-4.jpg",
+      "sha256": "9a61ad69011fc8b5f3d885ee313a7d04fc5acbb2c850d39faca48d1ba5219f2c",
+      "bytes": 206495
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-5.jpg",
+      "sha256": "280e3a83750774a5f6ca5f749dc3224ccbdd6e265d1c79efdae21f4149a0b40d",
+      "bytes": 209647
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-6.jpg",
+      "sha256": "043839379dfd2adfe77417beaaaaf9828a975c41b4163adb00da4e96a11749b8",
+      "bytes": 219393
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contact-7.jpg",
+      "sha256": "c40adc91aeae7c7bf17d0d34532b9c0cf64da8d3d273e3ba2deb4aeec0bc0a18",
+      "bytes": 73555
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/contacts.json",
+      "sha256": "009199caf9df2c19b0a3e93ab964de8198eda70d54e131c879f869fcb437a114",
+      "bytes": 1060
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/desktop-geometry-initial.json",
+      "sha256": "16befc3d0f31353009efb1e1da05aa4e414b3c5e6687402873ca9c9bf99b9695",
+      "bytes": 606
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/font-diagnostic.png",
+      "sha256": "e6e5d656e11f518f68bee675b1fe1613b269817d431edb05d14ea973766520eb",
+      "bytes": 80270
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/geometry.json",
+      "sha256": "dd37d261e38b7bd1e63e453c0ff6b25a366d1784bc1f47b7f6b82410de5b02e7",
+      "bytes": 968
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/interaction.json",
+      "sha256": "b8024fbdc1cc4b43d0f27b66c5933a80b71e878014aff9838792b016870d1f8f",
+      "bytes": 1866
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/print.json",
+      "sha256": "eba7fd90d62260055af148fd3a2a126f57d6e893214760887bc6781a193beb54",
+      "bytes": 375
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/screenshots.json",
+      "sha256": "61fc806ff81623d6df9fae96cbe76f99de11353b7599238d1534af025873ed79",
+      "bytes": 4238
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-01-1440.png",
+      "sha256": "be8d8e3fc1d44d9b823666fa78e13f95e7ca1f5d9a623cc73a3d544dd5f96dfd",
+      "bytes": 87289
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-03-1440.png",
+      "sha256": "6c48e00f2c54347c1ede19af024e3e261b2181503363fa8edc5f784f8abe0298",
+      "bytes": 97530
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-07-1440.png",
+      "sha256": "6022c0f9e47c88862ee90cd583adb2c379e2ef8fa67a7f314c33ec8641588ae9",
+      "bytes": 111858
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-09-1440.png",
+      "sha256": "fc87cfe60c49fa5bf54b1d22a721344a450a34df98faa7b5abb04c378a1ebe47",
+      "bytes": 106196
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-09-375.png",
+      "sha256": "68605dcf38ea3a3a221c807684ea4d93ea7945b6ecdcf9fb175f1cc6c18ee8a4",
+      "bytes": 39799
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-10-1440.png",
+      "sha256": "cfd877109262627511546556e6f1be468aa91172c47a5166cf00b700d8c7b467",
+      "bytes": 105928
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-11-1440.png",
+      "sha256": "555e904f23c065b45ffef4dd8120994c69e1d4aa8e98cdfba3f464456bcb5b68",
+      "bytes": 105235
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-13-1440.png",
+      "sha256": "b47e76dbcfa8a0f9fdf7c4c7de2bb4be6372060d5df5e69216b3e4a481bfad48",
+      "bytes": 69613
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-15-1440.png",
+      "sha256": "c9d5ec94eee761b8d8cc8e5aca57ee192ba5ca68f423da63c2e1f3abb8d668fb",
+      "bytes": 115718
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-17-1440.png",
+      "sha256": "c21f67a4418ce04e96489ee799b6f1e0780a160977d04c2b1393d512b2bdc868",
+      "bytes": 110963
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-17-768.png",
+      "sha256": "827bbb75536eb52e979a1fc69df094b513d9e483603fb61b807a87b828d7bdd5",
+      "bytes": 76745
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-21-1440.png",
+      "sha256": "85933079118776fcd8ac95a9f646db31fc1252578e642fd0b5e17495b8f7da3d",
+      "bytes": 99038
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-23-768.png",
+      "sha256": "15953bb38760ad801c0a5459acf50cd9466f7306b95146ca68b930902c92a961",
+      "bytes": 70006
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-25-1440.png",
+      "sha256": "3451001d1fa977b8cd777546f24acfd89e22aae88aef24375d29750494c46329",
+      "bytes": 106942
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-27-1440.png",
+      "sha256": "c337e7f1bca26a02cd9561e7a0731441e4b897e0eda2d9af80bb9f8e5b94c60b",
+      "bytes": 104896
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-36-1440.png",
+      "sha256": "4de030bf5f292bfba6a0f7e5b0d8b59540f1f334f441217ffc8dd210055fff21",
+      "bytes": 114260
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-37-1440.png",
+      "sha256": "63c50fb5e42a6fd253badfc250b2e8bd8773fad1ee321ae9e7e0344733ad1fce",
+      "bytes": 96254
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-39-1440.png",
+      "sha256": "48ddbc204aa2d356d18fb9c78122b485343a61017adbaec24f03f3b68d3849ed",
+      "bytes": 104410
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-40-1440.png",
+      "sha256": "6ad6304042eb60fd0c76eb07c38bc6740338c182ab9a2f7419544ca21b75575e",
+      "bytes": 96337
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-41-1440.png",
+      "sha256": "d54c1d040e9c907e5218bcc52ff9c488191e16b12459dbbd9177f1a098848ee6",
+      "bytes": 102715
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-43-1440.png",
+      "sha256": "e71d9a1acdc105f5e1ac04235813b6269661e846adaf251110ba887b17482d98",
+      "bytes": 94812
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-48-1440.png",
+      "sha256": "27d6b818580032af52e131eb76a229898b5e8179e507d6c967d16d3d641ec69d",
+      "bytes": 109727
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-51-1440.png",
+      "sha256": "a47f79f3d0870c30057b1060a4515d0e213d1c3a2685094b0c1b5b0c52cb801b",
+      "bytes": 89174
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-51-375.png",
+      "sha256": "69559e07b3f1bd4470a35fed03e20526b415fd11dab80e800fcf1bd09ebc42e9",
+      "bytes": 39786
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-54-375.png",
+      "sha256": "92b5eb5eeaefdd84bb9bb84004bc3e99db03e1011952a6d5c0054d38bd2194a0",
+      "bytes": 53086
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-57-1440.png",
+      "sha256": "dad40a0c59203991417be4207901717e7999d649cd9ecdb734a73ce5d4b62081",
+      "bytes": 107160
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-60-1440.png",
+      "sha256": "e6037a92540d1afca6a692a1a04ef7b3d417054b269739ce91612861cbdbbe6b",
+      "bytes": 113547
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-63-1440.png",
+      "sha256": "a01f178afbe7f78acdbaa33f6bf8eecd108c54aec460d46a13b42d1100451ff1",
+      "bytes": 100637
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-67-1440.png",
+      "sha256": "af7797e2b6bc2bae09967c67c4d3f5b97eba0b4881b23af47e1e5ac1aa20d377",
+      "bytes": 110572
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-68-1440.png",
+      "sha256": "b91bdc83a951ac251913aedf8d44f9673c350937a5626bf60e2ec95c6d1345c9",
+      "bytes": 105202
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/slide-70-1440.png",
+      "sha256": "9c99b6cd2ef6156f032ff2f2892943241086ff5d5e5722aa33f731876e71bff2",
+      "bytes": 122131
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/qa/static.json",
+      "sha256": "82f5561c6712f4ea5eaf5ed902fa1c566a054d9f2c98e142175425604f8a3b3e",
+      "bytes": 409
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/source-baseline.json",
+      "sha256": "48c8e39eeba697156def78035b4a404820879467a4a6b519d2a25bbbf3fa2e8f",
+      "bytes": 1841
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/source-map.json",
+      "sha256": "64ac81dcfab7106fd3789f48bc2b54da21988538da7cbf4a37f3f607eeaa2a82",
+      "bytes": 68046
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/verify_browser.py",
+      "sha256": "fb38bbd80c1328d43a2fde21e1310db6358c0f0afb8b1e563006371607ee5b47",
+      "bytes": 9279
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/slides/verify_static.py",
+      "sha256": "e3414f9ac3d7b6b765514e6332bae9f3876010516ae8d9c64cf186cd9c89f38b",
+      "bytes": 3631
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+      "sha256": "6bb6e39d0a90eaac7774e46e67f00744aa5d5d6834322f238ffbcae247445f89",
+      "bytes": 7039
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/verification.json",
+      "sha256": "65ab29d1c3682ad14dcd2a7c9a687058269cd8590c1ec84ccbd862ed900fde13",
+      "bytes": 37292
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "bytes": 7922
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workspace-and-gateway.md",
+      "sha256": "95fd9d22e31c436b5684084f563c407bb837e887bb4a4095c4d78e463c379b22",
+      "bytes": 8307
+    }
+  ],
+  "note": "Untracked documents are not evidence committed at Git HEAD. No meta.repository claim."
+}

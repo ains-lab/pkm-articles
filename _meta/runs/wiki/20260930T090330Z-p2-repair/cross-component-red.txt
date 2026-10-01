@@ -1,0 +1,40 @@
+test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) ... 
+  test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) (cost=None) ... ERROR
+  test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) (cost=25.0) ... ERROR
+
+======================================================================
+ERROR: test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) (cost=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py", line 101, in test_generated_result_reaches_verified_publication_and_noop
+    published = publisher.publish(f.root, f.vid, f.run, f.attempt, _now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 617, in publish
+    context = inputs(fs, vid, run, attempt)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 242, in inputs
+    require(approval.get('schema') == 'pkm-p2-resume-approval/v1' and vid in approval.get('versions', []), 'invalid approval')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: invalid approval
+
+======================================================================
+ERROR: test_generated_result_reaches_verified_publication_and_noop (__main__.CrossComponentTests.test_generated_result_reaches_verified_publication_and_noop) (cost=25.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py", line 101, in test_generated_result_reaches_verified_publication_and_noop
+    published = publisher.publish(f.root, f.vid, f.run, f.attempt, _now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 617, in publish
+    context = inputs(fs, vid, run, attempt)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 242, in inputs
+    require(approval.get('schema') == 'pkm-p2-resume-approval/v1' and vid in approval.get('versions', []), 'invalid approval')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: invalid approval
+
+----------------------------------------------------------------------
+Ran 1 test in 0.278s
+
+FAILED (errors=2)

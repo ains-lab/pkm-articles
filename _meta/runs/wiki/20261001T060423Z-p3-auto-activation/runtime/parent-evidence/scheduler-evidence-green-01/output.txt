@@ -1,0 +1,6 @@
+test_expired_semantic_dispatch_preserves_persisted_generation_references (test_scheduled_safety.ScheduledSafetyTests.test_expired_semantic_dispatch_preserves_persisted_generation_references) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.126s
+
+OK

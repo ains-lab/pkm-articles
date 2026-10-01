@@ -1,0 +1,7 @@
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ok
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.978s
+
+OK

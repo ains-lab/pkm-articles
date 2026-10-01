@@ -1,0 +1,7 @@
+test_help_is_an_import_safe_cli_not_publication (__main__.EntrypointTests.test_help_is_an_import_safe_cli_not_publication) ... ok
+test_import_does_not_read_arguments_or_publish (__main__.EntrypointTests.test_import_does_not_read_arguments_or_publish) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.040s
+
+OK

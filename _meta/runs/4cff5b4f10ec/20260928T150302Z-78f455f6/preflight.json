@@ -1,0 +1,116 @@
+{
+  "records": [
+    {
+      "source": "arxiv",
+      "version_id": "2609.30217v1",
+      "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "html_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "html_bytes": 926811,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.30266v1",
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "html_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "html_bytes": 738941,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.30830v1",
+      "title": "AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "html_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "html_bytes": 267373,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.30940v1",
+      "title": "Financial Fragility in Societies of LLM Agents: Coordination Failures and Stabilizing Mechanisms",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "html_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "html_bytes": 397917,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.31039v1",
+      "title": "MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "html_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "html_bytes": 558801,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.31318v1",
+      "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "html_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "html_bytes": 536360,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.31358v1",
+      "title": "A Safety-Bounded SDC-to-MCP Gateway for Medical AI Agents",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "html_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "html_bytes": 212956,
+      "checks_passed": true
+    },
+    {
+      "source": "arxiv",
+      "version_id": "2609.31562v1",
+      "title": "Agentic Economies for Autonomous Scientific Discovery",
+      "source_json": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json",
+      "html_file": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+      "html_sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "html_bytes": 683196,
+      "checks_passed": true
+    }
+  ],
+  "reference_paths": [],
+  "states_scanned": [
+    {
+      "path": "_meta/state/4cff5b4f10ec.json",
+      "sha256": "15df9a7779725d9932c3d1cad4fd94070c4540ed855b150d03451f888648288b",
+      "pending_ids": [],
+      "html_unavailable_ids": [
+        "2609.30614v1",
+        "2609.30824v1"
+      ],
+      "migration_captured_ids": [
+        "2609.30217v1",
+        "2609.30266v1",
+        "2609.30830v1",
+        "2609.30940v1",
+        "2609.31039v1",
+        "2609.31318v1",
+        "2609.31358v1",
+        "2609.31562v1"
+      ]
+    }
+  ],
+  "errors": [],
+  "html_unavailable_due": [],
+  "html_unavailable_not_due": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "source_json_files": 8,
+  "html_files": 8,
+  "knowledge_pages": 0,
+  "validation_scope": "local stored byte hash, size, fixed version URLs, title identity, article/body presence and complete closing tags; no semantic or figure review"
+}

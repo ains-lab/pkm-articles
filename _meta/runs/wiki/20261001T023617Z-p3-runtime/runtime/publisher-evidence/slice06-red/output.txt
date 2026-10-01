@@ -1,0 +1,78 @@
+test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) ... 
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=0) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=1) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=2) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=3) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=4) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=5) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=6) ... FAIL
+  test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=7) ... FAIL
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) (case=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 226, in test_document_rejects_frontmatter_unbound_links_or_claims
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 3.317s
+
+FAILED (failures=8)

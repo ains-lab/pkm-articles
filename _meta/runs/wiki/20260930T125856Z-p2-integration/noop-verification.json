@@ -1,0 +1,16 @@
+{
+  "transaction_id": "p2i-d3b8cf0db1b918060510445ffe3b227a",
+  "results": [
+    {
+      "repeat": 1,
+      "status": "noop",
+      "files_byte_identical": 122
+    },
+    {
+      "repeat": 2,
+      "status": "noop",
+      "files_byte_identical": 122
+    }
+  ],
+  "scope": "current integrated manifest/work keys, not superseded single-paper publication requests"
+}

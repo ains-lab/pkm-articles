@@ -1,0 +1,15 @@
+{
+  "actual_new_job_fire_observed": false,
+  "checked_at": "2026-09-30T23:52:40.333981+00:00",
+  "collector_exact_record_unchanged": true,
+  "collector_record_sha256": "309ae7a2497d2133d452c102ff82fbc2d5a1f9149328758a2d0d3a480f86c564",
+  "cron_writes_by_this_run": 0,
+  "daily_job_absent": true,
+  "job_ids": [
+    "05ec97bfa8d5",
+    "4cff5b4f10ec",
+    "c5548510672c"
+  ],
+  "job_ids_unchanged": true,
+  "review_job_absent": true
+}

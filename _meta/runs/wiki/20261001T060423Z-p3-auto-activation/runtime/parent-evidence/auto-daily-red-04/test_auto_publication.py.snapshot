@@ -1,0 +1,119 @@
+"""Staged automatic-publication contract; synthetic files/fake models only."""
+import copy
+import json
+from pathlib import Path
+import types
+import unittest
+from unittest.mock import patch
+
+import p3_common as C
+import publication
+import daily
+from test_publication import Fixture as PublicationFixture, NOW, VID
+from test_daily import Fixture as DailyFixture, APPROVAL
+from test_integration import Model
+
+AUTO = 'published_auto_verified'
+LEGACY = 'published_draft'
+
+
+def allow_auto_schema(schema):
+    """Future contract amendment in synthetic fixtures, never the live schema."""
+    item = schema['$defs']['compilation']['properties']['items']['items']
+    if AUTO not in item['properties']['status']['enum']:
+        item['properties']['status']['enum'].append(AUTO)
+    item['allOf'][0]['if']['properties']['status'] = {'enum': [LEGACY, AUTO]}
+    return schema
+
+
+class AutoPublicationFixture(PublicationFixture):
+    def __init__(self, fmt='html'):
+        super().__init__(fmt)
+        allow_auto_schema(self.ctx['schema'])
+        path = '_meta/automation-contracts.schema.json'
+        self.put(path, C.encoded(self.ctx['schema']))
+        self.ctx['snapshots'][path] = C.sha(self.fs.read(path))
+
+
+class AutoDailyFixture(DailyFixture):
+    def __init__(self):
+        super().__init__()
+        allow_auto_schema(self.schema)
+        self.put('_meta/automation-contracts.schema.json', C.encoded(self.schema))
+        self.sync()
+
+
+def bytes_at(root):
+    return {p.relative_to(root).as_posix(): p.read_bytes()
+            for p in root.rglob('*') if p.is_file()}
+
+
+class AutoPublicationTests(unittest.TestCase):
+    def test_new_html_and_pdf_publication_is_compiled_auto_verified(self):
+        for fmt in ('html', 'pdf'):
+            with self.subTest(format=fmt):
+                f = AutoPublicationFixture(fmt)
+                self.addCleanup(f.close)
+                before_log = f.fs.read('log.md')
+                result = publication.publish(f.ctx, f.bundle, now=NOW)
+                page = f.fs.read(f'entities/arxiv-{VID}.md').decode()
+                self.assertIn('status: "compiled"', page)
+                self.assertIn('review_state: "auto_verified"', page)
+                self.assertIn('last_reviewed: null', page)
+                self.assertEqual(result['status'], AUTO)
+                state = C.decode(f.fs.read(C.STATE))
+                item = state['items'][0]
+                self.assertEqual(item['status'], AUTO)
+                self.assertIsNone(item['human_review'])
+                receipt = C.decode(f.fs.read(result['receipt_ref']))
+                self.assertIsNone(receipt['human_review_ref'])
+                self.assertIsNone(f.bundle['review']['human_review_ref'])
+                self.assertEqual(receipt['output_refs'][0]['sha256'], C.sha(page.encode()))
+                self.assertEqual(receipt['evidence_check_ref'], f.prefix+'-review.json')
+                self.assertEqual(receipt['structural_check_ref'], f.prefix+'-report.json')
+                C.helper('publish').schema_validate(f.ctx['schema'], state, 'compilation')
+                for text in (f.fs.read('index.md').decode(), f.fs.read('log.md').decode()):
+                    self.assertIn('자동 검증 완료', text)
+                    self.assertNotIn('draft/unreviewed', text.lower())
+                self.assertTrue(f.fs.read('log.md').startswith(before_log))
+                self.assertIn('no human review, visual inspection or experimental reproduction claimed',
+                              f.fs.read('log.md').decode())
+                before = bytes_at(f.root)
+                self.assertEqual(publication.publish(f.ctx, f.bundle, now=NOW)['status'], 'noop')
+                self.assertEqual(bytes_at(f.root), before)
+
+
+class AutoDailyTests(unittest.TestCase):
+    def test_daily_commits_auto_verified_then_noops_without_second_model(self):
+        f = AutoDailyFixture()
+        self.addCleanup(f.close)
+        f.source(VID)
+        model = Model()
+        result = daily.run_daily(**f.kw(), client_factory=model)
+        self.assertEqual(result['status'], 'committed')
+        self.assertEqual([entry['status'] for entry in result['outcomes']], [AUTO])
+        self.assertEqual(len(model.calls), 2)
+        self.assertEqual(model.closed, 2)
+        state = C.decode(f.fs.read(C.STATE))
+        self.assertEqual(state['items'][0]['status'], AUTO)
+        preserved = {path: raw for path, raw in bytes_at(f.root).items()
+                     if path != APPROVAL}
+        next_run = '_meta/runs/wiki/synthetic-auto-next'
+        f.approval.update(run=next_run, edit_freeze={'mode': 'run', 'run': next_run})
+        f.put(APPROVAL, C.encoded(f.approval))
+        result = daily.run_daily(**dict(f.kw(), run=next_run), client_factory=model)
+        self.assertEqual(result['status'], 'noop')
+        self.assertEqual(result['selected'], [])
+        self.assertEqual(len(model.calls), 2)
+        for path, raw in preserved.items():
+            self.assertEqual(f.fs.read(path), raw, path)
+        ctx = daily.preflight(**dict(f.kw(), run=next_run))
+        wiki = daily.published_context(ctx, state['items'])
+        self.assertEqual([w['path'] for w in wiki], [f'entities/arxiv-{VID}.md'])
+        f.put(f'entities/arxiv-{VID}.md', wiki[0]['text'].encode()+b'User edit')
+        with self.assertRaisesRegex(ValueError, 'published_output_changed'):
+            daily.published_context(ctx, state['items'])
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

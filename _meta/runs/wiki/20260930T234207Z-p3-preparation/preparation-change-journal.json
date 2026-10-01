@@ -1,0 +1,80 @@
+{
+  "applied_paths": [
+    "_meta/P3-PREPARATION.md",
+    "_meta/AUTOMATION.md",
+    "_meta/COMPILATION.md",
+    "_meta/automation.json",
+    "index.md",
+    "log.md",
+    "_meta/state/compilation.json"
+  ],
+  "approval_ref": "_meta/runs/wiki/20260930T234207Z-p3-preparation/approval.json",
+  "approval_sha256": "29349524d3303a4b8d3cbc3b19efba0c323243c76cd3504f2ff537a6dc819a71",
+  "committed_at": "2026-09-30T23:51:09.218580+00:00",
+  "knowledge_publication": false,
+  "log_event_id": "P3-PREP-20260930T234207Z-p3-preparation",
+  "preflight_sha256": "159f86c20c65e5df90a119feed6a71ce0bb9a2cae4e0dc69af3b5f861d97cda3",
+  "recovery": "Operator-reviewed old/new/unexpected classification; no historical publisher replay, source rollback, log truncation or stale index restore.",
+  "run_id": "20260930T234207Z-p3-preparation",
+  "schema": "pkm-preparation-change-journal/v1",
+  "status": "committed",
+  "targets": [
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/_meta/P3-PREPARATION.md",
+      "after_sha256": "68cc4dbc734279db09cfa6ed258b044262e7c5f8449edf8e58f6c1c8ee2d835c",
+      "before_image": null,
+      "before_sha256": null,
+      "mode": "create",
+      "path": "_meta/P3-PREPARATION.md"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/_meta/AUTOMATION.md",
+      "after_sha256": "ff73b6ec1e2e374f859c14e7a8ce417b046443b89cf8db215af99858489fc748",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/_meta/AUTOMATION.md",
+      "before_sha256": "50938ddef8fe8e16ad4ed7b61839afcd64163bb2eaa9043de6ee8884eaeaeea2",
+      "mode": "replace",
+      "path": "_meta/AUTOMATION.md"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/_meta/COMPILATION.md",
+      "after_sha256": "08e48d45829aef02ec7a971c56f7ba64fc7f698a227b9affe8419285b395fcf2",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/_meta/COMPILATION.md",
+      "before_sha256": "3e35f7e70b5581ba9c46bdeb0cb976c1d877404f08ceeba291e44e5a1a5b04d5",
+      "mode": "replace",
+      "path": "_meta/COMPILATION.md"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/_meta/automation.json",
+      "after_sha256": "5ad8cb25e09dd6811b7f0c9a863bfd66ae42d4f41cd9caa77ea65707d6dda673",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/_meta/automation.json",
+      "before_sha256": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5",
+      "mode": "replace",
+      "path": "_meta/automation.json"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/index.md",
+      "after_sha256": "bb84c459d2e7fa3a84a79a5169a975a291831282934c7dc81c1786dc79da0b01",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/index.md",
+      "before_sha256": "d329d830f493fbbcbd1544001fda3124a9ad5c5329f50f395702178110ea661c",
+      "mode": "replace",
+      "path": "index.md"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/log.md",
+      "after_sha256": "35107c22d9f28f0b235eff986df834f4d0599aa0f7e240b558313c6ae8337ccd",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/log.md",
+      "before_sha256": "5d1473aca1c25d6ff7451de047969a98b658b5bb90461b7be5a921a44d9367b1",
+      "mode": "append",
+      "path": "log.md"
+    },
+    {
+      "after_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/prepared/_meta/state/compilation.json",
+      "after_sha256": "2782af6b7ec10c8587247f71aa4c537a7e5d985fa64db8aa10629a3eb035395d",
+      "before_image": "_meta/runs/wiki/20260930T234207Z-p3-preparation/before/_meta/state/compilation.json",
+      "before_sha256": "60e3cf7b1b382b553bec240b6365325ab46a2c86f67b7637fae6843b3815eb16",
+      "mode": "replace",
+      "path": "_meta/state/compilation.json"
+    }
+  ],
+  "transaction_id": "p3-prep-20260930T234207Z-p3-preparation"
+}

@@ -1,0 +1,10 @@
+test_expired_processor_error_has_durable_unknown_not_orphan_reading (test_scheduled_safety.ScheduledSafetyTests.test_expired_processor_error_has_durable_unknown_not_orphan_reading) ... ok
+test_known_unknown_outcome_survives_busy_and_reconciles_without_replay (test_contention.ContentionTests.test_known_unknown_outcome_survives_busy_and_reconciles_without_replay) ... ok
+test_reconciliation_cli_dispatches_without_regeneration (test_contention.ContentionTests.test_reconciliation_cli_dispatches_without_regeneration) ... ok
+test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once (test_contention.ContentionTests.test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once) ... ok
+test_reservation_busy_is_reported_without_model_or_reading_state (test_contention.ContentionTests.test_reservation_busy_is_reported_without_model_or_reading_state) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.502s
+
+OK

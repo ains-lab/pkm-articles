@@ -1,0 +1,6 @@
+test_new_html_and_pdf_publication_is_compiled_auto_verified (test_auto_publication.AutoPublicationTests.test_new_html_and_pdf_publication_is_compiled_auto_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.414s
+
+OK

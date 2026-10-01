@@ -1,0 +1,10 @@
+{
+  "schema": "pkm-p3-registration-check/v1",
+  "status": "failed_prompt_normalization_check",
+  "command_exit": 0,
+  "job_enabled": false,
+  "job_state": "paused",
+  "next_run_at": null,
+  "reason": "Hermes create strips prompt but CLI edit preserves terminal newline; explicitly strip input on update. No job fired.",
+  "observed_prompt_sha256": "6a01fe5fc3a81bd4c2616c04125c7007291921f8ea33e903eff694cda4877164"
+}

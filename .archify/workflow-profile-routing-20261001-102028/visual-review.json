@@ -1,0 +1,24 @@
+{
+  "kind": "sampled-perceptual-review",
+  "status": "reviewed_with_limitations",
+  "samples": [
+    {
+      "artifact": "03-api-sequence/diagram.html",
+      "screenshot": "03-api-sequence/label-review/visual-check/diagram.visual-check.2048x1320.light.png",
+      "viewport": [2048, 1320],
+      "theme": "light",
+      "observed": ["Visible profile-to-terminal.cwd mapping", "Visible cwd interpretation and path-checked Wiki read", "202 acceptance, SSE, GET R and final app answer are visible", "No blocking node overlap or core sequence clipping in the captured region"],
+      "limitations": ["Small pale supporting text needs zoom", "Below-fold explanatory cards not fully reviewed"]
+    },
+    {
+      "artifact": "02-profile-map/diagram.html",
+      "screenshot": "02-profile-map/review-3/visual-check/diagram.visual-check.1440x900.light.png",
+      "viewport": [1440, 900],
+      "theme": "light",
+      "observed": ["App-to-BFF authorization mapping and both profile-to-cwd branches are visible", "No blocking clipping or label overlap observed"],
+      "limitations": ["App-to-BFF and branch connectors use long detours", "Small API paths, cwd values, branch labels and legend need zoom"]
+    }
+  ],
+  "not_claimed": ["live integration test", "mobile visual pass", "accessibility pass", "all themes/cards/exports inspected", "deployment"],
+  "superseded_review": "Sequence width-review capture lacked visible cwd processing labels; the final label-review capture includes them."
+}

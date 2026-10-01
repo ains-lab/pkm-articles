@@ -1,0 +1,15 @@
+{
+  "schema": "pkm-p2-attempt/v3-nonstream",
+  "started_at": "2026-09-30T08:17:24.002483+00:00",
+  "vid": "2609.31358v1",
+  "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+  "source_bytes": 212956,
+  "sent_text_chars": 210338,
+  "transport": "http-nonstream",
+  "http_timeout_s": 5400,
+  "route_base_url": "http://10.10.1.244:2455/v1",
+  "api_mode": "codex_responses",
+  "model": "gpt-6-astra",
+  "prior_run_ref": "_meta/runs/wiki/20260929T083140Z-p2-resume/run-report.json",
+  "bypass_evidence": "_meta/runs/wiki/20260929T083140Z-p2-resume/probe-nonstream.json"
+}

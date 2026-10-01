@@ -1,0 +1,45 @@
+"""Outcome durability under collection contention; never real model/state IO."""
+from contextlib import ExitStack
+import unittest
+from typing import Any
+import daily
+import p3_common as C
+from test_daily import Fixture, RUN, NOW
+
+class ContentionTests(unittest.TestCase):
+    def setUp(self):
+        self.f=Fixture();self.addCleanup(self.f.close)
+        self.f.source('2610.00001v1')
+    def test_reservation_busy_is_reported_without_model_or_reading_state(self):
+        P=C.helper('publish');kw: Any=self.f.kw()
+        with P.collection_lock(self.f.fs,'synthetic-collector','busy',NOW) as owns:
+            self.assertTrue(owns)
+            result=daily.run_daily(**kw,processor=lambda *a,**k:self.fail('must not invoke'))
+            self.assertEqual(result['status'],'skipped_busy')
+            self.assertEqual(C.decode(self.f.fs.read(C.STATE))['items'],[])
+            self.assertFalse(list(self.f.root.glob('**/*-reservation.json')))
+            owns()
+
+    def test_known_unknown_outcome_survives_busy_and_reconciles_without_replay(self):
+        kw: Any=self.f.kw();locks=ExitStack();self.addCleanup(locks.close);calls=[]
+        def processor(ctx,**kwargs):
+            calls.append(1)
+            locks.enter_context(C.helper('publish').collection_lock(ctx['fs'],'synthetic-collector','busy',NOW))
+            return dict(status='unknown')
+        result=daily.run_daily(**kw,processor=processor)
+        self.assertEqual(result['status'],'unknown')
+        self.assertEqual(result['state_reconciliation'],'pending')
+        prefix=RUN+'/items/2610.00001v1/attempt1'
+        self.assertEqual(C.decode(self.f.fs.read(prefix+'-outcome.json'))['status'],'unknown')
+        self.assertEqual(C.decode(self.f.fs.read(C.STATE))['items'][0]['status'],'reading')
+        locks.close()
+        result=daily.reconcile_outcomes(**kw)
+        self.assertEqual(result['status'],'reconciled')
+        state=self.f.fs.read(C.STATE)
+        self.assertEqual(C.decode(state)['items'][0]['status'],'blocked_conflict')
+        self.assertEqual(len(C.decode(state)['cost_events']),1)
+        self.assertEqual(daily.reconcile_outcomes(**kw)['status'],'noop')
+        self.assertEqual(self.f.fs.read(C.STATE),state)
+        self.assertEqual(calls,[1])
+
+if __name__=='__main__':unittest.main(verbosity=2)

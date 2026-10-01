@@ -1,0 +1,581 @@
+test_help_is_an_import_safe_cli_not_publication (test_publish.EntrypointTests.test_help_is_an_import_safe_cli_not_publication) ... ok
+test_import_does_not_read_arguments_or_publish (test_publish.EntrypointTests.test_import_does_not_read_arguments_or_publish) ... ok
+test_cost_events_record_observed_and_unknown_without_caps (test_publish.PublicationTests.test_cost_events_record_observed_and_unknown_without_caps) ... ERROR
+test_directory_lock_busy_never_stolen (test_publish.PublicationTests.test_directory_lock_busy_never_stolen) ... ERROR
+test_existing_reviewed_page_never_overwritten (test_publish.PublicationTests.test_existing_reviewed_page_never_overwritten) ... ok
+test_failure_after_index_resumes (test_publish.PublicationTests.test_failure_after_index_resumes) ... ERROR
+test_failure_after_log_resumes_without_duplicate_event (test_publish.PublicationTests.test_failure_after_log_resumes_without_duplicate_event) ... ERROR
+test_failure_after_page_resumes (test_publish.PublicationTests.test_failure_after_page_resumes) ... ERROR
+test_failure_after_receipt_resumes (test_publish.PublicationTests.test_failure_after_receipt_resumes) ... ERROR
+test_failure_after_state_resumes (test_publish.PublicationTests.test_failure_after_state_resumes) ... ERROR
+test_foreign_owner_is_not_cleaned_up_on_failure (test_publish.PublicationTests.test_foreign_owner_is_not_cleaned_up_on_failure) ... ERROR
+test_foreign_owner_mid_publication_stops_future_writes (test_publish.PublicationTests.test_foreign_owner_mid_publication_stops_future_writes) ... FAIL
+test_foreign_receipt_or_structural_output_fails_before_journal (test_publish.PublicationTests.test_foreign_receipt_or_structural_output_fails_before_journal) ... ok
+test_happy_path_schema_actual_count_yaml_and_verifier_under_lock (test_publish.PublicationTests.test_happy_path_schema_actual_count_yaml_and_verifier_under_lock) ... ERROR
+test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) ... 
+  test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities') ... ERROR
+  test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities — 논문별 요약·분석·모델·도구') ... ERROR
+  test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities — 논문별 요약·분석 / 모델·도구') ... ERROR
+test_invalid_request_field_type_cli_returns_failure_not_traceback (test_publish.PublicationTests.test_invalid_request_field_type_cli_returns_failure_not_traceback) ... ok
+test_invalid_response_and_policy_fail_before_any_write (test_publish.PublicationTests.test_invalid_response_and_policy_fail_before_any_write) ... ok
+test_journal_bytes_hashes_order_receipt_before_state (test_publish.PublicationTests.test_journal_bytes_hashes_order_receipt_before_state) ... ERROR
+test_malformed_request_cli_returns_failure_not_traceback (test_publish.PublicationTests.test_malformed_request_cli_returns_failure_not_traceback) ... ok
+test_missing_or_tampered_committed_output_is_not_noop (test_publish.PublicationTests.test_missing_or_tampered_committed_output_is_not_noop) ... ERROR
+test_no_reuse_of_repair_approval_as_live_publication_permission (test_publish.PublicationTests.test_no_reuse_of_repair_approval_as_live_publication_permission) ... ok
+test_noop_first_page_after_second_commit_retains_both (test_publish.PublicationTests.test_noop_first_page_after_second_commit_retains_both) ... ERROR
+test_other_unresolved_journal_blocks_new_publication (test_publish.PublicationTests.test_other_unresolved_journal_blocks_new_publication) ... ERROR
+test_positive_cost_is_not_a_gate (test_publish.PublicationTests.test_positive_cost_is_not_a_gate) ... ERROR
+test_priority_rechecked_immediately_before_lock (test_publish.PublicationTests.test_priority_rechecked_immediately_before_lock) ... ERROR
+test_priority_window_is_half_open (test_publish.PublicationTests.test_priority_window_is_half_open) ... 
+  test_priority_window_is_half_open (test_publish.PublicationTests.test_priority_window_is_half_open) (kst=(23, 54)) ... ERROR
+  test_priority_window_is_half_open (test_publish.PublicationTests.test_priority_window_is_half_open) (kst=(1, 35)) ... ERROR
+test_real_sibling_verifier_happy_and_incomplete_integration (test_publish.PublicationTests.test_real_sibling_verifier_happy_and_incomplete_integration) ... ERROR
+test_recovery_foreign_output_state_and_policy_edits_conflict (test_publish.PublicationTests.test_recovery_foreign_output_state_and_policy_edits_conflict) ... ERROR
+test_recovery_retains_unrelated_index_and_log_updates (test_publish.PublicationTests.test_recovery_retains_unrelated_index_and_log_updates) ... ERROR
+test_repeat_is_verified_noop_without_any_file_write (test_publish.PublicationTests.test_repeat_is_verified_noop_without_any_file_write) ... ERROR
+test_root_ancestor_swap_does_not_follow_symlink (test_publish.PublicationTests.test_root_ancestor_swap_does_not_follow_symlink) ... ok
+test_semantic_claim_review_and_request_are_required_not_a_boolean (test_publish.PublicationTests.test_semantic_claim_review_and_request_are_required_not_a_boolean) ... ok
+test_snapshot_conflict_after_preflight_preserves_state_edit (test_publish.PublicationTests.test_snapshot_conflict_after_preflight_preserves_state_edit) ... FAIL
+test_source_symlink_rejected_without_writes (test_publish.PublicationTests.test_source_symlink_rejected_without_writes) ... ok
+test_two_pages_sequentially_insert_without_losing_other_sections (test_publish.PublicationTests.test_two_pages_sequentially_insert_without_losing_other_sections) ... ERROR
+
+======================================================================
+ERROR: test_cost_events_record_observed_and_unknown_without_caps (test_publish.PublicationTests.test_cost_events_record_observed_and_unknown_without_caps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 522, in test_cost_events_record_observed_and_unknown_without_caps
+    self.publish()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_directory_lock_busy_never_stolen (test_publish.PublicationTests.test_directory_lock_busy_never_stolen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 293, in test_directory_lock_busy_never_stolen
+    self.assertEqual(self.publish()['status'], 'skipped_busy')
+                     ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_failure_after_index_resumes (test_publish.PublicationTests.test_failure_after_index_resumes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 434, in test_failure_after_index_resumes
+    self.interrupt('after_index')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_failure_after_log_resumes_without_duplicate_event (test_publish.PublicationTests.test_failure_after_log_resumes_without_duplicate_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 438, in test_failure_after_log_resumes_without_duplicate_event
+    self.interrupt('after_log')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_failure_after_page_resumes (test_publish.PublicationTests.test_failure_after_page_resumes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 430, in test_failure_after_page_resumes
+    self.interrupt('after_page')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_failure_after_receipt_resumes (test_publish.PublicationTests.test_failure_after_receipt_resumes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 442, in test_failure_after_receipt_resumes
+    self.interrupt('after_receipt')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_failure_after_state_resumes (test_publish.PublicationTests.test_failure_after_state_resumes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 446, in test_failure_after_state_resumes
+    self.interrupt('after_state')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_foreign_owner_is_not_cleaned_up_on_failure (test_publish.PublicationTests.test_foreign_owner_is_not_cleaned_up_on_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 303, in test_foreign_owner_is_not_cleaned_up_on_failure
+    self.publish(_hook=hook)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_happy_path_schema_actual_count_yaml_and_verifier_under_lock (test_publish.PublicationTests.test_happy_path_schema_actual_count_yaml_and_verifier_under_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 235, in test_happy_path_schema_actual_count_yaml_and_verifier_under_lock
+    result = self.publish()
+             ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 341, in test_index_heading_variants_and_ambiguity
+    self.publish(_hook=stop)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities — 논문별 요약·분석·모델·도구')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 341, in test_index_heading_variants_and_ambiguity
+    self.publish(_hook=stop)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_index_heading_variants_and_ambiguity (test_publish.PublicationTests.test_index_heading_variants_and_ambiguity) (heading='## Entities — 논문별 요약·분석 / 모델·도구')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 341, in test_index_heading_variants_and_ambiguity
+    self.publish(_hook=stop)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_journal_bytes_hashes_order_receipt_before_state (test_publish.PublicationTests.test_journal_bytes_hashes_order_receipt_before_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 579, in test_journal_bytes_hashes_order_receipt_before_state
+    self.publish(_hook=observe)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_missing_or_tampered_committed_output_is_not_noop (test_publish.PublicationTests.test_missing_or_tampered_committed_output_is_not_noop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 275, in test_missing_or_tampered_committed_output_is_not_noop
+    self.publish()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_noop_first_page_after_second_commit_retains_both (test_publish.PublicationTests.test_noop_first_page_after_second_commit_retains_both)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 538, in test_noop_first_page_after_second_commit_retains_both
+    self.publish()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_other_unresolved_journal_blocks_new_publication (test_publish.PublicationTests.test_other_unresolved_journal_blocks_new_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 478, in test_other_unresolved_journal_blocks_new_publication
+    self.interrupt('after_page')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_positive_cost_is_not_a_gate (test_publish.PublicationTests.test_positive_cost_is_not_a_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 351, in test_positive_cost_is_not_a_gate
+    self.assertEqual(self.publish()['status'], 'published_draft')
+                     ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_priority_rechecked_immediately_before_lock (test_publish.PublicationTests.test_priority_rechecked_immediately_before_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 604, in test_priority_rechecked_immediately_before_lock
+    result = self.p.publish(self.f.root, VID, RUN, self.f.attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_priority_window_is_half_open (test_publish.PublicationTests.test_priority_window_is_half_open) (kst=(23, 54))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 319, in test_priority_window_is_half_open
+    self.p.publish(self.f.root, VID, RUN, self.f.attempt, _now=when, _hook=stop)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_priority_window_is_half_open (test_publish.PublicationTests.test_priority_window_is_half_open) (kst=(1, 35))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 319, in test_priority_window_is_half_open
+    self.p.publish(self.f.root, VID, RUN, self.f.attempt, _now=when, _hook=stop)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_real_sibling_verifier_happy_and_incomplete_integration (test_publish.PublicationTests.test_real_sibling_verifier_happy_and_incomplete_integration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 497, in test_real_sibling_verifier_happy_and_incomplete_integration
+    self.assertEqual(self.publish()['status'], 'published_draft')
+                     ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_recovery_foreign_output_state_and_policy_edits_conflict (test_publish.PublicationTests.test_recovery_foreign_output_state_and_policy_edits_conflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 466, in test_recovery_foreign_output_state_and_policy_edits_conflict
+    self.interrupt('after_page')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_recovery_retains_unrelated_index_and_log_updates (test_publish.PublicationTests.test_recovery_retains_unrelated_index_and_log_updates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 456, in test_recovery_retains_unrelated_index_and_log_updates
+    self.interrupt('after_page')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 426, in interrupt
+    self.publish(_hook=fail)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_repeat_is_verified_noop_without_any_file_write (test_publish.PublicationTests.test_repeat_is_verified_noop_without_any_file_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 268, in test_repeat_is_verified_noop_without_any_file_write
+    self.publish()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+ERROR: test_two_pages_sequentially_insert_without_losing_other_sections (test_publish.PublicationTests.test_two_pages_sequentially_insert_without_losing_other_sections)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 323, in test_two_pages_sequentially_insert_without_losing_other_sections
+    self.publish()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 232, in publish
+    return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 625, in publish
+    plan = new_plan(fs, context, vid, run, now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 410, in new_plan
+    schema_validate(context['schema'], state, 'compilation')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 202, in schema_validate
+    require(not errors, 'schema ' + definition + ': ' + '; '.join(e.message for e in errors)[:800])
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 26, in require
+    raise ValueError(message)
+ValueError: schema compilation: None is not of type 'number'
+
+======================================================================
+FAIL: test_foreign_owner_mid_publication_stops_future_writes (test_publish.PublicationTests.test_foreign_owner_mid_publication_stops_future_writes)
+----------------------------------------------------------------------
+ValueError: schema compilation: None is not of type 'number'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 516, in test_foreign_owner_mid_publication_stops_future_writes
+    with self.assertRaisesRegex(ValueError, 'lock|owner'):
+AssertionError: "lock|owner" does not match "schema compilation: None is not of type 'number'"
+
+======================================================================
+FAIL: test_snapshot_conflict_after_preflight_preserves_state_edit (test_publish.PublicationTests.test_snapshot_conflict_after_preflight_preserves_state_edit)
+----------------------------------------------------------------------
+ValueError: schema compilation: None is not of type 'number'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 416, in test_snapshot_conflict_after_preflight_preserves_state_edit
+    with self.assertRaisesRegex(ValueError, 'state'):
+AssertionError: "state" does not match "schema compilation: None is not of type 'number'"
+
+----------------------------------------------------------------------
+Ran 35 tests in 5.197s
+
+FAILED (failures=2, errors=25)

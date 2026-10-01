@@ -1,0 +1,42 @@
+test_help_is_an_import_safe_cli_not_publication (__main__.EntrypointTests.test_help_is_an_import_safe_cli_not_publication) ... FAIL
+test_import_does_not_read_arguments_or_publish (__main__.EntrypointTests.test_import_does_not_read_arguments_or_publish) ... FAIL
+
+======================================================================
+FAIL: test_help_is_an_import_safe_cli_not_publication (__main__.EntrypointTests.test_help_is_an_import_safe_cli_not_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 34, in test_help_is_an_import_safe_cli_not_publication
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 14, in <module>
+    res = json.loads((RUN / VID / "attempt-result.json").read_text())
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp2a48plgk/_meta/runs/wiki/20260929T083140Z-p2-resume/--help/attempt-result.json'
+
+
+======================================================================
+FAIL: test_import_does_not_read_arguments_or_publish (__main__.EntrypointTests.test_import_does_not_read_arguments_or_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 48, in test_import_does_not_read_arguments_or_publish
+    self.assertEqual(p.returncode, 0, p.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 7, in <module>
+    VID = sys.argv[1]
+          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.042s
+
+FAILED (failures=2)

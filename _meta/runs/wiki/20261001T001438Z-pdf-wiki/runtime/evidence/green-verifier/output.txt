@@ -1,0 +1,9 @@
+test_01_preflight_requires_bound_scope_before_body (pdf_tests.Tests.test_01_preflight_requires_bound_scope_before_body) ... ok
+test_02_embedded_pages_ephemeral_and_blank_unread (pdf_tests.Tests.test_02_embedded_pages_ephemeral_and_blank_unread) ... ok
+test_03_compile_reserves_before_fake_client_and_never_sends_pdf (pdf_tests.Tests.test_03_compile_reserves_before_fake_client_and_never_sends_pdf) ... ok
+test_04_verify_exact_page_quote_and_return_without_writes (pdf_tests.Tests.test_04_verify_exact_page_quote_and_return_without_writes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.134s
+
+OK

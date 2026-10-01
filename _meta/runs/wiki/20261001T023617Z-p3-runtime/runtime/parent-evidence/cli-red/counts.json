@@ -1,0 +1,26 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T03:06:50.708959+00:00",
+  "label": "cli-red",
+  "modules": [
+    "test_integration.IntegrationTests.test_cli_reports_real_disabled_gate_without_creating_live_run"
+  ],
+  "tests_run": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "674022426e6f450baec4e665f0c48daf479ed5bf06b3c2e82d0a0f2f0339513c",
+    "content.py": "4f298503aa6acf3e58a3db01c7ccf25b67ffb1b12243edd4dfdf6e40356d20f5",
+    "publication.py": "c660378062b7ad6fad28772c1a5d2bd6aba78bdd1314dd579ea11d11d5b68435",
+    "run_checks.py": "c1e6f6bd5be51341e12ad5b848c45fdc12d80f4afd063e0ab70d8a54769a5a70"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

@@ -1,0 +1,14 @@
+{
+  "requested_url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22AI+agent%22+OR+all%3A%22autonomous+agent%22+OR+all%3A%22LLM+agent%22+OR+all%3A%22intelligent+agent%22%29+AND+%28all%3Asecurity+OR+all%3Asafety+OR+all%3Avulnerability+OR+all%3Aattack+OR+all%3Adefense+OR+all%3Arobustness+OR+all%3Aadversarial%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=100",
+  "browser_url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22AI+agent%22+OR+all%3A%22autonomous+agent%22+OR+all%3A%22LLM+agent%22+OR+all%3A%22intelligent+agent%22%29+AND+%28all%3Asecurity+OR+all%3Asafety+OR+all%3Avulnerability+OR+all%3Aattack+OR+all%3Adefense+OR+all%3Arobustness+OR+all%3Aadversarial%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=100",
+  "captured_at": "2026-09-28T15:04:29.395Z",
+  "browser_navigation_response_status": 200,
+  "browser_document_content_type": "text/plain",
+  "capture_method": "DOM pre.textContent via browser accessibility StaticText; exact UTF-8 hash cross-checked with live browser crypto.subtle",
+  "raw_http_bytes": false,
+  "body_sha256": "b5aa2523a7b1c0915757fd2b31daab090e1e9367993d76897c714e186f934f32",
+  "body_bytes": 263335,
+  "body_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.dom-text.xml",
+  "recovered_http_status": 406,
+  "browser_snapshot_source": "/home/ainsdev/.hermes/cache/web/browser-snapshot-5a7b90aa33.txt"
+}

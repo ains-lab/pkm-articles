@@ -1,0 +1,792 @@
+{
+  "schema": "render_capture_manifest/v1",
+  "observed_at": "2026-10-01T04:08:09.339642+00:00",
+  "repository": "/home/ainsdev/wiki/pkm-articles",
+  "revision_basis": "per-file SHA-256 for uncommitted artifacts",
+  "captures": [
+    {
+      "surface": "index",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-1440-default.png",
+        "sha256": "ae8930cb2ac91b5bf0ee7145d980fd9c6c288dc39927df5c573c479edb991444"
+      }
+    },
+    {
+      "surface": "index",
+      "state": "details",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-1440-details.png",
+        "sha256": "cbcba9bfd3bcab6bf49c132679f66451d4a4f6316e901e18124c87c6653ca590"
+      }
+    },
+    {
+      "surface": "index",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-1440-bottom.png",
+        "sha256": "cbcba9bfd3bcab6bf49c132679f66451d4a4f6316e901e18124c87c6653ca590"
+      }
+    },
+    {
+      "surface": "index",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-375-default.png",
+        "sha256": "73edf57317aaf8e8b78d94d1ac96f92c4600813c4e18ba827b37a4385324c1f1"
+      }
+    },
+    {
+      "surface": "index",
+      "state": "details",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-375-details.png",
+        "sha256": "f89eb95555c6c485591f6b084e86b7c592d73e74c9703ef9966b8f49122b2784"
+      }
+    },
+    {
+      "surface": "index",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/index.html",
+        "sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463"
+      },
+      "capture": {
+        "path": "index-375-bottom.png",
+        "sha256": "f89eb95555c6c485591f6b084e86b7c592d73e74c9703ef9966b8f49122b2784"
+      }
+    },
+    {
+      "surface": "01-system",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+        "sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0"
+      },
+      "capture": {
+        "path": "01-system-1440-default.png",
+        "sha256": "21ef8ab7e16d36c86b90ee2648f1e3a05878d713570a7c67b768aef7ad18d094"
+      }
+    },
+    {
+      "surface": "01-system",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+        "sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0"
+      },
+      "capture": {
+        "path": "01-system-1440-bottom.png",
+        "sha256": "c72c9d0447dc4441ff1b004f55243fc0422f672aa5cac7feae76a3429bff7661"
+      }
+    },
+    {
+      "surface": "01-system",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+        "sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0"
+      },
+      "capture": {
+        "path": "01-system-375-default.png",
+        "sha256": "ec72d6d52a821492a5c2b7783ec4a3d4bf67b53ac56d2a70926b0dba495f4af5"
+      }
+    },
+    {
+      "surface": "01-system",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+        "sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0"
+      },
+      "capture": {
+        "path": "01-system-375-finder.png",
+        "sha256": "a6cdc7c2d4ee9bf3395a56f49cc90a23e3fe8121118e69100155d218c4ddcd2f"
+      }
+    },
+    {
+      "surface": "01-system",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html",
+        "sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0"
+      },
+      "capture": {
+        "path": "01-system-375-bottom.png",
+        "sha256": "9ee247a73162934c2993b314eb24d813455001014284bc83da063eaa9f5a770e"
+      }
+    },
+    {
+      "surface": "02-workspace",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+        "sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287"
+      },
+      "capture": {
+        "path": "02-workspace-1440-default.png",
+        "sha256": "cf107634f63cf7f4c08bae7866774061d33a8a7ced17897c81f0bc3e9e1757b3"
+      }
+    },
+    {
+      "surface": "02-workspace",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+        "sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287"
+      },
+      "capture": {
+        "path": "02-workspace-1440-bottom.png",
+        "sha256": "b00cd96633dd956fb93f8370f72559b8e4d59f4b4f969cbebc367f7f54f21604"
+      }
+    },
+    {
+      "surface": "02-workspace",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+        "sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287"
+      },
+      "capture": {
+        "path": "02-workspace-375-default.png",
+        "sha256": "d4fa41bb9d95ab3324afe86540eb2c92d20c9b0d28c97040f43b8300b132e89c"
+      }
+    },
+    {
+      "surface": "02-workspace",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+        "sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287"
+      },
+      "capture": {
+        "path": "02-workspace-375-finder.png",
+        "sha256": "323be59eb7bfdf3015550c356512cdf22111bd3eaa4be59f86f8bf794e67946d"
+      }
+    },
+    {
+      "surface": "02-workspace",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html",
+        "sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287"
+      },
+      "capture": {
+        "path": "02-workspace-375-bottom.png",
+        "sha256": "296ea25d4d48132d0d29db66d70655c5e6642fa7e6494c2799c2638813f1ecd1"
+      }
+    },
+    {
+      "surface": "03-read",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a"
+      },
+      "capture": {
+        "path": "03-read-1440-default.png",
+        "sha256": "df4a4f0a8372ac15b7e5a9fb34da2c212309ff0c0e17c2ec14a52f5ebd5b6602"
+      }
+    },
+    {
+      "surface": "03-read",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a"
+      },
+      "capture": {
+        "path": "03-read-1440-bottom.png",
+        "sha256": "8b5576aed2a46867ce8ebcec8a31b3f0a9c889bd6bb2a4f2e79a3904e3f8b601"
+      }
+    },
+    {
+      "surface": "03-read",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a"
+      },
+      "capture": {
+        "path": "03-read-375-default.png",
+        "sha256": "578cb33fd26978f70c592dbe09f436e57f5d07d8ed3ec7c65a9baa050174e777"
+      }
+    },
+    {
+      "surface": "03-read",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a"
+      },
+      "capture": {
+        "path": "03-read-375-finder.png",
+        "sha256": "bb4b69a913d4f2454c9730d04fa4914ace339ee1fbee0d0ce6a06823c0a644d0"
+      }
+    },
+    {
+      "surface": "03-read",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html",
+        "sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a"
+      },
+      "capture": {
+        "path": "03-read-375-bottom.png",
+        "sha256": "8ad0b8c6aee79d9585c9d725abcd82586bd833609ca9371e02b69896425ef5f7"
+      }
+    },
+    {
+      "surface": "04-query",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4"
+      },
+      "capture": {
+        "path": "04-query-1440-default.png",
+        "sha256": "b86d8d6798b79b54849db3e416c6baff08bfb3fffd2223d0d31be41968970c7c"
+      }
+    },
+    {
+      "surface": "04-query",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4"
+      },
+      "capture": {
+        "path": "04-query-1440-bottom.png",
+        "sha256": "8acea4a5c8c9023087bf62efd21440a3c3b7c761bf750f1d1667c291bbc256c1"
+      }
+    },
+    {
+      "surface": "04-query",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4"
+      },
+      "capture": {
+        "path": "04-query-375-default.png",
+        "sha256": "08bc6e34b26070b3f9bf7526b22e95b12ab99a0cc95922515bc8a8089594daac"
+      }
+    },
+    {
+      "surface": "04-query",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4"
+      },
+      "capture": {
+        "path": "04-query-375-finder.png",
+        "sha256": "3dac7c45d7d9ef3c2ef15eaba2352002661ad23ce5f21d60acdfac3c62217f32"
+      }
+    },
+    {
+      "surface": "04-query",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html",
+        "sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4"
+      },
+      "capture": {
+        "path": "04-query-375-bottom.png",
+        "sha256": "e64c79c786d874fe428d40f1e1bc9f860d746ae598cbcd4d74be2dfb7a74f129"
+      }
+    },
+    {
+      "surface": "05-collection",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa"
+      },
+      "capture": {
+        "path": "05-collection-1440-default.png",
+        "sha256": "5e5807901f3138ec01cb50ac0c886eccbbdaca1bd1a701ddefa14cd6706ada6f"
+      }
+    },
+    {
+      "surface": "05-collection",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa"
+      },
+      "capture": {
+        "path": "05-collection-1440-bottom.png",
+        "sha256": "f2932f035b63709396df97b9b15fc96d02f9fa78534b79ab93c86af022cba516"
+      }
+    },
+    {
+      "surface": "05-collection",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa"
+      },
+      "capture": {
+        "path": "05-collection-375-default.png",
+        "sha256": "c944e073ef65b7302a0cac9da43166806539248f7e67b466bbf7e9be29532f3a"
+      }
+    },
+    {
+      "surface": "05-collection",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa"
+      },
+      "capture": {
+        "path": "05-collection-375-finder.png",
+        "sha256": "889b1dcf4792e633fc17f8cf7a6778c69cd8d228989342a8a261985806f2dd00"
+      }
+    },
+    {
+      "surface": "05-collection",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html",
+        "sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa"
+      },
+      "capture": {
+        "path": "05-collection-375-bottom.png",
+        "sha256": "15ffb0324e2b748b3249cbdc9c863d48d0f266fbf741fad0a7d013c57683de6a"
+      }
+    },
+    {
+      "surface": "06-publication",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb"
+      },
+      "capture": {
+        "path": "06-publication-1440-default.png",
+        "sha256": "c44ee8952b11971dd6ea874748213daaa017ccac1e67502d6b03149922b1835e"
+      }
+    },
+    {
+      "surface": "06-publication",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb"
+      },
+      "capture": {
+        "path": "06-publication-1440-bottom.png",
+        "sha256": "ef00630f7cb4a825edc0c1645b857ff2ce9fe76232643355d6b40c1ed392daef"
+      }
+    },
+    {
+      "surface": "06-publication",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb"
+      },
+      "capture": {
+        "path": "06-publication-375-default.png",
+        "sha256": "aeb7212c8b1b356615bfb503c350e422336996e075b20fe149ffecfeb07934ba"
+      }
+    },
+    {
+      "surface": "06-publication",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb"
+      },
+      "capture": {
+        "path": "06-publication-375-finder.png",
+        "sha256": "a33b13b2b671bbd6e15e486dc9951ee443c98ff5d1339832aa7e80194aff646a"
+      }
+    },
+    {
+      "surface": "06-publication",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html",
+        "sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb"
+      },
+      "capture": {
+        "path": "06-publication-375-bottom.png",
+        "sha256": "4ea1b20f3314848da0d03ddec1ec6e18cfbee186b36ba980a8e72a7853123787"
+      }
+    },
+    {
+      "surface": "07-data-ui",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55"
+      },
+      "capture": {
+        "path": "07-data-ui-1440-default.png",
+        "sha256": "55924eff8838d32330931bdab87aa782a366b21cdb6e2545fcae0f757ae61bad"
+      }
+    },
+    {
+      "surface": "07-data-ui",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55"
+      },
+      "capture": {
+        "path": "07-data-ui-1440-bottom.png",
+        "sha256": "793efee9c9a86b19091cfb70e6e29d5c5cabee06e14f0a3d6d75e13cc8f7f7c1"
+      }
+    },
+    {
+      "surface": "07-data-ui",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55"
+      },
+      "capture": {
+        "path": "07-data-ui-375-default.png",
+        "sha256": "b0faee78e1d239be692a94396a1d94c9aa62ad04ec6253c29124beda2b6449c7"
+      }
+    },
+    {
+      "surface": "07-data-ui",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55"
+      },
+      "capture": {
+        "path": "07-data-ui-375-finder.png",
+        "sha256": "6e368a482a2ec47e4b69d63d08618a02bbbf37cc17b9d6fad36647653f06ca1e"
+      }
+    },
+    {
+      "surface": "07-data-ui",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html",
+        "sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55"
+      },
+      "capture": {
+        "path": "07-data-ui-375-bottom.png",
+        "sha256": "c677eedc9e001961ed5bd80f320315697583fa99d56f0036663ed3d9210706fc"
+      }
+    },
+    {
+      "surface": "08-roadmap",
+      "state": "default",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9"
+      },
+      "capture": {
+        "path": "08-roadmap-1440-default.png",
+        "sha256": "b193a824d27d0febe0b3ea219505f14224039df31bcd90d3b739337f88dce3cf"
+      }
+    },
+    {
+      "surface": "08-roadmap",
+      "state": "bottom",
+      "viewport": [
+        1440,
+        900
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9"
+      },
+      "capture": {
+        "path": "08-roadmap-1440-bottom.png",
+        "sha256": "35203b20116d72c68e5beb28134560dd7cc82ca3d20e39405abc37fba0690e40"
+      }
+    },
+    {
+      "surface": "08-roadmap",
+      "state": "default",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9"
+      },
+      "capture": {
+        "path": "08-roadmap-375-default.png",
+        "sha256": "635d80a7c2a90b3746004d7c800bc2b0e107e66d20b8af321fc6580a030017ef"
+      }
+    },
+    {
+      "surface": "08-roadmap",
+      "state": "finder",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9"
+      },
+      "capture": {
+        "path": "08-roadmap-375-finder.png",
+        "sha256": "bc953c79912aa1479ba070c13071f78feaa3f88c2be456cbeac0cf14b137ec8e"
+      }
+    },
+    {
+      "surface": "08-roadmap",
+      "state": "bottom",
+      "viewport": [
+        375,
+        812
+      ],
+      "source_lineage": {
+        "repository": "/home/ainsdev/wiki/pkm-articles",
+        "artifact": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+        "sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9"
+      },
+      "capture": {
+        "path": "08-roadmap-375-bottom.png",
+        "sha256": "e03f37fa139098a796d27c778f42c99fd59fab8b9bdb5d82d6aa5cab39107f47"
+      }
+    }
+  ],
+  "captures_count": 46,
+  "all_lineage_and_capture_hashes_match": true
+}

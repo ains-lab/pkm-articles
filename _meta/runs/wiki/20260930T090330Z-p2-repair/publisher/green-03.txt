@@ -1,0 +1,30 @@
+test_help_is_an_import_safe_cli_not_publication (__main__.EntrypointTests.test_help_is_an_import_safe_cli_not_publication) ... ok
+test_import_does_not_read_arguments_or_publish (__main__.EntrypointTests.test_import_does_not_read_arguments_or_publish) ... ok
+test_directory_lock_busy_never_stolen (__main__.PublicationTests.test_directory_lock_busy_never_stolen) ... ok
+test_existing_reviewed_page_never_overwritten (__main__.PublicationTests.test_existing_reviewed_page_never_overwritten) ... ok
+test_failure_after_index_resumes (__main__.PublicationTests.test_failure_after_index_resumes) ... ok
+test_failure_after_log_resumes_without_duplicate_event (__main__.PublicationTests.test_failure_after_log_resumes_without_duplicate_event) ... ok
+test_failure_after_page_resumes (__main__.PublicationTests.test_failure_after_page_resumes) ... ok
+test_failure_after_receipt_resumes (__main__.PublicationTests.test_failure_after_receipt_resumes) ... ok
+test_failure_after_state_resumes (__main__.PublicationTests.test_failure_after_state_resumes) ... ok
+test_foreign_owner_is_not_cleaned_up_on_failure (__main__.PublicationTests.test_foreign_owner_is_not_cleaned_up_on_failure) ... ok
+test_happy_path_schema_actual_count_yaml_and_verifier_under_lock (__main__.PublicationTests.test_happy_path_schema_actual_count_yaml_and_verifier_under_lock) ... ok
+test_index_heading_variants_and_ambiguity (__main__.PublicationTests.test_index_heading_variants_and_ambiguity) ... ok
+test_invalid_response_and_policy_fail_before_any_write (__main__.PublicationTests.test_invalid_response_and_policy_fail_before_any_write) ... ok
+test_missing_or_tampered_committed_output_is_not_noop (__main__.PublicationTests.test_missing_or_tampered_committed_output_is_not_noop) ... ok
+test_no_reuse_of_repair_approval_as_live_publication_permission (__main__.PublicationTests.test_no_reuse_of_repair_approval_as_live_publication_permission) ... ok
+test_other_unresolved_journal_blocks_new_publication (__main__.PublicationTests.test_other_unresolved_journal_blocks_new_publication) ... ok
+test_positive_cost_is_not_a_gate (__main__.PublicationTests.test_positive_cost_is_not_a_gate) ... ok
+test_priority_window_is_half_open (__main__.PublicationTests.test_priority_window_is_half_open) ... ok
+test_recovery_foreign_output_state_and_policy_edits_conflict (__main__.PublicationTests.test_recovery_foreign_output_state_and_policy_edits_conflict) ... ok
+test_recovery_retains_unrelated_index_and_log_updates (__main__.PublicationTests.test_recovery_retains_unrelated_index_and_log_updates) ... ok
+test_repeat_is_verified_noop_without_any_file_write (__main__.PublicationTests.test_repeat_is_verified_noop_without_any_file_write) ... ok
+test_semantic_claim_review_and_request_are_required_not_a_boolean (__main__.PublicationTests.test_semantic_claim_review_and_request_are_required_not_a_boolean) ... ok
+test_snapshot_conflict_after_preflight_preserves_state_edit (__main__.PublicationTests.test_snapshot_conflict_after_preflight_preserves_state_edit) ... ok
+test_source_symlink_rejected_without_writes (__main__.PublicationTests.test_source_symlink_rejected_without_writes) ... ok
+test_two_pages_sequentially_insert_without_losing_other_sections (__main__.PublicationTests.test_two_pages_sequentially_insert_without_losing_other_sections) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 14.316s
+
+OK

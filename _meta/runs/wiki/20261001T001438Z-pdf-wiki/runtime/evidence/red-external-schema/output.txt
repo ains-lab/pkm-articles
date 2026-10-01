@@ -1,0 +1,26 @@
+test_gate_external_schema_dynamic_ref (pdf_tests.Tests.test_gate_external_schema_dynamic_ref) ... FAIL
+test_factory_model_route_mismatch_sanitized (pdf_tests.Tests.test_factory_model_route_mismatch_sanitized) ... ok
+
+======================================================================
+FAIL: test_gate_external_schema_dynamic_ref (pdf_tests.Tests.test_gate_external_schema_dynamic_ref)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 480, in test
+    self.compile_fake(factory=lambda **kw: calls.append(kw))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 246, in compile_fake
+    return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 412, in compile_one
+    pages, telemetry = read_pdf_pages(ctx, deadline=deadline)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 282, in read_pdf_pages
+    data = helper('publish').Files(ctx['root']).read(record['source_path'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 476, in guard
+    raise AssertionError('PDF read crossed rejected gate')
+AssertionError: PDF read crossed rejected gate
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.072s
+
+FAILED (failures=1)

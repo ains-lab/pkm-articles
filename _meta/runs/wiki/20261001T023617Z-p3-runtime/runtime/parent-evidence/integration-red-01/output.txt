@@ -1,0 +1,19 @@
+test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop) ... ERROR
+
+======================================================================
+ERROR: test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 50, in test_two_formats_generate_review_publish_and_next_run_noop
+    out=daily.run_daily(**self.f.kw(),client_factory=model,pdf_module=pdf)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 392, in run_daily
+    C.require(bundle['status']!='ready_to_publish','ready_result_requires_publisher')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: ready_result_requires_publisher
+
+----------------------------------------------------------------------
+Ran 1 test in 1.943s
+
+FAILED (errors=1)

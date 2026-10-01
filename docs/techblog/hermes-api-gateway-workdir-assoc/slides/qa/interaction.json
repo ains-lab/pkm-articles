@@ -1,0 +1,101 @@
+{
+  "artifact_sha256": "c54043b56d1f7140c3f70d1334352a349d5fae3bfbbd1f001a00d0f28fbff393",
+  "offline": true,
+  "checks": [
+    {
+      "check": "offline_initial_load",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "keyboard_next",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "end_and_disabled_next",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "home_and_disabled_previous",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "contents_focus",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "contents_search",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "contents_empty",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "escape_and_focus_return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "embedded_sources",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exercise_reveal",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash_deep_link",
+      "pass": false,
+      "detail": null
+    },
+    {
+      "check": "local_storage_resume",
+      "pass": false,
+      "detail": null
+    },
+    {
+      "check": "offline_font_loaded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_external_resource_loads",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "runtime_errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "skip_link_tracks_slide",
+      "pass": false,
+      "detail": null
+    },
+    {
+      "check": "fullscreen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "mobile_last_content_reachable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "mobile_scroll_hint",
+      "pass": true,
+      "detail": null
+    }
+  ]
+}

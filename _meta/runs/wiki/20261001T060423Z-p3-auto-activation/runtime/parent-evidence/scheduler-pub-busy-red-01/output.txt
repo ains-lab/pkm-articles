@@ -1,0 +1,17 @@
+test_publication_contention_retains_operator_recovery_not_silent_reading (test_scheduled_safety.ScheduledSafetyTests.test_publication_contention_retains_operator_recovery_not_silent_reading) ... FAIL
+
+======================================================================
+FAIL: test_publication_contention_retains_operator_recovery_not_silent_reading (test_scheduled_safety.ScheduledSafetyTests.test_publication_contention_retains_operator_recovery_not_silent_reading)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 228, in test_publication_contention_retains_operator_recovery_not_silent_reading
+    self.assertEqual(result['status'],'unknown')
+AssertionError: 'skipped_busy' != 'unknown'
+- skipped_busy
++ unknown
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.835s
+
+FAILED (failures=1)

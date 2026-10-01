@@ -1,0 +1,22 @@
+test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary) ... ERROR
+
+======================================================================
+ERROR: test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_common.py", line 24, in test_safe_helpers_and_synthetic_root_boundary
+    m.ensure_dirs(fs, 'one/two')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 62, in ensure_dirs
+    helper('compile').mkdir_no_links(fs.root/path, exist_ok=True)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py", line 97, in mkdir_no_links
+    fd = parent_fd(path)
+         ^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py", line 56, in parent_fd
+    child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=fd)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'one'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (errors=1)

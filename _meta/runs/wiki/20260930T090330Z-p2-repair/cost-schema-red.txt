@@ -1,0 +1,42 @@
+test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) ... 
+  test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='compilation', charged=None) ... FAIL
+  test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='compilation', charged=25.0) ... FAIL
+  test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='research_review', charged=None) ... FAIL
+  test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='research_review', charged=25.0) ... FAIL
+
+======================================================================
+FAIL: test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='compilation', charged=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py", line 81, in test_unreserved_cost_events_accept_unknown_and_observed_costs
+    self.assertFalse(list(validator.iter_errors(event)))
+AssertionError: [<ValidationError: "None is not of type 'number'">] is not false
+
+======================================================================
+FAIL: test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='compilation', charged=25.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py", line 81, in test_unreserved_cost_events_accept_unknown_and_observed_costs
+    self.assertFalse(list(validator.iter_errors(event)))
+AssertionError: [<ValidationError: "None is not of type 'number'">] is not false
+
+======================================================================
+FAIL: test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='research_review', charged=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py", line 81, in test_unreserved_cost_events_accept_unknown_and_observed_costs
+    self.assertFalse(list(validator.iter_errors(event)))
+AssertionError: [<ValidationError: "None is not of type 'number'">] is not false
+
+======================================================================
+FAIL: test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) (definition='research_review', charged=25.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py", line 81, in test_unreserved_cost_events_accept_unknown_and_observed_costs
+    self.assertFalse(list(validator.iter_errors(event)))
+AssertionError: [<ValidationError: "None is not of type 'number'">] is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=4)

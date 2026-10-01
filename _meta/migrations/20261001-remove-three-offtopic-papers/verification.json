@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-01T07:28:28.421528+00:00",
+  "deleted_ids": [
+    "2609.35760v1",
+    "2609.30940v1",
+    "2609.35366v1"
+  ],
+  "deleted_source_files": 6,
+  "deleted_source_directories": 3,
+  "compiled_wiki_documents_removed": 0,
+  "active_source_count": 17,
+  "active_format_counts": {
+    "html": 15,
+    "pdf": 2
+  },
+  "knowledge_pages": 8,
+  "compilation_status_counts": {
+    "blocked_approval": 13,
+    "published_draft": 4
+  },
+  "pending_collection": 48,
+  "active_target_count": 65,
+  "preserved_baseline_files": 1887,
+  "compilation_schema_valid": true,
+  "compilation_change_exactly_three_items_removed": true,
+  "collection_state_unchanged": true,
+  "historical_log_prefix_unchanged": true,
+  "historical_audit_unchanged": true,
+  "governing_snapshot_hashes_valid": true,
+  "backup_sha256_valid": true,
+  "future_recollection_exclusion_installed": false,
+  "real_scheduled_execution_performed": false
+}

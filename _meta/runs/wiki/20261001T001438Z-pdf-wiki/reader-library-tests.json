@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-01T00:17:19.655740+00:00",
+  "pypdf_version": "6.19.0",
+  "python_env": ".venv-pdf-reader",
+  "synthetic_only": true,
+  "real_paper_reads": 0,
+  "text_extraction_in_memory_only": true,
+  "checks": {
+    "two_page_texts_separate": true,
+    "blank_page_observed_not_filled": true,
+    "source_bytes_unchanged": true,
+    "physical_pages_three": true,
+    "not_encrypted": true
+  }
+}

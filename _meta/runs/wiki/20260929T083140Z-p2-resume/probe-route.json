@@ -1,0 +1,8 @@
+{
+  "requested_provider": "codex-lb",
+  "resolved_base_url": "http://10.10.1.244:2455/v1",
+  "api_mode": "codex_responses",
+  "model": "gpt-6-astra",
+  "request_overrides_present": false,
+  "paper_content_sent": false
+}

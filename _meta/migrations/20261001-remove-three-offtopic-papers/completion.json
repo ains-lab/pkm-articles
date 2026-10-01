@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_at": "2026-10-01T07:30:49.426832+00:00",
+  "run_id": "20261001-remove-three-offtopic-papers",
+  "owned_lock_released": true,
+  "deleted_files_absent": true,
+  "final_modified_file_hashes": {
+    "index.md": "e4962e33314a5115bee536fd8dd7a61bb7ea8af2869c63067d8ab90eaebe70df",
+    "log.md": "5206ff5fe3d403cf2ae00745277c27e04c2c8751205caedb9f9a7e9ab3111c40",
+    "raw/articles/4cff5b4f10ec/index.md": "1388f5d2c886909d01f632e5ab0b6086bceb0c7675bdaa5d45156680f98c53d7",
+    "_meta/state/compilation.json": "c63539173a2555c9fbdbdfba0ac9797c2f38cc474fb497c0f906f4b83a2ee5d4"
+  }
+}

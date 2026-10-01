@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:25:03.662176+00:00",
+  "label": "scheduler-expiry-red-01",
+  "modules": [
+    "test_scheduled_safety"
+  ],
+  "tests_run": 1,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/usr/bin/python3",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "c3e2436eea1082aa2bc7052b862f88b26f7df85d5d114971c523bcbe9572e6eb",
+    "content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "publication.py": "cf02d363767f5de971edf219e1b7283ba61a06e30a4ec7e16a78ebc5776e703e",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_scheduled_safety.py": "e0a9f794ac85499321248a3975a33e58044405e7f1dc30e749762d751b282697"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

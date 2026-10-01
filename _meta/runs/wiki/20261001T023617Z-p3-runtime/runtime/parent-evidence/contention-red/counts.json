@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T03:20:18.262956+00:00",
+  "label": "contention-red",
+  "modules": [
+    "test_contention"
+  ],
+  "tests_run": 2,
+  "failures": 0,
+  "errors": 2,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "f5744914e2dc9d7e05bc5b3baf6bb23e43d6536af424a30a48695be1347ebebc",
+    "content.py": "ddd89bc0d19b92bf6e8c457c0c70f3d654ad8517ff5e69e0e67880a9ccf1cd95",
+    "publication.py": "c660378062b7ad6fad28772c1a5d2bd6aba78bdd1314dd579ea11d11d5b68435",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_contention.py": "89c9791d2aac1fa33a7c01013ab7bda68d682441441a83ecdac4f5f9d9165a84"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

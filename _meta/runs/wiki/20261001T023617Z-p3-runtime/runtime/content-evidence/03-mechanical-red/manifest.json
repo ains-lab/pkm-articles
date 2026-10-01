@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "d89654a6d58ec933aaa4b5d6c2f2a664ba1d3b53e901e68d627dab3c89ffbde0",
+    "stderr.txt": "4a7f3cfcdd7eddcc98a1c484305c7e496905424460c4b28fb28745e517b090d4",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "375f826ab50c52b5d9272c4915f31e513b5aa764a828be99cdc5572f5d3ac639"
+  }
+}

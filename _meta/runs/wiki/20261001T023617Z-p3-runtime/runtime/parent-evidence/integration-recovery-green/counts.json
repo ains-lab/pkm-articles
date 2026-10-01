@@ -1,0 +1,29 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T03:06:14.598615+00:00",
+  "label": "integration-recovery-green",
+  "modules": [
+    "test_integration",
+    "test_daily"
+  ],
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "daily.py": "674022426e6f450baec4e665f0c48daf479ed5bf06b3c2e82d0a0f2f0339513c",
+    "content.py": "098f558d6621dc226b01ef5a38fcd0bd03dcf59a36d272ba264b67c7f26de0b2",
+    "publication.py": "c660378062b7ad6fad28772c1a5d2bd6aba78bdd1314dd579ea11d11d5b68435",
+    "run_checks.py": "c1e6f6bd5be51341e12ad5b848c45fdc12d80f4afd063e0ab70d8a54769a5a70",
+    "test_integration.py": "d558052080bbe8ca69e1ffae57ab82bb13e570e92bff99baf440006b47366830",
+    "test_daily.py": "036df4c4d5f71d36743f5b3d9853773b1f521fcc4df34e4230646cacf8802bd6"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

@@ -1,0 +1,14 @@
+test_01_preflight_requires_bound_scope_before_body (pdf_tests.Tests.test_01_preflight_requires_bound_scope_before_body) ... FAIL
+
+======================================================================
+FAIL: test_01_preflight_requires_bound_scope_before_body (pdf_tests.Tests.test_01_preflight_requires_bound_scope_before_body)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 160, in setUp
+    self.assertIsNotNone(M, 'manual_pdf adapter is not implemented')
+AssertionError: unexpectedly None : manual_pdf adapter is not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

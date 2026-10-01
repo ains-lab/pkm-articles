@@ -1,0 +1,14 @@
+test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary) ... FAIL
+
+======================================================================
+FAIL: test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_common.py", line 14, in test_safe_helpers_and_synthetic_root_boundary
+    self.assertTrue(path.exists(), 'P3 common adapter missing')
+AssertionError: False is not true : P3 common adapter missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

@@ -1,0 +1,12 @@
+{
+  "log_prefix_bytes": 56469,
+  "log_prefix_sha256": "2f5516834018c4bc8f272750c93b2ba8225784627ba232ac76d556394c4f3ed6",
+  "protected_count": 39,
+  "owner": {
+    "role": "manual-p2-test-audit-log",
+    "run_id": "20260930T085029Z-p2-quick-test",
+    "transaction_id": "20260930T085029Z-p2-quick-test-log",
+    "started_at": "2026-09-30T08:52:25.301302+00:00",
+    "pid": 7789
+  }
+}

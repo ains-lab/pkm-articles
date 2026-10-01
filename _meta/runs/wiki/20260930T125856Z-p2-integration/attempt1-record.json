@@ -1,0 +1,43 @@
+{
+  "schema": "pkm-integration-attempt-record/v1",
+  "run_id": "20260930T125856Z-p2-integration",
+  "attempt": 1,
+  "started_at": "2026-09-30T13:07:07.216570+00:00",
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "approval_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/approval.json",
+  "approval_sha256": "5764eecd6f3e1eb6cc09f83bb7a8c09631f4c94e0a46ce87b5e66bfb32e51336",
+  "instructions_sha256": "abb7f6bbfd1518444aea055c7ce4adc36729b2a2c0559fbd12d80217bab9bc88",
+  "policy_sha256": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5",
+  "prompt_revision": "wiki-integrate/v1",
+  "inputs": [
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    },
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9"
+    }
+  ],
+  "route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses"
+  },
+  "transport": "http-nonstream",
+  "http_timeout_s": 2400,
+  "max_retries": 0,
+  "fallback_allowed": false,
+  "tools": [],
+  "store": false,
+  "cost_policy": "no_cost_cap"
+}

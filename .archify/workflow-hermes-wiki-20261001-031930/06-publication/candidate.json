@@ -1,0 +1,606 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "06 · 별도 승인 컴파일과 조건부 게시·복구",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html"
+  },
+  "lanes": [
+    {
+      "id": "approval_lane",
+      "label": "실행 권한 · 단계/자료 승인과 snapshot·모델 고정"
+    },
+    {
+      "id": "format_lane",
+      "label": "실행 분기 · 반복 완료 증거와 자료 승인"
+    },
+    {
+      "id": "read_lane",
+      "label": "자료 읽기 · HTML 직접 / v3 승인 PDF 텍스트"
+    },
+    {
+      "id": "review_lane",
+      "label": "의미 검토 · 인용·읽기 범위·게시 승인"
+    },
+    {
+      "id": "lock_lane",
+      "label": "동시성 · 수집 우선 시간과 공유 잠금"
+    },
+    {
+      "id": "integrity_lane",
+      "label": "무결성 · 게시 직전 최종 hash 비교"
+    },
+    {
+      "id": "write_lane",
+      "label": "게시자 · WAL 이후 조건부 다중 파일 갱신"
+    },
+    {
+      "id": "recovery_lane",
+      "label": "복구"
+    },
+    {
+      "id": "web_lane",
+      "label": "웹 제안"
+    },
+    {
+      "id": "web_conflict_lane",
+      "label": "향후 읽기 충돌 제안 · partial cache 금지"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "approval",
+      "lane": "approval_lane",
+      "col": 0,
+      "type": "security",
+      "label": "단계·자료 실행 승인",
+      "sublabel": "사용자 승인 근거 · 권한 자동승계 없음",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "snapshot",
+      "lane": "approval_lane",
+      "col": 1,
+      "type": "database",
+      "label": "입력·정책·출력 고정",
+      "sublabel": "정확한 snapshot · hash",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "model",
+      "lane": "approval_lane",
+      "col": 2,
+      "type": "security",
+      "label": "모델 경로 고정",
+      "sublabel": "codex-lb / gpt-6-astra / xhigh",
+      "width": 204,
+      "height": 80,
+      "tag": "no-fallback"
+    },
+    {
+      "id": "noop",
+      "lane": "format_lane",
+      "col": 0,
+      "type": "database",
+      "label": "exact-repeat no-op",
+      "sublabel": "같은 key·receipt·전체 실물 hash",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "html_read",
+      "lane": "read_lane",
+      "col": 1,
+      "type": "backend",
+      "label": "승인 HTML 직접 읽기",
+      "sublabel": "원본 텍스트 · 사전 파싱본 없음",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "format",
+      "lane": "format_lane",
+      "col": 2,
+      "type": "security",
+      "label": "자료·형식별 승인 분기",
+      "sublabel": "HTML 또는 v3 승인 로컬 PDF",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "pdf_read",
+      "lane": "read_lane",
+      "col": 2,
+      "type": "backend",
+      "label": "v3 PDF 내장 텍스트",
+      "sublabel": "표준 pypdf · 페이지별 메모리",
+      "width": 204,
+      "height": 80,
+      "tag": "바이너리·OCR·지속추출 금지"
+    },
+    {
+      "id": "publish_approval",
+      "lane": "review_lane",
+      "col": 2,
+      "type": "security",
+      "label": "게시·편집 중지 승인",
+      "sublabel": "검증된 draft만 · 사용자 수정 보호",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "review",
+      "lane": "review_lane",
+      "col": 1,
+      "type": "backend",
+      "label": "의미·인용·읽기 범위 검사",
+      "sublabel": "주장 근거 · 읽음/미독 · 구조 검증",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "partial",
+      "lane": "review_lane",
+      "col": 0,
+      "type": "security",
+      "label": "blocked / partial 보존",
+      "sublabel": "빈 텍스트·손상·근거 누락은 중단",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "busy_pub",
+      "lane": "lock_lane",
+      "col": 1,
+      "type": "security",
+      "label": "수집 우선·잠금 대기",
+      "sublabel": "skipped_busy · 자동탈취 금지",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "shared_lock",
+      "lane": "lock_lane",
+      "col": 2,
+      "type": "security",
+      "label": "수집 우선 시간·공유 잠금",
+      "sublabel": "collection.lock · 정상 소유 확인",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "final_hash",
+      "lane": "integrity_lane",
+      "col": 2,
+      "type": "security",
+      "label": "최종 hash 재대조",
+      "sublabel": "원본·정책·출력의 경합 검사",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "hash_conflict",
+      "lane": "integrity_lane",
+      "col": 1,
+      "type": "security",
+      "label": "무결성·사용자 수정 충돌",
+      "sublabel": "자동 덮어쓰기 없이 보존",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "committed",
+      "lane": "write_lane",
+      "col": 0,
+      "type": "database",
+      "label": "committed + 실물 검증",
+      "sublabel": "receipt·상태·output hash 일치",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "publish",
+      "lane": "write_lane",
+      "col": 1,
+      "type": "backend",
+      "label": "조건부 다중 파일 게시",
+      "sublabel": "지식·색인·로그·receipt·상태",
+      "width": 204,
+      "height": 80,
+      "tag": "OS 수준 일괄 원자성 아님"
+    },
+    {
+      "id": "wal",
+      "lane": "write_lane",
+      "col": 2,
+      "type": "database",
+      "label": "write-ahead journal",
+      "sublabel": "before/after hash · 대상·순서",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "compensated",
+      "lane": "recovery_lane",
+      "col": 2,
+      "type": "database",
+      "label": "거래 변경분만 조건부 보상",
+      "sublabel": "다른 수정·log append 보존",
+      "width": 204,
+      "height": 64,
+      "yOffset": 60
+    },
+    {
+      "id": "recover",
+      "lane": "recovery_lane",
+      "col": 2,
+      "type": "security",
+      "label": "중단 거래 복구 판정",
+      "sublabel": "run journal·현재 실물 대조",
+      "width": 204,
+      "height": 64,
+      "yOffset": -60
+    },
+    {
+      "id": "preserve",
+      "lane": "recovery_lane",
+      "col": 1,
+      "type": "security",
+      "label": "변경 충돌 그대로 보존",
+      "sublabel": "사용자 수정 · 수동 해결 대기",
+      "width": 204,
+      "height": 64,
+      "yOffset": -60
+    },
+    {
+      "id": "invalidate",
+      "lane": "web_lane",
+      "col": 0,
+      "type": "frontend",
+      "label": "향후 캐시 무효화",
+      "sublabel": "검증된 committed 뒤에만",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "read_snapshot",
+      "lane": "web_lane",
+      "col": 1,
+      "type": "backend",
+      "label": "향후 일관 snapshot 재조회",
+      "sublabel": "receipt/hash·읽기 전후 식별자",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "cache",
+      "lane": "web_lane",
+      "col": 2,
+      "type": "database",
+      "label": "검증된 snapshot만 캐시",
+      "sublabel": "page hash → ETag",
+      "width": 204,
+      "height": 64
+    },
+    {
+      "id": "snapshot_conflict",
+      "lane": "web_conflict_lane",
+      "col": 1,
+      "type": "security",
+      "label": "snapshot_conflict",
+      "sublabel": "제한 재시도 · partial 캐시 금지",
+      "width": 204,
+      "height": 64
+    }
+  ],
+  "edges": [
+    {
+      "id": "approval-snapshot",
+      "from": "approval",
+      "to": "snapshot",
+      "variant": "default",
+      "role": "main",
+      "label": "승인 확인"
+    },
+    {
+      "id": "snapshot-model",
+      "from": "snapshot",
+      "to": "model",
+      "variant": "default",
+      "role": "main",
+      "label": "snapshot 고정"
+    },
+    {
+      "id": "snapshot-noop",
+      "from": "snapshot",
+      "to": "noop",
+      "variant": "default",
+      "role": "branch",
+      "label": "반복 완료 증거 일치"
+    },
+    {
+      "id": "model-format",
+      "from": "model",
+      "to": "format",
+      "variant": "default",
+      "role": "main",
+      "label": "지정 경로·gate 충족"
+    },
+    {
+      "id": "format-html",
+      "from": "format",
+      "to": "html_read",
+      "variant": "default",
+      "role": "main",
+      "label": "HTML 승인",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "format-pdf",
+      "from": "format",
+      "to": "pdf_read",
+      "variant": "security",
+      "role": "branch",
+      "label": "v3 별도 승인",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "html-review",
+      "from": "html_read",
+      "to": "review",
+      "variant": "default",
+      "role": "main",
+      "label": "실제 읽은 범위",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight"
+    },
+    {
+      "id": "pdf-review",
+      "from": "pdf_read",
+      "to": "review",
+      "variant": "default",
+      "role": "main",
+      "label": "텍스트·물리 페이지",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "review-partial",
+      "from": "review",
+      "to": "partial",
+      "variant": "security",
+      "role": "error",
+      "label": "읽기·근거 불충분"
+    },
+    {
+      "id": "review-pubapproval",
+      "from": "review",
+      "to": "publish_approval",
+      "variant": "default",
+      "role": "main",
+      "label": "검토 통과"
+    },
+    {
+      "id": "pubapproval-lock",
+      "from": "publish_approval",
+      "to": "shared_lock",
+      "variant": "default",
+      "role": "main",
+      "label": "게시·편집 중지 확인",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "lock-busy",
+      "from": "shared_lock",
+      "to": "busy_pub",
+      "variant": "security",
+      "role": "branch",
+      "label": "수집 시간·잠금 충돌"
+    },
+    {
+      "id": "lock-finalhash",
+      "from": "shared_lock",
+      "to": "final_hash",
+      "variant": "default",
+      "role": "main",
+      "label": "우선 시간 통과·획득",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "hash-conflict",
+      "from": "final_hash",
+      "to": "hash_conflict",
+      "variant": "security",
+      "role": "error",
+      "label": "hash 불일치"
+    },
+    {
+      "id": "hash-wal",
+      "from": "final_hash",
+      "to": "wal",
+      "variant": "default",
+      "role": "main",
+      "label": "최종 일치",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "wal-publish",
+      "from": "wal",
+      "to": "publish",
+      "variant": "default",
+      "role": "main",
+      "label": "WAL 선기록 완료",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "publish-committed",
+      "from": "publish",
+      "to": "committed",
+      "variant": "default",
+      "role": "main",
+      "label": "실물·거래 검증 성공",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "publish-recover",
+      "from": "publish",
+      "to": "recover",
+      "variant": "security",
+      "role": "error",
+      "label": "중단·미해결 거래",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "recover-compensated",
+      "from": "recover",
+      "to": "compensated",
+      "variant": "default",
+      "role": "branch",
+      "label": "정확한 거래 조건 일치",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "recover-preserve",
+      "from": "recover",
+      "to": "preserve",
+      "variant": "security",
+      "role": "error",
+      "label": "타 변경·조건 불일치"
+    },
+    {
+      "id": "committed-invalidate",
+      "from": "committed",
+      "to": "invalidate",
+      "variant": "dashed",
+      "role": "async",
+      "label": "향후 연결 · 검증 후",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight"
+    },
+    {
+      "id": "invalidate-read",
+      "from": "invalidate",
+      "to": "read_snapshot",
+      "variant": "dashed",
+      "role": "main",
+      "label": "일관성 재확인"
+    },
+    {
+      "id": "read-cache",
+      "from": "read_snapshot",
+      "to": "cache",
+      "variant": "dashed",
+      "role": "main",
+      "label": "상태·hash 안정"
+    },
+    {
+      "id": "read-conflict",
+      "from": "read_snapshot",
+      "to": "snapshot_conflict",
+      "variant": "security",
+      "role": "error",
+      "label": "읽기 경합",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "semanticChecks": {
+    "allowedRoots": [
+      "approval"
+    ],
+    "allowedTerminals": [
+      "noop",
+      "partial",
+      "busy_pub",
+      "hash_conflict",
+      "compensated",
+      "preserve",
+      "cache",
+      "snapshot_conflict"
+    ],
+    "requiredPaths": [
+      {
+        "from": "approval",
+        "to": "publish"
+      },
+      {
+        "from": "pdf_read",
+        "to": "review"
+      },
+      {
+        "from": "wal",
+        "to": "committed"
+      },
+      {
+        "from": "publish",
+        "to": "recover"
+      },
+      {
+        "from": "committed",
+        "to": "invalidate"
+      },
+      {
+        "from": "invalidate",
+        "to": "cache"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "정식계약 · 승인과 모델을 고정",
+      "items": [
+        "수집 완료·일반 채팅 완료·Hermes tool approval은 Wiki 단계/자료/게시 승인이 아니다. 정확한 입력·정책·출력 snapshot과 codex-lb/gpt-6-astra/xhigh를 확인하며 fallback은 금지한다.",
+        "no_cost_cap: 비용 관측은 선택 기록이다. 미관측 비용은 null이며 0으로 위조하거나 비용 gate로 차단하지 않는다. P3–P6 실행·등록·활성화 승인은 없다.",
+        "근거: docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md:L84–95, L103–122; docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md:L72–87; docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md:L80"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "읽기·검토 범위 · PDF는 v3 승인 예외만",
+      "items": [
+        "HTML은 원본 직접 읽기. v3 승인 PDF는 표준 pypdf의 embedded_text_only로 페이지별 텍스트를 메모리에서 읽는다. PDF 바이너리·이미지·OCR·렌더·지속 추출본·compile-input은 금지한다.",
+        "HTML은 실제 원본 anchor, PDF는 source.pdf#page=N의 물리적 1-based 페이지를 인용한다. 실제 읽음/미독·텍스트 품질·누락을 기록하고 그림·불명료 수식/레이아웃은 미검토로 남긴다.",
+        "검토 통과는 인간 검토 완료가 아니다. 새 지식은 draft/unreviewed를 유지한다. 빈 텍스트·손상·읽기 실패는 blocked/partial이며 OCR로 우회하지 않는다.",
+        "근거: SCHEMA.md:L150–157; docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md:L38–67, L113"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "조건부 게시·복구 · 사용자 변경을 보존",
+      "items": [
+        "게시 허용 대상은 지식·index·append-only log·receipt·컴파일 상태다. raw/source.json/collector state에는 쓰지 않는다. 각 파일의 정확한 순서·복구는 해당 publisher/run journal 계약을 따른다.",
+        "WAL에 target/before/after hash·순서를 먼저 기록한다. 다중 파일 변경이 OS에서 일괄 원자적으로 보이지 않으며 committed 문자열만으로 완료를 인정하지 않는다.",
+        "수집 우선 시간과 collection.lock을 공유한다. 오래된 lock 강제 삭제·자동 탈취·전체 snapshot rollback을 하지 않는다. 정확한 거래의 변경분만 조건부 보상하며 사용자 수정과 다른 log append는 보존한다.",
+        "exact-repeat no-op은 같은 work key, 적용 정책/범위, 완료 receipt, 전체 실물 output hash, 미해결 거래 없음이 모두 필요하다.",
+        "근거: docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md:L87–93; _meta/STATE-CONTRACTS.md:L32–36, L44–54; docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md:L82–84"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "향후 웹 연결 · 현재 서비스 구현 결과가 아님",
+      "items": [
+        "캐시 무효화·snapshot 재조회·ETag는 향후 frontend/BFF 제안이다. 읽기 전후 식별자와 receipt/hash를 확인한 일관 snapshot만 캐시한다. 충돌은 제한 재시도 또는 snapshot_conflict로 반환한다.",
+        "과거 blocked_policy/queued 숫자를 live 현재값으로 쓰지 않는다. 이 도식 제작에서는 컴파일·원문 읽기·모델 호출·Wiki 게시·Gateway/Cron 변경을 실행하지 않는다.",
+        "문서 설명 모드: repository HEAD 근거를 주장하지 않는다. 모든 노드/간선은 evidence.json의 로컬 줄 근거로 연결된다. Viewer 고정 UI와 html lang은 영어 fallback이다.",
+        "근거: docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md:L103–122; docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md:L117–133; docs/techblog/hermes-api-gateway-workdir-assoc/README.md:L31–47, L69–80"
+      ]
+    }
+  ]
+}

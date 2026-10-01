@@ -1,0 +1,40 @@
+test_authority_and_integrity_negatives (test_daily.DailyTests.test_authority_and_integrity_negatives) ... ok
+test_context_deadline_is_checked_between_inventory_sources (test_daily.DailyTests.test_context_deadline_is_checked_between_inventory_sources) ... FAIL
+test_dangling_reservation_before_state_write_is_not_replayed (test_daily.DailyTests.test_dangling_reservation_before_state_write_is_not_replayed) ... FAIL
+test_empty_inventory_is_verified_noop (test_daily.DailyTests.test_empty_inventory_is_verified_noop) ... ok
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_partial_and_three_failures_block_further_processing (test_daily.DailyTests.test_partial_and_three_failures_block_further_processing) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_preserved_completed_source_noop_checks_receipt_and_output (test_daily.DailyTests.test_preserved_completed_source_noop_checks_receipt_and_output) ... ok
+test_reserved_unknown_from_prior_run_blocks_new_run (test_daily.DailyTests.test_reserved_unknown_from_prior_run_blocks_new_run) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ok
+
+======================================================================
+FAIL: test_context_deadline_is_checked_between_inventory_sources (test_daily.DailyTests.test_context_deadline_is_checked_between_inventory_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 266, in test_context_deadline_is_checked_between_inventory_sources
+    with self.assertRaises(TimeoutError):self.m.inventory(ctx)
+                                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 135, in inventory
+    data=fs.read(source_path)
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 262, in reader
+    if path.endswith('arxiv-2609.30101v1/source.html'):self.fail('second source read after deadline')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: second source read after deadline
+
+======================================================================
+FAIL: test_dangling_reservation_before_state_write_is_not_replayed (test_daily.DailyTests.test_dangling_reservation_before_state_write_is_not_replayed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 241, in test_dangling_reservation_before_state_write_is_not_replayed
+    with self.assertRaisesRegex(ValueError,'unresolved_reservation'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 12.505s
+
+FAILED (failures=2)

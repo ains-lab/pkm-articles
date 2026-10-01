@@ -1,0 +1,12 @@
+test_active_document_revisions (__main__.PolicyAlignmentTests.test_active_document_revisions) ... ok
+test_all_four_contract_instances (__main__.PolicyAlignmentTests.test_all_four_contract_instances) ... ok
+test_cost_never_blocks_compilation (__main__.PolicyAlignmentTests.test_cost_never_blocks_compilation) ... ok
+test_nonpilot_states_are_only_version_migrated (__main__.PolicyAlignmentTests.test_nonpilot_states_are_only_version_migrated) ... ok
+test_prompt_revisions_match_both_schema_and_files (__main__.PolicyAlignmentTests.test_prompt_revisions_match_both_schema_and_files) ... ok
+test_scope_and_schedule_remain_restricted (__main__.PolicyAlignmentTests.test_scope_and_schedule_remain_restricted) ... ok
+test_unreserved_cost_events_accept_unknown_and_observed_costs (__main__.PolicyAlignmentTests.test_unreserved_cost_events_accept_unknown_and_observed_costs) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.051s
+
+OK

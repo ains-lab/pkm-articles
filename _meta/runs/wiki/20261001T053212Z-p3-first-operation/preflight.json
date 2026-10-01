@@ -1,0 +1,142 @@
+{
+  "schema": "pkm-p3-operational-preflight/v1",
+  "observed_at": "2026-10-01T05:39:16.220670+00:00",
+  "inventory_count": 20,
+  "formats": {
+    "html": 18,
+    "pdf": 2
+  },
+  "selected": [
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+      "source_bytes": 926811,
+      "collected_at": "2026-09-28T10:42:11.138705+00:00"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+      "source_bytes": 738941,
+      "collected_at": "2026-09-28T10:42:14.317240+00:00"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+      "source_bytes": 397917,
+      "collected_at": "2026-09-28T10:42:39.734613+00:00"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+      "source_bytes": 558801,
+      "collected_at": "2026-09-28T10:42:42.912271+00:00"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+      "source_bytes": 536360,
+      "collected_at": "2026-09-28T10:42:56.338003+00:00"
+    }
+  ],
+  "verified_existing_wiki": [
+    {
+      "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+    },
+    {
+      "path": "concepts/agent-authority-and-effect-boundaries.md",
+      "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+    },
+    {
+      "path": "concepts/provenance-and-audit-evidence.md",
+      "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+    },
+    {
+      "path": "concepts/security-evaluation-units.md",
+      "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+    },
+    {
+      "path": "entities/arxiv-2609.30614v1.md",
+      "sha256": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7"
+    },
+    {
+      "path": "entities/arxiv-2609.30824v1.md",
+      "sha256": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e"
+    },
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+    }
+  ],
+  "current_source_and_metadata_hashes": {
+    "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.html": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+    "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.json": "5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94",
+    "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.html": "341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab",
+    "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.json": "9c5b7c71583ad2fdca0caa45aff13d77d188a09565e604151c06da028298f86c",
+    "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.html": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+    "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.json": "edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.html": "079fd74b7e219228d332f3239c03e65f8302cb1f4b7fe620eecdf0ea0bcddf94",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.json": "20f6bc0e3cae5ecc6dea1e0a933c284c062958ccc9492a5c1a5f8290045cee6c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.html": "39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.json": "efdc3fd3b1472de522c249edab3f3bc112bb793f691f17be40c56429cf4c491e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.html": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.json": "ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.html": "08ac9572cbc4de7377888449d7397566b46ee546d0cd5ffbfb158c138fd6c6c0",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.json": "229c581ae157accff26c1734c4569f12c40fb6c84a97d805b9b331f15d9d0f7c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.html": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.json": "9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.html": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.json": "31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.json": "5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3"
+  },
+  "model_route_verified": true,
+  "request_overrides": false,
+  "model_called": false,
+  "new_body_interpretation": false,
+  "cron_id": "4839be6a1db1",
+  "cron_state": "paused",
+  "cron_enabled": false,
+  "next_run_at": null,
+  "runtime_hashes_verified": true,
+  "execution_approval_ref": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/gate-02/execution-approval.json"
+}

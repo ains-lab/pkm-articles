@@ -1,0 +1,10 @@
+{
+  "process_id": "proc_5332e192d13e",
+  "exit_code": 1,
+  "stage": "approval loading before attempt reservation and provider request",
+  "error": "TypeError: tuple indices must be integers or slices, not str",
+  "cause": "read_json returns (object,digest); caller treated return as object",
+  "model_request_sent": false,
+  "attempt_artifacts_absent": true,
+  "correction": "unpack or use [0] on existing read_json return; local positive assertion passed"
+}

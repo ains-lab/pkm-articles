@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a55700c8-455b-4d73-b3f9-210e21fbe1e1",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-profile-routing-20261001-102028/03-api-sequence/candidate.json",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-profile-routing-20261001-102028/03-api-sequence/diagram.html",
+  "specification": {
+    "sha256": "a87dc4acc0334d59faac189592330c2ad22e32c90d8aa085a704535587f38196",
+    "bytes": 7243
+  },
+  "artifact": {
+    "sha256": "9ab8bbaf0de93514756b8f1f9b541d3f3a0b978ad970b2bbbfa7cc5c3cdb65ad",
+    "bytes": 764810
+  }
+}

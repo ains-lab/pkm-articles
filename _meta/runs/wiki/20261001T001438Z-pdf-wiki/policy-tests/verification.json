@@ -1,0 +1,225 @@
+{
+  "status": "prepared_partial_hold_protected_AGENTS_approval",
+  "published": false,
+  "expected_staged_files": 14,
+  "actual_staged_files": 13,
+  "missing_files": [
+    "AGENTS.md"
+  ],
+  "extra_files": [],
+  "missing_reason": "write_file protection approval prompt timed out for policy-staging/AGENTS.md; no retry or alternate-path write attempted",
+  "files": [
+    {
+      "path": "README.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/README.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/README.md",
+      "before_sha256": "425324ba217f2817ce6fd0172324109f946e5b967f6a2c6d8977b4714b6251b3",
+      "staged_sha256": "8236bc40c5fe9ba8d5735c1273300b0262dd2967c92cca299e8033a1b6cd6bb4"
+    },
+    {
+      "path": "SCHEMA.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/SCHEMA.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/SCHEMA.md",
+      "before_sha256": "8cce8998d3949787f7ae4f159012a4f60390bde5176122e13cc9ffa4bbe4835c",
+      "staged_sha256": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4"
+    },
+    {
+      "path": "_meta/AUTOMATION.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/AUTOMATION.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/AUTOMATION.md",
+      "before_sha256": "ff73b6ec1e2e374f859c14e7a8ce417b046443b89cf8db215af99858489fc748",
+      "staged_sha256": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d"
+    },
+    {
+      "path": "_meta/COMPILATION.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/COMPILATION.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/COMPILATION.md",
+      "before_sha256": "08e48d45829aef02ec7a971c56f7ba64fc7f698a227b9affe8419285b395fcf2",
+      "staged_sha256": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a"
+    },
+    {
+      "path": "_meta/P3-PREPARATION.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/P3-PREPARATION.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/P3-PREPARATION.md",
+      "before_sha256": "68cc4dbc734279db09cfa6ed258b044262e7c5f8449edf8e58f6c1c8ee2d835c",
+      "staged_sha256": "035754cb0dd8da830579f590461cf63e68558919bb37aad9f6607ac8f221f44c"
+    },
+    {
+      "path": "_meta/STATE-CONTRACTS.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/STATE-CONTRACTS.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/STATE-CONTRACTS.md",
+      "before_sha256": "4870e4c04c035e47cd217287da25a5e37820910dcf8e7b52be53593ba30b6f3c",
+      "staged_sha256": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd"
+    },
+    {
+      "path": "_meta/automation-contracts.schema.json",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/automation-contracts.schema.json",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/automation-contracts.schema.json",
+      "before_sha256": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113",
+      "staged_sha256": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a"
+    },
+    {
+      "path": "_meta/automation.json",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/automation.json",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/automation.json",
+      "before_sha256": "5ad8cb25e09dd6811b7f0c9a863bfd66ae42d4f41cd9caa77ea65707d6dda673",
+      "staged_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22"
+    },
+    {
+      "path": "_meta/prompts/research-review.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/prompts/research-review.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/prompts/research-review.md",
+      "before_sha256": "8b37fe5fc01efdcccc59c2dbfbf9af5519534de333162d6fc1f3a5dcd0a34b70",
+      "staged_sha256": "59dccdcd426dcfb4052a5f7e1b4c55536ef81f7c8c24d2419a439aeb22f22b12"
+    },
+    {
+      "path": "_meta/prompts/wiki-compile.md",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/prompts/wiki-compile.md",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/prompts/wiki-compile.md",
+      "before_sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad",
+      "staged_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311"
+    },
+    {
+      "path": "_meta/state/compilation.json",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/state/compilation.json",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/state/compilation.json",
+      "before_sha256": "2782af6b7ec10c8587247f71aa4c537a7e5d985fa64db8aa10629a3eb035395d",
+      "staged_sha256": "3652557a19411891a03d36077920f4947f78725425181b869aa461c4d78a706e"
+    },
+    {
+      "path": "_meta/state/feedback.json",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/state/feedback.json",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/state/feedback.json",
+      "before_sha256": "2794fdf5d24b56c3d93ecd0bb27be9934143e8b73f016e290a627b68abadf21f",
+      "staged_sha256": "63fbb13d5bd7ca5b7146cb529e0dcb3053abde8a62818087d4c33e7daaffb64f"
+    },
+    {
+      "path": "_meta/state/research-review.json",
+      "staging_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-staging/_meta/state/research-review.json",
+      "before_path": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/before/_meta/state/research-review.json",
+      "before_sha256": "41a738119c0f22d4f284681e5bb85b1b22d37ecfac55223e8eb3871b4fb40760",
+      "staged_sha256": "3ebacb51899e4832a491c8daa46de98a2d7fb90e4e2035b29bae70f8fa56da2c"
+    }
+  ],
+  "tests": {
+    "run": 132,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "live_before_image_targets_verified_unchanged": 15,
+  "protected_comparison": [
+    {
+      "path": "README.md",
+      "before_sha256": "425324ba217f2817ce6fd0172324109f946e5b967f6a2c6d8977b4714b6251b3",
+      "live_sha256": "425324ba217f2817ce6fd0172324109f946e5b967f6a2c6d8977b4714b6251b3",
+      "unchanged": true
+    },
+    {
+      "path": "SCHEMA.md",
+      "before_sha256": "8cce8998d3949787f7ae4f159012a4f60390bde5176122e13cc9ffa4bbe4835c",
+      "live_sha256": "8cce8998d3949787f7ae4f159012a4f60390bde5176122e13cc9ffa4bbe4835c",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/AUTOMATION.md",
+      "before_sha256": "ff73b6ec1e2e374f859c14e7a8ce417b046443b89cf8db215af99858489fc748",
+      "live_sha256": "ff73b6ec1e2e374f859c14e7a8ce417b046443b89cf8db215af99858489fc748",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/COMPILATION.md",
+      "before_sha256": "08e48d45829aef02ec7a971c56f7ba64fc7f698a227b9affe8419285b395fcf2",
+      "live_sha256": "08e48d45829aef02ec7a971c56f7ba64fc7f698a227b9affe8419285b395fcf2",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/P3-PREPARATION.md",
+      "before_sha256": "68cc4dbc734279db09cfa6ed258b044262e7c5f8449edf8e58f6c1c8ee2d835c",
+      "live_sha256": "68cc4dbc734279db09cfa6ed258b044262e7c5f8449edf8e58f6c1c8ee2d835c",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/STATE-CONTRACTS.md",
+      "before_sha256": "4870e4c04c035e47cd217287da25a5e37820910dcf8e7b52be53593ba30b6f3c",
+      "live_sha256": "4870e4c04c035e47cd217287da25a5e37820910dcf8e7b52be53593ba30b6f3c",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/automation-contracts.schema.json",
+      "before_sha256": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113",
+      "live_sha256": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/automation.json",
+      "before_sha256": "5ad8cb25e09dd6811b7f0c9a863bfd66ae42d4f41cd9caa77ea65707d6dda673",
+      "live_sha256": "5ad8cb25e09dd6811b7f0c9a863bfd66ae42d4f41cd9caa77ea65707d6dda673",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/prompts/research-review.md",
+      "before_sha256": "8b37fe5fc01efdcccc59c2dbfbf9af5519534de333162d6fc1f3a5dcd0a34b70",
+      "live_sha256": "8b37fe5fc01efdcccc59c2dbfbf9af5519534de333162d6fc1f3a5dcd0a34b70",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/prompts/wiki-compile.md",
+      "before_sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad",
+      "live_sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/state/compilation.json",
+      "before_sha256": "2782af6b7ec10c8587247f71aa4c537a7e5d985fa64db8aa10629a3eb035395d",
+      "live_sha256": "2782af6b7ec10c8587247f71aa4c537a7e5d985fa64db8aa10629a3eb035395d",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/state/feedback.json",
+      "before_sha256": "2794fdf5d24b56c3d93ecd0bb27be9934143e8b73f016e290a627b68abadf21f",
+      "live_sha256": "2794fdf5d24b56c3d93ecd0bb27be9934143e8b73f016e290a627b68abadf21f",
+      "unchanged": true
+    },
+    {
+      "path": "_meta/state/research-review.json",
+      "before_sha256": "41a738119c0f22d4f284681e5bb85b1b22d37ecfac55223e8eb3871b4fb40760",
+      "live_sha256": "41a738119c0f22d4f284681e5bb85b1b22d37ecfac55223e8eb3871b4fb40760",
+      "unchanged": true
+    },
+    {
+      "path": "index.md",
+      "before_sha256": "bb84c459d2e7fa3a84a79a5169a975a291831282934c7dc81c1786dc79da0b01",
+      "live_sha256": "bb84c459d2e7fa3a84a79a5169a975a291831282934c7dc81c1786dc79da0b01",
+      "unchanged": true
+    },
+    {
+      "path": "log.md",
+      "before_sha256": "35107c22d9f28f0b235eff986df834f4d0599aa0f7e240b558313c6ae8337ccd",
+      "live_sha256": "35107c22d9f28f0b235eff986df834f4d0599aa0f7e240b558313c6ae8337ccd",
+      "unchanged": true
+    }
+  ],
+  "state_items_total": 20,
+  "item_status_counts": {
+    "html:blocked_approval": 16,
+    "pdf:blocked_approval": 2,
+    "html:published_draft": 2
+  },
+  "changed_item_ids": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "other_items_identical": 18,
+  "receipts_unchanged": true,
+  "transactions_unchanged": true,
+  "legacy_scripts_modified": false,
+  "runtime_verified": false,
+  "real_pdf_or_model_results_read": false,
+  "parent_responsibilities": [
+    "Obtain fresh explicit protected-write approval for AGENTS.md; do not bypass the timeout",
+    "Inspect staged diffs; publish no policy until the AGENTS blocker is resolved",
+    "Own exact v3 execution gate and queued transition, generation, page evidence review, publication and index/log changes",
+    "Keep legacy P2-v2 guards/frozen evidence unchanged; no P3-P6 authorization or automation-readiness claim"
+  ]
+}

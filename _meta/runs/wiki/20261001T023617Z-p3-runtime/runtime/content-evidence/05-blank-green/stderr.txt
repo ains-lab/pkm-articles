@@ -1,0 +1,10 @@
+test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests) ... ok
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents (test_content.ContentTests.test_mechanical_contract_rejects_uncited_unbounded_or_untrusted_documents) ... ok
+test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests) ... ok
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.878s
+
+OK

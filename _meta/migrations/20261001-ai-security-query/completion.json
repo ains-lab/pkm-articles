@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-01T08:25:44.896012+00:00",
+  "status": "complete",
+  "registered": true,
+  "enabled": true,
+  "next_run_kst": "2026-10-02T00:00:00+09:00",
+  "exact_query_preserved": true,
+  "protected_files_verified": 71,
+  "compiler_pins_verified": 18,
+  "other_jobs_unchanged": [
+    "05ec97bfa8d5",
+    "c5548510672c",
+    "4839be6a1db1"
+  ],
+  "lock_absent": true,
+  "independent_review": "ship",
+  "new_scheduled_fire_observed": false,
+  "raw_downloads": 0,
+  "final_report_sha256": "6e1e641aa67ef31034d4e51cb15ee3d584b0467b6fb3573ac02fc4de85dda511"
+}

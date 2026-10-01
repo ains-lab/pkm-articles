@@ -1,0 +1,12 @@
+{
+  "status": "failed_verifier_assertion",
+  "scope": "metadata/hash-only final inventory",
+  "reason": "expected filename list used source before metadata; PDF alphabetic order is metadata before source",
+  "version_id": "2609.30614v1",
+  "observed_filenames": [
+    "source.json",
+    "source.pdf"
+  ],
+  "source_and_metadata_checks_passed": true,
+  "live_files_changed": false
+}

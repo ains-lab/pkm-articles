@@ -1,0 +1,41 @@
+{
+  "schema": "pkm-collection-selection-approval/v1",
+  "actor": "user",
+  "user_request": "최종 추천안으로 논문 검색하도록 적용해주세요",
+  "cron_id": "4cff5b4f10ec",
+  "root": "/home/ainsdev/wiki/pkm-articles",
+  "revision": "ai-security-cs-title-screen/v2",
+  "approved_scope": [
+    "CS/AI category filter",
+    "security-title primary lane",
+    "abstract-match supplemental lane",
+    "title/abstract-only centrality assessment by the existing collector agent",
+    "download only current-query matches with relevant verdict",
+    "existing Cron prompt and collection-policy update"
+  ],
+  "model_policy": "existing codex-lb/gpt-6-astra/xhigh collector agent, unchanged; no additional model service, no fallback",
+  "explicit_term_expansion": [
+    "backdoor defense (recommended defense counterpart)"
+  ],
+  "preserve": [
+    "schedule",
+    "daily 5 unique download attempts",
+    "90 minute duration",
+    "3 second API interval",
+    "50 total API requests/pages per run",
+    "checkpoint/floor",
+    "raw sources/source.json",
+    "existing Wiki",
+    "compiler Cron and pinned runtime/policies",
+    "past evidence"
+  ],
+  "not_authorized": [
+    "raw or Wiki deletion",
+    "historical backfill",
+    "immediate full collection",
+    "new custom collector/parser/database",
+    "fulltext semantic screening",
+    "auxiliary model calls",
+    "global or other-profile changes"
+  ]
+}

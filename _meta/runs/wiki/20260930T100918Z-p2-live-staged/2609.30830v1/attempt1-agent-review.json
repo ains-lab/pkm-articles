@@ -1,0 +1,184 @@
+{
+  "schema": "pkm-agent-evidence-review/v1",
+  "actor": "agent",
+  "reviewer": "Hermes parent: local HTML main-text and per-claim semantic comparison; not human review",
+  "reviewed_at": "2026-09-30T10:28:57.126525+00:00",
+  "version_id": "2609.30830v1",
+  "result_sha256": "10a928f689ea5a2ffb8cda88e40e95e1d2086ed394927dd62dab447bac490a93",
+  "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+  "requested_scope": "P2 main-text complete",
+  "read_scope": [
+    "abstract1 — Abstract",
+    "S1 — Introduction",
+    "S2 — Background and Motivation",
+    "S2.SS1 — LLM agents and their harnesses",
+    "S2.SS2 — Compositional attacks",
+    "S2.SS3 — Runtime judgment and evidence",
+    "S3 — Threat Model",
+    "S3.SS1 — System model",
+    "S3.SS2 — Adversary model",
+    "S3.SS3 — Effect categories",
+    "S4 — System Design",
+    "S4.SS1 — Overview and trust root",
+    "S4.SS2 — Authorization and effect state",
+    "S4.SS3 — Source registration and boundary checks",
+    "S4.SS4 — Decision flow and state updates",
+    "S4.SS5 — Execution evidence and replay",
+    "S5 — Implementation",
+    "S6 — Evaluation",
+    "S6.SS1 — Questions and experimental setting",
+    "S6.SS2 — RQ1: defense and authorization boundaries",
+    "S6.SS3 — RQ2: attack behavior without AGATE",
+    "S6.SS4 — RQ3: usability and failure analysis",
+    "S6.SS5 — RQ4: reconstruction, coverage, and cost",
+    "S7 — Discussion",
+    "S7.SS1 — Limitations",
+    "S7.SS2 — Further work",
+    "S7.SS3 — Deployment considerations",
+    "S7.SS4 — Ethics",
+    "S8 — Related Work",
+    "S9 — Conclusion",
+    "bib — References: 제공된 서지 텍스트와 본문 종료 경계 확인"
+  ],
+  "unread_scope": [
+    "그림·이미지는 시각적으로 검토하지 않았다. S4.F1, S6.F2, S6.F3의 캡션과 삽입된 텍스트는 읽었지만 SVG의 배치·화살표·색상 및 렌더링된 픽셀은 확인하지 않았다.",
+    "수식은 독립적으로 검증하지 않았다. 요청 표현과 알고리즘의 제공 텍스트를 읽었지만 수학적 증명이나 구현 정합성 검증을 수행하지 않았다.",
+    "실험은 재현하지 않았다. 구현 코드, 원시 실행 로그, 호스트 원장, 배포 설정 및 테스트 산출물을 직접 검사하지 않았다.",
+    "참고문헌은 외부 대조하지 않았다. bib의 서지 문자열은 읽었지만 인용 논문·사건 보고서·표준의 실물과 내용을 확인하지 않았다.",
+    "bib.bib3에 기재된 동반 기술보고서와 공격 체인 아카이브는 제공 HTML에 포함되지 않아 읽지 않았다. 제공 문서에는 별도의 부록 또는 보충자료 섹션이 없다.",
+    "표 S3.T1, S5.T2, S6.T3, S6.T4, S6.T5, S8.T6은 HTML table text only로 검토했다. 표의 시각적 렌더링은 검토하지 않았다.",
+    "사람의 검토·승인, 외부 자산 조회, 코드 실행 및 공유 발행은 수행하지 않았다."
+  ],
+  "evidence_scope": [
+    "S1",
+    "S3",
+    "S4.SS2",
+    "S4.SS3",
+    "S5.T2",
+    "S5.p5",
+    "S6.SS1",
+    "S6.T4",
+    "S6.SS2.p5",
+    "S6.SS3",
+    "S6.SS4",
+    "S6.SS5",
+    "S7.SS1",
+    "S9"
+  ],
+  "reviewed_claim_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "anchor": "S1",
+      "quote_sha256": "3f1df0814f347a7941fdd20a514a3aae0960911d134e07d918d7bfd72dd90292",
+      "verdict": "supported",
+      "rationale": "S1의 권한 근거/데이터 출처의 독립성과 host-issued grant, deterministic decision path, evidence 연결을 대조했다. 도구 자격이 데이터 검사 면제나 텍스트 승인이 되지 않는다."
+    },
+    {
+      "id": "C02",
+      "anchor": "S3",
+      "quote_sha256": "e2be767f89617caf89fb380542f4f90871344df2ae98ae075428ee12c46d855c",
+      "verdict": "supported",
+      "rationale": "S3의 A-EXT/A-INT, 운영자와 사용자 분리 조건 및 dispatch interception/approval delivery/state access control을 포함한 TCB를 확인했다. 사용자=운영자인 개인 배포에 동일한 A-INT 경계를 일반화하지 않는다."
+    },
+    {
+      "id": "C03",
+      "anchor": "S4.SS2",
+      "quote_sha256": "ef455ccd45d0eeee6d9ed87f1ff319ef4e76e0fa136ecd1504912dcbaa7238c9",
+      "verdict": "supported",
+      "rationale": "S4.SS2의 exact request/session binding, expiry/use/amount coverage, final allow 시 consumption과 effect ledger의 review-attempt 성격을 대조했다. 요청 허용과 외부 완료를 구분한다."
+    },
+    {
+      "id": "C04",
+      "anchor": "S4.SS3",
+      "quote_sha256": "32d999233538ed54b1a3556373b0336313373291e293db0690bdd3c5687be130",
+      "verdict": "supported",
+      "rationale": "S4.SS3의 path/window registration, sink field 선택, source-to-destination policy와 content similarity의 제한을 확인했다. 보존/디코딩 설계를 실제 평가 결과로 올리지 않는다."
+    },
+    {
+      "id": "C05",
+      "anchor": "S5.T2",
+      "quote_sha256": "0b744ea364165b53b4534554639b42d800968c0994571710453a830036d66492",
+      "verdict": "supported",
+      "rationale": "S5.T2 HTML 표 텍스트에서 DSH guard veto, OC no dispatch veto, OpenClaw historical flag-only/fail-open과 synchronous integration 조건을 직접 대조했다. 표의 그림/시각 배치는 검토하지 않았다."
+    },
+    {
+      "id": "C06",
+      "anchor": "S5.p5",
+      "quote_sha256": "b7828b709b54a078f6f230e7439ef732f0f503ea564a31f2b2e207ed15714a15",
+      "verdict": "supported",
+      "rationale": "S5.p5의 insertion-order eviction, no lookup promotion, pinned/fair-share/decoding 설계의 활성화 미확립 및 evaluated outcomes exclude decoding을 확인했다. 선언 보호 경로와 동적 저장소를 구분한다."
+    },
+    {
+      "id": "C07",
+      "anchor": "S6.SS1",
+      "quote_sha256": "5ab5d82c8966cd10298e0752f7107945a6c8d7532dee4eb9580308d15dddf47b",
+      "verdict": "supported",
+      "rationale": "S6.SS1의 63 scenarios×2 rounds×2 platforms=252 보고 단위, glm-5.3-flash와 후속 deepseek-v4-flash, fidelity 전달 비대칭, DSH injection r38 이후 조건을 확인했다. 호출·signature·criterion·외부효과 구분이 남는다."
+    },
+    {
+      "id": "C08",
+      "anchor": "S6.T4",
+      "quote_sha256": "24822d0a07f9aaca223c3de21416b58c355446a77ae5125bc764c91503deb1ef",
+      "verdict": "supported",
+      "rationale": "S6.T4 HTML 표에서 Full 28/5/23, Minimal 21/5/16, Empty 19/11/8을 직접 대조했다. 표 캡션대로 event count이며 고유 방지 공격이나 실패 시나리오로 환산하지 않는다."
+    },
+    {
+      "id": "C09",
+      "anchor": "S6.SS2.p5",
+      "quote_sha256": "cf6b20a2fa631269d82ecaf682c606583d0e2b029a3a7c94aea4990b35790b58",
+      "verdict": "supported",
+      "rationale": "S6.SS2.p5의 provenance denial 후 rewritten parameters와 synthetic permanent-deletion tool 호출을 확인했다. 실제 mailbox 삭제가 아닌 요청 수준 우회로 제한한다."
+    },
+    {
+      "id": "C10",
+      "anchor": "S6.SS3",
+      "quote_sha256": "6e6d52f3a3d2cefa565216959ea5ebd47167d0728e14ad863f57848a3bbe2669",
+      "verdict": "supported",
+      "rationale": "S6.SS3의 153 records, 독립76 chains/152 baseline runs, semantic12/46와 structural23/52 및 다른 scenario/adjudication을 대조했다. 거부 기록도 포함하며 방어율·paired causal effect로 표현하지 않는다."
+    },
+    {
+      "id": "C11",
+      "anchor": "S6.SS4",
+      "quote_sha256": "eba3dd2dc5f3171b47b9bce0199e8053608b286a691e0a0eda5c97f1aaeb679f",
+      "verdict": "supported",
+      "rationale": "S6.SS4의 11 benign scenarios 중6, 8 denial events 및 별도 r34 description-field 4→0을 대조했다. end-to-end task failure rate가 없고 실제 sink legitimate reuse 문제가 남음을 유지한다."
+    },
+    {
+      "id": "C12",
+      "anchor": "S6.SS5",
+      "quote_sha256": "93d0069d0e9d1ad4f7de4c193613b6e019d5315e7aa23b4bf9cf463ec06fd1d0",
+      "verdict": "supported",
+      "rationale": "S6.SS5의 플랫폼별63/63, topology53 scenarios, stage hits334/376와328/376, 역사적 replay5033 events/0.24s를 확인했다. 시나리오 단위 digest·coverage·offline throughput을 탐지 recall/online latency로 혼합하지 않는다."
+    },
+    {
+      "id": "C13",
+      "anchor": "S7.SS1",
+      "quote_sha256": "8c1fcede013c538b5d1a7ccf735e35c2ae2989685aaa11141db9671c7e07b10f",
+      "verdict": "supported",
+      "rationale": "S7.SS1의 rewrite/inference/retention/coverage/target extraction 한계와 effect-ledger/exactly-once/global-budget 부재를 확인했다. replay equality는 complete mediation이나 external effect 확인이 아니고 decomposition invariance/독립 증분 효과도 확립되지 않는다."
+    },
+    {
+      "id": "C14",
+      "anchor": "S9",
+      "quote_sha256": "b6b825287ea7c06bf3567a0450a8862474f5e9ffac7bc6bbbd799a97b4328d28",
+      "verdict": "supported",
+      "rationale": "S9의 실패·utility·reconstruction 범위와 controlled decomposition/same-platform tests 필요성을 근거로 한 분석자 해석이다. 신규성, 실환경 안전성 또는 보안 완결성의 독립 검증 주장으로 올리지 않는다."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_malformed_reference_and_unresolved_links_are_rejected"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "4f298503aa6acf3e58a3db01c7ccf25b67ffb1b12243edd4dfdf6e40356d20f5",
+    "stderr.txt": "b70dffca8ca4bfad5429b247c81d42cedba85c78dd171d3812af5c35d55b4286",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "58f702d5c5b9886a6ea2caa5ace575ee7df17b7cc428368c575dd1fedbd13078"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "original_file": "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+  "original_sha256": "48a28e97b34fc8e5b157657633670cd1b7de126cfc414da65ce9c3d5bc8be733",
+  "output_file": "lecture-korean.woff2",
+  "output_sha256": "44eedcad89e99793299b28e6d3d7724623ca42d3b0dfdb8f0eb4be8d6672b9c2",
+  "bytes": 98940,
+  "license": "OFL-1.1",
+  "family": "LectureWikiSans",
+  "original_file_unchanged": true,
+  "dropped_editor_tables": [
+    "TSI0",
+    "TSI1",
+    "TSI2",
+    "TSI3",
+    "TSI5"
+  ],
+  "reason": "Chromium OTS rejected zero-length TSI3 in the installed original; use standard FontTools subset with renamed derivative."
+}

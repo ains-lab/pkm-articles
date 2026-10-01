@@ -1,0 +1,291 @@
+{
+  "run_id": "20260929T042631Z-pdf-capture-808d882a",
+  "run_path": "_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a",
+  "started_at": "2026-09-29T04:26:31.212630+00:00",
+  "kst_date": "2026-09-29",
+  "owner": {
+    "run_id": "20260929T042631Z-pdf-capture-808d882a",
+    "cron_id": "4cff5b4f10ec",
+    "started_at": "2026-09-29T04:26:31.212630+00:00",
+    "type": "manual_requested_pdf_original_capture",
+    "lock_scope": "cross-tool manual operation"
+  },
+  "requested_ids": [
+    "2609.30614v1",
+    "2609.30824v1"
+  ],
+  "state_before": {
+    "schema": "paper-collection-state/v2",
+    "cron_id": "4cff5b4f10ec",
+    "first_window_floor": "2026-09-27T07:07:13.632288+00:00",
+    "discovered_through": "2026-09-28T15:03:02.148817+00:00",
+    "last_complete_at": "2026-09-28T15:08:21.141383+00:00",
+    "pending": [
+      {
+        "source": "arxiv",
+        "base_id": "2609.30614",
+        "version_id": "2609.30614v1",
+        "title": "Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+        "abs_url": "https://arxiv.org/abs/2609.30614v1",
+        "source_url": "https://arxiv.org/pdf/2609.30614v1",
+        "target_format": "pdf",
+        "reason": "confirmed_html_unavailable_pdf_fallback",
+        "queued_at": "2026-09-29T03:49:50.822491+00:00",
+        "next_attempt_at": "2026-09-29T03:49:50.822491+00:00",
+        "html_unavailable_evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+        "html_unavailable_checked_at": "2026-09-28T10:49:18.370788+00:00",
+        "authorization_run_id": "20260929T034401Z-pdf-fallback-policy",
+        "metadata_status": "verify_versioned_bibliography_before_capture"
+      },
+      {
+        "source": "arxiv",
+        "base_id": "2609.30824",
+        "version_id": "2609.30824v1",
+        "title": "Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal",
+        "abs_url": "https://arxiv.org/abs/2609.30824v1",
+        "source_url": "https://arxiv.org/pdf/2609.30824v1",
+        "target_format": "pdf",
+        "reason": "confirmed_html_unavailable_pdf_fallback",
+        "queued_at": "2026-09-29T03:49:50.822491+00:00",
+        "next_attempt_at": "2026-09-29T03:49:50.822491+00:00",
+        "html_unavailable_evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+        "html_unavailable_checked_at": "2026-09-28T10:49:21.632536+00:00",
+        "authorization_run_id": "20260929T034401Z-pdf-fallback-policy",
+        "metadata_status": "verify_versioned_bibliography_before_capture"
+      }
+    ],
+    "daily_attempts": {
+      "2026-09-28": [
+        "2609.31562v1",
+        "2609.31358v1",
+        "2609.31318v1",
+        "2609.31039v1",
+        "2609.30940v1",
+        "2609.30830v1",
+        "2609.30824v1",
+        "2609.30614v1",
+        "2609.30266v1",
+        "2609.30217v1"
+      ]
+    },
+    "consecutive_failed_runs": 0,
+    "safety_block": false,
+    "safety_block_reason": null,
+    "last_run": {
+      "run_id": "20260928T150302Z-78f455f6",
+      "type": "scheduled_html_original_collection",
+      "started_at": "2026-09-28T15:03:02.148817+00:00",
+      "finished_at": "2026-09-28T15:08:21.141383+00:00",
+      "status": "completed_zero_results",
+      "counts": {
+        "search_pages": 1,
+        "search_records_validated": 100,
+        "candidates_in_window": 0,
+        "new_html_saved": 0,
+        "duplicates_processed": 0,
+        "new_html_unavailable": 0,
+        "source_failures": 0,
+        "unrecovered_core_failures": 0,
+        "recovered_api_transport_failures": 1,
+        "existing_html_verified": 8,
+        "existing_html_unavailable_not_due": 2,
+        "html_files": 8,
+        "source_json_files": 8,
+        "reference_json_files": 0,
+        "knowledge_pages": 0,
+        "new_daily_attempts": 0,
+        "existing_daily_attempts_preserved": 10,
+        "daily_attempts_today": 0,
+        "pending": 0,
+        "total_targets": 10
+      },
+      "report_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/report.json"
+    },
+    "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+    "one_off_authorizations": [
+      {
+        "kst_date": "2026-09-28",
+        "authorized_papers": 10,
+        "version_ids": [
+          "2609.30217v1",
+          "2609.30266v1",
+          "2609.30614v1",
+          "2609.30824v1",
+          "2609.30830v1",
+          "2609.30940v1",
+          "2609.31039v1",
+          "2609.31318v1",
+          "2609.31358v1",
+          "2609.31562v1"
+        ],
+        "original_run_id": "20260928T075808Z-58958f18",
+        "completion_run_id": "20260928T083759Z-textv2-a3e894c1",
+        "status": "prior_source_collection_retired_by_user_approved_html_only_migration"
+      }
+    ],
+    "html_unavailable": [
+      {
+        "source": "arxiv",
+        "base_id": "2609.30614",
+        "version_id": "2609.30614v1",
+        "title": "Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+        "source_url": "https://arxiv.org/html/2609.30614v1",
+        "abs_url": "https://arxiv.org/abs/2609.30614v1",
+        "status": "html_unavailable",
+        "http_status": 404,
+        "checked_at": "2026-09-28T10:49:18.370788+00:00",
+        "next_retry_at": "2026-10-05T10:49:18.370788+00:00",
+        "evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+        "local_fulltext_preserved": false,
+        "pdf_deleted_per_user_approval": true,
+        "pdf_fallback_status": "pending"
+      },
+      {
+        "source": "arxiv",
+        "base_id": "2609.30824",
+        "version_id": "2609.30824v1",
+        "title": "Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal",
+        "source_url": "https://arxiv.org/html/2609.30824v1",
+        "abs_url": "https://arxiv.org/abs/2609.30824v1",
+        "status": "html_unavailable",
+        "http_status": 404,
+        "checked_at": "2026-09-28T10:49:21.632536+00:00",
+        "next_retry_at": "2026-10-05T10:49:21.632536+00:00",
+        "evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+        "local_fulltext_preserved": false,
+        "pdf_deleted_per_user_approval": true,
+        "pdf_fallback_status": "pending"
+      }
+    ],
+    "html_original_migration": {
+      "run_id": "20260928T104108Z-html-only",
+      "approved_existing_ids": [
+        "2609.30217v1",
+        "2609.30266v1",
+        "2609.30614v1",
+        "2609.30824v1",
+        "2609.30830v1",
+        "2609.30940v1",
+        "2609.31039v1",
+        "2609.31318v1",
+        "2609.31358v1",
+        "2609.31562v1"
+      ],
+      "html_captured_ids": [
+        "2609.30217v1",
+        "2609.30266v1",
+        "2609.30830v1",
+        "2609.30940v1",
+        "2609.31039v1",
+        "2609.31318v1",
+        "2609.31358v1",
+        "2609.31562v1"
+      ],
+      "html_unavailable_ids": [
+        "2609.30614v1",
+        "2609.30824v1"
+      ],
+      "backup_created": false,
+      "preprocessing_removed": true
+    },
+    "policy_update": {
+      "run_id": "20260929T034401Z-pdf-fallback-policy",
+      "updated_at": "2026-09-29T03:49:50.822491+00:00",
+      "previous_pipeline_id": "arxiv-html-original/v1",
+      "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+      "queued_pdf_ids": [
+        "2609.30614v1",
+        "2609.30824v1"
+      ],
+      "downloads_performed": false,
+      "discovery_checkpoint_unchanged": true,
+      "evidence_path": "_meta/migrations/20260929T034401Z-pdf-fallback-policy/"
+    }
+  },
+  "state_before_sha256": "2e0015430751d3f0cf64e26bf57b2bdb8eaacf96f88a53a539c5d3aa413f07ef",
+  "existing_raw_sha256": {
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c"
+  },
+  "policy_and_docs_sha256": {
+    "AGENTS.md": "f8ae6cc0285a78fbb3e96f55fe11aba2cc488bf9516799f4b289a7fa5c5ba84f",
+    "SCHEMA.md": "d3586cc61085faea027fa432420bcd9c50e4063467272fbe8ef29b570619d153",
+    "README.md": "696d4309f665526b676846c5f48b20568fa669738653f0c74ad9c55e40968aca",
+    "_meta/topics.json": "4abeded0e5cab949520014ba2d4f8e91689c25f505e1ddf234665bd816bbce20",
+    "_meta/COLLECTION.md": "138563e8854d10ff97e309f87519edc5432550e4246659b640d6aaac3a50674d",
+    "_meta/COMPILATION.md": "9068156ab1f4d12545b182d0bac6527032b1b5124695c9e920021b9f12927cf1",
+    "docs/lectures/5w/paper-collection.md": "dcd8dd71deb6e7e5408ef139eeef3afa755a03920bfd8a49f4270d7701551904",
+    "docs/lectures/5w/paper-collection-cron.md": "895315100526f0b0ea0cb3f51ddf88c34805ba2c31ce6ce03e7d6d128e455391"
+  },
+  "log_before_bytes": 46531,
+  "log_before_sha256": "1e0ccd226478b9b3f240f8abfda4388e685753b76852dff9650e8dcf4dd5c6d7",
+  "html_unavailable_evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+  "html_unavailable_evidence_sha256": "81c523a5d8e247833d49161244f5eb11298f32106d715087ad78748be2d69b63",
+  "bibliography": [
+    {
+      "source": "arxiv",
+      "base_id": "2609.30824",
+      "version_id": "2609.30824v1",
+      "title": "Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal",
+      "authors": [
+        "Srikumar Subramanian",
+        "Shubhashis Sengupta"
+      ],
+      "abstract": "The prospect of fully autonomous transactional agents did not appear on the horizon until the advent of high capability language models. With such models, the operational benefits of adaptive task orchestration and independent (but constrained) decision making are tantalizing for enterprises and individuals alike. However, each such agent carries with it a serious attack surface in the form of prompt injection which can compromise any soft \"guard rails\" that may have been placed in context. The consequences of these attacks include credential ex-filtration which, if left unmitigated, renders the whole category of such agents unusable due to breach of trust. Furthermore, expecting a growth of autonomous agents, a security framework for them would require a form of decentralization to scale. Drawing on the proposed OAuth Agent Authorization Profile and the W3C DID and VC standards, we propose a framework based on the principles of capability based security with decentralized agent identity whereby agents access services based on tokens that are cryptographically bound to the agent's and issuer's identities and specify their scope. Services can validate that the delegation chain only involves scope attenuation before acting on any given token. We show that such a layer that lives outside the language model's context window in a secure module can enable agents to act within enforceable security boundaries.",
+      "published": "2026-09-25T05:07:28Z",
+      "updated": "2026-09-25T05:07:28Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "abs_url": "https://arxiv.org/abs/2609.30824v1",
+      "bibliography_provenance": {
+        "source_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.dom-text.xml",
+        "source_sha256": "b5aa2523a7b1c0915757fd2b31daab090e1e9367993d76897c714e186f934f32",
+        "captured_at": "2026-09-28T15:04:29.395Z",
+        "capture_method": "previous_official_api_atom_DOM_text_capture",
+        "reused_existing_versioned_record": true
+      }
+    },
+    {
+      "source": "arxiv",
+      "base_id": "2609.30614",
+      "version_id": "2609.30614v1",
+      "title": "Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+      "authors": [
+        "Seungho Lee",
+        "Changbin Lee"
+      ],
+      "abstract": "Dataspace connectors decide whether a transfer may occur, not what the transferred value contains, tolerable for contracted applications, not for LLM agents that compose tool calls and spawn sub-agents. Research on agents that generate governance artifacts evaluates output quality; who may authorize an artifact for use falls between that literature and the governance literature, and neither owns it. A published policy is what a dataspace's decision point enforces, so publication is a governance event, and an agent that is both policy subject and policy author writes the norms that bind it. We name this the authorship hazard and state one principle: an agent is a subject of the governance plane, never an author of it. Its authorization channel to publication is closed by construction; its influence channel, drafting what humans approve, is treated as an enforcement problem. On a frozen corpus of agent drafts, publishing without approval reverses 80 authorization decisions, most through drafts that change only a field's sensitivity classification and no policy text; a classifier that reads the policy diff misses every such draft, necessarily. Treating classification as authorship routes them all to review; the registry-held classification this requires is designed and modelled here, not yet implemented in the prototype. At the execution boundary, protected fields reach the model in 105 of 105 cases under prompt-stated duties and in 0 of 105 when the ODRL duty is compiled into an invocation-time tool-call constraint, but where the value is not confined to a named field the compiled condition exposes it in 7 of 7. A centrally provisioned approval pool does not scale to the participant volume that motivates the problem.",
+      "published": "2026-09-24T22:58:16Z",
+      "updated": "2026-09-24T22:58:16Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.DB",
+        "cs.MA"
+      ],
+      "abs_url": "https://arxiv.org/abs/2609.30614v1",
+      "bibliography_provenance": {
+        "source_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.dom-text.xml",
+        "source_sha256": "b5aa2523a7b1c0915757fd2b31daab090e1e9367993d76897c714e186f934f32",
+        "captured_at": "2026-09-28T15:04:29.395Z",
+        "capture_method": "previous_official_api_atom_DOM_text_capture",
+        "reused_existing_versioned_record": true
+      }
+    }
+  ]
+}

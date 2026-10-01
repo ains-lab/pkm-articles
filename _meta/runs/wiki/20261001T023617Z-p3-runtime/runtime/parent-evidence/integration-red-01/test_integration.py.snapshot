@@ -1,0 +1,69 @@
+"""Real daily/content/publication integration with synthetic papers/fake model."""
+import copy
+import json
+from pathlib import Path
+import unittest
+
+import p3_common as C
+import daily
+from test_daily import Fixture, RUN, APPROVAL
+from test_content import Fixture as ContentFixture, UNREAD, response, review_payload
+
+class Model:
+    def __init__(self):self.calls=[];self.closed=0
+    def __call__(self,**kwargs):
+        owner=self
+        assert kwargs['max_retries']==0
+        class Client:
+            def __init__(self):self.responses=self
+            def create(self,**request):
+                owner.calls.append(request)
+                payload=json.loads(request['input'][0]['content'][0]['text'])
+                if 'document' in payload:return response(review_payload(payload['document']))
+                anchors=payload['telemetry']['read_scope']
+                anchor=anchors[0]
+                quote='Alpha evidence.' if 'html' in payload['source'] else payload['source']['pages'][0]['text'].strip()
+                doc=dict(title=payload['title'],summary='합성 텍스트 근거와 한계를 정리한다.',version_id=payload['version_id'],
+                    main_text_complete=True,read_scope=anchors,unread_scope=list(UNREAD),limitations=['독립 실험 재현 미수행.'],
+                    claims=[dict(id='C01',kind='author_report',statement='합성 근거를 보고한다.',conditions='합성 시험 자료에 한정.',anchor=anchor,quote=quote)],
+                    markdown_body=f"# 합성 노트\n버전 {payload['version_id']}; 읽은 범위: {', '.join(anchors)}\nC01 합성 근거 보고. ^[{payload['source_path']}#{anchor}]\n"+'\n'.join(UNREAD)+'\n')
+                return response(doc)
+            def close(self):owner.closed+=1
+        return Client()
+
+class IntegrationTests(unittest.TestCase):
+    def setUp(self):
+        self.f=Fixture();self.addCleanup(self.f.close)
+    def test_two_formats_generate_review_publish_and_next_run_noop(self):
+        self.f.source('2610.00001v1')
+        self.f.source('2610.00002v1',fmt='pdf')
+        source_fixture=ContentFixture();self.addCleanup(source_fixture.close)
+        pdf=source_fixture.use_pdf(('Alpha evidence.','Beta evidence.'))
+        data=source_fixture.ctx['fs'].read(source_fixture.ctx['item']['source_path'])
+        base='raw/articles/4cff5b4f10ec/arxiv-2610.00002v1/'
+        self.f.put(base+'source.pdf',data)
+        meta=C.decode(self.f.fs.read(base+'source.json'))
+        meta.update(pdf_sha256=C.sha(data),pdf_bytes=len(data))
+        self.f.put(base+'source.json',C.encoded(meta))
+        originals={str(p.relative_to(self.f.root)):C.sha(p.read_bytes()) for p in (self.f.root/'raw').rglob('*') if p.is_file()}
+        model=Model()
+        out=daily.run_daily(**self.f.kw(),client_factory=model,pdf_module=pdf)
+        self.assertEqual(out['status'],'committed')
+        self.assertEqual(len(model.calls),4)
+        self.assertEqual(model.closed,4)
+        state=C.decode(self.f.fs.read(C.STATE))
+        self.assertEqual([i['status'] for i in state['items']],['published_draft','published_draft'])
+        self.assertEqual(len(state['transactions']),2)
+        self.assertEqual(self.f.fs.read('log.md').count(b'<!-- publication-event:'),2)
+        for p,h in originals.items():self.assertEqual(C.sha(self.f.fs.read(p)),h)
+        second='_meta/runs/wiki/synthetic-next'
+        # Manual approval changes its run but not policy/work identity.
+        self.f.approval.update(run=second,edit_freeze={'mode':'run','run':second})
+        self.f.put(APPROVAL,C.encoded(self.f.approval))
+        watched={p:C.sha(self.f.fs.read(p)) for p in ('index.md','log.md',C.STATE)}
+        no=daily.run_daily(**dict(self.f.kw(),run=second),client_factory=model,pdf_module=pdf)
+        self.assertEqual(no['status'],'noop')
+        self.assertEqual(len(model.calls),4)
+        self.assertEqual(watched,{p:C.sha(self.f.fs.read(p)) for p in watched})
+
+if __name__=='__main__':unittest.main(verbosity=2)

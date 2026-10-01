@@ -1,0 +1,38 @@
+{
+  "source": "arxiv",
+  "base_id": "2609.35088",
+  "version_id": "2609.35088v1",
+  "title": "When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents",
+  "authors": [
+    "Geonwoo Kim",
+    "Brent ByungHoon Kang"
+  ],
+  "abstract": "Tool-enabled agents form calls from model-visible interfaces, while hosts later select their implementation. Standard dispatch omits the descriptor-handler relation. An unchanged and schema-valid call can therefore acquire a different security effect during rollout, reconnect, or delayed approval. We call this failure schema-epoch drift. We present formation-consistent dispatch (FCD), which connects implementation analysis to execution authority. Reviewed profiles produce provenance-bound over-approximations of declared in-scope effects from official source. Under a closed-target approval policy, a verifier applies each formed call to a summary and captures a successor only when its effects fit the call's security contract. Atomic admission and a final-hop fence preserve this decision to the effect. The exact source retains priority, and the captured successor becomes eligible only after source retirement. Stock releases and deployment changes reproduced the failure. Four profiles covered 32 official releases: 29 required no release-specific change and three escalated. A frozen 16-release expansion matched a separate source oracle. In a preregistered stock comparison, FCD completed all three pending calls whose effect remained private and blocked all three whose omission became public. Exact pinning and release-wide denial stopped all six calls, while release-wide approval completed all six but produced three public effects. A separate lifecycle experiment carried a formation-captured certificate across source retirement. The same safe certificate installed later governed new formations without expanding the pending call's authority.",
+  "published": "2026-09-28T13:04:04Z",
+  "updated": "2026-09-28T13:04:04Z",
+  "categories": [
+    "cs.AI",
+    "cs.CR",
+    "cs.SE"
+  ],
+  "abs_url": "https://arxiv.org/abs/2609.35088v1",
+  "schema": "arxiv-html-source/v1",
+  "source_format": "html",
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/html/2609.35088v1",
+  "collected_at": "2026-09-30T15:09:24.426531+00:00",
+  "html_file": "source.html",
+  "html_sha256": "39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c",
+  "html_bytes": 432731,
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2609.35088v1",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "capture_method": "http_response_body_no_rewrite",
+  "content_scope": "html_fulltext_as_served",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml"
+}

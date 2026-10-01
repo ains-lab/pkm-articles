@@ -1,0 +1,21 @@
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... FAIL
+
+======================================================================
+FAIL: test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 112, in test_daily_commits_auto_verified_then_noops_without_second_model
+    self.assertEqual([w['path'] for w in wiki], [f'entities/arxiv-{VID}.md'])
+AssertionError: Lists differ: [] != ['entities/arxiv-2610.00001v1.md']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'entities/arxiv-2610.00001v1.md'
+
+- []
++ ['entities/arxiv-2610.00001v1.md']
+
+----------------------------------------------------------------------
+Ran 1 test in 4.002s
+
+FAILED (failures=1)

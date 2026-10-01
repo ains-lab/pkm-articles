@@ -1,0 +1,1503 @@
+{
+  "schema": "pkm-integration-prepublication-verification/v1",
+  "passed": true,
+  "checked_at": "2026-09-30T13:29:25.701861+00:00",
+  "result_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+  "result_sha256": "7645d7d920950db54879e5207b51ecf1f0d2f1dc6b2ccbcbcff2f3d27a62c58b",
+  "agent_review_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+  "pages": [
+    {
+      "path": "concepts/agent-authority-and-effect-boundaries.md",
+      "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+      "revision": "1",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/concepts/agent-authority-and-effect-boundaries.md"
+    },
+    {
+      "path": "concepts/provenance-and-audit-evidence.md",
+      "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+      "revision": "1",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/concepts/provenance-and-audit-evidence.md"
+    },
+    {
+      "path": "concepts/security-evaluation-units.md",
+      "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+      "revision": "1",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/concepts/security-evaluation-units.md"
+    },
+    {
+      "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364",
+      "revision": "1",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/comparisons/agate-vs-sdc-mcp-gateway.md"
+    },
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0",
+      "revision": "2",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/entities/arxiv-2609.30830v1.md"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4",
+      "revision": "2",
+      "stage_path": "_meta/staging/wiki/20260930T125856Z-p2-integration/entities/arxiv-2609.31358v1.md"
+    }
+  ],
+  "page_count": 6,
+  "new_claims": 36,
+  "literal_evidence_checks": 73,
+  "local_markdown_links_checked": 222,
+  "links": [
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2.p4"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS1.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS1.p2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1.p4"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2.p2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2.p6",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2.p6"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1.p2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p2"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p5"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p5"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2.p3"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p4"
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "anchor": null
+    },
+    {
+      "from": "concepts/agent-authority-and-effect-boundaries.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "anchor": null
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3.p1"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p5"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3.p2"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3.p6",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3.p6"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.p5"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS2.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS2.p5"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS5.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS5.p2"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS5.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS5.p3"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1.p5"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.SS2.SSS0.Px1.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.SS2.SSS0.Px1.p1"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.SS2.SSS0.Px1.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.SS2.SSS0.Px1.p3"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p7",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p7"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1.p5"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1"
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "anchor": null
+    },
+    {
+      "from": "concepts/provenance-and-audit-evidence.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "anchor": null
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS3.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS3.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1.p2"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5.p2"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p4"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.SS4.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.SS4.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.SS5.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.SS5.p4"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p2"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.SS4.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.SS4.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS1.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS1.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.SS2.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.SS2.p3"
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "anchor": null
+    },
+    {
+      "from": "concepts/security-evaluation-units.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "anchor": null
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS1.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS1.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3.SS2.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3.SS2.p1"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3.SS2.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3.SS2.p2"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3.SS1.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3.SS1.p2"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p6",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p6"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p7",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p7"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2.p2"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1.p4"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p5"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3.p5"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3.p6",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3.p6"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p4"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p5"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1.p5"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.p1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.p1"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5.SS2.p3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5.SS2.p3"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1.p2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1.p2"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.p5"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1.p4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1.p4"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p6",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p6"
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+      "anchor": null
+    },
+    {
+      "from": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "href": "../_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "target": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+      "anchor": null
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS2.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS2.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S9",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S9"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS2.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS2.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.T4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.T4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.T4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.T4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.T4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.T4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.T4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.T4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS2.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS2.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S9",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S9"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S9",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S9"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S4.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S4.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.T2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.T2"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S5.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S5.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.T4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.T4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS2.p5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS2.p5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S6.SS5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S6.SS5"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S7.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S7.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S9",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S9"
+    },
+    {
+      "from": "entities/arxiv-2609.30830v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html#S9",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "anchor": "S9"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p4.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p4.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p4.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p4.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p4.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p4.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4.p4.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4.p4.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S5",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S5"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS2",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS2"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS3",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS3"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS4",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS4"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S6.SS6.p1.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S6.SS6.p1.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    },
+    {
+      "from": "entities/arxiv-2609.31358v1.md",
+      "href": "../raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html#S7.p3.1",
+      "target": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "anchor": "S7.p3.1"
+    }
+  ],
+  "wikilink_edges": [
+    [
+      "concepts/agent-authority-and-effect-boundaries.md",
+      "concepts/security-evaluation-units.md"
+    ],
+    [
+      "concepts/agent-authority-and-effect-boundaries.md",
+      "comparisons/agate-vs-sdc-mcp-gateway.md"
+    ],
+    [
+      "concepts/agent-authority-and-effect-boundaries.md",
+      "concepts/provenance-and-audit-evidence.md"
+    ],
+    [
+      "concepts/agent-authority-and-effect-boundaries.md",
+      "entities/arxiv-2609.30830v1.md"
+    ],
+    [
+      "concepts/agent-authority-and-effect-boundaries.md",
+      "entities/arxiv-2609.31358v1.md"
+    ],
+    [
+      "concepts/provenance-and-audit-evidence.md",
+      "concepts/security-evaluation-units.md"
+    ],
+    [
+      "concepts/provenance-and-audit-evidence.md",
+      "comparisons/agate-vs-sdc-mcp-gateway.md"
+    ],
+    [
+      "concepts/provenance-and-audit-evidence.md",
+      "concepts/agent-authority-and-effect-boundaries.md"
+    ],
+    [
+      "concepts/provenance-and-audit-evidence.md",
+      "entities/arxiv-2609.30830v1.md"
+    ],
+    [
+      "concepts/provenance-and-audit-evidence.md",
+      "entities/arxiv-2609.31358v1.md"
+    ],
+    [
+      "concepts/security-evaluation-units.md",
+      "comparisons/agate-vs-sdc-mcp-gateway.md"
+    ],
+    [
+      "concepts/security-evaluation-units.md",
+      "concepts/agent-authority-and-effect-boundaries.md"
+    ],
+    [
+      "concepts/security-evaluation-units.md",
+      "concepts/provenance-and-audit-evidence.md"
+    ],
+    [
+      "concepts/security-evaluation-units.md",
+      "entities/arxiv-2609.30830v1.md"
+    ],
+    [
+      "concepts/security-evaluation-units.md",
+      "entities/arxiv-2609.31358v1.md"
+    ],
+    [
+      "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "concepts/security-evaluation-units.md"
+    ],
+    [
+      "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "concepts/agent-authority-and-effect-boundaries.md"
+    ],
+    [
+      "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "concepts/provenance-and-audit-evidence.md"
+    ],
+    [
+      "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "entities/arxiv-2609.30830v1.md"
+    ],
+    [
+      "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "entities/arxiv-2609.31358v1.md"
+    ],
+    [
+      "entities/arxiv-2609.30830v1.md",
+      "concepts/security-evaluation-units.md"
+    ],
+    [
+      "entities/arxiv-2609.30830v1.md",
+      "concepts/agent-authority-and-effect-boundaries.md"
+    ],
+    [
+      "entities/arxiv-2609.30830v1.md",
+      "concepts/provenance-and-audit-evidence.md"
+    ],
+    [
+      "entities/arxiv-2609.30830v1.md",
+      "comparisons/agate-vs-sdc-mcp-gateway.md"
+    ],
+    [
+      "entities/arxiv-2609.31358v1.md",
+      "concepts/security-evaluation-units.md"
+    ],
+    [
+      "entities/arxiv-2609.31358v1.md",
+      "concepts/agent-authority-and-effect-boundaries.md"
+    ],
+    [
+      "entities/arxiv-2609.31358v1.md",
+      "concepts/provenance-and-audit-evidence.md"
+    ],
+    [
+      "entities/arxiv-2609.31358v1.md",
+      "comparisons/agate-vs-sdc-mcp-gateway.md"
+    ]
+  ],
+  "broken_links": [],
+  "orphan_pages": [],
+  "protected_files_unchanged": 74,
+  "canonical_before_hashes_unchanged": true,
+  "human_review_completed": false
+}

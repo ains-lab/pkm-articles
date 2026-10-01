@@ -1,0 +1,33 @@
+{
+  "requested_url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22AI+agent%22+OR+all%3A%22autonomous+agent%22+OR+all%3A%22LLM+agent%22+OR+all%3A%22intelligent+agent%22%29+AND+%28all%3Asecurity+OR+all%3Asafety+OR+all%3Avulnerability+OR+all%3Aattack+OR+all%3Adefense+OR+all%3Arobustness+OR+all%3Aadversarial%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=100",
+  "parameters": {
+    "search_query": "(all:\"AI agent\" OR all:\"autonomous agent\" OR all:\"LLM agent\" OR all:\"intelligent agent\") AND (all:security OR all:safety OR all:vulnerability OR all:attack OR all:defense OR all:robustness OR all:adversarial)",
+    "sortBy": "lastUpdatedDate",
+    "sortOrder": "descending",
+    "start": 0,
+    "max_results": 100
+  },
+  "requested_at": "2026-09-28T15:03:35.730955+00:00",
+  "capture_method": "http_response_body_no_rewrite",
+  "accept_encoding": "identity",
+  "http_status": 406,
+  "final_url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22AI+agent%22+OR+all%3A%22autonomous+agent%22+OR+all%3A%22LLM+agent%22+OR+all%3A%22intelligent+agent%22%29+AND+%28all%3Asecurity+OR+all%3Asafety+OR+all%3Avulnerability+OR+all%3Aattack+OR+all%3Adefense+OR+all%3Arobustness+OR+all%3Aadversarial%29&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=100",
+  "headers": {
+    "Connection": "close",
+    "cache-control": "private, no-store",
+    "Accept-Ranges": "bytes",
+    "Via": "1.1 varnish, 1.1 varnish",
+    "Date": "Mon, 28 Sep 2026 14:53:29 GMT",
+    "X-Served-By": "cache-lga-kjfk8660021-LGA, cache-lga-kjfk8660021-LGA, cache-icn1450044-ICN",
+    "X-Cache": "MISS, MISS",
+    "X-Cache-Hits": "0, 0",
+    "X-Timer": "S1790607210.736822,VS0,VE188",
+    "Strict-Transport-Security": "max-age=300",
+    "transfer-encoding": "chunked"
+  },
+  "body_bytes": 0,
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "body_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.http-body",
+  "length_matches_header": true,
+  "finished_at": "2026-09-28T15:03:36.060379+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "source": "arxiv",
+  "base_id": "2605.09027",
+  "version_id": "2605.09027v3",
+  "title": "Agent Collectives Should Not Detect Their Own Imposters: A Chess Case Study",
+  "authors": [
+    "Alexandre Le Mercier",
+    "Chris Develder",
+    "Thomas Demeester"
+  ],
+  "abstract": "A collective of AI agents collaborating on a task has the potential to outclass any individual agent for that task. We study the robustness of such collectives against possible imposters, i.e., agents that deliberately try to mislead their peers. Since a single imposter could undo the collective's advantage, we need to detect them. We consider two strategies: (i) incorporate imposter detection into the participating agents, or (ii) use a dedicated imposter detector outside the collective. We investigate this empirically on Gambit, a testbed in which 4 reasoning agents deliberate on chess moves. The setting is small but still challenging for frontier models. Chess allows objective, quantitative assessment (via a state-of-the-art chess engine) of both the gain of using a collective and the damage done by imposters. We find that merely warning the agents of potential imposter presence is not beneficial: it degrades decisions when no imposter is present, provokes reactions ranging from self-accusation to scapegoating, inflates token use, and reveals to the imposter how it was uncovered. We therefore recommend a detector that reads the collective's deliberation but never joins it and only returns a verdict. Such a detector must recalibrate to new attack strategies after very few examples, rather than wait for full retraining. In our benchmark, a 3B language model with a meta-trained classification head achieves that: a single gradient step on 20 labeled examples suffices to adapt to an unseen imposter strategy. At matched zero-shot accuracy, this detector yields 8x the adaptation gain of standard finetuning, at 14x lower training cost. We release the Gambit benchmark, with 37,352 labeled deliberations spanning 240 evolved imposter strategies. Code and data: https://anonymous.4open.science/r/gambit.",
+  "published": "2026-05-09T16:07:23Z",
+  "updated": "2026-09-28T12:17:01Z",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "abs_url": "https://arxiv.org/abs/2605.09027v3",
+  "schema": "arxiv-html-source/v1",
+  "source_format": "html",
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/html/2605.09027v3",
+  "collected_at": "2026-09-30T15:09:27.411272+00:00",
+  "html_file": "source.html",
+  "html_sha256": "341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab",
+  "html_bytes": 226687,
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2605.09027v3",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "capture_method": "http_response_body_no_rewrite",
+  "content_scope": "html_fulltext_as_served",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "metadata_evidence_path": "_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/search-page-000.xml"
+}

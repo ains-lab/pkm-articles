@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-09-30T08:53:26.286770+00:00",
+  "test_summary": {
+    "checks": 26,
+    "passed": 17,
+    "failed": 9
+  },
+  "p2_live_compilation_completed": false,
+  "model_calls_this_test": 0,
+  "published_pages_this_test": 0,
+  "protected_files_excluding_log": 38,
+  "changed_protected_files": [],
+  "log_prefix_preserved": true,
+  "appended_event_count": 1,
+  "git_diff_check_exit": 0,
+  "git_diff_check_output": "",
+  "knowledge_pages": 0,
+  "evidence_hashes": {
+    "_meta/runs/wiki/20260930T085029Z-p2-quick-test/test-report.json": "8880ae0ede5e87709ea3b6a79fcba3cf91f974f3c736e925021faf8119154f21",
+    "_meta/runs/wiki/20260930T085029Z-p2-quick-test/initial-test-report.json": "ed6aae2f549a9a4a98c1573a5ce469d7a363b345bd7ee06cedbf63b2891957b7",
+    "_meta/runs/wiki/20260930T085029Z-p2-quick-test/reproduce.md": "dadd7469614272697a156caa74ae4f2e13bae948b1a6b4432d885de1573eddab",
+    "_meta/runs/wiki/20260930T085029Z-p2-quick-test/log-preflight.json": "f3c3e412d0d980f66b84af3f4c678a7d98079b6e5131f062bdb876b65f1ac268",
+    "_meta/runs/wiki/20260930T085029Z-p2-quick-test/report.md": "f415c1f67c1af095aeeb161053c6b4ef123c542374ad8b0dd8940ddc721964af"
+  },
+  "audit_verification_passed": true,
+  "own_lock_released": true
+}

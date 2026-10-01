@@ -1,0 +1,15 @@
+{
+  "scope": "lecture artifact only",
+  "artifact_sha256": "c54043b56d1f7140c3f70d1334352a349d5fae3bfbbd1f001a00d0f28fbff393",
+  "slide_count": 70,
+  "diagram_count": 15,
+  "exercise_count": 6,
+  "source_count": 13,
+  "all_sources_preserved": true,
+  "coverage_complete": true,
+  "external_resource_references": [],
+  "duplicate_ids": 0,
+  "sse_example_json_valid": true,
+  "errors": [],
+  "result": "pass"
+}

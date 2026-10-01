@@ -1,0 +1,59 @@
+{
+  "schema": "pkm-p2-publication-approval/v1",
+  "actor": "user",
+  "approved": true,
+  "phase": "P2",
+  "scope": "publish-validated-staged-drafts",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "run_id": "20260930T100918Z-p2-live-staged",
+  "version_ids": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "confirmed_at": "2026-09-30T10:37:20.963706+00:00",
+  "user_request": "다음 단계 진행해주세요",
+  "confirmation": "편집 중지 확인 · 두 편 게시 승인",
+  "confirmation_scope": "검증된 초안 두 편(2609.30830v1, 2609.31358v1)을 Wiki에 게시하고 색인·로그·컴파일 상태에 반영하려면, 게시 작업 중 Wiki 직접 편집을 중지했다는 확인이 필요합니다. 편집을 중지한 상태이며 두 편의 게시를 승인하시겠습니까? 승인된 두 초안의 로컬 entities/index/log/receipt/compilation 게시만 수행. 기존 생성 승인·결과를 보존하며 모델 재호출·추가 논문·P3–P6·Cron 등록/활성화 권한은 없음. 후속 승인 계약: _meta/runs/wiki/20260930T103720Z-p2-publish-approved/contract-addendum.md",
+  "publication_edit_freeze_confirmed": true,
+  "validated_draft_publication_authorized": true,
+  "generation_approval": {
+    "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/approval.json",
+    "sha256": "2d2a7de23dab4130757a6ea6408a07e5a4567fe31bdff3e84f3553c5b26a3b31"
+  },
+  "bindings": {
+    "2609.30830v1": {
+      "result": {
+        "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json",
+        "sha256": "10a928f689ea5a2ffb8cda88e40e95e1d2086ed394927dd62dab447bac490a93"
+      },
+      "agent_review": {
+        "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-agent-review.json",
+        "sha256": "f1593bc756acfdae8316031d78bdb8b327dabc5d9e976f7472c8496197370109"
+      },
+      "source": {
+        "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+        "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+        "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json",
+        "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72"
+      },
+      "output_path": "entities/arxiv-2609.30830v1.md"
+    },
+    "2609.31358v1": {
+      "result": {
+        "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json",
+        "sha256": "ea53032aa5c7425b6dcb121abf0262fa4d22aae92cfd8cabaca110d682520382"
+      },
+      "agent_review": {
+        "path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-agent-review.json",
+        "sha256": "ae62885e41ce1d7f6c659e86d7c284e7fdf6ed0a3d89e76672db3f03825c0833"
+      },
+      "source": {
+        "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+        "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+        "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json",
+        "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb"
+      },
+      "output_path": "entities/arxiv-2609.31358v1.md"
+    }
+  }
+}

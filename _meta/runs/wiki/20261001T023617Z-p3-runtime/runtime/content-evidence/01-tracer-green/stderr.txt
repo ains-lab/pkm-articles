@@ -1,0 +1,6 @@
+test_html_generation_separate_review_and_bound_artifacts (test_content.ContentTests.test_html_generation_separate_review_and_bound_artifacts) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.060s
+
+OK

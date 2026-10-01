@@ -1,0 +1,14 @@
+test_05_cli_preflight_has_no_pdf_or_model_access (pdf_tests.Tests.test_05_cli_preflight_has_no_pdf_or_model_access) ... FAIL
+
+======================================================================
+FAIL: test_05_cli_preflight_has_no_pdf_or_model_access (pdf_tests.Tests.test_05_cli_preflight_has_no_pdf_or_model_access)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 265, in test_05_cli_preflight_has_no_pdf_or_model_access
+    self.assertTrue(callable(getattr(M, 'main', None)), 'CLI missing')
+AssertionError: False is not true : CLI missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

@@ -1,0 +1,170 @@
+[
+  {
+    "surface": "01-system",
+    "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+    "before": {
+      "nav": {
+        "x": 41,
+        "y": 628.296875,
+        "width": 294,
+        "height": 54,
+        "top": 628.296875,
+        "right": 335,
+        "bottom": 682.296875,
+        "left": 41
+      },
+      "scrollWidth": 355,
+      "clientWidth": 292,
+      "scrollLeft": 0,
+      "zoom": {
+        "x": 348.96875,
+        "y": 633.296875,
+        "width": 44,
+        "height": 44,
+        "top": 633.296875,
+        "right": 392.96875,
+        "bottom": 677.296875,
+        "left": 348.96875
+      },
+      "readout": "PATH\nLENS\n100%"
+    },
+    "after_horizontal_control_scroll": {
+      "scrollLeft": 63,
+      "buttonWithinNav": true,
+      "x": 307.96875,
+      "y": 655.296875,
+      "readout": "PATH\nLENS\n100%"
+    },
+    "after_real_pointer_click": {
+      "readout": "PATH\nMAP\nLENS\n125%",
+      "theme": "light"
+    },
+    "zoom_readout_changed": true
+  },
+  {
+    "surface": "04-query",
+    "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+    "before": {
+      "nav": {
+        "x": 41,
+        "y": 579.4375,
+        "width": 294,
+        "height": 54,
+        "top": 579.4375,
+        "right": 335,
+        "bottom": 633.4375,
+        "left": 41
+      },
+      "scrollWidth": 355,
+      "clientWidth": 292,
+      "scrollLeft": 0,
+      "zoom": {
+        "x": 348.96875,
+        "y": 584.4375,
+        "width": 44,
+        "height": 44,
+        "top": 584.4375,
+        "right": 392.96875,
+        "bottom": 628.4375,
+        "left": 348.96875
+      },
+      "readout": "PATH\nLENS\n100%"
+    },
+    "after_horizontal_control_scroll": {
+      "scrollLeft": 63,
+      "buttonWithinNav": true,
+      "x": 307.96875,
+      "y": 606.4375,
+      "readout": "PATH\nLENS\n100%"
+    },
+    "after_real_pointer_click": {
+      "readout": "PATH\nMAP\nLENS\n125%",
+      "theme": "light"
+    },
+    "zoom_readout_changed": true
+  },
+  {
+    "surface": "07-data-ui",
+    "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+    "before": {
+      "nav": {
+        "x": 41,
+        "y": 568.921875,
+        "width": 294,
+        "height": 54,
+        "top": 568.921875,
+        "right": 335,
+        "bottom": 622.921875,
+        "left": 41
+      },
+      "scrollWidth": 317,
+      "clientWidth": 292,
+      "scrollLeft": 0,
+      "zoom": {
+        "x": 311.375,
+        "y": 573.921875,
+        "width": 44,
+        "height": 44,
+        "top": 573.921875,
+        "right": 355.375,
+        "bottom": 617.921875,
+        "left": 311.375
+      },
+      "readout": "경로\n렌즈\n100%"
+    },
+    "after_horizontal_control_scroll": {
+      "scrollLeft": 25,
+      "buttonWithinNav": true,
+      "x": 308.375,
+      "y": 595.921875,
+      "readout": "경로\n렌즈\n100%"
+    },
+    "after_real_pointer_click": {
+      "readout": "경로\n지도\n렌즈\n125%",
+      "theme": "light"
+    },
+    "zoom_readout_changed": true
+  },
+  {
+    "surface": "08-roadmap",
+    "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+    "before": {
+      "nav": {
+        "x": 41,
+        "y": 374.1875,
+        "width": 294,
+        "height": 54,
+        "top": 374.1875,
+        "right": 335,
+        "bottom": 428.1875,
+        "left": 41
+      },
+      "scrollWidth": 317,
+      "clientWidth": 292,
+      "scrollLeft": 0,
+      "zoom": {
+        "x": 311.375,
+        "y": 379.1875,
+        "width": 44,
+        "height": 44,
+        "top": 379.1875,
+        "right": 355.375,
+        "bottom": 423.1875,
+        "left": 311.375
+      },
+      "readout": "경로\n렌즈\n100%"
+    },
+    "after_horizontal_control_scroll": {
+      "scrollLeft": 25,
+      "buttonWithinNav": true,
+      "x": 308.375,
+      "y": 401.1875,
+      "readout": "경로\n렌즈\n100%"
+    },
+    "after_real_pointer_click": {
+      "readout": "경로\n지도\n렌즈\n125%",
+      "theme": "light"
+    },
+    "zoom_readout_changed": true
+  }
+]

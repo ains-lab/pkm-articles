@@ -1,0 +1,713 @@
+{
+  "schema": "local-document-diagram-evidence/v1",
+  "diagram_type": "workflow",
+  "mode": "document-description",
+  "source_root": "/home/ainsdev/wiki/pkm-articles",
+  "repository_head_claim": false,
+  "service_execution_claim": false,
+  "classifications": {
+    "관측": "문서가 기록한 관측이며 이번 live 재검증을 뜻하지 않음",
+    "정식계약": "정식 Wiki 운영 계약 및 이를 요약한 기술문서",
+    "제안": "아직 구현·배포되지 않은 웹/BFF 연결",
+    "미확인": "이 작업에서 실행·독립 확인하지 않은 항목"
+  },
+  "document_scope": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+      "line": 69,
+      "end_line": 80
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "line": 93,
+      "end_line": 97
+    }
+  ],
+  "historical_snapshots": {
+    "sources": [
+      {
+        "path": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+        "line": 31,
+        "end_line": 47
+      },
+      {
+        "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+        "line": 30,
+        "end_line": 34
+      }
+    ],
+    "rule": "blocked_policy/queued 집계는 역사적 snapshot이며 live 현재값으로 사용하지 않음"
+  },
+  "items": [
+    {
+      "kind": "node",
+      "id": "cron",
+      "claim": "승인 수집 Cron — 4cff5b4f10ec · collect-only",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 97,
+          "end_line": 101
+        },
+        {
+          "path": "SCHEMA.md",
+          "line": 131,
+          "end_line": 137
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "lock",
+      "claim": "정책·잠금 확인 — collection.lock · 소유권 보존",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 11,
+          "end_line": 17
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "search",
+      "claim": "승인 검색·발견 — 검색식·범위·checkpoint",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 19,
+          "end_line": 26
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 99,
+          "end_line": 99
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "busy",
+      "claim": "잠금·정책 대기 — busy는 skip · 강제탈취 금지",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 13,
+          "end_line": 17
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "limit",
+      "claim": "일일 한도 대기 — pending · 저장 완료 아님",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 32,
+          "end_line": 33
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "reserve",
+      "claim": "시도 ID 예약 — KST 최대 5개 · 오래된 대기 우선",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 32,
+          "end_line": 33
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "dedupe",
+      "claim": "중복·버전 검사 — source + version_id",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 28,
+          "end_line": 34
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "reuse",
+      "claim": "완료 원본 재사용 — 형식 불문 · 자동 교체·추가 금지",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 30,
+          "end_line": 33
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 101,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "html_error",
+      "claim": "일시 오류·검토 대기 — 403 / 429 / 5xx / timeout",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 43,
+          "end_line": 45
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 101,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "html",
+      "claim": "동일 버전 HTML 우선 — 공식 응답 바이트 보존",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 38,
+          "end_line": 40
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 99,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "unavailable",
+      "claim": "공식 HTML 미제공 확인 — 404·동일 버전 abs 근거",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 41,
+          "end_line": 42
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "pdf",
+      "claim": "공식 동일 버전 PDF — 무변경 다운로드만 허용",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 42,
+          "end_line": 45
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 99,
+          "end_line": 101
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "pdf_pending",
+      "claim": "PDF 대기·실패 구분 — 양쪽 미제공은 7일 후 재확인",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 43,
+          "end_line": 44
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "conflict",
+      "claim": "동일 버전 충돌 보존 — 같은 형식 hash 차이 · 덮어쓰기 금지",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 30,
+          "end_line": 31
+        },
+        {
+          "path": "SCHEMA.md",
+          "line": 55,
+          "end_line": 59
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "stage",
+      "claim": "staging 보존 검사 — 버전·형식·길이·SHA-256",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 49,
+          "end_line": 50
+        },
+        {
+          "path": "SCHEMA.md",
+          "line": 43,
+          "end_line": 49
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "raw",
+      "claim": "불변 원본 패키지 게시 — 원본 1개 + 최소 source.json",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 49,
+          "end_line": 50
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+          "line": 28,
+          "end_line": 36
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "report",
+      "claim": "실물·상태·집계 대조 — 고유 버전 ID · 확보/대기/실패",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 51,
+          "end_line": 56
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "handoff",
+      "claim": "수집 완료 ≠ 컴파일 — 지식 작성·모델 분석 자동 연결 없음",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 101,
+          "end_line": 101
+        },
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 58,
+          "end_line": 62
+        }
+      ]
+    },
+    {
+      "kind": "node",
+      "id": "list",
+      "claim": "향후 목록 갱신 — 원문 확보와 분석 상태 분리",
+      "classification": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 23,
+          "end_line": 23
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 101,
+          "end_line": 101
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "cron-lock",
+      "from": "cron",
+      "to": "lock",
+      "claim": "수집 실행 범위",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 5,
+          "end_line": 17
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "lock-search",
+      "from": "lock",
+      "to": "search",
+      "claim": "정책 일치·획득",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 13,
+          "end_line": 26
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "lock-busy",
+      "from": "lock",
+      "to": "busy",
+      "claim": "충돌·거부",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 13,
+          "end_line": 17
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "search-dedupe",
+      "from": "search",
+      "to": "dedupe",
+      "claim": "검색·pending 내구 저장",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 21,
+          "end_line": 30
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "dedupe-reuse",
+      "from": "dedupe",
+      "to": "reuse",
+      "claim": "실물·hash 검증 완료",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 30,
+          "end_line": 31
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "dedupe-reserve",
+      "from": "dedupe",
+      "to": "reserve",
+      "claim": "미보관·새 버전",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 30,
+          "end_line": 33
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "reserve-limit",
+      "from": "reserve",
+      "to": "limit",
+      "claim": "한도 도달",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 32,
+          "end_line": 33
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "reserve-html",
+      "from": "reserve",
+      "to": "html",
+      "claim": "한도 내 예약",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 32,
+          "end_line": 39
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "html-error",
+      "from": "html",
+      "to": "html_error",
+      "claim": "일시 오류",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 43,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "html-unavailable",
+      "from": "html",
+      "to": "unavailable",
+      "claim": "미제공 확인 경로",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 41,
+          "end_line": 42
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "html-stage",
+      "from": "html",
+      "to": "stage",
+      "claim": "정상 HTML",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 38,
+          "end_line": 39
+        },
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 49,
+          "end_line": 50
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "unavailable-pdf",
+      "from": "unavailable",
+      "to": "pdf",
+      "claim": "공식 미제공 확정 시만",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 41,
+          "end_line": 42
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "pdf-pending",
+      "from": "pdf",
+      "to": "pdf_pending",
+      "claim": "실패·양쪽 미제공",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 43,
+          "end_line": 44
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "pdf-stage",
+      "from": "pdf",
+      "to": "stage",
+      "claim": "보존 검사 통과",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 42,
+          "end_line": 42
+        },
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 49,
+          "end_line": 50
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "stage-conflict",
+      "from": "stage",
+      "to": "conflict",
+      "claim": "내용 차이·충돌",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 30,
+          "end_line": 31
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "stage-raw",
+      "from": "stage",
+      "to": "raw",
+      "claim": "검증·대상 부재",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 49,
+          "end_line": 50
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "raw-report",
+      "from": "raw",
+      "to": "report",
+      "claim": "실제 게시 확인",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 51,
+          "end_line": 56
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "report-handoff",
+      "from": "report",
+      "to": "handoff",
+      "claim": "수집 결과만 기록",
+      "classification": "정식계약",
+      "sources": [
+        {
+          "path": "_meta/COLLECTION.md",
+          "line": 53,
+          "end_line": 62
+        }
+      ]
+    },
+    {
+      "kind": "edge",
+      "id": "handoff-list",
+      "from": "handoff",
+      "to": "list",
+      "claim": "향후 읽기 projection",
+      "classification": "제안",
+      "sources": [
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+          "line": 101,
+          "end_line": 101
+        },
+        {
+          "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+          "line": 66,
+          "end_line": 70
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "SCHEMA.md",
+      "sha256": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+      "line_count": 157
+    },
+    {
+      "path": "_meta/COLLECTION.md",
+      "sha256": "2d6df3391911b7d22dfd3284ecd4bacfb8aa09d81010484fa262e19d5dac2c30",
+      "line_count": 62
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+      "sha256": "91c21d99f37f4bdcd9ed8317f35d147654491d0ace5a775d9459592abcdd26c1",
+      "line_count": 82
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205",
+      "line_count": 133
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "line_count": 97
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3",
+      "line_count": 127
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "line_count": 122
+    }
+  ],
+  "counts": {
+    "nodes": 19,
+    "edges": 19,
+    "evidence_items": 38
+  },
+  "rendering": {
+    "authored_language": "ko",
+    "viewer_ui": "en fallback",
+    "animation": "none",
+    "repository_validation": false
+  },
+  "artifact_binding": {
+    "specification_sha256": "9187dd5acd14dc26b87d625f451e22574e234c6e868dbefdfd053fa144e7981d",
+    "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+    "delivery_receipt_id": "e5dfd442-7cc4-4781-9336-01ca48ff4e13",
+    "finalize_summary": "diagram.finalize-summary.json",
+    "validation": "verification.json"
+  },
+  "not_executed": [
+    "collector",
+    "원문 HTML/PDF 읽기·추출",
+    "모델 호출",
+    "Wiki 게시",
+    "Gateway/정책/Cron/config 변경",
+    "P3–P6 실행·활성화"
+  ]
+}

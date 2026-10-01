@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "test_publication",
+    "-v"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "exit_code": 0,
+  "source_sha256": {
+    "publication.py": "2ebcf36723e620e048240abffb9692ee2d0bc42fc01cb00b23e6db53d7efee9f",
+    "test_publication.py": "82c4d0c19574823f34927672aedc54546f8b4f5f616414489bbb71463429bfba",
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a"
+  },
+  "legacy_sha256": {
+    "publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+    "compile-one.py": "b8c8904dc912489fd7e64f902a3e51353bc46ee13d5491fe54724279390254ac",
+    "verify-one.py": "d055ec8405ab01000308c5c603dbc432804651fb286c14141dace2dc3fdac0ee"
+  },
+  "observed_at": "2026-10-01T02:50:53.361579+00:00"
+}

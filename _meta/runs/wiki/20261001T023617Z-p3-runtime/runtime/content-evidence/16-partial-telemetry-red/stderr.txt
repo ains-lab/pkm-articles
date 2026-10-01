@@ -1,0 +1,14 @@
+test_pdf_midread_failure_preserves_observed_and_unread_telemetry (test_content.ContentTests.test_pdf_midread_failure_preserves_observed_and_unread_telemetry) ... FAIL
+
+======================================================================
+FAIL: test_pdf_midread_failure_preserves_observed_and_unread_telemetry (test_content.ContentTests.test_pdf_midread_failure_preserves_observed_and_unread_telemetry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 438, in test_pdf_midread_failure_preserves_observed_and_unread_telemetry
+    self.assertIn(f'page={n}: 텍스트 읽기 실패 또는 미시도, 미독', telemetry['required_unread_scope'])
+AssertionError: 'page=2: 텍스트 읽기 실패 또는 미시도, 미독' not found in ['모든 그림·이미지 및 이미지 전용 내용: 미검토', '수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.236s
+
+FAILED (failures=1)

@@ -1,0 +1,71 @@
+{
+  "recorded_at": "2026-09-29T07:08:30.703007+00:00",
+  "protected_count": 42,
+  "changed_protected_files": [],
+  "source_counts": {
+    "html": 8,
+    "pdf": 2
+  },
+  "source_checks": [
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "integrity": true
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "integrity": true
+    }
+  ],
+  "unique_version_count": 10,
+  "collector_record_unchanged": true,
+  "cron_job_ids_unchanged": true,
+  "new_cron_count": 0,
+  "active_knowledge_pages": 0,
+  "active_knowledge_paths": [],
+  "log_prefix_unchanged": true,
+  "collection_lock_present": false,
+  "git_diff_check_passed": true,
+  "stage": "interim_while_generation_running"
+}

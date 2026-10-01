@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b6a09f45-1fbf-45f6-b5d1-08a69ff97343",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/candidate.json",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/architecture-gateway-workdir-20261001-084424/01-connect/diagram.html",
+  "specification": {
+    "sha256": "69572a5eb04f863658b550b7ff2dc09ea2164621ec383d7f3c0fd5e7afc95583",
+    "bytes": 35284
+  },
+  "artifact": {
+    "sha256": "ca98f3ccbb29526890d2e16b3c9cc88bc0aa32334011de9b112da3c70445a909",
+    "bytes": 764003
+  }
+}

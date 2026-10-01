@@ -1,0 +1,156 @@
+test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) ... 
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_basis') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_journal') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_page') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_index') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_log') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_receipt') ... ERROR
+  test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_state') ... ERROR
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_basis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 370, in publish
+    hook('after_basis')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_journal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 377, in publish
+    hook('after_journal')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_page')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 384, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 626, in apply_plan
+    hook('after_page')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 384, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 635, in apply_plan
+    hook('after_index')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 384, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 641, in apply_plan
+    hook('after_log')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 384, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 644, in apply_plan
+    hook('after_receipt')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+======================================================================
+ERROR: test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery (test_scheduled_safety.ScheduledSafetyTests.test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery) (stage='after_state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 114, in test_interrupted_publication_keeps_unknown_report_and_same_transaction_recovery
+    result=daily.run_daily(**f.kw(),client_factory=model,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 554, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 112, in interrupted
+    def interrupted(ctx,bundle,**kw):return original(ctx,bundle,hook=crash,**kw)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 384, in publish
+    g.apply_plan(fs,plan,evidence,hook,guard)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 649, in apply_plan
+    hook('after_state')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 111, in crash
+    raise TimeoutError('publication crossed occurrence end')
+TimeoutError: publication crossed occurrence end
+
+----------------------------------------------------------------------
+Ran 1 test in 16.140s
+
+FAILED (errors=7)

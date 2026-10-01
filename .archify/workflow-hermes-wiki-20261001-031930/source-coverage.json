@@ -1,0 +1,1187 @@
+{
+  "scope": "12 technical Markdown documents and verification.json; slides are preserved derived material, not independent primary evidence",
+  "evidence_basis": "local uncommitted document bytes, not git HEAD source validation",
+  "mapping_granularity": "document sections; detailed node/edge entailment is in each evidence.json",
+  "files": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/DESIGN.md",
+      "bytes": 6103,
+      "sha256": "c23815f301b1abfb72adf8b1c5b11bc91a7d74b590a247a0f72c60bfb51b4e24",
+      "lines": 89,
+      "read_scope": "full",
+      "diagrams": [
+        "07-data-ui",
+        "08-roadmap"
+      ],
+      "guide_sections": "화면·기술 스택·운영 인계",
+      "sections": [
+        {
+          "title": "0. Research log",
+          "line": 6,
+          "end_line": 13,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "1. Atmosphere & identity",
+          "line": 14,
+          "end_line": 19,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "2. Color",
+          "line": 20,
+          "end_line": 36,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "3. Typography",
+          "line": 37,
+          "end_line": 46,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "4. Spacing & layout",
+          "line": 47,
+          "end_line": 55,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "5. Components",
+          "line": 56,
+          "end_line": 68,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "6. Motion & interaction",
+          "line": 69,
+          "end_line": 76,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "7. Depth & surface",
+          "line": 77,
+          "end_line": 80,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "8. Accessibility constraints & accepted debt",
+          "line": 81,
+          "end_line": 89,
+          "diagrams": [
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/README.md",
+      "bytes": 6868,
+      "sha256": "91c21d99f37f4bdcd9ed8317f35d147654491d0ace5a775d9459592abcdd26c1",
+      "lines": 82,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "08-roadmap"
+      ],
+      "guide_sections": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기",
+      "sections": [
+        {
+          "title": "1. 이 문서가 답하는 질문",
+          "line": 7,
+          "end_line": 12,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "2. 읽는 순서",
+          "line": 13,
+          "end_line": 28,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "3. 현재 확인된 기반",
+          "line": 29,
+          "end_line": 48,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "4. 제안 구조",
+          "line": 49,
+          "end_line": 68,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "5. 문서의 상태 표기",
+          "line": 69,
+          "end_line": 77,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "6. 정식 운영 기준",
+          "line": 78,
+          "end_line": 82,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+      "bytes": 10109,
+      "sha256": "6df17f948bdff7f0c94eea0922c8fe0cabe068b1d08a3cc67e083c5c4efc3922",
+      "lines": 139,
+      "read_scope": "full",
+      "diagrams": [
+        "04-query"
+      ],
+      "guide_sections": "API 표면과 식별자",
+      "sections": [
+        {
+          "title": "1. 두 API 영역",
+          "line": 6,
+          "end_line": 12,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "2. 기존 Hermes의 주요 endpoint",
+          "line": 13,
+          "end_line": 35,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "3. Chat Completions 계약",
+          "line": 36,
+          "end_line": 59,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "4. Responses와 Runs",
+          "line": 60,
+          "end_line": 85,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "5. SSE wire format",
+          "line": 86,
+          "end_line": 108,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "6. 재시도·오류·취소",
+          "line": 109,
+          "end_line": 119,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "7. 제안 BFF API — 모두 미구현",
+          "line": 120,
+          "end_line": 134,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        },
+        {
+          "title": "8. 브라우저 직접 연동을 기본안으로 쓰지 않는 이유",
+          "line": 135,
+          "end_line": 139,
+          "diagrams": [
+            "04-query"
+          ],
+          "companion_guide": "API 표면과 식별자"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "bytes": 8155,
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc",
+      "lines": 103,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "03-read",
+        "04-query",
+        "06-publication"
+      ],
+      "guide_sections": "가장 중요한 구분 / 보안·자료·게시 불변 조건",
+      "sections": [
+        {
+          "title": "1. 시스템 목표와 경계",
+          "line": 6,
+          "end_line": 21,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "2. 컨테이너/서비스 관점",
+          "line": 22,
+          "end_line": 38,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "3. 세 종류의 데이터 흐름",
+          "line": 39,
+          "end_line": 61,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "4. 배치안",
+          "line": 62,
+          "end_line": 86,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "5. 동시성과 일관성",
+          "line": 87,
+          "end_line": 94,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "6. 설계 결정 기록",
+          "line": 95,
+          "end_line": 103,
+          "diagrams": [
+            "01-system",
+            "03-read",
+            "04-query",
+            "06-publication"
+          ],
+          "companion_guide": "가장 중요한 구분 / 보안·자료·게시 불변 조건"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "bytes": 8611,
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205",
+      "lines": 133,
+      "read_scope": "full",
+      "diagrams": [
+        "03-read",
+        "07-data-ui"
+      ],
+      "guide_sections": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기",
+      "sections": [
+        {
+          "title": "1. 정식 저장소",
+          "line": 6,
+          "end_line": 27,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "2. 원본과 서지",
+          "line": 28,
+          "end_line": 37,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "3. 지식 페이지 메타데이터",
+          "line": 38,
+          "end_line": 55,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "4. 서로 다른 상태 축",
+          "line": 56,
+          "end_line": 68,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "5. 공개 DTO 초안 — 구현되지 않은 계약",
+          "line": 69,
+          "end_line": 105,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "6. URL와 파일 경로 연결",
+          "line": 106,
+          "end_line": 116,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "7. 일관성 있는 읽기와 캐시",
+          "line": 117,
+          "end_line": 128,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        },
+        {
+          "title": "8. 쓰기 계약은 별도",
+          "line": 129,
+          "end_line": 133,
+          "diagrams": [
+            "03-read",
+            "07-data-ui"
+          ],
+          "companion_guide": "여섯 개의 독립 상태 축 / 원문 snapshot과 현재 상태를 혼합하지 않기"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "bytes": 10596,
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "lines": 97,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "02-workspace",
+        "04-query",
+        "08-roadmap"
+      ],
+      "guide_sections": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거",
+      "sections": [
+        {
+          "title": "1. 범위와 관측 기준점",
+          "line": 6,
+          "end_line": 16,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "2. Wiki 정식 근거",
+          "line": 17,
+          "end_line": 35,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "3. 최신 공식 Hermes 문서 — 실제 조회",
+          "line": 36,
+          "end_line": 45,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "4. 설치 소스 근거 지도",
+          "line": 46,
+          "end_line": 66,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "5. 공식 문서와 로컬 구현의 차이",
+          "line": 67,
+          "end_line": 81,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "6. 실제 수행한 검증 종류",
+          "line": 82,
+          "end_line": 92,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        },
+        {
+          "title": "7. 수행하지 않은 항목",
+          "line": 93,
+          "end_line": 97,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "04-query",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기 / 사용과 검증 근거"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/frontend-design.md",
+      "bytes": 8397,
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170",
+      "lines": 113,
+      "read_scope": "full",
+      "diagrams": [
+        "04-query",
+        "07-data-ui",
+        "08-roadmap"
+      ],
+      "guide_sections": "화면·기술 스택·운영 인계",
+      "sections": [
+        {
+          "title": "1. 제품과 화면 우선순위",
+          "line": 7,
+          "end_line": 12,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "2. 제안 라우트",
+          "line": 13,
+          "end_line": 26,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "3. 레이아웃과 읽기",
+          "line": 27,
+          "end_line": 36,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "4. Route × 상태 행렬",
+          "line": 37,
+          "end_line": 48,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "5. Chat 상태 모델",
+          "line": 49,
+          "end_line": 70,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "6. 컴포넌트 인벤토리",
+          "line": 71,
+          "end_line": 87,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "7. 접근성·CJK",
+          "line": 88,
+          "end_line": 96,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "8. 성능 목표 — 측정 결과 아님",
+          "line": 97,
+          "end_line": 106,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "9. 구현 인계와 QA",
+          "line": 107,
+          "end_line": 113,
+          "diagrams": [
+            "04-query",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "화면·기술 스택·운영 인계"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "bytes": 7673,
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3",
+      "lines": 127,
+      "read_scope": "full",
+      "diagrams": [
+        "08-roadmap"
+      ],
+      "guide_sections": "범위와 읽는 순서 / 사용과 검증 근거",
+      "sections": [
+        {
+          "title": "1. 이번 작업의 완료 기준",
+          "line": 6,
+          "end_line": 17,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "2. 단계 R0 — 배포 계약 확정",
+          "line": 18,
+          "end_line": 30,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "3. 단계 R1 — read-only 탐색 MVP",
+          "line": 31,
+          "end_line": 46,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "4. 단계 R2 — 통제된 질의와 실행 UX",
+          "line": 47,
+          "end_line": 65,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "5. 단계 R3 — 운영 상태 화면",
+          "line": 66,
+          "end_line": 71,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "6. 단계 R4 — 승인된 지식 작업 연결(선택)",
+          "line": 72,
+          "end_line": 88,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "7. 회귀 시험 매트릭스",
+          "line": 89,
+          "end_line": 102,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "8. 실행 증거 템플릿",
+          "line": 103,
+          "end_line": 122,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        },
+        {
+          "title": "9. 남은 결정과 중단 조건",
+          "line": 123,
+          "end_line": 127,
+          "diagrams": [
+            "08-roadmap"
+          ],
+          "companion_guide": "범위와 읽는 순서 / 사용과 검증 근거"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "bytes": 8542,
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b",
+      "lines": 103,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "02-workspace",
+        "03-read",
+        "04-query",
+        "06-publication",
+        "08-roadmap"
+      ],
+      "guide_sections": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계",
+      "sections": [
+        {
+          "title": "1. 위협 모델",
+          "line": 6,
+          "end_line": 22,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "2. 인증·인가",
+          "line": 23,
+          "end_line": 36,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "3. 도구와 파일시스템 격리",
+          "line": 37,
+          "end_line": 51,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "4. 원문 표시",
+          "line": 52,
+          "end_line": 60,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "5. 전송·프록시",
+          "line": 61,
+          "end_line": 73,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "6. 관측과 로그",
+          "line": 74,
+          "end_line": 81,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "7. 장애 대응 표",
+          "line": 82,
+          "end_line": 96,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "8. 배포·복구 원칙",
+          "line": 97,
+          "end_line": 103,
+          "diagrams": [
+            "01-system",
+            "02-workspace",
+            "03-read",
+            "04-query",
+            "06-publication",
+            "08-roadmap"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건 / 화면·기술 스택·운영 인계"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/tech-stack.md",
+      "bytes": 7039,
+      "sha256": "6bb6e39d0a90eaac7774e46e67f00744aa5d5d6834322f238ffbcae247445f89",
+      "lines": 103,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "07-data-ui",
+        "08-roadmap"
+      ],
+      "guide_sections": "가장 중요한 구분 / 화면·기술 스택·운영 인계",
+      "sections": [
+        {
+          "title": "1. 현재 사용 중인 저장소 계층",
+          "line": 6,
+          "end_line": 18,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "2. 설치 Hermes 런타임",
+          "line": 19,
+          "end_line": 36,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "3. API Server 내부",
+          "line": 37,
+          "end_line": 47,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "4. 신규 frontend/BFF 권고안 — 미설치·미구현",
+          "line": 48,
+          "end_line": 63,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "5. 설계상 패키지 책임 분리",
+          "line": 64,
+          "end_line": 80,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "6. 대안 비교",
+          "line": 81,
+          "end_line": 92,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        },
+        {
+          "title": "7. 구현 전에 확인할 호환성",
+          "line": 93,
+          "end_line": 103,
+          "diagrams": [
+            "01-system",
+            "07-data-ui",
+            "08-roadmap"
+          ],
+          "companion_guide": "가장 중요한 구분 / 화면·기술 스택·운영 인계"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/verification.json",
+      "bytes": 37292,
+      "sha256": "65ab29d1c3682ad14dcd2a7c9a687058269cd8590c1ec84ccbd862ed900fde13",
+      "lines": 902,
+      "read_scope": "full",
+      "diagrams": [
+        "01-system",
+        "08-roadmap"
+      ],
+      "guide_sections": "원문 snapshot과 현재 상태를 혼합하지 않기",
+      "sections": [
+        {
+          "title": "과거 문서 검증·이동·동시 변경 기록 전체",
+          "line": 1,
+          "end_line": 902,
+          "diagrams": [
+            "01-system",
+            "08-roadmap"
+          ],
+          "companion_guide": "원문 snapshot과 현재 상태를 혼합하지 않기"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "bytes": 7922,
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "lines": 122,
+      "read_scope": "full",
+      "diagrams": [
+        "03-read",
+        "04-query",
+        "05-collection",
+        "06-publication"
+      ],
+      "guide_sections": "API 표면과 식별자 / 보안·자료·게시 불변 조건",
+      "sections": [
+        {
+          "title": "1. 탐색 — 모델 없이 읽기",
+          "line": 6,
+          "end_line": 24,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "2. 질의 — BFF가 실행 문맥을 소유",
+          "line": 25,
+          "end_line": 36,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "3. 장시간 실행과 스트리밍",
+          "line": 37,
+          "end_line": 65,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "4. 요청 재시도와 중복 방지",
+          "line": 66,
+          "end_line": 73,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "5. 중지",
+          "line": 74,
+          "end_line": 83,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "6. 승인 UX와 정책 승인",
+          "line": 84,
+          "end_line": 96,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "7. 기존 수집 경로 — 변경 없음",
+          "line": 97,
+          "end_line": 102,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "8. 지식 컴파일·게시 — 실행되지 않은 향후 연결",
+          "line": 103,
+          "end_line": 122,
+          "diagrams": [
+            "03-read",
+            "04-query",
+            "05-collection",
+            "06-publication"
+          ],
+          "companion_guide": "API 표면과 식별자 / 보안·자료·게시 불변 조건"
+        }
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workspace-and-gateway.md",
+      "bytes": 8307,
+      "sha256": "95fd9d22e31c436b5684084f563c407bb837e887bb4a4095c4d78e463c379b22",
+      "lines": 124,
+      "read_scope": "full",
+      "diagrams": [
+        "02-workspace"
+      ],
+      "guide_sections": "보안·자료·게시 불변 조건",
+      "sections": [
+        {
+          "title": "1. 경로의 의미",
+          "line": 7,
+          "end_line": 25,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "2. 현재 관측과 한계",
+          "line": 26,
+          "end_line": 42,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "3. cwd 해석",
+          "line": 43,
+          "end_line": 56,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "4. 지원하지 않는 것으로 취급할 설정 방식",
+          "line": 57,
+          "end_line": 64,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "5. 승인 후 적용할 절차 — 이번에는 실행하지 않음",
+          "line": 65,
+          "end_line": 117,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        },
+        {
+          "title": "6. 프로젝트 지침과 보안",
+          "line": 118,
+          "end_line": 124,
+          "diagrams": [
+            "02-workspace"
+          ],
+          "companion_guide": "보안·자료·게시 불변 조건"
+        }
+      ]
+    }
+  ],
+  "file_count": 13,
+  "section_count": 92
+}

@@ -171,3 +171,307 @@
 - 독립 검토에서 재현한 두 결함을 `docs/lectures/4w/lab/pipeline.py`에서 수정했다. URL userinfo는 빈 사용자명도 거부하여 비밀번호가 저장·export되지 않게 했으며, 지원하지 않는 타입·범위의 타임스탬프는 `ValueError`로 거부한다. 잘못된 legacy payload의 observation은 생략하되 기존 version과 원본 payload는 보존한다.
 - `docs/lectures/4w/lab/test_regressions.py`, `docs/lectures/4w/lab/test_incremental.py`에 mocked Reddit URL의 저장·export 차단, 타임스탬프 호환성, legacy API·CLI 마이그레이션의 보존·멱등성 회귀 검사를 추가했다. 수정 후 부모 세션에서도 전체 실습 테스트를 다시 실행해 **53 tests, OK**를 확인했다.
 - Python 9개 AST·JSON 1개 문법 검사, 수정분 `git diff --check`, 운영 Wiki 보호 경로의 HEAD 대비 무변경 검사를 통과했다. 추가 행 보안 패턴 검사에서 검출된 `wiki_pipeline.py`의 `token`은 자격증명이 아닌 SNS ingest 로그의 HTML 주석 표식이었다. 이 재검증은 합성 fixture·mock에 한정하며 실제 SNS 수집·Wiki 컴파일 성공을 의미하지 않는다.
+
+
+## [2026-09-29] update | AI Agent Security HTML 정기 수집 — 정상 검색 0편
+
+- 실행 `20260928T150302Z-78f455f6`, 정책 `arxiv-html-original/v1`. KST 날짜는 `2026-09-29`로 고정했다. topics.api_query를 문자 그대로 사용한 직접 API HTTP 406은 동일 URL·정렬·페이지 파라미터의 공식 브라우저 Atom 확인으로 복구했다. `pre.textContent`와 캡처 파일의 UTF-8 SHA-256을 대조했으며 DOM 텍스트를 HTTP 원문 바이트로 표시하지 않았다. 실패 응답 근거도 보존했다.
+- 검색 범위 `2026-09-27T07:07:13.632288+00:00` ~ `2026-09-28T15:03:02.148817+00:00`. Atom 100개 버전 ID·기본 ID의 고유성, updated 내림차순, 검색식 문자 일치, 하한 통과를 검증했다. 범위 내 후보는 0편이며 pending fsync·원자 저장 후 discovery checkpoint를 상한까지 전진했다. 기존 first_window_floor는 유지했다.
+- 신규 HTML 저장 0편, 중복 처리 0편, 새 HTML 미제공 0편, 미복구 검색/전송/무결성 실패 0건. 직접 API 실패 1건은 복구했다. 기존 HTML 8편의 실제 파일·버전 URL·크기·SHA-256·제목/본문 존재·완전한 닫힘 태그·두 파일 목록을 재검증했다. 기존 미제공 2편은 재확인 시각 전이므로 요청하지 않았다.
+- 신규 날짜별 시도 0개, pending 없음, safety_block=false, 최종 연속 실패 0회. 기존 승인된 날짜별 시도 기록은 보존했다. 전체 대상 10개 ID = HTML 8편 + 미제공 2편 및 index/state/실제 파일의 일치를 코드로 확인했다. 지식 페이지 0개.
+- 변경: `_meta/state/4cff5b4f10ec.json`, 주제 raw index, 루트 index의 Raw Sources, append-only log, `_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/` 실제 실행 근거. 원본·정책·지식 경로의 기존 해시를 보존했다. 신규 커스텀 프로그램/DB/패키지는 만들지 않았고 PDF/LaTeX/외부 자산 다운로드·전처리·별도 모델 호출·내용 분석·도표 판독·Wiki 컴파일은 하지 않았다. HTML은 외부 자산 포함 오프라인 패키지가 아니다.
+
+## [2026-09-29] lint | 수집 논문 색인·실제 HTML 전수 대조 및 현황 동기화
+
+- 사용자 요청 범위: `raw/articles/4cff5b4f10ec/index.md`의 수집 대상과 실제 저장 논문 일치 여부 확인·동기화. 로컬 검증 시각 `2026-09-29T02:51:47.855081+00:00`(KST 11:51), run `20260929T025147Z-index-sync`.
+- 전체 10개 버전 ID = 저장 HTML 8편 + 미제공 기록 2편. 색인 행·원본 폴더·source.json·state·최근 수집 report·전환 승인 ID 집합을 코드로 대조했으며 누락·중복·상태 불일치 0건, pending 0편이다. 원본 8편의 실제 SHA-256·길이가 source.json 및 최초 HTML 다운로드 기록과 일치하고 버전 고정 URL·제목·본문 컨테이너/닫힘 태그·폴더당 두 파일 계약을 통과했다. 제목은 원문 공백 차이만 허용했고 파일을 정규화하거나 수정하지 않았다.
+- `2609.30614v1`, `2609.30824v1`은 기존 공식 HTML 404·abs 전문 링크 확인 근거와 state가 일치하며 로컬 전문 폴더가 없다. 온라인 재확인은 하지 않았고 기존 checked_at·2026-10-05 next_retry_at을 그대로 유지했다. 미제공 2편을 저장 성공으로 세지 않았다.
+- 논문 목록과 state 자체에는 고칠 불일치가 없어 유지했다. `raw/articles/4cff5b4f10ec/index.md`와 루트 `index.md`에 로컬 검증 시각·결과·근거를 반영하고 정기 수집 결과와 수동 점검을 구분했다. 루트 색인 날짜를 갱신했으며 지식 페이지 수는 0개다.
+- 검증 근거: `_meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/inventory-verification.json`. 원본·서지·state·정책의 기준 해시와 기존 log의 바이트 길이·해시를 남겼으며 수정 전 동시 변경 검사와 색인 로컬 링크 37개 검사를 통과했다. 최종 수정 후 검증은 같은 디렉터리의 `final-verification.json`에 별도로 기록한다.
+- 원본 HTML/source.json·수집 상태/checkpoint·Cron 설정은 변경하지 않았다. 새 검색·다운로드·PDF 대체·원문 전처리·도표/의미 검토·Wiki 컴파일·외부 동기화·설치·커밋·push를 수행하지 않았다. 이번 동기화는 로컬 관리 문서 현황 갱신이다.
+
+## [2026-09-29] update | PDF fallback 정책 변경 시도 — 보호 파일 승인 시간초과로 미적용
+
+- 사용자 요청: arXiv가 HTML을 제공하지 않는 경우 동일 버전 PDF를 원본 논문으로 수집하도록 변경. HTML 우선·공식 미제공 확인 시 PDF 원본 저장만 허용하고 전처리는 계속 금지하는 정책을 준비했다.
+- 정확한 Cron `4cff5b4f10ec`가 실행 중이 아님을 확인하고 변경 동안 일시정지·독점 잠금을 획득했다. `AGENTS.md`를 포함한 다중 파일 patch는 보호된 지침 파일 승인창의 응답 시간초과로 차단되었다. 승인 우회·같은 편집 재시도를 하지 않았다.
+- 정책 편집은 적용되지 않았다. 기존 운영 문서·색인·state와 원본 16개 파일의 변경 전 해시 일치를 확인했다. PDF 다운로드·PDF 대기 등록·정책 ID 변경·Wiki 컴파일은 하지 않았다. 기존 HTML 전용 정책이 계속 유효하다.
+- 자기 잠금을 해제하고 기존 Cron을 다시 활성화했다. 2026-09-29T03:04:05.700730+00:00의 정확한 등록 레코드 재조회에서 enabled=true, state=scheduled, 기존 프롬프트·모델·스케줄·local 전달·다른 Cron 설정 유지, 다음 예정 2026-09-29T15:00:00+00:00을 확인했다.
+- 근거: `_meta/migrations/20260929T025946Z-pdf-fallback-policy/preflight.json`, `result.json`. 이 근거와 본 로그만 추가했다. 변경을 진행하려면 새 요청에서 보호된 `AGENTS.md` 편집 승인 절차를 완료해야 한다.
+
+## [2026-09-29] update | HTML 우선·공식 미제공 시 동일 버전 PDF 원본 수집 정책 적용
+
+- 사용자의 재진행 요청 후 보호된 `AGENTS.md` 편집 승인이 완료됐다. 이전 승인 시간초과 이력은 유지하고 별도 전환 `20260929T034401Z-pdf-fallback-policy`로 진행했다. 정책 ID는 `arxiv-html-preferred-pdf-fallback/v1`이다.
+- 공식 HTML 미제공 확인 시에만 동일 버전 공식 PDF의 HTTP 원문 바이트를 `source.pdf`와 최소 `source.json`으로 저장하도록 원천 계약을 추가했다. HTML 403/429/5xx/timeout은 PDF 우회 사유가 아니다. PDF는 MIME·버전 고정 URL·형식 표식·전송 종료/길이·SHA-256 보존 검사만 허용하며 파싱·페이지 수 확인·본문 추출·OCR·렌더·전처리 모델·자동 Wiki 컴파일은 계속 금지한다.
+- 변경: `AGENTS.md`, `SCHEMA.md`, `_meta/COLLECTION.md`, `_meta/COMPILATION.md`, `_meta/topics.json`, `_meta/state/4cff5b4f10ec.json`, `README.md`, 루트 `index.md`, `raw/articles/4cff5b4f10ec/index.md`, 이 log. 기존 HTML/source.json의 schema와 당시 pipeline_id는 유효한 수집 이력으로 유지한다.
+- 기존 미확보 `2609.30614v1`, `2609.30824v1`의 공식 미제공 근거를 확인하고 PDF pending 2편을 fsync·원자 교체로 저장했다. HTML next_retry_at과 독립적으로 다음 수집 실행에서 날짜 한도 내 처리한다. 기존 checked_at·HTML 재확인 시각·PDF 삭제 이력·first_window_floor·discovered_through·daily_attempts·last_run·last_complete_at은 유지했다. 대기 등록은 새 다운로드·시도 예약·수집 성공이 아니다.
+- 실제 원본은 HTML 8편, PDF 0편, 전문 미확보 2편이다. 기존 원본/서지 16개 파일의 SHA-256 불변과 source.json의 길이·버전 URL을 대조했다. 전체 대상 10개 ID·색인 상태·pending이 일치하며 지식 페이지 0개, 핵심 문서 로컬 링크 54개와 수정분 git diff --check를 통과했다.
+- Cron `4cff5b4f10ec`만 잠시 정지해 프롬프트·이름을 갱신하고 자기 잠금을 해제한 뒤 재개했다. 정확한 등록값 재조회로 새 프롬프트 전체 일치, enabled=true/state=scheduled, 기존 `0 15 * * *`, `codex-lb/gpt-6-astra/xhigh`, skills=[arxiv], local 전달, 다음 KST 2026-09-30 00:00을 확인했다. 다른 Cron 설정은 유지했다.
+- 근거: `_meta/migrations/20260929T034401Z-pdf-fallback-policy/`의 `preflight.json`, `state-after.json`, `cron-prompt.txt`, `core-verification.json`, `cron-after-resume.json`. 새 정책으로 정기 수집 전체를 실행하거나 PDF 다운로드 경로를 실증한 것은 아니다. 설명서 갱신과 전체 최종 검증은 후속 완료 기록으로 구분한다. 설치·백업 복원·외부 알림·전역 모델/인증 변경·커밋·push는 하지 않았다.
+
+## [2026-09-29] lint | PDF fallback 정책·운영 설명서·원천 색인 최종 일관성 검증
+
+- `docs/lectures/5w/paper-collection.md`, `docs/lectures/5w/paper-collection-cron.md`를 승인된 원본 저장 계약과 대기 상태에 맞췄다. 부모가 변경분을 직접 검토하고 실제 `cron-after-resume.json`의 재조회 근거를 반영했다. 전환 전 paused 기록·현재 scheduled 등록·마지막 기존 정책 수집·아직 미실행인 PDF fallback을 구분한다.
+- 최종 로컬 대조에서 대상 10개 ID·제목·색인·state·파일이 일치했다. HTML 8편, PDF 0편, 전문 미확보·PDF pending 2편이며 원본/서지 16개 파일은 변경 전 해시와 동일하다. 검색식·한도·checkpoint·일일 시도·과거 HTML 미제공 근거를 유지했고 state는 정책 전환 후 검증본과 일치한다.
+- 활성 문서 9개의 로컬 링크 98개, Bash 예시 4개의 `bash -n`, 전체 `git diff --check`가 통과했다. Cron 정확한 등록 레코드를 다시 읽어 새 프롬프트 전체 일치·enabled=true/state=scheduled·다음 KST 2026-09-30 00:00·다른 Cron 설정 불변·자기 잠금 해제를 확인했다. 예시 명령의 구문 검사는 예약 생성/실행을 뜻하지 않는다.
+- 최종 근거: `_meta/migrations/20260929T034401Z-pdf-fallback-policy/final-verification.json`, `report.md`. 원천 다운로드·새 정책의 전체 수집 실행·PDF 파싱·내용/도표 검토·Wiki 컴파일은 하지 않았다. 실제 PDF 확보 여부는 다음 수집 실행의 게시 파일과 보고서로 별도 확인해야 한다.
+
+## [2026-09-29] ingest | 기존 HTML 미제공 2편의 동일 버전 공식 PDF 원본 수집
+
+- 사용자 요청으로 기존 PDF pending `2609.30614v1`, `2609.30824v1`만 수집했다. 실행 `20260929T042631Z-pdf-capture-808d882a`, 정책 `arxiv-html-preferred-pdf-fallback/v1`. 독점 잠금 획득 후 KST 2026-09-29의 일일 시도에 2개 ID를 먼저 내구 저장했다. 새 검색이나 과거 범위 확장은 하지 않았다.
+- 기존 2026-09-28 공식 HTML 404·동일 버전 abs fulltext 근거와 해시 검증된 공식 Atom DOM 캡처의 버전별 서지를 재사용했다. 과거 관측을 새 온라인 HTML 확인으로 표시하지 않았다. 공식 PDF URL에는 직접 HTTP 요청을 보내 두 응답 모두 200·application/pdf·동일 버전 최종 URL임을 확인했다.
+- `2609.30614v1`: 821749바이트, SHA-256 `a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d`. `2609.30824v1`: 693979바이트, SHA-256 `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`. Content-Length·정상 전송 종료·%PDF- 시작·마지막 1024바이트 내 %%EOF·다운로드 스트림/저장 파일 해시가 일치했다.
+- 각 `raw/articles/4cff5b4f10ec/arxiv-<version-id>/`에 `source.pdf`와 `source.json`만 staging 검증 후 덮어쓰기 없는 원자 게시로 저장했다. 게시한 정확한 파일을 다시 읽어 해시와 서지 일치를 확인했다. 기존 HTML/서지 16개 파일은 변경하지 않았다.
+- 게시 확인 후 pending 2개를 제거하고 html_unavailable 근거에는 `local_fulltext_preserved:true`, `pdf_fallback_status:captured`, PDF 경로·완료시각을 추가했다. 원래 확인/재확인 시각과 과거 PDF 삭제 이력은 보존한다. first_window_floor·discovered_through는 유지하고 최근 실행은 수동 PDF 수집으로 기록했다. 이전 정기 실행은 `last_scheduled_run`과 원래 report에 보존했다.
+- 현재 전체 10편 = HTML 8편 + PDF 2편, 전문 미확보 0편·pending 0편·이번 실패 0건이다. 루트/주제 색인, README, state와 이 로그를 갱신했다. 정책·Cron·운영 설명서의 과거 시점 스냅샷은 변경하지 않았다.
+- 근거: `_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/`의 `preflight.json`, `downloads.json`, `publication.json`, `state-reserved.json`, `state-after.json`, `report.json`; 최종 관리 문서·전체 ID 대조는 `final-verification.json`에 기록한다. PDF 내부 구조·본문·페이지 수 파싱, 렌더·OCR·도표 판독·요약·전처리 모델·Wiki 컴파일은 수행하지 않았다. 백업 복원·설치·커밋·push도 하지 않았다.
+
+## [2026-09-29] update | P1 후속 지식화 정책·운영 계약 적용 — 실행 비활성
+
+- 사용자 `P1 진행해주세요`(구현 착수)와 `제안값 확정`(모델 `codex-lb/gpt-6-astra/xhigh`, 로컬 HTML 텍스트·기존 Wiki·저장 요청한 비민감 피드백만 허용, PDF·이미지·외부 자산·전체 대화 수집 제외, 파일럿 US$5 총액·일일 US$5/회·US$10/KST 일·격주 리뷰 US$5/회)에 근거해 Ralplan 계획의 P1을 수행했다. 실행 `20260929T055833Z-p1-contracts`, policy `pkm-html-knowledge/v1`, contract `pkm-contracts/v1`.
+- 신규 파일: `_meta/AUTOMATION.md`, `_meta/automation.json`, `_meta/STATE-CONTRACTS.md`, `_meta/automation-contracts.schema.json`, `_meta/RESEARCH-PROFILE.md`, `_meta/QUERY-FEEDBACK.md`, `_meta/RESEARCH-REVIEW.md`, `_meta/state/compilation.json`, `_meta/state/feedback.json`, `_meta/state/research-review.json`, `_meta/prompts/wiki-compile.md`, `_meta/prompts/research-review.md`. 전역 enabled=false, 신규 Cron 0개(미등록), P2–P6 미승인, 연구 창 anchor=null이다. 값 승인을 실행 승인으로 확대하지 않는다.
+- 기존 문서에 후속 계약 안내만 추가했다: `AGENTS.md`, `SCHEMA.md`(제10절), `_meta/COLLECTION.md`(말미 안내), `_meta/COMPILATION.md`, `README.md`, 루트 `index.md`. 수집 절차 본문·검색식·한도·잠금 규칙은 그대로 두고, `compile_wiki:false`·금지 출력·수동 handoff 기본값을 유지했다. policy before-image는 실행 디렉터리 `before/`에 보존한다.
+- 원본 10편(HTML 8·PDF 2)·서지·`_meta/topics.json`·수집 state·Cron `4cff5b4f10ec` 등 보호 파일 29개의 변경 전·후 SHA-256이 동일하고 collector 등록 레코드·잡 ID 집합이 불변임을 확인했다. compilation ledger에 10개 항목을 원본 그대로 등록했다(HTML=blocked_approval, PDF=blocked_policy). PDF의 blocked_policy는 수집 실패·미확보가 아니며 원문 확보 상태는 유지된다.
+- 구조 검증: 4개 계약 인스턴스·JSON Schema 자체 검사 통과, 가상 compile_request 승인 1건·거부 시험 23건(미승인 provider/모델/reasoning, PDF·이미지·자산·PDF 분석 요청, 승인·계측·차단 플래그 미충족, 알 수 없는 스키마, 경로 이탈·잘못된 해시, PDF 정책 우회, 출력·범위·receipt 없는 게시) 전부 거부 확인. 활성 문서 로컬 링크 59개·`git diff --check`·log prefix 보존 통과, 게시 잠금 해제 확인. 시험은 가상 객체 대상 구조 검사이며 논문 본문·모델·게시를 실행하지 않았다.
+- 이 단계에서 논문 본문 읽기·모델 호출·지식 페이지 생성(0개 유지)·신규 Cron 등록/활성화·원본/전역 설정 변경은 하지 않았다. 비용 계측·강제 차단은 미검증이며, 검증 전 모델 호출과 무인 활성화를 차단한다. 근거: `_meta/runs/wiki/20260929T055833Z-p1-contracts/`의 `preflight.json`, `policy-publication.json`, `contract-verification.json`, `verification-command.md`. 다음 단계는 별도 실행 승인이 필요한 HTML 2편 P2 파일럿이다.
+
+## [2026-09-29] update | P2 파일럿 재개 — 비용 상한 제거 정책 v2 반영, 프록시 websocket 타임아웃으로 재시도 대기
+
+- 사용자 재개 승인(편집 중지·정책 반영·P2 재개·게시 승인, `_meta/runs/wiki/20260929T083140Z-p2-resume/approval.json`)으로 policy `pkm-html-knowledge/v2`를 반영했다. 금액 상한·blocked_budget 게이트 제거, P2 수동 실행 승인, unknown 비용은 null 기록. automation.json·스키마(v2) 반영과 JSON Schema 검증 0오류, 문서 9종 갱신, before-image 보존을 확인했다.
+- 논문 내용 없는 스트리밍 프로브로 라우트·인증·스트리밍 정상을 확인했다(첫 이벤트 113.4s, STREAM_OK 완료).
+- P2 컴파일 3회 시도(2609.30830v1×2, 2609.31358v1×1) 모두 `upstream_websocket_liveness_timeout`(517.9s/592.6s/597.5s, 생성 진행 중 프록시 1011 종료)로 실패. 이전 세션의 420s 로컬 타임아웃과 구별하며, codex-lb 프록시(10.10.1.244:2455)의 업스트림 websocket keepalive 한계로 진단했다. 지식 페이지 게시 0개, 원본·수집 state 불변. 두 항목은 retryable_failed로 기록했다.
+- 재개 조건: 프록시 keepalive/idle 타임아웃 조정 또는 비스트리밍 경로 확인 후 신규 run. 동일 조건 재시도 금지. 근거: `_meta/runs/wiki/20260929T083140Z-p2-resume/`(approval, probe-route/stream, 각 attempt·error-event, item-outcome, run-report).
+
+## [2026-09-30] ingest | 정기 수집 — 신규 HTML 5편 저장, 발견 35편 중 일일 한도 초과 30편 대기 등록
+
+- Cron `4cff5b4f10ec` 정기 실행 `20260929T150905Z-fbf97a79`(KST 2026-09-30 00:09, 소요 3.7초). 정책 `arxiv-html-preferred-pdf-fallback/v1` 확인 후 원자 mkdir 잠금 획득·해제했다. state.safety_block=false, pending 0으로 시작했다.
+- 승인된 검색식을 문자 그대로 조회(lastUpdatedDate 내림차순, 100건 1페이지, 직접 API HTTP 200, 복구 불필요). 실제 Atom updated 필터로 검색창 `2026-09-27T07:07:13.632288+00:00`~`2026-09-29T15:09:05.363026+00:00` 내 신규 후보 35편, 기존 보유 중복 0편을 확인했다. 100개 버전 ID의 고유성·updated 내림차순을 검증했다.
+- KST 2026-09-30 일일 한도 5편을 시도 전에 daily_attempts에 예약했다. 5편 모두 동일 버전 `https://arxiv.org/html/<version-id>`의 HTTP 200·text/html·버전 고정 최종 URL·완전한 문서·Content-Length 일치를 확인하고 `source.html`+`source.json`(arxiv-html-source/v1)만 staging 검증 후 원자 게시했다. 신규 PDF 0편, HTML 미제공 0편, 전송 실패 0건, 충돌 0건.
+- 신규 저장: `2609.35760v1`(1,193,201B), `2608.29596v2`(1,078,043B), `2609.35596v1`(494,759B), `2609.35576v1`(394,496B), `2509.09215v3`(116,966B). 게시 후 파일 재독록으로 SHA-256·길이·제목 일치·폴더당 두 파일 계약을 재확인했다.
+- 일일 한도 초과로 시도하지 못한 발견 후보 30편을 완전한 검색 결과와 함께 `daily_budget_exhausted` pending으로 내구 저장했다(next_attempt_at 2026-09-30T15:00:00+00:00). 이 내구 저장 이후 discovery checkpoint를 `2026-09-29T15:09:05.363026+00:00`로 전진했다. 기존 원본 10편(HTML 8·PDF 2)은 해시 재검증 후 재사용했다.
+- 실행 마무리에서 신규 5편의 source.json 필드명을 SCHEMA 계약명(`html_sha256`/`html_bytes`)으로 정규화하고 상태 라벨 오기(`completed_zero_results`→`completed`)를 바로잡았다. 이후 원본 5개 패키지를 재검증했다. 원본 15편 중 HTML 13·PDF 2, 전문 미확보 0편, 지식 페이지 0개.
+- 루트/주제 색인을 실제 결과로 갱신하고 이 로그를 append했다. 원본 HTML/PDF·기존 source.json·topics.json·Cron·컴파일 ledger는 변경하지 않았다. 새 검색 범위 확장·과거 논문 추가 수집·PDF 파싱·전처리 모델 호출·자동 Wiki 컴파일·외부 알림은 하지 않았다.
+- 근거: `_meta/runs/4cff5b4f10ec/20260929T150905Z-fbf97a79/`의 `preflight.json`, `search-page-000.xml`, `candidates.json`, `attempts.json`, `verification.json`, `report.json`, `runner.py`.
+
+## [2026-09-30] lint | P2 빠른 사전·격리 테스트 — 정책 불일치 및 게시 결함으로 실행 보류
+
+- 사용자 요청 `P2 위키 컴파일 테스트를 빠르게 진행해주세요`에 따라 원문 모델 재전송 없이 현재 계약·무결성 및 기존 검증/게시 스크립트를 시험했다. run `20260930T085029Z-p2-quick-test`. 최종 26개 검사 중 17개 통과, 9개 실패이며 P2 실제 논문 컴파일 완료가 아니다.
+- 원본 HTML 13편·PDF 2편, 총 15개 버전의 SHA-256·길이·파일 목록·버전과 기존 ledger 10개 항목의 원본/서지 해시를 확인했다. 지식 페이지 0개와 index가 일치한다. 최초 검사기의 PDF 기대 파일명 정렬 오탐은 초기 결과에 보존하고 검사식만 바로잡아 전체 재실행했다. 원본을 수정하여 통과시키지 않았다.
+- 정책/계약 실패: AGENTS/SCHEMA의 v1 승인·비용 게이트와 automation의 v2 불일치, feedback/research-review 상태 v1의 현재 스키마 부적합, 설정/스키마 prompt v1과 실제 두 prompt v2 불일치. 사용자 P2 요청을 비용 제한 우회나 정책 자동 개정 권한으로 확대하지 않았다.
+- 기존 `verify-one.py`/`publish-one.py`를 임시 디렉터리의 명시적 합성 fixture로 실제 실행했다. 불완전 응답·main_text_complete=false가 검증을 통과하고, mkdir 방식 collection.lock에 IsADirectoryError가 발생했다. 잠금이 없는 fixture에서는 지식 파일 생성 후 색인 항목·receipt 없이 AssertionError가 발생했으며 committed/work_key/output_refs도 스키마에 부적합했다. 합성 산출물은 운영 Wiki에 게시하지 않았다.
+- 앞선 비스트리밍 시도는 시작 기록만 있고 완료 응답이 없다. 현재 로컬 프로세스 목록은 비어 있으나 종료 원인·서버측 취소·비용은 미관측이다. 짧은 NONSTREAM_OK probe는 장시간 실제 논문 컴파일 성공 근거가 아니다. 실제 ledger는 blocked_approval 6개·PDF blocked_policy 2개·retryable_failed 2개이며 신규 수집 5편은 아직 ledger 밖이다.
+- 별도 모델 호출 0회, 논문 본문 읽기/전송·PDF 내용 추출·지식 페이지 게시·신규 Cron·코드/정책/상태 수정 없음. 보호 파일 39개는 시험 전후 불변을 확인했고, 이 기록만 공유 mkdir 잠금 아래 기존 log 뒤에 추가한다. 기존 원본·수집 state·후속 state·index·정책·전역 설정을 유지한다.
+- 근거: `_meta/runs/wiki/20260930T085029Z-p2-quick-test/`의 `initial-test-report.json`, `test-report.json`, `reproduce.md`, `report.md`, `log-preflight.json`; 최종 보호 hash·log prefix·잠금 해제 검사는 `final-verification.json`에 기록한다. 다음 실행 전 승인 정책 문서 일치와 검증/게시 결함 수정·격리 재검증이 필요하다.
+
+## [2026-09-30] update | P2 정책·검증·게시 결함 수정 — 비용 비차단, 합성 회귀 108개 통과
+
+- 사용자 요청 `위 정책 정합성, 검증, 개시 결함을 수정해주세요. 그리고 위키 컴파일 과정에서 비용은 고려하지 말아주세요. 토큰이 넉넉합니다.`에 따라 policy/contracts/prompt/state revision과 비용 비차단 계약을 정합화했다. AGENTS 보호 편집 최초 승인 시간초과 후 명시적으로 재질문했고 사용자가 `보호 편집 승인을 다시 요청`을 선택하여 도구 승인 후 반영했다. 이 요청을 실제 논문 호출·게시·Cron 활성화 승인으로 확대하지 않았다.
+- no_cost_cap: 금액 상한·비용 예약·계측 검증·비용 강제 차단을 실행/게시 조건에서 제외한다. 미관측은 null이고 양수 비용도 비차단이다. 단계 승인·HTML 자료 한정·codex-lb/gpt-6-astra/xhigh·fallback 금지·무결성·유한 재시도·동시성/사용자 편집 보호는 유지했다.
+- 기존 생성기/비스트리밍 진입점/검증기/게시자를 수정했다. 불완전 응답·본문 미완료·잘못된 앵커 인용·경로 이탈 차단, 프롬프트 필드 정합화, mkdir 공유 잠금, 실제 색인·페이지 수, canonical work_key, WAL/receipt/schema-validated state, 조건부 중단 복구·반복 no-op을 시험했다. 생성기/게시자의 신규 승인 형식 불일치도 실제 연결 시험에서 수정했다. 과거 close-run.py의 상태/log 재적용은 retired/exit 2로 차단했다.
+- 부모 최종 통합 회귀 **108 tests, failures 0, errors 0, skipped 0**. 합성 SDK 경계와 임시 파일시스템에서 생성→검증→게시→no-op, 단계별 중단/복구·충돌을 실행했다. 실제 논문 모델 호출·본문 의미 검토·지식 게시·Cron 등록/활성화는 수행하지 않았다. 지식 페이지 0개, root index 불변이며 원본 HTML 13편·PDF 2편의 버전/바이트/해시는 보존했다.
+- 변경 범위: AGENTS/SCHEMA/README, _meta의 기존 운영 정책·스키마·프롬프트·feedback/research-review revision, 기존 P2 스크립트 및 합성 회귀/수정 근거. raw/source.json·수집 설정/state·compilation state 등 보호 파일 37개 불변. 기존 log prefix는 보존하고 이 사건만 공유 잠금 아래 append한다. 커밋·푸시·설치·전역 설정 변경 없음.
+- 근거: `_meta/runs/wiki/20260930T090330Z-p2-repair/report.md`, `final-tests.json/.txt`, RED 기록, `final-verification.json`. 다음 실제 P2는 새 run의 재개/게시 범위 확인과 실제 논문 근거 검토가 필요하며 비용은 재개 gate가 아니다. 과거 실패·unknown 기록은 보존한다.
+
+## [2026-09-30] update | P2 두 편 실제 컴파일·검증 성공 — staging 보관, 게시 미승인
+
+- 사용자 `다음 단계를 진행해주세요` 요청으로 새 run `20260930T100918Z-p2-live-staged`에서 승인 HTML `2609.31358v1`, `2609.30830v1`을 codex-lb/gpt-6-astra/xhigh로 순차 비스트리밍 실행했다. 두 편 모두 최초 시도 completed·실제 모델 일치; 재시도/fallback 없음. 비용 gate 없이 진행했고 비용 미관측은 null로 보존했다.
+- 구조·인용 64개 검사 통과, claim 28개와 두 Markdown 본문을 원본 HTML의 문맥/조건/수치와 대조했다. agent 검토일 뿐 human reviewed·실험 재현·시각 검토는 아니다.
+- 산출물은 `_meta/staging/wiki/20260930T100918Z-p2-live-staged/entities/arxiv-2609.31358v1.md`, `arxiv-2609.30830v1.md`의 draft/unreviewed다. 게시/직접 편집 중지 확인 시간초과로 실제 entities·index·compilation state를 변경하지 않았다. 활성 지식 페이지 0개, 게시 request/journal/receipt 없음.
+- 기존 HTML 13편·PDF 2편의 버전/길이/해시와 보호 37개 파일 불변을 확인했다. PDF 내용·이미지·외부 자산·외부 신규성 검색·Cron 등록/활성화 없음. `_meta/AUTOMATION.md`의 최초 보호 편집 시간초과 안내만 기존 최종 승인 근거로 바로잡고 새 run에서 hash로 고정했다.
+- 실행 결과/구조 검사/주장별 의미 검토/최종 무결성 근거: `_meta/runs/wiki/20260930T100918Z-p2-live-staged/report.md`, `run-report.json`, `final-verification.json` 및 각 논문의 attempt1 파일. 과거 실패/unknown은 유지했다. 다음 단계는 별도 게시 승인과 immutable generation 승인 결합 확인이며, 자동 재생성하지 않는다.
+
+## [2026-09-30] create | P2 draft — arXiv 2609.30830v1
+
+<!-- publication-event:p2-3dd7045ccb252e65cfc6379fed0774e0 -->
+- Page: `entities/arxiv-2609.30830v1.md`; run: `_meta/runs/wiki/20260930T100918Z-p2-live-staged`.
+- Source SHA-256: `89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074`; work_key: `27366967b8a8f3a95b599b1c76fe51a3bce1872efc1385b68b9c66cb7703e739`.
+- Agent evidence review: `_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-agent-review.json`; structural checks: `_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-publish-verification.json`.
+- Draft/unreviewed; no human review, visual inspection or experimental reproduction claimed.
+
+## [2026-09-30] create | P2 draft — arXiv 2609.31358v1
+
+<!-- publication-event:p2-39f61c7ae836953ef2fb0be7e534079a -->
+- Page: `entities/arxiv-2609.31358v1.md`; run: `_meta/runs/wiki/20260930T100918Z-p2-live-staged`.
+- Source SHA-256: `cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e`; work_key: `80e75fa32117a71b1e1a906b5629f795d0e9833c8a4c903fb013d5eca3484e10`.
+- Agent evidence review: `_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-agent-review.json`; structural checks: `_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-publish-verification.json`.
+- Draft/unreviewed; no human review, visual inspection or experimental reproduction claimed.
+
+## [2026-09-30] update | P2 두 편 게시·후속 승인 연결 검증 완료
+
+<!-- p2-publication-summary:20260930T103720Z-p2-publish-approved -->
+- 사용자 “편집 중지 확인 · 두 편 게시 승인”에 따라 `2609.30830v1`, `2609.31358v1`을 기존 검증 결과 그대로 로컬 Wiki에 게시했다. 두 페이지는 draft/unreviewed, index Total pages=2, journal/receipt/compilation published_draft와 실물 hash를 검증했다. 새 모델 호출·Cron 등록/활성화 없음.
+- 원 생성 승인/결과/의미 검토를 덮어쓰지 않고 `_meta/runs/wiki/20260930T100918Z-p2-live-staged/publication-approval.json`으로 후속 게시 권한을 결합했다. v2 게시 요청 경로 추가·회귀 114개 통과; 계약과 실패/수정 근거는 `_meta/runs/wiki/20260930T103720Z-p2-publish-approved/contract-addendum.md`에 있다.
+- 실제 두 번의 no-op에서 74개 대상 파일 불변, 로컬 링크/HTML 앵커 141개 정상, 원문 15편(HTML 13·PDF 2) 및 보호 snapshot 48개 불변. 게시 구조 검사 64개 통과와 기존 28개 주장 의미 검토 결합을 확인했다. 그림 시각 검토·실험 재현·인간 내용 검토를 뜻하지 않는다.
+- 보고서: `_meta/runs/wiki/20260930T103720Z-p2-publish-approved/report.md`; 게시/보존/no-op/최종 readback 증거는 같은 디렉터리에 있다. P3–P6는 계속 별도 승인 대상이며 자동화 enabled=false다.
+
+## [2026-09-30] update | P2 두 논문 통합 — 개념 3개·비교 1개 및 노트 연결
+
+<!-- publication-event:p2i-d3b8cf0db1b918060510445ffe3b227a -->
+- 사용자 “진행해주세요” 확인에 따라 두 승인 HTML과 기존 Wiki 노트만 사용했다. 실제 codex-lb/gpt-6-astra/xhigh 비스트리밍 생성 1회 completed; fallback·모델 재시도 없음. 호출 전 로컬 반환형 오류는 별도 보존했다.
+- 신규: `concepts/agent-authority-and-effect-boundaries.md`, `concepts/provenance-and-audit-evidence.md`, `concepts/security-evaluation-units.md`, `comparisons/agate-vs-sdc-mcp-gateway.md`.
+- 갱신: `entities/arxiv-2609.30830v1.md`, `entities/arxiv-2609.31358v1.md` (revision 2; 학술 주장 보존, 연결 추가, 원문 인용 경로·게시 상태 안내 정리), `index.md`, `_meta/state/compilation.json`.
+- 신규 주장 36개를 원문 문맥과 대조하고 인용 근거 73건, 로컬 Markdown 링크 222건을 사전 검사했다. 지식 페이지 총 6개, 모두 draft/unreviewed. 선택 절 통합이며 새 전문 완독·인간 검토·도표 시각 검토·실험 재현이 아니다.
+- collection.lock과 write-ahead journal 아래 지식/index/log/receipt/state 순서로 게시한다. 소비 가능 여부는 거래 committed와 최종 검증 기록을 확인한다. 원문 15편과 보호 74개 파일은 사전 검증에서 불변이며 raw/source.json·수집 state·Cron·전역 설정은 쓰지 않는다.
+- 기록: `_meta/runs/wiki/20260930T125856Z-p2-integration/report.md`; 생성/구조/의미 대조 및 dependency-impact, 두 source별 receipt와 integration-publish-journal은 같은 run에 있다. 비용 미관측은 null, 비용 상한·fallback 없음; 자동화 enabled=false와 P3–P6 별도 승인 경계를 유지한다.
+
+## [2026-10-01] ingest | 정기 수집 — 기존 대기 HTML 5편 저장, 신규 후보 23편 발견
+
+- Cron `4cff5b4f10ec`, run `20260930T150351Z-62d474aa`, 정책 `arxiv-html-preferred-pdf-fallback/v1`. 원자 mkdir 소유 잠금 아래 원본 수집만 수행했다. KST 일일 5개 ID를 요청 전에 state에 내구 예약했다.
+- 승인 검색식을 그대로 직접 API 조회(HTTP 200, 100건 1페이지). actual updated 창 `2026-09-27T15:09:05.363026+00:00`~`2026-09-30T15:05:07.821597+00:00`에서 48편 = 신규 23편 + 기존 pending 재발견 21편 + 보관 원본 중복 4편. 고유 버전 ID·updated 내림차순·하한 통과를 검증했다. 모든 후보의 pending 내구 저장 이후 checkpoint를 상한으로 전진했으며 최초 하한은 유지했다.
+- 오래된 pending 우선으로 저장한 동일 버전 HTML: `2609.35366v1`, `2609.35117v1`, `2609.35088v1`, `2605.09027v3`, `2609.34790v1`. HTTP 200·text/html·버전 고정 URL·제목/본문 컨테이너·종료 표식·Content-Length·SHA-256을 검사했다. 요청 간 최소 3초를 확인했고, source.html+source.json 두 파일만 renameat2 RENAME_NOREPLACE로 게시 후 재검증했다. 신규 PDF 0편, 새 HTML 미제공 0편, 전송·무결성 실패 0건이다. CoSec v1의 서지는 이전 동일 버전 Atom 기록을 대조하여 사용했으며 이를 새 온라인 관측으로 표시하지 않았다.
+- 전체 대상 68개 버전 ID = 원문 확보 20편(HTML 18·PDF 2) + 전문 미확보 48편(모두 일일 한도 대기). 기존 원본 15편과 지식 페이지 6개를 포함한 보호 파일 46개 불변. 기존 HTML 미제공 2편의 PDF 보관 상태·역사적 근거를 보존하고 재다운로드하지 않았다. 대기 48편은 `daily_budget_exhausted`, 다음 시도 가능 시각 `2026-10-01T15:00:00+00:00`(KST 10월 2일 00:00). 기존 색인의 보관분만 센 전체 대상 표현을 모든 발견 pending을 포함한 합집합 집계로 바로잡았다.
+- 초기 로컬 점검의 PDF 예상 파일명 정렬 오류와 이전 candidates.json wrapper 오독을 각각 근거에 남기고 수정·재검증했다. 원본을 고쳐 통과시키지 않았고, 미복구 핵심 실패 0건·safety_block=false다. execute_code는 Cron 승인 정책으로 실행 전 차단되어 정상 terminal 도구를 사용했다. 신규 수집 프로그램·패키지·스킬을 만들지 않았다.
+- state·주제 raw index·루트 Raw Sources를 갱신하고 이 로그만 append했다. 본문 의미 분석·도표 검토·PDF 추출/렌더/OCR·전처리 모델·Wiki 컴파일·전역 설정·다른 Cron·외부 알림/동기화는 수행하지 않았다.
+- 근거: `_meta/runs/4cff5b4f10ec/20260930T150351Z-62d474aa/`의 preflight, 검색 XML/요약·candidates, pending/checkpoint/예약 snapshot, HTML 다운로드·게시 기록, inventory-verification.json, report.json, final-verification.json. 소유 잠금 해제 결과는 lock-release.json에 별도 기록한다.
+
+## [2026-10-01] update | P3 준비·검증 — 실행·Cron 등록 제외
+- Event ID: `P3-PREP-20260930T234207Z-p3-preparation`; 승인/근거: `_meta/runs/wiki/20260930T234207Z-p3-preparation/approval.json`, `preflight.json`, `backlog.json`, `preapply-tests.json`.
+- 원천 20편(HTML 18/PDF 2)을 메타데이터·길이·SHA-256으로 대조하고 누락 HTML 10편을 compilation에 blocked_approval로 추가했다. 결과는 HTML 16편 승인 대기, HTML 2편 published_draft, PDF 2편 blocked_policy다. 기존 항목/receipt/실패 기록은 유지했다.
+- P2 실제 게시·통합 관측 근거를 운영 문서에 반영했다. 기존 지식 6개는 draft/unreviewed 그대로 두었고 사용자 내용 검토 완료로 표시하지 않았다.
+- 기존 114개와 준비 경계 10개, 합계 124개 격리 회귀가 통과했다. 기존 게시기의 no-op/충돌/부분 게시·복구를 확인했으나 현재 생성기는 P2-only로 비파일럿 진입을 거부하므로 P3 일일 전체 경로는 미검증이다.
+- 설치 Cron CLI의 paused·모델/reasoning pin 옵션과 UTC 일정 계산을 읽기 전용으로 확인했다. 이는 미등록 일정 미리보기이며 실제 발화 증거가 아니다.
+- 변경: `_meta/state/compilation.json`, `_meta/automation.json`의 blocker 설명, `_meta/AUTOMATION.md`, `_meta/COMPILATION.md`, `_meta/P3-PREPARATION.md`, `index.md`의 운영 링크 및 이 로그. 준비 run에 기준/시험/변경/최종 검증 근거를 보존했다.
+- P3/P4/P5/P6 실행 승인·등록/활성화 권한과 전역/job enabled는 false, 신규 cron_id는 null을 유지했다. 실제 논문 본문 읽기/전송·모델 호출·지식 게시·PDF 분석·추가 수집·Cron 변경·전역 설정 변경 없음. no_cost_cap 유지, 미관측 비용을 0으로 만들지 않음.
+
+## [2026-10-01] update | PDF 내장 텍스트 수동 컴파일 정책 v3 적용
+
+- 사용자 재요청과 정상 보호 편집 도구 승인으로 AGENTS.md 및 준비된 정책/스키마/프롬프트/상태 13개를 적용했다. 이전 보호 편집 시간초과 기록은 보존했다.
+- 정책 pkm-html-pdf-text-knowledge/v3, 계약 pkm-contracts/v3. PDF 2609.30614v1·2609.30824v1만 수동 텍스트 컴파일/검증 후 게시 승인; 현재 상태는 blocked_approval이며 실제 실행 전 입력 snapshot을 고정한다.
+- 정책 시험 132개와 PDF adapter 합성 시험 107개를 재실행해 모두 통과했다. 실제 PDF 읽기·모델 호출·지식 게시 완료 근거가 아니다.
+- 원본/source.json/수집 state/Cron·기존 지식은 수정하지 않았다. OCR/이미지/바이너리 전송/지속 추출 금지, no_cost_cap·미관측 비용 null, 신규 Cron 미등록·P3–P6 비활성을 유지한다.
+- 근거: _meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-retry-20261001T015352Z.json, _meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-live-tests.json, _meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/evidence/parent-verified-02/counts.json.
+
+## [2026-10-01] create | Wiki × Hermes API Gateway 외부 frontend 기술문서
+
+- 사용자 요청 및 추가 확인에 따라 Wiki 작업 루트 `/home/ainsdev/wiki/pkm-articles`와 승인 후 적용 절차를 문서화했다. 실제 Gateway 설정 변경·재시작·외부 공개는 하지 않았다.
+- 생성: `docs/techblog/README.md`, `architecture.md`, `workspace-and-gateway.md`, `tech-stack.md`, `api-contract.md`, `workflows.md`, `data-contracts.md`, `frontend-design.md`, `DESIGN.md`, `security-and-operations.md`, `implementation-roadmap.md`, `evidence.md`. 파일명은 모두 `docs/techblog/` 기준이다. 검증 기록은 같은 폴더의 `verification.json`에 둔다.
+- 공식 Hermes 문서와 설치 소스 `8d79c2ff57bba4b07e5b37ed90387b16541aef53`를 읽어 기존 기능·미지원/제약·제안 BFF를 분리했다. 요청별 cwd, API 세션 식별자, SSE 재접속/CORS/완료 판정의 버전 차이를 기록했다.
+- 문서 12개의 로컬 링크·코드 fence를 점검하고 JSON 예시 5개 구문 및 Bash 예시 4개의 `bash -n` 검사를 통과했다. Mermaid 3개는 코드 블록 구조만 점검했으며 렌더링하지 않았다. 문서 예시의 API/설정 명령은 실행하지 않았다.
+- 변경: 이 로그에 추가하고 `docs/README.md`, `index.md`에 기술문서 진입점을 추가했다. 기술문서는 Wiki Total pages에 가산하지 않는다.
+- 작업 중 별도 v3 정책/상태 변경을 관측해 되돌리지 않고 문서에 반영했다. 시작·최종 hash 차이를 외부 변경으로 분리 기록하며 전체 보호 파일 불변으로 잘못 표시하지 않는다. 이 작업은 원본·source.json·수집/컴파일 state·기존 지식·정책을 수정하지 않았다.
+- 새 웹 앱/BFF·프로필·DB·수집기·파서 구현, 설치, 모델 호출, 논문 본문/PDF 읽기, 지식 게시, Cron 변경, 브라우저/접근성/성능/배포 검증, commit/push는 수행하지 않았다. 결과는 구현 전 기술문서다.
+
+## [2026-10-01] update | Hermes API Gateway 기술문서 폴더 이동
+
+- 사용자 요청에 따라 `docs/techblog/`의 기술문서 12개와 `verification.json`, 총 13개 파일을 `docs/techblog/hermes-api-gateway-workdir-assoc/`로 이동했다. 이동 직후 모든 파일의 바이트가 이동 전과 동일함을 대조했다.
+- 한 단계 깊어진 경로에 맞춰 Wiki 루트를 가리키는 상대 링크·문서 트리 및 `docs/README.md`, `index.md`의 진입점을 갱신했다. 기존 로그의 작성 당시 경로는 역사적 기록으로 보존한다.
+- `verification.json`의 기존 관측값·해시·경로는 작성 당시 snapshot으로 보존하고 이동 메타데이터를 추가한다. 이동 후 파일 수·링크·내용 변경 범위를 검증하며 Gateway 설정·원본·지식 페이지·수집 상태는 변경하지 않는다.
+
+## [2026-10-01] create | PDF text draft — arXiv 2609.30614v1
+
+<!-- publication-event:pdf3-9ed77666bcba802e33823720750afe4d -->
+- Page: `entities/arxiv-2609.30614v1.md`; run: `_meta/runs/wiki/20261001T001438Z-pdf-wiki`; work_key: `5788b5235ed2707f483af65f21b1060e3427455d474327ebb3ec488a551a413e`.
+- Source SHA-256: `a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d`; agent review: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-agent-review.json`; mechanical checks: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-verification.json`.
+- Draft/unreviewed; no human review, visual inspection or experimental reproduction claimed.
+
+## [2026-10-01] create | PDF text draft — arXiv 2609.30824v1
+
+<!-- publication-event:pdf3-b99973e47fc40996683ae340e855c3a9 -->
+- Page: `entities/arxiv-2609.30824v1.md`; run: `_meta/runs/wiki/20261001T001438Z-pdf-wiki`; work_key: `5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35`.
+- Source SHA-256: `4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8`; agent review: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-agent-review.json`; mechanical checks: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30824v1-attempt1-verification.json`.
+- Draft/unreviewed; no human review, visual inspection or experimental reproduction claimed.
+
+## [2026-10-01] update | 승인된 PDF 두 편 수동 Wiki 컴파일·검증·게시 완료
+
+<!-- pdf-text-publication-complete:20261001T001438Z-pdf-wiki -->
+- `2609.30614v1`(물리적 1–23페이지), `2609.30824v1`(1–9페이지)의 내장 텍스트만 승인된 표준 pypdf로 메모리에서 읽고 codex-lb/gpt-6-astra/xhigh로 각각 1회 생성했다. 두 응답 completed, fallback·모델 재시도 없음. 비용 미관측 null·no_cost_cap 유지.
+- 신규 지식: `entities/arxiv-2609.30614v1.md`, `entities/arxiv-2609.30824v1.md`. 기존 개념 3개로 각각 연결했으며 기존 v2 지식 6개는 불변이다. 두 노트는 draft/unreviewed, 사용자 내용 검토 완료가 아니다.
+- 기계 검사 64개 통과·생성 주장 50개와 본문을 실제 페이지의 짧은 근거 및 주변 문맥에 대조했다. 부모의 발췌 대조는 독립 전문 재독·그림/이미지/표 레이아웃 검토·실험 재현을 뜻하지 않는다.
+- collection.lock·write-ahead journal 아래 index/log/receipt/compilation과 실물 hash를 검증했다. 두 거래 committed, index Total pages=8. compilation은 HTML 2·PDF 2편 published_draft, HTML 16편 승인 대기다. 이전 HTML 항목과 receipts/transactions/cost_events 이력 prefix를 보존했다.
+- 두 페이지 각각 2회 no-op에서 89개 파일 불변. 전체 지식의 wikilink 38회·로컬 인용 링크 294회 정상. 원천 20편(HTML 18/PDF 2), 전체 발견 68개 ID, 일일 한도 대기 48편을 다시 대조했다. 원본/source.json·수집 state·기존 지식 등 보존 50개 파일과 과거 로그 prefix 불변.
+- 정책 시험 132개, PDF adapter 최종 합성 시험 107개, 게시 계획 시험 9개(하위 사례 61개), live schema 4개 및 git diff --check 통과. 첫 게시 준비의 timeout 숫자 타입 차이 거부를 별도 보존하고 원래 기록값으로 호출을 수정했으며 생성 결과나 가드를 변경하지 않았다.
+- 지속 PDF 추출본·OCR·렌더·이미지/바이너리 전송·외부 자산·자동화 활성화 없음. 수집 Cron은 collect-only 그대로, 신규 Cron 미등록·P3–P6 미승인이다.
+- 보고서/검증: `_meta/runs/wiki/20261001T001438Z-pdf-wiki/report.md`, `final-verification.json`; 실제 생성·기계/의미 대조·게시/no-op 근거는 같은 run의 runtime/reviews/publications에 있다. 과거 보호 편집 timeout/HOLD는 이력으로 보존했다.
+
+## [2026-10-01] update | P3 논문별 실행기 구현·격리 검증 완료 — 운영 비활성 유지
+
+<!-- p3-implementation-complete:20261001T023617Z-p3-runtime -->
+- `다음 단계 진행해주세요`를 구현·합성 검증 단계로 적용했다. `_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/`에 승인/선택/예약/생성/별도 의미 검토/신규 draft 게시 연결과 고정-root CLI를 작성했다. 기존 P2 가드·수집기·파서·DB는 수정하거나 복원하지 않았다.
+- 최종 P3 합성 시험 63개(실패/오류/skip 0), 기존 policy 132개·PDF adapter 107개·PDF 게시기 9개 회귀 통과. runtime Python 11개 문법/공백 및 git diff --check 통과. 합성 HTML/PDF·가짜 모델을 사용했으며 실제 논문 의미 검토나 모델 응답 근거가 아니다.
+- 게시 중단 7개 지점 복구/no-op, 사용자 수정·승인/원본 drift 거부, 생성 후 deadline 중단, 혼합 결과 집계, 부분 PDF 페이지 기록을 확인했다. 독립 검토의 scheduler 실제 필드 누락과 collection busy 결과 유실을 수정하고 내구 outcome의 모델 재호출 없는 상태 반영/반복 no-op을 검증했다. 과거 RED·검토 no_ship 기록은 보존한다.
+- 기존 원본 20편(HTML 18/PDF 2), published_draft 4편·HTML 승인 대기 16편, 지식 페이지 8개는 그대로다. 로그 추가 전 보호 87개 파일 hash가 동일했고, 이 행정 로그는 collection.lock 아래 append했다. 원본/source.json·수집/컴파일 state·정책/프롬프트·기존 지식·색인·legacy helper는 변경하지 않았다.
+- 실제 신규 논문 읽기/모델 전송/운영 지식 게시·Cron 등록/활성화·설치·외부 알림·commit/push 없음. enabled=false, 신규 Cron ID null 유지. 이번 단일 논문 노트 경로는 개념·비교 자동 갱신·주간 lint 전체나 실제 Cron 발화 지원 완료가 아니며 운영 적용은 별도 범위/실행/등록/활성화 승인과 prompt 연결 검증이 필요하다.
+- 보고서·운영 인계·검증: `_meta/runs/wiki/20261001T023617Z-p3-runtime/report.md`, `RUNTIME-HANDOFF.md`, `REVIEW-RESOLUTION.md`, `final-verification.json`.
+
+## [2026-10-01] create | Wiki × Hermes 전체 아키텍처·워크플로 Archify 시각화
+
+<!-- archify-document-map:workflow-hermes-wiki-20261001-031930 -->
+- 사용자 요청의 기술문서 12개·verification.json 전체를 바탕으로 architecture 3개와 workflow 5개, 총 8개 독립 HTML과 JSON 명세를 `.archify/workflow-hermes-wiki-20261001-031930/`에 생성했다. 원문 13개 파일·92개 절 대응표, 노드 114개·관계 116개의 문서 줄 근거, 명세/HTML SHA-256 및 최종 receipt 경로를 기록했다.
+- 범위는 전체 구조, cwd와 접근 격리, 모델 없는 읽기, Runs/SSE/재연결/중지, HTML 우선 수집, 별도 승인 컴파일·조건부 게시/복구, 파일 원장·DTO·화면·여섯 상태축, R0–R4 구현·QA다. 기존 계약·문서 관측·향후 제안·미확인을 구분했다.
+- 8개 모두 Archify showcase 9/9, 오류·경고 0, validate/deliver/strict check/browser-check 통과. 현재 HTML·명세와 delivery/browser/capture receipt의 hash를 대조했다. 08의 최종 통과는 `08-roadmap/repair-5/`이며 초기 실패 이력을 보존했다.
+- 자동 브라우저는 1440×900·1600×1000·1920×1080·2048×1320, 부가 검색/Escape/포커스는 1440px·375px에서 확인했다. 대표 데스크톱 이미지 검토는 표본이며 모든 카드·테마·내보내기·접근성 전수 감사가 아니다. 375px에서 01·02·07 일부 SVG 텍스트가 화면 밖에 있고 보조 글씨가 작아 모바일 전체 가독성 PASS는 선언하지 않는다.
+- 기존 문서·슬라이드 79개 파일 hash 불변을 확인했다. 새 `docs/techblog/hermes-api-gateway-workdir-assoc/ARCHIFY.md`와 운영 색인 링크를 추가하고 이 로그는 collection.lock 소유 아래 append했다. 지식 페이지 수는 변경하지 않았다.
+- 기존 Chromium과 해당 로컬 HTML 검사 프로세스에만 공식 no-sandbox 옵션을 사용했다. Gateway/config·모델 호출·논문 원문 읽기/추출·수집·Wiki 지식 게시·Cron 변경·설치·commit/push는 하지 않았다.
+- 진입점: `.archify/workflow-hermes-wiki-20261001-031930/index.html`; 해설 `README.md`, 집계 `verification.json`, 파일 증거 `artifact-receipts.json`, 시각 검토 및 브라우저 기록은 같은 폴더에 있다.
+
+## [2026-10-01] update | P3 첫 수동 운영 승인·paused Cron 등록 및 실행 gate 확인
+
+<!-- p3-first-operation-preflight:20261001T053212Z -->
+- 사용자 `다음 단계로 운영을 진행해주세요`와 명시 선택 `첫 배치 실제 실행 + 일시정지 Cron 등록 승인`에 따라 현재·향후 정상 수집 HTML/PDF 텍스트의 신규 논문별 draft 범위, 이번 실행 한 번·최대 5편·45분·모델 전송·검증 후 게시·작업 중 편집 중지를 기록했다. 개념/비교 자동 갱신·P4–P6·자동 활성화는 미승인이다.
+- 신규 Cron `4839be6a1db1` / PKM Daily Wiki Compiler를 KST 02:00 의도(UTC `0 17 * * *`), codex-lb/gpt-6-astra/xhigh, skill llm-wiki, exact root, local 전달로 **paused 생성**했다. enabled=false/state=paused/next_run_at=null과 prompt/model/provider/reasoning/workdir/monitor/context/attach 필드를 readback했다. null은 예약 실행 시각이 확정되었다는 뜻이 아니다. 기존 수집 잡과 다른 두 잡 구성은 유지했다.
+- AGENTS/SCHEMA/AUTOMATION/COMPILATION/STATE-CONTRACTS에 좁은 최신 운영 개정을 추가하고 과거 미승인 이력을 보존했다. 운영 prompt를 고정 CLI와 실제 approval/snapshot으로 연결했다. automation은 P3 실행/paused 등록 승인만 true, 전역/job/compilation enabled=false 및 활성화=false다. 기존 비용 개정 참조는 schema const 그대로 유지했다.
+- 운영 전 합성 회귀 63개 통과, 현재 prompt의 합성 생성/별도 검토/게시 연결 통과, 계약 4개와 원천 20편/기존 Wiki 8개·receipt/WAL/해시 대조 통과. 모델 route의 공개 메타데이터만 확인했으며 이 기록 시점까지 신규 원문 의미 처리·모델 호출·게시 없음. 원본/수집/기존 지식 등 비정책 보호 72개 파일은 행정 index/log 변경 전 동일했다.
+- 첫 선택은 수집 시각순 `2609.30217v1`, `2609.30266v1`, `2609.30940v1`, `2609.31039v1`, `2609.31318v1`이다. 선택/승인과 실제 처리 완료를 구분한다. 스키마 고정 비용 승인 필드를 잘못 바꾼 첫 preflight 실패와 CLI edit의 prompt newline readback 실패는 보존하고, schema/검증 가드를 완화하지 않고 설정을 바로잡았다. 미실행 첫 approval은 보존하고 gate-02의 새 snapshot만 사용한다.
+- 근거: `_meta/runs/wiki/20261001T053212Z-p3-first-operation/`의 scope-approval.json, registration-paused-02.json, gate-02/execution-approval.json, runtime-manifest.json, preflight.json, ready-to-run.json. 실제 배치 결과는 후속 별도 기록한다. 원본/기존 지식/수집 state·Cron/전역 모델·인증 변경 및 설치·외부 알림·commit/push 없음.
+
+## [2026-10-01] create | 6주차 Agent Reach SNS Second Brain 기술문서
+
+<!-- sns-second-brain-docs:20261001 -->
+- 사용자 요청에 따라 `docs/lectures/6w/`에 목차와 01–07 기술문서를 작성했다. X·Reddit·YouTube 접근·인증 보호, 불변 raw 캡처, 출처·중복·checkpoint·부분 실패, 별도 승인 Wiki 컴파일·지식 연결, Cron 운영, 프롬프트·실습을 설명하며 Discord용 요약·전송을 제외한다.
+- 요청 Cron `0d0ad6c887e3`은 활성 default 프로필의 목록/저장 레코드에서 찾지 못했고 해당 실행 이력도 없었다. 다른 프로필·이전 백업은 열지 않았으며 원설정·일정·검색식·모델을 추정하지 않았다. SNS 경로/schema/한도/일정/프롬프트는 적용 전 제안으로 표시했다.
+- 공식 Hermes/Agent Reach 문서, 설치 스킬과 CLI 버전·도움말을 대조했다. Agent Reach 1.5.0, twitter 0.8.6, rdt 0.4.2, yt-dlp 2026.08.19를 관측했다. 채널 doctor/live 인증·검색·자막 수집은 하지 않았다. 업데이트 확인만 했고 설치·업데이트는 하지 않았다.
+- `docs/README.md`와 루트 `index.md`에 안내 링크를 추가하고 공유 collection.lock 소유 아래 이 기록을 append했다. 기술문서는 지식 페이지 수에 가산하지 않는다. 문서 정적 검사·보존 대조의 실제 결과는 `docs/lectures/6w/evidence/verification.json`을 따른다.
+- SNS raw 저장·정책 변경·모델 본문 전송·지식 컴파일/게시·Cron 등록/변경/발화·인증 변경·외부 알림·새 수집기/parser/DB·commit/push는 하지 않았다. 대상 Cron의 비밀값을 제거한 원설정 또는 소속 프로필 확인과 SNS 정책/실행의 별도 승인이 남아 있다.
+
+## [2026-10-01] update | P3 자동 검증 완료 게시·일일 컴파일 Cron 활성화
+
+<!-- p3-auto-activation:20261001T060423Z -->
+- 사용자 `사용자 검토 단계를 없애주고, 원본 논문이 수집이 되면 llm wiki 컴파일까지 모두 자동화 해주세요` 및 `해당 시간 편집 중지에 동의하고 자동 게시 활성화`에 따라 신규 노트 compiled/auto_verified 자동 게시를 적용했다. 사람 검토는 필수 조건이 아니며 last_reviewed/human_review_ref는 null이다. 기존 draft/unreviewed 노트·receipt는 보존했다.
+- 컴파일 Cron `4839be6a1db1`을 매일 KST 02:00(UTC `0 17 * * *`) enabled=true/state=scheduled로 활성화하고 실제 저장 프롬프트·codex-lb/gpt-6-astra/xhigh·workdir·skills·local 전달·다음 실행 `2026-10-02T02:00:00+09:00`을 readback했다. 수집 `4cff5b4f10ec`는 KST 00:00 collect-only 그대로다. 수집 즉시 이벤트 실행이 아니라 최대 5편·해당 일 02:45까지의 후속 배치다.
+- 이전 수동 배치 5편은 검토 거부 4편/결과 불명 1편, 신규 게시 0편이었다. 사용자 `5편 모두 새 승인으로 재시도 허용`에 따른 retry-approval로만 한 번 재대기했으며 과거 실패/unknown·reservation/result/review 근거는 불변이다. 이후 unknown/safety_block 자동 해제 권한은 없다.
+- 최종 합성 회귀 93개(실패/오류/skip 0), 스키마 시험 및 현재 4개 계약 instance를 확인했다. 실제 구간 밖 --check는 exit 2/blocked, 직접 원인 대조는 edit_freeze_window이며 run 미생성·원문 접근/네트워크 시도 0이다. 합성 통과와 실제 예약 발화/모델 처리/게시 성공은 다르다.
+- 원본 20편(HTML 18/PDF 2), 기존 게시 논문 4편·지식 페이지 8개, 실행 gate 대기 16편을 전체 ID로 대조했다. 원본/source.json/기존 지식/수집 설정·상태의 보호 50개 파일 및 게시 receipt/output hash·과거 log prefix·실패 근거를 보존했다. 다른 잡의 실행 횟수 증가는 설정 변경과 분리했으며 수집 잡과 다른 두 잡의 설정은 동일했다.
+- 변경: AGENTS.md, SCHEMA.md, README.md, _meta/AUTOMATION.md, _meta/COMPILATION.md, _meta/STATE-CONTRACTS.md, _meta/automation.json, _meta/automation-contracts.schema.json, _meta/prompts/wiki-compile.md, _meta/state/compilation.json, index.md 및 이 로그. 새 runtime/승인/등록/시험 근거는 _meta/runs/wiki/20261001T060423Z-p3-auto-activation/에 보관한다. index 운영 안내 갱신과 이 append는 공유 collection.lock 아래 조건부 적용한다.
+- 첫 예약 실행은 아직 미관측이며 이번 활성화 작업의 새 논문 읽기·모델 호출·지식 추가는 없다. 노트별 검증은 유지하되 전체 Wiki lint/주간 lint·개념/비교 자동 수정·P4–P6·설치·외부 알림·전역 설정·commit/push는 수행하지 않았다. 보고서 report.md, 등록 registration-active.json, 실행 승인 scheduled/execution-approval.json, 최종 대조 final-verification.json을 참조한다.
+
+## [2026-10-01] delete | 사용자 승인 비관련·인접 논문 3편 정리
+
+<!-- approved-removal:20261001-remove-three-offtopic-papers -->
+- 사용자 `위 1,2번 논문 모두 삭제해주고, wiki 컴파일 되어 있다면 관련 위키 문서 모두 삭제해주세요.`와 범위 확인 `세 편 모두 삭제: TokenCast, Financial Fragility, Planarian`에 따라 `2609.35760v1`, `2609.30940v1`, `2609.35366v1`을 정리했다. 다른 논문과 공유하는 문서와 과거 감사 기록은 보존하는 범위로 확인했다.
+- 삭제 전 정확한 원본 6파일 및 수정 대상 4파일을 활성 Wiki 밖 `/home/ainsdev/wiki-removal-backups/pkm-articles/20261001-remove-three-offtopic-papers/before.tar.gz`에 백업하고 10개 archive-member의 SHA-256을 원본과 대조했다. 이전 백업을 열거나 복원하지 않았다. 공유 collection.lock 소유 아래 작업하며 실행 중인 컴파일 항목·daily-run.lock이 없는지 확인했다.
+- `raw/articles/4cff5b4f10ec/`의 세 `arxiv-<version-id>/` 디렉터리에서 source.html/source.json 합계 6파일과 빈 디렉터리 3개를 삭제했다. entities/concepts/comparisons/queries의 8개 게시 문서 및 compilation output_refs를 조사했으며 해당 세 편의 게시된 전용 위키 문서는 없어 지식 문서 삭제는 0개다. Financial Fragility의 이전 실패한 생성·검토 기록은 게시 문서가 아닌 감사 근거로 유지했다.
+- `_meta/state/compilation.json`의 현행 items에서 세 편만 제거했다. 다른 17개 항목·receipt·transaction·cost_events·safety_block·last_run은 유지한다. 수집 state의 pending에는 세 편이 없어서 수집 state 전체를 변경하지 않았다. 검색 checkpoint·일일 시도 이력·과거 승인 및 run/receipt/runtime·모델 정책·Cron 설정은 변경하지 않았다.
+- 원본 색인과 루트 index의 현재 보관 수를 17편(HTML 15/PDF 2), 현재 관리 대상 65개(보관 17/수집 대기 48), 컴파일 완료 논문 4편/실행 gate 대기 13편으로 정비했다. 과거 68개/보관 20편 수치는 당시 이력으로 구별해 보존하고 지식 페이지 8개는 유지했다.
+- 삭제 범위·백업·삭제 결과는 `_meta/migrations/20261001-remove-three-offtopic-papers/`의 manifest.json 및 deletion.json에 기록했다. 최종 보존/스키마/전체 ID 대조는 같은 위치의 verification.json을 따른다. 원문 의미 처리·새 컴파일·모델 호출·정기 실행·commit/push는 수행하지 않았다.
+- 이번 요청은 현행 파일 정리이며 향후 재수집 제외 정책이나 검색식 변경은 적용하지 않았다. 같은 논문이 향후 검색에서 재발견되면 다시 수집될 수 있으므로 영구 제외를 원하면 별도 운영 정책 변경이 필요하다.
+
+## [2026-10-01] update | AI Security 제목·초록 검색식으로 기존 원본 수집 Cron 전환
+
+<!-- collection-query-cutover:20261001-ai-security-query -->
+- 사용자 `위 쿼리 조건을 적용하여 원본 논문 수집 자동화 할 수 있도록 적용해주세요`에 따라 `_meta/topics.json`의 original_query/api_query를 승인된 전체 ti:/abs: 쿼리로 교체했다. 주제 이름은 AI Security, query_revision은 ai-security-ti-abs/v1이다. 정확한 쿼리 UTF-8 SHA-256은 `4ea7f574dbe38a7bfa6f1556d25016b404bfaffb70835a09b25c56cf35ac988c`다.
+- 기존 Cron `4cff5b4f10ec`의 이름·프롬프트만 Hermes CLI로 갱신하고 get_job readback에서 prompt/name과 나머지 기존 필드 보존을 확인했다. enabled=true/state=scheduled, KST 00:00/UTC `0 15 * * *`, 다음 실행 2026-10-02 00:00 KST, codex-lb/gpt-6-astra/xhigh·arxiv 스킬·local 전달·기존 workdir를 유지한다. 새 Cron 생성·즉시 실행·외부 알림은 하지 않았다.
+- 승인 쿼리 직접 API probe는 HTTP 200/Atom 5개 레코드를 반환했다. 기존 pending 48개는 versioned id_list로 실제 존재를 확인한 뒤, 동일 search_query+id_list 교집합을 10개 이하씩 5묶음으로 조회해 **16개 일치/32개 비일치/미확인 0개**를 전수 대조했다. 첫 48개 동시 필터의 HTTP 400(Request Line is too large)은 실패 근거로 보존하고 ID 묶음만 줄였다. 쿼리 자체를 줄이거나 완화하지 않았다.
+- 기존 pending을 자동 승계하지 않고 현재 쿼리 동일 버전 일치가 입증된 항목만 다운로드하도록 `_meta/COLLECTION.md`·topics·Cron 프롬프트를 함께 갱신했다. 비일치는 pending 보존/다운로드 제외, 불명·전송 실패는 실패 근거와 pending 보존이며 보안 비관련 또는 정상 0편으로 위장하지 않는다. 아직 새 프롬프트의 예약 실행에서 이 절차가 수행된 것은 아니다.
+- 공유 collection.lock 소유 아래 대상 운영 파일 5개를 이번 migration의 before-files에 복사·해시 검증하고 적용했다. 기존 원본·source.json·지식·수집/컴파일 state·checkpoint·일일 시도·과거 승인/실행·컴파일 고정 정책/프로그램·다른 Cron은 변경하지 않는다. 루트 index와 원본 색인만 현재 쿼리/대기 상태 안내로 갱신하며 이 로그는 append-only다.
+- HTML 우선/공식 미제공 PDF fallback·하루 5편·90분·48시간 overlap·최초 하한·중복/잠금/실패 정책은 유지한다. 검색 및 pending 확인 요청을 합해 50페이지 한도이며 요청 간 최소 3초다. 기존 pending ID 확인은 신규 과거 발견이 아니고 checkpoint 재설정이나 소급 전체 수집을 하지 않는다.
+- 실제 원본 다운로드·본문 분석·PDF 추출·별도 의미 분류 모델·Wiki 컴파일·원본/지식 삭제·새 수집기/파서/DB·설치·전역 모델/인증 변경·commit/push는 하지 않았다. 쿼리 불일치를 보안 비관련 판정으로 표현하지 않는다. 등록/API 검증과 첫 예약 수집 성공은 구분한다.
+- 근거: `_meta/migrations/20261001-ai-security-query/`의 approval.json, approved-query.txt, before.json, query-policy.md, probe.json/XML, pending-validation-batched.json, ID/필터 배치 JSON/XML, registration-after.json. 최종 보존·등록·정적/링크 검증은 verification.json 및 보고서에 기록한다.
+
+## [2026-10-01] create | 외부 앱·Hermes Gateway·Wiki 작업 경로 연동 집중 Archify
+
+<!-- archify-gateway-workdir:20261001-084424 -->
+- 사용자 요청에 따라 `.archify/architecture-gateway-workdir-20261001-084424/`에 연결 구조 architecture 1개와 작업 경로 적용·질의/SSE workflow 2개를 생성했다. 독립 HTML·candidate.json·문서 줄 근거·hash 기준점·검증 집계를 보관한다. 문서 기반 설계이며 live 시스템 토폴로지나 BFF 구현 완료가 아니다.
+- `docs/techblog/hermes-api-gateway-workdir-assoc/INTEGRATION-ARCHIFY.md`에 그림 3개 링크와 URL/cwd 분리, 기존 채팅 UI와 BFF+Runs 비교, 서버측 키·pageId·session/run 매핑, 컨테이너 경로·실제 격리·재연결·중지 방법을 정리했다. 기존 ARCHIFY.md에는 새 안내만 추가했다. 현재 P3 자동 컴파일 승인을 과거 미승인 문구와 구분하고 웹 질의·게시 권한으로 승계하지 않았다.
+- 최종 3개 모두 showcase 9/9, 오류·경고 0, validate/deliver/strict check/browser-check 통과. 명세·HTML과 delivery/browser/capture receipt의 hash를 대조했다. 01의 최종 근거는 `01-connect/review-2/`, 02·03은 각 폴더 루트다. 자동 검사 viewport는 1440×900·1600×1000·1920×1080·2048×1320이다.
+- 각 그림의 1440×900 밝은 테마 첫 화면을 이미지 도구로 표본 검토했다. 주요 노드 잘림·판독을 막는 겹침은 관측되지 않았고 화살표는 추적 가능했다. 작은/옅은 보조 글씨, 02의 지그재그 순서, 03의 SSE 우회선은 확대·해설 병행이 필요한 한계다. 화면 밖 카드·모바일 전체·모든 조작/내보내기·접근성 PASS는 주장하지 않는다.
+- 기준점의 기존 문서·슬라이드 80개 중 79개 hash 불변, ARCHIFY.md의 안내 추가 외 기존 내용 보존, 로컬 링크 27개·fence·Bash 예시 구문을 검증했다. `verification.json`에 실제 결과를 기록했다. 공유 collection.lock 소유 아래 이 로그를 append하며 지식 페이지·루트 색인 수는 변경하지 않는다.
+- 기존 Chromium과 생성 로컬 HTML 검사에만 Archify의 Chrome 경로/no-sandbox 옵션을 사용했다. Gateway 설정·시작·재시작, live API/모델 호출, 원문 처리·Wiki 게시·Cron 변경, 설치·외부 알림·서비스 배포·commit/push는 수행하지 않았다.
+
+## [2026-10-01] create | 앱 요청·프로필별 작업 경로·응답 Archify
+
+<!-- archify-profile-routing:20261001-102028 -->
+- 사용자 요청에 따라 `.archify/workflow-profile-routing-20261001-102028/`에 전체 API 왕복 sequence와 프로필별 URL→cwd 매핑 workflow를 생성했다. 주 그림은 `03-api-sequence/diagram.html`, 보조 그림은 `02-profile-map/diagram.html`이다. 문서 기반 미적용 설계이며 pkm-articles 프로필 생성·실행 관측이 아니다. team-wiki와 경로는 가상 예시다.
+- 앱→BFF 권한·고정 매핑→Hermes 프로필 키 인증→202/run_id→실효 cwd·Wiki 읽기→SSE→기존 run 최종 상태 조회→앱 답변을 구분했다. cwd는 sandbox가 아니며 세션 cwd/override의 우선 가능성을 표시했다. 생성·상태·events·stop 모두 같은 프로필과 소유권 검사를 유지하는 설계다.
+- `PROFILE-ROUTING.md`에 그림 링크·매핑 표·전체 순서·제약을 작성하고 기존 `ARCHIFY.md`에 진입점만 추가했다. 기준점의 기존 문서·슬라이드 81개 중 80개 hash 불변이며 ARCHIFY.md 안내 추가가 유일한 기존 문서 변경이다. 새 지식 페이지·루트 색인 수는 바꾸지 않았다.
+- 최종 전달 2개 모두 showcase 9/9·오류/경고 0, validate/deliver/strict provenance check/Chromium browser-check 통과. 최종 명세/HTML 및 browser/capture receipt의 hash, 로컬 링크 18개를 `verify_artifacts.py`로 검증했다. 주 그림 최종 receipt는 `03-api-sequence/label-review/`, 보조는 `02-profile-map/review-3/`다. 실패한 `01-roundtrip` 흐름도 초안은 미전달로 보존하고 성공 수에 포함하지 않았다.
+- 주 그림 2048×1320 밝은 테마와 보조 그림 1440×900 밝은 테마 캡처를 표본 시각 검토했다. 요청된 cwd 매핑·읽기·최종 앱 응답이 보이고 핵심 잘림/겹침은 관측되지 않았다. 작은 보조 글씨·매핑 그림 우회선은 한계이며 화면 밖 카드·모바일·접근성·모든 내보내기 PASS를 뜻하지 않는다. `visual-review.json`과 `verification.json`에 범위를 구분했다.
+- 공유 collection.lock 소유 아래 이 항목만 append했다. 기존 로컬 Chromium 외 설치, Gateway/API/모델 호출, 설정·프로필·Cron 변경, 원문 읽기·전송·Wiki 게시, 외부 알림·배포·commit/push는 하지 않았다. Archify 작성 참고에는 API 왕복의 Sequence 선택 및 핵심 cwd를 숨은 note가 아닌 보이는 라벨에 두는 일반 절차를 기록했다.

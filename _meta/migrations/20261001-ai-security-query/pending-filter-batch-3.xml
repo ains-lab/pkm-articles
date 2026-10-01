@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/oVdP9QlAqlmJNIkIROtOAhVA5kc</id>
+  <title>arXiv Query: search_query=( (ti:"large language model" OR abs:"large language model") OR (ti:"language model" OR abs:"language model") OR (ti:"LLM" OR abs:"LLM") OR (ti:"LLMs" OR abs:"LLMs") OR (ti:"foundation model" OR abs:"foundation model") OR (ti:"generative AI" OR abs:"generative AI") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"LLM agent" OR abs:"LLM agent") OR (ti:"agentic AI" OR abs:"agentic AI") OR (ti:"Model Context Protocol" OR abs:"Model Context Protocol") OR (ti:"machine learning" OR abs:"machine learning") OR (ti:"deep learning" OR abs:"deep learning") OR (ti:"neural network" OR abs:"neural network") OR (ti:"vision language model" OR abs:"vision language model") OR (ti:"diffusion model" OR abs:"diffusion model") ) AND ( (ti:"prompt injection" OR abs:"prompt injection") OR (ti:"indirect prompt injection" OR abs:"indirect prompt injection") OR (ti:"jailbreak" OR abs:"jailbreak") OR (ti:"jailbreaking" OR abs:"jailbreaking") OR (ti:"guardrail bypass" OR abs:"guardrail bypass") OR (ti:"data poisoning" OR abs:"data poisoning") OR (ti:"model poisoning" OR abs:"model poisoning") OR (ti:"backdoor attack" OR abs:"backdoor attack") OR (ti:"RAG poisoning" OR abs:"RAG poisoning") OR (ti:"memory poisoning" OR abs:"memory poisoning") OR (ti:"model extraction" OR abs:"model extraction") OR (ti:"model stealing" OR abs:"model stealing") OR (ti:"membership inference" OR abs:"membership inference") OR (ti:"model inversion" OR abs:"model inversion") OR (ti:"training data extraction" OR abs:"training data extraction") OR (ti:"data exfiltration" OR abs:"data exfiltration") OR (ti:"tool poisoning" OR abs:"tool poisoning") OR (ti:"tool hijacking" OR abs:"tool hijacking") OR (ti:"privilege escalation" OR abs:"privilege escalation") OR (ti:"authorization bypass" OR abs:"authorization bypass") OR (ti:"confused deputy" OR abs:"confused deputy") OR (ti:"least privilege" OR abs:"least privilege") OR (ti:"information flow control" OR abs:"information flow control") OR (ti:"capability-based security" OR abs:"capability-based security") OR (ti:"sandbox escape" OR abs:"sandbox escape") OR (ti:"prompt injection defense" OR abs:"prompt injection defense") OR (ti:"adversarial example" OR abs:"adversarial example") OR (ti:"evasion attack" OR abs:"evasion attack") OR (ti:"adversarial robustness" OR abs:"adversarial robustness") OR (ti:"certified robustness" OR abs:"certified robustness") OR (ti:"supply chain attack" OR abs:"supply chain attack") OR (ti:"denial of service" OR abs:"denial of service") OR (ti:"denial of wallet" OR abs:"denial of wallet") OR (ti:"sponge attack" OR abs:"sponge attack") )&amp;id_list=2608.16349v2,2609.33371v1,2609.33367v1,2609.33357v1,2609.33322v1,2609.38093v1,2605.30883v2,2609.37819v1,2609.35760v2,2607.25152v2&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-01T08:05:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:%22large+language+model%22+OR+abs:%22large+language+model%22)+OR+((ti:%22language+model%22+OR+abs:%22language+model%22)+OR+((ti:%22LLM%22+OR+abs:%22LLM%22)+OR+((ti:%22LLMs%22+OR+abs:%22LLMs%22)+OR+((ti:%22foundation+model%22+OR+abs:%22foundation+model%22)+OR+((ti:%22generative+AI%22+OR+abs:%22generative+AI%22)+OR+((ti:%22AI+agent%22+OR+abs:%22AI+agent%22)+OR+((ti:%22LLM+agent%22+OR+abs:%22LLM+agent%22)+OR+((ti:%22agentic+AI%22+OR+abs:%22agentic+AI%22)+OR+((ti:%22Model+Context+Protocol%22+OR+abs:%22Model+Context+Protocol%22)+OR+((ti:%22machine+learning%22+OR+abs:%22machine+learning%22)+OR+((ti:%22deep+learning%22+OR+abs:%22deep+learning%22)+OR+((ti:%22neural+network%22+OR+abs:%22neural+network%22)+OR+((ti:%22vision+language+model%22+OR+abs:%22vision+language+model%22)+OR+(ti:%22diffusion+model%22+OR+abs:%22diffusion+model%22)))))))))))))))+AND+((ti:%22prompt+injection%22+OR+abs:%22prompt+injection%22)+OR+((ti:%22indirect+prompt+injection%22+OR+abs:%22indirect+prompt+injection%22)+OR+((ti:%22jailbreak%22+OR+abs:%22jailbreak%22)+OR+((ti:%22jailbreaking%22+OR+abs:%22jailbreaking%22)+OR+((ti:%22guardrail+bypass%22+OR+abs:%22guardrail+bypass%22)+OR+((ti:%22data+poisoning%22+OR+abs:%22data+poisoning%22)+OR+((ti:%22model+poisoning%22+OR+abs:%22model+poisoning%22)+OR+((ti:%22backdoor+attack%22+OR+abs:%22backdoor+attack%22)+OR+((ti:%22RAG+poisoning%22+OR+abs:%22RAG+poisoning%22)+OR+((ti:%22memory+poisoning%22+OR+abs:%22memory+poisoning%22)+OR+((ti:%22model+extraction%22+OR+abs:%22model+extraction%22)+OR+((ti:%22model+stealing%22+OR+abs:%22model+stealing%22)+OR+((ti:%22membership+inference%22+OR+abs:%22membership+inference%22)+OR+((ti:%22model+inversion%22+OR+abs:%22model+inversion%22)+OR+((ti:%22training+data+extraction%22+OR+abs:%22training+data+extraction%22)+OR+((ti:%22data+exfiltration%22+OR+abs:%22data+exfiltration%22)+OR+((ti:%22tool+poisoning%22+OR+abs:%22tool+poisoning%22)+OR+((ti:%22tool+hijacking%22+OR+abs:%22tool+hijacking%22)+OR+((ti:%22privilege+escalation%22+OR+abs:%22privilege+escalation%22)+OR+((ti:%22authorization+bypass%22+OR+abs:%22authorization+bypass%22)+OR+((ti:%22confused+deputy%22+OR+abs:%22confused+deputy%22)+OR+((ti:%22least+privilege%22+OR+abs:%22least+privilege%22)+OR+((ti:%22information+flow+control%22+OR+abs:%22information+flow+control%22)+OR+((ti:%22capability-based+security%22+OR+abs:%22capability-based+security%22)+OR+((ti:%22sandbox+escape%22+OR+abs:%22sandbox+escape%22)+OR+((ti:%22prompt+injection+defense%22+OR+abs:%22prompt+injection+defense%22)+OR+((ti:%22adversarial+example%22+OR+abs:%22adversarial+example%22)+OR+((ti:%22evasion+attack%22+OR+abs:%22evasion+attack%22)+OR+((ti:%22adversarial+robustness%22+OR+abs:%22adversarial+robustness%22)+OR+((ti:%22certified+robustness%22+OR+abs:%22certified+robustness%22)+OR+((ti:%22supply+chain+attack%22+OR+abs:%22supply+chain+attack%22)+OR+((ti:%22denial+of+service%22+OR+abs:%22denial+of+service%22)+OR+((ti:%22denial+of+wallet%22+OR+abs:%22denial+of+wallet%22)+OR+(ti:%22sponge+attack%22+OR+abs:%22sponge+attack%22))))))))))))))))))))))))))))))))))&amp;start=0&amp;max_results=100&amp;id_list=2608.16349v2,2609.33371v1,2609.33367v1,2609.33357v1,2609.33322v1,2609.38093v1,2605.30883v2,2609.37819v1,2609.35760v2,2607.25152v2" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.30883v2</id>
+    <title>TRACE: Task-Aware Adaptive Self-Evolving Agentic Jailbreaking</title>
+    <updated>2026-09-29T15:34:59Z</updated>
+    <link href="https://arxiv.org/abs/2605.30883v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.30883v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rise of LLM agents introduces a new threat by enabling planning, coding, and even end-to-end execution of expert-level attack workflows. However, this threat remains underexplored and underestimated since (i) Safety alignment prevents LLMs from directly generating harmful instructions. (ii) Most of existing jailbreak methods mainly focus on eliciting harmful instructions but overlook LLM refusal against executing these harmful instructions. (iii) Even if the early execution steps succeed, any intermediate failure or dependency error will interrupt the workflow and force a restart of the entire attack process. To address these limitations, we propose TRACE, an agentic jailbreaking framework that reduces attack difficulty, induces the agent to execute harmful instructions, and resumes from prior states rather than restarting. Specifically, we first design around 20 procedural decomposition schemes that specify key operations and dependencies for different types of tasks, which can decompose a complex and harmful task into more executable and benign-looking subtask sequences. We measure these candidate sequences along two dimensions, and select the optimal one for instantiating the attack. For the remaining refused subtasks, we construct different subtask profiles and establish an evolving execution-oriented multi-turn jailbreak strategy library corresponding to these profiles. Given the profile of a refused subtask, TRACE can retrieve an appropriate strategy that specifies the corresponding intermediate goals, environment states, and relevant tools to gradually establish a plausible execution context through multi-turn interaction. Extensive evaluations on AdvCUA show that TRACE outperforms existing jailbreak methods across multiple advanced LLM agents, improving attack success rate by more than 100%. Our code is available at https://github.com/ZJU-LLM-Safety/TRACE.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T06:13:58Z</published>
+    <arxiv:comment>19 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Churui Zeng</name>
+    </author>
+    <author>
+      <name>Kedong Xiu</name>
+    </author>
+    <author>
+      <name>Weiwei Qi</name>
+    </author>
+    <author>
+      <name>Yuqi Hao</name>
+    </author>
+    <author>
+      <name>Chaochao Lu</name>
+    </author>
+    <author>
+      <name>Liang He</name>
+    </author>
+    <author>
+      <name>Zhan Qin</name>
+    </author>
+    <author>
+      <name>Tianhang Zheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.33371v1</id>
+    <title>API Secrets Should Never Become Tokens in the LLM's Vocabulary: A Threat Analysis of API Credential Handling in LLM Agent Systems and an Empirical Evaluation of a Vault-Mediated Execution Boundary</title>
+    <updated>2026-09-27T08:55:16Z</updated>
+    <link href="https://arxiv.org/abs/2609.33371v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.33371v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tool-using large language model (LLM) agents turn credential hygiene from a storage problem into an execution-security problem. A key pasted into a prompt, or embedded in a system prompt or tool configuration, crosses from an authentication boundary into a data pipeline, where it may persist in conversation history, logs, memory stores, generated code, and error payloads. Prompt injection and excessive agency then convert passive disclosure into unauthorized action. This paper formalizes the credential-exposure threat chain for agentic systems; synthesizes evidence from a platform secret-store incident, vendor-reported secret-sprawl measurement, and OWASP and NIST guidance; and describes a vault-mediated execution architecture in which the model selects a connector identifier while a trusted request boundary supplies authentication. We evaluate a production implementation, Corvic Security Vault, in two controlled black-box experiments. Across 16 probes spanning seven control domains, every probe met its expected outcome: an authenticated GitHub API request succeeded while the credential stayed absent from process environment values, caller-visible request headers, tested filesystem locations, three third-party echo services, and two unrelated API origins; both cloud instance-metadata endpoints were unreachable. We also report a negative result, a connector whose stored header mapping did not satisfy its provider's authentication contract, showing that centralized custody does not by itself guarantee correct configuration. Vault mediation removes several disclosure paths but is necessary rather than sufficient: least privilege, deterministic action authorization, human approval, telemetry redaction, and rotation remain independently required. The study is purposive and small, a functional security evaluation rather than a certification.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-27T08:55:16Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Patrick Kenney</name>
+    </author>
+    <author>
+      <name>Hadi Ahmadi</name>
+    </author>
+    <author>
+      <name>Denis Lusson</name>
+    </author>
+    <author>
+      <name>Donald Nguyen</name>
+    </author>
+    <author>
+      <name>Gurbinder Gill</name>
+    </author>
+  </entry>
+</feed>

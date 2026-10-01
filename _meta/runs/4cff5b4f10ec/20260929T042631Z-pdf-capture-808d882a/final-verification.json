@@ -1,0 +1,100 @@
+{
+  "run_id": "20260929T042631Z-pdf-capture-808d882a",
+  "verified_at": "2026-09-29T04:33:05.169112+00:00",
+  "status": "passed",
+  "counts": {
+    "target_ids": 10,
+    "html_saved": 8,
+    "pdf_saved": 2,
+    "source_json_files": 10,
+    "pending": 0,
+    "missing_fulltext": 0,
+    "unchanged_existing_source_files": 16,
+    "local_links_checked": 61,
+    "knowledge_pages": 0
+  },
+  "sources": [
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "bytes": 926811,
+      "sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "bytes": 738941,
+      "sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c"
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "bytes": 821749,
+      "sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "bytes": 693979,
+      "sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "bytes": 267373,
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "bytes": 397917,
+      "sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "bytes": 558801,
+      "sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "bytes": 536360,
+      "sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "bytes": 212956,
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+      "bytes": 683196,
+      "sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac"
+    }
+  ],
+  "index_ids_titles_formats_match": true,
+  "source_hashes_lengths_version_urls_match": true,
+  "checkpoint_and_old_daily_attempts_preserved": true,
+  "html_unavailable_history_preserved": true,
+  "last_scheduled_run_preserved": true,
+  "log_prefix_preserved": true,
+  "policy_and_historical_operator_docs_unchanged": true,
+  "git_diff_check_exit_code": 0,
+  "new_search_performed": false,
+  "pdf_content_parsed": false,
+  "wiki_compiled": false,
+  "own_lock_released": true
+}

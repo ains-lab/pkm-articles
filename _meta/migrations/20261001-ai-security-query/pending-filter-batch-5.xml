@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/F6C7GF/fE6UViD/R94dkctEiInw</id>
+  <title>arXiv Query: search_query=( (ti:"large language model" OR abs:"large language model") OR (ti:"language model" OR abs:"language model") OR (ti:"LLM" OR abs:"LLM") OR (ti:"LLMs" OR abs:"LLMs") OR (ti:"foundation model" OR abs:"foundation model") OR (ti:"generative AI" OR abs:"generative AI") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"LLM agent" OR abs:"LLM agent") OR (ti:"agentic AI" OR abs:"agentic AI") OR (ti:"Model Context Protocol" OR abs:"Model Context Protocol") OR (ti:"machine learning" OR abs:"machine learning") OR (ti:"deep learning" OR abs:"deep learning") OR (ti:"neural network" OR abs:"neural network") OR (ti:"vision language model" OR abs:"vision language model") OR (ti:"diffusion model" OR abs:"diffusion model") ) AND ( (ti:"prompt injection" OR abs:"prompt injection") OR (ti:"indirect prompt injection" OR abs:"indirect prompt injection") OR (ti:"jailbreak" OR abs:"jailbreak") OR (ti:"jailbreaking" OR abs:"jailbreaking") OR (ti:"guardrail bypass" OR abs:"guardrail bypass") OR (ti:"data poisoning" OR abs:"data poisoning") OR (ti:"model poisoning" OR abs:"model poisoning") OR (ti:"backdoor attack" OR abs:"backdoor attack") OR (ti:"RAG poisoning" OR abs:"RAG poisoning") OR (ti:"memory poisoning" OR abs:"memory poisoning") OR (ti:"model extraction" OR abs:"model extraction") OR (ti:"model stealing" OR abs:"model stealing") OR (ti:"membership inference" OR abs:"membership inference") OR (ti:"model inversion" OR abs:"model inversion") OR (ti:"training data extraction" OR abs:"training data extraction") OR (ti:"data exfiltration" OR abs:"data exfiltration") OR (ti:"tool poisoning" OR abs:"tool poisoning") OR (ti:"tool hijacking" OR abs:"tool hijacking") OR (ti:"privilege escalation" OR abs:"privilege escalation") OR (ti:"authorization bypass" OR abs:"authorization bypass") OR (ti:"confused deputy" OR abs:"confused deputy") OR (ti:"least privilege" OR abs:"least privilege") OR (ti:"information flow control" OR abs:"information flow control") OR (ti:"capability-based security" OR abs:"capability-based security") OR (ti:"sandbox escape" OR abs:"sandbox escape") OR (ti:"prompt injection defense" OR abs:"prompt injection defense") OR (ti:"adversarial example" OR abs:"adversarial example") OR (ti:"evasion attack" OR abs:"evasion attack") OR (ti:"adversarial robustness" OR abs:"adversarial robustness") OR (ti:"certified robustness" OR abs:"certified robustness") OR (ti:"supply chain attack" OR abs:"supply chain attack") OR (ti:"denial of service" OR abs:"denial of service") OR (ti:"denial of wallet" OR abs:"denial of wallet") OR (ti:"sponge attack" OR abs:"sponge attack") )&amp;id_list=2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-01T08:05:37Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:%22large+language+model%22+OR+abs:%22large+language+model%22)+OR+((ti:%22language+model%22+OR+abs:%22language+model%22)+OR+((ti:%22LLM%22+OR+abs:%22LLM%22)+OR+((ti:%22LLMs%22+OR+abs:%22LLMs%22)+OR+((ti:%22foundation+model%22+OR+abs:%22foundation+model%22)+OR+((ti:%22generative+AI%22+OR+abs:%22generative+AI%22)+OR+((ti:%22AI+agent%22+OR+abs:%22AI+agent%22)+OR+((ti:%22LLM+agent%22+OR+abs:%22LLM+agent%22)+OR+((ti:%22agentic+AI%22+OR+abs:%22agentic+AI%22)+OR+((ti:%22Model+Context+Protocol%22+OR+abs:%22Model+Context+Protocol%22)+OR+((ti:%22machine+learning%22+OR+abs:%22machine+learning%22)+OR+((ti:%22deep+learning%22+OR+abs:%22deep+learning%22)+OR+((ti:%22neural+network%22+OR+abs:%22neural+network%22)+OR+((ti:%22vision+language+model%22+OR+abs:%22vision+language+model%22)+OR+(ti:%22diffusion+model%22+OR+abs:%22diffusion+model%22)))))))))))))))+AND+((ti:%22prompt+injection%22+OR+abs:%22prompt+injection%22)+OR+((ti:%22indirect+prompt+injection%22+OR+abs:%22indirect+prompt+injection%22)+OR+((ti:%22jailbreak%22+OR+abs:%22jailbreak%22)+OR+((ti:%22jailbreaking%22+OR+abs:%22jailbreaking%22)+OR+((ti:%22guardrail+bypass%22+OR+abs:%22guardrail+bypass%22)+OR+((ti:%22data+poisoning%22+OR+abs:%22data+poisoning%22)+OR+((ti:%22model+poisoning%22+OR+abs:%22model+poisoning%22)+OR+((ti:%22backdoor+attack%22+OR+abs:%22backdoor+attack%22)+OR+((ti:%22RAG+poisoning%22+OR+abs:%22RAG+poisoning%22)+OR+((ti:%22memory+poisoning%22+OR+abs:%22memory+poisoning%22)+OR+((ti:%22model+extraction%22+OR+abs:%22model+extraction%22)+OR+((ti:%22model+stealing%22+OR+abs:%22model+stealing%22)+OR+((ti:%22membership+inference%22+OR+abs:%22membership+inference%22)+OR+((ti:%22model+inversion%22+OR+abs:%22model+inversion%22)+OR+((ti:%22training+data+extraction%22+OR+abs:%22training+data+extraction%22)+OR+((ti:%22data+exfiltration%22+OR+abs:%22data+exfiltration%22)+OR+((ti:%22tool+poisoning%22+OR+abs:%22tool+poisoning%22)+OR+((ti:%22tool+hijacking%22+OR+abs:%22tool+hijacking%22)+OR+((ti:%22privilege+escalation%22+OR+abs:%22privilege+escalation%22)+OR+((ti:%22authorization+bypass%22+OR+abs:%22authorization+bypass%22)+OR+((ti:%22confused+deputy%22+OR+abs:%22confused+deputy%22)+OR+((ti:%22least+privilege%22+OR+abs:%22least+privilege%22)+OR+((ti:%22information+flow+control%22+OR+abs:%22information+flow+control%22)+OR+((ti:%22capability-based+security%22+OR+abs:%22capability-based+security%22)+OR+((ti:%22sandbox+escape%22+OR+abs:%22sandbox+escape%22)+OR+((ti:%22prompt+injection+defense%22+OR+abs:%22prompt+injection+defense%22)+OR+((ti:%22adversarial+example%22+OR+abs:%22adversarial+example%22)+OR+((ti:%22evasion+attack%22+OR+abs:%22evasion+attack%22)+OR+((ti:%22adversarial+robustness%22+OR+abs:%22adversarial+robustness%22)+OR+((ti:%22certified+robustness%22+OR+abs:%22certified+robustness%22)+OR+((ti:%22supply+chain+attack%22+OR+abs:%22supply+chain+attack%22)+OR+((ti:%22denial+of+service%22+OR+abs:%22denial+of+service%22)+OR+((ti:%22denial+of+wallet%22+OR+abs:%22denial+of+wallet%22)+OR+(ti:%22sponge+attack%22+OR+abs:%22sponge+attack%22))))))))))))))))))))))))))))))))))&amp;start=0&amp;max_results=100&amp;id_list=2609.36488v1,2609.36308v1,2605.01970v4,2507.02735v4,2609.35937v1,2609.35932v1,2609.35914v1,2609.35909v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01970v4</id>
+    <title>Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents</title>
+    <updated>2026-09-28T20:38:46Z</updated>
+    <link href="https://arxiv.org/abs/2605.01970v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01970v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memory systems enable otherwise stateless LLM agents to persist user information across sessions, but also introduce a new attack surface. The Trojan Hippo attack is a class of persistent memory attacks that operates under a more realistic threat model than prior memory poisoning work. The attacker plants a dormant payload into an agent's long-term memory via a single untrusted tool call (e.g., a crafted email), which activates only when the user later discusses sensitive topics such as finance, health, or identity, and exfiltrates high-value personal data to the attacker. While anecdotal demonstrations of such attacks have appeared against deployed systems, no prior work systematically evaluates them across heterogeneous memory architectures and defenses. We introduce Trojan Hippo Bench, a dynamic evaluation framework for persistent memory attacks and memory-layer defenses, comprising two components, (1) an OpenEvolve-based adaptive red-teaming benchmark that stress-tests defenses and memory backends against continuously refined attacks, and (2) a capability-aware security-utility analysis for persistent memory systems, enabling principled reasoning about defense deployment across different usage profiles. Instantiated on an email assistant across four memory backends (explicit tool memory, agentic memory, RAG, and sliding-window context), the undefended Trojan Hippo attack achieves up to 85-100% attack success rate (ASR) against current frontier models from OpenAI and Google, with planted memories successfully activating even after 100 benign sessions. We evaluate four memory-system defenses inspired by basic security principles; they reduce attack success to as low as 0-5%, but at utility costs that vary widely with the task mix. Effective real-world deployment thus remains an open challenge that Trojan Hippo Bench is built to study; we release it to support reuse and extension.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T17:07:20Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Debeshee Das</name>
+    </author>
+    <author>
+      <name>Julien Piet</name>
+    </author>
+    <author>
+      <name>Darya Kaviani</name>
+    </author>
+    <author>
+      <name>Luca Beurer-Kellner</name>
+    </author>
+    <author>
+      <name>Florian Tramèr</name>
+    </author>
+    <author>
+      <name>David Wagner</name>
+    </author>
+    <arxiv:doi>10.1145/3847352.3848090</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3847352.3848090" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.02735v4</id>
+    <title>Meta-SecAlign: Training LLMs against Prompt Injection for Robust Agents</title>
+    <updated>2026-09-28T16:50:14Z</updated>
+    <link href="https://arxiv.org/abs/2507.02735v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.02735v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt injection attacks, where untrusted data contains an injected prompt to manipulate the system, have been listed as the top security threat to AI agents. By fine-tuning on simulated prompt injections, SecAlign, a leading open defense, reports LLMs with good test-time robustness and negligible benign utility drop. By scaling up training and evaluations, however, we find that SecAlign actually suffers from significant utility degradation, especially in agentic tasks where the threat of prompt injection is prominent. Motivated by this, we propose Meta-SecAlign for utility-preserving defense by (1) randomized injection position during training to avoid shortcut learning and (2) self-generated responses as high-quality in-distribution training labels. Across general knowledge, instruction following, and agentic workflows (on tool-calling and web-navigation), Meta-SecAlign maintains almost all the undefended LLM's utility while achieving better overall security than SecAlign against various static and GCG adaptive attacks. Experiments use Llama-3.1-8B, Llama-3.3-70B, Llama-4-Scout, Qwen3-4B, and Qwen3.6-27B on 6 prompt injection benchmarks including AgentDojo, InjecAgent, WASP, and SEP. Below are links for the code (https://github.com/facebookresearch/Meta_SecAlign), Meta-SecAlign-70B (https://huggingface.co/facebook/Meta-SecAlign-70B), and Meta-SecAlign-8B (https://huggingface.co/facebook/Meta-SecAlign-8B) models.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-03T15:47:13Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Sizhe Chen</name>
+    </author>
+    <author>
+      <name>Arman Zharmagambetov</name>
+    </author>
+    <author>
+      <name>David Wagner</name>
+    </author>
+    <author>
+      <name>Chuan Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.35932v1</id>
+    <title>Same Bytes, Different Authority: Reserved-Token Representations in Chat-Template Prompt Injection</title>
+    <updated>2026-09-28T14:51:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.35932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.35932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt injection against LLM agents becomes much stronger when the injected instruction is wrapped in the model's own chat template. A forged template marker such as &lt;|im_start|&gt; can reach the model either as a single reserved control token or as a sequence of ordinary subword tokens. The two decode to exactly the same text, and because tokenization runs on the server, the defender rather than the attacker decides which one the model receives. We use this to measure how much of the injected instruction's authority comes from the reserved token's learned representation. Encoding the forged markers as subwords, with the text held fixed and a control for the extra tokens this adds, lowers attack success on the InjecAgent benchmark by 39 to 66 percentage points on three of four open-weight families, and the gap carries over to multi-turn agent tasks in AgentDojo. On Qwen3-8B the gap is 8 points, because without reserved ids the model still recognises the forged turn from its text by reasoning; suppressing the reasoning block widens the gap to 50. The authority sits in the single learned vector at the marker position: the mean of the marker's subword vectors does not reproduce it, the vector of the nearest ordinary token restores the attack on Llama-3.1, and an adaptive attacker who searches for non-reserved markers finds such embedding neighbours on three of four families. In every base and instruction-tuned pair we test, instruction tuning strengthens the model's preference for reserved markers. The standard mitigation, a tokenizer option that encodes special tokens as ordinary subwords, applies only to tokens a configuration declares special, so in 33 of 67 distinct tokenizer configurations, covering 255 of the 400 most-downloaded chat models on Hugging Face, it leaves intact the tool-protocol tokens through which agents read untrusted tool output, and the gap persists on that channel.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T14:51:21Z</published>
+    <arxiv:comment>28 pages, 6 figures. Code: https://github.com/Byte-Authority Dataset: https://huggingface.co/datasets/YanZhanPKU/Byte-Authority-Evaluation</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yan Zhan</name>
+    </author>
+    <author>
+      <name>Yunze Song</name>
+    </author>
+    <author>
+      <name>Mengkai Hou</name>
+    </author>
+    <author>
+      <name>Wanting Zhang</name>
+    </author>
+    <author>
+      <name>Shaobo Liu</name>
+    </author>
+    <author>
+      <name>Zhijun Gao</name>
+    </author>
+  </entry>
+</feed>

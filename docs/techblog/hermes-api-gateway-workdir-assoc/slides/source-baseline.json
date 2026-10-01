@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-01T02:34:26.544512+00:00",
+  "files": {
+    "DESIGN.md": {
+      "sha256": "c23815f301b1abfb72adf8b1c5b11bc91a7d74b590a247a0f72c60bfb51b4e24",
+      "lines": 89
+    },
+    "README.md": {
+      "sha256": "91c21d99f37f4bdcd9ed8317f35d147654491d0ace5a775d9459592abcdd26c1",
+      "lines": 82
+    },
+    "api-contract.md": {
+      "sha256": "6df17f948bdff7f0c94eea0922c8fe0cabe068b1d08a3cc67e083c5c4efc3922",
+      "lines": 139
+    },
+    "architecture.md": {
+      "sha256": "3f62da07c6e09655ae311a34af3033322a2677f8630ede996d5be62fd31670fc",
+      "lines": 103
+    },
+    "data-contracts.md": {
+      "sha256": "fbc5343c3ce4eb8f632f7529a1e4ad8d43465dfb4d4170a66914af3b42c7d205",
+      "lines": 133
+    },
+    "evidence.md": {
+      "sha256": "9261acbe988d967610f687daa50e09378781ca5efebcd869fd2317b221ca308c",
+      "lines": 97
+    },
+    "frontend-design.md": {
+      "sha256": "cfaf49014c659ab395a46ae572045ceb6702116e064cbf45178162aa92999170",
+      "lines": 113
+    },
+    "implementation-roadmap.md": {
+      "sha256": "657d2e48b460b767a9cfaf7dceb89a4a954aa8f80e3463d13f9765aff03bfee3",
+      "lines": 127
+    },
+    "security-and-operations.md": {
+      "sha256": "46584c3aac9dcb36cbe238c2761f291589570e81ce31d1e26cf4822aa7ad058b",
+      "lines": 103
+    },
+    "tech-stack.md": {
+      "sha256": "6bb6e39d0a90eaac7774e46e67f00744aa5d5d6834322f238ffbcae247445f89",
+      "lines": 103
+    },
+    "verification.json": {
+      "sha256": "65ab29d1c3682ad14dcd2a7c9a687058269cd8590c1ec84ccbd862ed900fde13",
+      "lines": 902
+    },
+    "workflows.md": {
+      "sha256": "b8fef68076817f0ec688f7f2367eb614fef7b7aebc94f14aff272020b36e4011",
+      "lines": 122
+    },
+    "workspace-and-gateway.md": {
+      "sha256": "95fd9d22e31c436b5684084f563c407bb837e887bb4a4095c4d78e463c379b22",
+      "lines": 124
+    }
+  }
+}

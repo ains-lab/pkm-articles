@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_separate_approval.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_delayed_approval_publishes_without_rewriting_generation (__main__.DelayedApprovalTests.test_delayed_approval_publishes_without_rewriting_generation) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 1.001s\n\nOK\n",
+  "test_sha256": "c9bca26f2d026d48d39331fc1b10b61cdcc8e73f64787860d1a5ae5ac4e53d0f"
+}

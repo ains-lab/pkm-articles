@@ -1,0 +1,56 @@
+"""Synthetic request-contract regressions, not evidence of real model compliance."""
+import unittest
+from typing import Any, cast
+
+from test_content import FakeFactory, Fixture, VID, document, load_content
+
+
+class ContentContractTests(unittest.TestCase):
+    def setUp(self):
+        self.content = load_content()
+        self.fixture = Fixture()
+        self.addCleanup(self.fixture.close)
+
+    def generate(self, doc=None, **kwargs):
+        fake = FakeFactory(doc=doc)
+        bundle = cast(dict[str, Any], self.content.process(self.fixture.ctx, client_factory=fake, **kwargs))
+        return fake, bundle
+
+    def instructions(self, fake):
+        return ' '.join(fake.calls[0]['instructions'].split())
+
+    def test_visible_scope_contract_requires_exact_version_and_every_scope_token(self):
+        # A parent anchor does not visibly disclose a separately declared child.
+        doc: dict[str, Any] = document()
+        doc['read_scope'].append('paper')
+        fake, bundle = self.generate(doc)
+        self.assertEqual(bundle['status'], 'blocked_review')
+        self.assertEqual([x['check'] for x in bundle['report']['checks'] if not x['ok']],
+                         ['version_scope_visible'])
+        self.assertEqual(bundle['result']['document'], doc)
+        self.assertIn(VID, doc['markdown_body'])
+        self.assertEqual(bundle['review']['body_verdict'], 'not_reviewed')
+        self.assertEqual(len(fake.calls), 1)
+        instructions = self.instructions(fake)
+        self.assertIn('Copy the exact supplied version_id into markdown_body as visible text', instructions)
+        self.assertIn('Show every read_scope token verbatim in visible markdown_body', instructions)
+        self.assertIn('JSON fields alone do not satisfy visible disclosure', instructions)
+
+    def test_claim_scope_contract_requires_exact_claim_anchor_membership(self):
+        doc: dict[str, Any] = document()
+        doc['read_scope'] = ['paper']
+        doc['markdown_body'] += '\n읽은 범위: paper\n'
+        fake, bundle = self.generate(doc)
+        self.assertEqual(bundle['status'], 'blocked_review')
+        self.assertEqual([x['check'] for x in bundle['report']['checks'] if not x['ok']],
+                         ['claim_scope_observed'])
+        self.assertEqual(bundle['result']['document'], doc)
+        self.assertEqual(len(fake.calls), 1)
+        instructions = self.instructions(fake)
+        self.assertIn('Every claim anchor must be an exact member of read_scope', instructions)
+        self.assertIn('A parent section anchor does not substitute for a cited child anchor', instructions)
+        self.assertIn('read_scope must contain unique observed nonempty-text locations', instructions)
+
+
+if __name__ == '__main__':
+    unittest.main()

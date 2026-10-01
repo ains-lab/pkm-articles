@@ -1,0 +1,37 @@
+test_authority_and_integrity_negatives (test_daily.DailyTests.test_authority_and_integrity_negatives) ... ok
+test_context_deadline_is_checked_between_inventory_sources (test_daily.DailyTests.test_context_deadline_is_checked_between_inventory_sources) ... ok
+test_dangling_reservation_before_state_write_is_not_replayed (test_daily.DailyTests.test_dangling_reservation_before_state_write_is_not_replayed) ... ok
+test_empty_inventory_is_verified_noop (test_daily.DailyTests.test_empty_inventory_is_verified_noop) ... ok
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_partial_and_three_failures_block_further_processing (test_daily.DailyTests.test_partial_and_three_failures_block_further_processing) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_preserved_completed_source_noop_checks_receipt_and_output (test_daily.DailyTests.test_preserved_completed_source_noop_checks_receipt_and_output) ... ok
+test_reserved_unknown_from_prior_run_blocks_new_run (test_daily.DailyTests.test_reserved_unknown_from_prior_run_blocks_new_run) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ok
+test_authority_revocation_after_basis_prevents_wal_creation (test_publication.PublicationTests.test_authority_revocation_after_basis_prevents_wal_creation) ... ok
+test_busy_lock_is_not_stolen (test_publication.PublicationTests.test_busy_lock_is_not_stolen) ... ok
+test_collector_priority_skips_without_creating_artifacts (test_publication.PublicationTests.test_collector_priority_skips_without_creating_artifacts) ... ok
+test_document_rejects_frontmatter_unbound_links_or_claims (test_publication.PublicationTests.test_document_rejects_frontmatter_unbound_links_or_claims) ... ok
+test_each_crash_stage_recovers_exactly_once (test_publication.PublicationTests.test_each_crash_stage_recovers_exactly_once) ... ok
+test_edited_outputs_or_state_are_never_noop (test_publication.PublicationTests.test_edited_outputs_or_state_are_never_noop) ... ok
+test_existing_page_not_overwritten (test_publication.PublicationTests.test_existing_page_not_overwritten) ... ok
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... ok
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ok
+test_lock_ownership_is_checked_at_each_stage (test_publication.PublicationTests.test_lock_ownership_is_checked_at_each_stage) ... ok
+test_noop_preserves_later_unrelated_state_index_log (test_publication.PublicationTests.test_noop_preserves_later_unrelated_state_index_log) ... ok
+test_other_unknown_journal_blocks (test_publication.PublicationTests.test_other_unknown_journal_blocks) ... ok
+test_pdf_bundle_publishes_without_pdf_parsing (test_publication.PublicationTests.test_pdf_bundle_publishes_without_pdf_parsing) ... ok
+test_rehashed_journal_tampering_cannot_reconstruct (test_publication.PublicationTests.test_rehashed_journal_tampering_cannot_reconstruct) ... ok
+test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) ... ok
+test_review_requires_all_supported_claims_and_body (test_publication.PublicationTests.test_review_requires_all_supported_claims_and_body) ... ok
+test_snapshot_drift_and_descriptor_drift_refuse_before_writes (test_publication.PublicationTests.test_snapshot_drift_and_descriptor_drift_refuse_before_writes) ... ok
+test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop) ... ok
+test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) ... ok
+test_deadline_after_generation_blocks_publication_without_replaying_model (test_integration.IntegrationTests.test_deadline_after_generation_blocks_publication_without_replaying_model) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 72.708s
+
+OK

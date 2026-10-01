@@ -1,0 +1,21 @@
+test_partial_pdf_telemetry_reaches_daily_state_without_model (test_integration.IntegrationTests.test_partial_pdf_telemetry_reaches_daily_state_without_model) ... FAIL
+
+======================================================================
+FAIL: test_partial_pdf_telemetry_reaches_daily_state_without_model (test_integration.IntegrationTests.test_partial_pdf_telemetry_reaches_daily_state_without_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 147, in test_partial_pdf_telemetry_reaches_daily_state_without_model
+    self.assertEqual(item['read_scope'],['page=1'])
+AssertionError: Lists differ: [] != ['page=1']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'page=1'
+
+- []
++ ['page=1']
+
+----------------------------------------------------------------------
+Ran 1 test in 1.872s
+
+FAILED (failures=1)

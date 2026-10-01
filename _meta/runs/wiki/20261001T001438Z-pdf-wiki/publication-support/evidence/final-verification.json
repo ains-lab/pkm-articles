@@ -1,0 +1,357 @@
+{
+  "schema": "pkm-pdf-plan-synthetic-verification/v1",
+  "observed_at": "2026-10-01T02:15:57.835792+00:00",
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/publication-support/verify_synthetic.py"
+  ],
+  "tests": 9,
+  "subtests": 61,
+  "subtest_results": [
+    {
+      "test": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover)",
+      "case": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) (stage='after_page')",
+      "passed": true
+    },
+    {
+      "test": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover)",
+      "case": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) (stage='after_index')",
+      "passed": true
+    },
+    {
+      "test": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover)",
+      "case": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) (stage='after_log')",
+      "passed": true
+    },
+    {
+      "test": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover)",
+      "case": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) (stage='after_receipt')",
+      "passed": true
+    },
+    {
+      "test": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover)",
+      "case": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) (stage='after_state')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_model')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_response_model')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_route')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='incomplete')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='attempt3')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_result_path')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='missing_preflight_document')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_preflight_record')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_observer')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_document_commitment')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='wrong_approval_commitment')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='blocked_target')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='blocked_peer')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='unknown_status')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='human_review_item')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='duplicate_item')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='unresolved_transaction')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='safety_block')",
+      "passed": true
+    },
+    {
+      "test": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections)",
+      "case": "test_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) (name='automation_enabled')",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=0)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=1)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=2)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=3)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=4)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=5)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=6)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=7)",
+      "passed": true
+    },
+    {
+      "test": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected)",
+      "case": "test_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) (change=8)",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (vid='2609.30614', run='_meta/runs/wiki/20261001T001438Z-pdf-wiki')",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (vid='2609.99999v1', run='_meta/runs/wiki/20261001T001438Z-pdf-wiki')",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (vid='2609.30614v1', run='_meta/runs/wiki/20261001T001438Z-pdf-wiki-other')",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (descriptor=0)",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (descriptor=1)",
+      "passed": true
+    },
+    {
+      "test": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts)",
+      "case": "test_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) (descriptor=2)",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='missing_claim')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='missing_claim_detail')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='missing_rationale')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='unsupported_claim')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='wrong_quote_hash')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='review_passed_absent')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='mechanical_passed_absent')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='mechanical_check_failed')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='report_claims_not_generated')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='review_human_claim')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='review_not_agent')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='wrong_result_binding')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='wrong_source_binding')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='wrong_mechanical_binding')",
+      "passed": true
+    },
+    {
+      "test": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections)",
+      "case": "test_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) (name='wrong_read_scope')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='page')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='index')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='log')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='receipt')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='state')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='structural')",
+      "passed": true
+    },
+    {
+      "test": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write)",
+      "case": "test_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) (changed='source')",
+      "passed": true
+    }
+  ],
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "raw_output": "test_all_interrupted_stages_recover (test_pdf_plan.PlanTests.test_all_interrupted_stages_recover) ... ok\ntest_execution_binding_and_state_rejections (test_pdf_plan.PlanTests.test_execution_binding_and_state_rejections) ... ok\ntest_minimal_draft_plan_is_read_only (test_pdf_plan.PlanTests.test_minimal_draft_plan_is_read_only) ... ok\ntest_plan_tampering_and_unknown_status_rejected (test_pdf_plan.PlanTests.test_plan_tampering_and_unknown_status_rejected) ... ok\ntest_review_unknown_human_flag_rejected (test_pdf_plan.PlanTests.test_review_unknown_human_flag_rejected) ... ok\ntest_scope_hash_symlink_and_output_conflicts (test_pdf_plan.PlanTests.test_scope_hash_symlink_and_output_conflicts) ... ok\ntest_semantic_review_and_mechanical_report_rejections (test_pdf_plan.PlanTests.test_semantic_review_and_mechanical_report_rejections) ... ok\ntest_two_success_plans_and_repeat_generic_noop (test_pdf_plan.PlanTests.test_two_success_plans_and_repeat_generic_noop) ... ok\ntest_unexpected_target_and_input_edits_refused_before_recovery_write (test_pdf_plan.PlanTests.test_unexpected_target_and_input_edits_refused_before_recovery_write) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 10.473s\n\nOK\n",
+  "protected_code_before": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4"
+  },
+  "protected_code_after": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4"
+  },
+  "artifacts": {
+    "pdf_plan.py": {
+      "sha256": "31d2453fa2c2e3a88c58527754a97d3009fe77875f732552a03cad02af7ba0b8",
+      "bytes": 17582,
+      "lines": 229
+    },
+    "test_pdf_plan.py": {
+      "sha256": "33be71f06388007a70440e8dcd19f25e0b2912dbb2d43eab77dde86658098b3b",
+      "bytes": 24937,
+      "lines": 371
+    },
+    "verify_synthetic.py": {
+      "sha256": "0eab9e026f87ad8bf58ee24599e4039a2e8c0a0fd040c491a0f8fe458730dde2",
+      "bytes": 2818,
+      "lines": 54
+    },
+    "HANDOFF.md": {
+      "sha256": "fd66579ac5c45379ad74e952669a43148056e9d1f5427b7018d1b97ae67a0db8",
+      "bytes": 11642,
+      "lines": 115
+    }
+  },
+  "syntax": "ast.parse passed",
+  "legacy_entrypoint_calls": "absent",
+  "scope": "Synthetic filesystem only. No live source/result/provider/parser/publication.",
+  "exit_code": 0
+}

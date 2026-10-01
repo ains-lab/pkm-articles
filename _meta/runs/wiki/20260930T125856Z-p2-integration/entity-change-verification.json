@@ -1,0 +1,20 @@
+[
+  {
+    "path": "entities/arxiv-2609.30830v1.md",
+    "before_sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5",
+    "after_sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0",
+    "prior_body_generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json",
+    "relation_generation_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+    "source_link_rendering_fixes": 68,
+    "scientific_body_preserved_modulo_source_hrefs_and_status_banner": true
+  },
+  {
+    "path": "entities/arxiv-2609.31358v1.md",
+    "before_sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9",
+    "after_sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4",
+    "prior_body_generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json",
+    "relation_generation_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+    "source_link_rendering_fixes": 73,
+    "scientific_body_preserved_modulo_source_hrefs_and_status_banner": true
+  }
+]

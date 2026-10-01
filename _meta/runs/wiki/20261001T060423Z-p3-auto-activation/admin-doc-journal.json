@@ -1,0 +1,13 @@
+{
+  "before": {
+    "index_sha256": "62837efac97135dfa43e9d52ba7ada921a78d54f26639637d5ba14b22ccf7f75",
+    "log_bytes": 90194,
+    "log_sha256": "c27bbf062ae4f853e624ed0516a692c8be00647905c4036b6b9066aa92677c67",
+    "state_sha256": "401b8470194ec2c28c8435ae5e059aebfa5f3158c0cf67739623d7cf5d82388b"
+  },
+  "index_after_sha256": "7ea46a8be3f9c82ed00823fd328af95f6a5ea728e4a796daace3d9ee92ee6d96",
+  "log_after_sha256": "bf6044f49cbfcbdcec299192c377c21b50ea6cb1e8033bd000c700f3ffee7a92",
+  "log_entry_sha256": "80eef436062b7d55450b8cd4c9f32311e4d8852c04ba3770602047da07d0ab26",
+  "observed_at": "2026-10-01T07:05:46.174647+00:00",
+  "schema": "pkm-p3-admin-doc-journal/v1"
+}

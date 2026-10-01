@@ -1,0 +1,8 @@
+{
+  "command": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python -B -m unittest discover -s /home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests -p \"test_*.py\" -v",
+  "exit_code": 0,
+  "tests_run": 133,
+  "environment": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "jsonschema_version": "4.26.0",
+  "scope": "synthetic JSON contracts / metadata-only staged migration; no PDF body/model/provider/legacy code execution"
+}

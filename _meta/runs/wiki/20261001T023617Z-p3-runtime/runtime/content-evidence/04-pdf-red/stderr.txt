@@ -1,0 +1,22 @@
+test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests) ... ERROR
+
+======================================================================
+ERROR: test_pdf_embedded_text_physical_pages_and_text_only_requests (test_content.ContentTests.test_pdf_embedded_text_physical_pages_and_text_only_requests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 241, in test_pdf_embedded_text_physical_pages_and_text_only_requests
+    bundle = self.content.process(self.ctx, client_factory=f, pdf_module=pdf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 251, in process
+    source, evidence, telemetry = _source(ctx, pdf_module, deadline, clock)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 87, in _source
+    c.require(ctx['item']['format'] == 'html', 'source_format')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: source_format
+
+----------------------------------------------------------------------
+Ran 1 test in 0.162s
+
+FAILED (errors=1)

@@ -1,0 +1,191 @@
+test_01_preflight_requires_bound_scope_before_body (pdf_tests.Tests.test_01_preflight_requires_bound_scope_before_body) ... ok
+test_02_embedded_pages_ephemeral_and_blank_unread (pdf_tests.Tests.test_02_embedded_pages_ephemeral_and_blank_unread) ... ok
+test_03_compile_reserves_before_fake_client_and_never_sends_pdf (pdf_tests.Tests.test_03_compile_reserves_before_fake_client_and_never_sends_pdf) ... ok
+test_04_verify_exact_page_quote_and_return_without_writes (pdf_tests.Tests.test_04_verify_exact_page_quote_and_return_without_writes) ... ok
+test_05_cli_preflight_has_no_pdf_or_model_access (pdf_tests.Tests.test_05_cli_preflight_has_no_pdf_or_model_access) ... ok
+test_document_body_english (pdf_tests.Tests.test_document_body_english) ... ok
+test_document_bom_frontmatter (pdf_tests.Tests.test_document_bom_frontmatter) ... FAIL
+test_document_claim_different_line (pdf_tests.Tests.test_document_claim_different_line) ... ok
+test_document_duplicate_claim (pdf_tests.Tests.test_document_duplicate_claim) ... ok
+test_document_duplicate_read_scope (pdf_tests.Tests.test_document_duplicate_read_scope) ... ok
+test_document_empty_quote (pdf_tests.Tests.test_document_empty_quote) ... ok
+test_document_escaped_citation (pdf_tests.Tests.test_document_escaped_citation) ... FAIL
+test_document_external_link (pdf_tests.Tests.test_document_external_link) ... ok
+test_document_extra_field (pdf_tests.Tests.test_document_extra_field) ... ok
+test_document_frontmatter (pdf_tests.Tests.test_document_frontmatter) ... ok
+test_document_future_bad_fragment (pdf_tests.Tests.test_document_future_bad_fragment) ... ok
+test_document_hidden_citation (pdf_tests.Tests.test_document_hidden_citation) ... ok
+test_document_hidden_html (pdf_tests.Tests.test_document_hidden_html) ... ok
+test_document_image_link (pdf_tests.Tests.test_document_image_link) ... ok
+test_document_invalid_bool (pdf_tests.Tests.test_document_invalid_bool) ... ok
+test_document_local_secret_link (pdf_tests.Tests.test_document_local_secret_link) ... ok
+test_document_missing_conditions (pdf_tests.Tests.test_document_missing_conditions) ... ok
+test_document_missing_unread (pdf_tests.Tests.test_document_missing_unread) ... ok
+test_document_page_fraction (pdf_tests.Tests.test_document_page_fraction) ... ok
+test_document_page_integer (pdf_tests.Tests.test_document_page_integer) ... ok
+test_document_page_out_of_range (pdf_tests.Tests.test_document_page_out_of_range) ... ok
+test_document_page_zero (pdf_tests.Tests.test_document_page_zero) ... ok
+test_document_partial_claiming_complete (pdf_tests.Tests.test_document_partial_claiming_complete) ... ok
+test_document_reference_link (pdf_tests.Tests.test_document_reference_link) ... ok
+test_document_unapproved_wikilink (pdf_tests.Tests.test_document_unapproved_wikilink) ... ok
+test_document_uncited_repeat (pdf_tests.Tests.test_document_uncited_repeat) ... FAIL
+test_document_wiki_bad_fragment (pdf_tests.Tests.test_document_wiki_bad_fragment) ... ok
+test_document_wrong_canonical_source (pdf_tests.Tests.test_document_wrong_canonical_source) ... ok
+test_document_wrong_id (pdf_tests.Tests.test_document_wrong_id) ... ok
+test_document_wrong_page (pdf_tests.Tests.test_document_wrong_page) ... ok
+test_document_wrong_quote_page (pdf_tests.Tests.test_document_wrong_quote_page) ... ok
+test_document_wrong_title (pdf_tests.Tests.test_document_wrong_title) ... ok
+test_gate_documents_drift (pdf_tests.Tests.test_gate_documents_drift) ... ok
+test_gate_execution_false (pdf_tests.Tests.test_gate_execution_false) ... ok
+test_gate_execution_no_freeze (pdf_tests.Tests.test_gate_execution_no_freeze) ... ok
+test_gate_execution_wrong_effort (pdf_tests.Tests.test_gate_execution_wrong_effort) ... ok
+test_gate_execution_wrong_model (pdf_tests.Tests.test_gate_execution_wrong_model) ... ok
+test_gate_execution_wrong_retries (pdf_tests.Tests.test_gate_execution_wrong_retries) ... ok
+test_gate_execution_wrong_route (pdf_tests.Tests.test_gate_execution_wrong_route) ... ok
+test_gate_execution_wrong_versions (pdf_tests.Tests.test_gate_execution_wrong_versions) ... ok
+test_gate_instructions_drift (pdf_tests.Tests.test_gate_instructions_drift) ... ok
+test_gate_policy_drift (pdf_tests.Tests.test_gate_policy_drift) ... ok
+test_gate_policy_enabled (pdf_tests.Tests.test_gate_policy_enabled) ... ok
+test_gate_policy_fallback (pdf_tests.Tests.test_gate_policy_fallback) ... ok
+test_gate_policy_fallback_integer (pdf_tests.Tests.test_gate_policy_fallback_integer) ... FAIL
+test_gate_policy_images (pdf_tests.Tests.test_gate_policy_images) ... ok
+test_gate_policy_job_active (pdf_tests.Tests.test_gate_policy_job_active) ... ok
+test_gate_policy_ocr (pdf_tests.Tests.test_gate_policy_ocr) ... ok
+test_gate_policy_p3 (pdf_tests.Tests.test_gate_policy_p3) ... ok
+test_gate_policy_p6 (pdf_tests.Tests.test_gate_policy_p6) ... ok
+test_gate_policy_pdf_binary (pdf_tests.Tests.test_gate_policy_pdf_binary) ... ok
+test_gate_policy_persist (pdf_tests.Tests.test_gate_policy_persist) ... ok
+test_gate_policy_reading_integer (pdf_tests.Tests.test_gate_policy_reading_integer) ... FAIL
+test_gate_policy_registered (pdf_tests.Tests.test_gate_policy_registered) ... ok
+test_gate_policy_registration (pdf_tests.Tests.test_gate_policy_registration) ... ok
+test_gate_policy_transfer_off (pdf_tests.Tests.test_gate_policy_transfer_off) ... ok
+test_gate_policy_v2 (pdf_tests.Tests.test_gate_policy_v2) ... ok
+test_gate_policy_wrong_environment (pdf_tests.Tests.test_gate_policy_wrong_environment) ... ok
+test_gate_prompt_drift (pdf_tests.Tests.test_gate_prompt_drift) ... ok
+test_gate_scope_drift (pdf_tests.Tests.test_gate_scope_drift) ... ok
+test_gate_scope_missing_user_confirmation (pdf_tests.Tests.test_gate_scope_missing_user_confirmation) ... ok
+test_gate_scope_model_fallback_integer (pdf_tests.Tests.test_gate_scope_model_fallback_integer) ... FAIL
+test_gate_scope_third_version (pdf_tests.Tests.test_gate_scope_third_version) ... ok
+test_gate_scope_true_integer (pdf_tests.Tests.test_gate_scope_true_integer) ... ok
+test_gate_scope_wrong_root (pdf_tests.Tests.test_gate_scope_wrong_root) ... ok
+test_gate_scope_wrong_run (pdf_tests.Tests.test_gate_scope_wrong_run) ... ok
+test_gate_source_hash_bad_format (pdf_tests.Tests.test_gate_source_hash_bad_format) ... ok
+test_gate_source_html_input (pdf_tests.Tests.test_gate_source_html_input) ... ok
+test_gate_source_metadata_drift (pdf_tests.Tests.test_gate_source_metadata_drift) ... ok
+test_gate_source_symlink (pdf_tests.Tests.test_gate_source_symlink) ... ERROR
+test_gate_source_traversal (pdf_tests.Tests.test_gate_source_traversal) ... ok
+test_gate_source_unapproved (pdf_tests.Tests.test_gate_source_unapproved) ... ok
+test_gate_state_blocked (pdf_tests.Tests.test_gate_state_blocked) ... ok
+test_gate_state_failures (pdf_tests.Tests.test_gate_state_failures) ... ok
+test_gate_state_safety (pdf_tests.Tests.test_gate_state_safety) ... ok
+test_gate_state_unresolved (pdf_tests.Tests.test_gate_state_unresolved) ... ok
+test_gate_wiki_drift (pdf_tests.Tests.test_gate_wiki_drift) ... ok
+test_gate_wiki_env (pdf_tests.Tests.test_gate_wiki_env) ... ok
+test_gate_wiki_raw (pdf_tests.Tests.test_gate_wiki_raw) ... ok
+test_gate_wiki_traversal (pdf_tests.Tests.test_gate_wiki_traversal) ... ok
+
+======================================================================
+ERROR: test_gate_source_symlink (pdf_tests.Tests.test_gate_source_symlink)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 287, in test
+    self.compile_fake(factory=lambda **kw: calls.append(kw))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 246, in compile_fake
+    return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 405, in compile_one
+    ctx = preflight(root=root, run=run, vid=vid, timeout=timeout, test_config=test_config, deadline=deadline)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 200, in preflight
+    helper('compile').safe_path(root, source)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py", line 45, in safe_path
+    require(not part.is_symlink(), 'symlink')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py", line 29, in require
+    raise Rejected(code)
+_manual_pdf_compile.Rejected: symlink
+
+======================================================================
+FAIL: test_document_bom_frontmatter (pdf_tests.Tests.test_document_bom_frontmatter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 354, in test
+    self.assertFalse(report['passed'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_document_escaped_citation (pdf_tests.Tests.test_document_escaped_citation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 354, in test
+    self.assertFalse(report['passed'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_document_uncited_repeat (pdf_tests.Tests.test_document_uncited_repeat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 354, in test
+    self.assertFalse(report['passed'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_gate_policy_fallback_integer (pdf_tests.Tests.test_gate_policy_fallback_integer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 287, in test
+    self.compile_fake(factory=lambda **kw: calls.append(kw))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 246, in compile_fake
+    return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 407, in compile_one
+    pages, telemetry = read_pdf_pages(ctx, deadline=deadline)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 277, in read_pdf_pages
+    data = helper('publish').Files(ctx['root']).read(record['source_path'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 283, in guard
+    raise AssertionError('PDF read crossed rejected gate')
+AssertionError: PDF read crossed rejected gate
+
+======================================================================
+FAIL: test_gate_policy_reading_integer (pdf_tests.Tests.test_gate_policy_reading_integer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 287, in test
+    self.compile_fake(factory=lambda **kw: calls.append(kw))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 246, in compile_fake
+    return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 407, in compile_one
+    pages, telemetry = read_pdf_pages(ctx, deadline=deadline)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 277, in read_pdf_pages
+    data = helper('publish').Files(ctx['root']).read(record['source_path'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 283, in guard
+    raise AssertionError('PDF read crossed rejected gate')
+AssertionError: PDF read crossed rejected gate
+
+======================================================================
+FAIL: test_gate_scope_model_fallback_integer (pdf_tests.Tests.test_gate_scope_model_fallback_integer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 287, in test
+    self.compile_fake(factory=lambda **kw: calls.append(kw))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 246, in compile_fake
+    return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 407, in compile_one
+    pages, telemetry = read_pdf_pages(ctx, deadline=deadline)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/manual_pdf.py", line 277, in read_pdf_pages
+    data = helper('publish').Files(ctx['root']).read(record['source_path'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/test_manual_pdf.py", line 283, in guard
+    raise AssertionError('PDF read crossed rejected gate')
+AssertionError: PDF read crossed rejected gate
+
+----------------------------------------------------------------------
+Ran 85 tests in 1.621s
+
+FAILED (failures=6, errors=1)

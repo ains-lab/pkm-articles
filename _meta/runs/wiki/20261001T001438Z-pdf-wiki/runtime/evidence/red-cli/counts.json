@@ -1,0 +1,18 @@
+{
+  "schema": "synthetic-pdf-test-evidence/v1",
+  "label": "red-cli",
+  "tests_run": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "synthetic_only": true,
+  "live_calls": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "python_version": "3.11.15 (main, Jul 23 2026, 14:43:45) [Clang 22.1.3 ]",
+  "snapshots": {
+    "run_tests.py.snapshot": "39189e72a61259a2cd7249d8085e9d2a7efa518272bcb87e15f871d955b607b4",
+    "test_manual_pdf.py.snapshot": "53ecca3c78013f40c17c6a4e3c940e346fffcd2baaed7a7db6da27b934773b6f",
+    "manual_pdf.py.snapshot": "5c136abdaba79b97f3634505779f7b71dbd4c295a03c9b4a7c27318f10e619bb"
+  }
+}

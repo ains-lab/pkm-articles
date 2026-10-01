@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers",
+    "-v"
+  ],
+  "exit_code": 1,
+  "source_sha256": {
+    "test_publication.py": "c3f0000debc7d48fe2409c51032c775c18c8a3ff70d6887a5ee70f5d1235294b"
+  },
+  "observed_at": "2026-10-01T02:42:10.381635+00:00"
+}

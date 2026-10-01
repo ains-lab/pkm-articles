@@ -1,0 +1,6 @@
+{
+  "command": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python /home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-tests/test_contracts.py",
+  "exit_code": 0,
+  "test_sha256": "a5ad291014043d600ec833051292d130ef0701cb9ac28121d8150837e231761f",
+  "schema_sha256": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a"
+}

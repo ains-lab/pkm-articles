@@ -1,0 +1,57 @@
+{
+  "schema": "pkm-partial-evidence-check/v1",
+  "quote_checks": [
+    {
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS4.p1.1",
+      "quote": "The 6/11 count is a scenario incidence of denials, not a measured task-failure rate.",
+      "literal_match": true,
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS5.p2.1",
+      "quote": "These counts measure reconstruction coverage, not attack-detection recall.",
+      "literal_match": true,
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p1.1",
+      "quote": "Consumption before dispatch does not confirm completion or provide transactional exactly-once effects.",
+      "literal_match": true,
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p5.1",
+      "quote": "Replay equality establishes consistency of retained evidence.",
+      "literal_match": true,
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS3.p1.1",
+      "quote": "observed absences in this suite, not upper bounds on real-world error rates",
+      "literal_match": true,
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS4.p1.1",
+      "quote": "not demonstrated improvement in clinical alarm recognition",
+      "literal_match": true,
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "anchor": "S7.p7.1",
+      "quote": "an experimental integration pattern, not a deployable controller",
+      "literal_match": true,
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    }
+  ],
+  "checked_count": 7,
+  "all_passed": true,
+  "limits": "Transient comparison of quoted paragraphs only. This is not full-text coverage or all-claim semantic validation. No normalized source file created."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-01T07:29:29.387540+00:00",
+  "documents_checked": 10,
+  "local_links_checked": 344,
+  "missing_local_links": [],
+  "raw_index_table_rows": 17,
+  "removed_financial_attempt_has_bound_terminal_outcome": true,
+  "scope": "Rendered prose links in current indexes and active knowledge pages; inline code examples excluded",
+  "initial_check_note": "Initial regex treated the backticked directory/filename example in index.md as a real link; no content change needed; prose-only scan passed."
+}

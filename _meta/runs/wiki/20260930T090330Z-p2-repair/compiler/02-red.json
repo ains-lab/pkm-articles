@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_nonstream_direct_html_success_and_complete_provenance (__main__.CompilerTests.test_nonstream_direct_html_success_and_complete_provenance) ... FAIL\ntest_both_entrypoints_import_without_execution (__main__.ImportTests.test_both_entrypoints_import_without_execution) ... ok\n\n======================================================================\nFAIL: test_nonstream_direct_html_success_and_complete_provenance (__main__.CompilerTests.test_nonstream_direct_html_success_and_complete_provenance)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py\", line 141, in test_nonstream_direct_html_success_and_complete_provenance\n    self.assertEqual(rc, 0)\nAssertionError: 2 != 0\n\n----------------------------------------------------------------------\nRan 2 tests in 0.003s\n\nFAILED (failures=1)\n",
+  "test_sha256": "72d607c6d96ad4d311e822289e17875283b38c39ef70dd0cdc914be8b51854e5"
+}

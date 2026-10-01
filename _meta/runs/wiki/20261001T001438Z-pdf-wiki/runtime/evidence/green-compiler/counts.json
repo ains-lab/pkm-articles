@@ -1,0 +1,18 @@
+{
+  "schema": "synthetic-pdf-test-evidence/v1",
+  "label": "green-compiler",
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "synthetic_only": true,
+  "live_calls": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "python_version": "3.11.15 (main, Jul 23 2026, 14:43:45) [Clang 22.1.3 ]",
+  "snapshots": {
+    "run_tests.py.snapshot": "39189e72a61259a2cd7249d8085e9d2a7efa518272bcb87e15f871d955b607b4",
+    "test_manual_pdf.py.snapshot": "0f549bac24f2c96149527c4a003f19abf218262110d493a460fa0dd16868d468",
+    "manual_pdf.py.snapshot": "267c590363bc41a0ef6a3a9ce636341adb57228b0304bcab738606b4587b07db"
+  }
+}

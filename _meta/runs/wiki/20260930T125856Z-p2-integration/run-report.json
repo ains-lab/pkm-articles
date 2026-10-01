@@ -1,0 +1,190 @@
+{
+  "schema": "pkm-integration-run-report/v1",
+  "run_id": "20260930T125856Z-p2-integration",
+  "status": "committed",
+  "completed_at": "2026-09-30T13:36:31.079363+00:00",
+  "approval_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/approval.json",
+  "generation_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "new_pages": [
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "comparisons/agate-vs-sdc-mcp-gateway.md"
+  ],
+  "updated_pages": [
+    "entities/arxiv-2609.30830v1.md",
+    "entities/arxiv-2609.31358v1.md"
+  ],
+  "shared_updates": [
+    "index.md",
+    "log.md",
+    "_meta/state/compilation.json"
+  ],
+  "publication_receipts": [
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.30830v1-receipt.json",
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/2609.31358v1-receipt.json"
+  ],
+  "publication_journal": "_meta/runs/wiki/20260930T125856Z-p2-integration/integration-publish-journal.json",
+  "manifest_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/publication-manifest.json",
+  "manifest_sha256": "2dd41db82f14eae14fa15b4fa137955980c20b077d0304cf1356f214ec6b1e8b",
+  "source_set": [
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    }
+  ],
+  "consumed_wiki_refs": [
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "revision": "1",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5",
+      "snapshot_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/before/entities/arxiv-2609.30830v1.md",
+      "generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "revision": "1",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9",
+      "snapshot_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/before/entities/arxiv-2609.31358v1.md",
+      "generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json"
+    }
+  ],
+  "verification_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/final-verification.json",
+  "agent_review_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/agent-evidence-review.json",
+  "structural_check_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/prepublication-verification.json",
+  "dependency_impact_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/dependency-impact.json",
+  "final": {
+    "schema": "pkm-integration-final-verification/v1",
+    "checked_at": "2026-09-30T13:34:59.404208+00:00",
+    "status": "committed",
+    "transaction_id": "p2i-d3b8cf0db1b918060510445ffe3b227a",
+    "manifest_sha256": "2dd41db82f14eae14fa15b4fa137955980c20b077d0304cf1356f214ec6b1e8b",
+    "knowledge_page_count": 6,
+    "type_counts": {
+      "comparisons": 1,
+      "concepts": 3,
+      "entities": 2
+    },
+    "outputs": [
+      {
+        "path": "concepts/agent-authority-and-effect-boundaries.md",
+        "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+        "revision": "1"
+      },
+      {
+        "path": "concepts/provenance-and-audit-evidence.md",
+        "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+        "revision": "1"
+      },
+      {
+        "path": "concepts/security-evaluation-units.md",
+        "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+        "revision": "1"
+      },
+      {
+        "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+        "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364",
+        "revision": "1"
+      },
+      {
+        "path": "entities/arxiv-2609.30830v1.md",
+        "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0",
+        "revision": "2"
+      },
+      {
+        "path": "entities/arxiv-2609.31358v1.md",
+        "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4",
+        "revision": "2"
+      }
+    ],
+    "index_count_matches": true,
+    "unrelated_index_sections_preserved": true,
+    "log_prefix_preserved": true,
+    "event_occurrences": 1,
+    "new_claims_semantically_reviewed": 36,
+    "unique_original_anchors_reviewed": 52,
+    "literal_evidence_checks": 73,
+    "local_markdown_links_verified": 222,
+    "wiki_edges_verified": 28,
+    "broken_links": [],
+    "orphan_pages": [],
+    "source_count": 15,
+    "source_format_counts": {
+      "html": 13,
+      "pdf": 2
+    },
+    "protected_files_unchanged": 74,
+    "nonpilot_state_items_unchanged": 8,
+    "unregistered_nonpilot_raw_versions_unchanged": [
+      "2509.09215v3",
+      "2608.29596v2",
+      "2609.35576v1",
+      "2609.35596v1",
+      "2609.35760v1"
+    ],
+    "noop_checks": [
+      {
+        "repeat": 1,
+        "status": "noop",
+        "files_byte_identical": 122
+      },
+      {
+        "repeat": 2,
+        "status": "noop",
+        "files_byte_identical": 122
+      }
+    ],
+    "synthetic_test_count": 61,
+    "synthetic_test_failures": 0,
+    "synthetic_test_scope": "41 existing publisher regressions plus bounded transaction fixture checks; not experiment reproduction",
+    "model": {
+      "provider": "codex-lb",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh"
+    },
+    "model_calls_completed": 1,
+    "local_pre_request_failures": 1,
+    "sdk_retries": 0,
+    "fallback_used": false,
+    "usage": {
+      "input_tokens": 184441,
+      "output_tokens": 32287,
+      "total_tokens": 216728,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 6990
+      }
+    },
+    "cost_usd": null,
+    "cost_policy": "no_cost_cap",
+    "human_review_completed": false,
+    "figure_visual_review_completed": false,
+    "paper_experiments_reproduced": false,
+    "automation_enabled": false,
+    "unresolved_transactions": [],
+    "collection_lock_released": true,
+    "index_scan_correction_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/verification-scan-correction.json"
+  },
+  "limitations": [
+    "draft/unreviewed; no human content review",
+    "selected-section cross-paper synthesis, not a new full-text recompile",
+    "no figure/image review, PDF content read, paper experiment reproduction or external search",
+    "other 13 raw papers not compiled by this run; 5 newer raw versions remain absent from the compilation ledger",
+    "P3-P6 registration/activation/execution not approved or performed"
+  ],
+  "preserved_diagnostics": [
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/preflight-invocation-failure.json",
+    "_meta/runs/wiki/20260930T125856Z-p2-integration/verification-scan-correction.json"
+  ]
+}

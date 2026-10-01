@@ -1,0 +1,140 @@
+{
+  "observed_at": "2026-10-01T01:58:45.071878+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "version_id": "2609.30614v1",
+      "vid": "2609.30614v1",
+      "run_id": "20261001T001438Z-pdf-wiki",
+      "provider": "codex-lb",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+      "contract_revision": "pkm-contracts/v3",
+      "prompt_revision": "wiki-compile/v3",
+      "policy_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+      "prompt_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+      "document_sha256": {
+        "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+        "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+        "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+        "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+        "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+        "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a"
+      },
+      "scope_approval_sha256": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+      "instructions_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md",
+      "instructions_sha256": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+      "approval_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json",
+      "approval_sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+      "sources": {
+        "2609.30614v1": {
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+          "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+          "source_bytes": 821749,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+          "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+        },
+        "2609.30824v1": {
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+          "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+          "source_bytes": 693979,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+          "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+        }
+      },
+      "wiki_inputs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        }
+      ],
+      "approved_route": {
+        "base_url": "http://10.10.1.244:2455/v1",
+        "api_mode": "codex_responses"
+      },
+      "http_timeout_s": 2400,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "source_bytes": 821749,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "vid": "2609.30824v1",
+      "run_id": "20261001T001438Z-pdf-wiki",
+      "provider": "codex-lb",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+      "contract_revision": "pkm-contracts/v3",
+      "prompt_revision": "wiki-compile/v3",
+      "policy_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+      "prompt_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+      "document_sha256": {
+        "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+        "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+        "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+        "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+        "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+        "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a"
+      },
+      "scope_approval_sha256": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+      "instructions_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md",
+      "instructions_sha256": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+      "approval_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json",
+      "approval_sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+      "sources": {
+        "2609.30614v1": {
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+          "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+          "source_bytes": 821749,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json",
+          "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+        },
+        "2609.30824v1": {
+          "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+          "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+          "source_bytes": 693979,
+          "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+          "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+        }
+      },
+      "wiki_inputs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        }
+      ],
+      "approved_route": {
+        "base_url": "http://10.10.1.244:2455/v1",
+        "api_mode": "codex_responses"
+      },
+      "http_timeout_s": 2400,
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "source_bytes": 693979,
+      "metadata_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+    }
+  ],
+  "pdf_body_read": false,
+  "model_call": false
+}

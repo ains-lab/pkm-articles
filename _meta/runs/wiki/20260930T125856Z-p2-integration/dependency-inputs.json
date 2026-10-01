@@ -1,0 +1,41 @@
+{
+  "schema": "pkm-integration-dependency-inputs/v1",
+  "run_id": "20260930T125856Z-p2-integration",
+  "source_set": [
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    }
+  ],
+  "consumed_wiki_refs": [
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "revision": "1",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5",
+      "snapshot_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/before/entities/arxiv-2609.30830v1.md",
+      "generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "revision": "1",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9",
+      "snapshot_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/before/entities/arxiv-2609.31358v1.md",
+      "generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json"
+    }
+  ],
+  "planned_new_pages": [
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "comparisons/agate-vs-sdc-mcp-gateway.md"
+  ],
+  "planned_updated_pages": [
+    "entities/arxiv-2609.30830v1.md",
+    "entities/arxiv-2609.31358v1.md"
+  ],
+  "note": "before snapshots already created at preflight; reused unchanged for dependencies/recovery only, not parsed source or model compile-input files"
+}

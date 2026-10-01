@@ -1,0 +1,274 @@
+"""Synthetic-only tests. Temporary files remain under this runtime directory."""
+import contextlib
+import copy
+import hashlib
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+HERE = Path(__file__).parent
+ROOT = Path('/home/ainsdev/wiki/pkm-articles')
+RUN = '_meta/runs/wiki/20261001T001438Z-pdf-wiki'
+VIDS = ['2609.30614v1', '2609.30824v1']
+SITE = ROOT / '.venv-pdf-reader/lib/python3.12/site-packages'
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(SITE))  # Explicit synthetic test injection, never a live reader.
+import pypdf
+from pypdf.generic import DictionaryObject, NameObject, DecodedStreamObject
+sys.path.remove(str(SITE))
+
+
+def load():
+    path = HERE / 'manual_pdf.py'
+    if not path.exists():
+        return None
+    spec = importlib.util.spec_from_file_location('manual_pdf_tested', path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+M = load()
+
+
+def encoded(obj):
+    return (json.dumps(obj, ensure_ascii=False, indent=2) + '\n').encode()
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def synthetic_pdf(texts=('Alpha evidence one.', 'Beta evidence two.'), encrypted=False):
+    writer = pypdf.PdfWriter()
+    for text in texts:
+        page = writer.add_blank_page(width=300, height=300)
+        if text:
+            font = DictionaryObject({NameObject('/Type'): NameObject('/Font'),
+                NameObject('/Subtype'): NameObject('/Type1'), NameObject('/BaseFont'): NameObject('/Helvetica')})
+            page[NameObject('/Resources')] = DictionaryObject({NameObject('/Font'):
+                DictionaryObject({NameObject('/F1'): writer._add_object(font)})})
+            stream = DecodedStreamObject()
+            stream.set_data(('BT /F1 12 Tf 10 200 Td (' + text + ') Tj ET').encode('ascii'))
+            page[NameObject('/Contents')] = writer._add_object(stream)
+    if encrypted:
+        writer.encrypt('synthetic-password')
+    out = io.BytesIO()
+    writer.write(out)
+    return out.getvalue()
+
+
+class Fixture:
+    def __init__(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='synthetic-', dir=HERE)
+        self.root = Path(self.tmp.name)
+        self.config = M.TestConfig(self.root, pypdf)
+        self.scope = dict(schema='pkm-pdf-text-scope-approval/v1', wiki_root=str(self.root),
+            run_id=Path(RUN).name, version_ids=VIDS,
+            user_request='그럼 pdf 논문도 위키 컴파일하여 포함하도록 적용해주세요',
+            configuration_confirmation='승인 — 텍스트 방식으로 정책 변경 및 PDF 2편 컴파일',
+            publication_confirmation='게시 승인 — 작업 중 Wiki 직접 편집 중지',
+            model=M.MODEL_PIN, cost_policy='no_cost_cap')
+        self.scope.update({k: True for k in M.SCOPE_TRUE})
+        self.scope.update({k: False for k in M.SCOPE_FALSE})
+        self.policy = dict(schema='pkm-automation/v1', wiki_root=str(self.root),
+            policy_revision=M.POLICY, contract_revision=M.CONTRACT, enabled=False,
+            registration_authorized=False, activation_authorized=False,
+            phase_authorizations={f'P{i}': i < 3 for i in range(1, 7)},
+            model=M.MODEL_PIN, pdf_reading=M.PDF_READING,
+            transfer=dict(pdf_content=True, existing_wiki=True, images=False, external_assets=False,
+                automatic_chat_capture=False, secrets_or_sensitive_personal_data=False, external_novelty_search=False),
+            budget=dict(cost_policy='no_cost_cap', unknown_cost_action='record_unknown_continue'),
+            limits=dict(attempts_per_item_per_run_including_initial=2, soft_run_minutes=45),
+            jobs={k: dict(enabled=False, cron_id=None, registration_status='not_registered', registration_readback=None,
+                prompt_path=M.PROMPT, prompt_revision=M.PROMPT_REV) for k in ('daily_compile', 'research_review')})
+        self.state = dict(schema='pkm-compilation-state/v1', policy_revision=M.POLICY,
+            contract_revision=M.CONTRACT, safety_block=False, enabled=False, transactions=[], items=[])
+        self.approval = dict(schema='pkm-pdf-text-run-approval/v1', approved=True, wiki_root=str(self.root),
+            run_id=Path(RUN).name, version_ids=VIDS, policy_revision=M.POLICY, contract_revision=M.CONTRACT,
+            prompt_revision=M.PROMPT_REV, instructions_path=RUN+'/runtime/instructions.md',
+            approved_route=M.ROUTE, provider='codex-lb', model='gpt-6-astra', reasoning_effort='xhigh',
+            max_attempts_per_item=2, publication_edit_freeze_confirmed=True, validated_publication_authorized=True,
+            sources={}, wiki_inputs=[])
+        for path in M.DOCS:
+            if path.endswith('.json'):
+                data = encoded({'$defs': {'automation': {'type': 'object'}, 'compilation': {'type': 'object'}},
+                    'description': M.POLICY+' '+M.CONTRACT+' '+M.PROMPT_REV})
+            else:
+                data = (M.POLICY+' '+M.CONTRACT+'\nPDF embedded text approved.\n').encode()
+            self.write(path, data)
+        self.write(M.PROMPT, (M.POLICY+' '+M.CONTRACT+' '+M.PROMPT_REV).encode())
+        self.write(self.approval['instructions_path'], b'Synthetic bounded instruction.')
+        self.write('concepts/synthetic.md', '# Synthetic\nTest context.\n'.encode())
+        self.approval['wiki_inputs'] = [{'path': 'concepts/synthetic.md', 'sha256': sha(self.read('concepts/synthetic.md'))}]
+        for vid in VIDS:
+            self.set_pdf(vid, synthetic_pdf())
+        self.sync()
+
+    def write(self, path, data):
+        path = self.root / path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+
+    def read(self, path):
+        return (self.root / path).read_bytes()
+
+    def set_pdf(self, vid, data):
+        source = f'raw/articles/4cff5b4f10ec/arxiv-{vid}/source.pdf'
+        metadata = source.replace('source.pdf', 'source.json')
+        meta = dict(schema='arxiv-pdf-source/v1', source='arxiv', source_format='pdf', version_id=vid,
+            owning_cron_id='4cff5b4f10ec', pdf_file='source.pdf', source_url=f'https://arxiv.org/pdf/{vid}',
+            final_url=f'https://arxiv.org/pdf/{vid}', title='Synthetic paper '+vid, pdf_sha256=sha(data),
+            pdf_bytes=len(data), content_type='application/pdf', http_status=200, preprocessing=False,
+            offline_assets_bundled=False, wiki_compiled=False, capture_method='http_response_body_no_rewrite',
+            content_scope='pdf_fulltext_as_served')
+        self.write(source, data)
+        self.write(metadata, encoded(meta))
+        refs = dict(source_path=source, metadata_path=metadata, source_sha256=sha(data),
+            source_bytes=len(data), metadata_sha256=sha(encoded(meta)))
+        self.approval['sources'][vid] = refs
+        self.state['items'] = [x for x in self.state['items'] if x['version_id'] != vid]
+        self.state['items'].append(dict(refs, version_id=vid, source='arxiv', format='pdf', status='queued', failure_count=0))
+
+    def sync(self):
+        self.write(RUN+'/scope-approval.json', encoded(self.scope))
+        self.write('_meta/automation.json', encoded(self.policy))
+        self.write('_meta/state/compilation.json', encoded(self.state))
+        a = self.approval
+        a['scope_approval_sha256'] = sha(encoded(self.scope))
+        a['policy_sha256'] = sha(encoded(self.policy))
+        a['prompt_sha256'] = sha(self.read(M.PROMPT))
+        a['document_sha256'] = {p: sha(self.read(p)) for p in M.DOCS}
+        a['instructions_sha256'] = sha(self.read(a['instructions_path']))
+        self.write(RUN+'/execution-approval.json', encoded(a))
+
+    def preflight(self, **kw):
+        return M.preflight(root=self.root, run=RUN, vid=VIDS[0], test_config=self.config, **kw)
+
+    def close(self):
+        self.tmp.cleanup()
+
+
+class Tests(unittest.TestCase):
+    def setUp(self):
+        self.assertIsNotNone(M, 'manual_pdf adapter is not implemented')
+        self.f = Fixture()
+        self.addCleanup(self.f.close)
+
+    def test_01_preflight_requires_bound_scope_before_body(self):
+        ctx = self.f.preflight()
+        self.assertEqual(ctx['record']['version_id'], VIDS[0])
+        self.assertEqual(ctx['record']['sources'], self.f.approval['sources'])
+        self.assertNotIn('pypdf', ctx)
+        self.f.scope['pdf_text_transfer_authorized'] = False
+        self.f.sync()
+        with self.assertRaisesRegex(M.Rejected, 'scope_not_approved'):
+            self.f.preflight()
+
+    def test_02_embedded_pages_ephemeral_and_blank_unread(self):
+        self.assertTrue(callable(getattr(M, 'read_pdf_pages', None)), 'PDF reader missing')
+        self.f.set_pdf(VIDS[0], synthetic_pdf(('Alpha evidence one.', '', 'Beta evidence two.')))
+        self.f.sync()
+        pages, telemetry = M.read_pdf_pages(self.f.preflight())
+        self.assertEqual([p['page'] for p in pages], [1, 2, 3])
+        self.assertEqual(pages[0]['text'], 'Alpha evidence one.')
+        self.assertEqual(pages[1]['text'], '')
+        self.assertEqual(telemetry['blank_pages'], [2])
+        self.assertEqual(telemetry['read_scope'], ['page=1', 'page=3'])
+        self.assertFalse(telemetry['main_text_complete_eligible'])
+        self.assertEqual(telemetry['pypdf_version'], '6.19.0')
+        self.assertNotIn('Alpha evidence', json.dumps(telemetry))
+        self.assertFalse((self.f.root / M.RUNTIME / VIDS[0]).exists())
+
+    def test_03_compile_reserves_before_fake_client_and_never_sends_pdf(self):
+        self.assertTrue(callable(getattr(M, 'compile_one', None)), 'compiler missing')
+        calls = []
+        f = self.f
+        class Fake:
+            def __init__(self):
+                self.responses = self
+            def create(self, **kwargs):
+                calls.append(kwargs)
+                return dict(status='completed', model='gpt-6-astra', error=None, incomplete_details=None,
+                    output_text='{"synthetic":true}', cost_usd=None)
+            def close(self):
+                pass
+        def factory(**kwargs):
+            self.assertEqual(kwargs['max_retries'], 0)
+            self.assertEqual(kwargs['timeout'], 2400)
+            self.assertEqual(kwargs['approved_route'], M.ROUTE)
+            record = json.loads(f.read(M.RUNTIME+'/'+VIDS[0]+'/attempt1-record.json'))
+            self.assertEqual(record['outcome'], 'unknown')
+            return Fake()
+        out = M.compile_one(root=f.root, run=RUN, vid=VIDS[0], attempt='attempt1',
+            test_config=f.config, client_factory=factory)
+        self.assertTrue(out['completed'])
+        self.assertIsNone(out['cost_usd'])
+        self.assertEqual(out['cost_status'], 'unobserved_not_zero')
+        self.assertEqual(len(calls), 1)
+        call = calls[0]
+        self.assertEqual(call['model'], 'gpt-6-astra')
+        self.assertEqual(call['reasoning'], {'effort':'xhigh'})
+        self.assertEqual(call['tools'], [])
+        self.assertIs(call['store'], False)
+        self.assertIs(call['stream'], False)
+        payload = json.loads(call['input'][0]['content'][0]['text'])
+        self.assertEqual(payload['pages'][0], {'page':1,'text':'Alpha evidence one.'})
+        self.assertNotIn('%PDF-', json.dumps(call))
+        self.assertEqual(payload['wiki_context'][0]['path'], 'concepts/synthetic.md')
+        paths = sorted(p.name for p in (f.root / M.RUNTIME / VIDS[0]).iterdir())
+        self.assertEqual(paths, ['attempt1-record.json','attempt1-result.json'])
+        for path in paths:
+            self.assertNotIn('Alpha evidence', (f.root / M.RUNTIME / VIDS[0] / path).read_text())
+
+    def document(self):
+        return dict(title='Synthetic paper '+VIDS[0], summary='합성 근거 요약', version_id=VIDS[0],
+            main_text_complete=True, read_scope=['page=1','page=2'], unread_scope=list(M.VISUAL_UNREAD),
+            limitations=['합성 검증이며 실험 재현이 아니다.'],
+            claims=[dict(id='C01', kind='author_report', statement='합성 보고 내용', conditions='합성 조건',
+                anchor='page=1', quote='Alpha evidence one.')],
+            markdown_body='## 합성 분석\nC01 저자 보고. ^[raw/articles/4cff5b4f10ec/arxiv-'+VIDS[0]+'/source.pdf#page=1]\n'+
+                '\n'.join(M.VISUAL_UNREAD)+'\n[[concepts/synthetic]]\n[[entities/arxiv-'+VIDS[1]+']]')
+
+    def compile_fake(self, response=None, factory=None, attempt='attempt1'):
+        response = response if response is not None else dict(status='completed', model='gpt-6-astra',
+            error=None, incomplete_details=None, output_text=json.dumps(self.document(), ensure_ascii=False))
+        class Fake:
+            def __init__(self): self.responses = self
+            def create(self, **kwargs): return response
+            def close(self): pass
+        return M.compile_one(root=self.f.root, run=RUN, vid=VIDS[0], attempt=attempt,
+            test_config=self.f.config, client_factory=factory or (lambda **kw: Fake()))
+
+    def test_04_verify_exact_page_quote_and_return_without_writes(self):
+        self.assertTrue(callable(getattr(M, 'verify_result', None)), 'verifier missing')
+        out = self.compile_fake()
+        before = sorted(str(p) for p in self.f.root.rglob('*'))
+        report = M.verify_result(root=self.f.root, run=RUN, vid=VIDS[0], result=out, test_config=self.f.config)
+        self.assertTrue(report['passed'], report)
+        self.assertEqual(report['document'], self.document())
+        self.assertEqual(before, sorted(str(p) for p in self.f.root.rglob('*')))
+        bad = self.document()
+        bad['claims'][0]['quote'] = 'Beta evidence two.'  # exists, but only on page 2
+        out['text'] = json.dumps(bad)
+        report = M.verify_result(root=self.f.root, run=RUN, vid=VIDS[0], result=out, test_config=self.f.config)
+        self.assertFalse(report['passed'])
+        self.assertIn('quotes_exact_page', [x['check'] for x in report['checks'] if not x['ok']])
+
+    def test_05_cli_preflight_has_no_pdf_or_model_access(self):
+        self.assertTrue(callable(getattr(M, 'main', None)), 'CLI missing')
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            code = M.main(['preflight', VIDS[0], '--root', str(self.f.root)], test_config=self.f.config)
+        self.assertEqual(code, 0)
+        self.assertNotIn('Alpha evidence', output.getvalue())
+        self.assertEqual(json.loads(output.getvalue())['status'], 'prepared_not_executed')
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

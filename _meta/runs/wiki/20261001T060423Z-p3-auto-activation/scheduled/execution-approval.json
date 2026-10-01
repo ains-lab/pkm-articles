@@ -1,0 +1,151 @@
+{
+  "schema": "pkm-p3-execution-approval/v1",
+  "actor": "user",
+  "approved": true,
+  "phase": "P3",
+  "operational_revision": "p3-auto-verified/20261001",
+  "recorded_at": "2026-10-01T06:58:29.039088+00:00",
+  "user_request": "사용자 검토 단계를 없애주고, 원본 논문이 수집이 되면 llm wiki 컴파일까지 모두 자동화 해주세요",
+  "scope_approval_ref": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/scheduled/scope-approval.json",
+  "scope_approval_sha256": "d9569822406bc7bfa9e2abb8d85484f6261ac3e1575614f0ab1c9626442369ca",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "mode": "scheduled",
+  "run": null,
+  "cron_id": "4839be6a1db1",
+  "source_scope": "current_and_future_collected",
+  "formats": [
+    "html",
+    "pdf"
+  ],
+  "collector_id": "4cff5b4f10ec",
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false
+  },
+  "route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses"
+  },
+  "cost_policy": "no_cost_cap",
+  "validated_publication_authorized": true,
+  "edit_freeze": {
+    "mode": "daily_window",
+    "timezone": "Asia/Seoul",
+    "start": "02:00",
+    "end": "02:45"
+  },
+  "runtime_manifest_ref": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime-manifest.json",
+  "runtime_manifest_sha256": "c77caed73a73777f940c86286c950c314264db241a01da310250f5f61fc12eb9",
+  "snapshots": {
+    "AGENTS.md": "bff95e20103c82552877df8789b16811aea53ace4d491af6ccbc96b0db22b161",
+    "SCHEMA.md": "4f4b0f82faeff0588d8799e23efdd1323e90f610315968e01a4ec37701d3c42d",
+    "_meta/AUTOMATION.md": "be74dab0362239689cce307adbb55d2093324f6bd703dcf6a427c2ccc257ccc4",
+    "_meta/COMPILATION.md": "79b751bb07cd90633bea18b4253e6febd4604f5213937aeddc5a9ecea243f37f",
+    "_meta/STATE-CONTRACTS.md": "9e28335ba2b07cb32a61511855381a11618e92c390b3d08abd16f43eec8c16e3",
+    "_meta/automation-contracts.schema.json": "6e3a58c97affd30f27779096a81fba02627d373c2cdb8059201349a405af1be9",
+    "_meta/prompts/wiki-compile.md": "f579453f6d735c1242d3932239ce594294f9726d576d0ef105d46b1c4c444728",
+    "_meta/automation.json": "16832e48837f06777d72497d0e5cd92fb394f310a1a9b1879b6acedb8d212b23",
+    "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/registration-active.json": "b10449842f5c0345eb6174a8c616c23f8c4fe5314d38a69a9170383770e770f7"
+  },
+  "preserved_publications": {
+    "2609.30614v1": {
+      "work_key": "5788b5235ed2707f483af65f21b1060e3427455d474327ebb3ec488a551a413e",
+      "receipt_sha256": "011cd3da25ce142f1789806e64400314182baa0dc8f48f2ce041ff7a12bcaf88",
+      "output_refs": [
+        {
+          "path": "entities/arxiv-2609.30614v1.md",
+          "revision": "1",
+          "sha256": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7"
+        }
+      ]
+    },
+    "2609.30824v1": {
+      "work_key": "5fd55c762eca9598633a7ec9b9f4496b8d4860ddc526c2f25fe0f49b57cc6a35",
+      "receipt_sha256": "5476ec47735a1d08bf972235d87d2072ed44ee3732386369fdb8a58843e10819",
+      "output_refs": [
+        {
+          "path": "entities/arxiv-2609.30824v1.md",
+          "revision": "1",
+          "sha256": "75a260c9328dd48b4a622471aee1143b7b7fed8f85fa8881facf30ab9c5bb76e"
+        }
+      ]
+    },
+    "2609.30830v1": {
+      "work_key": "1eea720e3ee514cdf247914aa2c50af7acc0950d84a63d5b603e6c4e7696ef95",
+      "receipt_sha256": "52cca2261830b1ad549631641b105dc288ab252676d68790aa7c8cbb830b011b",
+      "output_refs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "revision": "1",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "revision": "1",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "revision": "1",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        },
+        {
+          "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+          "revision": "1",
+          "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+        },
+        {
+          "path": "entities/arxiv-2609.30830v1.md",
+          "revision": "2",
+          "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+        },
+        {
+          "path": "entities/arxiv-2609.31358v1.md",
+          "revision": "2",
+          "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+        }
+      ]
+    },
+    "2609.31358v1": {
+      "work_key": "5c6153feb18dc31a1e6d1acd06abd92bc83c82d7a56ffed47825a112d40451bb",
+      "receipt_sha256": "4a909c013a919f2b58ca06058397b4ac875b8baff642e706960fd28d44eac432",
+      "output_refs": [
+        {
+          "path": "concepts/agent-authority-and-effect-boundaries.md",
+          "revision": "1",
+          "sha256": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092"
+        },
+        {
+          "path": "concepts/provenance-and-audit-evidence.md",
+          "revision": "1",
+          "sha256": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f"
+        },
+        {
+          "path": "concepts/security-evaluation-units.md",
+          "revision": "1",
+          "sha256": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0"
+        },
+        {
+          "path": "comparisons/agate-vs-sdc-mcp-gateway.md",
+          "revision": "1",
+          "sha256": "5c465ca6d1e61d8cdbd69539ca43b440554d68e58a98a7f5a138bcd998674364"
+        },
+        {
+          "path": "entities/arxiv-2609.30830v1.md",
+          "revision": "2",
+          "sha256": "a3c78928a46a94502ec3f52bb993a78b52508f10224e061beba2b66d3f1d89f0"
+        },
+        {
+          "path": "entities/arxiv-2609.31358v1.md",
+          "revision": "2",
+          "sha256": "1fb528f11738289f37fc4d3e21cf432d57a029ad83afc93c56da125b1b9b9ed4"
+        }
+      ]
+    }
+  },
+  "retry_approval_ref": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/retry-approval.json",
+  "retry_approval_sha256": "3b3b2d77fd10840890911d77d786382d656e2c62307c8819e950b5710c529a5f",
+  "human_review_required": false
+}

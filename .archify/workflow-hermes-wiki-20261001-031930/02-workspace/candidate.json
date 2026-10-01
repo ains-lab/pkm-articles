@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "02 · 작업 경로 — cwd와 접근 격리는 별개",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html"
+  },
+  "components": [
+    {"id":"operator","type":"external","label":"운영자 별도 승인","sublabel":"이번 시각화는 설정 변경 없음","pos":[40,40],"size":[230,80]},
+    {"id":"config","type":"backend","label":"terminal.cwd 설정","sublabel":"기본 작업 경로 · sandbox 아님","pos":[450,40],"size":[230,80]},
+    {"id":"bridge","type":"backend","label":"런타임 cwd 해석","sublabel":"config → TERMINAL_CWD","pos":[860,40],"size":[230,80]},
+    {"id":"placeholder","type":"backend","label":"local fallback","sublabel":"MESSAGING_CWD → home","pos":[860,300],"size":[230,80]},
+    {"id":"tools","type":"backend","label":"실제 도구 실행","sublabel":"명령 workdir·세션 cwd 우선 가능","pos":[450,300],"size":[230,80]},
+    {"id":"wiki","type":"database","label":"Wiki 작업 루트","sublabel":"pkm-articles · static root 아님","pos":[40,300],"size":[230,80]},
+    {"id":"isolation","type":"security","label":"별도 접근 격리","sublabel":"제안 · read-only mount / OS 권한","pos":[450,560],"size":[230,80]},
+    {"id":"context","type":"backend","label":"프로젝트 문맥 발견","sublabel":"우선순위·skip·캐시 확인","pos":[40,560],"size":[230,80]},
+    {"id":"verification","type":"security","label":"새 세션 실제 검증","sublabel":"cwd·지침·자료·쓰기 거부","pos":[860,560],"size":[230,80]}
+  ],
+  "connections": [
+    {"id":"scope","from":"operator","to":"config","label":"승인 후만","variant":"security"},
+    {"id":"explicit","from":"config","to":"bridge","label":"설정 bridge"},
+    {"id":"resolve","from":"bridge","to":"tools","label":"명시 경로"},
+    {"id":"fallback","from":"bridge","to":"placeholder","label":". / auto / cwd"},
+    {"id":"local","from":"placeholder","to":"tools","label":"local 기본값"},
+    {"id":"base-path","from":"tools","to":"wiki","label":"상대경로 기준"},
+    {"id":"context-discovery","from":"wiki","to":"context","label":"발견 기준"},
+    {"id":"enforce","from":"isolation","to":"tools","label":"실제 권한 제한","variant":"security"},
+    {"id":"verify","from":"isolation","to":"verification","label":"집행 여부 시험","variant":"security"}
+  ],
+  "cards": [
+    {"dot":"cyan","title":"경로의 역할","items":["Wiki: /home/ainsdev/wiki/pkm-articles","Hermes 설치 경로와 Wiki 경로는 별개다.","WIKI_PATH는 Wiki 관례이며 API cwd 선택 필드가 아니다.","근거: workspace-and-gateway.md:7–63"]},
+    {"dot":"rose","title":"지원되지 않는 추론 금지","items":["HTTP body cwd/workdir/workspace_root 적용 계약 없음.","session ID·/p/<profile>는 임의 파일 권한 토큰이 아니다.","local 도구는 실행 사용자 권한으로 Wiki 밖 접근 가능.","근거: workspace-and-gateway.md:57–63,118–124"]},
+    {"dot":"amber","title":"실행 전 확인","items":["비local backend는 container 경로·mount를 함께 검증.","config readback·단순 cd는 런타임 적용 증거가 아니다.","재시작·API enable/bind·secret 주입은 별도 승인 범위.","문서 관측: cwd=. / backend=local; 현재 서비스 미확인."]}
+  ]
+}

@@ -1,0 +1,14 @@
+test_root_ancestor_swap_does_not_follow_symlink (__main__.PublicationTests.test_root_ancestor_swap_does_not_follow_symlink) ... FAIL
+
+======================================================================
+FAIL: test_root_ancestor_swap_does_not_follow_symlink (__main__.PublicationTests.test_root_ancestor_swap_does_not_follow_symlink)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py", line 594, in test_root_ancestor_swap_does_not_follow_symlink
+    with self.assertRaises((ValueError, OSError)):
+AssertionError: (<class 'ValueError'>, <class 'OSError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.021s
+
+FAILED (failures=1)

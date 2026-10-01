@@ -1,0 +1,79 @@
+{
+  "schema": "pkm-p3-operations-scope/v1",
+  "operational_revision": "p3-auto-verified/20261001",
+  "actor": "user",
+  "approved": true,
+  "user_request": "사용자 검토 단계를 없애주고, 원본 논문이 수집이 되면 llm wiki 컴파일까지 모두 자동화 해주세요",
+  "edit_freeze_confirmation": "해당 시간 편집 중지에 동의하고 자동 게시 활성화",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "phase": "P3",
+  "source_scope": "current_and_future_collected",
+  "formats": [
+    "html",
+    "pdf"
+  ],
+  "collector_id": "4cff5b4f10ec",
+  "compiler_id": "4839be6a1db1",
+  "activation_authorized": true,
+  "validated_publication_authorized": true,
+  "human_review_required": false,
+  "new_page_status": "compiled",
+  "new_page_review_state": "auto_verified",
+  "human_review_claimed": false,
+  "edit_freeze": {
+    "mode": "daily_window",
+    "timezone": "Asia/Seoul",
+    "start": "02:00",
+    "end": "02:45"
+  },
+  "schedule": {
+    "cron": "0 17 * * *",
+    "scheduler_timezone": "UTC",
+    "display_timezone": "Asia/Seoul"
+  },
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false
+  },
+  "cost_policy": "no_cost_cap",
+  "execution_policy": {
+    "max_papers_per_run": 5,
+    "soft_run_minutes": 45,
+    "attempts_per_item_per_run_including_initial": 2,
+    "failure_limit_per_item": 3,
+    "overlap": "skip_if_run_or_collection_lock_busy; never steal locks",
+    "missed_run": "next eligible daily window continues oldest eligible backlog; no out-of-window backfill",
+    "unknown_outcome": "hold_without_automatic_retry",
+    "validation_failure": "not_published; retained with failure evidence",
+    "safety_block": "stop new work until operator verifies cause and separately authorizes recovery",
+    "no_change": "verify outputs/receipts then report local no-op",
+    "delivery": "local"
+  },
+  "preserve": [
+    "raw",
+    "source.json",
+    "collector settings and state",
+    "old knowledge pages",
+    "old run/receipt/journal evidence",
+    "legacy P2 guards"
+  ],
+  "excluded": [
+    "concept/comparison automatic rewriting",
+    "P4-P6",
+    "research-review activation",
+    "new collection program/parser/database",
+    "PDF binary/images/OCR/external assets",
+    "global model/auth settings",
+    "new installs",
+    "external notifications",
+    "other jobs/profiles/Wikis",
+    "commit/push"
+  ],
+  "activation_condition": "Finish the existing manual run without mutation; validate the new runtime and live policy; bind exact scheduled approval/registration/runtime snapshots before any automated paper processing.",
+  "scheduled_run_edit_freeze_authorized": true,
+  "source_approval_ref": "_meta/runs/wiki/20261001T060423Z-p3-auto-activation/scope-approval.json",
+  "source_approval_sha256": "0cb0ada65de1120e1684bb98b3007ccce5e44aaa3f31e9073c590a517515bc2c",
+  "derivation": "Execution-format binding of the original user approval and explicit daily edit-freeze confirmation; original preserved unchanged"
+}

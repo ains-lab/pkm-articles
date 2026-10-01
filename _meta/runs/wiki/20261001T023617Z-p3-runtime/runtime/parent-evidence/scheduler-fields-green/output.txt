@@ -1,0 +1,6 @@
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.623s
+
+OK

@@ -1,0 +1,6 @@
+test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.049s
+
+OK

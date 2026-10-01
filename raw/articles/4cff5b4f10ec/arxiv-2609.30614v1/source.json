@@ -1,0 +1,55 @@
+{
+  "source": "arxiv",
+  "base_id": "2609.30614",
+  "version_id": "2609.30614v1",
+  "title": "Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+  "authors": [
+    "Seungho Lee",
+    "Changbin Lee"
+  ],
+  "abstract": "Dataspace connectors decide whether a transfer may occur, not what the transferred value contains, tolerable for contracted applications, not for LLM agents that compose tool calls and spawn sub-agents. Research on agents that generate governance artifacts evaluates output quality; who may authorize an artifact for use falls between that literature and the governance literature, and neither owns it. A published policy is what a dataspace's decision point enforces, so publication is a governance event, and an agent that is both policy subject and policy author writes the norms that bind it. We name this the authorship hazard and state one principle: an agent is a subject of the governance plane, never an author of it. Its authorization channel to publication is closed by construction; its influence channel, drafting what humans approve, is treated as an enforcement problem. On a frozen corpus of agent drafts, publishing without approval reverses 80 authorization decisions, most through drafts that change only a field's sensitivity classification and no policy text; a classifier that reads the policy diff misses every such draft, necessarily. Treating classification as authorship routes them all to review; the registry-held classification this requires is designed and modelled here, not yet implemented in the prototype. At the execution boundary, protected fields reach the model in 105 of 105 cases under prompt-stated duties and in 0 of 105 when the ODRL duty is compiled into an invocation-time tool-call constraint, but where the value is not confined to a named field the compiled condition exposes it in 7 of 7. A centrally provisioned approval pool does not scale to the participant volume that motivates the problem.",
+  "published": "2026-09-24T22:58:16Z",
+  "updated": "2026-09-24T22:58:16Z",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.DB",
+    "cs.MA"
+  ],
+  "abs_url": "https://arxiv.org/abs/2609.30614v1",
+  "bibliography_provenance": {
+    "source_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.dom-text.xml",
+    "source_sha256": "b5aa2523a7b1c0915757fd2b31daab090e1e9367993d76897c714e186f934f32",
+    "captured_at": "2026-09-28T15:04:29.395Z",
+    "capture_method": "previous_official_api_atom_DOM_text_capture",
+    "reused_existing_versioned_record": true
+  },
+  "schema": "arxiv-pdf-source/v1",
+  "source_format": "pdf",
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/pdf/2609.30614v1",
+  "html_url": "https://arxiv.org/html/2609.30614v1",
+  "collected_at": "2026-09-29T04:27:19.881365+00:00",
+  "pdf_file": "source.pdf",
+  "pdf_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+  "pdf_bytes": 821749,
+  "http_status": 200,
+  "final_url": "https://arxiv.org/pdf/2609.30614v1",
+  "content_type": "application/pdf",
+  "content_length": 821749,
+  "capture_method": "http_response_body_no_rewrite",
+  "content_scope": "pdf_fulltext_as_served",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "collection_run_id": "20260929T042631Z-pdf-capture-808d882a",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "html_unavailable": {
+    "http_status": 404,
+    "checked_at": "2026-09-28T10:49:18.370788+00:00",
+    "evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+    "evidence_sha256": "81c523a5d8e247833d49161244f5eb11298f32106d715087ad78748be2d69b63",
+    "reused_existing_evidence": true
+  },
+  "download_evidence_path": "_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/downloads.json"
+}

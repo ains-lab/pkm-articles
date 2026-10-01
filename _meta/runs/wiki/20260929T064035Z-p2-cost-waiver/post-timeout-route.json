@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "response_id": "resp_05bd974d94a210c9016abb64aba78c87d0963847518ebb9ee0",
+  "response_model": "gpt-6-astra",
+  "response_reasoning": "xhigh",
+  "usage": {
+    "input_tokens": 34,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 19,
+    "output_tokens_details": {
+      "reasoning_tokens": 9
+    },
+    "total_tokens": 53
+  },
+  "text": "PKM_ROUTE_OK",
+  "recorded_at": "2026-09-29T07:21:55.323437+00:00",
+  "requested_provider": "codex-lb",
+  "requested_model": "gpt-6-astra",
+  "elapsed_seconds": 35.07893474283628,
+  "paper_content_sent": false,
+  "application_fallback": false,
+  "cost_usd": null,
+  "purpose": "post-timeout minimal route diagnostic, not a third paper generation attempt"
+}

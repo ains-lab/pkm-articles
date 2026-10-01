@@ -1,0 +1,242 @@
+"""Bounded manual PDF-text adapter. Importing performs no I/O or provider resolution.
+
+Only this run's runtime directory is writable. No collector, OCR, rendering,
+publication, activation, persistent extracts, or automatic retries are provided.
+"""
+import argparse
+import functools
+import io
+import json
+import math
+import os
+from pathlib import Path
+import re
+import sys
+import time
+import types
+
+ROOT = Path('/home/ainsdev/wiki/pkm-articles')
+RUN = '_meta/runs/wiki/20261001T001438Z-pdf-wiki'
+RUN_ID = '20261001T001438Z-pdf-wiki'
+RUNTIME = RUN + '/runtime'
+VERSIONS = ('2609.30614v1', '2609.30824v1')
+POLICY = 'pkm-html-pdf-text-knowledge/v3'
+CONTRACT = 'pkm-contracts/v3'
+PROMPT_REV = 'wiki-compile/v3'
+PROMPT = '_meta/prompts/wiki-compile.md'
+DOCS = ('AGENTS.md', 'SCHEMA.md', '_meta/AUTOMATION.md', '_meta/COMPILATION.md',
+        '_meta/STATE-CONTRACTS.md', '_meta/automation-contracts.schema.json')
+MODEL_PIN = dict(provider='codex-lb', model='gpt-6-astra', reasoning_effort='xhigh', fallback_allowed=False)
+ROUTE = dict(base_url='http://10.10.1.244:2455/v1', api_mode='codex_responses')
+PDF_READING = dict(mode='embedded_text_only', library='pypdf', environment='.venv-pdf-reader',
+    pdf_binary_transfer=False, images=False, ocr=False, external_assets=False,
+    persistent_extraction=False, page_citation='physical_1_based')
+SCOPE_TRUE = ('policy_change_authorized', 'isolated_pypdf_install_authorized',
+    'local_pdf_text_reading_authorized', 'pdf_text_transfer_authorized', 'manual_generation_authorized',
+    'validated_publication_authorized', 'publication_edit_freeze_confirmed')
+SCOPE_FALSE = ('persistent_extraction', 'pdf_binary_transfer', 'images', 'ocr', 'external_assets',
+    'cron_registration_authorized', 'cron_activation_authorized')
+
+
+class Rejected(ValueError):
+    """Locally generated category only, never an SDK message."""
+
+
+def require(ok, code):
+    if not ok:
+        raise Rejected(code)
+
+
+@functools.lru_cache(maxsize=None)
+def helper(name):
+    """Reuse unchanged low-level helpers without writing legacy __pycache__."""
+    require(name in ('compile', 'verify', 'publish'), 'helper_name')
+    p = ROOT / '_meta/runs/wiki/20260929T083140Z-p2-resume' / (name + '-one.py')
+    require(all(not part.is_symlink() for part in (p, *p.parents)), 'helper_symlink')
+    # Read code, never a PDF; explicit exec avoids importlib's bytecode cache writes.
+    fd = os.open(p, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd, 'rb') as f:
+        code = f.read()
+    mod = types.ModuleType('_manual_pdf_' + name)
+    mod.__file__ = str(p)
+    exec(compile(code, str(p), 'exec'), mod.__dict__)
+    return mod
+
+
+class TestConfig:
+    """Explicit synthetic-only root/library injection; unavailable through CLI."""
+    def __init__(self, root, pdf_module):
+        root = Path(root)
+        require(root.parent == ROOT / RUNTIME and root.name.startswith('synthetic-'), 'test_root')
+        self.root, self.pdf_module = root, pdf_module
+
+
+def _check_root(root, run, test_config):
+    root = Path(root)
+    expected = ROOT if test_config is None else test_config.root
+    require(root == expected and root.is_absolute() and '..' not in root.parts, 'root_mismatch')
+    require(run == RUN, 'run_mismatch')
+    require(all(not p.is_symlink() for p in (root, *root.parents)), 'symlink')
+    require(root.is_dir(), 'root_missing')
+    if test_config is not None:
+        require(type(test_config) is TestConfig and root.parent == ROOT / RUNTIME and
+                root.name.startswith('synthetic-'), 'test_root')
+    return root
+
+
+def _sha(data):
+    return helper('compile').digest(data)
+
+
+def _hash(value):
+    return isinstance(value, str) and re.fullmatch(r'[0-9a-f]{64}', value) is not None
+
+
+def _text(value):
+    return isinstance(value, str) and bool(value.strip())
+
+
+def _deadline(deadline):
+    if deadline is not None and time.monotonic() >= deadline:
+        raise TimeoutError()
+
+
+def preflight(*, root=ROOT, run=RUN, vid, timeout=2400, test_config=None, deadline=None):
+    """Validate all authority, policy, state and snapshots WITHOUT PDF body I/O.
+
+    Returns ephemeral context; do not serialize it (contains approved Wiki text).
+    The two sources' metadata and hash commitments are gated before either body.
+    """
+    root = _check_root(root, run, test_config)
+    require(isinstance(vid, str) and re.fullmatch(r'[0-9]{4}\.[0-9]{5}v[1-9][0-9]*', vid)
+            and vid in VERSIONS, 'outside_scope')
+    require(type(timeout) in (int, float) and math.isfinite(timeout) and 0 < timeout <= 2400, 'timeout_scope')
+    fs = helper('publish').Files(root)
+    snapshots = {}
+
+    def take(path):
+        _deadline(deadline)
+        data = fs.read(path)
+        _deadline(deadline)
+        snapshots[path] = _sha(data)
+        return data
+
+    def obj(path):
+        return helper('verify').strict_object(take(path).decode('utf-8'))
+
+    scope = obj(run + '/scope-approval.json')
+    require(scope.get('schema') == 'pkm-pdf-text-scope-approval/v1' and
+        scope.get('wiki_root') == str(root) and scope.get('run_id') == RUN_ID and
+        scope.get('version_ids') == list(VERSIONS) and scope.get('model') == MODEL_PIN and
+        all(scope.get(k) is True for k in SCOPE_TRUE) and
+        all(scope.get(k) is False for k in SCOPE_FALSE) and scope.get('cost_policy') == 'no_cost_cap' and
+        scope.get('user_request') == '그럼 pdf 논문도 위키 컴파일하여 포함하도록 적용해주세요' and
+        scope.get('configuration_confirmation') == '승인 — 텍스트 방식으로 정책 변경 및 PDF 2편 컴파일' and
+        scope.get('publication_confirmation') == '게시 승인 — 작업 중 Wiki 직접 편집 중지', 'scope_not_approved')
+    a = obj(run + '/execution-approval.json')
+    require(a.get('schema') == 'pkm-pdf-text-run-approval/v1' and a.get('approved') is True and
+        a.get('wiki_root') == str(root) and a.get('run_id') == RUN_ID and
+        a.get('version_ids') == list(VERSIONS) and a.get('max_attempts_per_item') == 2 and
+        type(a.get('max_attempts_per_item')) is int and
+        a.get('publication_edit_freeze_confirmed') is True and
+        a.get('validated_publication_authorized') is True, 'execution_not_approved')
+    require(all(a.get(k) == v for k, v in dict(provider=MODEL_PIN['provider'], model=MODEL_PIN['model'],
+        reasoning_effort=MODEL_PIN['reasoning_effort'], policy_revision=POLICY,
+        contract_revision=CONTRACT, prompt_revision=PROMPT_REV, approved_route=ROUTE,
+        scope_approval_sha256=snapshots[run+'/scope-approval.json']).items()), 'approval_pin_mismatch')
+    p = obj('_meta/automation.json')
+    require(a.get('policy_sha256') == snapshots['_meta/automation.json'], 'policy_drift')
+    require(p.get('schema') == 'pkm-automation/v1' and p.get('wiki_root') == str(root) and
+        p.get('policy_revision') == POLICY and p.get('contract_revision') == CONTRACT and
+        p.get('enabled') is False and p.get('registration_authorized') is False and
+        p.get('activation_authorized') is False and
+        all(p.get('phase_authorizations', {}).get(k) is False for k in ('P3', 'P4', 'P5', 'P6')), 'policy_mismatch')
+    require(p.get('model') == MODEL_PIN and p.get('pdf_reading') == PDF_READING, 'reading_or_model_policy')
+    transfer = p.get('transfer', {})
+    require(transfer.get('pdf_content') is True and transfer.get('existing_wiki') is True and
+        all(transfer.get(k) is False for k in ('images', 'external_assets', 'automatic_chat_capture',
+            'secrets_or_sensitive_personal_data', 'external_novelty_search')), 'transfer_policy')
+    require(p.get('budget', {}).get('cost_policy') == 'no_cost_cap' and
+        p['budget'].get('unknown_cost_action') == 'record_unknown_continue', 'cost_policy')
+    require(p.get('limits', {}).get('attempts_per_item_per_run_including_initial') == 2 and
+        p['limits'].get('soft_run_minutes') == 45, 'limits_policy')
+    jobs = p.get('jobs', {})
+    require(set(jobs) == {'daily_compile', 'research_review'} and all(j.get('enabled') is False and
+        j.get('cron_id') is None and j.get('registration_status') == 'not_registered' and
+        j.get('registration_readback') is None for j in jobs.values()), 'registration_policy')
+    require(jobs['daily_compile'].get('prompt_path') == PROMPT and
+        jobs['daily_compile'].get('prompt_revision') == PROMPT_REV, 'prompt_policy')
+    docs = {path: take(path) for path in DOCS}
+    require(a.get('document_sha256') == {path: _sha(data) for path, data in docs.items()}, 'document_drift')
+    require(all(POLICY in data.decode('utf-8') for data in docs.values()), 'document_revision')
+    schema = helper('verify').strict_object(docs[DOCS[-1]].decode('utf-8'))
+    helper('publish').schema_validate(schema, p, 'automation')
+    prompt = take(PROMPT).decode('utf-8')
+    require(a.get('prompt_sha256') == snapshots[PROMPT] and
+        all(x in prompt for x in (POLICY, CONTRACT, PROMPT_REV)), 'prompt_drift')
+    instructions_path = a.get('instructions_path')
+    require(isinstance(instructions_path, str) and instructions_path.startswith(run+'/') and
+        instructions_path.endswith('.md'), 'instructions_path')
+    instructions = take(instructions_path).decode('utf-8')
+    require(a.get('instructions_sha256') == snapshots[instructions_path], 'instructions_drift')
+    state = obj('_meta/state/compilation.json')
+    require(state.get('schema') == 'pkm-compilation-state/v1' and state.get('policy_revision') == POLICY and
+        state.get('contract_revision') == CONTRACT and state.get('safety_block') is False and
+        state.get('enabled') is False, 'state_policy')
+    require(isinstance(state.get('transactions'), list) and all(isinstance(t, dict) and
+        t.get('status') in ('committed', 'rolled_back') for t in state['transactions']), 'unresolved_transaction')
+    helper('publish').schema_validate(schema, state, 'compilation')
+    require(isinstance(a.get('sources'), dict) and set(a['sources']) == set(VERSIONS), 'sources_scope')
+    metadata = {}
+    for version in VERSIONS:
+        source = f'raw/articles/4cff5b4f10ec/arxiv-{version}/source.pdf'
+        meta_path = source.replace('source.pdf', 'source.json')
+        refs = a['sources'][version]
+        require(isinstance(refs, dict) and set(refs) == {'source_path', 'source_sha256', 'source_bytes',
+            'metadata_path', 'metadata_sha256'} and refs['source_path'] == source and
+            refs['metadata_path'] == meta_path and _hash(refs['source_sha256']) and
+            _hash(refs['metadata_sha256']) and type(refs['source_bytes']) is int and
+            refs['source_bytes'] > 0, 'source_input_forbidden')
+        helper('compile').safe_path(root, source)
+        items = [x for x in state.get('items', []) if x.get('version_id') == version]
+        require(len(items) == 1, 'state_item_count')
+        item = items[0]
+        # A peer may already be published when the second item is compiled.
+        statuses = ('queued',) if version == vid else ('queued', 'published_draft', 'partial', 'retryable_failed')
+        require(item.get('format') == 'pdf' and item.get('source') == 'arxiv' and
+            item.get('status') in statuses and type(item.get('failure_count')) is int and
+            0 <= item['failure_count'] < 3 and all(item.get(k) == v for k, v in refs.items()), 'item_policy')
+        meta = obj(meta_path)
+        require(snapshots[meta_path] == refs['metadata_sha256'] and
+            meta.get('pdf_sha256') == refs['source_sha256'] and meta.get('pdf_bytes') == refs['source_bytes'] and
+            type(meta.get('pdf_bytes')) is int, 'source_metadata_drift')
+        require(all(meta.get(k) == v for k, v in dict(schema='arxiv-pdf-source/v1', source='arxiv',
+            source_format='pdf', version_id=version, owning_cron_id='4cff5b4f10ec', pdf_file='source.pdf',
+            source_url=f'https://arxiv.org/pdf/{version}', final_url=f'https://arxiv.org/pdf/{version}',
+            content_type='application/pdf', http_status=200, capture_method='http_response_body_no_rewrite',
+            content_scope='pdf_fulltext_as_served').items()) and
+            all(meta.get(k) is False for k in ('preprocessing', 'wiki_compiled', 'offline_assets_bundled')) and
+            not any(k in meta for k in ('html_file', 'html_sha256', 'html_bytes')) and _text(meta.get('title')), 'metadata_policy')
+        metadata[version] = meta
+    wiki = []
+    refs = a.get('wiki_inputs')
+    require(isinstance(refs, list), 'wiki_inputs')
+    seen = set()
+    for ref in refs:
+        require(isinstance(ref, dict) and set(ref) == {'path', 'sha256'} and
+            isinstance(ref['path'], str) and re.fullmatch(r'(entities|concepts|comparisons|queries)/[a-z0-9.-]+\.md', ref['path']) and
+            ref['path'] not in seen and _hash(ref['sha256']), 'wiki_input_forbidden')
+        text = take(ref['path']).decode('utf-8')
+        require(snapshots[ref['path']] == ref['sha256'], 'wiki_drift')
+        wiki.append(dict(ref, text=text))
+        seen.add(ref['path'])
+    record = dict(version_id=vid, vid=vid, run_id=RUN_ID, provider=MODEL_PIN['provider'], model=MODEL_PIN['model'],
+        reasoning_effort=MODEL_PIN['reasoning_effort'], policy_revision=POLICY, contract_revision=CONTRACT,
+        prompt_revision=PROMPT_REV, policy_sha256=a['policy_sha256'], prompt_sha256=a['prompt_sha256'],
+        document_sha256=a['document_sha256'], scope_approval_sha256=a['scope_approval_sha256'],
+        instructions_path=instructions_path, instructions_sha256=a['instructions_sha256'],
+        approval_ref=run+'/execution-approval.json', approval_sha256=snapshots[run+'/execution-approval.json'],
+        sources=a['sources'], wiki_inputs=refs, approved_route=ROUTE, http_timeout_s=timeout,
+        **a['sources'][vid])
+    return dict(root=root, run=run, vid=vid, timeout=timeout, test_config=test_config,
+        record=record, snapshots=snapshots, metadata=metadata, wiki=wiki, instructions=instructions, prompt=prompt)

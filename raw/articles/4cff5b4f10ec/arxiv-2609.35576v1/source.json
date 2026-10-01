@@ -1,0 +1,41 @@
+{
+  "schema": "arxiv-html-source/v1",
+  "source": "arxiv",
+  "base_id": "2609.35576",
+  "version_id": "2609.35576v1",
+  "title": "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
+  "authors": [
+    "Sidharth Pulipaka",
+    "Ansh Sharma",
+    "Stanislau Hlebik",
+    "Leonidas Raghav",
+    "Vyas Raina",
+    "Ivaxi Sheth",
+    "Mario Fritz"
+  ],
+  "abstract": "Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts are shared between users, they form an indirect communication channel between otherwise independent assistants. We study a failure mode in which this channel enables self-propagating attacks. We introduce artifact-mediated propagation, where adversarial content introduced through an artifact (e.g. a report), is stored in an assistant's persistent memory, reproduced in a subsequently created artifact, and acquired by another assistant that later reads it. We evaluate this process in temporal human-agent universes that model artifact exchange between independently operated assistants over time, measuring whether an attack survives successive hand-offs, how many hops it reaches, and how broadly it spreads. We find that attacks can propagate across multiple independent assistants and persist over extended interaction sequences. In larger simulated environments, even GPT-5.6 Luna exhibits substantial spread, reaching 60-80% of agents with propagation chains extending to eight hops. These results show that persistent artifacts can act as durable carriers of adversarial state, allowing attacks to outlive individual interactions and spread across isolated assistants.",
+  "published": "2026-09-28T16:34:52Z",
+  "updated": "2026-09-28T16:34:52Z",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.CR",
+    "cs.LG"
+  ],
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/html/2609.35576v1",
+  "abs_url": "https://arxiv.org/abs/2609.35576v1",
+  "collected_at": "2026-09-29T15:09:08.679810+00:00",
+  "html_file": "source.html",
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2609.35576v1",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "capture_method": "http_response_body_no_rewrite",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "html_sha256": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+  "html_bytes": 394496
+}

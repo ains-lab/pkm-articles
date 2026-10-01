@@ -1,0 +1,10 @@
+{
+  "schema": "pkm-p2-attempt-abort/v1",
+  "vid": "2609.31358v1",
+  "recorded_at": "2026-09-29T08:39:00Z",
+  "status": "not_started_operator_error",
+  "detail": "운영자가 지시문 경로를 잘못 전달해 프로세스가 모델 호출 없이 즉시 종료(FileNotFoundError). 시도·비용·본문 전송 없음. 재시도 허용: 이번 run 내 시도 0회로 집계.",
+  "model_call_made": false,
+  "content_sent": false,
+  "counts_as_attempt": false
+}

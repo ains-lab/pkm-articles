@@ -1,0 +1,32 @@
+{
+  "schema": "pkm-p2-final-verification/v1",
+  "recorded_at": "2026-09-29T06:25:38.659883+00:00",
+  "disposition": "blocked_budget",
+  "protected_files_unchanged": 42,
+  "original_and_metadata_files_unchanged": 20,
+  "source_count": 10,
+  "formats": {
+    "html": 8,
+    "pdf": 2
+  },
+  "collector_record_unchanged": true,
+  "cron_job_ids_unchanged": true,
+  "new_cron_jobs": 0,
+  "knowledge_pages": 0,
+  "log_unchanged": true,
+  "collection_lock_present": false,
+  "git_diff_check": "pass",
+  "conditional_approval_record_present": true,
+  "readiness_passed": false,
+  "processed_candidate_versions": [],
+  "deferred_candidate_versions": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "model_inference_requests_sent_by_tools": 0,
+  "charged_usd": null,
+  "cost_note": "No paper inference dispatched; current supervisory session cost unobserved, not zero",
+  "active_contracts_and_ledgers_unchanged": true,
+  "preservation_verification": "pass",
+  "semantic_and_recovery_tests": "not_run_budget_gate_failed"
+}

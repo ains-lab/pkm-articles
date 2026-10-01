@@ -1,0 +1,29 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:13:38.041055+00:00",
+  "label": "content-contract-final-01",
+  "modules": [
+    "test_content_contract",
+    "test_content"
+  ],
+  "tests_run": 31,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/usr/bin/python3",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "c3e2436eea1082aa2bc7052b862f88b26f7df85d5d114971c523bcbe9572e6eb",
+    "content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "publication.py": "155955ebdbf5a0ee9c03f9017024684918a9b04774c5f5154bc89e24201464ad",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_content_contract.py": "e4f85c5fdc8d0ab6d6e52fcf1c5a505b9e0e947150d861730d83d106dbdfcee4",
+    "test_content.py": "58f702d5c5b9886a6ea2caa5ace575ee7df17b7cc428368c575dd1fedbd13078"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

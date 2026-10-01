@@ -1,0 +1,8 @@
+{
+  "status": "no_completed_response_recovered",
+  "local_tool_error": "terminal timed out after 420.0s",
+  "local_process_alive_at_followup": false,
+  "server_completion": "unknown",
+  "cost_usd": null,
+  "retry_authorized_by_existing_max_attempts": 2
+}

@@ -1,0 +1,27 @@
+test_known_unknown_outcome_survives_busy_and_reconciles_without_replay (test_contention.ContentionTests.test_known_unknown_outcome_survives_busy_and_reconciles_without_replay) ... ok
+test_reconciliation_cli_dispatches_without_regeneration (test_contention.ContentionTests.test_reconciliation_cli_dispatches_without_regeneration) ... ERROR
+test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once (test_contention.ContentionTests.test_reconciliation_refuses_drift_and_recovers_state_write_interruption_once) ... ok
+test_reservation_busy_is_reported_without_model_or_reading_state (test_contention.ContentionTests.test_reservation_busy_is_reported_without_model_or_reading_state) ... ok
+
+======================================================================
+ERROR: test_reconciliation_cli_dispatches_without_regeneration (test_contention.ContentionTests.test_reconciliation_cli_dispatches_without_regeneration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_contention.py", line 51, in test_reconciliation_cli_dispatches_without_regeneration
+    self.assertEqual(daily.main(args),0)
+                     ^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py", line 549, in main
+    args=parser.parse_args(argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/argparse.py", line 1877, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/home/ainsdev/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/argparse.py", line 2640, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/home/ainsdev/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/argparse.py", line 2627, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.892s
+
+FAILED (errors=1)

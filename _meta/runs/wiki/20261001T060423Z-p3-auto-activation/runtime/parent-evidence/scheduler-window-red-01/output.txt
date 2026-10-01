@@ -1,0 +1,68 @@
+test_expired_processor_error_has_durable_unknown_not_orphan_reading (test_scheduled_safety.ScheduledSafetyTests.test_expired_processor_error_has_durable_unknown_not_orphan_reading) ... ok
+test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) ... 
+  test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='generation') ... FAIL
+  test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='semantic') ... FAIL
+  test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='ready') ... FAIL
+
+======================================================================
+FAIL: test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='generation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 94, in test_occurrence_end_stops_real_generation_semantic_and_publication
+    self.assertLessEqual(seen[0],10.0)
+AssertionError: 2700.0 not less than or equal to 10.0
+
+======================================================================
+FAIL: test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='semantic')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 92, in test_occurrence_end_stops_real_generation_semantic_and_publication
+    result=daily.run_daily(**f.kw(),processor=processor,client_factory=factory,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 546, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 335, in publish
+    evidence = _bound(ctx,bundle)
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 70, in _bound
+    ctx['guard']()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 318, in guard
+    ctx['guard']();ctx['owns_run']();P.check_snapshots(fs,prepared['snapshots'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 489, in check_snapshots
+    require(sha(fs.read(path)) == expected, 'input changed: ' + path)
+                ^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 86, in reader
+    self.fail('source reread during expired terminal bookkeeping')
+AssertionError: source reread during expired terminal bookkeeping
+
+======================================================================
+FAIL: test_occurrence_end_stops_real_generation_semantic_and_publication (test_scheduled_safety.ScheduledSafetyTests.test_occurrence_end_stops_real_generation_semantic_and_publication) (stage='ready')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 92, in test_occurrence_end_stops_real_generation_semantic_and_publication
+    result=daily.run_daily(**f.kw(),processor=processor,client_factory=factory,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 546, in run_daily
+    publication=publish(prepared,bundle,now=now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 335, in publish
+    evidence = _bound(ctx,bundle)
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 70, in _bound
+    ctx['guard']()
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 318, in guard
+    ctx['guard']();ctx['owns_run']();P.check_snapshots(fs,prepared['snapshots'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py", line 489, in check_snapshots
+    require(sha(fs.read(path)) == expected, 'input changed: ' + path)
+                ^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 86, in reader
+    self.fail('source reread during expired terminal bookkeeping')
+AssertionError: source reread during expired terminal bookkeeping
+
+----------------------------------------------------------------------
+Ran 2 tests in 6.815s
+
+FAILED (failures=3)

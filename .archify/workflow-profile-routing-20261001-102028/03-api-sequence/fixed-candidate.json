@@ -1,0 +1,66 @@
+{
+  "schema_version":1,
+  "diagram_type":"sequence",
+  "meta":{
+    "title":"앱 → 프로필 → Wiki → 응답 — 전체 API 워크플로우 설계",
+    "locale":"ko",
+    "translations":{
+      "page.title":"{title} 다이어그램",
+      "diagram.description.sequence":"앱 요청, 프로필 설정, Wiki 읽기와 비동기 응답의 시간순 설계입니다.",
+      "legend.title":"범례",
+      "legend.sequence.emphasis":"주요 요청",
+      "legend.sequence.return":"응답",
+      "legend.sequence.security":"권한·인증",
+      "legend.sequence.dashed":"비동기 이벤트",
+      "legend.sequence.default":"처리",
+      "viewer.theme.toggle":"테마 전환",
+      "viewer.theme.toggle.title":"테마 전환 (T)",
+      "viewer.theme.dark":"어두운 테마",
+      "viewer.theme.light":"밝은 테마",
+      "viewer.export.button":"내보내기",
+      "viewer.motion.still":"정적",
+      "node.focus":"{label} 자세히 보기"
+    },
+    "animation":"none",
+    "quality_profile":"showcase",
+    "output":".archify/workflow-profile-routing-20261001-102028/03-api-sequence/diagram.html"
+  },
+  "participants":[
+    {"id":"app","type":"frontend","label":"사용자 앱","sublabel":"Wiki 질문·화면"},
+    {"id":"bff","type":"security","label":"BFF","sublabel":"권한·프로필 매핑"},
+    {"id":"gateway","type":"messagebus","label":"Gateway","sublabel":"프로필 P의 API"},
+    {"id":"agent","type":"backend","label":"Agent·도구","sublabel":"프로필 P의 설정"},
+    {"id":"wiki","type":"database","label":"Wiki 파일","sublabel":"pkm-articles"}
+  ],
+  "segments":[
+    {"from":150,"to":390,"label":"1 · 요청·프로필 선택·접수  |  P = pkm-articles"},
+    {"from":408,"to":820,"label":"2 · Agent 실행과 SSE 구독·중계는 병행"},
+    {"from":838,"to":1080,"label":"3 · 최종 상태 확인 후 답변·근거 또는 실패 안내"}
+  ],
+  "messages":[
+    {"id":"app-request","from":"app","to":"bff","y":168,"label":"POST /{P}/v1/runs","variant":"emphasis","note":"BFF: 사용자·Wiki 권한, P 매핑·session 검사"},
+    {"id":"api-post","from":"bff","to":"gateway","y":252,"label":"POST /p/{P}/v1/runs","variant":"security","note":"BFF 허용 후 호출 / Gateway가 P 전용 키 인증"},
+    {"id":"accepted","from":"gateway","to":"bff","y":336,"label":"202 + run_id","variant":"return"},
+    {"id":"app-accepted","from":"bff","to":"app","y":378,"label":"202 · 접수만 완료","variant":"return"},
+    {"id":"app-events","from":"app","to":"bff","y":426,"label":"앱 events 구독","variant":"emphasis"},
+    {"id":"dispatch","from":"gateway","to":"agent","y":468,"label":"인증 후 P로 실행","variant":"dashed","note":"Agent: 실효 cwd 확인 / 세션 cwd·override·terminal.cwd"},
+    {"id":"upstream-events","from":"bff","to":"gateway","y":552,"label":"GET R/events","variant":"emphasis"},
+    {"id":"read","from":"agent","to":"wiki","y":594,"label":"검사 후 문서 읽기","variant":"security"},
+    {"id":"document","from":"wiki","to":"agent","y":636,"label":"문서 내용·출처","variant":"return"},
+    {"id":"delta","from":"agent","to":"gateway","y":720,"label":"진행·답변 델타","variant":"dashed","note":"Agent: 실제 읽은 문서로 근거 기반 답변"},
+    {"id":"sse","from":"gateway","to":"bff","y":762,"label":"SSE · data.event","variant":"dashed"},
+    {"id":"app-progress","from":"bff","to":"app","y":804,"label":"진행·임시 답변","variant":"return"},
+    {"id":"agent-done","from":"agent","to":"gateway","y":852,"label":"종료 상태·결과","variant":"return"},
+    {"id":"terminal-event","from":"gateway","to":"bff","y":894,"label":"SSE · 종료 이벤트","variant":"dashed"},
+    {"id":"poll","from":"bff","to":"gateway","y":936,"label":"GET R · 상태 확인","variant":"emphasis"},
+    {"id":"snapshot","from":"gateway","to":"bff","y":978,"label":"상태 + 최종 결과","variant":"return"},
+    {"id":"final-response","from":"bff","to":"app","y":1062,"label":"상태·답변·근거","variant":"return","note":"BFF: 소유권·상태·출처·노출 범위 검사 후 반환"}
+  ],
+  "cards":[
+    {"dot":"cyan","title":"URL → 프로필 → 작업 경로 · 설계 예시","items":["P = pkm-articles. 앱의 POST /pkm-articles/v1/runs는 새로 구현할 BFF API입니다.","BFF는 POST /p/pkm-articles/v1/runs를 서버측 프로필 키로 호출합니다.","Gateway는 pkm-articles 프로필을 선택합니다. 해당 프로필의 terminal.cwd = /home/ainsdev/wiki/pkm-articles로 설정하는 안입니다.","URL과 폴더 이름이 같아야 하는 것은 아닙니다. BFF의 허용 매핑과 프로필 설정이 각각 연결합니다."]},
+    {"dot":"violet","title":"R은 같은 프로필의 실행 주소","items":["R = /p/pkm-articles/v1/runs/{run_id}. 그림의 GET R과 GET R/events는 설명용 축약입니다.","앱 SSE 경로 예: GET /pkm-articles/v1/runs/{id}/events. BFF가 소유권을 확인하고 upstream을 한 번 구독합니다.","input·서버 관리 session_id·Idempotency-Key를 구성합니다. 상태·events·stop도 같은 프로필로 보냅니다.","API_SERVER_KEY는 BFF에만 둡니다. 브라우저 세션 인증과 Hermes 프로필 키 인증은 별개입니다."]},
+    {"dot":"amber","title":"프로필 설정을 실제 파일 읽기로 연결","items":["실효 상대경로 기준: 세션의 현재 cwd → 등록된 override → 프로필 terminal.cwd.","위 Wiki 루트가 유효한 경우 index.md는 /home/ainsdev/wiki/pkm-articles/index.md로 해석됩니다.","읽기 전용 OS 권한/mount·도구·자료 경계가 검증된 경우만 읽습니다. cwd 자체는 sandbox가 아닙니다.","llm-wiki는 작업 절차 스킬입니다. HTTP 경로만으로 스킬 실행·전체 Wiki 읽기를 보장하지 않습니다."]},
+    {"dot":"rose","title":"성공 경로 외의 처리 조건","items":["권한·프로필 인증 거부 시 실행하지 않습니다. 읽기 거부·오류는 실패/미완료로 돌려주며 다른 자료로 우회하지 않습니다.","병행 구간은 이해를 위한 예시 순서입니다. Agent 시작과 SSE 구독의 선후는 고정되지 않으며 SSE가 실행 조건은 아닙니다.","SSE 단절이면 기존 R의 상태를 조회합니다. 새 run 자동 생성·전체 이벤트 replay는 가정하지 않습니다.","중지: POST R/stop → stopping은 접수 → cancelled 등 실제 종료 확인. failed/interrupted/partial은 완료가 아닙니다."]},
+    {"dot":"slate","title":"배포 관측이 아닌 문서 기반 설계","items":["BFF·프로필·격리는 구성 제안입니다. multiplex 서비스와 프로필별 키, 자료·모델 실행 승인·검증이 선행해야 합니다.","답변 반환은 Wiki 게시가 아닙니다. 기존 수집·자동 컴파일 Cron, 원본, 게시 정책과 분리합니다.","근거: api-contract.md·workflows.md·workspace-and-gateway.md·security-and-operations.md 및 공식 Hermes API/프로필 문서.","실제 설정·Gateway·API·모델 호출은 하지 않았습니다. 한국어 본문과 일부 한국어 Viewer UI를 제공하며 나머지 조작은 영문입니다."]}
+  ]
+}

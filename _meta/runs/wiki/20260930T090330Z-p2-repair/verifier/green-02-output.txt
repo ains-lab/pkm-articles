@@ -1,0 +1,13 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... ok
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... ok
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... ok
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ok
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.202s
+
+OK

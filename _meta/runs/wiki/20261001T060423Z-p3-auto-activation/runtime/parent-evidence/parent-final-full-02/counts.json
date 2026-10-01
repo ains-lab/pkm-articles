@@ -1,0 +1,41 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:50:47.182058+00:00",
+  "label": "parent-final-full-02",
+  "modules": [
+    "test_common",
+    "test_content",
+    "test_daily",
+    "test_publication",
+    "test_integration",
+    "test_auto_publication",
+    "test_content_contract",
+    "test_scheduled_safety"
+  ],
+  "tests_run": 93,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "4b83f486b2cbc8d173fe1d969a84031f855035480c7ddc3ddf01057715b637e0",
+    "content.py": "b0ce8b7fd864229ca0b8ad08c0e6a1e7824f24be85448cc980af114bde75a11b",
+    "publication.py": "cf02d363767f5de971edf219e1b7283ba61a06e30a4ec7e16a78ebc5776e703e",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_common.py": "089d86ca67b8c1280a499bde9b05ec3760ac542d5c327567a5ca48f9eb9c7218",
+    "test_content.py": "58f702d5c5b9886a6ea2caa5ace575ee7df17b7cc428368c575dd1fedbd13078",
+    "test_daily.py": "a3fa51bbd4106ec5b9d4a4edd37e079862422c93956e7ab5cd8f5900c689babb",
+    "test_publication.py": "70c1b15600bbfeeb2a6f80f44ff7f856c07800a7465f40dc79adbbab93d87fdf",
+    "test_integration.py": "4dea3dd224be26b704068ef395d92e62039de4bdd378db5bf79c9e990d95d137",
+    "test_auto_publication.py": "508685d002c72bb429cca42c0268c1d9cc35a8acd672193c9f1fe4278c80e7fa",
+    "test_content_contract.py": "e4f85c5fdc8d0ab6d6e52fcf1c5a505b9e0e947150d861730d83d106dbdfcee4",
+    "test_scheduled_safety.py": "9eaca36b8be05344e51bee508c7801dafc36a644771f458fa59eedcd54f26fae"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

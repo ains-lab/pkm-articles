@@ -1,0 +1,9 @@
+test_daily_commits_auto_verified_then_noops_without_second_model (test_auto_publication.AutoDailyTests.test_daily_commits_auto_verified_then_noops_without_second_model) ... ok
+test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) ... ok
+test_legacy_committed_noop_preserves_every_byte (test_auto_publication.AutoPublicationTests.test_legacy_committed_noop_preserves_every_byte) ... ok
+test_new_html_and_pdf_publication_is_compiled_auto_verified (test_auto_publication.AutoPublicationTests.test_new_html_and_pdf_publication_is_compiled_auto_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.345s
+
+OK

@@ -1,0 +1,19 @@
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ERROR
+
+======================================================================
+ERROR: test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 164, in test_scheduled_gate_checks_live_projection_and_freeze
+    ctx=self.m.preflight(**kw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: preflight() got an unexpected keyword argument 'scheduler_observer'
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.159s
+
+FAILED (errors=1)

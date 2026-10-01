@@ -1,0 +1,10 @@
+{
+  "schema": "pkm-feedback-state/v1",
+  "policy_revision": "pkm-html-pdf-text-knowledge/v3",
+  "contract_revision": "pkm-contracts/v3",
+  "initialized_at": "2026-09-29T06:00:18.696411+00:00",
+  "enabled": false,
+  "events": [],
+  "applied_receipts": [],
+  "last_run": null
+}

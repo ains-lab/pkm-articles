@@ -1,0 +1,359 @@
+{
+  "schema": "pkm-p2-quick-test/v1",
+  "started_at": "2026-09-30T08:50:29.101548+00:00",
+  "model_calls": 0,
+  "paper_text_sent": false,
+  "fixtures_are_synthetic": true,
+  "checks": [
+    {
+      "name": "schema:_meta/automation.json",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "schema:_meta/state/compilation.json",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "schema:_meta/state/feedback.json",
+      "passed": false,
+      "details": [
+        "{'schema': 'pkm-feedback-state/v1', 'policy_revision': 'pkm-html-knowledge/v1', 'contract_revision': 'pkm-contracts/v1', 'initialized_at': '2026-09-29T06:00:18.696411+00:00', 'enabled': False, 'events"
+      ]
+    },
+    {
+      "name": "schema:_meta/state/research-review.json",
+      "passed": false,
+      "details": [
+        "{'schema': 'pkm-research-review-state/v1', 'policy_revision': 'pkm-html-knowledge/v1', 'contract_revision': 'pkm-contracts/v1', 'initialized_at': '2026-09-29T06:00:18.696411+00:00', 'enabled': False, "
+      ]
+    },
+    {
+      "name": "P2_manual_authorization_flag",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "automatic_execution_disabled",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_source_packages_integrity",
+      "passed": false,
+      "details": [
+        {
+          "version_id": "2509.09215v3",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2608.29596v2",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.30217v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.30266v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.30614v1",
+          "format": "pdf",
+          "passed": false
+        },
+        {
+          "version_id": "2609.30824v1",
+          "format": "pdf",
+          "passed": false
+        },
+        {
+          "version_id": "2609.30830v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.30940v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.31039v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.31318v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.31358v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.31562v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.35576v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.35596v1",
+          "format": "html",
+          "passed": true
+        },
+        {
+          "version_id": "2609.35760v1",
+          "format": "html",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "ledger_source:2609.30217v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.30266v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.30614v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.30824v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.30830v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.30940v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.31039v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.31318v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.31358v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "ledger_source:2609.31562v1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "index_page_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "policy_revision_consistency",
+      "passed": false,
+      "details": {
+        "automation": "pkm-html-knowledge/v2",
+        "agents_has_v1": true,
+        "schema_has_v1": true
+      }
+    },
+    {
+      "name": "prompt_revision:daily_compile",
+      "passed": false,
+      "details": {
+        "configured": "wiki-compile/v1",
+        "actual_heading": "# Daily Wiki Compiler — wiki-compile/v2"
+      }
+    },
+    {
+      "name": "prompt_revision:research_review",
+      "passed": false,
+      "details": {
+        "configured": "research-review/v1",
+        "actual_heading": "# Biweekly Research Review — research-review/v2"
+      }
+    },
+    {
+      "name": "reject_incomplete_response_and_partial_paper",
+      "passed": false,
+      "details": {
+        "exit_code": 0,
+        "validator_passed": true,
+        "synthetic_response_status": "incomplete",
+        "synthetic_main_text_complete": false
+      }
+    },
+    {
+      "name": "publisher_handles_collector_directory_lock",
+      "passed": false,
+      "details": {
+        "exit_code": 1,
+        "error": [
+          "IsADirectoryError: [Errno 21] Is a directory: '/tmp/p2-isolated-1uk06wx9/_meta/locks/collection.lock'"
+        ]
+      }
+    },
+    {
+      "name": "publisher_no_partial_write_on_failure",
+      "passed": false,
+      "details": {
+        "exit_code": 1,
+        "error": [
+          "AssertionError"
+        ],
+        "page_exists": true,
+        "index_entry_present": false,
+        "item_status": "committed",
+        "receipt_exists": false,
+        "lock_left_as_file": true
+      }
+    },
+    {
+      "name": "publisher_state_satisfies_contract",
+      "passed": false,
+      "details": {
+        "errors": [
+          "{'schema': 'pkm-compilation-state/v1', 'policy_revision': 'pkm-html-knowledge/v2', 'contract_revision': 'pkm-contracts/v2', 'initialized_at': '2026-09-29T06:00:18.696411+00:00', 'enabled': False, 'safety_block': False, 'safety_block_reason': None, 'i"
+        ]
+      }
+    },
+    {
+      "name": "protected_files_unchanged",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "blockers": [
+    "AGENTS.md and SCHEMA.md retain v1 approval/budget rules while automation configuration is v2 no_cost_cap; accounting/hard_stop unverified",
+    "Configured/schema prompt revisions remain v1 while actual prompt headings are v2",
+    "Existing verifier accepts synthetic incomplete/partial response",
+    "Existing publisher is incompatible with directory lock and produces invalid partial publication in isolated fixture"
+  ],
+  "protected_hashes_before": {
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.html": "adceb314d0047c07d0f210178c3a713f27a79b774f9c3a8599863f6b191dafd1",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/source.json": "9f49b3b45e71906e6242496ee225acf3405ceb64bc775f58626740388f3e6667",
+    "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.html": "2e4824b97a8c90795836b1eb7f8c9e0061ad758acc056859b82c21affa4f6ed0",
+    "raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/source.json": "5dacc0f1885f7003fbceb672dc6b10b5ef469904b1846ac5ba18007d4ad22f94",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.html": "5df9e164ef63250a3e6b107334cbb8cb3611ee6273f482c97d0ecba1ca5e8dbe",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/source.json": "31f2ea83f3e2212038bb2b376e5b92fa095524ef1b83cdd248175d1e92fda8a0",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.html": "a968e7fc5ddd36a0efc7ba4cc14c3204ae75aa6efbff4623df55f07c88e4d6d6",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/source.json": "5b46e3ea7334210d5bbbfbeaa42d748b4b403360720bb1eb5dd48dac18ed1ec3",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+    "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.html": "5240772e45b1b0320bc58d2502d465bde67f2667eb42fa5c8214574578461dc3",
+    "raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/source.json": "edd6a2727123aac1b90e05e3c671c502ce75f1c102bb5ee83b1d2fb12f572d59",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+    "AGENTS.md": "a09f83832675cc62963d7f23e3cfe1f2cc63c08203204f0eedf7e323d4388c23",
+    "SCHEMA.md": "449a8f64a7107a8d71272b02af9fa95e8e0b646611076d15460a1b07f34c2285",
+    "index.md": "571d382f4ffa167e5e8ad91dedc51a330fd00b6709fd791ded586ea02122ebea",
+    "log.md": "2f5516834018c4bc8f272750c93b2ba8225784627ba232ac76d556394c4f3ed6",
+    "_meta/topics.json": "4abeded0e5cab949520014ba2d4f8e91689c25f505e1ddf234665bd816bbce20",
+    "_meta/state/4cff5b4f10ec.json": "5c6a0246f642344fc783d4d71baa9022f24ffda9ac1c88ad24dc3eb6c5ee1c0e",
+    "_meta/state/compilation.json": "3e548d372ce3225f210a5ff68b16b222ea2b87c5a6469dcd62146e6506526f9f",
+    "_meta/automation.json": "f7577a69c2e84e7148eb1d094d9524266323752c537785e290a43c1640e57811",
+    "_meta/automation-contracts.schema.json": "ebeb950a2a67b7afef58bff77eabbc20c28ee013833a5411179abcb7f588e6e2"
+  },
+  "ledger_status_counts": {
+    "blocked_approval": 6,
+    "blocked_policy": 2,
+    "retryable_failed": 2
+  },
+  "pilot_items": [
+    {
+      "version_id": "2609.30830v1",
+      "status": "retryable_failed",
+      "reason": "upstream_websocket_liveness_timeout",
+      "failure_count": 1
+    },
+    {
+      "version_id": "2609.31358v1",
+      "status": "retryable_failed",
+      "reason": "upstream_websocket_liveness_timeout",
+      "failure_count": 1
+    }
+  ],
+  "source_counts": {
+    "html": 13,
+    "pdf": 2
+  },
+  "source_total": 15,
+  "knowledge_pages": 0,
+  "unledgered_sources": [
+    "2509.09215v3",
+    "2608.29596v2",
+    "2609.35576v1",
+    "2609.35596v1",
+    "2609.35760v1"
+  ],
+  "prior_nonstream_artifacts": [
+    "attempt1-record.json"
+  ],
+  "prior_nonstream_outcome": "unknown: attempt start exists, no result; server cancellation and failure cause not observed",
+  "scripts_tested": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py": "504c088f07c346b39f6b6ada944f9ef5e1cbe08d330f50a0da61976534119507",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "c54e8876f50afbf6dbfe0af86c1911613bbc9af3c68b18661dc22cdade94565e"
+  },
+  "publisher_field_errors": {
+    "status": [
+      "'committed' is not one of ['queued', 'reading', 'partial', 'ready_to_publish', 'published_draft', 'blocked_policy', 'blocked_approval', 'blocked_conflict', 'retryable_failed']"
+    ],
+    "work_key": [
+      "'20260929T083140Z-p2-resume-2609.31358v1' is not valid under any of the given schemas"
+    ],
+    "output_refs": [
+      "'entities/arxiv-2609.31358v1.md' is not of type 'object'"
+    ]
+  },
+  "ended_at": "2026-09-30T08:50:29.264217+00:00",
+  "elapsed_seconds": 0.163,
+  "result": "blocked_policy_and_publisher_regressions",
+  "summary": {
+    "checks": 26,
+    "passed": 16,
+    "failed": 10
+  }
+}

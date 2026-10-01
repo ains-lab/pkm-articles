@@ -1,0 +1,16 @@
+{
+  "tests_run": 35,
+  "failures": 2,
+  "errors": 25,
+  "successful": false,
+  "failure_causes": [
+    "AssertionError: \"lock|owner\" does not match \"schema compilation: None is not of type 'number'\"",
+    "AssertionError: \"state\" does not match \"schema compilation: None is not of type 'number'\"",
+    "ValueError: schema compilation: None is not of type 'number'"
+  ],
+  "source_hashes": {
+    "test_publish_one.py": "fea20607e6bed07ddf687ff12fef1867aa38054874f3c14f38f30f693b4b5e85",
+    "publish-one.py": "b3b7f246b77f417d8c8b7ab6c26dd6341a0572bc46f7807c876ab46f04521df1",
+    "verify-one.py": "7199269a21837316dc0f1fca4125cdfb9a783e5133cafc671f80eec9b7b81626"
+  }
+}

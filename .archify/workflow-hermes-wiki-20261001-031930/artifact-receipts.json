@@ -1,0 +1,266 @@
+[
+  {
+    "name": "01-system",
+    "type": "architecture",
+    "nodes": 10,
+    "edges": 10,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.finalize-summary.json",
+    "specification_sha256": "d64e909f9c43fae61b24592835edd26b8c51ebcc1ca35a96ec0f223077a3b466",
+    "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "02-workspace",
+    "type": "architecture",
+    "nodes": 9,
+    "edges": 9,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.finalize-summary.json",
+    "specification_sha256": "5294e807e445740ff6d2d2c461e59d31463c27468f3f77692b4e9fd70305c737",
+    "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "03-read",
+    "type": "workflow",
+    "nodes": 12,
+    "edges": 12,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.finalize-summary.json",
+    "specification_sha256": "f8712dada71db7066ec8470b0294f52561a25ee6aea8e7020948cf765e353ea4",
+    "artifact_sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "04-query",
+    "type": "workflow",
+    "nodes": 19,
+    "edges": 23,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.finalize-summary.json",
+    "specification_sha256": "5bf1868629ac5265b3385444aab93736732768e1696bae05b95a46473b83acdc",
+    "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "05-collection",
+    "type": "workflow",
+    "nodes": 19,
+    "edges": 19,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.finalize-summary.json",
+    "specification_sha256": "9187dd5acd14dc26b87d625f451e22574e234c6e868dbefdfd053fa144e7981d",
+    "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "06-publication",
+    "type": "workflow",
+    "nodes": 24,
+    "edges": 24,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.finalize-summary.json",
+    "specification_sha256": "3f1748060ccd1e67d3e90e75b2ce87de27b276d347858ee29454e587fa7391a0",
+    "artifact_sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "07-data-ui",
+    "type": "architecture",
+    "nodes": 9,
+    "edges": 8,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.finalize-summary.json",
+    "specification_sha256": "2129453a8e2af613b03797d8b1e30cd27c8791309b814c41c3f90a4f45e0d012",
+    "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  },
+  {
+    "name": "08-roadmap",
+    "type": "workflow",
+    "nodes": 12,
+    "edges": 11,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "pass"
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    },
+    "summary": ".archify/workflow-hermes-wiki-20261001-031930/08-roadmap/repair-5/diagram.finalize-summary.json",
+    "specification_sha256": "7c4efcfc32ef34e33462f0617a10e6a0d66b55a1adf8e5fe46d8d0134cbd1485",
+    "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+    "update": {
+      "status": "current",
+      "installedVersion": "3.0.1",
+      "availableVersion": "3.0.1",
+      "releaseNotes": null,
+      "checkedAt": "2026-10-01T03:23:41.789Z",
+      "source": "cache",
+      "noticeRequired": false,
+      "noticeText": null
+    }
+  }
+]

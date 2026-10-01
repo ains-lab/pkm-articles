@@ -1,0 +1,145 @@
+{
+  "activation_authorized": false,
+  "activation_blockers": [
+    "P3 daily execution and edit-freeze/publication scope not approved",
+    "P3 end-to-end daily path not verified; current compiler is P2-only",
+    "Cron registration and activation not approved",
+    "research anchor and first fire not approved"
+  ],
+  "approval": {
+    "actor": "user",
+    "configuration_quote": "제안값 확정",
+    "id": "p1-proposed-values-2026-09-29",
+    "implementation_quote": "P1 진행해주세요",
+    "plan_path": ".omh/plans/2026-09-29T052136299821Z-pkm-research-automation-ralplan-2026-09-29-home-ainsdev-wiki-pkm-870b54.md",
+    "plan_sha256": "9af318b55a854aa307d932e7ac9f77d00d9a270542ebf4ae0728b1091cc46681",
+    "recorded_at": "2026-09-29T06:00:18.696411+00:00",
+    "scope": "P1 policy/contracts only; model/transfer/budget values approved; P2-P6 execution and Cron registration/activation not approved"
+  },
+  "approval_amendment_ref": "_meta/runs/wiki/20260930T090330Z-p2-repair/approval.json",
+  "budget": {
+    "accounting_required_for_execution": false,
+    "accounting_verified": false,
+    "cost_policy": "no_cost_cap",
+    "currency": "USD",
+    "daily_compile_per_kst_day": null,
+    "daily_compile_per_run": null,
+    "hard_stop_required_for_execution": false,
+    "hard_stop_verified": false,
+    "include_retries_and_agent_overhead": true,
+    "pilot_total": null,
+    "research_review_per_run": null,
+    "unknown_cost_action": "record_unknown_continue",
+    "verification_receipt": null
+  },
+  "collector": {
+    "cron_id": "4cff5b4f10ec",
+    "mutations_allowed": false,
+    "state_path": "_meta/state/4cff5b4f10ec.json",
+    "topics_path": "_meta/topics.json"
+  },
+  "contract_revision": "pkm-contracts/v2",
+  "enabled": false,
+  "jobs": {
+    "daily_compile": {
+      "cron_id": null,
+      "deliver": "local",
+      "display_timezone": "Asia/Seoul",
+      "enabled": false,
+      "failure_deliver": "local",
+      "name": "PKM Daily Wiki Compiler",
+      "prompt_path": "_meta/prompts/wiki-compile.md",
+      "prompt_revision": "wiki-compile/v2",
+      "registration_readback": null,
+      "registration_status": "not_registered",
+      "schedule_intent": "0 17 * * *",
+      "scheduler_timezone_assumption": "UTC",
+      "skills": [
+        "llm-wiki"
+      ]
+    },
+    "research_review": {
+      "cron_id": null,
+      "deliver": "local",
+      "display_timezone": "Asia/Seoul",
+      "enabled": false,
+      "failure_deliver": "local",
+      "name": "PKM Biweekly Research Review",
+      "prompt_path": "_meta/prompts/research-review.md",
+      "prompt_revision": "research-review/v2",
+      "registration_readback": null,
+      "registration_status": "not_registered",
+      "schedule_intent": "every 14d",
+      "scheduler_timezone_assumption": "UTC",
+      "skills": [
+        "llm-wiki",
+        "brainstorming-research-ideas"
+      ]
+    }
+  },
+  "limits": {
+    "attempts_per_item_per_run_including_initial": 2,
+    "consecutive_business_failures_before_safety_block": 3,
+    "daily_papers_per_run": 5,
+    "existing_page_changes_requiring_approval": 10,
+    "ideas_per_window_max": 3,
+    "pilot_papers": 2,
+    "research_windows_per_run": 1,
+    "soft_run_minutes": 45
+  },
+  "model": {
+    "fallback_allowed": false,
+    "model": "gpt-6-astra",
+    "provider": "codex-lb",
+    "reasoning_effort": "xhigh"
+  },
+  "paths": {
+    "compilation": "_meta/state/compilation.json",
+    "feedback": "_meta/state/feedback.json",
+    "research_review": "_meta/state/research-review.json",
+    "run_root": "_meta/runs/wiki",
+    "schemas": "_meta/automation-contracts.schema.json",
+    "shared_lock": "_meta/locks/collection.lock",
+    "staging_root": "_meta/staging/wiki",
+    "state_contracts": "_meta/STATE-CONTRACTS.md"
+  },
+  "phase_authorizations": {
+    "P1": true,
+    "P2": true,
+    "P3": false,
+    "P4": false,
+    "P5": false,
+    "P6": false
+  },
+  "pilot_candidates": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "policy_revision": "pkm-html-knowledge/v2",
+  "preflight_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/preflight.json",
+  "publication": {
+    "busy_action": "skipped_busy",
+    "collector_priority_timezone": "Asia/Seoul",
+    "journal_required": true,
+    "log_append_only": true,
+    "no_publish_end": "01:35",
+    "no_publish_start": "23:55",
+    "reviewed_overwrite_allowed": false,
+    "steal_stale_lock": false,
+    "user_edit_freeze_required": true
+  },
+  "registration_authorized": false,
+  "schema": "pkm-automation/v1",
+  "transfer": {
+    "automatic_chat_capture": false,
+    "existing_wiki": true,
+    "explicit_non_sensitive_research_feedback": true,
+    "external_assets": false,
+    "external_novelty_search": false,
+    "images": false,
+    "local_html_text": true,
+    "pdf_content": false,
+    "secrets_or_sensitive_personal_data": false
+  },
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles"
+}

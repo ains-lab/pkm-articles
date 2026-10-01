@@ -1,0 +1,36 @@
+{
+  "schema": "pkm-protected-edit-retry/v1",
+  "status": "blocked_protected_edit_timeout",
+  "started_at": "2026-10-01T01:32:39.288759+00:00",
+  "user_request": "다시 진행해주세요",
+  "prior_journal": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/policy-promotion-journal.json",
+  "agents_before_sha256": "77db9007d92325e8ec03f9d06ea4807e0b4f3837abb04e39fe89b6ee8857ee7d",
+  "target_paths": [
+    "AGENTS.md",
+    "README.md",
+    "SCHEMA.md",
+    "_meta/AUTOMATION.md",
+    "_meta/COMPILATION.md",
+    "_meta/P3-PREPARATION.md",
+    "_meta/STATE-CONTRACTS.md",
+    "_meta/automation-contracts.schema.json",
+    "_meta/automation.json",
+    "_meta/prompts/research-review.md",
+    "_meta/prompts/wiki-compile.md",
+    "_meta/state/compilation.json",
+    "_meta/state/feedback.json",
+    "_meta/state/research-review.json"
+  ],
+  "scope_approval_sha256": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+  "observation": {
+    "status": "blocked_protected_edit_timeout",
+    "observed_at": "2026-10-01T01:35:05.024030+00:00",
+    "user_request": "다시 진행해주세요",
+    "agents_unchanged": true,
+    "other_policy_files_unchanged": true,
+    "pdf_reading": "not_started",
+    "model_call": "not_started",
+    "publication": "not_started",
+    "retry_or_bypass": "not_attempted"
+  }
+}

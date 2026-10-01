@@ -1,0 +1,86 @@
+test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) ... 
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_basis') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_journal') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_page') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_index') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_log') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_receipt') ... ERROR
+  test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_state') ... ERROR
+test_deadline_after_generation_blocks_publication_without_replaying_model (test_integration.IntegrationTests.test_deadline_after_generation_blocks_publication_without_replaying_model) ... FAIL
+test_two_formats_generate_review_publish_and_next_run_noop (test_integration.IntegrationTests.test_two_formats_generate_review_publish_and_next_run_noop) ... ok
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_basis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_journal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_page')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+ERROR: test_daily_recovery_after_each_publication_interruption_without_model (test_integration.IntegrationTests.test_daily_recovery_after_each_publication_interruption_without_model) (stage='after_state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 86, in test_daily_recovery_after_each_publication_interruption_without_model
+    result=daily.recover_publication(**kw,version_id='2610.00001v1',attempt=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'daily' has no attribute 'recover_publication'
+
+======================================================================
+FAIL: test_deadline_after_generation_blocks_publication_without_replaying_model (test_integration.IntegrationTests.test_deadline_after_generation_blocks_publication_without_replaying_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_integration.py", line 98, in test_deadline_after_generation_blocks_publication_without_replaying_model
+    with self.assertRaises(TimeoutError):
+AssertionError: TimeoutError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 28.437s
+
+FAILED (failures=1, errors=7)

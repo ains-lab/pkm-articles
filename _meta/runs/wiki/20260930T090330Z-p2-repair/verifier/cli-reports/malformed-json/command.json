@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py",
+    "2609.00001v1",
+    "--root",
+    "/tmp/p2-verifier-evidence-b8j3znvo"
+  ],
+  "exit_code": 1,
+  "stdout": "{\n  \"vid\": \"2609.00001v1\",\n  \"passed\": false,\n  \"checks\": [\n    {\n      \"check\": \"result_object\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"completed\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"response_status_completed\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"no_error\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"no_incomplete_details\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"response_model_gpt-6-astra\",\n      \"ok\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"cost_nonblocking\",\n      \"ok\": true,\n      \"detail\": \"Observed or unknown cost does not gate verification\"\n    },\n    {\n      \"check\": \"single_json_object\",\n      \"ok\": false,\n      \"detail\": \"\"\n    }\n  ],\n  \"document\": null\n}\n",
+  "stderr": ""
+}

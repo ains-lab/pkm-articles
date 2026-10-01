@@ -1,0 +1,23 @@
+{
+  "schema": "pkm-phase-approval/v1",
+  "phase": "P2",
+  "recorded_at": "2026-09-29T06:22:10.488407+00:00",
+  "user_quote": "P2 실행 승인 — 사전 검증 통과 시 두 편 처리",
+  "origin": "clarify response in current session after resume request",
+  "candidate_versions": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "pilot_total_usd": 5,
+  "conditions": [
+    "Verify route, accounting and hard stop before body reading or inference",
+    "Include retries and agent overhead; unknown cost is not zero",
+    "Only local HTML text, existing Wiki and explicitly saved non-sensitive feedback",
+    "Do not register or enable Cron, install packages, change global configuration, or process PDF/images/external assets"
+  ],
+  "publication_edit_freeze": "not_yet_agreed; required if gates pass and before shared publication",
+  "scope": "Conditional P2 only; P3-P6 and activation remain unauthorized"
+}

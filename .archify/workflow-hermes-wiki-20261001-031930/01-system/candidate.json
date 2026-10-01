@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "01 · 전체 구조 — 탐색·질의·게시의 분리",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html"
+  },
+  "components": [
+    {"id":"browser","type":"external","label":"인증 사용자","sublabel":"브라우저 · 키 보관 금지","pos":[40,40],"size":[220,80]},
+    {"id":"ingress","type":"security","label":"TLS · Reverse proxy","sublabel":"제안 · 외부 진입점","pos":[400,40],"size":[220,80]},
+    {"id":"bff","type":"backend","label":"Frontend · BFF","sublabel":"제안 · 인증 / owner / CSRF","pos":[760,40],"size":[220,80]},
+    {"id":"facade","type":"backend","label":"읽기 facade","sublabel":"제안 · pageId / 최소 DTO","pos":[760,270],"size":[220,80]},
+    {"id":"gateway","type":"backend","label":"Hermes API Server","sublabel":"조사 소스: aiohttp · live 미확인","pos":[400,270],"size":[220,80]},
+    {"id":"agent","type":"security","label":"격리된 AIAgent","sublabel":"제안 · 도구 / 자료 allowlist","pos":[400,500],"size":[220,80]},
+    {"id":"wiki","type":"database","label":"파일 기반 Wiki","sublabel":"기존 · 원본 / 지식 / 상태","pos":[760,500],"size":[220,80]},
+    {"id":"collector","type":"backend","label":"기존 수집 Cron","sublabel":"collect-only · 컴파일 금지","pos":[1120,500],"size":[220,80]},
+    {"id":"publisher","type":"security","label":"별도 승인 게시자","sublabel":"단계 승인 + lock / WAL / hash","pos":[760,740],"size":[220,80]},
+    {"id":"model","type":"cloud","label":"허용 모델 경로","sublabel":"실제 경로·전송 범위 별도 검증","pos":[400,740],"size":[220,80]}
+  ],
+  "connections": [
+    {"id":"https","from":"browser","to":"ingress","label":"HTTPS"},
+    {"id":"session","from":"ingress","to":"bff","label":"사용자 세션","variant":"security"},
+    {"id":"read","from":"bff","to":"facade","label":"정형 읽기","variant":"emphasis"},
+    {"id":"snapshot","from":"facade","to":"wiki","label":"receipt·hash 검증","variant":"emphasis"},
+    {"id":"approved-query","from":"bff","to":"gateway","label":"승인 질의 · 서버 키","variant":"security"},
+    {"id":"execution","from":"gateway","to":"agent","label":"허용 실행만","variant":"security"},
+    {"id":"agent-read","from":"agent","to":"wiki","label":"허용 읽기"},
+    {"id":"model-transfer","from":"agent","to":"model","label":"승인 범위만 전송","variant":"security"},
+    {"id":"collect","from":"collector","to":"wiki","label":"원본 보관","variant":"dashed"},
+    {"id":"publish","from":"publisher","to":"wiki","label":"조건부 게시","variant":"security"}
+  ],
+  "cards": [
+    {"dot":"cyan","title":"탐색부터 구현","items":["목록·노트 읽기는 모델 호출 없이 수행한다.","TLS·BFF·facade·격리 환경은 구현 제안이다.","근거: architecture.md:12–60,62–93"]},
+    {"dot":"rose","title":"권한은 자동 승계되지 않음","items":["cwd·프로필·AGENTS는 OS 접근 격리가 아니다.","자유 질의 완료 ≠ Wiki 컴파일·게시 승인.","원문: security-and-operations.md:23–59"]},
+    {"dot":"amber","title":"문서 snapshot 기반","items":["Gateway 실행·배포·모델 연동을 시험한 그림이 아니다.","수집→컴파일 자동 연결이나 새 DB를 추가하지 않는다.","내용 한국어 · Archify Viewer UI는 영문 fallback."]}
+  ]
+}

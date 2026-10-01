@@ -1,0 +1,52 @@
+{
+  "source": "arxiv",
+  "base_id": "2609.30824",
+  "version_id": "2609.30824v1",
+  "title": "Crypto-bound identity-verified capability tokens for coordinating distributed AI agents: A proposal",
+  "authors": [
+    "Srikumar Subramanian",
+    "Shubhashis Sengupta"
+  ],
+  "abstract": "The prospect of fully autonomous transactional agents did not appear on the horizon until the advent of high capability language models. With such models, the operational benefits of adaptive task orchestration and independent (but constrained) decision making are tantalizing for enterprises and individuals alike. However, each such agent carries with it a serious attack surface in the form of prompt injection which can compromise any soft \"guard rails\" that may have been placed in context. The consequences of these attacks include credential ex-filtration which, if left unmitigated, renders the whole category of such agents unusable due to breach of trust. Furthermore, expecting a growth of autonomous agents, a security framework for them would require a form of decentralization to scale. Drawing on the proposed OAuth Agent Authorization Profile and the W3C DID and VC standards, we propose a framework based on the principles of capability based security with decentralized agent identity whereby agents access services based on tokens that are cryptographically bound to the agent's and issuer's identities and specify their scope. Services can validate that the delegation chain only involves scope attenuation before acting on any given token. We show that such a layer that lives outside the language model's context window in a secure module can enable agents to act within enforceable security boundaries.",
+  "published": "2026-09-25T05:07:28Z",
+  "updated": "2026-09-25T05:07:28Z",
+  "categories": [
+    "cs.CR"
+  ],
+  "abs_url": "https://arxiv.org/abs/2609.30824v1",
+  "bibliography_provenance": {
+    "source_path": "_meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/search-page-000.dom-text.xml",
+    "source_sha256": "b5aa2523a7b1c0915757fd2b31daab090e1e9367993d76897c714e186f934f32",
+    "captured_at": "2026-09-28T15:04:29.395Z",
+    "capture_method": "previous_official_api_atom_DOM_text_capture",
+    "reused_existing_versioned_record": true
+  },
+  "schema": "arxiv-pdf-source/v1",
+  "source_format": "pdf",
+  "owning_cron_id": "4cff5b4f10ec",
+  "source_url": "https://arxiv.org/pdf/2609.30824v1",
+  "html_url": "https://arxiv.org/html/2609.30824v1",
+  "collected_at": "2026-09-29T04:27:23.073112+00:00",
+  "pdf_file": "source.pdf",
+  "pdf_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+  "pdf_bytes": 693979,
+  "http_status": 200,
+  "final_url": "https://arxiv.org/pdf/2609.30824v1",
+  "content_type": "application/pdf",
+  "content_length": 693979,
+  "capture_method": "http_response_body_no_rewrite",
+  "content_scope": "pdf_fulltext_as_served",
+  "pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "collection_run_id": "20260929T042631Z-pdf-capture-808d882a",
+  "preprocessing": false,
+  "wiki_compiled": false,
+  "offline_assets_bundled": false,
+  "html_unavailable": {
+    "http_status": 404,
+    "checked_at": "2026-09-28T10:49:21.632536+00:00",
+    "evidence_path": "_meta/migrations/20260928T104108Z-html-only/html-unavailable-evidence.json",
+    "evidence_sha256": "81c523a5d8e247833d49161244f5eb11298f32106d715087ad78748be2d69b63",
+    "reused_existing_evidence": true
+  },
+  "download_evidence_path": "_meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/downloads.json"
+}

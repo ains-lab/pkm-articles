@@ -1,0 +1,29 @@
+{
+  "synthetic_only": true,
+  "tests": [
+    {
+      "case": "happy-noop",
+      "passed": true
+    },
+    {
+      "case": "interrupt-recover",
+      "passed": true
+    },
+    {
+      "case": "edited-note",
+      "passed": true
+    },
+    {
+      "case": "unrelated-index-log",
+      "passed": true
+    },
+    {
+      "case": "changed-input",
+      "passed": true
+    },
+    {
+      "case": "busy-lock",
+      "passed": true
+    }
+  ]
+}

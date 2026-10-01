@@ -1,0 +1,17 @@
+test_pdf_subset_cannot_claim_main_text_complete (test_content.ContentTests.test_pdf_subset_cannot_claim_main_text_complete) ... FAIL
+
+======================================================================
+FAIL: test_pdf_subset_cannot_claim_main_text_complete (test_content.ContentTests.test_pdf_subset_cannot_claim_main_text_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 261, in test_pdf_subset_cannot_claim_main_text_complete
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.243s
+
+FAILED (failures=1)

@@ -1,0 +1,669 @@
+{
+  "schema": "pkm-integration-structural-check/v1",
+  "result_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+  "result_sha256": "7645d7d920950db54879e5207b51ecf1f0d2f1dc6b2ccbcbcff2f3d27a62c58b",
+  "passed": true,
+  "page_count": 4,
+  "claims_count": 36,
+  "evidence_checks": [
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C01",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS2.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "ff00bf3b9c66a4c03f04b77716517eff8c1fe8ae26ec3f4d9576bb2ce983aa62"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C01",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "0666c2b7e2df1d62bcdf81d3639c1fa051c14732423adc3983fa5b3bb2023d9e"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS1.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "45d02601cd72cb3a167f07cbbd25491cd830a4c82309fd97746257e8c6eaeb90"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S1.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "d73a6f4ac9d0de6d27b26c6655401322531c3ad5fb3e5667e276c7a6b2a62e20"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C03",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS2.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "606b062d11fcf1f73661d360e307aade5300b0f89edcf695aa3fe5a1f88ad944"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C03",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS2.p6",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "5a9686d6202ab7d857e09f56bd8f3ed5f226aae44fd0e90c3050e7274c711f2a"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS1.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "1b2c2c654822e387e8a381cc7f38928e417ebe6d4b919dfbe5aa7725fc696760"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S5.T2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "0b744ea364165b53b4534554639b42d800968c0994571710453a830036d66492"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C05",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "37ac9e1515bb84f3211abfdeae8e44d322ab5c8e46f1f297265715ab1cc3a2b5"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C05",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "10c648d5098c23e9b34b3b2888c00f0ebd8729e280ed9fbe5cde60629d32732c"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S4.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8ed96c71465b76b9a93c477aedbcacd0aa864550d70621a1956068594a0406f7"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS2.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "800d7f5f66c7d8666b67bb4b6cc8589432fb1eaa1b7e8bfff4fab5a53c24498c"
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "6d3e47496528e6e7cb5073a1308cd1d0f827a0c85676f1b8c079b3ebf1c467e8"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C01",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS3.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "e19e59a99a7ec0369f17a2c7335ab67acdc37896d2469b6c683f02d9e9aba969"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C01",
+      "version_id": "2609.31358v1",
+      "anchor": "S7.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "feffb2a79ee95e9f819e33a65db6630ffc754e71253f6252914750df9930d88e"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS3.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "3c387de22584ab99374e39ff6de5aade72d8c2c830991d63885cbb1238b0d6f1"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS3.p6",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "32d999233538ed54b1a3556373b0336313373291e293db0690bdd3c5687be130"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C03",
+      "version_id": "2609.30830v1",
+      "anchor": "S5.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "b7828b709b54a078f6f230e7439ef732f0f503ea564a31f2b2e207ed15714a15"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C03",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS2.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "cf6b20a2fa631269d82ecaf682c606583d0e2b029a3a7c94aea4990b35790b58"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS5.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "d180fbb1011051b4b7e600d6870e4a4853ebd3cfeb0a8bd98e37315053f156af"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS5.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "f731fa88ae990ab2e8ddb6e2ea91fc23912eafcdc4d0c0460a310ae7ad23c1ab"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C05",
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8c1fcede013c538b5d1a7ccf735e35c2ae2989685aaa11141db9671c7e07b10f"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S4.SS2.SSS0.Px1.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "1a377e4ea6e8e986d8301722901364175599d268b4c19acf82f59a06cb5b8b03"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S4.SS2.SSS0.Px1.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "2776702e81eb5f29a37b7973247a58be54905c46bd8ddf46c55e8c63257479e8"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS6.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p7",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "71fb332402d85b0c1019b04baec010716ffd9215bf5aa37eaf7c09c9cbaee75a"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C08",
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "c8a577c6b4cf53736f9e27404a16f271d70d557ebed69dd854684c4e1cbde981"
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "claim": "C08",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS6.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C01",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS1.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "6a96678579b8eb8696ced674b2e6ddcebc91235479d0d8ea496f84318a38a084"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C01",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "9c379e0f4d2ece714db1b2608d5cc381d003963921822d022af9da0e10628890"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS3.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "159660ae7c8d79a7a14a3520f727c1c55c3846cfbaff3bd128ef2dd9291b89d9"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS1.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "3383a2c34852ae58f759b75bd3a6bfe29b04ae7063153c44fc18c8dea15fc053"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C03",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS4.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "364799b8954eba199da8c2b32fb1d948839f2510b9d2291099d310062f329937"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS5.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "963bfef42db9d7b28c8e55977ba2d51ca2478789d474e4f575ef0e613eed762d"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS5.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "b74db21d745e3968d0635385b37fbbb9e342493d42b5a90796b27612dc2263a5"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C05",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS2.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8ade784c7dae2ee1bc8e282cb965f45934bd145bab868fd9e97f7fa92c5128a3"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C05",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "1b686819d5736701f32b4923c89c15464767d3271536d24c20ee823484b72965"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.SS4.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "b9964776d3cae25e57d80f1b7b7906eef2caf151339d04cfdb6a6c3afcaa7da4"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS3.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "4aee4b7e5794b71ce7435763acd678888f5fd46dd4ce37fdc3ea5543ad1b8c0c"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.SS5.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "a7cdb45149e33e19f979e3c151a4655f93fcbe4c07930890cce89a01930bd053"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS3.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "65de32098027515b830bed2d43075b902af1123b948c9e583960a8593b5e26bc"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS3.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "24cf22f2b2252f862996c2fefa9273ee32a432c2124c7020fc58bffd4d1a770b"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C08",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS4.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "4dd1bce07d5b0d785b01a694c081d88a74c294fb725a70430f76495fec6275d8"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C08",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.SS4.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "596ebf0ef58c8453f363bcf9573ef9a568e4ea2927fefa4bc0702cfe810f8d58"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C09",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS1.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "576dad4c09072be536647dc0697f2c4dda7fc43576616f4584c6340e9cf37168"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C10",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS5.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "93d0069d0e9d1ad4f7de4c193613b6e019d5315e7aa23b4bf9cf463ec06fd1d0"
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "claim": "C10",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.SS2.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "0eca344764bc33218fd05d8b2a912b1f37f09e9cc419069bbf8b42d72a68f6f8"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C01",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS1.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "63bcd98ff73c40432f4f81baf42832e8369f29aed702721d27f56a3c1ba66114"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C01",
+      "version_id": "2609.31358v1",
+      "anchor": "S7.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "ce75651da6972b3a84601528c4ae4f87024788c4e7f9a402ce044d5130ec73df"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S3.SS2.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "e2be767f89617caf89fb380542f4f90871344df2ae98ae075428ee12c46d855c"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S3.SS2.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "562aea7de76c703e0c91fe7a0cadf9f80d0e20e84a7e9fe5690e25afe58dc2cc"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C02",
+      "version_id": "2609.30830v1",
+      "anchor": "S3.SS1.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "f8e14dab8ec2b0b07255822bd4f60c89851ff19ad6ebdb8fcd91979bf59b378f"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C03",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p6",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "19959aca9f5f7b562e5ac40c9c95ef6ff03a03fb5e738a1321a14a47ff8ffb52"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C03",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p7",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "962f5926a9b8c819975208bc4315edfc4654b8b736528c383167be7530ca48ac"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS2.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "606b062d11fcf1f73661d360e307aade5300b0f89edcf695aa3fe5a1f88ad944"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C04",
+      "version_id": "2609.30830v1",
+      "anchor": "S1.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "d73a6f4ac9d0de6d27b26c6655401322531c3ad5fb3e5667e276c7a6b2a62e20"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C05",
+      "version_id": "2609.30830v1",
+      "anchor": "S5.T2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "384f778ac09c02ec7b96472193c5c886bf622df95628176fc4a939d0b231c1d7"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S4.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8ed96c71465b76b9a93c477aedbcacd0aa864550d70621a1956068594a0406f7"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S3.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8c4a72cdcc7610ffae382b979029531f376229d707a7715ec8f07ddf2ee6bdcb"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C06",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS2.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "a5c31f0b85a569a8ba0fcc1eb666d40cf1f398eadfd4e61774c30671ee5f2125"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C07",
+      "version_id": "2609.30830v1",
+      "anchor": "S4.SS3.p6",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "32d999233538ed54b1a3556373b0336313373291e293db0690bdd3c5687be130"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S4.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "6af1da63c75ad86fa983b1f78e1825e5b3e8e70a928abe2dcdf7d4f1f8cc9720"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C07",
+      "version_id": "2609.31358v1",
+      "anchor": "S7.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "feffb2a79ee95e9f819e33a65db6630ffc754e71253f6252914750df9930d88e"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C08",
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8c1fcede013c538b5d1a7ccf735e35c2ae2989685aaa11141db9671c7e07b10f"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C08",
+      "version_id": "2609.31358v1",
+      "anchor": "S6.SS6.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C09",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS1.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "6a96678579b8eb8696ced674b2e6ddcebc91235479d0d8ea496f84318a38a084"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C09",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.p1",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "83deb18a3b29be28ed659ee86668ae251ee3ce644ceb4f0e6b0ab5a0b0d1d8de"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C09",
+      "version_id": "2609.30830v1",
+      "anchor": "S6.SS5.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "93d0069d0e9d1ad4f7de4c193613b6e019d5315e7aa23b4bf9cf463ec06fd1d0"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C09",
+      "version_id": "2609.31358v1",
+      "anchor": "S5.SS2.p3",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "0eca344764bc33218fd05d8b2a912b1f37f09e9cc419069bbf8b42d72a68f6f8"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C10",
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p2",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "365f42584410bb191c656de24fb76fcd1010cf0809f1349a54461b60aa4fadd0"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C10",
+      "version_id": "2609.30830v1",
+      "anchor": "S5.p5",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "b7828b709b54a078f6f230e7439ef732f0f503ea564a31f2b2e207ed15714a15"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C10",
+      "version_id": "2609.30830v1",
+      "anchor": "S7.SS1.p4",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "8d98d01bd7c935b72f3398a8a01d3535ee037a08b98fccb3a8b590322230af21"
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "claim": "C11",
+      "version_id": "2609.31358v1",
+      "anchor": "S7.p6",
+      "quote_match": true,
+      "same_line_citation": true,
+      "quote_sha256": "b3cfa056e03219cce7a29bc162889791c120a3908588583e2b980dc32780b825"
+    }
+  ],
+  "issues": [],
+  "limitation": "literal/structural validation only; semantic review not yet completed"
+}

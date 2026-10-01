@@ -1,0 +1,286 @@
+{
+  "schema": "pkm-pdf-agent-evidence-review/v1",
+  "actor": "agent",
+  "reviewer": "Hermes parent agent; all-claim contextual excerpts and generated body reviewed, not independent whole-paper reread; no visual, experimental or human review",
+  "reviewed_at": "2026-10-01T02:15:08.380400+00:00",
+  "version_id": "2609.30614v1",
+  "passed": true,
+  "human_review_ref": null,
+  "result_sha256": "310d7d74b5c56d4d565c80f9c83bb1f4de84b57f203ce57ff76a17ed3ca61f3a",
+  "mechanical_report_sha256": "a541ab90ae034e2093caaee75e24ad13f54df76b73b5cc55c1a342008c4c29cb",
+  "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+  "approval_sha256": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+  "policy_sha256": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+  "prompt_sha256": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+  "requested_scope": "manual PDF embedded-text complete",
+  "read_scope": [
+    "page=1",
+    "page=2",
+    "page=3",
+    "page=4",
+    "page=5",
+    "page=6",
+    "page=7",
+    "page=8",
+    "page=9",
+    "page=10",
+    "page=11",
+    "page=12",
+    "page=13",
+    "page=14",
+    "page=15",
+    "page=16",
+    "page=17",
+    "page=18",
+    "page=19",
+    "page=20",
+    "page=21",
+    "page=22",
+    "page=23"
+  ],
+  "unread_scope": [
+    "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+    "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+    "물리적 page=5, page=7, page=9의 Figure 1–3은 추출된 캡션과 레이블 텍스트만 읽었으며, 도형·연결선·배치의 시각적 의미는 확인하지 않았다.",
+    "Proposition 1의 형식기호, 승인 큐 수식, 표의 다단 행·열 대응은 제공된 텍스트와 주변 설명으로 확인 가능한 범위만 사용했다. 원 PDF의 수식 조판과 표 구조를 시각적으로 대조하지 않았다.",
+    "스캔 또는 이미지 전용 내용은 처리하지 않았으며 OCR을 수행하지 않았다. 논문이 평가 대상으로 언급하는 첨부 스캔의 실제 내용도 제공되지 않았다."
+  ],
+  "evidence_scope": [
+    "page=2",
+    "page=4",
+    "page=5",
+    "page=6",
+    "page=7",
+    "page=8",
+    "page=9",
+    "page=11",
+    "page=12",
+    "page=13",
+    "page=14",
+    "page=15",
+    "page=16",
+    "page=17",
+    "page=18",
+    "page=20"
+  ],
+  "reviewed_claim_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C27"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "anchor": "page=2",
+      "quote_sha256": "a6bea316474609337136a27524790b7cd40aabced14fa15a48ac05b075791c8b",
+      "verdict": "supported",
+      "rationale": "원문은 subject와 author의 결합을 authorship hazard로 명명한다. 원문이 인정한 기존 자기수정/MLS 맥락을 배제한 보편적 최초성 주장이 아니다."
+    },
+    {
+      "id": "C02",
+      "anchor": "page=4",
+      "quote_sha256": "0d616b78fd6a91f9a43584ed238b0c9a52d984541fbef5e6ea21eb8b0d806715",
+      "verdict": "supported",
+      "rationale": "page 4의 trust table와 adversary 문단이 planner 통제 및 TCB/암호 비침해 가정을 명시한다."
+    },
+    {
+      "id": "C03",
+      "anchor": "page=5",
+      "quote_sha256": "408c4f9afe11b85ea51e110ed6c1c3e754564c3a6182c456ac6fb2b02c543504",
+      "verdict": "supported",
+      "rationale": "page 5는 인간 검토 뒤의 artifact가 게시 자격 증명이며 agent에게 API 경로와 artifact가 없음을 구성 조건으로 설명한다."
+    },
+    {
+      "id": "C04",
+      "anchor": "page=6",
+      "quote_sha256": "ecea3b5c73b35d063e4fc875af4bd44a209230bcdb2036058fa2e476f5a6d7c7",
+      "verdict": "supported",
+      "rationale": "page 6은 flagged/unflagged 양쪽 모두 인간 검토를 거친다고 한다. 최초 게시의 elevated 경로도 같은 페이지에서 확인했다."
+    },
+    {
+      "id": "C05",
+      "anchor": "page=7",
+      "quote_sha256": "89d8d116747327fd1a3ee086239e4e70b0a2b2087e90abf023d077426e19e782",
+      "verdict": "supported",
+      "rationale": "page 7의 발급 조건이 정확한 초안 해시·단회·단기·승인자 기록과 변경 후 실패를 명시한다. 공격 실험 결과로 승격하지 않는다."
+    },
+    {
+      "id": "C06",
+      "anchor": "page=7",
+      "quote_sha256": "b31136bd7e97cfccfab5292f83a58d09353ab430b3008dc6546652b90efac7df",
+      "verdict": "supported",
+      "rationale": "page 7의 registry 분류·모든 변경 elevated·관련 협정 재검토 요구와 page 17의 미구현 한계를 함께 유지한다."
+    },
+    {
+      "id": "C07",
+      "anchor": "page=8",
+      "quote_sha256": "96fe4055ff00f8beb9da973766d77a7f6529c25f97f8d2a7a1e6dcf1e4f02e35",
+      "verdict": "supported",
+      "rationale": "page 8은 visibility와 반환값 duty의 경계를 구분하고 둘이 보완적이라고 명시한다."
+    },
+    {
+      "id": "C08",
+      "anchor": "page=9",
+      "quote_sha256": "482f799c883a78f78303dcb5101b7dbc5ecfe44b50e2c5787c4d3e6881a43c7e",
+      "verdict": "supported",
+      "rationale": "page 9의 PDP 권한/부모에게서 배우는 정보 구분과 page 4의 Case C not run을 보존한다."
+    },
+    {
+      "id": "C09",
+      "anchor": "page=4",
+      "quote_sha256": "bc19a907101d779dadb778c541bf5ae3febc26c73a471bbdee5a832730f0de43",
+      "verdict": "supported",
+      "rationale": "page 4는 T5와 T6 모두 not addressed로 명시하며 접근 통제와 정보흐름을 구분한다."
+    },
+    {
+      "id": "C10",
+      "anchor": "page=11",
+      "quote_sha256": "29639fe60b2e01f8cac38da3f516bde2d864aba216cfa68aa6afcaa406807cff",
+      "verdict": "supported",
+      "rationale": "page 11의 추출된 표 레이블·인접 문장은 105-case risk set, no model calls, 각 노출·과잉 제거 수와 유한 표본 구간을 뒷받침한다. 표 레이아웃 시각 검증은 하지 않았다."
+    },
+    {
+      "id": "C11",
+      "anchor": "page=11",
+      "quote_sha256": "ed9a920f872dc11760546097b46c45424078813716c4478420e2da4e14db73f6",
+      "verdict": "supported",
+      "rationale": "page 11은 16개 스트레스 사례 중 literal-detectable 7/7 노출과 나머지 9개의 판정 불능을 분리한다."
+    },
+    {
+      "id": "C12",
+      "anchor": "page=12",
+      "quote_sha256": "93a8453a1842d7f82f326f3276091154c5194fe06909db84680b57864f171386",
+      "verdict": "supported",
+      "rationale": "page 12의 추출된 표와 주변 prose를 함께 대조했다. 1320회 불균형 반복, 220의 조건별 분모, context/출력 지표 구분을 보존한다."
+    },
+    {
+      "id": "C13",
+      "anchor": "page=13",
+      "quote_sha256": "40a2164277481143658a5c85b743016b51028da284ab824b4ae25cae64f252bc",
+      "verdict": "supported",
+      "rationale": "pages 12–13의 최소 프로파일 확장·실제 양쪽 협정·동일 gateway 재생 설명을 확인했다. 원문이 부정한 두 번째 독립 효과 측정으로 세지 않는다."
+    },
+    {
+      "id": "C14",
+      "anchor": "page=13",
+      "quote_sha256": "eaa0ba63cf2d5a07b231040db428348b99783cc644e6378811f6560bf9024935",
+      "verdict": "supported",
+      "rationale": "page 13은 finalized 3개와 당시 stored definition 일치, 오래된 offer 요청이 확대 정책을 받은 반례를 모두 명시한다."
+    },
+    {
+      "id": "C15",
+      "anchor": "page=17",
+      "quote_sha256": "63589f3f63d406cac038996c8cc74dacd12a48e31479fae029acbd37b83ba527",
+      "verdict": "supported",
+      "rationale": "page 17은 class-level normative duty와 concrete local metadata를 분리하고 registry 설계의 미구현을 명시한다."
+    },
+    {
+      "id": "C16",
+      "anchor": "page=13",
+      "quote_sha256": "9c4251ddf869853a9623571d3e1f4ad1a4b271b48cfe898f6bf134471fb9b85c",
+      "verdict": "supported",
+      "rationale": "page 13의 표·인접 prose는 ordinary-unflagged 집합별 80/49/0 reversal과 검토 라우팅을 구분한다. 초안 수와 판정 변경 수를 혼동하지 않는다."
+    },
+    {
+      "id": "C17",
+      "anchor": "page=14",
+      "quote_sha256": "02066dc3c64c4b2bfe4a7743309497d65f9a92d34d25ee9e541d371ad8727a80",
+      "verdict": "supported",
+      "rationale": "page 14는 41/50 초안이 49/80 reversal을 만들었다고 명시하고 V2의 construction-by-definition 한계를 설명한다."
+    },
+    {
+      "id": "C18",
+      "anchor": "page=14",
+      "quote_sha256": "242e43f92e1fedc84d6278aba24d51ae4784bb03979c51127f337ae8ef33f56e",
+      "verdict": "supported",
+      "rationale": "page 14는 인간 이관 140→270과 자동거부 50을 분리하며 36.8/71.1/13.2%를 보고한다. 원문의 과거 84.2% 정정도 이번 수치에 섞지 않았다."
+    },
+    {
+      "id": "C19",
+      "anchor": "page=16",
+      "quote_sha256": "1c958c79e1438765c818d498c4baf15245d8f575377fa1d8f9afcc68963542c4",
+      "verdict": "supported",
+      "rationale": "page 16은 classifier approver, flagged-as-caught, routing-not-review와 fatigue/social engineering 미측정을 명시한다."
+    },
+    {
+      "id": "C20",
+      "anchor": "page=15",
+      "quote_sha256": "bd311123beade3768fc7233ebb4887d016cbe927f5cff84f0e26375f12e71243",
+      "verdict": "supported",
+      "rationale": "page 15의 주변 문장은 20 reviews, V2 71.1% human-review share, 3/10/30명 격자의 결과를 명시한다. 실제 운영 상한으로 일반화하지 않는다."
+    },
+    {
+      "id": "C21",
+      "anchor": "page=15",
+      "quote_sha256": "60342aebd7c1042684092ff0f2f84165e1f6b7baff1023b3124af9044f7a0b37",
+      "verdict": "supported",
+      "rationale": "page 15의 텍스트 식과 주변 설명이 중앙 포화점 이동을 지지한다. 수식 조판 검증이 아닌 텍스트 판독이고 μ 실측을 주장하지 않는다."
+    },
+    {
+      "id": "C22",
+      "anchor": "page=16",
+      "quote_sha256": "14e5f21fd84d3e01db1ff75842076d3bef628b87cf71dc7da73b4f4c13f54b42",
+      "verdict": "supported",
+      "rationale": "page 16의 표 레이블·주변 prose에 200 calls, 실제 20개 plan, 20.4ms/1019ms 및 34/5025ms·101이 있다. 서로 다른 측정 구간을 구별한다."
+    },
+    {
+      "id": "C23",
+      "anchor": "page=16",
+      "quote_sha256": "a43a266cf1a4f32ecbeb570fb21ac761f4bc1e6e249c4d0e0e147b4869a3e96c",
+      "verdict": "supported",
+      "rationale": "page 16은 30초 창 440개 결정의 미거부와 agreement 객체의 철회 비반영을 명시한다. 관측 창 밖을 주장하지 않는다."
+    },
+    {
+      "id": "C24",
+      "anchor": "page=17",
+      "quote_sha256": "8c29fa13660734e45791d602aa884d00511a7ef63ff6626fe871790e34c7e34d",
+      "verdict": "supported",
+      "rationale": "page 17은 별도 900회 중 39누출, 24거절 누출, 15순응을 명시하고 이미 발생한 context exposure와 구별한다."
+    },
+    {
+      "id": "C25",
+      "anchor": "page=17",
+      "quote_sha256": "aae1b13603ffd63e04255d8d391ce9ebfd353df228785852d48e474d40e46493",
+      "verdict": "supported",
+      "rationale": "page 17은 suppression과 statistical anonymization이 다름을 직접 명시한다."
+    },
+    {
+      "id": "C26",
+      "anchor": "page=20",
+      "quote_sha256": "c0a3003e465453140e4c804616c3b1608b0a409946161dc90f3768e39f3949af",
+      "verdict": "supported",
+      "rationale": "page 20의 선정된 네 시스템·비포괄적 조사 및 서로 다른 읽기 깊이를 저자 보고로 한정한다. 외부 문헌을 독립 검증하지 않았다."
+    },
+    {
+      "id": "C27",
+      "anchor": "page=18",
+      "quote_sha256": "acf2c4cb61783840653b34ead043f4186e7c3dd01a25966f5a92a03610b1ae12",
+      "verdict": "supported",
+      "rationale": "page 18의 vocabulary-is-authorization-state 서술에 기반한 AI 점검 원칙이다. 검증된 일반 방어 정리나 실험 결과로 표시하지 않았다."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "pkm-p2-attempt/v2",
+  "started_at": "2026-09-29T09:12:45.928713+00:00",
+  "vid": "2609.30830v1",
+  "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+  "source_bytes": 267373,
+  "sent_text_chars": 264458,
+  "call_deadline_s": 2400,
+  "route_base_url": "http://10.10.1.244:2455/v1",
+  "api_mode": "codex_responses",
+  "model": "gpt-6-astra"
+}

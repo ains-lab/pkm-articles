@@ -1,0 +1,42 @@
+{
+  "schema": "pkm-pdf-adapter-handoff/v1",
+  "status": "prepared_not_executed",
+  "run_id": "20261001T001438Z-pdf-wiki",
+  "runtime_path": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime",
+  "adapter": "manual_pdf.py",
+  "adapter_sha256": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4",
+  "handoff": "HANDOFF.md",
+  "final_evidence": "evidence/green-final-guarded/counts.json",
+  "tests_run": 107,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "network_connection_attempts_observed": 0,
+  "real_pdf_read_attempts_observed": 0,
+  "synthetic_pdf_reads_observed": 173,
+  "legacy_helpers_unchanged": true,
+  "current_sources_match_final_snapshots": true,
+  "remaining_synthetic_directories": 0,
+  "persistent_pdf_fixtures": 0,
+  "ast_parse_passed": ["manual_pdf.py", "test_manual_pdf.py", "run_tests.py"],
+  "cli_help_exercised": true,
+  "real_model_calls": "not_performed",
+  "real_paper_reading": "not_performed",
+  "policy_state_wiki_raw_modification": "not_performed",
+  "installation": "not_performed",
+  "semantic_review": "not_performed",
+  "publication": "not_performed",
+  "activation": "not_performed",
+  "parent_remaining": [
+    "Promote live v3 policy/documents and author exact bound execution-approval.json",
+    "Set selected PDF state items queued only after parent approval gate",
+    "Run actual attempts explicitly; never more than two including unknown started",
+    "Run mechanical verification while selected items remain queued",
+    "Perform semantic review and transactional publication under edit freeze and collection.lock"
+  ],
+  "known_limitations": [
+    "Timeout is cooperative, not a hard process kill during an in-flight pypdf or HTTP operation",
+    "Mechanical claim/quote/page validation is not semantic review",
+    "Literal visual-unread disclosures and conservative Markdown link subset are required"
+  ]
+}

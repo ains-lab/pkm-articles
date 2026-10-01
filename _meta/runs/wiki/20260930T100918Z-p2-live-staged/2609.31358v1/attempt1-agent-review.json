@@ -1,0 +1,179 @@
+{
+  "schema": "pkm-agent-evidence-review/v1",
+  "actor": "agent",
+  "reviewer": "Hermes parent: local HTML main-text and per-claim semantic comparison; not human review",
+  "reviewed_at": "2026-09-30T10:21:26.308744+00:00",
+  "version_id": "2609.31358v1",
+  "result_sha256": "ea53032aa5c7425b6dcb121abf0262fa4d22aae92cfd8cabaca110d682520382",
+  "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+  "requested_scope": "P2 main-text complete",
+  "read_scope": [
+    "abstract1 — Abstract",
+    "S1 — 1 Introduction",
+    "S2 — 2 Background and Related Work",
+    "S3 — 3 Architecture and Implementation",
+    "S4 — 4 SDC-to-MCP Mapping",
+    "S4.SS1 — 4.1 Interpreting a Mapped Metric",
+    "S4.SS2 — 4.2 Worked Example: From Monitor State to Agent Response",
+    "S4.SS2.SSS0.Px1 — State quality is independent of mapping success.",
+    "S5 — 5 Evaluation Methods",
+    "S5.SS1 — 5.1 Simulated Devices and Task Context",
+    "S5.SS2 — 5.2 Software-SDC Protocol Paths",
+    "S5.SS3 — 5.3 No-execution, Lifecycle, and Provenance Checks",
+    "S5.SS4 — 5.4 Agent Evaluation and Representation Ablation",
+    "S5.SS5 — 5.5 Analysis and Reproducibility Discipline",
+    "S6 — 6 Results",
+    "S6.SS1 — 6.1 Resource Exposure and Protocol Interoperability",
+    "S6.SS2 — 6.2 Boundary, Lifecycle, and Authorization Outcomes",
+    "S6.SS3 — 6.3 Agent Interpretation and Retained Failures",
+    "S6.SS4 — 6.4 Representation Ablation",
+    "S6.SS5 — 6.5 Illustrative Archived Responses",
+    "S6.SS6 — 6.6 Audit and Consolidated Evidence",
+    "S7 — 7 Discussion and Limitations",
+    "S8 — 8 Conclusion",
+    "Sx1 — Software and Evaluation Materials",
+    "bib — References: 제공된 서지 목록 텍스트만 열람"
+  ],
+  "unread_scope": [
+    "그림·이미지는 시각적으로 검토하지 않았다. 특히 S3.F1의 아키텍처 이미지 픽셀은 보지 않았으며, 본문 설명과 캡션만 읽었다.",
+    "수식은 독립적으로 검증하지 않았다. S3.Ex1의 no-execution 조건과 S4.E1 및 주변 수학 표기의 정의·설명만 텍스트로 읽었다.",
+    "실험을 재현하지 않았다. 프로토콜 통신, 경계 검사, 모델 호출, 표현 절제 비교, 감사 파일 검사를 실행하지 않았다.",
+    "참고문헌은 외부 확인하지 않았다. bib의 서지 텍스트를 읽었지만 인용된 논문·표준·웹페이지 원문은 열람하지 않았다.",
+    "Sx1이 가리키는 GitHub·Zenodo 소프트웨어와 평가 아카이브, 원시 모델 응답, 체크섬, 입력 잠금 파일 및 분석 스크립트는 가져오거나 검증하지 않았다.",
+    "제공 HTML에는 별도 Appendix 또는 Supplement 섹션이 없다. S8 뒤의 Sx1은 자료 안내이며, 그 다음 bib에서 참고문헌이 시작한다. 외부 평가 자료는 본문 읽기 완료 범위에 포함하지 않았다.",
+    "표는 S2.T1부터 S6.T11까지 제공된 HTML 표 텍스트만 읽었다. 렌더링된 표의 배치·이미지에 대한 시각 검토는 하지 않았다.",
+    "사람에 의한 논문 검토, 임상 검토, 승인 또는 공유 게시를 수행하지 않았다."
+  ],
+  "evidence_scope": [
+    "S1",
+    "S3",
+    "S4.p4.1",
+    "S4",
+    "S5",
+    "S6.SS1",
+    "S6.SS2",
+    "S6.SS3.p1.1",
+    "S6.SS3",
+    "S6.SS4.p1.1",
+    "S6.SS4",
+    "S6.SS6.p1.1",
+    "S7",
+    "S7.p3.1"
+  ],
+  "reviewed_claim_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "anchor": "S1",
+      "quote_sha256": "6ac41b45d8ad5a6cddabc2a0784defe9fe890bb6617d7399d052faa06b553edd",
+      "verdict": "supported",
+      "rationale": "S1의 문제 설정과 세 기여를 직접 대조했다. 상황 인식/비실행 제안 범위가 조건에 남고 치료/장치조작 권한으로 확대하지 않는다."
+    },
+    {
+      "id": "C02",
+      "anchor": "S3",
+      "quote_sha256": "6f05570c1c70b57686128daaf92d23e7f59d443ec019874d8be4619eab05a9d2",
+      "verdict": "supported",
+      "rationale": "S3의 stdio, 독립 제한 계층, no-execution 정의와 TCB/제외 위협을 대조했다. 상태 동일성은 통제 검사이며 EPR·mTLS·승인 신원의 인증 범위를 분리한다."
+    },
+    {
+      "id": "C03",
+      "anchor": "S4.p4.1",
+      "quote_sha256": "1076bfbf61f773d0ff131f1691f027669cfa245a24885dfb0af803b18b0e989d",
+      "verdict": "supported",
+      "rationale": "S4.p4.1의 매핑 문서 정의, 네 상태, mapped-only enrichment와 연구 명세 한정이 일치한다."
+    },
+    {
+      "id": "C04",
+      "anchor": "S4",
+      "quote_sha256": "41b68d22d1ac887b72a0a4c388d1295dd45354e4dc1b17e3c3c4a973d9cc74bc",
+      "verdict": "supported",
+      "rationale": "S4의 정책 검사·snapshot binding·승인 재검사와 S4.SS2의 상태 품질 및 임상 라벨 제한을 확인했다. approved와 execution을 동일시하지 않는다."
+    },
+    {
+      "id": "C05",
+      "anchor": "S5",
+      "quote_sha256": "a7cdb45149e33e19f979e3c151a4655f93fcbe4c07930890cce89a01930bd053",
+      "verdict": "supported",
+      "rationale": "S5.SS1/S5.SS4/S5.SS5의 개발/hold-out 분리, 28쌍·5모델·3반복·온도0·동일 입력·grader 분리·비동시 ablation을 대조했다. 반복을 독립 표본으로 세지 않는다."
+    },
+    {
+      "id": "C06",
+      "anchor": "S6.SS1",
+      "quote_sha256": "576dad4c09072be536647dc0697f2c4dda7fc43576616f4584c6340e9cf37168",
+      "verdict": "supported",
+      "rationale": "S6.SS1 본문과 HTML Table 9 텍스트에서 15/15·120/120·7/11 및 5/5·40/40·0/11을 대조했다. 프로토콜 성공을 의미 상호운용 또는 물리/임상 검증으로 올리지 않는다."
+    },
+    {
+      "id": "C07",
+      "anchor": "S6.SS2",
+      "quote_sha256": "71cdfcd3cd5550cb978ac02d2562a344854f57b2b1150445b3822e81c3d9d730",
+      "verdict": "supported",
+      "rationale": "S6.SS2에서 자원12·도구7·operation counter0·동일 digest, ordered cases14·policy7·authorization7을 확인했다. 유한 검사와 비인증 승인·참여자 부재가 조건에 유지된다."
+    },
+    {
+      "id": "C08",
+      "anchor": "S6.SS3.p1.1",
+      "quote_sha256": "4aee4b7e5794b71ce7435763acd678888f5fd46dd4ce37fdc3ea5543ad1b8c0c",
+      "verdict": "supported",
+      "rationale": "S6.SS3.p1.1의 deterministic28/28와 hosted414/420(98.6%) 및 관측 부재 목록이 일치한다. 현실 오류율 상한으로 일반화하지 않는다."
+    },
+    {
+      "id": "C09",
+      "anchor": "S6.SS3",
+      "quote_sha256": "c9cc6e9c9263a1d4d84dcae6edc4d9ca1788e29b59d1dc840a49ae3a1a893e90",
+      "verdict": "supported",
+      "rationale": "S6.SS3의 두 실패 설명을 확인했다. GPT-OSS alarm flag3건과 GPT-4.1 mini injection self-report3건을 원래 분모에 유지하며 실제 주입 실행/장치조작으로 표현하지 않는다."
+    },
+    {
+      "id": "C10",
+      "anchor": "S6.SS4.p1.1",
+      "quote_sha256": "4dd1bce07d5b0d785b01a694c081d88a74c294fb725a70430f76495fec6275d8",
+      "verdict": "supported",
+      "rationale": "S6.SS4.p1.1의 63/84·75/84·81/84, 6 repeated cases=2 pairs×3, no worsened cases 및 canonical-name 원인을 확인했다. 임상 알람 인식 향상으로 확대하지 않는다."
+    },
+    {
+      "id": "C11",
+      "anchor": "S6.SS4",
+      "quote_sha256": "3127fa4dbae84e0afd73bf0b5afb2a81a4b81155f4868012e5550bc0002626a1",
+      "verdict": "supported",
+      "rationale": "S6.SS4에서 raw URI15, 평균3.24kB→4.71kB, 저자 보고45.2%를 직접 대조했다. 숫자를 새로 계산하지 않았으며 catalogue confounding과 byte-size/토큰·금액 구분을 유지한다."
+    },
+    {
+      "id": "C12",
+      "anchor": "S6.SS6.p1.1",
+      "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c",
+      "verdict": "supported",
+      "rationale": "S6.SS6.p1.1의 7 checks, 첫 record 변경 탐지 및 append 거부, external-anchor 없는 tail truncation 제한이 일치한다. 로컬 chain을 원격 인증으로 대체하지 않는다."
+    },
+    {
+      "id": "C13",
+      "anchor": "S7",
+      "quote_sha256": "c3e17f52db0fa7cf3d2b22887b0ed3eda60c4d2a8adef644b5cbef3c5fa91e48",
+      "verdict": "supported",
+      "rationale": "S7의 물리/임상/다중 공급자 부재와 sensor/clock/patient-association 제한, 후속 read-only/clinician 평가 방향을 대조했다. 배포 가능 제어기로 과장하지 않는다."
+    },
+    {
+      "id": "C14",
+      "anchor": "S7.p3.1",
+      "quote_sha256": "4634e958d4c43a16677367fe7a130775547ff670d9ee8031389ec1c91d389f6a",
+      "verdict": "supported",
+      "rationale": "S7.p3.1의 misleading summary와 device-operation channel 분리를 근거로 한 분석자의 평가축 제안이다. 논문 실험 결과나 외부 신규성 확인이 아니라 해석임을 명시한다."
+    }
+  ]
+}

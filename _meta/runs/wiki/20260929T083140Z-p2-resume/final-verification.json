@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-29T09:38:11.669704+00:00",
+  "protected_ok": true,
+  "state_statuses": {
+    "2609.30830v1": "retryable_failed",
+    "2609.31358v1": "retryable_failed"
+  },
+  "log_appended": true,
+  "arxiv-2609.30830v1": "89d515e6c33de571",
+  "arxiv-2609.31358v1": "cfee938c27d5b30f",
+  "entities_pages": 0,
+  "schema_check": true
+}

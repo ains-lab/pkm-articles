@@ -1,0 +1,821 @@
+{
+  "schema": "pkm-agent-integration-evidence-review/v1",
+  "actor": "agent",
+  "reviewer": "Hermes parent agent; direct original HTML anchor-context review",
+  "reviewed_at": "2026-09-30T13:27:15.526836+00:00",
+  "result_ref": "_meta/runs/wiki/20260930T125856Z-p2-integration/attempt1-result.json",
+  "result_sha256": "7645d7d920950db54879e5207b51ecf1f0d2f1dc6b2ccbcbcff2f3d27a62c58b",
+  "source_set": [
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    }
+  ],
+  "reviewed_claim_count": 36,
+  "claims": [
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C01",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "5137af41ec2b23fb403655ef5259cc628bad06e8d9a85255f59219cfaf58f8ac",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS2.p4",
+          "quote_sha256": "ff00bf3b9c66a4c03f04b77716517eff8c1fe8ae26ec3f4d9576bb2ce983aa62"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p2",
+          "quote_sha256": "0666c2b7e2df1d62bcdf81d3639c1fa051c14732423adc3983fa5b3bb2023d9e"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S4.SS2.p4의 dispatch 전 소비 및 별도 외부 완료 기록을 Gateway S3.p2의 비실행 승인과 대조했다. 승인 의미의 차이를 해석으로 표시한다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C02",
+      "kind": "author_report",
+      "statement_sha256": "6ebd0f41dc1024b017deef1691183955a61b107b334c63fb14412904a8c5ede3",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS1.p2",
+          "quote_sha256": "45d02601cd72cb3a167f07cbbd25491cd830a4c82309fd97746257e8c6eaeb90"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S1.p4",
+          "quote_sha256": "d73a6f4ac9d0de6d27b26c6655401322531c3ad5fb3e5667e276c7a6b2a62e20"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S4.SS1.p2는 운영자 신뢰 루트와 텍스트의 grant 발급 불가를 명시하고 S1.p4는 도구 grant와 데이터 검사 독립성을 직접 명시한다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C03",
+      "kind": "author_report",
+      "statement_sha256": "76f8a89495acfdfe589a1a428544ac3ab4612b61cd2eff14dea25c5efda5ad41",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS2.p2",
+          "quote_sha256": "606b062d11fcf1f73661d360e307aade5300b0f89edcf695aa3fe5a1f88ad944"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS2.p6",
+          "quote_sha256": "5a9686d6202ab7d857e09f56bd8f3ed5f226aae44fd0e90c3050e7274c711f2a"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S4.SS2.p2의 digest/세션/만료/uses와 변경 요청, p6의 review-attempt 원장을 확인했다. 확정 효과로 확대하지 않는다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C04",
+      "kind": "author_report",
+      "statement_sha256": "218cedef90d0607aca4c1f92d0a31ec66fcce114e9e4ea5af965df8600986bf2",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS1.p2",
+          "quote_sha256": "1b2c2c654822e387e8a381cc7f38928e417ebe6d4b919dfbe5aa7725fc696760"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S5.T2",
+          "quote_sha256": "0b744ea364165b53b4534554639b42d800968c0994571710453a830036d66492"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS1.p2와 S5.T2를 대조해 DSH veto, OC 기록 전용, OpenClaw 동기식 통합과 과거 fail-open 조건을 유지했다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C05",
+      "kind": "author_report",
+      "statement_sha256": "8f55c5edf9f798b09feb6a05337a7f389c0c1a73a7ecfbbb1870b487b8eb31ef",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p2",
+          "quote_sha256": "37ac9e1515bb84f3211abfdeae8e44d322ab5c8e46f1f297265715ab1cc3a2b5"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p5",
+          "quote_sha256": "10c648d5098c23e9b34b3b2888c00f0ebd8729e280ed9fbe5cde60629d32732c"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S3.p2의 동일 호스트 stdio와 p5의 세 층 비실행 계약을 확인했다. 감사 기록 같은 비장치 부수효과를 제외한다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C06",
+      "kind": "author_report",
+      "statement_sha256": "629a6f4cb204b5b5a137fed0fd0e956d318c624d7ce321f85701f6ba7ecdb5f0",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S4.p5",
+          "quote_sha256": "8ed96c71465b76b9a93c477aedbcacd0aa864550d70621a1956068594a0406f7"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS2.p3",
+          "quote_sha256": "800d7f5f66c7d8666b67bb4b6cc8589432fb1eaa1b7e8bfff4fab5a53c24498c"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S4.p5의 모든 제안 결합 필드와 재검사, S6.SS2.p3의 비실행 approved 및 미인증 신원 조건이 문장과 일치한다."
+    },
+    {
+      "page": "concepts/agent-authority-and-effect-boundaries.md",
+      "id": "C07",
+      "kind": "author_report",
+      "statement_sha256": "bb08b8bb6b35e205f4ce676326bed65d894e4d6ffb63b737aa58b0e556974b18",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p4",
+          "quote_sha256": "6d3e47496528e6e7cb5073a1308cd1d0f827a0c85676f1b8c079b3ebf1c467e8"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S3.p4는 조작 0과 통제 상태 digest 일치를 구분하며 외부 독립 업데이트와 유한 시험 한계를 명시한다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C01",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "5b89a41dca73653a1462d66e68764d25cff5b24b0de7cb428fa5006e036ebc34",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS3.p1",
+          "quote_sha256": "e19e59a99a7ec0369f17a2c7335ab67acdc37896d2469b6c683f02d9e9aba969"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S7.p5",
+          "quote_sha256": "feffb2a79ee95e9f819e33a65db6630ffc754e71253f6252914750df9930d88e"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S4.SS3.p1의 origin/agent authorship 한계와 Gateway S7.p5의 센서/시계/환자연결 한계를 함께 읽었다. 출처를 진실성으로 승격하지 않는 해석이다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C02",
+      "kind": "author_report",
+      "statement_sha256": "99e775872814a05e735983ee0dc4bf40b1f598a82eb66a1d76b34e5d48fd035f",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS3.p2",
+          "quote_sha256": "3c387de22584ab99374e39ff6de5aade72d8c2c830991d63885cbb1238b0d6f1"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS3.p6",
+          "quote_sha256": "32d999233538ed54b1a3556373b0336313373291e293db0690bdd3c5687be130"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S4.SS3.p2의 지원 관측/내용 창과 p6의 선택 전달 필드/목적지 정책을 확인했다. 유사성만으로 의도를 판단한다는 주장은 하지 않는다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C03",
+      "kind": "author_report",
+      "statement_sha256": "f1444dead353cf58e23f967198e8b237c769214fc4b89423be1d9a2dc10c552f",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S5.p5",
+          "quote_sha256": "b7828b709b54a078f6f230e7439ef732f0f503ea564a31f2b2e207ed15714a15"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS2.p5",
+          "quote_sha256": "cf6b20a2fa631269d82ecaf682c606583d0e2b029a3a7c94aea4990b35790b58"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S5.p5는 pinned/fair-share/decoding 활성화 미확립과 평가에서 decoding 제외를 명시한다. S6.SS2.p5 종점은 합성 요청이지 실물 삭제가 아니다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C04",
+      "kind": "author_report",
+      "statement_sha256": "b98a61e8a11fe6279fc6764d7a507618fa48e12f30d875f609e5ea46b3f02aa3",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS5.p2",
+          "quote_sha256": "d180fbb1011051b4b7e600d6870e4a4853ebd3cfeb0a8bd98e37315053f156af"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS5.p3",
+          "quote_sha256": "f731fa88ae990ab2e8ddb6e2ea91fc23912eafcdc4d0c0460a310ae7ad23c1ab"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S4.SS5.p2의 세 연결 강도와 예측/관측 분리, p3의 동기 소비·비동기 저장 경로 분리를 그대로 유지한다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C05",
+      "kind": "author_report",
+      "statement_sha256": "f5803a37ceda86da68aa19442386db8a26db9f64e68c583484eb14c064a6ccbb",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S7.SS1.p5",
+          "quote_sha256": "8c1fcede013c538b5d1a7ccf735e35c2ae2989685aaa11141db9671c7e07b10f"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S7.SS1.p5의 retained evidence consistency와 silent bypass 한계를 확인했다. 완전 중재·외부 완료 보증이 아님을 유지한다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C06",
+      "kind": "author_report",
+      "statement_sha256": "1b83dbbaa51f8a63edb57859109cea1bd2c32ac4dda89f29071ae2f31b6ad975",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S4.SS2.SSS0.Px1.p1",
+          "quote_sha256": "1a377e4ea6e8e986d8301722901364175599d268b4c19acf82f59a06cb5b8b03"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S4.SS2.SSS0.Px1.p3",
+          "quote_sha256": "2776702e81eb5f29a37b7973247a58be54905c46bd8ddf46c55e8c63257479e8"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S4.SS2.SSS0.Px1.p1과 p3를 대조했다. 매핑 성공은 stale/invalid를 해제하지 않고 문서 검증은 임상 라벨의 의학적 정확성을 확립하지 않는다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C07",
+      "kind": "author_report",
+      "statement_sha256": "565e888d762cd102c60e5a837c6682de613ca18103898e3b9c07d888f712e90a",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS6.p1",
+          "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p7",
+          "quote_sha256": "71fb332402d85b0c1019b04baec010716ffd9215bf5aa37eaf7c09c9cbaee75a"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS6.p1의 네 레코드·첫 수정 검출·tail truncation 제외, S3.p7의 EPR 비인증 구분을 확인했다."
+    },
+    {
+      "page": "concepts/provenance-and-audit-evidence.md",
+      "id": "C08",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "765f81eb5f6d93ccb99338c50f9e440cd5d1d242aa47e4a1d9c5e82a9589eab4",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S7.SS1.p5",
+          "quote_sha256": "c8a577c6b4cf53736f9e27404a16f271d70d557ebed69dd854684c4e1cbde981"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS6.p1",
+          "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "서로 다른 원문 한계인 수집 누락과 외부 anchor 없는 꼬리 삭제를 독립적으로 유지했다. 감사 속성을 분리하자는 비교 해석이지 새 보안 검증이 아니다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C01",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "c8891e04c167a3a7a29c8f37d437b81c22541f5213e7c86835a3234e4b439747",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS1.p3",
+          "quote_sha256": "6a96678579b8eb8696ced674b2e6ddcebc91235479d0d8ea496f84318a38a084"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.p1",
+          "quote_sha256": "9c379e0f4d2ece714db1b2608d5cc381d003963921822d022af9da0e10628890"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S6.SS1.p3의 chain/run/event 및 종점과 Gateway S5.p1의 네 평가 계층을 대조했다. 공통 성공률 산출을 제안하지 않는다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C02",
+      "kind": "author_report",
+      "statement_sha256": "80e46e67f208716b182a84b05bd5d0c064ef115e78c5c66a3f47770821cb7eca",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS3.p1",
+          "quote_sha256": "159660ae7c8d79a7a14a3520f727c1c55c3846cfbaff3bd128ef2dd9291b89d9"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS1.p2",
+          "quote_sha256": "3383a2c34852ae58f759b75bd3a6bfe29b04ae7063153c44fc18c8dea15fc053"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S6.SS3.p1의 153/76/152와 S6.SS1.p2의 63·두 라운드·두 플랫폼/252를 확인했다. 별도 집합의 분모를 합치지 않는다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C03",
+      "kind": "author_report",
+      "statement_sha256": "b89c9de82b35a2053528530dc3878a33d6bf3bbec0e0b751d3290a518d9807b1",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS4.p1",
+          "quote_sha256": "364799b8954eba199da8c2b32fb1d948839f2510b9d2291099d310062f329937"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS4.p1의 11개 중 6개/8 denial events와 겹칠 수 있는 사건 설명, task-failure가 아니라는 명문을 유지한다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C04",
+      "kind": "author_report",
+      "statement_sha256": "4799fa183d79ddeb99d143d2810b892f7f9fce5cfe2ed3179132fb43b5ded8cd",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS5.p1",
+          "quote_sha256": "963bfef42db9d7b28c8e55977ba2d51ca2478789d474e4f575ef0e613eed762d"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS5.p2",
+          "quote_sha256": "b74db21d745e3968d0635385b37fbbb9e342493d42b5a90796b27612dc2263a5"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS5.p1–p2의 두 플랫폼 각 63/63, 53개 시나리오의 334/376·328/376, 나머지 10개를 확인했다. 탐지 재현율로 해석하지 않는다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C05",
+      "kind": "author_report",
+      "statement_sha256": "35f381d48c3cc3d169f807784d9279a6b1952eff91f10cbc1052887ba506a17f",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS2.p1",
+          "quote_sha256": "8ade784c7dae2ee1bc8e282cb965f45934bd145bab868fd9e97f7fa92c5128a3"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p4",
+          "quote_sha256": "1b686819d5736701f32b4923c89c15464767d3271536d24c20ee823484b72965"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S6.SS2.p1의 자원 12/도구 7·zero counter·digest와 S3.p4의 통제·유한 시험 한계를 결합했다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C06",
+      "kind": "author_report",
+      "statement_sha256": "5b546f5d6db1b0237c5038f8243bf0315cac7bb50b2c6eac7803d6ce05af7506",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.SS4.p1",
+          "quote_sha256": "b9964776d3cae25e57d80f1b7b7906eef2caf151339d04cfdb6a6c3afcaa7da4"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS3.p1",
+          "quote_sha256": "4aee4b7e5794b71ce7435763acd678888f5fd46dd4ce37fdc3ea5543ad1b8c0c"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.SS5.p4",
+          "quote_sha256": "a7cdb45149e33e19f979e3c151a4655f93fcbe4c07930890cce89a01930bd053"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S5.SS4.p1, S6.SS3.p1, S5.SS5.p4의 28쌍·5모델·3반복/420, 414/420와 28/28 및 비독립 반복 제한을 확인했다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C07",
+      "kind": "author_report",
+      "statement_sha256": "11c32a48a356251bf06329dd8dce11c260830bd2ada0391332bc30ba4e25c34c",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS3.p2",
+          "quote_sha256": "65de32098027515b830bed2d43075b902af1123b948c9e583960a8593b5e26bc"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS3.p3",
+          "quote_sha256": "24cf22f2b2252f862996c2fefa9273ee32a432c2124c7020fc58bffd4d1a770b"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS3.p2–p3는 두 종류의 필드 모순을 각각 세 번 보존한다. 주입 실행이나 실제 장치 위해로 바꾸지 않는다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C08",
+      "kind": "author_report",
+      "statement_sha256": "0f23fb02c127eb958a950e27bbf59ba3d2c77d1c1728cee32ceb8f26285461f6",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS4.p1",
+          "quote_sha256": "4dd1bce07d5b0d785b01a694c081d88a74c294fb725a70430f76495fec6275d8"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.SS4.p3",
+          "quote_sha256": "596ebf0ef58c8453f363bcf9573ef9a568e4ea2927fefa4bc0702cfe810f8d58"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS4.p1의 63/84·75/84·81/84, 두 쌍의 세 반복 및 정규 이름 효과를 확인했다. S5.SS4.p3의 카탈로그 결합·archived enriched 재사용도 유지한다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C09",
+      "kind": "author_report",
+      "statement_sha256": "10d2a4cd440b3b9fc30b5b0c805081985d83a3939565e0123c790d305e22c060",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS1.p3",
+          "quote_sha256": "576dad4c09072be536647dc0697f2c4dda7fc43576616f4584c6340e9cf37168"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S6.SS1.p3의 5/5·40/40·0/11과 단일 loopback 소프트웨어 제공자 조건을 확인했다. 연결 성공을 의미 상호운용성으로 확대하지 않는다."
+    },
+    {
+      "page": "concepts/security-evaluation-units.md",
+      "id": "C10",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "9408d8b67fdc4f7b644a92c38f10708a6dfbfc7c4729624bce9f96755122a805",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS5.p3",
+          "quote_sha256": "93d0069d0e9d1ad4f7de4c193613b6e019d5315e7aa23b4bf9cf463ec06fd1d0"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.SS2.p3",
+          "quote_sha256": "0eca344764bc33218fd05d8b2a912b1f37f09e9cc419069bbf8b42d72a68f6f8"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S6.SS5.p3의 offline replay와 Gateway S5.SS2.p3의 local snapshot-to-resource를 대조했다. 측정 구간이 다른 두 수치를 순위화하지 않는 해석이다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C01",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "a86ba634c445703d96cde321a388fbbf9b9c77d7af6cb7fcf83912ba538c1d0b",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS1.p3",
+          "quote_sha256": "63bcd98ff73c40432f4f81baf42832e8369f29aed702721d27f56a3c1ba66114"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S7.p3",
+          "quote_sha256": "ce75651da6972b3a84601528c4ae4f87024788c4e7f9a402ce044d5130ec73df"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S4.SS1.p3와 Gateway S7.p3에서 모델 밖 판정/장치효과 제한을 확인했다. 조건부 중재와 비실행을 분리하고 어댑터 조건을 유지한다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C02",
+      "kind": "author_report",
+      "statement_sha256": "7b7d0cffd4c058cbcfd8c165465139ac93afcb5942b12cc48b69b73540865560",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S3.SS2.p1",
+          "quote_sha256": "e2be767f89617caf89fb380542f4f90871344df2ae98ae075428ee12c46d855c"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S3.SS2.p2",
+          "quote_sha256": "562aea7de76c703e0c91fe7a0cadf9f80d0e20e84a7e9fe5690e25afe58dc2cc"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S3.SS1.p2",
+          "quote_sha256": "f8e14dab8ec2b0b07255822bd4f60c89851ff19ad6ebdb8fcd91979bf59b378f"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S3.SS2.p1–p2 및 S3.SS1.p2의 외부/내부 위협·운영자 구분·TCB 호스트 의존성을 확인했다. 개인 배포에 주체 분리를 일반화하지 않는다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C03",
+      "kind": "author_report",
+      "statement_sha256": "138fd75d2350560cea3efe3cb77136dc5e73a8dd0641dc389b96f455e530bbc7",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p6",
+          "quote_sha256": "19959aca9f5f7b562e5ac40c9c95ef6ff03a03fb5e738a1321a14a47ff8ffb52"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p7",
+          "quote_sha256": "962f5926a9b8c819975208bc4315edfc4654b8b736528c383167be7530ca48ac"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S3.p6–p7의 로컬 위협과 호스트 가정, mTLS/EPR/승인 신원/원격 권한 구분이 비교표와 본문에 보존된다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C04",
+      "kind": "author_report",
+      "statement_sha256": "778d8749d3b9c1ddd8a745a30a5e2116dec1c0452d1fde751224a8700ab468c2",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS2.p2",
+          "quote_sha256": "606b062d11fcf1f73661d360e307aade5300b0f89edcf695aa3fe5a1f88ad944"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S1.p4",
+          "quote_sha256": "d73a6f4ac9d0de6d27b26c6655401322531c3ad5fb3e5667e276c7a6b2a62e20"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S4.SS2.p2의 정확한 요청 결합과 S1.p4의 데이터 검사 독립성이 그대로 연결된다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C05",
+      "kind": "author_report",
+      "statement_sha256": "6cf73cae853963eee7d3e7fab1b64940df305aebebf5e381023f6efb532302cc",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S5.T2",
+          "quote_sha256": "384f778ac09c02ec7b96472193c5c886bf622df95628176fc4a939d0b231c1d7"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "S5.T2의 DSH/OC/OpenClaw 별 통제 열을 확인했다. 기록 전용/과거 fail-open 관측을 집행 증거로 주장하지 않는다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C06",
+      "kind": "author_report",
+      "statement_sha256": "6974edc2bd15e4a572dc04978fa179b9ab57842fcbe699b1832041408be43f61",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S4.p5",
+          "quote_sha256": "8ed96c71465b76b9a93c477aedbcacd0aa864550d70621a1956068594a0406f7"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S3.p5",
+          "quote_sha256": "8c4a72cdcc7610ffae382b979029531f376229d707a7715ec8f07ddf2ee6bdcb"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS2.p3",
+          "quote_sha256": "a5c31f0b85a569a8ba0fcc1eb666d40cf1f398eadfd4e61774c30671ee5f2125"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S4.p5, S3.p5, S6.SS2.p3의 재검사·비실행 계층·미인증 합성 승인 범위를 함께 확인했다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C07",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "caef0155472f132ce952d23aac0a310832fc52ca4226129cdaac453d26f6fedc",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S4.SS3.p6",
+          "quote_sha256": "32d999233538ed54b1a3556373b0336313373291e293db0690bdd3c5687be130"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S4.p4",
+          "quote_sha256": "6af1da63c75ad86fa983b1f78e1825e5b3e8e70a928abe2dcdf7d4f1f8cc9720"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S7.p5",
+          "quote_sha256": "feffb2a79ee95e9f819e33a65db6630ffc754e71253f6252914750df9930d88e"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S4.SS3.p6과 Gateway S4.p4/S7.p5는 자료 재사용 정책과 의미/설정 식별이라는 서로 다른 역할이다. 진실성 보증으로 합치지 않는 해석이다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C08",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "826da2de2f618eb4ecd2b84091adbc3271374e22b27203ec9a30df616e886c6b",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S7.SS1.p5",
+          "quote_sha256": "8c1fcede013c538b5d1a7ccf735e35c2ae2989685aaa11141db9671c7e07b10f"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S6.SS6.p1",
+          "quote_sha256": "5ff6cc5ce2e3cb503d7e7a344b1bdf0439bc16a1ae0bca40df1327a99aeb9e3c"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S7.SS1.p5의 누락 가능성과 Gateway S6.SS6.p1의 외부 anchor 한계를 모두 남긴다. 서로에게 없는 기능을 전이하지 않는다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C09",
+      "kind": "analyst_interpretation",
+      "statement_sha256": "0cefb01203c2f5594b31fc04336031cb48aecd34d0d41af394f5b23a4af1f2fe",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS1.p3",
+          "quote_sha256": "6a96678579b8eb8696ced674b2e6ddcebc91235479d0d8ea496f84318a38a084"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.p1",
+          "quote_sha256": "83deb18a3b29be28ed659ee86668ae251ee3ce644ceb4f0e6b0ab5a0b0d1d8de"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S6.SS5.p3",
+          "quote_sha256": "93d0069d0e9d1ad4f7de4c193613b6e019d5315e7aa23b4bf9cf463ec06fd1d0"
+        },
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S5.SS2.p3",
+          "quote_sha256": "0eca344764bc33218fd05d8b2a912b1f37f09e9cc419069bbf8b42d72a68f6f8"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S6.SS1.p3/S6.SS5.p3, Gateway S5.p1/S5.SS2.p3의 실험 단위·효과·시간 구간이 달라 직접 우열을 주장하지 않는 해석이다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C10",
+      "kind": "author_report",
+      "statement_sha256": "7ebb191ff4c0d01dc44677432d5af6e8d51aad45d648d4b73baf6a1aa9bf9cd7",
+      "evidence": [
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S7.SS1.p2",
+          "quote_sha256": "365f42584410bb191c656de24fb76fcd1010cf0809f1349a54461b60aa4fadd0"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S5.p5",
+          "quote_sha256": "b7828b709b54a078f6f230e7439ef732f0f503ea564a31f2b2e207ed15714a15"
+        },
+        {
+          "version_id": "2609.30830v1",
+          "anchor": "S7.SS1.p4",
+          "quote_sha256": "8d98d01bd7c935b72f3398a8a01d3535ee037a08b98fccb3a8b590322230af21"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "AGATE S7.SS1.p2/p4 및 S5.p5의 재작성·지원 경로·기능 활성화 미확립·platform/mode 교란을 확인했다. 일반 방어효과로 확대하지 않는다."
+    },
+    {
+      "page": "comparisons/agate-vs-sdc-mcp-gateway.md",
+      "id": "C11",
+      "kind": "author_report",
+      "statement_sha256": "cdf104c8b5e309947807b923d20af7eee7cf08c59bdcd001607e8812def6d976",
+      "evidence": [
+        {
+          "version_id": "2609.31358v1",
+          "anchor": "S7.p6",
+          "quote_sha256": "b3cfa056e03219cce7a29bc162889791c120a3908588583e2b980dc32780b825"
+        }
+      ],
+      "verdict": "supported",
+      "rationale": "Gateway S7.p6의 네 한계 묶음에 물리/임상/다중공급자 부재, synthetic states, 로컬 hash/external anchor, 제한된 모델·표현 시험이 모두 명시돼 있다."
+    }
+  ],
+  "evidence_scope": {
+    "2609.30830v1": [
+      "S1.p4",
+      "S3.SS1.p2",
+      "S3.SS2.p1",
+      "S3.SS2.p2",
+      "S4.SS1.p2",
+      "S4.SS1.p3",
+      "S4.SS2.p2",
+      "S4.SS2.p4",
+      "S4.SS2.p6",
+      "S4.SS3.p1",
+      "S4.SS3.p2",
+      "S4.SS3.p6",
+      "S4.SS5.p2",
+      "S4.SS5.p3",
+      "S5.T2",
+      "S5.p5",
+      "S6.SS1.p2",
+      "S6.SS1.p3",
+      "S6.SS2.p5",
+      "S6.SS3.p1",
+      "S6.SS4.p1",
+      "S6.SS5.p1",
+      "S6.SS5.p2",
+      "S6.SS5.p3",
+      "S7.SS1.p2",
+      "S7.SS1.p4",
+      "S7.SS1.p5"
+    ],
+    "2609.31358v1": [
+      "S3.p2",
+      "S3.p4",
+      "S3.p5",
+      "S3.p6",
+      "S3.p7",
+      "S4.SS2.SSS0.Px1.p1",
+      "S4.SS2.SSS0.Px1.p3",
+      "S4.p4",
+      "S4.p5",
+      "S5.SS2.p3",
+      "S5.SS4.p1",
+      "S5.SS4.p3",
+      "S5.SS5.p4",
+      "S5.p1",
+      "S6.SS1.p3",
+      "S6.SS2.p1",
+      "S6.SS2.p3",
+      "S6.SS3.p1",
+      "S6.SS3.p2",
+      "S6.SS3.p3",
+      "S6.SS4.p1",
+      "S6.SS6.p1",
+      "S7.p3",
+      "S7.p5",
+      "S7.p6"
+    ]
+  },
+  "markdown_bodies_reviewed": [
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "comparisons/agate-vs-sdc-mcp-gateway.md"
+  ],
+  "entity_navigation_review": "Both append sections read; navigation only to the four verified new pages; no new empirical paper claim.",
+  "numerical_consistency_checks": {
+    "task_scenario_model_repetitions": 420,
+    "monitored_runs": 252
+  },
+  "human_review_ref": null,
+  "visual_review": false,
+  "experiment_reproduction": false,
+  "external_search": false,
+  "verdict": "supported_with_stated_limits",
+  "limitations": "Author reports remain author reports; agent semantic review does not independently verify experiments or guarantee all claims. Generation used selected sections, not a new full-text recompile. Source hash verification performed by orchestrator, not by generation model."
+}

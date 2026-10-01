@@ -1,0 +1,204 @@
+test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) ... 
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='schema') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='source_path') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='source_sha256') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='metadata_sha256') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='policy_sha256') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='prompt_sha256') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='approval_sha256') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='approval_ref') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='requested_scope') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='policy_revision') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='contract_revision') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='prompt_revision') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='provider') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='model') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='reasoning_effort') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='fallback_allowed') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='route') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='completed') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='response_status') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='error') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='cost_policy') ... FAIL
+  test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='consumed_wiki') ... FAIL
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='schema')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='source_path')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='source_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='metadata_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='policy_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='prompt_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='approval_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='approval_ref')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='requested_scope')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='policy_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='contract_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='prompt_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='provider')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='model')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='reasoning_effort')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='fallback_allowed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='route')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='completed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='response_status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='error')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='cost_policy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_result_binding_rejects_selfconsistent_foreign_evidence (test_publication.PublicationTests.test_result_binding_rejects_selfconsistent_foreign_evidence) (field='consumed_wiki')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 196, in test_result_binding_rejects_selfconsistent_foreign_evidence
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 9.042s
+
+FAILED (failures=22)

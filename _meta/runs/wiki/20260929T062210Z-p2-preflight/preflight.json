@@ -1,0 +1,166 @@
+{
+  "schema": "pkm-p2-preflight/v1",
+  "recorded_at": "2026-09-29T06:22:10.488407+00:00",
+  "run_id": "20260929T062210Z-p2-preflight",
+  "inventory": [
+    {
+      "version_id": "2609.30217v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html",
+      "source_bytes": 926811,
+      "source_sha256": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+      "metadata_sha256": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f"
+    },
+    {
+      "version_id": "2609.30266v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html",
+      "source_bytes": 738941,
+      "source_sha256": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+      "metadata_sha256": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7"
+    },
+    {
+      "version_id": "2609.30614v1",
+      "format": "pdf",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf",
+      "source_bytes": 821749,
+      "source_sha256": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+      "metadata_sha256": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81"
+    },
+    {
+      "version_id": "2609.30824v1",
+      "format": "pdf",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf",
+      "source_bytes": 693979,
+      "source_sha256": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+      "metadata_sha256": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb"
+    },
+    {
+      "version_id": "2609.30830v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "source_bytes": 267373,
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72"
+    },
+    {
+      "version_id": "2609.30940v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html",
+      "source_bytes": 397917,
+      "source_sha256": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+      "metadata_sha256": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7"
+    },
+    {
+      "version_id": "2609.31039v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html",
+      "source_bytes": 558801,
+      "source_sha256": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+      "metadata_sha256": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad"
+    },
+    {
+      "version_id": "2609.31318v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html",
+      "source_bytes": 536360,
+      "source_sha256": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+      "metadata_sha256": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519"
+    },
+    {
+      "version_id": "2609.31358v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "source_bytes": 212956,
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb"
+    },
+    {
+      "version_id": "2609.31562v1",
+      "format": "html",
+      "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html",
+      "source_bytes": 683196,
+      "source_sha256": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+      "metadata_sha256": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e"
+    }
+  ],
+  "counts": {
+    "html": 8,
+    "pdf": 2
+  },
+  "source_count": 10,
+  "protected_files": {
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.html": "7f74fee3e1200324747b62e25a142016b839871f5117bf2b772586bad851f743",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30217v1/source.json": "2b58051c1504c4ca41a579e96938d967392db5e71b0a47e46d724fd0e715d82f",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.html": "2a52cc8f9cf410edc1de0fb1a192c313fdfcff0d31f5e37f2d32138a92c6376c",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30266v1/source.json": "55c467f720b0068d1bf3fb97bc8d0bb41272eed0cc5c7b7740579567a382dfa7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.json": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.html": "c8acc008c08916f78cd678d295f7f49bb2a0997fe6d32dfa800069afb1a4c933",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30940v1/source.json": "adcf1c3af2a11f411bdfdf95cf37730aea740adcf7283c4188b927934666b7c7",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.html": "8690d6fe68a38faf5189ab1ba1eab739b60c769444edef101727f2e0327e0f41",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31039v1/source.json": "3b14b35bd80f3bd8f7aba64fec30abaf2e86b5fb88694d42a95fc6306b1716ad",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.html": "c80b1c5c4eb17ebb5cf851d488225e50ab588e17dd44647d584e99a163307ade",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31318v1/source.json": "5e6402e7f02c8d58f2e26b3f19b1e894ef7b27b6aa2ce4c291d0a56d9fdcb519",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.json": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.html": "5e77c259ae49f74d6919ab38ebe79061ec24d0d8a61b71e1f7f448d3b5ebb8ac",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.31562v1/source.json": "94c61c8fad3b736b8d57d6ca014c8f99c89862807e4106b401953c5ae7ebc01e",
+    "AGENTS.md": "a09f83832675cc62963d7f23e3cfe1f2cc63c08203204f0eedf7e323d4388c23",
+    "SCHEMA.md": "449a8f64a7107a8d71272b02af9fa95e8e0b646611076d15460a1b07f34c2285",
+    "README.md": "06617b1fe00f2ba83293cf6186f7c7f2f728ba86bd4005c9c9150d013520e4b3",
+    "index.md": "1552fd98be4a136072c8356044bc09ad35fa40e60078b6f52f082496f4516d66",
+    "log.md": "1922724525b5de6bbc18e6f703eea274b6be2abddc56b5e2b2ad3023ef41c5f0",
+    "raw/articles/4cff5b4f10ec/index.md": "17bfda625c49e5404f7e37f5e4a16cd78a6734add041562dc0a2685e893fe104",
+    "_meta/AUTOMATION.md": "c6091efd7c8f976524269563f16ea8309726e200fcfbb69f7e12fe518139adbc",
+    "_meta/COLLECTION.md": "2d6df3391911b7d22dfd3284ecd4bacfb8aa09d81010484fa262e19d5dac2c30",
+    "_meta/COMPILATION.md": "3ae9395663d12633f79960c6ef134ed006dac3b50a3ad25326c5886a17d95e8c",
+    "_meta/QUERY-FEEDBACK.md": "634ca75001053ea0cd409d3b4a03eafd980049589da8e8753987dfd06e4d6501",
+    "_meta/RESEARCH-PROFILE.md": "2d9ed09a3879e658ead5b5762cd1027aef46a850263666caa7a79fc49573d538",
+    "_meta/RESEARCH-REVIEW.md": "cb93884975bf129e7a346b8106e3c821ca8ac725b9656e0234a930b0f691aee8",
+    "_meta/STATE-CONTRACTS.md": "e76777fa3fa397a11a683e4a604a3e58426db03a60679432fceffc3c0dbc2482",
+    "_meta/automation-contracts.schema.json": "25319eb5efd6c49b8ce28efdb1c65979ea7532b1e81c2383b678bd1ed66da7e1",
+    "_meta/automation.json": "e0db7b3181311409b843285b0a730642ee67fd0529c969baa8eea4cef080889f",
+    "_meta/topics.json": "4abeded0e5cab949520014ba2d4f8e91689c25f505e1ddf234665bd816bbce20",
+    "_meta/state/4cff5b4f10ec.json": "7859fb151a34491ba958778b62863679abccbf7160f0376bae818b49ba6de414",
+    "_meta/state/compilation.json": "a1cbc255c996a5b26291519b79aebf5fd74d223e116b72a1fc350739bb6d4cf2",
+    "_meta/state/feedback.json": "30cb22aab822beb955bf47ee030bbf7f51e999f42388ac6460629905cf937913",
+    "_meta/state/research-review.json": "600d5b92e64bf3e5adc656c467495ee3ed06ad7b4a9cad522c045928c34fa32f",
+    "_meta/prompts/research-review.md": "4778386be5c3a3c5e8e1492a79a87adb996b5d7a25db5ad4b0116eb81cde5708",
+    "_meta/prompts/wiki-compile.md": "49a729d1134f95e9db4bfe0040b28c14b31ded216760eb98023c6d190c6e666b"
+  },
+  "collector_record_sha256": "efbca4fe8a25addbb5598b264f60d24b3a5251242dac640f4130c09162758ef1",
+  "cron_job_ids": [
+    "05ec97bfa8d5",
+    "4cff5b4f10ec",
+    "c5548510672c"
+  ],
+  "collector": {
+    "id": "4cff5b4f10ec",
+    "enabled": true,
+    "state": "scheduled",
+    "model": "gpt-6-astra",
+    "provider": "codex-lb",
+    "reasoning_effort": "xhigh",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 15 * * *",
+      "display": "0 15 * * *"
+    },
+    "workdir": "/home/ainsdev/wiki/pkm-articles",
+    "deliver": "local",
+    "next_run_at": "2026-09-29T15:00:00+00:00"
+  },
+  "knowledge_pages": [],
+  "log_prefix_bytes": 52321,
+  "collection_lock_present": false,
+  "contract_instances_valid": 4,
+  "git_diff_check": "pass",
+  "git_status": " M AGENTS.md\n M README.md\n M SCHEMA.md\n M _meta/COLLECTION.md\n M _meta/COMPILATION.md\n M _meta/state/4cff5b4f10ec.json\n M _meta/topics.json\n M docs/lectures/5w/paper-collection-cron.md\n M docs/lectures/5w/paper-collection.md\n M index.md\n M log.md\n M raw/articles/4cff5b4f10ec/index.md\n?? _meta/AUTOMATION.md\n?? _meta/QUERY-FEEDBACK.md\n?? _meta/RESEARCH-PROFILE.md\n?? _meta/RESEARCH-REVIEW.md\n?? _meta/STATE-CONTRACTS.md\n?? _meta/automation-contracts.schema.json\n?? _meta/automation.json\n?? _meta/migrations/20260929T025946Z-pdf-fallback-policy/\n?? _meta/migrations/20260929T034401Z-pdf-fallback-policy/\n?? _meta/prompts/\n?? _meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/\n?? _meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/\n?? _meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/\n?? _meta/runs/wiki/\n?? _meta/state/compilation.json\n?? _meta/state/feedback.json\n?? _meta/state/research-review.json\n?? raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/\n?? raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/\n",
+  "body_content_exposed_to_model": false,
+  "body_operations": "hash,length,PDF boundary markers only; no extraction or semantic reading"
+}

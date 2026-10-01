@@ -1,0 +1,41 @@
+test_corrupt_pdf_is_partial_with_unknown_page_count_no_model (test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model) ... ERROR
+
+======================================================================
+ERROR: test_corrupt_pdf_is_partial_with_unknown_page_count_no_model (test_content.ContentTests.test_corrupt_pdf_is_partial_with_unknown_page_count_no_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/.venv-pdf-reader/lib/python3.12/site-packages/pypdf/_reader.py", line 833, in _find_startxref_pos
+    startxref = int(line)
+                ^^^^^^^^^
+ValueError: invalid literal for int() with base 10: b'synthetic-corrupt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 325, in test_corrupt_pdf_is_partial_with_unknown_page_count_no_model
+    bundle = self.content.process(self.ctx, client_factory=f, pdf_module=pdf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 345, in process
+    source, evidence, telemetry = _source(ctx, pdf_module, deadline, clock)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 92, in _source
+    return _pdf_source(data, pdf_module, deadline, clock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 132, in _pdf_source
+    reader = pdf.PdfReader(io.BytesIO(data), strict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/.venv-pdf-reader/lib/python3.12/site-packages/pypdf/_reader.py", line 151, in __init__
+    self._initialize_stream(stream)
+  File "/home/ainsdev/wiki/pkm-articles/.venv-pdf-reader/lib/python3.12/site-packages/pypdf/_reader.py", line 175, in _initialize_stream
+    self.read(stream)
+  File "/home/ainsdev/wiki/pkm-articles/.venv-pdf-reader/lib/python3.12/site-packages/pypdf/_reader.py", line 690, in read
+    startxref = self._find_startxref_pos(stream)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/.venv-pdf-reader/lib/python3.12/site-packages/pypdf/_reader.py", line 837, in _find_startxref_pos
+    raise PdfReadError("startxref not found")
+pypdf.errors.PdfReadError: startxref not found
+
+----------------------------------------------------------------------
+Ran 1 test in 0.168s
+
+FAILED (errors=1)

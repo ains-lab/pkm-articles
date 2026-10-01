@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/91LY8eG9bD1bcESLOT7PlQqp93g</id>
+  <title>arXiv Query: search_query=( (ti:"large language model" OR abs:"large language model") OR (ti:"language model" OR abs:"language model") OR (ti:"LLM" OR abs:"LLM") OR (ti:"LLMs" OR abs:"LLMs") OR (ti:"foundation model" OR abs:"foundation model") OR (ti:"generative AI" OR abs:"generative AI") OR (ti:"AI agent" OR abs:"AI agent") OR (ti:"LLM agent" OR abs:"LLM agent") OR (ti:"agentic AI" OR abs:"agentic AI") OR (ti:"Model Context Protocol" OR abs:"Model Context Protocol") OR (ti:"machine learning" OR abs:"machine learning") OR (ti:"deep learning" OR abs:"deep learning") OR (ti:"neural network" OR abs:"neural network") OR (ti:"vision language model" OR abs:"vision language model") OR (ti:"diffusion model" OR abs:"diffusion model") ) AND ( (ti:"prompt injection" OR abs:"prompt injection") OR (ti:"indirect prompt injection" OR abs:"indirect prompt injection") OR (ti:"jailbreak" OR abs:"jailbreak") OR (ti:"jailbreaking" OR abs:"jailbreaking") OR (ti:"guardrail bypass" OR abs:"guardrail bypass") OR (ti:"data poisoning" OR abs:"data poisoning") OR (ti:"model poisoning" OR abs:"model poisoning") OR (ti:"backdoor attack" OR abs:"backdoor attack") OR (ti:"RAG poisoning" OR abs:"RAG poisoning") OR (ti:"memory poisoning" OR abs:"memory poisoning") OR (ti:"model extraction" OR abs:"model extraction") OR (ti:"model stealing" OR abs:"model stealing") OR (ti:"membership inference" OR abs:"membership inference") OR (ti:"model inversion" OR abs:"model inversion") OR (ti:"training data extraction" OR abs:"training data extraction") OR (ti:"data exfiltration" OR abs:"data exfiltration") OR (ti:"tool poisoning" OR abs:"tool poisoning") OR (ti:"tool hijacking" OR abs:"tool hijacking") OR (ti:"privilege escalation" OR abs:"privilege escalation") OR (ti:"authorization bypass" OR abs:"authorization bypass") OR (ti:"confused deputy" OR abs:"confused deputy") OR (ti:"least privilege" OR abs:"least privilege") OR (ti:"information flow control" OR abs:"information flow control") OR (ti:"capability-based security" OR abs:"capability-based security") OR (ti:"sandbox escape" OR abs:"sandbox escape") OR (ti:"prompt injection defense" OR abs:"prompt injection defense") OR (ti:"adversarial example" OR abs:"adversarial example") OR (ti:"evasion attack" OR abs:"evasion attack") OR (ti:"adversarial robustness" OR abs:"adversarial robustness") OR (ti:"certified robustness" OR abs:"certified robustness") OR (ti:"supply chain attack" OR abs:"supply chain attack") OR (ti:"denial of service" OR abs:"denial of service") OR (ti:"denial of wallet" OR abs:"denial of wallet") OR (ti:"sponge attack" OR abs:"sponge attack") )&amp;id_list=2609.33910v1,2609.33871v1,2607.10490v2,2609.33773v1,2605.06992v2,2609.33691v1,2609.33658v1,2605.16035v2,2609.33462v1,2609.33446v1&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-01T08:05:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=((ti:%22large+language+model%22+OR+abs:%22large+language+model%22)+OR+((ti:%22language+model%22+OR+abs:%22language+model%22)+OR+((ti:%22LLM%22+OR+abs:%22LLM%22)+OR+((ti:%22LLMs%22+OR+abs:%22LLMs%22)+OR+((ti:%22foundation+model%22+OR+abs:%22foundation+model%22)+OR+((ti:%22generative+AI%22+OR+abs:%22generative+AI%22)+OR+((ti:%22AI+agent%22+OR+abs:%22AI+agent%22)+OR+((ti:%22LLM+agent%22+OR+abs:%22LLM+agent%22)+OR+((ti:%22agentic+AI%22+OR+abs:%22agentic+AI%22)+OR+((ti:%22Model+Context+Protocol%22+OR+abs:%22Model+Context+Protocol%22)+OR+((ti:%22machine+learning%22+OR+abs:%22machine+learning%22)+OR+((ti:%22deep+learning%22+OR+abs:%22deep+learning%22)+OR+((ti:%22neural+network%22+OR+abs:%22neural+network%22)+OR+((ti:%22vision+language+model%22+OR+abs:%22vision+language+model%22)+OR+(ti:%22diffusion+model%22+OR+abs:%22diffusion+model%22)))))))))))))))+AND+((ti:%22prompt+injection%22+OR+abs:%22prompt+injection%22)+OR+((ti:%22indirect+prompt+injection%22+OR+abs:%22indirect+prompt+injection%22)+OR+((ti:%22jailbreak%22+OR+abs:%22jailbreak%22)+OR+((ti:%22jailbreaking%22+OR+abs:%22jailbreaking%22)+OR+((ti:%22guardrail+bypass%22+OR+abs:%22guardrail+bypass%22)+OR+((ti:%22data+poisoning%22+OR+abs:%22data+poisoning%22)+OR+((ti:%22model+poisoning%22+OR+abs:%22model+poisoning%22)+OR+((ti:%22backdoor+attack%22+OR+abs:%22backdoor+attack%22)+OR+((ti:%22RAG+poisoning%22+OR+abs:%22RAG+poisoning%22)+OR+((ti:%22memory+poisoning%22+OR+abs:%22memory+poisoning%22)+OR+((ti:%22model+extraction%22+OR+abs:%22model+extraction%22)+OR+((ti:%22model+stealing%22+OR+abs:%22model+stealing%22)+OR+((ti:%22membership+inference%22+OR+abs:%22membership+inference%22)+OR+((ti:%22model+inversion%22+OR+abs:%22model+inversion%22)+OR+((ti:%22training+data+extraction%22+OR+abs:%22training+data+extraction%22)+OR+((ti:%22data+exfiltration%22+OR+abs:%22data+exfiltration%22)+OR+((ti:%22tool+poisoning%22+OR+abs:%22tool+poisoning%22)+OR+((ti:%22tool+hijacking%22+OR+abs:%22tool+hijacking%22)+OR+((ti:%22privilege+escalation%22+OR+abs:%22privilege+escalation%22)+OR+((ti:%22authorization+bypass%22+OR+abs:%22authorization+bypass%22)+OR+((ti:%22confused+deputy%22+OR+abs:%22confused+deputy%22)+OR+((ti:%22least+privilege%22+OR+abs:%22least+privilege%22)+OR+((ti:%22information+flow+control%22+OR+abs:%22information+flow+control%22)+OR+((ti:%22capability-based+security%22+OR+abs:%22capability-based+security%22)+OR+((ti:%22sandbox+escape%22+OR+abs:%22sandbox+escape%22)+OR+((ti:%22prompt+injection+defense%22+OR+abs:%22prompt+injection+defense%22)+OR+((ti:%22adversarial+example%22+OR+abs:%22adversarial+example%22)+OR+((ti:%22evasion+attack%22+OR+abs:%22evasion+attack%22)+OR+((ti:%22adversarial+robustness%22+OR+abs:%22adversarial+robustness%22)+OR+((ti:%22certified+robustness%22+OR+abs:%22certified+robustness%22)+OR+((ti:%22supply+chain+attack%22+OR+abs:%22supply+chain+attack%22)+OR+((ti:%22denial+of+service%22+OR+abs:%22denial+of+service%22)+OR+((ti:%22denial+of+wallet%22+OR+abs:%22denial+of+wallet%22)+OR+(ti:%22sponge+attack%22+OR+abs:%22sponge+attack%22))))))))))))))))))))))))))))))))))&amp;start=0&amp;max_results=100&amp;id_list=2609.33910v1,2609.33871v1,2607.10490v2,2609.33773v1,2605.06992v2,2609.33691v1,2609.33658v1,2605.16035v2,2609.33462v1,2609.33446v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.33910v1</id>
+    <title>When Consent Outlives Context: Residual Authority Replay in Long-Lived Agents</title>
+    <updated>2026-09-27T20:43:53Z</updated>
+    <link href="https://arxiv.org/abs/2609.33910v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.33910v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM agents increasingly rely on user approval to authorize security-sensitive actions at runtime. Such approvals are granted within a specific task and execution context. In long-lived agents, authorization decisions may need to persist across tasks or sessions. We find that this continuity can outlive the context that originally justified the approval, creating residual authority reusable without renewed consent. We expose this failure mode through a longitudinal attack that starts from a target security-sensitive action, identifies the authority required to execute it, induces benign interactions that legitimately obtain that authority, and later replays the residual authority during adversarial execution. Across controlled and live settings, we demonstrate that residual-authority replay arises in practice and substantially increases the success of prompt-injection and context-rebinding attacks. We evaluate 508 AgentDojo attack cases across six LLM families using production-derived authorization semantics. With residual authority, attack success rate (ASR) increases by up to 35.1 percentage points compared with a fresh authorization state. In live context-rebinding attacks on 55 Terminal-Bench cases across three real-world production coding agents, residual-authority replay increases ASR by 24.9 percentage points on average. These findings expose a fundamental mismatch between persistent authorization and the contextual nature of user consent in long-lived LLM agents.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-27T20:43:53Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhihao Zhang</name>
+    </author>
+    <author>
+      <name>Chao Wang</name>
+    </author>
+    <author>
+      <name>Rujia Li</name>
+    </author>
+    <author>
+      <name>Qingze Wang</name>
+    </author>
+    <author>
+      <name>Xiaoyan Sun</name>
+    </author>
+    <author>
+      <name>Jun Dai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.10490v2</id>
+    <title>NetInjectBench: Benchmarking Indirect Prompt Injection in Tool-Using Large Language Model Agents for Network Operations</title>
+    <updated>2026-09-27T19:18:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.10490v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.10490v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tool-using large language model (LLM) agents are attractive for network operations, but tickets, alerts, logs, runbooks, and ChatOps messages can carry indirect prompt injections. We present NetInjectBench, a 130-scenario benchmark that separates untrusted artifact text, trusted policy metadata, and evaluation labels for network-operation tool use. The sample contains 40 benign, 40 weak-attack, 40 strong-attack, and 10 approved high-impact change scenarios; each is evaluated with Qwen2.5-7B, Llama3.1-8B, and Mistral-7B. Across 240 attack instances, naive execution reached an 82.50% unsafe tool-action rate. Prompt-only safety, Self-Reminder, Spotlighting, and a Two-Pass LLM Judge reduced this rate to 25.63%, 21.67%, 18.33%, and 10.00%, respectively. Static allowlisting reached 5.00% but blocked all approved changes, yielding 0.00% usefulness and 100.00% overblocking on approved cases. Under the stated metadata-integrity assumption, the metadata-aware policy gate produced 0/240 unsafe attack actions, with a 95% Wilson upper bound of 1.58%, while preserving 99.17% attack-scenario usefulness and 100.00% approved-change usefulness. The findings show that network-operation agents need execution-time authorization boundaries alongside prompt-level instruction hygiene.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-11T21:54:20Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ruksat Khan Shayoni</name>
+    </author>
+    <author>
+      <name>Muhammad Faraz Shoaib</name>
+    </author>
+    <author>
+      <name>S M Asif Hossain</name>
+    </author>
+    <author>
+      <name>M. F. Mridha</name>
+    </author>
+  </entry>
+</feed>

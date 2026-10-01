@@ -1,0 +1,12 @@
+{
+  "schema": "pkm-pdf-publication-preparation-refusal/v1",
+  "version_id": "2609.30614v1",
+  "stage": "build_plan_before_journal",
+  "error": "preflight record binding",
+  "diagnosis": "Fresh caller used default integer timeout 2400; immutable actual CLI result recorded float 2400.0. Canonical comparison correctly refused.",
+  "corrective_action": "Pass original result http_timeout_s to fresh preflight; do not change source, result or validator.",
+  "target_exists": false,
+  "journal_exists": false,
+  "lock_released": true,
+  "model_retry": false
+}

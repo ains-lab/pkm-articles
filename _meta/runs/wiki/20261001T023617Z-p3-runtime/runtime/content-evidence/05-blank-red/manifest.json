@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests"
+  ],
+  "cwd": "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime",
+  "returncode": 1,
+  "evidence_kind": "synthetic_only_execution",
+  "live_model_calls": 0,
+  "snapshots": {
+    "p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "content.py": "756a5ddb5b5bc843093c7688719d1825ee05b528ba5420e0fb81eedf117ffd01",
+    "stderr.txt": "1936034cf0c1a0838f4d91bb82aaf47cbae2ba7ee7edd066f45995a21fa115e3",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_content.py": "3d9be8834017b31a6db13af2d1cb252fee4b82ab28a16250f8b87618effc9e91"
+  }
+}

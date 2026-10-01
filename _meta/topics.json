@@ -6,10 +6,25 @@
   "topics": [
     {
       "cron_id": "4cff5b4f10ec",
-      "name": "AI Agent Security",
+      "name": "AI Security",
       "source": "arxiv",
-      "original_query": "(\"AI agent\" OR \"autonomous agent\" OR \"LLM agent\" OR \"intelligent agent\") AND (security OR safety OR vulnerability OR attack OR defense OR robustness OR adversarial)",
-      "api_query": "(all:\"AI agent\" OR all:\"autonomous agent\" OR all:\"LLM agent\" OR all:\"intelligent agent\") AND (all:security OR all:safety OR all:vulnerability OR all:attack OR all:defense OR all:robustness OR all:adversarial)",
+      "original_query": "(\n  (ti:\"large language model\" OR abs:\"large language model\")\n  OR (ti:\"language model\" OR abs:\"language model\")\n  OR (ti:\"LLM\" OR abs:\"LLM\")\n  OR (ti:\"LLMs\" OR abs:\"LLMs\")\n  OR (ti:\"foundation model\" OR abs:\"foundation model\")\n  OR (ti:\"generative AI\" OR abs:\"generative AI\")\n  OR (ti:\"AI agent\" OR abs:\"AI agent\")\n  OR (ti:\"LLM agent\" OR abs:\"LLM agent\")\n  OR (ti:\"agentic AI\" OR abs:\"agentic AI\")\n  OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\")\n  OR (ti:\"machine learning\" OR abs:\"machine learning\")\n  OR (ti:\"deep learning\" OR abs:\"deep learning\")\n  OR (ti:\"neural network\" OR abs:\"neural network\")\n  OR (ti:\"vision language model\" OR abs:\"vision language model\")\n  OR (ti:\"diffusion model\" OR abs:\"diffusion model\")\n)\nAND\n(\n  (ti:\"prompt injection\" OR abs:\"prompt injection\")\n  OR (ti:\"indirect prompt injection\" OR abs:\"indirect prompt injection\")\n  OR (ti:\"jailbreak\" OR abs:\"jailbreak\")\n  OR (ti:\"jailbreaking\" OR abs:\"jailbreaking\")\n  OR (ti:\"guardrail bypass\" OR abs:\"guardrail bypass\")\n  OR (ti:\"data poisoning\" OR abs:\"data poisoning\")\n  OR (ti:\"model poisoning\" OR abs:\"model poisoning\")\n  OR (ti:\"backdoor attack\" OR abs:\"backdoor attack\")\n  OR (ti:\"RAG poisoning\" OR abs:\"RAG poisoning\")\n  OR (ti:\"memory poisoning\" OR abs:\"memory poisoning\")\n  OR (ti:\"model extraction\" OR abs:\"model extraction\")\n  OR (ti:\"model stealing\" OR abs:\"model stealing\")\n  OR (ti:\"membership inference\" OR abs:\"membership inference\")\n  OR (ti:\"model inversion\" OR abs:\"model inversion\")\n  OR (ti:\"training data extraction\" OR abs:\"training data extraction\")\n  OR (ti:\"data exfiltration\" OR abs:\"data exfiltration\")\n  OR (ti:\"tool poisoning\" OR abs:\"tool poisoning\")\n  OR (ti:\"tool hijacking\" OR abs:\"tool hijacking\")\n  OR (ti:\"privilege escalation\" OR abs:\"privilege escalation\")\n  OR (ti:\"authorization bypass\" OR abs:\"authorization bypass\")\n  OR (ti:\"confused deputy\" OR abs:\"confused deputy\")\n  OR (ti:\"least privilege\" OR abs:\"least privilege\")\n  OR (ti:\"information flow control\" OR abs:\"information flow control\")\n  OR (ti:\"capability-based security\" OR abs:\"capability-based security\")\n  OR (ti:\"sandbox escape\" OR abs:\"sandbox escape\")\n  OR (ti:\"prompt injection defense\" OR abs:\"prompt injection defense\")\n  OR (ti:\"adversarial example\" OR abs:\"adversarial example\")\n  OR (ti:\"evasion attack\" OR abs:\"evasion attack\")\n  OR (ti:\"adversarial robustness\" OR abs:\"adversarial robustness\")\n  OR (ti:\"certified robustness\" OR abs:\"certified robustness\")\n  OR (ti:\"supply chain attack\" OR abs:\"supply chain attack\")\n  OR (ti:\"denial of service\" OR abs:\"denial of service\")\n  OR (ti:\"denial of wallet\" OR abs:\"denial of wallet\")\n  OR (ti:\"sponge attack\" OR abs:\"sponge attack\")\n)",
+      "api_query": "(\n  (ti:\"large language model\" OR abs:\"large language model\")\n  OR (ti:\"language model\" OR abs:\"language model\")\n  OR (ti:\"LLM\" OR abs:\"LLM\")\n  OR (ti:\"LLMs\" OR abs:\"LLMs\")\n  OR (ti:\"foundation model\" OR abs:\"foundation model\")\n  OR (ti:\"generative AI\" OR abs:\"generative AI\")\n  OR (ti:\"AI agent\" OR abs:\"AI agent\")\n  OR (ti:\"LLM agent\" OR abs:\"LLM agent\")\n  OR (ti:\"agentic AI\" OR abs:\"agentic AI\")\n  OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\")\n  OR (ti:\"machine learning\" OR abs:\"machine learning\")\n  OR (ti:\"deep learning\" OR abs:\"deep learning\")\n  OR (ti:\"neural network\" OR abs:\"neural network\")\n  OR (ti:\"vision language model\" OR abs:\"vision language model\")\n  OR (ti:\"diffusion model\" OR abs:\"diffusion model\")\n)\nAND\n(\n  (ti:\"prompt injection\" OR abs:\"prompt injection\")\n  OR (ti:\"indirect prompt injection\" OR abs:\"indirect prompt injection\")\n  OR (ti:\"jailbreak\" OR abs:\"jailbreak\")\n  OR (ti:\"jailbreaking\" OR abs:\"jailbreaking\")\n  OR (ti:\"guardrail bypass\" OR abs:\"guardrail bypass\")\n  OR (ti:\"data poisoning\" OR abs:\"data poisoning\")\n  OR (ti:\"model poisoning\" OR abs:\"model poisoning\")\n  OR (ti:\"backdoor attack\" OR abs:\"backdoor attack\")\n  OR (ti:\"RAG poisoning\" OR abs:\"RAG poisoning\")\n  OR (ti:\"memory poisoning\" OR abs:\"memory poisoning\")\n  OR (ti:\"model extraction\" OR abs:\"model extraction\")\n  OR (ti:\"model stealing\" OR abs:\"model stealing\")\n  OR (ti:\"membership inference\" OR abs:\"membership inference\")\n  OR (ti:\"model inversion\" OR abs:\"model inversion\")\n  OR (ti:\"training data extraction\" OR abs:\"training data extraction\")\n  OR (ti:\"data exfiltration\" OR abs:\"data exfiltration\")\n  OR (ti:\"tool poisoning\" OR abs:\"tool poisoning\")\n  OR (ti:\"tool hijacking\" OR abs:\"tool hijacking\")\n  OR (ti:\"privilege escalation\" OR abs:\"privilege escalation\")\n  OR (ti:\"authorization bypass\" OR abs:\"authorization bypass\")\n  OR (ti:\"confused deputy\" OR abs:\"confused deputy\")\n  OR (ti:\"least privilege\" OR abs:\"least privilege\")\n  OR (ti:\"information flow control\" OR abs:\"information flow control\")\n  OR (ti:\"capability-based security\" OR abs:\"capability-based security\")\n  OR (ti:\"sandbox escape\" OR abs:\"sandbox escape\")\n  OR (ti:\"prompt injection defense\" OR abs:\"prompt injection defense\")\n  OR (ti:\"adversarial example\" OR abs:\"adversarial example\")\n  OR (ti:\"evasion attack\" OR abs:\"evasion attack\")\n  OR (ti:\"adversarial robustness\" OR abs:\"adversarial robustness\")\n  OR (ti:\"certified robustness\" OR abs:\"certified robustness\")\n  OR (ti:\"supply chain attack\" OR abs:\"supply chain attack\")\n  OR (ti:\"denial of service\" OR abs:\"denial of service\")\n  OR (ti:\"denial of wallet\" OR abs:\"denial of wallet\")\n  OR (ti:\"sponge attack\" OR abs:\"sponge attack\")\n)",
+      "query_revision": "ai-security-ti-abs/v1",
+      "query_sha256": "4ea7f574dbe38a7bfa6f1556d25016b404bfaffb70835a09b25c56cf35ac988c",
+      "query_approval_ref": "_meta/migrations/20261001-ai-security-query/approval.json",
+      "query_policy_ref": "_meta/migrations/20261001-ai-security-query/query-policy.md",
+      "pending_query_policy": {
+        "require_current_query_exact_version_match_before_download": true,
+        "legacy_pending_action": "retain_and_revalidate_no_automatic_grandfathering",
+        "nonmatch_action": "retain_pending_skip_download_report_query_not_matched",
+        "unknown_action": "retain_pending_skip_download_report_failure",
+        "id_filter_batch_size": 10,
+        "request_line_bytes_exclusive_max": 4094,
+        "semantic_relevance_gate_enabled": false,
+        "checkpoint_reset": false,
+        "historical_backfill": false
+      },
       "schedule": {
         "timezone": "Asia/Seoul",
         "local_time": "00:00",
@@ -28,26 +43,37 @@
       "api_min_interval_seconds": 3,
       "date_filter": "client-side Atom updated timestamps; never lastUpdatedDate search field",
       "pipeline": {
-        "id": "arxiv-html-original/v1",
-        "source_format": "html",
+        "id": "arxiv-html-preferred-pdf-fallback/v1",
+        "source_format": "html_preferred_pdf_fallback",
         "preprocessing_enabled": false,
-        "download_pdf": false,
+        "download_pdf": true,
+        "pdf_download_policy": "only_after_confirmed_official_html_unavailable_same_version",
         "download_assets": false,
         "rewrite_html": false,
         "auxiliary_model_calls_enabled": false,
-        "publication_gate": "version_pinned_original_html_http_identity_and_hash_verified",
-        "schema_version": "arxiv-html-source/v1",
-        "missing_html_policy": "record_html_unavailable_no_pdf_or_conversion_fallback",
-        "unavailable_retry_days": 7
+        "publication_gate": "version_pinned_original_html_or_pdf_http_format_length_and_hash_verified",
+        "schema_versions": {
+          "html": "arxiv-html-source/v1",
+          "pdf": "arxiv-pdf-source/v1"
+        },
+        "missing_html_policy": "preserve_official_unavailability_evidence_then_download_same_version_pdf",
+        "html_transport_failure_policy": "retain_pending_no_pdf_fallback",
+        "existing_source_policy": "verify_and_reuse_either_format_no_automatic_format_replacement",
+        "unavailable_retry_days": 7,
+        "pdf_fallback_waits_for_html_retry": false
       },
-      "activation_approval": "User explicitly approved original arXiv HTML only, removal of all preprocessing, permanent deletion without backup including PDFs for the 2 HTML-unavailable papers, and resumption of the existing HTML-only daily Cron after verification.",
+      "activation_approval": "2026-09-29: User requested HTML-first collection with same-version official PDF originals only when arXiv HTML is unavailable, renewed the request, and approved the protected AGENTS.md edit. Apply this policy to the existing daily Cron; queue the 2 previously approved, HTML-unavailable targets. No preprocessing or automatic Wiki compilation. Earlier deletion approval is historical and grants no new deletion authority.",
       "delivery": "local",
       "failure_delivery": "local",
       "no_change_policy": "record successful zero-result run; no external notification",
       "overlap_policy": "one global atomic directory lock; skip if busy; never automatically steal a stale lock",
       "missed_run_policy": "next actual run discovers from persisted successful-search checkpoint, clamped to first-run floor; no one-run-per-missed-day replay",
-      "backfill_policy": "no captures earlier than first-run 24-hour floor; oldest pending first; cap is per KST date",
-      "failure_policy": "preserve failed HTML staging and pending on search/download/identity/hash failure; after 3 consecutive core failures set local safety_block; confirmed HTML unavailable is separate, warned and rechecked after 7 days, never counted as captured",
+      "backfill_policy": "no new discovery earlier than first-run 24-hour floor; oldest eligible pending first; cap is per KST date; existing approved missing IDs in existing_target_pdf_fallback_ids may be captured without moving the discovery checkpoint",
+      "existing_target_pdf_fallback_ids": [
+        "2609.30614v1",
+        "2609.30824v1"
+      ],
+      "failure_policy": "preserve failed HTML/PDF staging and pending on search/download/identity/hash failure; after 3 consecutive core failures set local safety_block; confirmed HTML unavailable permits same-version PDF capture, not transport-error bypass; confirmed absence of both formats stays pending until a 7-day retry; count only verified stored originals as captured",
       "safety_pause_scope": "local execution gate, not an automatic Hermes cron pause",
       "forbidden_outputs": [
         "entities/",

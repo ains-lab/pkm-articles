@@ -1,0 +1,62 @@
+[
+  {
+    "version_id": "2609.35366v1",
+    "format": "html",
+    "target": "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35366v1/source.html",
+    "bytes": 311120,
+    "sha256": "08ac9572cbc4de7377888449d7397566b46ee546d0cd5ffbfb158c138fd6c6c0",
+    "metadata_sha256": "229c581ae157accff26c1734c4569f12c40fb6c84a97d805b9b331f15d9d0f7c",
+    "published_at": "2026-09-30T15:10:28.340989+00:00",
+    "atomic_method": "renameat2_RENAME_NOREPLACE",
+    "readback_verified": true
+  },
+  {
+    "version_id": "2609.35117v1",
+    "format": "html",
+    "target": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35117v1/source.html",
+    "bytes": 629329,
+    "sha256": "3d24db5dc07a7408d4873e4483f7647c67d16b6e1b7e2cfc512e5ca98c009bb5",
+    "metadata_sha256": "ea09d26bac27711f68adeaafed6c21a8e44f1dbb16110b37dd99ceb5c10f4b9d",
+    "published_at": "2026-09-30T15:10:28.377261+00:00",
+    "atomic_method": "renameat2_RENAME_NOREPLACE",
+    "readback_verified": true
+  },
+  {
+    "version_id": "2609.35088v1",
+    "format": "html",
+    "target": "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.35088v1/source.html",
+    "bytes": 432731,
+    "sha256": "39d224af9ba7af8a85de0e8ca0e17a35199b6254b706784c758800834d6c9c7c",
+    "metadata_sha256": "efdc3fd3b1472de522c249edab3f3bc112bb793f691f17be40c56429cf4c491e",
+    "published_at": "2026-09-30T15:10:28.419840+00:00",
+    "atomic_method": "renameat2_RENAME_NOREPLACE",
+    "readback_verified": true
+  },
+  {
+    "version_id": "2605.09027v3",
+    "format": "html",
+    "target": "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2605.09027v3/source.html",
+    "bytes": 226687,
+    "sha256": "341b46e778fc38ebc5f0ef7213b211d6113495cc93d21a1ee484c0fe00d34cab",
+    "metadata_sha256": "9c5b7c71583ad2fdca0caa45aff13d77d188a09565e604151c06da028298f86c",
+    "published_at": "2026-09-30T15:10:28.462642+00:00",
+    "atomic_method": "renameat2_RENAME_NOREPLACE",
+    "readback_verified": true
+  },
+  {
+    "version_id": "2609.34790v1",
+    "format": "html",
+    "target": "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1",
+    "source_path": "raw/articles/4cff5b4f10ec/arxiv-2609.34790v1/source.html",
+    "bytes": 615759,
+    "sha256": "079fd74b7e219228d332f3239c03e65f8302cb1f4b7fe620eecdf0ea0bcddf94",
+    "metadata_sha256": "20f6bc0e3cae5ecc6dea1e0a933c284c062958ccc9492a5c1a5f8290045cee6c",
+    "published_at": "2026-09-30T15:10:28.505121+00:00",
+    "atomic_method": "renameat2_RENAME_NOREPLACE",
+    "readback_verified": true
+  }
+]

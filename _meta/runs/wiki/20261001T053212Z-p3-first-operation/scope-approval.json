@@ -1,0 +1,54 @@
+{
+  "schema": "pkm-p3-operations-scope/v1",
+  "actor": "user",
+  "approved": true,
+  "user_request": "다음 단계로 운영을 진행해주세요",
+  "clarification_question": "위 범위의 실제 텍스트 처리·모델 전송·검증 후 게시와 이번 실행 중 Wiki 직접 편집 중지에 동의하며, 어디까지 진행할까요?",
+  "user_confirmation": "첫 배치 실제 실행 + 일시정지 Cron 등록 승인",
+  "recorded_at": "2026-10-01T05:32:45.614917+00:00",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "operational_revision": "p3-single-note-first-operation/20261001",
+  "scope": "current and future collected HTML/PDF-text, single new draft note per version",
+  "phase": "P3",
+  "manual_run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation",
+  "manual_run_limit": {
+    "papers": 5,
+    "soft_minutes": 45,
+    "attempts_including_initial": 2
+  },
+  "model": {
+    "provider": "codex-lb",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "fallback_allowed": false
+  },
+  "cost_policy": "no_cost_cap",
+  "transfer": {
+    "local_html_text": true,
+    "pdf_embedded_text": true,
+    "existing_wiki": true,
+    "pdf_binary": false,
+    "images": false,
+    "ocr": false,
+    "external_assets": false
+  },
+  "validated_publication_authorized": true,
+  "edit_freeze": {
+    "mode": "run",
+    "run": "_meta/runs/wiki/20261001T053212Z-p3-first-operation"
+  },
+  "cron_registration_authorized": true,
+  "cron_registration_mode": "paused",
+  "schedule": {
+    "expr": "0 17 * * *",
+    "scheduler_timezone": "UTC",
+    "display_timezone": "Asia/Seoul",
+    "display_time": "02:00"
+  },
+  "activation_authorized": false,
+  "scheduled_run_edit_freeze_authorized": false,
+  "concept_comparison_updates": false,
+  "phase_P4_P5_P6": false,
+  "collector_mutations": false,
+  "other_jobs_mutations": false
+}

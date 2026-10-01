@@ -1,0 +1,97 @@
+test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) ... 
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='schema') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='actor') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='approved') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='phase') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='user_request') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='edit_freeze') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='wiki_root') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='activation_authorized') ... FAIL
+  test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='hash') ... FAIL
+test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) ... ERROR
+
+======================================================================
+ERROR: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 175, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    self.assertEqual(ctx['snapshots'][ref],self.f.approval['scope_approval_sha256'])
+                     ~~~~~~~~~~~~~~~~^^^^^
+KeyError: '_meta/runs/wiki/synthetic-daily/scope-approval.json'
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='schema')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='actor')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='approved')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='phase')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='user_request')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='edit_freeze')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='wiki_root')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='activation_authorized')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_optional_scope_approval_is_hashed_user_authority_not_a_label (test_scheduled_safety.ScheduledSafetyTests.test_optional_scope_approval_is_hashed_user_authority_not_a_label) (field='hash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 169, in test_optional_scope_approval_is_hashed_user_authority_not_a_label
+    with self.assertRaisesRegex(ValueError,'scope_approval'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 1.445s
+
+FAILED (failures=9, errors=1)

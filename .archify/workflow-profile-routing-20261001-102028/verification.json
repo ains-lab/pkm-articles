@@ -1,0 +1,131 @@
+{
+  "status": "pass",
+  "verified_at": "2026-10-01T10:50:23.256415+00:00",
+  "delivered_count": 2,
+  "artifacts": [
+    {
+      "type": "sequence",
+      "html": ".archify/workflow-profile-routing-20261001-102028/03-api-sequence/diagram.html",
+      "specification": ".archify/workflow-profile-routing-20261001-102028/03-api-sequence/candidate.json",
+      "sha256": "9ab8bbaf0de93514756b8f1f9b541d3f3a0b978ad970b2bbbfa7cc5c3cdb65ad",
+      "specification_sha256": "a87dc4acc0334d59faac189592330c2ad22e32c90d8aa085a704535587f38196",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "finalize": ".archify/workflow-profile-routing-20261001-102028/03-api-sequence/label-review/diagram.finalize.json",
+      "evidence": [
+        ".archify/workflow-profile-routing-20261001-102028/03-api-sequence/label-review/diagram.browser-check.json",
+        ".archify/workflow-profile-routing-20261001-102028/03-api-sequence/label-review/visual-check/diagram.visual-check.json"
+      ]
+    },
+    {
+      "type": "workflow",
+      "html": ".archify/workflow-profile-routing-20261001-102028/02-profile-map/diagram.html",
+      "specification": ".archify/workflow-profile-routing-20261001-102028/02-profile-map/candidate.json",
+      "sha256": "0e72f6d8bef09138335e73f554af38be409b7424fd01e5d3d84efbe3ac0f6c76",
+      "specification_sha256": "aa5768b98546019559fad20872d7d4029ed427e52cff1099ea57ae9c2565d68f",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "finalize": ".archify/workflow-profile-routing-20261001-102028/02-profile-map/review-3/diagram.finalize.json",
+      "evidence": [
+        ".archify/workflow-profile-routing-20261001-102028/02-profile-map/review-3/diagram.browser-check.json",
+        ".archify/workflow-profile-routing-20261001-102028/02-profile-map/review-3/visual-check/diagram.visual-check.json"
+      ]
+    }
+  ],
+  "preserved_document_slide_files": 80,
+  "baseline_file_count": 81,
+  "intentional_existing_doc_changes": [
+    "docs/techblog/hermes-api-gateway-workdir-assoc/ARCHIFY.md"
+  ],
+  "local_link_count": 18,
+  "links": [
+    {
+      "document": "PROFILE-ROUTING.md",
+      "target": "../../../.archify/workflow-profile-routing-20261001-102028/03-api-sequence/diagram.html"
+    },
+    {
+      "document": "PROFILE-ROUTING.md",
+      "target": "../../../.archify/workflow-profile-routing-20261001-102028/02-profile-map/diagram.html"
+    },
+    {
+      "document": "PROFILE-ROUTING.md",
+      "target": "../../../.archify/workflow-profile-routing-20261001-102028/EVIDENCE.md"
+    },
+    {
+      "document": "PROFILE-ROUTING.md",
+      "target": "../../../.archify/workflow-profile-routing-20261001-102028/verification.json"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "PROFILE-ROUTING.md"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "INTEGRATION-ARCHIFY.md"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/index.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/README.md"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/verification.json"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/01-system/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/02-workspace/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/03-read/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/05-collection/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/06-publication/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/07-data-ui/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html"
+    },
+    {
+      "document": "ARCHIFY.md",
+      "target": "../../../.archify/workflow-hermes-wiki-20261001-031930/artifact-receipts.json"
+    }
+  ],
+  "actual_live_api_tests": false,
+  "deployment": false,
+  "perceptual_review": "sampled; see visual-review.json; not mobile/accessibility/full-card PASS",
+  "excluded_draft": "01-roundtrip: failed workflow geometry; replaced by delivered sequence"
+}

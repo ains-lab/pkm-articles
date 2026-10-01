@@ -1,0 +1,83 @@
+{
+  "actual_input_hashes": {
+    "AGENTS.md": "7424759ee8659741c4e3846dd8b812ce2d514b10494254e4106f2fe2302f5901",
+    "SCHEMA.md": "5a1ecbe5e61e6418614078384d893f2da6e3b9dd41a45926d81d14c649b9dfe4",
+    "_meta/AUTOMATION.md": "3c13f8afbbcb7537ffe8fa28e236f39796b2cd0be7f358c833c832371df2823d",
+    "_meta/COMPILATION.md": "55a99a5c7347459e7fa5ff30ff2c70f6bc4f372050432fe13371b9f98054502a",
+    "_meta/STATE-CONTRACTS.md": "be00af5eeffb856d06d269c55819480f6ea4fe1b0f18f0847efddb29dd6447fd",
+    "_meta/automation-contracts.schema.json": "bd8c3306ec798575c0b57387c59669da22fdb0e352fcae3fa92210ebb91c940a",
+    "_meta/automation.json": "4aecf95fdcf41a360f0791d8f2777f9d42f0f13e2055d66383db80387e428b22",
+    "_meta/prompts/wiki-compile.md": "0358d81a7815190935a7a597b9f8489fd5d7d962f78915b997f9c53c645bd311",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/execution-approval.json": "b5e223fe9ecff96cd70370b5e803f73defd1a1b79a848ccd859d81253ff3ce7f",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-agent-review.json": "62dcaaf0783ecde5ee27fd17ee8d10a353b0b72e7a7893a0c770f09b38d1d977",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-verification.json": "a541ab90ae034e2093caaee75e24ad13f54df76b73b5cc55c1a342008c4c29cb",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30614v1/attempt1-result.json": "310d7d74b5c56d4d565c80f9c83bb1f4de84b57f203ce57ff76a17ed3ca61f3a",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/instructions.md": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+    "_meta/runs/wiki/20261001T001438Z-pdf-wiki/scope-approval.json": "635cf0dbf074de33730a41b3cad69cc048a359760c5bc04679d0b721318a3dad",
+    "concepts/agent-authority-and-effect-boundaries.md": "5f93d0f029984b425b9a783093c1b6a6ac786b26e91ca792b59a439df9bba092",
+    "concepts/provenance-and-audit-evidence.md": "553d26e109fc06583fca42238dc6ad95c3a962b0516ae829162cb532bb28375f",
+    "concepts/security-evaluation-units.md": "7c5bbd83c10b126144686846f8df6cb87ecae2a043887f86e299ede30c9118e0",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.json": "4525b94814015ced57de058196037ccb90f4ea66b599ce6295a8fd888f8e3e81",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/source.pdf": "a33d6b4d5ce71d59c9ea98170e5ad9d58a9b6225bca042e1cedb08ee95e00a0d",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.json": "56af875b7311e8d9db06a9b9cb9ed3ec21cf7505fc3dc2ec19b3cf29294855eb",
+    "raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/source.pdf": "4e58e68a3ad435c331a51ea767d057fa91c94dd5782200f6770d3b8040281fd8"
+  },
+  "budget_usage_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/runtime/2609.30614v1/attempt1-result.json",
+  "committed_at": "2026-10-01T02:21:24.865411+00:00",
+  "cost_usd": null,
+  "evidence_check_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-agent-review.json",
+  "human_review_ref": null,
+  "model_route": {
+    "api_mode": "codex_responses",
+    "base_url": "http://10.10.1.244:2455/v1",
+    "instructions_sha256": "48225840e59a183fe2281bed33f1fa04327daca1a48290b1c262e6bb02cf01b2",
+    "model": "gpt-6-astra",
+    "provider": "codex-lb",
+    "reasoning_effort": "xhigh",
+    "response_model": "gpt-6-astra"
+  },
+  "output_refs": [
+    {
+      "path": "entities/arxiv-2609.30614v1.md",
+      "revision": "1",
+      "sha256": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7"
+    }
+  ],
+  "read_scope": [
+    "page=1",
+    "page=2",
+    "page=3",
+    "page=4",
+    "page=5",
+    "page=6",
+    "page=7",
+    "page=8",
+    "page=9",
+    "page=10",
+    "page=11",
+    "page=12",
+    "page=13",
+    "page=14",
+    "page=15",
+    "page=16",
+    "page=17",
+    "page=18",
+    "page=19",
+    "page=20",
+    "page=21",
+    "page=22",
+    "page=23"
+  ],
+  "run_id": "20261001T001438Z-pdf-wiki",
+  "schema": "pkm-publication-receipt/v1",
+  "structural_check_ref": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/reviews/2609.30614v1-attempt1-verification.json",
+  "transaction_id": "pdf3-9ed77666bcba802e33823720750afe4d",
+  "unread_scope": [
+    "모든 그림·이미지 및 이미지 전용 내용: 미검토",
+    "수식·레이아웃·표 구조: 텍스트 추출 모호성, 시각 검증 미수행",
+    "물리적 page=5, page=7, page=9의 Figure 1–3은 추출된 캡션과 레이블 텍스트만 읽었으며, 도형·연결선·배치의 시각적 의미는 확인하지 않았다.",
+    "Proposition 1의 형식기호, 승인 큐 수식, 표의 다단 행·열 대응은 제공된 텍스트와 주변 설명으로 확인 가능한 범위만 사용했다. 원 PDF의 수식 조판과 표 구조를 시각적으로 대조하지 않았다.",
+    "스캔 또는 이미지 전용 내용은 처리하지 않았으며 OCR을 수행하지 않았다. 논문이 평가 대상으로 언급하는 첨부 스캔의 실제 내용도 제공되지 않았다."
+  ],
+  "work_key": "5788b5235ed2707f483af65f21b1060e3427455d474327ebb3ec488a551a413e"
+}

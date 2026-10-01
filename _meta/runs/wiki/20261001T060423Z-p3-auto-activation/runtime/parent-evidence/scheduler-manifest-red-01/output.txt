@@ -1,0 +1,132 @@
+test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) ... 
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_ref') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_hash') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='manifest_hash') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='schema') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_dependency') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='extra_dependency') ... FAIL
+  test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='dependency_bytes') ... FAIL
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_ref')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_hash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='manifest_hash')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='schema')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='missing_dependency')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='extra_dependency')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+======================================================================
+FAIL: test_scheduled_manifest_exact_dependencies_required_before_source_or_model (test_scheduled_safety.ScheduledSafetyTests.test_scheduled_manifest_exact_dependencies_required_before_source_or_model) (defect='dependency_bytes')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 150, in test_scheduled_manifest_exact_dependencies_required_before_source_or_model
+    daily.run_daily(**f.kw(),processor=lambda *a,**k:calls.append(1))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 548, in run_daily
+    items=inventory(ctx)
+          ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 158, in inventory
+    raw=fs.read(metadata_path);tick(ctx);m=C.decode(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 147, in reader
+    if path.startswith('raw/'):self.fail('source read before manifest rejection')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source read before manifest rejection
+
+----------------------------------------------------------------------
+Ran 1 test in 6.635s
+
+FAILED (failures=7)

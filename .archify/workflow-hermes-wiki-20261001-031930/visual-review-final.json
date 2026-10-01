@@ -1,0 +1,140 @@
+{
+  "schema": "archify-supplementary-visual-review/v1",
+  "basis": "vision_analyze on the named real captures; current artifact hashes independently matched to delivery and capture receipts",
+  "scope": "one representative desktop viewport/theme per diagram, final index first screen at desktop/mobile, separate observed finder/Escape interaction records",
+  "diagram_samples": [
+    {
+      "diagram": "01-system",
+      "artifact_sha256": "bda80fcea3d82126ee1b3facb772c5a4ae392eb473084514fb2533c2ac95ecf0",
+      "capture": "01-system/visual-check/diagram.visual-check.2048x1320.light.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "light",
+      "observation": "Main nodes/labels contained in sampled desktop capture; small muted supporting text; lower cards not reviewed"
+    },
+    {
+      "diagram": "02-workspace",
+      "artifact_sha256": "618a5c337e024a64a60b938914f0098062a8e638da1e473deaeeeed598974287",
+      "capture": "02-workspace/visual-check/diagram.visual-check.2048x1320.dark.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "dark",
+      "observation": "cwd and actual isolation visibly separated; no obvious node/label overlap; small supporting text"
+    },
+    {
+      "diagram": "03-read",
+      "artifact_sha256": "9c4cb91b76c40848deae940334e9efe82a96ae72057c7ca298ce54a19cdb7b1a",
+      "capture": "03-read/visual-check/diagram.visual-check.2048x1320.light.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "light",
+      "observation": "No obvious node/label clipping; snapshot branch routes dense; small low-contrast supporting text"
+    },
+    {
+      "diagram": "04-query",
+      "artifact_sha256": "066e0017bd89534b3bcab19ba1d6069bb3d2b8ec48a712cc60fb16f922f199f4",
+      "capture": "04-query/visual-check/diagram.visual-check.2048x1320.dark.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "dark",
+      "observation": "Visible nodes and routes contained; reconnect/stop routes dense; fine labels small; lower cards not reviewed"
+    },
+    {
+      "diagram": "05-collection",
+      "artifact_sha256": "823c8bab35927ce55faab144f990b45a830a9802955f2fc85c4d13ccc01995aa",
+      "capture": "05-collection/visual-check/diagram.visual-check.2048x1320.light.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "light",
+      "observation": "Seven collection phases visible without node overlap; lower publication-to-report connection dense; pale fine labels"
+    },
+    {
+      "diagram": "06-publication",
+      "artifact_sha256": "da7be39502ab30ad852cea6bbdad3e131fbdc5798ac83eeb2f7849ea278efdcb",
+      "capture": "06-publication/visual-check/diagram.visual-check.2048x1320.dark.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "dark",
+      "observation": "Visible nodes/labels not clipped; review/publish/recovery branches dense; fine labels dark and small; below-fold material not reviewed"
+    },
+    {
+      "diagram": "07-data-ui",
+      "artifact_sha256": "7ee4b8e8f56272757098353d6e4f74b1f2b721b4c66b79c7b04ad823f5571a55",
+      "capture": "07-data-ui/visual-check/diagram.visual-check.2048x1320.light.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "light",
+      "observation": "Nine nodes contained; owner-only relationship label lies on line mask; some gray labels lower contrast"
+    },
+    {
+      "diagram": "08-roadmap",
+      "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+      "capture": "08-roadmap/visual-check/diagram.visual-check.2048x1320.dark.png",
+      "viewport": [
+        2048,
+        1320
+      ],
+      "theme": "dark",
+      "observation": "Twelve nodes contained; inter-column return routes close to nodes; small group labels and fine text"
+    }
+  ],
+  "index_final": {
+    "artifact_sha256": "342eb773ca85059ad5e8c1fe7dd23a974108f5c1708ee4671f55290a5c0b2463",
+    "captures": [
+      "index-final-1440.png",
+      "index-final-375.png"
+    ],
+    "observation": "No visible first-screen text clipping/overlap. Some phrase wrapping is awkward but readable. Below-fold material not perceptually reviewed.",
+    "automated_layout_and_links": "index-browser-final.json"
+  },
+  "browser_interactions": [
+    "surface-interactions-initial.json",
+    "surface-interactions-additional.json",
+    "mobile-camera.json"
+  ],
+  "automated_browser_evidence": "passed; see exact artifact-bound browser receipt for every diagram. This does not imply full visual/accessibility acceptance.",
+  "full_visual_qa": {
+    "schema": "visual_qa_verdict/v1",
+    "score": 85,
+    "verdict": "REVISE",
+    "score_scope": "subjective overall visual/readability readiness including 375px, not Archify showcase validation",
+    "differences": [
+      {
+        "observed": "375px has offscreen diagram text for 01,02,07; page overflow containment alone is insufficient",
+        "suggestion": "Use desktop for this delivery; any future mobile-ready edition needs scoped responsive compositions and fresh captures at the same mobile viewport"
+      },
+      {
+        "observed": "Small/muted supporting text and dense detours in representative desktop captures",
+        "suggestion": "A future readability-focused revision should increase detail reading size or split dense paths without removing semantic gates"
+      },
+      {
+        "observed": "Not all below-fold cards, themes and interactive/export/accessibility states were perceptually reviewed",
+        "suggestion": "Before claiming full visual/accessibility PASS, enumerate those states, capture exact revised artifacts and record a new scored round"
+      }
+    ],
+    "corrections_deferred": "Mobile product surface and full accessibility remediation are not claimed in this document-visualization delivery. No re-score of identical captures or unconditional PASS."
+  },
+  "not_run": [
+    "full accessibility audit",
+    "screen reader",
+    "all keyboard focus order",
+    "all viewer exports",
+    "full console/network audit",
+    "live BFF/frontend/Gateway/model tests"
+  ],
+  "historical_evidence": "visual-review.json and initial captures retained; index-browser-final.json supersedes old index hash after the added usage caveat"
+}

@@ -1,0 +1,10 @@
+{
+  "pending_durable_at": "2026-09-28T15:05:38.089975+00:00",
+  "pending_state_sha256": "15df9a7779725d9932c3d1cad4fd94070c4540ed855b150d03451f888648288b",
+  "pending_count": 0,
+  "previous": "2026-09-28T12:02:30.148155+00:00",
+  "new": "2026-09-28T15:03:02.148817+00:00",
+  "first_window_floor_preserved": true,
+  "committed_at": "2026-09-28T15:05:38.105247+00:00",
+  "state_after_sha256": "5c610faaf57801ec6e9046be9e5e60b11d200f5ad8bab60d07f4164c53a9f203"
+}

@@ -1,0 +1,510 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "04 · 통제된 질의 — Runs·SSE·재연결·중지",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-hermes-wiki-20261001-031930/04-query/diagram.html"
+  },
+  "lanes": [
+    {
+      "id": "intake",
+      "label": "브라우저 → BFF · 인증·실행 gate [제안]"
+    },
+    {
+      "id": "binding",
+      "label": "BFF → Hermes · 서버 문맥·Runs 요청 [제안·계약]"
+    },
+    {
+      "id": "accepted",
+      "label": "Hermes/BFF · key 검사와 202 접수 [관측·제안]"
+    },
+    {
+      "id": "relay",
+      "label": "BFF · 단일 구독·SSE parser·fan-out [제안·관측]"
+    },
+    {
+      "id": "active",
+      "label": "UI · 실행·단절·중지 의사 [제안]"
+    },
+    {
+      "id": "recovery",
+      "label": "BFF/Hermes · 재조정·중지 접수 [제안·관측]"
+    },
+    {
+      "id": "terminal",
+      "label": "Hermes → UI · 종료와 실제 근거 [계약·제안]"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "question",
+      "lane": "intake",
+      "col": 0,
+      "type": "frontend",
+      "label": "질문·선택 pageId 제출",
+      "sublabel": "클라이언트 요청 ID 포함",
+      "tag": "임의 path·model·도구·prompt 금지",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "owner",
+      "lane": "intake",
+      "col": 1,
+      "type": "security",
+      "label": "인증·객체 소유권",
+      "sublabel": "대화·session·run마다 ACL",
+      "tag": "다른 사용자 run/key 재사용 차단",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "policy",
+      "lane": "intake",
+      "col": 2,
+      "type": "security",
+      "label": "질의 실행 gate",
+      "sublabel": "별도 승인 + 실제 격리 검증",
+      "tag": "자료·모델·도구 서버 allowlist",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "binding",
+      "lane": "binding",
+      "col": 1,
+      "type": "backend",
+      "label": "서버 소유 문맥 고정",
+      "sublabel": "conversation → body session_id",
+      "tag": "세션 단일 writer · 허용 문서만",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "blocked",
+      "lane": "binding",
+      "col": 2,
+      "type": "security",
+      "label": "승인 밖 작업 차단",
+      "sublabel": "신규 원문·PDF 분석·쓰기·게시",
+      "tag": "격리 미검증이면 실행하지 않음",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "post",
+      "lane": "binding",
+      "col": 1,
+      "type": "backend",
+      "label": "POST /v1/runs",
+      "sublabel": "input + body session_id",
+      "tag": "BFF 소유 Idempotency-Key",
+      "width": 224,
+      "height": 82,
+      "yOffset": 60
+    },
+    {
+      "id": "idempotency",
+      "lane": "accepted",
+      "col": 1,
+      "type": "security",
+      "label": "key·body 중복 검사",
+      "sublabel": "같은 body 재시도 / 다른 body",
+      "tag": "전송 재시도 ≠ 수정 질문 재생성",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "body_conflict",
+      "lane": "accepted",
+      "col": 2,
+      "type": "security",
+      "label": "409 · 다른 body",
+      "sublabel": "같은 key로 변경 요청 거부",
+      "tag": "수정 질의는 새 key + 명시 제출",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "replayed",
+      "lane": "accepted",
+      "col": 0,
+      "type": "messagebus",
+      "label": "202 replay · 기존 run",
+      "sublabel": "동일 key + 동일 payload",
+      "tag": "재실행·SSE replay가 아님",
+      "width": 224,
+      "height": 82,
+      "yOffset": 60
+    },
+    {
+      "id": "accepted",
+      "lane": "accepted",
+      "col": 1,
+      "type": "messagebus",
+      "label": "202 · started 접수",
+      "sublabel": "run_id 보관 · 성공 아님",
+      "tag": "queued/running 등 실제 상태 분리",
+      "width": 224,
+      "height": 82,
+      "yOffset": 60
+    },
+    {
+      "id": "upstream",
+      "lane": "relay",
+      "col": 1,
+      "type": "messagebus",
+      "label": "GET run /events",
+      "sublabel": "BFF 단일 upstream 구독",
+      "tag": "단일 queue · 종료 시 transport 삭제",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "relay",
+      "lane": "relay",
+      "col": 1,
+      "type": "backend",
+      "label": "SSE 파싱·자체 fan-out",
+      "sublabel": "data JSON.event로 분기",
+      "tag": "허용된 최소 이벤트만 owner에게",
+      "width": 224,
+      "height": 82,
+      "yOffset": 60
+    },
+    {
+      "id": "active",
+      "lane": "active",
+      "col": 1,
+      "type": "frontend",
+      "label": "실행 중 · 도구 승인 대기",
+      "sublabel": "delta는 임시 · final과 분리",
+      "tag": "도구 승인 ≠ Wiki 단계·게시 승인",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "disconnected",
+      "lane": "active",
+      "col": 0,
+      "type": "messagebus",
+      "label": "단절·events 404",
+      "sublabel": "작업 실패·취소를 뜻하지 않음",
+      "tag": "Last-Event-ID 복구 보장 없음",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "stop",
+      "lane": "active",
+      "col": 2,
+      "type": "security",
+      "label": "사용자가 중지 요청",
+      "sublabel": "owner + CSRF 재확인",
+      "tag": "POST run /stop · abort와 다름",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "reconcile",
+      "lane": "recovery",
+      "col": 0,
+      "type": "backend",
+      "label": "GET run 상태 재조정",
+      "sublabel": "현재·최종 snapshot으로 복구",
+      "tag": "진행 중이면 polling · 새 run 금지",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "stopping",
+      "lane": "recovery",
+      "col": 2,
+      "type": "messagebus",
+      "label": "stopping · 중지 접수",
+      "sublabel": "취소 확정 전에는 대기 표시",
+      "tag": "cancelled 또는 completed 경합",
+      "width": 224,
+      "height": 82,
+      "yOffset": 0
+    },
+    {
+      "id": "terminal",
+      "lane": "terminal",
+      "col": 1,
+      "type": "backend",
+      "label": "실제 terminal 확인",
+      "sublabel": "completed/failed/cancelled",
+      "tag": "interrupted·partial·error도 확인",
+      "width": 224,
+      "height": 82,
+      "yOffset": -60
+    },
+    {
+      "id": "answer",
+      "lane": "terminal",
+      "col": 1,
+      "type": "frontend",
+      "label": "답변 + 실제 근거 표시",
+      "sublabel": "Wiki page·revision/hash·읽은 범위",
+      "tag": "답변 완료 ≠ Wiki 저장·게시 완료",
+      "width": 224,
+      "height": 82,
+      "yOffset": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "submit",
+      "from": "question",
+      "to": "owner",
+      "variant": "default",
+      "role": "main",
+      "label": "인증된 제출"
+    },
+    {
+      "id": "check_policy",
+      "from": "owner",
+      "to": "policy",
+      "variant": "security",
+      "role": "main",
+      "label": "owner 확인"
+    },
+    {
+      "id": "reject_scope",
+      "from": "policy",
+      "to": "blocked",
+      "variant": "security",
+      "role": "error",
+      "label": "불허·미검증"
+    },
+    {
+      "id": "bind_context",
+      "from": "policy",
+      "to": "binding",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "승인·검증 통과"
+    },
+    {
+      "id": "create_run",
+      "from": "binding",
+      "to": "post",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "서버 결정값만"
+    },
+    {
+      "id": "dedupe",
+      "from": "post",
+      "to": "idempotency",
+      "variant": "default",
+      "role": "main",
+      "label": "key + payload"
+    },
+    {
+      "id": "different_body",
+      "from": "idempotency",
+      "to": "body_conflict",
+      "variant": "security",
+      "role": "error",
+      "label": "동일 key·변경 body"
+    },
+    {
+      "id": "same_body",
+      "from": "idempotency",
+      "to": "replayed",
+      "variant": "dashed",
+      "role": "branch",
+      "label": "동일 key·body"
+    },
+    {
+      "id": "new_run",
+      "from": "idempotency",
+      "to": "accepted",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "신규 key"
+    },
+    {
+      "id": "reuse_id",
+      "from": "replayed",
+      "to": "accepted",
+      "variant": "dashed",
+      "role": "return",
+      "label": "기존 run_id"
+    },
+    {
+      "id": "subscribe_once",
+      "from": "accepted",
+      "to": "upstream",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "구독 소유권 관리"
+    },
+    {
+      "id": "relay_events",
+      "from": "upstream",
+      "to": "relay",
+      "variant": "default",
+      "role": "async",
+      "label": "단일 소비"
+    },
+    {
+      "id": "display_events",
+      "from": "relay",
+      "to": "active",
+      "variant": "emphasis",
+      "role": "async",
+      "label": "분리된 진행 표시"
+    },
+    {
+      "id": "network_lost",
+      "from": "active",
+      "to": "disconnected",
+      "variant": "dashed",
+      "role": "branch",
+      "label": "전송 단절"
+    },
+    {
+      "id": "events_unavailable",
+      "from": "upstream",
+      "to": "disconnected",
+      "variant": "dashed",
+      "role": "error",
+      "label": "404·연결 종료"
+    },
+    {
+      "id": "recover_snapshot",
+      "from": "disconnected",
+      "to": "reconcile",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "기존 run 조회"
+    },
+    {
+      "id": "still_running",
+      "from": "reconcile",
+      "to": "active",
+      "variant": "dashed",
+      "role": "return",
+      "label": "진행 중·polling"
+    },
+    {
+      "id": "recovered_terminal",
+      "from": "reconcile",
+      "to": "terminal",
+      "variant": "emphasis",
+      "role": "branch",
+      "label": "최종 상태",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "ask_stop",
+      "from": "active",
+      "to": "stop",
+      "variant": "security",
+      "role": "branch",
+      "label": "명시적 중지"
+    },
+    {
+      "id": "stop_accepted",
+      "from": "stop",
+      "to": "stopping",
+      "variant": "security",
+      "role": "async",
+      "label": "stopping 응답"
+    },
+    {
+      "id": "stop_race",
+      "from": "stopping",
+      "to": "terminal",
+      "variant": "security",
+      "role": "async",
+      "label": "종료·완료 경합 확인"
+    },
+    {
+      "id": "terminal_event",
+      "from": "active",
+      "to": "terminal",
+      "variant": "emphasis",
+      "role": "async",
+      "label": "실제 종료 이벤트"
+    },
+    {
+      "id": "final_result",
+      "from": "terminal",
+      "to": "answer",
+      "variant": "emphasis",
+      "role": "main",
+      "label": "상태·결과 분리"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "문서 설명 · 구현 완료 아님",
+      "items": [
+        "BFF·UI·read facade·실행 격리는 제안/미구현이다. Gateway·모델·논문·Cron은 실행하거나 변경하지 않았다.",
+        "관측은 기술문서에 기록된 로컬 정적 조사, 공식계약은 기술문서가 인용한 API 계약이다. 이 그림의 live 검증이 아니다.",
+        "한국어 authored content. 고정 Viewer UI와 html lang은 English fallback이다. 정지형이며 motion을 요청하지 않았다."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "근거 경로와 분류",
+      "items": [
+        "아래 파일명은 docs/techblog/hermes-api-gateway-workdir-assoc/ 기준이다. 각 node/edge의 정확한 line/end_line·분류는 같은 폴더 evidence.json에 있다.",
+        "분류: 관측 / 공식계약 / 제안 / 미확인. untracked 설계문서이므로 meta.repository·HEAD·--repo-root 근거를 만들지 않는다.",
+        "architecture.md:3–4, 37 · evidence.md:15, 65–80, 93–97 · frontend-design.md:3–4, 109–113"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Runs 입력·재시도·모델 계약",
+      "items": [
+        "Runs는 input + body session_id다. Chat의 messages/stream 또는 X-Hermes-Session-Id와 혼동하지 않는다. [api-contract.md:50–65, 69–84]",
+        "BFF가 (인증 주체, 대화, client request ID) → key/run을 관리한다. 429/timeout이면 생성 성공 여부를 먼저 확인한다. 같은 key·body만 기존 run 202 replay, 다른 body는 409. [workflows.md:68–72; api-contract.md:111–114]",
+        "key visible ASCII 1–255, profile/credential scope·session-key fingerprint. terminal 기본 24h·DB 실패 memory fallback 가능. Chat/Responses 300초 캐시와 별개다. [api-contract.md:111–113; evidence.md:74]",
+        "model alias echo는 실제 실행 모델 증거가 아니다. model/provider 지정만으로 no-fallback을 보장하지 않으므로 별도 runtime 집행·검증 필요. [api-contract.md:58, 84; evidence.md:75–77]"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "SSE 파서·단일 소비·재접속",
+      "items": [
+        "Runs는 data JSON 내부 event 필드로 분기한다. blank line·comment/keepalive·CRLF·multi-line data·UTF-8/JSON/chunk 분할·unknown event를 처리한다. [api-contract.md:86–105]",
+        "설치판은 queue 하나를 소비하며 연결 종료 시 transport 삭제. 복수 upstream은 이벤트를 나눠 가져갈 수 있다. BFF 한 구독과 자체 fan-out이 제안이다. [api-contract.md:105; evidence.md:56, 72]",
+        "events 404·단절에도 run은 계속될 수 있다. GET /v1/runs/{id}로 먼저 조정, 이후 polling. Last-Event-ID/전체 replay를 가정하지 않고 새로고침에서 새 run을 만들지 않는다. [workflows.md:52–64]",
+        "commentary/tool/delta/final을 분리한다. raw arguments/output·비공개 추론을 노출하지 않는다. 임시 delta는 최종 snapshot과 중복 제거한다. [frontend-design.md:63–69; security-and-operations.md:76–78]",
+        "공식 keepalive 10초와 조사 설치판 30초 timeout이 다르다. reverse proxy의 buffering/idle timeout은 배포 버전에서 시험해야 한다. [api-contract.md:107; security-and-operations.md:65–72]"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "중지·승인·완료의 별도 경계",
+      "items": [
+        "POST /v1/runs/{id}/stop의 stopping은 접수다. 실제 cancelled 또는 completed 경합·failed를 확인한다. abort ≠ stop ≠ rollback이며 이미 실행된 파일/외부 효과는 되돌리지 않는다. [workflows.md:74–82; api-contract.md:116]",
+        "interrupted는 성공이 아니고 자동 재실행 근거도 아니다. HTTP 200/completed만으로 업무 성공을 판정하지 않고 partial/interrupted/error flags를 확인한다. [api-contract.md:82, 114–116; evidence.md:75–76]",
+        "Hermes tool approval은 Wiki 단계·자료·게시 승인이 아니다. 관리 UI는 실제 pending ID·선택지·만료·owner를 재확인하고 /approval로 전달한다. stale/always 자동 승인은 금지다. [workflows.md:84–95; api-contract.md:118]",
+        "질의 최종 답변에는 실제 참조 page·revision/hash·읽은 범위만 표시한다. 없는 인용·실행 모델·Wiki 저장 성공을 UI가 만들어내지 않는다. [workflows.md:34–35; api-contract.md:58, 84]",
+        "owner/policy/binding은 제안, Runs 상세는 공식계약과 문서의 정적 관측을 구분한다. 모든 node/edge별 원문 범위는 evidence.json에서 확인한다."
+      ]
+    }
+  ]
+}

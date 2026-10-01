@@ -1,0 +1,29 @@
+{
+  "synthetic_only": true,
+  "observations": {
+    "mixed_partial_then_publish": {
+      "report_status": "partial",
+      "outcomes": [
+        "partial",
+        "published_draft"
+      ],
+      "state_statuses": [
+        "partial",
+        "published_draft"
+      ]
+    },
+    "busy_before_reserve": {
+      "raised": "skipped_busy",
+      "daily_report_exists": false
+    },
+    "observer_ignored_fields": {
+      "monitor_script": "accepted",
+      "monitor_url": "accepted",
+      "attach_to_session": "accepted"
+    }
+  },
+  "boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  }
+}

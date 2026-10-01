@@ -1,0 +1,31 @@
+{
+  "schema": "pkm-integration-link-maintenance/v1",
+  "scope": "navigation/rendering and operational publication status only",
+  "maintenance": [
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "body_generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.30830v1/attempt1-result.json",
+      "old_status_line": "> 상태: draft/unreviewed. 검토 대기용 분석 초안이며 공유 발행이나 사람의 승인을 뜻하지 않는다.",
+      "source_link_rendering_fixes": 68,
+      "allowed_nonsemantic_changes": [
+        "normalize Markdown source href raw/articles/... to ../raw/articles/... from entities directory",
+        "replace staging-era operational status banner with local draft Wiki publication status",
+        "append model-generated navigation only"
+      ],
+      "scientific_claim_text_changes_allowed": false
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "body_generation_ref": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/2609.31358v1/attempt1-result.json",
+      "old_status_line": "> 상태: draft/unreviewed — 제한된 P2 파일럿의 staged 분석 초안이다. 공유 게시나 사람의 검토·승인 완료를 뜻하지 않는다.",
+      "source_link_rendering_fixes": 73,
+      "allowed_nonsemantic_changes": [
+        "normalize Markdown source href raw/articles/... to ../raw/articles/... from entities directory",
+        "replace staging-era operational status banner with local draft Wiki publication status",
+        "append model-generated navigation only"
+      ],
+      "scientific_claim_text_changes_allowed": false
+    }
+  ],
+  "metadata": "Keep original generation_ref and prompt_revision for unchanged paper analysis; add relation_generation_ref/relation_prompt_revision for new links; bump revision and transaction_id. Preserve all original claims, evidence quote wording, unread-scope and user-review status."
+}

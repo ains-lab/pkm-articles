@@ -1,0 +1,19 @@
+test_incomplete_response_rejected (__main__.CompletionTests.test_incomplete_response_rejected) ... ok
+test_partial_main_text_rejected (__main__.CompletionTests.test_partial_main_text_rejected) ... ok
+test_positive_legacy_cli_control (__main__.CompletionTests.test_positive_legacy_cli_control) ... ok
+test_concise_cited_markdown_and_existing_wikilinks_accepted (__main__.DocumentTests.test_concise_cited_markdown_and_existing_wikilinks_accepted) ... ok
+test_duplicate_keys_in_valid_document_rejected (__main__.DocumentTests.test_duplicate_keys_in_valid_document_rejected) ... ok
+test_rejects_invalid_and_duplicate_claim_fields (__main__.DocumentTests.test_rejects_invalid_and_duplicate_claim_fields) ... ok
+test_rejects_invalid_json_documents (__main__.DocumentTests.test_rejects_invalid_json_documents) ... ok
+test_rejects_unreferenced_claims_fake_citations_and_frontmatter (__main__.DocumentTests.test_rejects_unreferenced_claims_fake_citations_and_frontmatter) ... ok
+test_rejects_wrong_vid_empty_scopes_and_limitations (__main__.DocumentTests.test_rejects_wrong_vid_empty_scopes_and_limitations) ... ok
+test_cli_explicit_paths_attempt_and_no_overwrite (__main__.InterfaceTests.test_cli_explicit_paths_attempt_and_no_overwrite) ... ok
+test_cost_unknown_and_observed_costs_are_nonblocking (__main__.InterfaceTests.test_cost_unknown_and_observed_costs_are_nonblocking) ... ok
+test_default_cli_does_not_write_historical_report (__main__.InterfaceTests.test_default_cli_does_not_write_historical_report) ... ok
+test_import_safe_read_only_interface (__main__.InterfaceTests.test_import_safe_read_only_interface) ... ok
+test_transport_and_model_rejections (__main__.InterfaceTests.test_transport_and_model_rejections) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.283s
+
+OK

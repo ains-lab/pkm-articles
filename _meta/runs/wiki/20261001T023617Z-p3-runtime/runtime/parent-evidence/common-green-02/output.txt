@@ -1,0 +1,6 @@
+test_safe_helpers_and_synthetic_root_boundary (test_common.CommonTests.test_safe_helpers_and_synthetic_root_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+OK

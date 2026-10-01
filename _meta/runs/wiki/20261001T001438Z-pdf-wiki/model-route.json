@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-01T00:19:24.221932+00:00",
+  "requested_provider": "codex-lb",
+  "resolved_provider": "custom",
+  "model": "gpt-6-astra",
+  "base_url": "http://10.10.1.244:2455/v1",
+  "api_mode": "codex_responses",
+  "request_overrides_present": false,
+  "paper_content_sent": false,
+  "actual_request_sent": false
+}

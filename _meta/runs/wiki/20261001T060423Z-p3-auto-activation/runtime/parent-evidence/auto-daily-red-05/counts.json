@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p3-synthetic-tests/v1",
+  "observed_at": "2026-10-01T06:10:44.640211+00:00",
+  "label": "auto-daily-red-05",
+  "modules": [
+    "test_auto_publication.AutoDailyTests"
+  ],
+  "tests_run": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "snapshots": {
+    "p3_common.py": "d44c189a52cd63e3ac7b0669c92d10af2a5d32a047316899f9d8c5557fbe505f",
+    "daily.py": "344a68b44589bfe8905d5034993a427919cb397191ddccf3cd2d19f5a1a40f1e",
+    "content.py": "37aab096141575cb8d2123a9b935466ccbecda7a50853bde4f843c8def67069f",
+    "publication.py": "f038920619d4902732cb9fb5e6a5624840fbcdddb1a21f5749e0a7e22f296c47",
+    "run_checks.py": "5bd8c6774cfa6b1be851ac116d2b3cd1544602adfbff660fce4b9003a6599f61",
+    "test_auto_publication.py": "57b1ca1ab1175986c5feea51061e8f6fdcf39cda539ee67995ad299d817443d4"
+  },
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_source_body_attempts": 0
+  },
+  "synthetic_only": true
+}

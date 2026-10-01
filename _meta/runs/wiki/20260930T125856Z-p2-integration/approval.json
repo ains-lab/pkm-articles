@@ -1,0 +1,96 @@
+{
+  "schema": "pkm-p2-integration-approval/v1",
+  "actor": "user",
+  "approved": true,
+  "phase": "P2",
+  "scope": "manual-two-paper-concepts-comparison-and-links",
+  "run_id": "20260930T125856Z-p2-integration",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "recorded_at": "2026-09-30T12:58:56.754161+00:00",
+  "user_quote": "진행해주세요",
+  "confirmation_context": "직전 통합 컴파일·게시와 작업 중 Wiki 직접 편집 중지 확인 요청에 대한 사용자 재확인. 이전 확인창 시간초과는 그대로 보존하고 이번 새 응답에 근거한다.",
+  "publication_edit_freeze_confirmed": true,
+  "validated_draft_publication_authorized": true,
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "approved_route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses"
+  },
+  "fallback_allowed": false,
+  "cost_policy": "no_cost_cap",
+  "max_attempts": 2,
+  "version_ids": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "policy": {
+    "path": "_meta/automation.json",
+    "sha256": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5"
+  },
+  "base_prompt": {
+    "path": "_meta/prompts/wiki-compile.md",
+    "sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad"
+  },
+  "prompt_revision": "wiki-integrate/v1",
+  "instructions": {
+    "path": "_meta/runs/wiki/20260930T125856Z-p2-integration/instructions.txt",
+    "sha256": "abb7f6bbfd1518444aea055c7ce4adc36729b2a2c0559fbd12d80217bab9bc88"
+  },
+  "model_inputs": [
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.30830v1/source.html",
+      "sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074"
+    },
+    {
+      "path": "raw/articles/4cff5b4f10ec/arxiv-2609.31358v1/source.html",
+      "sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e"
+    },
+    {
+      "path": "entities/arxiv-2609.30830v1.md",
+      "sha256": "a0c2bb119439305ce1c3b54ac27fb0b4ba964d95110424a0707f6e133d1d5ed5"
+    },
+    {
+      "path": "entities/arxiv-2609.31358v1.md",
+      "sha256": "06445b2bd4db40a3c8e0b1c630a740dd3aab82b8c08833c6ff775890f500ccb9"
+    }
+  ],
+  "document_hashes": {
+    "AGENTS.md": "77db9007d92325e8ec03f9d06ea4807e0b4f3837abb04e39fe89b6ee8857ee7d",
+    "SCHEMA.md": "8cce8998d3949787f7ae4f159012a4f60390bde5176122e13cc9ffa4bbe4835c",
+    "_meta/AUTOMATION.md": "50938ddef8fe8e16ad4ed7b61839afcd64163bb2eaa9043de6ee8884eaeaeea2",
+    "_meta/STATE-CONTRACTS.md": "4870e4c04c035e47cd217287da25a5e37820910dcf8e7b52be53593ba30b6f3c",
+    "_meta/COMPILATION.md": "3e35f7e70b5581ba9c46bdeb0cb976c1d877404f08ceeba291e44e5a1a5b04d5",
+    "_meta/automation-contracts.schema.json": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113",
+    "_meta/automation.json": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5",
+    "_meta/prompts/wiki-compile.md": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad"
+  },
+  "new_page_paths": [
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "comparisons/agate-vs-sdc-mcp-gateway.md"
+  ],
+  "existing_page_paths": [
+    "entities/arxiv-2609.30830v1.md",
+    "entities/arxiv-2609.31358v1.md"
+  ],
+  "allowed_shared_writes": [
+    "concepts/agent-authority-and-effect-boundaries.md",
+    "concepts/provenance-and-audit-evidence.md",
+    "concepts/security-evaluation-units.md",
+    "comparisons/agate-vs-sdc-mcp-gateway.md",
+    "entities/arxiv-2609.30830v1.md",
+    "entities/arxiv-2609.31358v1.md",
+    "index.md",
+    "log.md",
+    "_meta/state/compilation.json"
+  ],
+  "pdf_images_external_assets_allowed": false,
+  "external_search_allowed": false,
+  "cron_registration_authorized": false,
+  "cron_activation_authorized": false,
+  "previous_generation_run": "_meta/runs/wiki/20260930T100918Z-p2-live-staged",
+  "prior_publication_report": "_meta/runs/wiki/20260930T103720Z-p2-publish-approved/report.md"
+}

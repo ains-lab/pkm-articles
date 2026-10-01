@@ -1,0 +1,81 @@
+{
+  "schema": "pkm-security-search-lanes/v1",
+  "revision": "ai-security-cs-title-screen/v2",
+  "ai_terms": [
+    "large language model",
+    "language model",
+    "LLM",
+    "LLMs",
+    "foundation model",
+    "generative AI",
+    "AI agent",
+    "LLM agent",
+    "agentic AI",
+    "Model Context Protocol",
+    "machine learning",
+    "deep learning",
+    "neural network",
+    "vision language model",
+    "diffusion model"
+  ],
+  "security_terms": [
+    "prompt injection",
+    "indirect prompt injection",
+    "jailbreak",
+    "jailbreaking",
+    "guardrail bypass",
+    "data poisoning",
+    "model poisoning",
+    "backdoor attack",
+    "RAG poisoning",
+    "memory poisoning",
+    "model extraction",
+    "model stealing",
+    "membership inference",
+    "model inversion",
+    "training data extraction",
+    "data exfiltration",
+    "tool poisoning",
+    "tool hijacking",
+    "privilege escalation",
+    "authorization bypass",
+    "confused deputy",
+    "least privilege",
+    "information flow control",
+    "capability-based security",
+    "sandbox escape",
+    "prompt injection defense",
+    "adversarial example",
+    "evasion attack",
+    "adversarial robustness",
+    "certified robustness",
+    "supply chain attack",
+    "denial of service",
+    "denial of wallet",
+    "sponge attack",
+    "backdoor defense"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.MA"
+  ],
+  "term_change_from_v1": {
+    "added": [
+      "backdoor defense"
+    ],
+    "removed": []
+  },
+  "discovery": {
+    "query": "(cat:cs.CR OR cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV OR cat:cs.MA)\nAND\n(\n  (ti:\"large language model\" OR abs:\"large language model\")\n  OR (ti:\"language model\" OR abs:\"language model\")\n  OR (ti:\"LLM\" OR abs:\"LLM\")\n  OR (ti:\"LLMs\" OR abs:\"LLMs\")\n  OR (ti:\"foundation model\" OR abs:\"foundation model\")\n  OR (ti:\"generative AI\" OR abs:\"generative AI\")\n  OR (ti:\"AI agent\" OR abs:\"AI agent\")\n  OR (ti:\"LLM agent\" OR abs:\"LLM agent\")\n  OR (ti:\"agentic AI\" OR abs:\"agentic AI\")\n  OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\")\n  OR (ti:\"machine learning\" OR abs:\"machine learning\")\n  OR (ti:\"deep learning\" OR abs:\"deep learning\")\n  OR (ti:\"neural network\" OR abs:\"neural network\")\n  OR (ti:\"vision language model\" OR abs:\"vision language model\")\n  OR (ti:\"diffusion model\" OR abs:\"diffusion model\")\n)\nAND\n(\n  (ti:\"prompt injection\" OR abs:\"prompt injection\")\n  OR (ti:\"indirect prompt injection\" OR abs:\"indirect prompt injection\")\n  OR (ti:\"jailbreak\" OR abs:\"jailbreak\")\n  OR (ti:\"jailbreaking\" OR abs:\"jailbreaking\")\n  OR (ti:\"guardrail bypass\" OR abs:\"guardrail bypass\")\n  OR (ti:\"data poisoning\" OR abs:\"data poisoning\")\n  OR (ti:\"model poisoning\" OR abs:\"model poisoning\")\n  OR (ti:\"backdoor attack\" OR abs:\"backdoor attack\")\n  OR (ti:\"RAG poisoning\" OR abs:\"RAG poisoning\")\n  OR (ti:\"memory poisoning\" OR abs:\"memory poisoning\")\n  OR (ti:\"model extraction\" OR abs:\"model extraction\")\n  OR (ti:\"model stealing\" OR abs:\"model stealing\")\n  OR (ti:\"membership inference\" OR abs:\"membership inference\")\n  OR (ti:\"model inversion\" OR abs:\"model inversion\")\n  OR (ti:\"training data extraction\" OR abs:\"training data extraction\")\n  OR (ti:\"data exfiltration\" OR abs:\"data exfiltration\")\n  OR (ti:\"tool poisoning\" OR abs:\"tool poisoning\")\n  OR (ti:\"tool hijacking\" OR abs:\"tool hijacking\")\n  OR (ti:\"privilege escalation\" OR abs:\"privilege escalation\")\n  OR (ti:\"authorization bypass\" OR abs:\"authorization bypass\")\n  OR (ti:\"confused deputy\" OR abs:\"confused deputy\")\n  OR (ti:\"least privilege\" OR abs:\"least privilege\")\n  OR (ti:\"information flow control\" OR abs:\"information flow control\")\n  OR (ti:\"capability-based security\" OR abs:\"capability-based security\")\n  OR (ti:\"sandbox escape\" OR abs:\"sandbox escape\")\n  OR (ti:\"prompt injection defense\" OR abs:\"prompt injection defense\")\n  OR (ti:\"adversarial example\" OR abs:\"adversarial example\")\n  OR (ti:\"evasion attack\" OR abs:\"evasion attack\")\n  OR (ti:\"adversarial robustness\" OR abs:\"adversarial robustness\")\n  OR (ti:\"certified robustness\" OR abs:\"certified robustness\")\n  OR (ti:\"supply chain attack\" OR abs:\"supply chain attack\")\n  OR (ti:\"denial of service\" OR abs:\"denial of service\")\n  OR (ti:\"denial of wallet\" OR abs:\"denial of wallet\")\n  OR (ti:\"sponge attack\" OR abs:\"sponge attack\")\n  OR (ti:\"backdoor defense\" OR abs:\"backdoor defense\")\n)",
+    "sha256": "ea5c47b9e0785f6c2f3929318e9b67e6f90b5e9f157ba422687d9ca64922058a"
+  },
+  "primary": {
+    "query": "(cat:cs.CR OR cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV OR cat:cs.MA)\nAND\n(\n  (ti:\"large language model\" OR abs:\"large language model\")\n  OR (ti:\"language model\" OR abs:\"language model\")\n  OR (ti:\"LLM\" OR abs:\"LLM\")\n  OR (ti:\"LLMs\" OR abs:\"LLMs\")\n  OR (ti:\"foundation model\" OR abs:\"foundation model\")\n  OR (ti:\"generative AI\" OR abs:\"generative AI\")\n  OR (ti:\"AI agent\" OR abs:\"AI agent\")\n  OR (ti:\"LLM agent\" OR abs:\"LLM agent\")\n  OR (ti:\"agentic AI\" OR abs:\"agentic AI\")\n  OR (ti:\"Model Context Protocol\" OR abs:\"Model Context Protocol\")\n  OR (ti:\"machine learning\" OR abs:\"machine learning\")\n  OR (ti:\"deep learning\" OR abs:\"deep learning\")\n  OR (ti:\"neural network\" OR abs:\"neural network\")\n  OR (ti:\"vision language model\" OR abs:\"vision language model\")\n  OR (ti:\"diffusion model\" OR abs:\"diffusion model\")\n)\nAND\n(\n  ti:\"prompt injection\"\n  OR ti:\"indirect prompt injection\"\n  OR ti:\"jailbreak\"\n  OR ti:\"jailbreaking\"\n  OR ti:\"guardrail bypass\"\n  OR ti:\"data poisoning\"\n  OR ti:\"model poisoning\"\n  OR ti:\"backdoor attack\"\n  OR ti:\"RAG poisoning\"\n  OR ti:\"memory poisoning\"\n  OR ti:\"model extraction\"\n  OR ti:\"model stealing\"\n  OR ti:\"membership inference\"\n  OR ti:\"model inversion\"\n  OR ti:\"training data extraction\"\n  OR ti:\"data exfiltration\"\n  OR ti:\"tool poisoning\"\n  OR ti:\"tool hijacking\"\n  OR ti:\"privilege escalation\"\n  OR ti:\"authorization bypass\"\n  OR ti:\"confused deputy\"\n  OR ti:\"least privilege\"\n  OR ti:\"information flow control\"\n  OR ti:\"capability-based security\"\n  OR ti:\"sandbox escape\"\n  OR ti:\"prompt injection defense\"\n  OR ti:\"adversarial example\"\n  OR ti:\"evasion attack\"\n  OR ti:\"adversarial robustness\"\n  OR ti:\"certified robustness\"\n  OR ti:\"supply chain attack\"\n  OR ti:\"denial of service\"\n  OR ti:\"denial of wallet\"\n  OR ti:\"sponge attack\"\n  OR ti:\"backdoor defense\"\n)",
+    "sha256": "8f6c43aac37249bce67cc5ba9a67e4e64793c6f125f458d355cfc3af77425c7f"
+  },
+  "supplemental": "discovery_matches minus primary_matches, using exact version IDs; never truncate query or emulate API matching with substring tests"
+}

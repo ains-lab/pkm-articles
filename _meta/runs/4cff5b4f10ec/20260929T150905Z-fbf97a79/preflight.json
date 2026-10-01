@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-09-29T15:09:05.341823+00:00",
+  "topics_pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "state_pipeline_id": "arxiv-html-preferred-pdf-fallback/v1",
+  "compile_wiki": false,
+  "preprocessing_enabled": false,
+  "safety_block": false,
+  "policy_match": true,
+  "pending_count": 0,
+  "daily_attempts": {
+    "2026-09-28": [
+      "2609.31562v1",
+      "2609.31358v1",
+      "2609.31318v1",
+      "2609.31039v1",
+      "2609.30940v1",
+      "2609.30830v1",
+      "2609.30824v1",
+      "2609.30614v1",
+      "2609.30266v1",
+      "2609.30217v1"
+    ],
+    "2026-09-29": [
+      "2609.30614v1",
+      "2609.30824v1"
+    ]
+  }
+}

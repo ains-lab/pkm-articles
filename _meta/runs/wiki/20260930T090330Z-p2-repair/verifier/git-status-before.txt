@@ -1,0 +1,37 @@
+ M AGENTS.md
+ M README.md
+ M SCHEMA.md
+ M _meta/COLLECTION.md
+ M _meta/COMPILATION.md
+ M _meta/state/4cff5b4f10ec.json
+ M _meta/topics.json
+ M docs/lectures/5w/paper-collection-cron.md
+ M docs/lectures/5w/paper-collection.md
+ M index.md
+ M log.md
+ M raw/articles/4cff5b4f10ec/index.md
+?? _meta/AUTOMATION.md
+?? _meta/QUERY-FEEDBACK.md
+?? _meta/RESEARCH-PROFILE.md
+?? _meta/RESEARCH-REVIEW.md
+?? _meta/STATE-CONTRACTS.md
+?? _meta/automation-contracts.schema.json
+?? _meta/automation.json
+?? _meta/migrations/20260929T025946Z-pdf-fallback-policy/
+?? _meta/migrations/20260929T034401Z-pdf-fallback-policy/
+?? _meta/prompts/
+?? _meta/runs/4cff5b4f10ec/20260928T150302Z-78f455f6/
+?? _meta/runs/4cff5b4f10ec/20260929T025147Z-index-sync/
+?? _meta/runs/4cff5b4f10ec/20260929T042631Z-pdf-capture-808d882a/
+?? _meta/runs/4cff5b4f10ec/20260929T150905Z-fbf97a79/
+?? _meta/runs/wiki/
+?? _meta/state/compilation.json
+?? _meta/state/feedback.json
+?? _meta/state/research-review.json
+?? raw/articles/4cff5b4f10ec/arxiv-2509.09215v3/
+?? raw/articles/4cff5b4f10ec/arxiv-2608.29596v2/
+?? raw/articles/4cff5b4f10ec/arxiv-2609.30614v1/
+?? raw/articles/4cff5b4f10ec/arxiv-2609.30824v1/
+?? raw/articles/4cff5b4f10ec/arxiv-2609.35576v1/
+?? raw/articles/4cff5b4f10ec/arxiv-2609.35596v1/
+?? raw/articles/4cff5b4f10ec/arxiv-2609.35760v1/

@@ -1,0 +1,610 @@
+"""Synthetic temporary-directory tests: no live publication or model calls.
+
+REQUEST CONTRACT (all paths Wiki-root-relative, never symlinks):
+--run _meta/runs/wiki/<run-id>, --attempt <name>-result.json (basename).
+The request is <run>/<VID>/<name>-publication-request.json. Required exact keys:
+ schema='pkm-publication-request/v1', version_id, requested_scope='P2 main-text complete',
+ result={path,sha256}, approval={path,sha256}, policy={path,sha256,revision},
+ prompt={path,sha256,revision}, source={path,sha256,metadata_path,metadata_sha256},
+ output_path='entities/arxiv-<VID>.md', agent_review={path,sha256},
+ consumed_wiki_refs=[{path,sha256,revision}].
+The agent_review is a separate locally authored artifact, NOT a model boolean:
+ schema='pkm-agent-evidence-review/v1', actor='agent', reviewer, reviewed_at,
+ version_id, result_sha256, source_sha256, requested_scope, read_scope, unread_scope,
+ evidence_scope=[original claim anchors], reviewed_claim_ids=[ALL claim IDs],
+ claims=[{id,anchor,quote_sha256,verdict:'supported',rationale:nonempty string}].
+The orchestrating agent must perform actual semantic checks before writing this
+artifact/request. The publisher checks bindings, coverage and rationale presence;
+it does not prove the rationale true. Pages remain draft/unreviewed, never human
+reviewed. All fixtures below are explicit approved SYNTHETIC TEST ONLY metadata.
+"""
+import copy
+from datetime import datetime, timezone
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import unittest
+from unittest import mock
+from jsonschema import Draft202012Validator, FormatChecker
+import yaml
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[3]
+SCRIPT = HERE / 'publish-one.py'
+VID = '2609.31358v1'
+RUN = '_meta/runs/wiki/synthetic-publisher'
+NOW = datetime(2026, 9, 30, 3, tzinfo=timezone.utc)
+
+
+def digest(b):
+    return hashlib.sha256(b).hexdigest()
+
+
+def load_publisher():
+    spec = importlib.util.spec_from_file_location('p2_publisher', SCRIPT)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class Fixture:
+    def __init__(self, root):
+        self.root = root
+        self.vid = VID
+        self.run = RUN
+        self.attempt = 'attempt-result.json'
+        for p in ['entities', 'concepts', 'comparisons', 'queries', '_meta/locks']:
+            (root / p).mkdir(parents=True)
+        for p in ['SCHEMA.md', '_meta/automation-contracts.schema.json',
+                  '_meta/automation.json', '_meta/prompts/wiki-compile.md',
+                  '_meta/AUTOMATION.md', '_meta/STATE-CONTRACTS.md', 'AGENTS.md']:
+            self.put(p, (ROOT / p).read_bytes())
+        self.put('AGENTS.md', '# SYNTHETIC TEST ONLY\npkm-html-knowledge/v2\n')
+        # Root pin is intentionally live-root metadata; --root selects an isolated
+        # test filesystem, without relaxing the real contract's const constraint.
+        self.policy = self.get('_meta/automation.json')
+        self.policy['approval_amendment_ref'] = self.get('_meta/automation-contracts.schema.json')['$defs']['automation']['properties']['approval_amendment_ref'].get('const', '_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json')
+        self.put('_meta/automation.json', self.policy)
+        self.put('index.md', '# SYNTHETIC\n\n> Last updated: 2026-09-01 | Total pages: 99\n\n'
+                 '## Entities — 논문별 요약·분석 / 모델·도구\n\n아직 작성된 페이지가 없다.\n\n'
+                 '## Concepts — 개념\n\nUNRELATED CONCEPT CONTENT\n\n## Raw Sources\n\nRAW UNCHANGED\n')
+        self.put('log.md', '# SYNTHETIC LOG ONLY\n')
+        approval = json.loads((HERE / 'approval.json').read_text())
+        approval['run_id'] = Path(RUN).name
+
+        approval['confirmation'] = 'SYNTHETIC TEST ONLY: authorized draft publication and edit freeze'
+        self.put(RUN + '/approval.json', approval)
+        self.put(self.policy['approval_amendment_ref'], json.loads((ROOT / self.policy['approval_amendment_ref']).read_text()))
+        waiver = approval['prior_approval_ref']
+        self.put(waiver, dict(schema='pkm-p2-approval-amendment/v1', execution_authorized=True,
+                 phase='P2', user_quote='SYNTHETIC TEST ONLY: approved', cost_policy='no_cost_cap',
+                 provider='codex-lb', model='gpt-6-astra', reasoning_effort='xhigh',
+                 candidate_versions=['2609.31358v1', '2609.30830v1']))
+        self.state = dict(schema='pkm-compilation-state/v1',
+                          policy_revision=self.policy['policy_revision'],
+                          contract_revision=self.policy['contract_revision'],
+                          initialized_at=NOW.isoformat(), enabled=False, safety_block=False,
+                          safety_block_reason=None, items=[], transactions=[], receipts=[],
+                          cost_events=[], last_run=None)
+        self.add_item(VID)
+
+    def put(self, path, data):
+        p = self.root / path
+        p.parent.mkdir(parents=True, exist_ok=True)
+        if isinstance(data, bytes):
+            p.write_bytes(data)
+        else:
+            p.write_text(data if isinstance(data, str) else json.dumps(data, ensure_ascii=False), encoding='utf8')
+
+    def get(self, path):
+        return json.loads((self.root / path).read_text())
+
+    def ref(self, path, **extra):
+        return dict(path=path, sha256=digest((self.root / path).read_bytes()), **extra)
+
+    def add_item(self, vid):
+        self.vid = vid
+        self.source = f'raw/articles/4cff5b4f10ec/arxiv-{vid}/source.html'
+        self.metadata = self.source.replace('source.html', 'source.json')
+        html = '<html><body><article>' + ''.join(
+            f'<section id="S{i}"><h2>Synthetic section {i}</h2><p>SYNTHETIC evidence {i}.</p></section>'
+            for i in range(1, 9)) + '</article></body></html>'
+        self.put(self.source, html)
+        sh = digest(html.encode())
+        self.put(self.metadata, dict(schema='arxiv-html-source/v1', version_id=vid,
+                 title='SYNTHETIC TEST ONLY', source='arxiv', owning_cron_id='4cff5b4f10ec',
+                 html_file='source.html', html_sha256=sh, html_bytes=len(html.encode()),
+                 source_url=f'https://arxiv.org/html/{vid}', final_url=f'https://arxiv.org/html/{vid}',
+                 http_status=200, preprocessing=False, wiki_compiled=False))
+        item = dict(source='arxiv', version_id=vid, format='html', source_path=self.source,
+                    source_sha256=sh, source_bytes=len(html.encode()), metadata_path=self.metadata,
+                    metadata_sha256=self.ref(self.metadata)['sha256'], collected_at=NOW.isoformat(),
+                    status='ready_to_publish', reason='SYNTHETIC review fixture',
+                    requested_scope='P2 main-text complete', read_scope=[], unread_scope=[],
+                    resume_at=None, work_key=None, output_refs=[], receipt_ref=None,
+                    failure_count=0, human_review=None)
+        if (self.root / '_meta/state/compilation.json').exists():
+            self.state = self.get('_meta/state/compilation.json')
+        self.state['items'].append(item)
+        self.put('_meta/state/compilation.json', self.state)
+        self.doc = dict(title='SYNTHETIC: "quoted" \\ title', version_id=vid, main_text_complete=True,
+                        read_scope=[f'S{i}' for i in range(1, 9)],
+                        unread_scope=['figures unreviewed', 'equations unreviewed', 'appendices unreviewed'],
+                        claims=[dict(id=f'C{i:02}', kind='author_report', anchor=f'S{i}',
+                                     quote=f'SYNTHETIC evidence {i}.', statement=f'Synthetic claim {i}',
+                                     conditions='SYNTHETIC fixture only, not a real scientific result')
+                                for i in range(1, 9)],
+                        limitations=['SYNTHETIC ONLY; no real scientific validation'],
+                        markdown_body='\n'.join(['# SYNTHETIC TEST ONLY', '## Method', '## Evaluation', '## Conclusion'] +
+                                      [f'C{i:02}: SYNTHETIC evidence {i}. [Evidence]({self.source}#S{i})' for i in range(1, 9)] +
+                                      ['SYNTHETIC explanatory line.'] * 85))
+        self.result_path = f'{RUN}/{vid}/{self.attempt}'
+        prompt = '_meta/prompts/wiki-compile.md'
+        self.result = dict(completed=True, error=None, response_status='completed',
+                           provider='codex-lb', model='gpt-6-astra', response_model='gpt-6-astra',
+                           reasoning_effort='xhigh', source_sha256=sh, source_bytes=item['source_bytes'],
+                           metadata_sha256=item['metadata_sha256'], policy_revision=self.policy['policy_revision'],
+                           policy_sha256=self.ref('_meta/automation.json')['sha256'],
+                           prompt_revision=self.policy['jobs']['daily_compile']['prompt_revision'],
+                           prompt_sha256=self.ref(prompt)['sha256'], instructions_sha256='a' * 64,
+                           approval_ref=RUN + '/approval.json', approval_sha256=self.ref(RUN + '/approval.json')['sha256'],
+                           route_base_url='https://synthetic.invalid/v1', api_mode='responses',
+                           cost_usd=None, cost_status='unobserved_not_zero', text=json.dumps(self.doc, ensure_ascii=False))
+        self.prepare_request()
+
+    def prepare_request(self):
+        self.put(self.result_path, self.result)
+        review_path = f'{RUN}/{self.vid}/attempt-agent-review.json'
+        review = dict(schema='pkm-agent-evidence-review/v1', actor='agent',
+                      reviewer='synthetic fixture author; NOT real semantic evidence', reviewed_at=NOW.isoformat(),
+                      version_id=self.vid, result_sha256=self.ref(self.result_path)['sha256'],
+                      source_sha256=self.result['source_sha256'], requested_scope='P2 main-text complete',
+                      read_scope=self.doc['read_scope'], unread_scope=self.doc['unread_scope'],
+                      evidence_scope=[c['anchor'] for c in self.doc['claims']],
+                      reviewed_claim_ids=[c['id'] for c in self.doc['claims']],
+                      claims=[dict(id=c['id'], anchor=c['anchor'], quote_sha256=digest(c['quote'].encode()),
+                                   verdict='supported', rationale='SYNTHETIC: exact local claim/evidence fixture matches.')
+                              for c in self.doc['claims']])
+        self.put(review_path, review)
+        self.request_path = f'{RUN}/{self.vid}/attempt-publication-request.json'
+        request = dict(schema='pkm-publication-request/v1', version_id=self.vid,
+                       requested_scope='P2 main-text complete', result=self.ref(self.result_path),
+                       approval=self.ref(RUN + '/approval.json'),
+                       policy=self.ref('_meta/automation.json', revision=self.policy['policy_revision']),
+                       prompt=self.ref('_meta/prompts/wiki-compile.md', revision=self.result['prompt_revision']),
+                       source=self.ref(self.source, metadata_path=self.metadata, metadata_sha256=self.ref(self.metadata)['sha256']),
+                       output_path=f'entities/arxiv-{self.vid}.md', agent_review=self.ref(review_path),
+                       consumed_wiki_refs=[])
+        self.put(self.request_path, request)
+
+    def tree(self):
+        return {str(p.relative_to(self.root)): p.read_bytes()
+                for p in self.root.rglob('*') if p.is_file() and not p.is_symlink()}
+
+
+class EntrypointTests(unittest.TestCase):
+    def test_help_is_an_import_safe_cli_not_publication(self):
+        with tempfile.TemporaryDirectory() as td:
+            p = subprocess.run([sys.executable, '-B', str(SCRIPT), '--help'],
+                               cwd=td, capture_output=True, text=True)
+            self.assertEqual(p.returncode, 0, p.stderr)
+            for arg in ['--root', '--run', '--attempt']:
+                self.assertIn(arg, p.stdout)
+            self.assertEqual(list(Path(td).iterdir()), [])
+
+    def test_import_does_not_read_arguments_or_publish(self):
+        code = ('import importlib.util; '
+                f's=importlib.util.spec_from_file_location("p", {str(SCRIPT)!r}); '
+                'm=importlib.util.module_from_spec(s); s.loader.exec_module(m); '
+                'assert callable(m.main)')
+        with tempfile.TemporaryDirectory() as td:
+            p = subprocess.run([sys.executable, '-B', '-c', code], cwd=td,
+                               capture_output=True, text=True)
+            self.assertEqual(p.returncode, 0, p.stderr)
+            self.assertEqual(list(Path(td).iterdir()), [])
+
+
+class PublicationTests(unittest.TestCase):
+    def setUp(self):
+        self.td = tempfile.TemporaryDirectory(prefix='p2-publisher-SYNTHETIC-')
+        self.addCleanup(self.td.cleanup)
+        self.f = Fixture(Path(self.td.name))
+        self.p = load_publisher()
+        self.verifications = []
+        # Structural verifier is a sibling maintained independently. These tests
+        # isolate publisher transactions; a separate integration test uses the real sibling.
+        def verifier(root, vid, result):
+            self.verifications.append((Path(root) / '_meta/locks/collection.lock').is_dir())
+            doc = json.loads(result['text'])
+            ok = result['completed'] is True and result['response_status'] == 'completed' and doc['main_text_complete'] is True
+            return dict(passed=ok, checks=[dict(check='synthetic-interface', ok=ok)], document=doc)
+        self.mock = mock.patch.object(self.p, '_verify_result', verifier, create=True)
+        self.mock.start()
+        self.addCleanup(self.mock.stop)
+
+    def publish(self, **kw):
+        return self.p.publish(self.f.root, self.f.vid, self.f.run, self.f.attempt, _now=NOW, **kw)
+
+    def test_happy_path_schema_actual_count_yaml_and_verifier_under_lock(self):
+        result = self.publish()
+        self.assertEqual(result['status'], 'published_draft')
+        state = self.f.get('_meta/state/compilation.json')
+        Draft202012Validator(self.f.get('_meta/automation-contracts.schema.json'), format_checker=FormatChecker()).validate(state)
+        item = state['items'][0]
+        self.assertEqual(item['status'], 'published_draft')
+        self.assertEqual(set(item['output_refs'][0]), {'path', 'sha256', 'revision'})
+        self.assertIsInstance(item['output_refs'][0]['revision'], str)
+        page = (self.f.root / item['output_refs'][0]['path']).read_bytes()
+        fm = yaml.safe_load(page.decode().split('---\n')[1])
+        self.assertEqual(fm['title'], self.f.doc['title'])
+        self.assertEqual(fm['status'], 'draft')
+        self.assertEqual(fm['review_state'], 'unreviewed')
+        self.assertIsNone(fm['last_reviewed'])
+        self.assertEqual(fm['tags'], ['paper', 'llm-security', 'agent-security'])
+        self.assertEqual(item['output_refs'][0]['sha256'], digest(page))
+        idx = (self.f.root / 'index.md').read_text()
+        self.assertIn('Total pages: 1', idx)
+        self.assertIn(f'[[entities/arxiv-{VID}]]', idx)
+        self.assertIn('RAW UNCHANGED', idx)
+        self.assertTrue(any(self.verifications), self.verifications)
+        self.assertFalse((self.f.root / '_meta/locks/collection.lock').exists())
+        request = self.f.get(self.f.request_path)
+        wk = dict(source='arxiv', version_id=VID, source_sha256=self.f.result['source_sha256'],
+                  policy_revision=request['policy']['revision'], policy_sha256=request['policy']['sha256'],
+                  prompt_revision=request['prompt']['revision'], prompt_sha256=request['prompt']['sha256'],
+                  requested_scope=request['requested_scope'])
+        self.assertEqual(item['work_key'], digest(json.dumps(wk, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode()))
+        receipt = self.f.get(item['receipt_ref'])
+        self.assertEqual(receipt['work_key'], item['work_key'])
+        self.assertIsNone(receipt['human_review_ref'])
+
+    def test_repeat_is_verified_noop_without_any_file_write(self):
+        self.publish()
+        before = self.f.tree()
+        result = self.publish()
+        self.assertEqual(result['status'], 'noop')
+        self.assertEqual(self.f.tree(), before)
+
+    def test_missing_or_tampered_committed_output_is_not_noop(self):
+        self.publish()
+        output = self.f.root / f'entities/arxiv-{VID}.md'
+        for value in [None, b'USER MODIFIED reviewed page']:
+            with self.subTest(value=value):
+                if value is None:
+                    output.unlink()
+                else:
+                    output.write_bytes(value)
+                before = self.f.tree()
+                with self.assertRaises((ValueError, OSError)):
+                    self.publish()
+                self.assertEqual(self.f.tree(), before)
+
+    def test_directory_lock_busy_never_stolen(self):
+        lock = self.f.root / '_meta/locks/collection.lock'
+        lock.mkdir()
+        (lock / 'owner.json').write_text('{"role":"collector","pid":999999999}')
+        before = self.f.tree()
+        self.assertEqual(self.publish()['status'], 'skipped_busy')
+        self.assertEqual(self.f.tree(), before)
+        self.assertTrue(lock.is_dir())
+
+    def test_foreign_owner_is_not_cleaned_up_on_failure(self):
+        def hook(stage):
+            if stage == 'after_lock':
+                self.f.put('_meta/locks/collection.lock/owner.json', {'token': 'foreign-owner'})
+                raise RuntimeError('SYNTHETIC interruption')
+        with self.assertRaises(RuntimeError):
+            self.publish(_hook=hook)
+        self.assertEqual(self.f.get('_meta/locks/collection.lock/owner.json'), {'token': 'foreign-owner'})
+
+    def test_priority_window_is_half_open(self):
+        for hour, minute, busy in [(23, 54, False), (23, 55, True), (0, 0, True), (1, 34, True), (1, 35, False)]:
+            with self.subTest(kst=(hour, minute)):
+                # Nonbusy case reaches a sentinel before any publication write.
+                from datetime import timedelta
+                when = datetime(2026, 9, 30, hour, minute, tzinfo=timezone(timedelta(hours=9)))
+                def stop(stage):
+                    if stage == 'before_lock':
+                        raise RuntimeError('outside-priority')
+                if busy:
+                    self.assertEqual(self.p.publish(self.f.root, VID, RUN, self.f.attempt, _now=when, _hook=stop)['status'], 'skipped_busy')
+                else:
+                    with self.assertRaisesRegex(RuntimeError, 'outside-priority'):
+                        self.p.publish(self.f.root, VID, RUN, self.f.attempt, _now=when, _hook=stop)
+
+    def test_two_pages_sequentially_insert_without_losing_other_sections(self):
+        before = (self.f.root / 'index.md').read_text().split('## Concepts')[1]
+        self.publish()
+        self.f.add_item('2609.30830v1')
+        self.publish()
+        idx = (self.f.root / 'index.md').read_text()
+        self.assertEqual(idx.count('[[entities/arxiv-'), 2)
+        self.assertIn('Total pages: 2', idx)
+        self.assertEqual(idx.split('## Concepts')[1], before)
+        self.assertNotIn('아직 작성된 페이지가 없다.', idx.split('## Concepts')[0])
+
+    def test_index_heading_variants_and_ambiguity(self):
+        original = (self.f.root / 'index.md').read_text()
+        for heading in ['## Entities', '## Entities — 논문별 요약·분석·모델·도구', '## Entities — 논문별 요약·분석 / 모델·도구']:
+            with self.subTest(heading=heading):
+                self.f.put('index.md', original.replace('## Entities — 논문별 요약·분석 / 모델·도구', heading))
+                def stop(stage):
+                    if stage == 'before_lock':
+                        raise RuntimeError('valid-index')
+                with self.assertRaisesRegex(RuntimeError, 'valid-index'):
+                    self.publish(_hook=stop)
+        self.f.put('index.md', original + '\n## Entities\n')
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'Entities'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+
+    def test_positive_cost_is_not_a_gate(self):
+        self.f.result.update(cost_usd=123.45, cost_status='observed')
+        self.f.prepare_request()
+        self.assertEqual(self.publish()['status'], 'published_draft')
+        receipt = self.f.get(self.f.get('_meta/state/compilation.json')['items'][0]['receipt_ref'])
+        self.assertEqual(receipt['cost_usd'], 123.45)
+
+    def test_invalid_response_and_policy_fail_before_any_write(self):
+        original = copy.deepcopy(self.f.result)
+        for field, value in [('completed', False), ('response_status', 'incomplete'), ('error', 'upstream failure'),
+                             ('provider', 'unapproved'), ('response_model', 'unapproved'), ('policy_sha256', 'a'*64),
+                             ('source_sha256', 'a'*64), ('prompt_revision', 'wiki-compile/v1'), ('text', '{}')]:
+            with self.subTest(field=field):
+                self.f.result = dict(original, **{field: value})
+                self.f.prepare_request()
+                before = self.f.tree()
+                with self.assertRaises((ValueError, KeyError)):
+                    self.publish()
+                self.assertEqual(self.f.tree(), before)
+
+    def test_semantic_claim_review_and_request_are_required_not_a_boolean(self):
+        req = self.f.get(self.f.request_path)
+        self.f.put(req['agent_review']['path'], {'passed': True})
+        req['agent_review'] = self.f.ref(req['agent_review']['path'])
+        self.f.put(self.f.request_path, req)
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'review'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+
+    def test_no_reuse_of_repair_approval_as_live_publication_permission(self):
+        repair = self.f.policy['approval_amendment_ref']
+        self.f.result.update(approval_ref=repair, approval_sha256=self.f.ref(repair)['sha256'])
+        self.f.prepare_request()
+        req = self.f.get(self.f.request_path)
+        req['approval'] = self.f.ref(repair)
+        self.f.put(self.f.request_path, req)
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'approval'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+
+    def test_source_symlink_rejected_without_writes(self):
+        src = self.f.root / self.f.source
+        data = src.read_bytes()
+        other = self.f.root / 'outside.html'
+        other.write_bytes(data)
+        src.unlink()
+        src.symlink_to(other)
+        before = self.f.tree()
+        with self.assertRaises((ValueError, OSError)):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+        self.assertTrue(src.is_symlink())
+
+    def test_existing_reviewed_page_never_overwritten(self):
+        self.f.put(f'entities/arxiv-{VID}.md', '---\nstatus: reviewed\n---\nUSER PAGE')
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'existing output'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+
+    def test_snapshot_conflict_after_preflight_preserves_state_edit(self):
+        def edit(stage):
+            if stage == 'before_lock':
+                s = self.f.get('_meta/state/compilation.json')
+                s['items'][0]['reason'] = 'USER EDIT'
+                self.f.put('_meta/state/compilation.json', s)
+        with self.assertRaisesRegex(ValueError, 'state'):
+            self.publish(_hook=edit)
+        self.assertEqual(self.f.get('_meta/state/compilation.json')['items'][0]['reason'], 'USER EDIT')
+        self.assertFalse((self.f.root / f'entities/arxiv-{VID}.md').exists())
+
+    def interrupt(self, stage):
+        def fail(at):
+            if at == stage:
+                raise RuntimeError('SYNTHETIC injected ' + stage)
+        with self.assertRaisesRegex(RuntimeError, 'SYNTHETIC injected'):
+            self.publish(_hook=fail)
+        self.assertFalse((self.f.root / '_meta/locks/collection.lock').exists())
+
+    def test_failure_after_page_resumes(self):
+        self.interrupt('after_page')
+        self.check_recovery()
+
+    def test_failure_after_index_resumes(self):
+        self.interrupt('after_index')
+        self.check_recovery()
+
+    def test_failure_after_log_resumes_without_duplicate_event(self):
+        self.interrupt('after_log')
+        self.check_recovery()
+
+    def test_failure_after_receipt_resumes(self):
+        self.interrupt('after_receipt')
+        self.check_recovery()
+
+    def test_failure_after_state_resumes(self):
+        self.interrupt('after_state')
+        self.check_recovery()
+
+    def check_recovery(self):
+        self.assertEqual(self.publish()['status'], 'published_draft')
+        self.assertEqual((self.f.root / 'log.md').read_text().count('<!-- publication-event:'), 1)
+        self.assertEqual((self.f.root / 'index.md').read_text().count(f'[[entities/arxiv-{VID}]]'), 1)
+        self.assertEqual(self.publish()['status'], 'noop')
+
+    def test_recovery_retains_unrelated_index_and_log_updates(self):
+        self.interrupt('after_page')
+        p = self.f.root / 'index.md'
+        p.write_text(p.read_text().replace('RAW UNCHANGED', 'RAW FOREIGN UPDATE'))
+        with (self.f.root / 'log.md').open('a') as f:
+            f.write('\nFOREIGN APPEND\n')
+        self.check_recovery()
+        self.assertIn('RAW FOREIGN UPDATE', p.read_text())
+        self.assertIn('FOREIGN APPEND', (self.f.root / 'log.md').read_text())
+
+    def test_recovery_foreign_output_state_and_policy_edits_conflict(self):
+        self.interrupt('after_page')
+        originals = self.f.tree()
+        for path in [f'entities/arxiv-{VID}.md', '_meta/state/compilation.json', '_meta/automation.json']:
+            with self.subTest(path=path):
+                self.f.put(path, originals[path] + b'\nUSER EDIT\n')
+                before = self.f.tree()
+                with self.assertRaises((ValueError, OSError)):
+                    self.publish()
+                self.assertEqual(self.f.tree(), before)
+                self.f.put(path, originals[path])
+
+    def test_other_unresolved_journal_blocks_new_publication(self):
+        self.interrupt('after_page')
+        self.f.add_item('2609.30830v1')
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'unresolved'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+
+
+    def test_real_sibling_verifier_happy_and_incomplete_integration(self):
+        self.mock.stop()
+        self.f.result['incomplete_details'] = {'reason': 'SYNTHETIC interrupted'}
+        self.f.prepare_request()
+        self.f.put(f'{RUN}/{VID}/verify-report.json', {'passed': True, 'checks': []})
+        before = self.f.tree()
+        with self.assertRaisesRegex(ValueError, 'structural'):
+            self.publish()
+        self.assertEqual(self.f.tree(), before)
+        self.f.result['incomplete_details'] = None
+        self.f.prepare_request()
+        self.assertEqual(self.publish()['status'], 'published_draft')
+        self.assertEqual(self.publish()['status'], 'noop')
+
+    def test_foreign_receipt_or_structural_output_fails_before_journal(self):
+        for suffix in ['receipt.json', 'publish-verification.json']:
+            with self.subTest(suffix=suffix):
+                path = f'{RUN}/{VID}/attempt-{suffix}'
+                self.f.put(path, {'foreign': 'USER FILE'})
+                before = self.f.tree()
+                with self.assertRaisesRegex(ValueError, 'artifact|receipt|existing'):
+                    self.publish()
+                self.assertEqual(self.f.tree(), before)
+                (self.f.root / path).unlink()
+
+    def test_foreign_owner_mid_publication_stops_future_writes(self):
+        def change(stage):
+            if stage == 'after_page':
+                self.f.put('_meta/locks/collection.lock/owner.json', {'token': 'new-owner'})
+        index = (self.f.root / 'index.md').read_bytes()
+        with self.assertRaisesRegex(ValueError, 'lock|owner'):
+            self.publish(_hook=change)
+        self.assertEqual((self.f.root / 'index.md').read_bytes(), index)
+        self.assertEqual(self.f.get('_meta/locks/collection.lock/owner.json'), {'token': 'new-owner'})
+
+    def test_cost_events_record_observed_and_unknown_without_caps(self):
+        self.publish()
+        first = self.f.get('_meta/state/compilation.json')['cost_events']
+        self.assertEqual(len(first), 1)
+        self.assertIsNone(first[0]['reserved_usd'])
+        self.assertIsNone(first[0]['charged_usd'])
+        self.assertEqual(first[0]['status'], 'unknown')
+        self.f.add_item('2609.30830v1')
+        self.f.result['cost_usd'] = 1000.5
+        self.f.prepare_request()
+        self.publish()
+        second = self.f.get('_meta/state/compilation.json')['cost_events']
+        self.assertEqual(len(second), 2)
+        self.assertEqual(second[1]['charged_usd'], 1000.5)
+        self.assertEqual(second[1]['status'], 'settled')
+
+    def test_noop_first_page_after_second_commit_retains_both(self):
+        self.publish()
+        self.f.add_item('2609.30830v1')
+        self.publish()
+        self.f.vid = VID
+        before = self.f.tree()
+        self.assertEqual(self.publish()['status'], 'noop')
+        self.assertEqual(self.f.tree(), before)
+
+    def test_malformed_request_cli_returns_failure_not_traceback(self):
+        self.f.put(self.f.request_path, [])
+        proc = subprocess.run([sys.executable, '-B', str(SCRIPT), VID, '--root', str(self.f.root),
+                               '--run', RUN, '--attempt', self.f.attempt], capture_output=True, text=True)
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertNotIn('Traceback', proc.stderr)
+        self.assertEqual(json.loads(proc.stdout)['status'], 'blocked_conflict')
+
+    def test_invalid_request_field_type_cli_returns_failure_not_traceback(self):
+        req = self.f.get(self.f.request_path)
+        req['result'] = None
+        self.f.put(self.f.request_path, req)
+        proc = subprocess.run([sys.executable, '-B', str(SCRIPT), VID, '--root', str(self.f.root),
+                               '--run', RUN, '--attempt', self.f.attempt], capture_output=True, text=True)
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertNotIn('Traceback', proc.stderr)
+        self.assertEqual(json.loads(proc.stdout)['status'], 'blocked_conflict')
+
+    def test_journal_bytes_hashes_order_receipt_before_state(self):
+        before_state = (self.f.root / '_meta/state/compilation.json').read_bytes()
+        before_log = (self.f.root / 'log.md').read_bytes()
+        stages = []
+        def observe(stage):
+            if stage.startswith('after_') and stage != 'after_lock':
+                stages.append(stage)
+                journal = self.f.get(f'{RUN}/{VID}/attempt-publish-journal.json')['plan']
+                self.assertEqual(journal['targets'][0]['before_image'], None)
+                self.assertEqual(digest(journal['targets'][0]['after_image'].encode()), journal['targets'][0]['after_hash'])
+                self.assertEqual(journal['log']['prefix_bytes'], len(before_log))
+                self.assertEqual(journal['log']['prefix_sha256'], digest(before_log))
+                if stage == 'after_receipt':
+                    self.assertTrue((self.f.root / journal['targets'][3]['path']).exists())
+                    self.assertEqual((self.f.root / '_meta/state/compilation.json').read_bytes(), before_state)
+        self.publish(_hook=observe)
+        self.assertEqual(stages, ['after_page', 'after_index', 'after_log', 'after_receipt', 'after_state'])
+
+
+    def test_root_ancestor_swap_does_not_follow_symlink(self):
+        parent = self.f.root / 'safe-parent'
+        root = parent / 'wiki'
+        root.mkdir(parents=True)
+        (root / 'target.md').write_bytes(b'old')
+        fs = self.p.Files(root)
+        parent.rename(self.f.root / 'moved-parent')
+        outside = self.f.root / 'foreign-parent'
+        (outside / 'wiki').mkdir(parents=True)
+        (outside / 'wiki/target.md').write_bytes(b'old')
+        parent.symlink_to(outside, target_is_directory=True)
+        with self.assertRaises((ValueError, OSError)):
+            fs.write('target.md', b'new', b'old')
+        self.assertEqual((outside / 'wiki/target.md').read_bytes(), b'old')
+
+    def test_priority_rechecked_immediately_before_lock(self):
+        outside = datetime(2026, 9, 30, 14, 54, tzinfo=timezone.utc)
+        inside = datetime(2026, 9, 30, 14, 55, tzinfo=timezone.utc)
+        before = self.f.tree()
+        with mock.patch.object(self.p, 'datetime', wraps=datetime) as clock:
+            clock.now.side_effect = [outside, inside]
+            result = self.p.publish(self.f.root, VID, RUN, self.f.attempt)
+        self.assertEqual(result['status'], 'skipped_busy')
+        self.assertEqual(self.f.tree(), before)
+
+
+if __name__ == '__main__':
+    unittest.main()

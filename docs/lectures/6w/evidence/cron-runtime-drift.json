@@ -1,0 +1,9 @@
+{
+  "job_id": "c5548510672c",
+  "baseline_counter_candidates_matching_exact_hash": [
+    5724
+  ],
+  "current_repeat_completed": 5725,
+  "scope": "all fields included in original fingerprint except repeat.completed unchanged if exactly one match",
+  "safe_field_readback": "schedule, enabled, state, script, no_agent, deliver, model, provider match initial cron list"
+}

@@ -1,0 +1,32 @@
+test_empty_inventory_is_verified_noop (test_daily.DailyTests.test_empty_inventory_is_verified_noop) ... FAIL
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... ok
+test_partial_and_three_failures_block_further_processing (test_daily.DailyTests.test_partial_and_three_failures_block_further_processing) ... ok
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+test_reserved_unknown_from_prior_run_blocks_new_run (test_daily.DailyTests.test_reserved_unknown_from_prior_run_blocks_new_run) ... FAIL
+test_runner_bounds_retry_and_retains_unknown_without_retry (test_daily.DailyTests.test_runner_bounds_retry_and_retains_unknown_without_retry) ... ok
+test_runner_unknown_is_not_retried (test_daily.DailyTests.test_runner_unknown_is_not_retried) ... ok
+test_scheduled_gate_checks_live_projection_and_freeze (test_daily.DailyTests.test_scheduled_gate_checks_live_projection_and_freeze) ... ok
+
+======================================================================
+FAIL: test_empty_inventory_is_verified_noop (test_daily.DailyTests.test_empty_inventory_is_verified_noop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 189, in test_empty_inventory_is_verified_noop
+    self.assertEqual(out['status'],'noop')
+AssertionError: 'blocked_approval' != 'noop'
+- blocked_approval
++ noop
+
+
+======================================================================
+FAIL: test_reserved_unknown_from_prior_run_blocks_new_run (test_daily.DailyTests.test_reserved_unknown_from_prior_run_blocks_new_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 198, in test_reserved_unknown_from_prior_run_blocks_new_run
+    with self.assertRaisesRegex(ValueError,'unresolved_reading'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 8.359s
+
+FAILED (failures=2)

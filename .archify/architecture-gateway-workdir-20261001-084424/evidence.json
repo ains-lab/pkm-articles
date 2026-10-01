@@ -1,0 +1,152 @@
+{
+  "kind": "document-based-design-not-runtime-observation",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "sources": [
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/architecture.md",
+      "ranges": [
+        [
+          6,
+          20
+        ],
+        [
+          39,
+          75
+        ],
+        [
+          87,
+          93
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workspace-and-gateway.md",
+      "ranges": [
+        [
+          7,
+          24
+        ],
+        [
+          43,
+          63
+        ],
+        [
+          65,
+          124
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/api-contract.md",
+      "ranges": [
+        [
+          6,
+          34
+        ],
+        [
+          36,
+          118
+        ],
+        [
+          120,
+          137
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/workflows.md",
+      "ranges": [
+        [
+          6,
+          95
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/data-contracts.md",
+      "ranges": [
+        [
+          100,
+          133
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/security-and-operations.md",
+      "ranges": [
+        [
+          6,
+          72
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/implementation-roadmap.md",
+      "ranges": [
+        [
+          18,
+          64
+        ]
+      ]
+    },
+    {
+      "path": "docs/techblog/hermes-api-gateway-workdir-assoc/evidence.md",
+      "ranges": [
+        [
+          8,
+          15
+        ],
+        [
+          46,
+          80
+        ]
+      ]
+    }
+  ],
+  "official_docs_read": [
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/configuration#working-directory"
+  ],
+  "historical_source_revision_reported_by_documents": "8d79c2ff57bba4b07e5b37ed90387b16541aef53",
+  "current_policy": {
+    "path": "SCHEMA.md",
+    "ranges": [
+      [
+        3,
+        7
+      ]
+    ],
+    "effect": "P3 automatic compile approved; do not copy historical unapproved status into current diagrams. Does not authorize web queries/publication."
+  },
+  "diagram_claim_map": {
+    "01-connect": {
+      "app-request": "architecture.md:64-71",
+      "api-request": "api-contract.md:6-11",
+      "plain-read": "architecture.md:41-48; data-contracts.md:117-127",
+      "agent-execution": "architecture.md:50-60",
+      "agent-read": "security-and-operations.md:37-48",
+      "cwd-binding": "workspace-and-gateway.md:43-63",
+      "verified-publish": "SCHEMA.md:3-7; architecture.md:87-93"
+    },
+    "02-workdir": {
+      "approve/path/isolate": "implementation-roadmap.md:18-29; security-and-operations.md:37-50",
+      "configure/restart/testcwd": "workspace-and-gateway.md:65-124",
+      "health/connectapp/ready": "workspace-and-gateway.md:107-116; implementation-roadmap.md:47-64"
+    },
+    "03-query": {
+      "ask/gate/submit/agent": "workflows.md:25-35; api-contract.md:60-84",
+      "sse/disconnect/poll": "workflows.md:37-72; api-contract.md:86-112",
+      "check/display/stop": "workflows.md:58-82; api-contract.md:114-118"
+    }
+  },
+  "not_run": [
+    "gateway_config_change",
+    "service_start_restart",
+    "live_hermes_api",
+    "model_call",
+    "wiki_publication",
+    "cron_change",
+    "installation",
+    "deployment"
+  ]
+}

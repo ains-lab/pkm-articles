@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_both_entrypoints_import_without_execution (__main__.ImportTests.test_both_entrypoints_import_without_execution) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n"
+}

@@ -19,6 +19,21 @@
   - X 팔로워 2단계 조리법, Reddit 서브레디·사용자 활동 수집
   - 설명서이며 이 저장소에 소셜 수집 자동화를 만들지는 않음
 
+## 6주차 — SNS Second Brain 기술문서
+
+- [Hermes × Agent Reach — X·Reddit·YouTube → Raw → Wiki](lectures/6w/README.md)
+  - 채널별 접근·인증 보호, 불변 캡처·출처·중복·상태 계약
+  - 별도 승인 컴파일, 개념·비교·질의 연결, Cron 운영·프롬프트·실습
+  - Discord 요약·전송 제외; 요청 Cron `0d0ad6c887e3`은 현재 프로필에서 미발견하여 원설정 확인 필요
+  - 적용 전 문서이며 SNS 수집·컴파일·Cron 변경은 실행하지 않음
+
+## 외부 웹 서비스 기술문서
+
+- [Wiki × Hermes API Gateway — 기술문서 목차](techblog/hermes-api-gateway-workdir-assoc/README.md)
+  - 아키텍처, Wiki 작업 경로, 기술 스택, API·SSE, 데이터·상태 계약
+  - frontend 화면·디자인, 보안·운영, 구현·검증 로드맵
+  - 기존 기능과 제안 설계를 구분하며 실제 Gateway 설정·서비스는 변경하지 않음
+
 ## 정확한 운영 기준
 
 설명을 읽은 뒤 세부 규칙이 필요하면 다음 문서를 확인하세요.

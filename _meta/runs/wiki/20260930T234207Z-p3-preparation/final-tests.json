@@ -1,0 +1,43 @@
+{
+  "synthetic_only": true,
+  "model_api_calls": 0,
+  "modules": [
+    {
+      "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_compile_one.py",
+      "tests": 30
+    },
+    {
+      "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_one.py",
+      "tests": 35
+    },
+    {
+      "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_publish_separate_approval.py",
+      "tests": 6
+    },
+    {
+      "path": "_meta/runs/wiki/20260929T083140Z-p2-resume/test_verify_one.py",
+      "tests": 32
+    },
+    {
+      "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_cross_component.py",
+      "tests": 2
+    },
+    {
+      "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_handoff.py",
+      "tests": 2
+    },
+    {
+      "path": "_meta/runs/wiki/20260930T090330Z-p2-repair/test_policy_alignment.py",
+      "tests": 7
+    },
+    {
+      "path": "_meta/runs/wiki/20260930T234207Z-p3-preparation/test_p3_readiness.py",
+      "tests": 10
+    }
+  ],
+  "tests": 124,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true
+}

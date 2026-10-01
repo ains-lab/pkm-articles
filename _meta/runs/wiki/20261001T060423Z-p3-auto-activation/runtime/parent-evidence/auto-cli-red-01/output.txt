@@ -1,0 +1,15 @@
+test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) ... 
+  test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) (status='published_auto_verified') ... FAIL
+
+======================================================================
+FAIL: test_recovery_cli_accepts_both_published_terminal_statuses (test_auto_publication.AutoDailyTests.test_recovery_cli_accepts_both_published_terminal_statuses) (status='published_auto_verified')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 98, in test_recovery_cli_accepts_both_published_terminal_statuses
+    self.assertEqual(code, 0)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=1)

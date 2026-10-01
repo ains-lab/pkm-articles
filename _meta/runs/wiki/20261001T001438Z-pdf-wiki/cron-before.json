@@ -1,0 +1,9 @@
+{
+  "store_path": "/home/ainsdev/.hermes/cron/jobs.json",
+  "job_ids": [
+    "05ec97bfa8d5",
+    "4cff5b4f10ec",
+    "c5548510672c"
+  ],
+  "collector_record_sha256": "309ae7a2497d2133d452c102ff82fbc2d5a1f9149328758a2d0d3a480f86c564"
+}

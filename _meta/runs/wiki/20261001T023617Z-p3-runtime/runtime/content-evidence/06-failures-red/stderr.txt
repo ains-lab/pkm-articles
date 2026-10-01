@@ -1,0 +1,42 @@
+test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) ... 
+  test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) (stage='generation') ... ERROR
+  test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) (stage='review') ... ERROR
+
+======================================================================
+ERROR: test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) (stage='generation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 278, in test_request_failures_are_bounded_durable_and_never_forge_review
+    bundle = self.content.process(fixture.ctx, client_factory=f)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 322, in process
+    document, generation = _call(ctx, factory, ctx['prompt'] + '\n' + WARNING + '\n' + GENERATION,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 172, in _call
+    response = client.responses.create(model=c.MODEL['model'], instructions=instructions,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 77, in create
+    raise answer
+ConnectionError: SOURCE_SECRET_NEVER_LOG
+
+======================================================================
+ERROR: test_request_failures_are_bounded_durable_and_never_forge_review (test_content.ContentTests.test_request_failures_are_bounded_durable_and_never_forge_review) (stage='review')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 278, in test_request_failures_are_bounded_durable_and_never_forge_review
+    bundle = self.content.process(fixture.ctx, client_factory=f)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 338, in process
+    decision, observed = _call(ctx, factory, WARNING + '\n' + REVIEW, review_payload, deadline, clock)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py", line 172, in _call
+    response = client.responses.create(model=c.MODEL['model'], instructions=instructions,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 77, in create
+    raise answer
+TimeoutError: SOURCE_SECRET_NEVER_LOG
+
+----------------------------------------------------------------------
+Ran 1 test in 0.053s
+
+FAILED (errors=2)

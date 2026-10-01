@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-01T02:21:46.825505+00:00",
+  "version_id": "2609.30614v1",
+  "status": "published_draft",
+  "journal": "_meta/runs/wiki/20261001T001438Z-pdf-wiki/publications/2609.30614v1-attempt1-publish-journal.json",
+  "journal_status": "committed",
+  "page_sha256": "3ed3744c04626db2226dbee7e0ede65ccabb16a8a6e20162d56cbbdc06bbd6b7",
+  "receipt_sha256": "011cd3da25ce142f1789806e64400314182baa0dc8f48f2ce041ff7a12bcaf88",
+  "generated_body_unchanged": true,
+  "mechanical_checks": 32,
+  "semantic_claims": 27,
+  "physical_pages": 23,
+  "prior_protected_unchanged": true,
+  "lock_released": true
+}

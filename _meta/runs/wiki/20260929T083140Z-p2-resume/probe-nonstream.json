@@ -1,0 +1,27 @@
+{
+  "schema": "pkm-p2-nonstream-probe/v1",
+  "recorded_at": "2026-09-30T08:16:32.847851+00:00",
+  "purpose": "비스트리밍 경로가 프록시 websocket keepalive 타임아웃을 우회하는지 확인 (논문 내용 없음)",
+  "paper_content_sent": false,
+  "cap_seconds": 600,
+  "completed": true,
+  "error": null,
+  "elapsed_seconds": 520.0,
+  "response_status": "completed",
+  "response_model": "gpt-6-astra",
+  "text": "NONSTREAM_OK",
+  "usage": {
+    "input_tokens": 27,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 19,
+    "output_tokens_details": {
+      "reasoning_tokens": 10
+    },
+    "total_tokens": 46
+  },
+  "cost_usd": null,
+  "cost_status": "unobserved_not_zero"
+}

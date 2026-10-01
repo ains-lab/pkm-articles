@@ -1,0 +1,47 @@
+{
+  "vid": "2609.00001v1",
+  "passed": false,
+  "checks": [
+    {
+      "check": "result_object",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "completed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "response_status_completed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no_error",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no_incomplete_details",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "response_model_gpt-6-astra",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "cost_nonblocking",
+      "ok": true,
+      "detail": "Observed or unknown cost does not gate verification"
+    },
+    {
+      "check": "single_json_object",
+      "ok": false,
+      "detail": ""
+    }
+  ],
+  "document": null
+}

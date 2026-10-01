@@ -1,0 +1,15 @@
+test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably) ... FAIL
+test_preflight_binds_authority_and_refuses_live_disabled (test_daily.DailyTests.test_preflight_binds_authority_and_refuses_live_disabled) ... ok
+
+======================================================================
+FAIL: test_inventory_selects_oldest_five_and_reserves_durably (test_daily.DailyTests.test_inventory_selects_oldest_five_and_reserves_durably)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_daily.py", line 95, in test_inventory_selects_oldest_five_and_reserves_durably
+    self.assertTrue(callable(getattr(self.m,'inventory',None)), 'inventory not implemented')
+AssertionError: False is not true : inventory not implemented
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.524s
+
+FAILED (failures=1)

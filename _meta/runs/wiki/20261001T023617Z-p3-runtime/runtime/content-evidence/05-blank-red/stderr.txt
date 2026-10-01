@@ -1,0 +1,17 @@
+test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests) ... FAIL
+
+======================================================================
+FAIL: test_blank_pdf_is_partial_without_model_requests (test_content.ContentTests.test_blank_pdf_is_partial_without_model_requests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 261, in test_blank_pdf_is_partial_without_model_requests
+    self.assertEqual(bundle['status'], 'partial')
+AssertionError: 'blocked_review' != 'partial'
+- blocked_review
++ partial
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.211s
+
+FAILED (failures=1)

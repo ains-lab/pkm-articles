@@ -1,0 +1,28 @@
+{
+  "schema": "synthetic-pdf-test-evidence/v1",
+  "label": "parent-verified-02",
+  "tests_run": 107,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "synthetic_only": true,
+  "observed_boundaries": {
+    "network_attempts": 0,
+    "real_pdf_read_attempts": 0,
+    "synthetic_pdf_reads": 173
+  },
+  "legacy_helpers_unchanged": true,
+  "legacy_sha256": {
+    "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py": "b8c8904dc912489fd7e64f902a3e51353bc46ee13d5491fe54724279390254ac",
+    "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py": "d055ec8405ab01000308c5c603dbc432804651fb286c14141dace2dc3fdac0ee",
+    "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc"
+  },
+  "interpreter": "/home/ainsdev/.hermes/hermes-agent/venv/bin/python",
+  "python_version": "3.11.15 (main, Jul 23 2026, 14:43:45) [Clang 22.1.3 ]",
+  "snapshots": {
+    "run_tests.py.snapshot": "bd01e9847b5ee99133b45b51e078755f03481fb4ec5456db19676a3ab4d9c8be",
+    "test_manual_pdf.py.snapshot": "151bec89ca5d983620f8773758c56be4184c1fa1e8fc83ef10b7ef6476ca8960",
+    "manual_pdf.py.snapshot": "8106b11ed938f3c35dbcf4a13cc8a39a5ff13abe2a4e01c75e2f3ef29662d7b4"
+  }
+}

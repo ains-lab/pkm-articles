@@ -1,0 +1,19 @@
+test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log) ... ERROR
+
+======================================================================
+ERROR: test_interrupted_page_recovers_without_overwriting_later_log (test_publication.PublicationTests.test_interrupted_page_recovers_without_overwriting_later_log)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 144, in test_interrupted_page_recovers_without_overwriting_later_log
+    result = p.publish(self.f.ctx, self.f.bundle, now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/publication.py", line 186, in publish
+    c.require(fs.read(journal_path,True) is None, 'existing transaction')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py", line 26, in require
+    raise ValueError(code)
+ValueError: existing transaction
+
+----------------------------------------------------------------------
+Ran 1 test in 0.330s
+
+FAILED (errors=1)

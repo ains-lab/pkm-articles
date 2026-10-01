@@ -1,0 +1,17 @@
+test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers) ... FAIL
+
+======================================================================
+FAIL: test_html_publishes_enabled_draft_with_real_helpers (test_publication.PublicationTests.test_html_publishes_enabled_draft_with_real_helpers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 135, in test_html_publishes_enabled_draft_with_real_helpers
+    p = self.publisher()
+        ^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_publication.py", line 131, in publisher
+    self.assertTrue((HERE / 'publication.py').is_file(), 'P3 publisher implementation is missing')
+AssertionError: False is not true : P3 publisher implementation is missing
+
+----------------------------------------------------------------------
+Ran 1 test in 0.085s
+
+FAILED (failures=1)

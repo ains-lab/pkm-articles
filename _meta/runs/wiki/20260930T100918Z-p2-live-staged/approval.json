@@ -1,0 +1,62 @@
+{
+  "schema": "pkm-p2-run-approval/v1",
+  "actor": "user",
+  "approved": true,
+  "phase": "P2",
+  "scope": "manual-html-direct-compile",
+  "run_id": "20260930T100918Z-p2-live-staged",
+  "wiki_root": "/home/ainsdev/wiki/pkm-articles",
+  "fresh_run": true,
+  "operator_reviewed_prior_attempts": true,
+  "version_ids": [
+    "2609.30830v1",
+    "2609.31358v1"
+  ],
+  "provider": "codex-lb",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "max_attempts_per_item": 2,
+  "approved_route": {
+    "base_url": "http://10.10.1.244:2455/v1",
+    "api_mode": "codex_responses"
+  },
+  "policy_revision": "pkm-html-knowledge/v2",
+  "policy_sha256": "e6c32d67a0f0b1bfeb54770ebbf4c68fe1822c974289bd7f8daa1307e0e48ae5",
+  "prompt_revision": "wiki-compile/v2",
+  "prompt_sha256": "03e6ba421b690affaa4e32252bed0594876de8261e1e640ff28790f6c74c0dad",
+  "instructions_path": "_meta/runs/wiki/20260930T100918Z-p2-live-staged/instructions.txt",
+  "instructions_sha256": "1e75d0084e13ef33ca6580b870b94aa09c501c0f76a8315a5f8cc05c6a6f1783",
+  "document_sha256": {
+    "AGENTS.md": "77db9007d92325e8ec03f9d06ea4807e0b4f3837abb04e39fe89b6ee8857ee7d",
+    "SCHEMA.md": "8cce8998d3949787f7ae4f159012a4f60390bde5176122e13cc9ffa4bbe4835c",
+    "_meta/AUTOMATION.md": "50938ddef8fe8e16ad4ed7b61839afcd64163bb2eaa9043de6ee8884eaeaeea2",
+    "_meta/STATE-CONTRACTS.md": "4870e4c04c035e47cd217287da25a5e37820910dcf8e7b52be53593ba30b6f3c",
+    "_meta/COMPILATION.md": "3e35f7e70b5581ba9c46bdeb0cb976c1d877404f08ceeba291e44e5a1a5b04d5",
+    "_meta/automation-contracts.schema.json": "ae39cc42ce0c6285417e07022397cbd42ea315b7ce84fb8f1c41301ae1fbc113"
+  },
+  "sources": {
+    "2609.30830v1": {
+      "source_sha256": "89d515e6c33de5717ff141a6d9726830a01798e6dfead198c9f0525f0261d074",
+      "source_bytes": 267373,
+      "metadata_sha256": "3916139355325f7cd47fe155fd60f2c8ab7c2ca80fc831ef2e4350ad0f758c72"
+    },
+    "2609.31358v1": {
+      "source_sha256": "cfee938c27d5b30fb053d251d2bd1b1a6ac259b775582fe05558a370ddac566e",
+      "source_bytes": 212956,
+      "metadata_sha256": "47ee6c40d07afaa7b05317ce0f9df051e9b6c098851d03920862ea25f12309fb"
+    }
+  },
+  "confirmation": "다음 단계를 진행해주세요",
+  "user_request": "다음 단계를 진행해주세요",
+  "confirmation_scope": "직전 안내의 새 run 두 편 P2 컴파일·검증 재개. 게시/편집 중지 추가 확인은 시간초과하여 승인되지 않음.",
+  "publication_edit_freeze_confirmed": false,
+  "validated_draft_publication_authorized": false,
+  "publication_confirmation_timed_out": true,
+  "prior_approval_ref": "_meta/runs/wiki/20260929T064035Z-p2-cost-waiver/approval.json",
+  "fallback_allowed": false,
+  "pdf_images_external_assets_allowed": false,
+  "cost_policy": "no_cost_cap",
+  "retry_review": "Prior stream requests failed upstream keepalive; prior nonstream start-only outcome remains unknown. Operator selected one sequential nonstream attempt per item after repaired runner tests; no automatic retry/reset of prior records.",
+  "cron_registration_authorized": false,
+  "cron_activation_authorized": false
+}

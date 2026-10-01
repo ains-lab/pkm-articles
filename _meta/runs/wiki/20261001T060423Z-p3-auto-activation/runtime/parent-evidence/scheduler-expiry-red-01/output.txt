@@ -1,0 +1,30 @@
+test_expired_processor_error_has_durable_unknown_not_orphan_reading (test_scheduled_safety.ScheduledSafetyTests.test_expired_processor_error_has_durable_unknown_not_orphan_reading) ... ERROR
+
+======================================================================
+ERROR: test_expired_processor_error_has_durable_unknown_not_orphan_reading (test_scheduled_safety.ScheduledSafetyTests.test_expired_processor_error_has_durable_unknown_not_orphan_reading)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_scheduled_safety.py", line 56, in test_expired_processor_error_has_durable_unknown_not_orphan_reading
+    result=daily.run_daily(**self.f.kw(),processor=processor,clock=lambda:elapsed[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 518, in run_daily
+    state=record_outcome(prepared,bundle)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 368, in record_outcome
+    ctx['guard']();fs=ctx['fs'];P=C.helper('publish')
+    ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 314, in guard
+    ctx['guard']();ctx['owns_run']();P.check_snapshots(fs,prepared['snapshots'])
+    ^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 99, in guard
+    tick(ctx)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/daily.py", line 114, in tick
+    C.check_deadline(ctx.get('deadline'),ctx.get('clock',time.monotonic))
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/p3_common.py", line 70, in check_deadline
+    raise TimeoutError('cooperative deadline')
+TimeoutError: cooperative deadline
+
+----------------------------------------------------------------------
+Ran 1 test in 1.017s
+
+FAILED (errors=1)

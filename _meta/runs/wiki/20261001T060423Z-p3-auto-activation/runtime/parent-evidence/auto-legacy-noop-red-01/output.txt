@@ -1,0 +1,21 @@
+test_legacy_committed_noop_preserves_every_byte (test_auto_publication.AutoPublicationTests.test_legacy_committed_noop_preserves_every_byte) ... ERROR
+
+======================================================================
+ERROR: test_legacy_committed_noop_preserves_every_byte (test_auto_publication.AutoPublicationTests.test_legacy_committed_noop_preserves_every_byte)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/test_auto_publication.py", line 70, in test_legacy_committed_noop_preserves_every_byte
+    result = publication.publish(f.ctx, f.bundle, now=NOW)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 364, in publish
+    _validate_reconstruction(ctx,evidence,basis,plan)
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/publication.py", line 307, in _validate_reconstruction
+    c.require(c.canonical(plan) == c.canonical(expected), 'journal deterministic reconstruction conflict')
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T060423Z-p3-auto-activation/runtime/p3_common.py", line 27, in require
+    raise ValueError(code)
+ValueError: journal deterministic reconstruction conflict
+
+----------------------------------------------------------------------
+Ran 1 test in 0.645s
+
+FAILED (errors=1)

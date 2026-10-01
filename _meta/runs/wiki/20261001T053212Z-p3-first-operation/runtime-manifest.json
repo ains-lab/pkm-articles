@@ -1,0 +1,15 @@
+{
+  "schema": "pkm-p3-runtime-manifest/v1",
+  "operational_revision": "p3-single-note-first-operation/20261001",
+  "scope_approval": "_meta/runs/wiki/20261001T053212Z-p3-first-operation/scope-approval.json",
+  "runtime_files": {
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/compile-one.py": "b8c8904dc912489fd7e64f902a3e51353bc46ee13d5491fe54724279390254ac",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/publish-one.py": "d725cd82e66822e1dd60850fbad870bb39688590395b044c005c0be86ab004cc",
+    "_meta/runs/wiki/20260929T083140Z-p2-resume/verify-one.py": "d055ec8405ab01000308c5c603dbc432804651fb286c14141dace2dc3fdac0ee",
+    "_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/content.py": "ddd89bc0d19b92bf6e8c457c0c70f3d654ad8517ff5e69e0e67880a9ccf1cd95",
+    "_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/daily.py": "9778ce0f28ef475aba97439e4d43e446d3d4bf914f1e736506a32705efd25bc8",
+    "_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/p3_common.py": "b6672b2c0eb3693dc59c74981450064b74232551a6ed6ba1965752e4a976ac8a",
+    "_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/publication.py": "c660378062b7ad6fad28772c1a5d2bd6aba78bdd1314dd579ea11d11d5b68435"
+  },
+  "test_receipt": "_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/parent-evidence/first-operation-prechange/counts.json"
+}

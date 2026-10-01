@@ -1,0 +1,17 @@
+test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body) ... FAIL
+
+======================================================================
+FAIL: test_semantic_review_requires_all_claims_and_body (test_content.ContentTests.test_semantic_review_requires_all_claims_and_body)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ainsdev/wiki/pkm-articles/_meta/runs/wiki/20261001T023617Z-p3-runtime/runtime/test_content.py", line 173, in test_semantic_review_requires_all_claims_and_body
+    self.assertEqual(bundle['status'], 'blocked_review')
+AssertionError: 'ready_to_publish' != 'blocked_review'
+- ready_to_publish
++ blocked_review
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.061s
+
+FAILED (failures=1)

@@ -1,0 +1,12 @@
+{
+  "checks": [
+    {
+      "check": "bounded_document_schema",
+      "ok": false
+    }
+  ],
+  "document": null,
+  "passed": false,
+  "result_sha256": "92875d66bdbe4f8aba3c4092e690cc1f92fefa20683d681fd50fdd35fc63d20c",
+  "schema": "pkm-p3-verification/v1"
+}

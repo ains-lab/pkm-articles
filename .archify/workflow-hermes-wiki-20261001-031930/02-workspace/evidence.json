@@ -1,0 +1,13 @@
+{
+  "basis":"Local design-document snapshot; no config change, no live runtime verification",
+  "document_root":"docs/techblog/hermes-api-gateway-workdir-assoc",
+  "claims":[
+    {"subjects":["operator","config","scope"],"classification":"별도 승인 후 절차·미실행","path":"workspace-and-gateway.md","line":65,"end_line":116,"claim":"변경 범위 고정·leaf key readback·재시작 선택과 새 세션 검증. 이번에는 실행하지 않는다."},
+    {"subjects":["bridge","explicit","placeholder","fallback","local","tools","resolve"],"classification":"문서의 정적 소스 관측","path":"workspace-and-gateway.md","line":43,"end_line":55,"claim":"명시 config→TERMINAL_CWD; placeholder . / auto / cwd; local MESSAGING_CWD→home fallback; 명령/세션 cwd가 우선 가능."},
+    {"subjects":["wiki","base-path"],"classification":"문서 관측·의미","path":"workspace-and-gateway.md","line":7,"end_line":24,"claim":"Wiki root /home/ainsdev/wiki/pkm-articles; 설치 경로·static root·WIKI_PATH와 구분."},
+    {"subjects":["context","context-discovery"],"classification":"문서의 소스 관측 및 미확인","path":"workspace-and-gateway.md","line":118,"end_line":124,"claim":"프로젝트 문맥 우선순위·skip·세션 캐시를 확인해야 한다. cwd 설정만으로 전체 지침 로딩을 단정하지 않는다."},
+    {"subjects":["isolation","enforce"],"classification":"미구현 보안 제안","path":"security-and-operations.md","line":37,"end_line":50,"claim":"cwd는 sandbox가 아니다. 파일/terminal 도구 모두에 실제 read-only mount·OS권한·egress 정책 필요."},
+    {"subjects":["verification","verify"],"classification":"승인 후 검증 절차·미실행","path":"workspace-and-gateway.md","line":107,"end_line":124,"claim":"새 세션 실제 cwd·지침·자료·쓰기 거부를 검증해야 하며 readback만으로 충분하지 않다."},
+    {"subjects":["unsupported-http-cwd","session-is-not-acl"],"classification":"문서의 계약 부재 관측","path":"workspace-and-gateway.md","line":57,"end_line":63,"claim":"HTTP cwd/workdir/workspace_root·미확인 config key 지원을 발명하지 않는다. profile/session은 파일권한 토큰이 아니다."}
+  ]
+}

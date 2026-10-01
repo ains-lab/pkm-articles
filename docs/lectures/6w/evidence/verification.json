@@ -1,0 +1,88 @@
+{
+  "scope": "documentation_only",
+  "checked_at": "2026-10-01T06:49:29.125420+00:00",
+  "document_checks_status": "PASS",
+  "operational_readiness": "HOLD",
+  "baseline_job_status": "not_found_in_current_profile",
+  "missing_evidence": [
+    "requested_cron_settings",
+    "approved_sns_policy",
+    "live_channel_capture",
+    "sns_compile_publish_and_recovery",
+    "activation_approval"
+  ],
+  "document_count": 8,
+  "local_link_count": 37,
+  "external_reference_count": 6,
+  "json_example_count": 6,
+  "bash_syntax_example_count": 5,
+  "bash_examples_executed": false,
+  "document_hashes": {
+    "01-cron-baseline.md": "4f7833b95913538cda12edab3b67e2a3500a82d6f682078587b8e02fed591c49",
+    "02-channel-collection.md": "371f3881d58c84f0f0511430a32fe7b9b6c4ec9e4b9c1a0a2ea50438f035eb0f",
+    "03-raw-and-state-contracts.md": "ab2d2fd350caa09dee16238539cf68d51363bec524637f973290e44b124e38ce",
+    "04-wiki-compilation.md": "95990fcf83f06b1bd7c517131db949f3e1ffef3d28fc65b446056e2b9736d15f",
+    "05-cron-operations.md": "5198332d8be2719492b7e8b36322abdb5d19b1437307e9443e03ee7bcb8f4273",
+    "06-prompts-and-lab.md": "2b0ccac0e3ebf62b74fbd1ba1eafb06a28dd2587c3d258c29fc78089158409b0",
+    "07-evidence-and-verification.md": "b1b93168c68ac639a0599879b7816c980495e58d12310d7fcbaa906fffc6a335",
+    "README.md": "083a8b89f8eda54c983ce513d8dee6d442b637260b52f05a2deac6ecb87f58f0"
+  },
+  "errors": [],
+  "protected_files_checked": 67,
+  "protected_changes": [],
+  "cron_ids": [
+    "05ec97bfa8d5",
+    "4839be6a1db1",
+    "4cff5b4f10ec",
+    "c5548510672c"
+  ],
+  "cron_config_changes": [],
+  "cron_record_hashes": {
+    "05ec97bfa8d5": "3ce5683e72ff19cccb92a419bc51f2fcf44d26841aa4335a3b806156517b2bf9",
+    "c5548510672c": "aea0a367373ddec1519cedb6769c914e7ea6d953a50cf3b799d1a9fa6b87df41",
+    "4cff5b4f10ec": "997fa5319487bdf9b5eedc9334982ae8ed01d95c3d3a641bf1a3446a3fc3d2dc",
+    "4839be6a1db1": "2cf0107bf4b2ed331d73c2c7961c5dcc2e0d35a52de574a407c0c792455caae8"
+  },
+  "cron_record_hash_changes": [
+    "c5548510672c"
+  ],
+  "resolved_runtime_drift": [
+    {
+      "job_id": "c5548510672c",
+      "field": "repeat.completed",
+      "baseline": 5724,
+      "current": 5725
+    }
+  ],
+  "youtube_examples_private_output_check": true,
+  "independent_review_ref": "review-resolution.json",
+  "log_prefix_preserved": true,
+  "lock_absent": true,
+  "navigation": {
+    "docs_index": true,
+    "wiki_index": true
+  },
+  "knowledge_pages": 8,
+  "index_total_pages": 8,
+  "git_diff_check_exit": 0,
+  "not_executed": [
+    "sns_collection",
+    "sns_auth",
+    "doctor_live",
+    "model_content_transfer",
+    "wiki_compile",
+    "wiki_publish",
+    "cron_mutation",
+    "new_install",
+    "external_notification",
+    "integration_tests"
+  ],
+  "checker_method": [
+    "Python stdlib Markdown local target existence",
+    "json.loads on JSON fences",
+    "bash -n on Bash fences (not executed)",
+    "hashlib.sha256 on protected files",
+    "exact job configuration hash compare excluding named volatile fields",
+    "git diff --check scoped docs/index/log"
+  ]
+}

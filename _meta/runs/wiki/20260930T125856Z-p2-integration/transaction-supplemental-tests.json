@@ -1,0 +1,68 @@
+{
+  "synthetic_only": true,
+  "tests": [
+    {
+      "case": "recover_after_target_0",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_1",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_2",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_3",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_4",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_5",
+      "passed": true
+    },
+    {
+      "case": "recover_after_target_6",
+      "passed": true
+    },
+    {
+      "case": "missing-permission",
+      "passed": true,
+      "rejection": "approval missing"
+    },
+    {
+      "case": "owned-index-edit",
+      "passed": true,
+      "rejection": "owned index conflict"
+    },
+    {
+      "case": "partial-log-event",
+      "passed": true,
+      "rejection": "torn log event"
+    },
+    {
+      "case": "concurrent-note-edit",
+      "passed": true,
+      "rejection": "target conflict: entities/e.md"
+    },
+    {
+      "case": "postcommit-output-edit",
+      "passed": true,
+      "rejection": "target conflict: concepts/c.md"
+    },
+    {
+      "case": "damaged-journal",
+      "passed": true,
+      "rejection": "journal hash conflict"
+    },
+    {
+      "case": "collector-priority-window",
+      "passed": true,
+      "rejection": "collector priority window"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schema": "archify-delivery-report/v1",
+  "diagram_id": "08-roadmap",
+  "diagram_type": "workflow",
+  "output": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/diagram.html",
+  "status": "pass",
+  "specification_sha256": "7c4efcfc32ef34e33462f0617a10e6a0d66b55a1adf8e5fe46d8d0134cbd1485",
+  "artifact_sha256": "a4614ef104123db0b34dadbd142fa6a6b76c152e7dd4ea522b6f272730ff2ae9",
+  "receipt_id": "5a154540-64ce-4b5d-a0d2-7e559e8613d3",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "finalize_summary": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/repair-5/diagram.finalize-summary.json",
+  "browser_receipt": "/home/ainsdev/wiki/pkm-articles/.archify/workflow-hermes-wiki-20261001-031930/08-roadmap/repair-5/diagram.browser-check.json",
+  "browser_viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflowX": false,
+      "ok": true,
+      "minimumProjectedNonEdgeTextPx": 7.004878048780488
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "overflowX": false,
+      "ok": true,
+      "minimumProjectedNonEdgeTextPx": 7.323577235772357
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "overflowX": false,
+      "ok": true,
+      "minimumProjectedNonEdgeTextPx": 8
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "overflowX": false,
+      "ok": true,
+      "minimumProjectedNonEdgeTextPx": 8
+    }
+  ],
+  "visual_review": "not_requested",
+  "perceptual_claim": false,
+  "recommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "r1-r2gate",
+            "from": "r1qa",
+            "to": "r2gate",
+            "label": "통과 후",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 4,
+          "stretch": 1.076
+        },
+        {
+          "relationship": {
+            "id": "r3-check",
+            "from": "r3",
+            "to": "r3qa",
+            "label": "검증",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1.079
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "r1qa → r2gate needs 4 bends: move node r1qa or r2gate so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "r3 → r3qa needs 3 bends: move node r3 or r3qa so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  },
+  "unresolved": [
+    "Optional perceptual review not performed: two inter-stack links have 4 and 3 bends; machine gates pass."
+  ],
+  "approval_or_implementation_claimed": false,
+  "environment_caveat": {
+    "chrome": "/home/ainsdev/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome",
+    "process_environment": {
+      "ARCHIFY_CHROME_NO_SANDBOX": "1"
+    },
+    "reason": "parent reported OS user namespace sandbox unavailable; applies only to this trusted generated HTML verification process",
+    "global_config_changed": false,
+    "installed_dependencies": false
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-01T03:23:41.789Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "evidence_coverage": {
+    "nodes": 12,
+    "relations": 11,
+    "all_covered": true,
+    "document_ranges_valid": true,
+    "source_snapshots_unchanged": true
+  },
+  "semantic_content_preserved_across_repairs": true,
+  "workflow_reuse_notes": [
+    "For a new Workflow mainPath columns must be non-decreasing; use monotonic stacks instead of a serpentine mainPath.",
+    "Start automatic routes. If measured vertical-stack detours cross, pin only vertical links bottom-to-top straight and leave cross-stack transitions automatic.",
+    "Do not map frontend future viewport goals to Archify browser evidence."
+  ]
+}
